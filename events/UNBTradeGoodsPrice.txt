@@ -1,0 +1,754 @@
+#Обмен чаем между Каннором и Яншенем
+
+namespace = unb_price
+
+country_event = {
+	id = unb_price.1
+	title = unb_price.1.t
+	desc = unb_price.1.d
+	picture = TRADEGOODS_eventPicture
+
+	fire_only_once = yes
+	
+	major = yes
+
+	trigger = {
+		OR = {
+			AND = {
+				capital_scope = { superregion = yanshen_superregion }
+				1270 = {	#Anbenncost
+					trade_share = {
+						country = ROOT					
+						share = 5
+					}	
+				}
+			}
+			AND = {	
+				capital_scope = { continent = europe}
+				OR = {
+					1371 = {	#Feiten
+						trade_share = {
+							country = ROOT
+							share = 5
+						}
+					}
+					1374 = {	#Odheongu
+						trade_share = {
+							country = ROOT
+							share = 5
+						}	
+					}
+				}
+			}		
+		}
+			NOT = { has_global_flag = tea_culture_exchange_happened}
+	}
+
+	mean_time_to_happen = {
+		months = 1
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_global_flag = tea_culture_exchange_happened
+		}
+	}
+
+	option = {
+		name = unb_price.1.a
+		change_price = {
+			trade_goods = tea
+			key = TEA_CULTURE_EXCHANGE
+			value = 0.2
+			duration = -1
+		}
+		add_years_of_income = 0.1
+		add_prestige = 20
+	}
+}	
+		
+#1 Монополия на exotic wood в эльфийском дипвудсе (который настакал меркантилизм), высокие цены
+#Циранвар (20 меркантилизма если ИИ, 50 если игрок) получает ивент на еще 10 меркантилизма, +15% trade value
+country_event = {
+	id = unb_price.2
+	title = unb_price.2.t
+	desc = unb_price.2.d
+	picture = WOOD_ELVEN_THRONE_ROOM_event_picture
+
+	fire_only_once = yes
+	
+	major = yes
+
+	trigger = {
+		exists = I45
+        I45 = { 
+            OR = {
+                AND = {
+                    ai = yes
+                    mercantilism = 20
+                }
+                AND = {
+                    ai = no
+                    mercantilism = 50
+                }
+            }
+        }
+        
+        NOT = { has_global_flag = CYRANVAR_WOOD_MONOPOLY}        
+    }
+
+	mean_time_to_happen = {
+		months = 1
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_global_flag = CYRANVAR_WOOD_MONOPOLY
+		}
+	}    
+
+	option = {
+		name = unb_price.2.a
+		change_price = {
+			trade_goods = tropical_wood
+			key = CYRANVAR_WOOD_MONOPOLY
+			value = 0.15
+			duration = -1
+		}
+				change_price = {
+			trade_goods = lumber
+			key = CYRANVAR_WOOD_MONOPOLY
+			value = 0.45
+			duration = -1
+		}
+
+		I45 = { add_mercantilism = 10 }
+	}
+} 
+
+#2 Пока не находят способ дешевле доставлять из Аэлантира или Африки
+
+country_event = {
+	id = unb_price.3
+	title = unb_price.3.t
+	desc = unb_price.3.d
+	picture = AULIC_COUNCIL_eventPicture
+
+	fire_only_once = yes
+	
+	major = yes
+
+	trigger = {
+         has_global_flag = CYRANVAR_WOOD_MONOPOLY 
+         capital_scope = { continent = europe}
+         trading_part = {
+				trade_goods = tropical_wood
+				value = 0.2
+        }    
+	     NOT = { has_global_flag = CYRANVAR_MONOPOLY_NO_MORE}         
+    }
+
+    mean_time_to_happen = {
+		months = 24
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_global_flag = CYRANVAR_MONOPOLY_NO_MORE
+		}
+	}
+
+	option = {
+		name = unb_price.3.a
+		change_price = {
+			trade_goods = tropical_wood
+			key = CYRANVAR_MONOPOLY_NO_MORE
+			value = -0.2
+			duration = -1
+		}
+		change_price = {
+			trade_goods = lumber
+			key = CYRANVAR_MONOPOLY_NO_MORE
+			value = -0.6
+			duration = -1
+		}		
+        add_years_of_income = 0.25
+        add_prestige = 20
+    }    
+}
+
+
+#3 Большое количество стран в бладкорте - повышенный спрос на livestock для безопасного кормления низших вампиров
+
+country_event = {
+	id = unb_price.4
+	title = unb_price.4.t
+	desc = unb_price.4.d
+	picture = APOSTLE_eventPicture
+
+	fire_only_once = yes
+	
+	major = yes
+
+	trigger = {
+ 			calc_true_if = {
+				all_country = {
+					has_estate_privilege = estate_vampires_organization_the_blood_court
+				}
+				amount = 7
+			}             
+    }
+
+    mean_time_to_happen = {
+		months = 24
+	}	
+
+	immediate = {
+		hidden_effect = {
+			set_global_flag = LIVESTOCK_SUS_DEMAND_INCREASE
+		}
+	}
+
+	option = {
+		name = unb_price.4.a
+		change_price = {
+			trade_goods = livestock
+			key = LIVESTOCK_SUS_DEMAND_INCREASE
+			value = 0.4
+			duration = -1
+		}
+    }    
+
+}
+
+country_event = {
+	id = unb_price.5
+	title = unb_price.5.t
+	desc = unb_price.5.d
+	picture = COUNTRY_COLLAPSE_eventPicture
+
+	fire_only_once = yes
+	
+	major = yes
+
+	trigger = {
+ 		R62 = {
+            owns = 4395
+			4395 = { previous_owner = R38 }
+            owns = 4556
+			4554 = { previous_owner = R38 }
+            owns = 4551
+			4551 = { previous_owner = R38 }
+        }    
+        R38 = {
+            OR = {
+                is_subject = yes
+                NOT = {
+                    calc_true_if = {
+                        num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+                  	    	value = 1
+	                    	region = rahen_coast_region
+                        }    
+                    }
+                }
+            }
+        }         
+    }
+
+    mean_time_to_happen = {
+		months = 1
+	}	
+
+	immediate = {
+		hidden_effect = {
+			set_global_flag = MONSTROUS_SLAVE_TRADE_BHUVAURI
+		}
+	}
+
+	option = {
+		name = unb_price.5.a
+		change_price = {
+			trade_goods = slaves
+			key = MONSTROUS_SLAVE_TRADE_BHUVAURI
+			value = -0.3
+			duration = -1
+		}
+        4395 = {
+            add_permanent_province_modifier = {
+				name = command_rahen_trade
+				duration = -1
+				}
+        }
+        4551 = {
+            add_permanent_province_modifier = {
+				name = command_rahen_trade
+				duration = -1
+				}
+        }
+        4556 = {
+            add_permanent_province_modifier = {
+				name = command_rahen_trade
+				duration = -1
+				}
+        }
+        R38 = {
+            add_prestige = -100
+        }
+    }    
+}
+
+#5 Страна в горе 350 инкама, имеет торговца в одном из "рабских" нодов: -10 коснтракшн тайма на 10 лет за полугодовой инкам, +трейдвелью рабов (немного)
+
+country_event = {
+	id = unb_price.6
+	title = unb_price.6.t
+	desc = unb_price.6.d
+	picture = FORGE_eventPicture
+
+	fire_only_once = no
+	
+	major = yes
+
+	trigger = {
+		capital_scope = { continent = serpentspine }
+		NOT = { primary_culture = black_orc }
+		monthly_income = 350
+		NOT = { has_country_modifier = slave_dig_hole }
+	}
+
+	mean_time_to_happen = {
+		months = 480
+
+		modifier = {
+			factor = 0.7
+			OR = {
+				1347 = { has_merchant = ROOT }
+				1361 = { has_merchant = ROOT }
+			}
+		}	
+		modifier = {
+			factor = 0.5
+			trading_part = {
+				trade_goods = slaves
+				value = 0.2
+	        }
+		}	
+	}
+
+	option = {
+		name = unb_price.6.a
+		change_price = {
+			trade_goods = slaves
+			key = SLAVE_DIG_TRADE
+			value = 0.45
+			duration = 3650
+		}
+		add_years_of_income = -0.5
+		add_country_modifier = {
+			name = slave_dig_hole
+			duration = 3650
+		}
+	}
+	option = {
+		name = unb_price.6.b
+		add_prestige = -5
+	}
+}
+
+#6 Страна ВД с хотя бы одной морской идеей и значительным флотом получает возможность купить за Хгодовых инкамов временные скидки на констракшн кост и тайм флота, на это время повышается цена морских снастей, бронзы, дерева, wool, оптика.
+
+country_event = {
+	id = unb_price.7
+	title = unb_price.7.t
+	desc = unb_price.7.d
+	picture = HARBOUR_eventPicture
+
+	fire_only_once = yes
+	
+	major = yes
+
+	trigger = {
+		is_great_power = yes
+		NOT = { is_hegemon_of_type = naval_hegemon }
+		NOT = {
+			calc_true_if = {
+				all_country = {
+					is_hegemon_of_type = naval_hegemon
+				}
+				amount = 1
+			}	
+		}
+		naval_forcelimit = 500
+		navy_size = 250
+		NOT = { has_global_flag = naval_hegemon_is_near }
+	}
+
+	mean_time_to_happen = {
+		months = 12
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_global_flag = naval_hegemon_is_near
+		}
+	}
+
+	option = {
+		name = unb_price.7.a
+		change_price = {
+			trade_goods = naval_supplies
+			key = NAVAL_HEG_NEAR
+			value = 0.5
+			duration = 3650
+		}
+		change_price = {
+			trade_goods = copper
+			key = NAVAL_HEG_NEAR
+			value = 0.15
+			duration = 3650
+		}
+		change_price = {
+			trade_goods = wool
+			key = NAVAL_HEG_NEAR
+			value = 1.5
+			duration = 3650
+		}
+		change_price = {
+			trade_goods = lumber
+			key = NAVAL_HEG_NEAR
+			value = 1
+			duration = 3650
+		}
+		change_price = {
+			trade_goods = optics
+			key = NAVAL_HEG_NEAR
+			value = 0.6
+			duration = 3650
+		}								
+		add_years_of_income = -1.5
+		add_prestige = 35
+		add_country_modifier = {
+			name = building_heg_armada
+			duration = 3650
+		}
+		add_power_projection = {
+ 			type = mission_rewards_power_projection
+ 			amount = 50
+ 		}
+	}
+	option = {
+		name = unb_price.7.b
+		add_prestige = -20
+	}
+}
+
+#7 Ивенты, которые облегчают производство товара - дают инновации и +Хгодовых инкамов, требуют инновации и престиж, понижают трейд велью - ?
+#8 Каннорская страна НЕ вампир, существует каннорский открытый вампир - повышение цены на дерево и экз дерево с целью запастись кольями на войну со злом
+
+country_event = {
+	id = unb_price.8
+	title = unb_price.8.t
+	desc = unb_price.8.d
+	picture = APOSTLE_eventPicture
+
+	fire_only_once = yes
+	
+	major = yes
+
+	trigger = {
+		capital_scope = { continent = europe }
+		has_estate_privilege = estate_vampires_law_open_rule
+
+	}
+
+    mean_time_to_happen = {
+		months = 60
+	}	
+
+	immediate = {
+		hidden_effect = {
+			set_global_flag = LUMBER_VS_VAMP
+		}
+	}
+
+	option = {
+		name = unb_price.8.a
+		change_price = {
+			trade_goods = lumber
+			key = LUMBER_VS_VAMP
+			value = 0.15
+			duration = 3650
+		}
+		change_price = {
+			trade_goods = tropical_wood
+			key = LUMBER_VS_VAMP
+			value = 0.15
+			duration = 3650
+		}
+    }    
+}
+
+#9 Перлседж находит новые места для добычи жемчуга
+#10 Окрошка из фиников, зерна и бладгров сиропа
+#11 Спрос на товары в конечных трейднодах - амальдихр - отопление в средних этажах холдов - уголь, дерево, экз дерево
+#12 "не такие уж и экзотические" один из тегов с экзотеческой кавалерией становится топ 1 вд и роняет цену на экз маунтов
+
+country_event = {
+	id = unb_price.9
+	title = unb_price.9.t
+	desc = unb_price.9.d
+	picture = APOSTLE_eventPicture
+
+	fire_only_once = yes
+	
+	major = yes
+
+	trigger = {
+		calc_true_if = {
+			AND = {
+				OR = {
+					tag = Y91
+					tag = Y96
+					tag = Y98
+				}
+				full_idea_group = cavalary_focus_idea	
+			}
+			AND = {
+				tag = I04
+				full_idea_group = cavalary_focus_idea				
+			}
+			AND = {
+					technology_group = tech_bharbhen 
+					full_idea_group = cavalary_focus_idea
+			}
+			amount = 2
+		}
+	}
+
+    mean_time_to_happen = {
+		months = 1
+	}	
+
+	immediate = {
+		hidden_effect = {
+			set_global_flag = NEW_CAVALRY_ARMY_TYPE
+		}
+	}
+
+	option = {
+		name = unb_price.9.a
+		change_price = {
+			trade_goods = horses
+			key = NEW_CAVALRY_ARMY_TYPE
+			value = -0.8
+			duration = -1
+		}
+		change_price = {
+			trade_goods = llama
+			key = NEW_CAVALRY_ARMY_TYPE
+			value = 2
+			duration = -1
+		}
+    }    
+}
+
+#13 Исторически один товар из нового региона вытеснил другой из каннора/горы - перетекание трейд велью из одного товара в другой - экзотические маунты вытесняют коней?
+#13.1овощи из нового света уменьшают важность grain : +tomat, + potat, -grain (немного)
+
+country_event = {
+	id = unb_price.10
+	title = unb_price.10.t
+	desc = unb_price.10.d
+	picture = AULIC_COUNCIL_eventPicture
+
+	fire_only_once = yes
+	
+	major = yes
+
+	trigger = { 
+         capital_scope = { continent = europe}
+         trading_part = {
+				trade_goods = tomato
+				value = 0.2
+        }
+		 trading_part = {
+				trade_goods = potato
+				value = 0.2
+        }    
+	     NOT = { has_global_flag = AELANTIRI_VEG_VS_GRAIN}         
+    }
+
+    mean_time_to_happen = {
+		months = 24
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_global_flag = AELANTIRI_VEG_VS_GRAIN
+		}
+	}
+
+	option = {
+		name = unb_price.10.a
+		change_price = {
+			trade_goods = grain
+			key = AELANTIRI_VEG_VS_GRAIN
+			value = -0.15
+			duration = -1
+		}
+		change_price = {
+			trade_goods = tomato
+			key = AELANTIRI_VEG_VS_GRAIN
+			value = 0.15
+			duration = -1
+		}	
+		change_price = {
+			trade_goods = potato
+			key = AELANTIRI_VEG_VS_GRAIN
+			value = 0.15
+			duration = -1
+		}	
+        add_years_of_income = 0.15
+        add_prestige = 20
+    }    
+}
+
+#13.2шафран из нового света вытесняет перчики
+
+country_event = {
+	id = unb_price.11
+	title = unb_price.11.t
+	desc = unb_price.11.d
+	picture = AULIC_COUNCIL_eventPicture
+
+	fire_only_once = yes
+	
+	major = yes
+
+	trigger = { 
+         capital_scope = { continent = europe}
+         trading_part = {
+				trade_goods = saffron
+				value = 0.2
+        } 
+	     NOT = { has_global_flag = SAFFRON_VS_SPICES}         
+    }
+
+    mean_time_to_happen = {
+		months = 120
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_global_flag = SAFFRON_VS_SPICES
+		}
+	}
+
+	option = {
+		name = unb_price.11.a
+		change_price = {
+			trade_goods = spices
+			key = SAFFRON_VS_SPICES
+			value = -0.2
+			duration = -1
+		}
+		change_price = {
+			trade_goods = saffron
+			key = SAFFRON_VS_SPICES
+			value = 0.3
+			duration = -1
+		}	
+        add_years_of_income = 0.3
+        add_prestige = 20
+    }    
+}
+
+
+
+#14 Страна с маг организацией магистериума контролирует часть трейда в Biya Mudibia - нод с самым большим количеством слоновой кости, значительное количество инноваций - изобретение
+#15 Каннорская страна имеет трейд в заливе рахена - начинается беда с опиумом - временные штрафы к идеякосту, техкосту, повышается цена на опиум.
+
+country_event = {
+	id = unb_price.12
+	title = unb_price.12.t
+	desc = unb_price.12.d
+	picture = FORGE_eventPicture
+
+	fire_only_once = yes
+	
+	major = yes
+
+	trigger = {
+		capital_scope = { continent = europe }
+		1361 = {
+			trade_share = {
+				country = root
+				share = 25
+			}
+		}
+	     NOT = { has_global_flag = OPIUM_IN_CANNOR}		
+	}
+
+	mean_time_to_happen = {
+		months = 480
+
+		modifier = {
+			factor = 0
+			NOT = { has_unembraced_institution = { enlightenment } }
+		}	
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_global_flag = OPIUM_IN_CANNOR
+		}
+	}
+
+	option = {
+		name = unb_price.12.a
+		change_price = {
+			trade_goods = opium
+			key = OPIUM_IN_CANNOR
+			value = 0.45
+			duration = 3650
+		}
+		add_years_of_income = -0.5
+		add_country_modifier = {
+			name = slave_dig_hole
+			duration = 3650
+		}
+	}
+	option = {
+		name = unb_price.6.b
+		add_prestige = -5
+	}
+}
+
+#16 Греки получают дотступ к оливкам (трейдшейр в брасане) - повышение их трейдвелью, товар в провинции из региона алеканд заменяется на оливки, шутка на тему "такое ощущение, что это должно было всегда тут быть"
+#17 Цены на растительные продукты падают из-за заклинания plant growth 
+#18 Пивной холд с монументом хотя бы первого уровня, 50+ инноваций - новые сорта пива, которые разлетелись по всему миру: +велью пива
+#19 Ингридиенты для создания оберегов - повышение спроса на соль, слоновую кость, бумагу во время спириттайда
+#20 что-то связанное с мандатом
+#21 бульварская мифическая кавалерия увеличивает спрос на ткани
+#22 изобретение шампанского
+#23 китовая ворвань - топливо для кораблей гномов - повышение спроса на китов
+#24 страна в дипвудсе с определённой инновационностью может начать производить *замена пальмового масла* - спавнится в провинции с древним лесом + гудс
+#25 Создание промышленного производства gunpowder; ковров
+#26 Изобретение сыра
+# 27 Вичкинг пытается решить проблему нехватки зерновых с помощью кукурузы. Сначала она спавнится в нескольких провах, затем через несколько лет мы узнаём, приживается она в старом свете или нет. Успех увеличивает трейдвелью, престиж, х годовой инкам
+# 28 Мода на экзотических домашних животных с дополненным интеллектом
+# 29 Эбонит для изобретателей
+# 30 ЧТО-ТО привело к повышенному спросу на роскошь
+# 31 ИИшные вд занимаются самодурством от того, что их не свергают (комманд, векс, раджа, жанлюси)
+# 32 Картофельные чипики
+# Успешная комбинация товаров приводит к повышению спроса
+# Империи встретились (Аскирас)
+# Гарпия в вд - спрос на роскошь
+# Европейцы находят применение мускатному ореху
+# В мире осталось мало шерсти
+# Эбортильский завртак (комбинация странных товаров) "как люди, которые едят такое, смогли покорить моря Халанна?"
+# МЕХАНИКА ГОНКИ ЗА ВНЕДРЕНИЕ ИННОВАЦИОННЫХ ТОВАРОВ В ЭПОХУ ГЛОБАЛ ТРЕЙДА (Изобретение сыра)
+# Полное восстановление золотого пути повысит оборот азиатских товаров
+# Девелопмент оф потато чипс (20% торговли картофелем, 80+ инноваций)
+# Золотой век работорковли (гп хазобкульт после глобал трейда (?) - спрос на рабов)
+# У не-халессцев/рахенцев беды с выращиванием риса - контролировать все провинции с рисом, -100% тв на 15 лет
