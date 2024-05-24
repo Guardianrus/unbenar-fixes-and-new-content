@@ -1,0 +1,14 @@
+national_bank_3_baff = {
+	potential = {
+		capital_scope ={
+			has_building = national_bank_3
+		}
+	}
+	trigger = {
+		all_owned_province = {
+			has_courthouse_building_trigger = yes
+		}
+	}
+	inflation_reduction = 0.1
+	interest = -2
+}

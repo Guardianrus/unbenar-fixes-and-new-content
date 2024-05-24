@@ -1,0 +1,228 @@
+
+namespace = guisubmod
+
+country_event = {
+	id = guisubmod.1
+	title = guisubmod.1.t
+	desc = guisubmod.1.desc
+	picture = RELIGION_eventPicture
+
+	is_triggered_only = yes
+	hidden = yes
+	fire_only_once = yes
+	
+	option = {
+		name = guisubmod.1.a
+		every_province = {
+			if = { limit = { has_province_modifier = centaur_minority_oppressed_small } remove_province_modifier = centaur_minority_oppressed_small add_province_modifier = { name = centaur_minority_oppressed_small duration = -1 hidden = yes } set_province_flag = centaur_minority_small }
+			else_if = { limit = { has_province_modifier = centaur_minority_coexisting_small } remove_province_modifier = centaur_minority_coexisting_small add_province_modifier = { name = centaur_minority_coexisting_small duration = -1 hidden = yes } set_province_flag = centaur_minority_small }
+			else_if = { limit = { has_province_modifier = centaur_minority_integrated_small } remove_province_modifier = centaur_minority_integrated_small add_province_modifier = { name = centaur_minority_integrated_small duration = -1 hidden = yes } set_province_flag = centaur_minority_small }
+			else_if = { limit = { has_province_modifier = centaur_minority_oppressed_large } remove_province_modifier = centaur_minority_oppressed_large add_province_modifier = { name = centaur_minority_oppressed_large duration = -1 hidden = yes } set_province_flag = centaur_minority_large }
+			else_if = { limit = { has_province_modifier = centaur_minority_coexisting_large } remove_province_modifier = centaur_minority_coexisting_large add_province_modifier = { name = centaur_minority_coexisting_large duration = -1 hidden = yes } set_province_flag = centaur_minority_large }
+			else_if = { limit = { has_province_modifier = centaur_minority_integrated_large } remove_province_modifier = centaur_minority_integrated_large add_province_modifier = { name = centaur_minority_integrated_large duration = -1 hidden = yes } set_province_flag = centaur_minority_large }
+			
+			if = { limit = { has_province_modifier = dwarven_minority_oppressed_small } remove_province_modifier = dwarven_minority_oppressed_small add_province_modifier = { name = dwarven_minority_oppressed_small duration = -1 hidden = yes } set_province_flag = dwarven_minority_small }
+			else_if = { limit = { has_province_modifier = dwarven_minority_coexisting_small } remove_province_modifier = dwarven_minority_coexisting_small add_province_modifier = { name = dwarven_minority_coexisting_small duration = -1 hidden = yes } set_province_flag = dwarven_minority_small }
+			else_if = { limit = { has_province_modifier = dwarven_minority_integrated_small } remove_province_modifier = dwarven_minority_integrated_small add_province_modifier = { name = dwarven_minority_integrated_small duration = -1 hidden = yes } set_province_flag = dwarven_minority_small }
+			else_if = { limit = { has_province_modifier = dwarven_minority_oppressed_large } remove_province_modifier = dwarven_minority_oppressed_large add_province_modifier = { name = dwarven_minority_oppressed_large duration = -1 hidden = yes } set_province_flag = dwarven_minority_large }
+			else_if = { limit = { has_province_modifier = dwarven_minority_coexisting_large } remove_province_modifier = dwarven_minority_coexisting_large add_province_modifier = { name = dwarven_minority_coexisting_large duration = -1 hidden = yes } set_province_flag = dwarven_minority_large }
+			else_if = { limit = { has_province_modifier = dwarven_minority_integrated_large } remove_province_modifier = dwarven_minority_integrated_large add_province_modifier = { name = dwarven_minority_integrated_large duration = -1 hidden = yes } set_province_flag = dwarven_minority_large }
+			
+			if = { limit = { has_province_modifier = elven_minority_oppressed_small } remove_province_modifier = elven_minority_oppressed_small add_province_modifier = { name = elven_minority_oppressed_small duration = -1 hidden = yes } set_province_flag = elven_minority_small }
+			else_if = { limit = { has_province_modifier = elven_minority_coexisting_small } remove_province_modifier = elven_minority_coexisting_small add_province_modifier = { name = elven_minority_coexisting_small duration = -1 hidden = yes } set_province_flag = elven_minority_small }
+			else_if = { limit = { has_province_modifier = elven_minority_integrated_small } remove_province_modifier = elven_minority_integrated_small add_province_modifier = { name = elven_minority_integrated_small duration = -1 hidden = yes } set_province_flag = elven_minority_small }
+			else_if = { limit = { has_province_modifier = elven_minority_oppressed_large } remove_province_modifier = elven_minority_oppressed_large add_province_modifier = { name = elven_minority_oppressed_large duration = -1 hidden = yes } set_province_flag = elven_minority_large }
+			else_if = { limit = { has_province_modifier = elven_minority_coexisting_large } remove_province_modifier = elven_minority_coexisting_large add_province_modifier = { name = elven_minority_coexisting_large duration = -1 hidden = yes } set_province_flag = elven_minority_large }
+			else_if = { limit = { has_province_modifier = elven_minority_integrated_large } remove_province_modifier = elven_minority_integrated_large add_province_modifier = { name = elven_minority_integrated_large duration = -1 hidden = yes } set_province_flag = elven_minority_large }
+			
+			if = { limit = { has_province_modifier = gnollish_minority_oppressed_small } remove_province_modifier = gnollish_minority_oppressed_small add_province_modifier = { name = gnollish_minority_oppressed_small duration = -1 hidden = yes } set_province_flag = gnollish_minority_small }
+			else_if = { limit = { has_province_modifier = gnollish_minority_coexisting_small } remove_province_modifier = gnollish_minority_coexisting_small add_province_modifier = { name = gnollish_minority_coexisting_small duration = -1 hidden = yes } set_province_flag = gnollish_minority_small }
+			else_if = { limit = { has_province_modifier = gnollish_minority_integrated_small } remove_province_modifier = gnollish_minority_integrated_small add_province_modifier = { name = gnollish_minority_integrated_small duration = -1 hidden = yes } set_province_flag = gnollish_minority_small }
+			else_if = { limit = { has_province_modifier = gnollish_minority_oppressed_large } remove_province_modifier = gnollish_minority_oppressed_large add_province_modifier = { name = gnollish_minority_oppressed_large duration = -1 hidden = yes } set_province_flag = gnollish_minority_large }
+			else_if = { limit = { has_province_modifier = gnollish_minority_coexisting_large } remove_province_modifier = gnollish_minority_coexisting_large add_province_modifier = { name = gnollish_minority_coexisting_large duration = -1 hidden = yes } set_province_flag = gnollish_minority_large }
+			else_if = { limit = { has_province_modifier = gnollish_minority_integrated_large } remove_province_modifier = gnollish_minority_integrated_large add_province_modifier = { name = gnollish_minority_integrated_large duration = -1 hidden = yes } set_province_flag = gnollish_minority_large }
+			
+			if = { limit = { has_province_modifier = gnomish_minority_oppressed_small } remove_province_modifier = gnomish_minority_oppressed_small add_province_modifier = { name = gnomish_minority_oppressed_small duration = -1 hidden = yes } set_province_flag = gnomish_minority_small }
+			else_if = { limit = { has_province_modifier = gnomish_minority_coexisting_small } remove_province_modifier = gnomish_minority_coexisting_small add_province_modifier = { name = gnomish_minority_coexisting_small duration = -1 hidden = yes } set_province_flag = gnomish_minority_small }
+			else_if = { limit = { has_province_modifier = gnomish_minority_integrated_small } remove_province_modifier = gnomish_minority_integrated_small add_province_modifier = { name = gnomish_minority_integrated_small duration = -1 hidden = yes } set_province_flag = gnomish_minority_small }
+			else_if = { limit = { has_province_modifier = gnomish_minority_oppressed_large } remove_province_modifier = gnomish_minority_oppressed_large add_province_modifier = { name = gnomish_minority_oppressed_large duration = -1 hidden = yes } set_province_flag = gnomish_minority_large }
+			else_if = { limit = { has_province_modifier = gnomish_minority_coexisting_large } remove_province_modifier = gnomish_minority_coexisting_large add_province_modifier = { name = gnomish_minority_coexisting_large duration = -1 hidden = yes } set_province_flag = gnomish_minority_large }
+			else_if = { limit = { has_province_modifier = gnomish_minority_integrated_large } remove_province_modifier = gnomish_minority_integrated_large add_province_modifier = { name = gnomish_minority_integrated_large duration = -1 hidden = yes } set_province_flag = gnomish_minority_large }
+			
+			if = { limit = { has_province_modifier = goblin_minority_oppressed_small } remove_province_modifier = goblin_minority_oppressed_small add_province_modifier = { name = goblin_minority_oppressed_small duration = -1 hidden = yes } set_province_flag = goblin_minority_small }
+			else_if = { limit = { has_province_modifier = goblin_minority_coexisting_small } remove_province_modifier = goblin_minority_coexisting_small add_province_modifier = { name = goblin_minority_coexisting_small duration = -1 hidden = yes } set_province_flag = goblin_minority_small }
+			else_if = { limit = { has_province_modifier = goblin_minority_integrated_small } remove_province_modifier = goblin_minority_integrated_small add_province_modifier = { name = goblin_minority_integrated_small duration = -1 hidden = yes } set_province_flag = goblin_minority_small }
+			else_if = { limit = { has_province_modifier = goblin_minority_oppressed_large } remove_province_modifier = goblin_minority_oppressed_large add_province_modifier = { name = goblin_minority_oppressed_large duration = -1 hidden = yes } set_province_flag = goblin_minority_large }
+			else_if = { limit = { has_province_modifier = goblin_minority_coexisting_large } remove_province_modifier = goblin_minority_coexisting_large add_province_modifier = { name = goblin_minority_coexisting_large duration = -1 hidden = yes } set_province_flag = goblin_minority_large }
+			else_if = { limit = { has_province_modifier = goblin_minority_integrated_large } remove_province_modifier = goblin_minority_integrated_large add_province_modifier = { name = goblin_minority_integrated_large duration = -1 hidden = yes } set_province_flag = goblin_minority_large }
+			
+			if = { limit = { has_province_modifier = half_elven_minority_oppressed_small } remove_province_modifier = half_elven_minority_oppressed_small add_province_modifier = { name = half_elven_minority_oppressed_small duration = -1 hidden = yes } set_province_flag = half_elven_minority_small }
+			else_if = { limit = { has_province_modifier = half_elven_minority_coexisting_small } remove_province_modifier = half_elven_minority_coexisting_small add_province_modifier = { name = half_elven_minority_coexisting_small duration = -1 hidden = yes } set_province_flag = half_elven_minority_small }
+			else_if = { limit = { has_province_modifier = half_elven_minority_integrated_small } remove_province_modifier = half_elven_minority_integrated_small add_province_modifier = { name = half_elven_minority_integrated_small duration = -1 hidden = yes } set_province_flag = half_elven_minority_small }
+			else_if = { limit = { has_province_modifier = half_elven_minority_oppressed_large } remove_province_modifier = half_elven_minority_oppressed_large add_province_modifier = { name = half_elven_minority_oppressed_large duration = -1 hidden = yes } set_province_flag = half_elven_minority_large }
+			else_if = { limit = { has_province_modifier = half_elven_minority_coexisting_large } remove_province_modifier = half_elven_minority_coexisting_large add_province_modifier = { name = half_elven_minority_coexisting_large duration = -1 hidden = yes } set_province_flag = half_elven_minority_large }
+			else_if = { limit = { has_province_modifier = half_elven_minority_integrated_large } remove_province_modifier = half_elven_minority_integrated_large add_province_modifier = { name = half_elven_minority_integrated_large duration = -1 hidden = yes } set_province_flag = half_elven_minority_large }
+			
+			if = { limit = { has_province_modifier = half_orcish_minority_oppressed_small } remove_province_modifier = half_orcish_minority_oppressed_small add_province_modifier = { name = half_orcish_minority_oppressed_small duration = -1 hidden = yes } set_province_flag = half_orcish_minority_small }
+			else_if = { limit = { has_province_modifier = half_orcish_minority_coexisting_small } remove_province_modifier = half_orcish_minority_coexisting_small add_province_modifier = { name = half_orcish_minority_coexisting_small duration = -1 hidden = yes } set_province_flag = half_orcish_minority_small }
+			else_if = { limit = { has_province_modifier = half_orcish_minority_integrated_small } remove_province_modifier = half_orcish_minority_integrated_small add_province_modifier = { name = half_orcish_minority_integrated_small duration = -1 hidden = yes } set_province_flag = half_orcish_minority_small }
+			else_if = { limit = { has_province_modifier = half_orcish_minority_oppressed_large } remove_province_modifier = half_orcish_minority_oppressed_large add_province_modifier = { name = half_orcish_minority_oppressed_large duration = -1 hidden = yes } set_province_flag = half_orcish_minority_large }
+			else_if = { limit = { has_province_modifier = half_orcish_minority_coexisting_large } remove_province_modifier = half_orcish_minority_coexisting_large add_province_modifier = { name = half_orcish_minority_coexisting_large duration = -1 hidden = yes } set_province_flag = half_orcish_minority_large }
+			else_if = { limit = { has_province_modifier = half_orcish_minority_integrated_large } remove_province_modifier = half_orcish_minority_integrated_large add_province_modifier = { name = half_orcish_minority_integrated_large duration = -1 hidden = yes } set_province_flag = half_orcish_minority_large }
+			
+			if = { limit = { has_province_modifier = halfling_minority_oppressed_small } remove_province_modifier = halfling_minority_oppressed_small add_province_modifier = { name = halfling_minority_oppressed_small duration = -1 hidden = yes } set_province_flag = halfling_minority_small }
+			else_if = { limit = { has_province_modifier = halfling_minority_coexisting_small } remove_province_modifier = halfling_minority_coexisting_small add_province_modifier = { name = halfling_minority_coexisting_small duration = -1 hidden = yes } set_province_flag = halfling_minority_small }
+			else_if = { limit = { has_province_modifier = halfling_minority_integrated_small } remove_province_modifier = halfling_minority_integrated_small add_province_modifier = { name = halfling_minority_integrated_small duration = -1 hidden = yes } set_province_flag = halfling_minority_small }
+			else_if = { limit = { has_province_modifier = halfling_minority_oppressed_large } remove_province_modifier = halfling_minority_oppressed_large add_province_modifier = { name = halfling_minority_oppressed_large duration = -1 hidden = yes } set_province_flag = halfling_minority_large }
+			else_if = { limit = { has_province_modifier = halfling_minority_coexisting_large } remove_province_modifier = halfling_minority_coexisting_large add_province_modifier = { name = halfling_minority_coexisting_large duration = -1 hidden = yes } set_province_flag = halfling_minority_large }
+			else_if = { limit = { has_province_modifier = halfling_minority_integrated_large } remove_province_modifier = halfling_minority_integrated_large add_province_modifier = { name = halfling_minority_integrated_large duration = -1 hidden = yes } set_province_flag = halfling_minority_large }
+			
+			if = { limit = { has_province_modifier = harimari_minority_oppressed_small } remove_province_modifier = harimari_minority_oppressed_small add_province_modifier = { name = harimari_minority_oppressed_small duration = -1 hidden = yes } set_province_flag = harimari_minority_small }
+			else_if = { limit = { has_province_modifier = harimari_minority_coexisting_small } remove_province_modifier = harimari_minority_coexisting_small add_province_modifier = { name = harimari_minority_coexisting_small duration = -1 hidden = yes } set_province_flag = harimari_minority_small }
+			else_if = { limit = { has_province_modifier = harimari_minority_integrated_small } remove_province_modifier = harimari_minority_integrated_small add_province_modifier = { name = harimari_minority_integrated_small duration = -1 hidden = yes } set_province_flag = harimari_minority_small }
+			else_if = { limit = { has_province_modifier = harimari_minority_oppressed_large } remove_province_modifier = harimari_minority_oppressed_large add_province_modifier = { name = harimari_minority_oppressed_large duration = -1 hidden = yes } set_province_flag = harimari_minority_large }
+			else_if = { limit = { has_province_modifier = harimari_minority_coexisting_large } remove_province_modifier = harimari_minority_coexisting_large add_province_modifier = { name = harimari_minority_coexisting_large duration = -1 hidden = yes } set_province_flag = harimari_minority_large }
+			else_if = { limit = { has_province_modifier = harimari_minority_integrated_large } remove_province_modifier = harimari_minority_integrated_large add_province_modifier = { name = harimari_minority_integrated_large duration = -1 hidden = yes } set_province_flag = harimari_minority_large }
+			
+			if = { limit = { has_province_modifier = harpy_minority_oppressed_small } remove_province_modifier = harpy_minority_oppressed_small add_province_modifier = { name = harpy_minority_oppressed_small duration = -1 hidden = yes } set_province_flag = harpy_minority_small }
+			else_if = { limit = { has_province_modifier = harpy_minority_coexisting_small } remove_province_modifier = harpy_minority_coexisting_small add_province_modifier = { name = harpy_minority_coexisting_small duration = -1 hidden = yes } set_province_flag = harpy_minority_small }
+			else_if = { limit = { has_province_modifier = harpy_minority_integrated_small } remove_province_modifier = harpy_minority_integrated_small add_province_modifier = { name = harpy_minority_integrated_small duration = -1 hidden = yes } set_province_flag = harpy_minority_small }
+			else_if = { limit = { has_province_modifier = harpy_minority_oppressed_large } remove_province_modifier = harpy_minority_oppressed_large add_province_modifier = { name = harpy_minority_oppressed_large duration = -1 hidden = yes } set_province_flag = harpy_minority_large }
+			else_if = { limit = { has_province_modifier = harpy_minority_coexisting_large } remove_province_modifier = harpy_minority_coexisting_large add_province_modifier = { name = harpy_minority_coexisting_large duration = -1 hidden = yes } set_province_flag = harpy_minority_large }
+			else_if = { limit = { has_province_modifier = harpy_minority_integrated_large } remove_province_modifier = harpy_minority_integrated_large add_province_modifier = { name = harpy_minority_integrated_large duration = -1 hidden = yes } set_province_flag = harpy_minority_large }
+			
+			if = { limit = { has_province_modifier = hobgoblin_minority_oppressed_small } remove_province_modifier = hobgoblin_minority_oppressed_small add_province_modifier = { name = hobgoblin_minority_oppressed_small duration = -1 hidden = yes } set_province_flag = hobgoblin_minority_small }
+			else_if = { limit = { has_province_modifier = hobgoblin_minority_coexisting_small } remove_province_modifier = hobgoblin_minority_coexisting_small add_province_modifier = { name = hobgoblin_minority_coexisting_small duration = -1 hidden = yes } set_province_flag = hobgoblin_minority_small }
+			else_if = { limit = { has_province_modifier = hobgoblin_minority_integrated_small } remove_province_modifier = hobgoblin_minority_integrated_small add_province_modifier = { name = hobgoblin_minority_integrated_small duration = -1 hidden = yes } set_province_flag = hobgoblin_minority_small }
+			else_if = { limit = { has_province_modifier = hobgoblin_minority_oppressed_large } remove_province_modifier = hobgoblin_minority_oppressed_large add_province_modifier = { name = hobgoblin_minority_oppressed_large duration = -1 hidden = yes } set_province_flag = hobgoblin_minority_large }
+			else_if = { limit = { has_province_modifier = hobgoblin_minority_coexisting_large } remove_province_modifier = hobgoblin_minority_coexisting_large add_province_modifier = { name = hobgoblin_minority_coexisting_large duration = -1 hidden = yes } set_province_flag = hobgoblin_minority_large }
+			else_if = { limit = { has_province_modifier = hobgoblin_minority_integrated_large } remove_province_modifier = hobgoblin_minority_integrated_large add_province_modifier = { name = hobgoblin_minority_integrated_large duration = -1 hidden = yes } set_province_flag = hobgoblin_minority_large }
+			
+			if = { limit = { has_province_modifier = human_minority_oppressed_small } remove_province_modifier = human_minority_oppressed_small add_province_modifier = { name = human_minority_oppressed_small duration = -1 hidden = yes } set_province_flag = human_minority_small }
+			else_if = { limit = { has_province_modifier = human_minority_coexisting_small } remove_province_modifier = human_minority_coexisting_small add_province_modifier = { name = human_minority_coexisting_small duration = -1 hidden = yes } set_province_flag = human_minority_small }
+			else_if = { limit = { has_province_modifier = human_minority_integrated_small } remove_province_modifier = human_minority_integrated_small add_province_modifier = { name = human_minority_integrated_small duration = -1 hidden = yes } set_province_flag = human_minority_small }
+			else_if = { limit = { has_province_modifier = human_minority_oppressed_large } remove_province_modifier = human_minority_oppressed_large add_province_modifier = { name = human_minority_oppressed_large duration = -1 hidden = yes } set_province_flag = human_minority_large }
+			else_if = { limit = { has_province_modifier = human_minority_coexisting_large } remove_province_modifier = human_minority_coexisting_large add_province_modifier = { name = human_minority_coexisting_large duration = -1 hidden = yes } set_province_flag = human_minority_large }
+			else_if = { limit = { has_province_modifier = human_minority_integrated_large } remove_province_modifier = human_minority_integrated_large add_province_modifier = { name = human_minority_integrated_large duration = -1 hidden = yes } set_province_flag = human_minority_large }
+			
+			if = { limit = { has_province_modifier = kobold_minority_oppressed_small } remove_province_modifier = kobold_minority_oppressed_small add_province_modifier = { name = kobold_minority_oppressed_small duration = -1 hidden = yes } set_province_flag = kobold_minority_small }
+			else_if = { limit = { has_province_modifier = kobold_minority_coexisting_small } remove_province_modifier = kobold_minority_coexisting_small add_province_modifier = { name = kobold_minority_coexisting_small duration = -1 hidden = yes } set_province_flag = kobold_minority_small }
+			else_if = { limit = { has_province_modifier = kobold_minority_integrated_small } remove_province_modifier = kobold_minority_integrated_small add_province_modifier = { name = kobold_minority_integrated_small duration = -1 hidden = yes } set_province_flag = kobold_minority_small }
+			else_if = { limit = { has_province_modifier = kobold_minority_oppressed_large } remove_province_modifier = kobold_minority_oppressed_large add_province_modifier = { name = kobold_minority_oppressed_large duration = -1 hidden = yes } set_province_flag = kobold_minority_large }
+			else_if = { limit = { has_province_modifier = kobold_minority_coexisting_large } remove_province_modifier = kobold_minority_coexisting_large add_province_modifier = { name = kobold_minority_coexisting_large duration = -1 hidden = yes } set_province_flag = kobold_minority_large }
+			else_if = { limit = { has_province_modifier = kobold_minority_integrated_large } remove_province_modifier = kobold_minority_integrated_large add_province_modifier = { name = kobold_minority_integrated_large duration = -1 hidden = yes } set_province_flag = kobold_minority_large }
+			
+			if = { limit = { has_province_modifier = lizardfolk_minority_oppressed_small } remove_province_modifier = lizardfolk_minority_oppressed_small add_province_modifier = { name = lizardfolk_minority_oppressed_small duration = -1 hidden = yes } set_province_flag = lizardfolk_minority_small }
+			else_if = { limit = { has_province_modifier = lizardfolk_minority_coexisting_small } remove_province_modifier = lizardfolk_minority_coexisting_small add_province_modifier = { name = lizardfolk_minority_coexisting_small duration = -1 hidden = yes } set_province_flag = lizardfolk_minority_small }
+			else_if = { limit = { has_province_modifier = lizardfolk_minority_integrated_small } remove_province_modifier = lizardfolk_minority_integrated_small add_province_modifier = { name = lizardfolk_minority_integrated_small duration = -1 hidden = yes } set_province_flag = lizardfolk_minority_small }
+			else_if = { limit = { has_province_modifier = lizardfolk_minority_oppressed_large } remove_province_modifier = lizardfolk_minority_oppressed_large add_province_modifier = { name = lizardfolk_minority_oppressed_large duration = -1 hidden = yes } set_province_flag = lizardfolk_minority_large }
+			else_if = { limit = { has_province_modifier = lizardfolk_minority_coexisting_large } remove_province_modifier = lizardfolk_minority_coexisting_large add_province_modifier = { name = lizardfolk_minority_coexisting_large duration = -1 hidden = yes } set_province_flag = lizardfolk_minority_large }
+			else_if = { limit = { has_province_modifier = lizardfolk_minority_integrated_large } remove_province_modifier = lizardfolk_minority_integrated_large add_province_modifier = { name = lizardfolk_minority_integrated_large duration = -1 hidden = yes } set_province_flag = lizardfolk_minority_large }
+			
+			if = { limit = { has_province_modifier = ogre_minority_oppressed_small } remove_province_modifier = ogre_minority_oppressed_small add_province_modifier = { name = ogre_minority_oppressed_small duration = -1 hidden = yes } set_province_flag = ogre_minority_small }
+			else_if = { limit = { has_province_modifier = ogre_minority_coexisting_small } remove_province_modifier = ogre_minority_coexisting_small add_province_modifier = { name = ogre_minority_coexisting_small duration = -1 hidden = yes } set_province_flag = ogre_minority_small }
+			else_if = { limit = { has_province_modifier = ogre_minority_integrated_small } remove_province_modifier = ogre_minority_integrated_small add_province_modifier = { name = ogre_minority_integrated_small duration = -1 hidden = yes } set_province_flag = ogre_minority_small }
+			else_if = { limit = { has_province_modifier = ogre_minority_oppressed_large } remove_province_modifier = ogre_minority_oppressed_large add_province_modifier = { name = ogre_minority_oppressed_large duration = -1 hidden = yes } set_province_flag = ogre_minority_large }
+			else_if = { limit = { has_province_modifier = ogre_minority_coexisting_large } remove_province_modifier = ogre_minority_coexisting_large add_province_modifier = { name = ogre_minority_coexisting_large duration = -1 hidden = yes } set_province_flag = ogre_minority_large }
+			else_if = { limit = { has_province_modifier = ogre_minority_integrated_large } remove_province_modifier = ogre_minority_integrated_large add_province_modifier = { name = ogre_minority_integrated_large duration = -1 hidden = yes } set_province_flag = ogre_minority_large }
+			
+			if = { limit = { has_province_modifier = orcish_minority_oppressed_small } remove_province_modifier = orcish_minority_oppressed_small add_province_modifier = { name = orcish_minority_oppressed_small duration = -1 hidden = yes } set_province_flag = orcish_minority_small }
+			else_if = { limit = { has_province_modifier = orcish_minority_coexisting_small } remove_province_modifier = orcish_minority_coexisting_small add_province_modifier = { name = orcish_minority_coexisting_small duration = -1 hidden = yes } set_province_flag = orcish_minority_small }
+			else_if = { limit = { has_province_modifier = orcish_minority_integrated_small } remove_province_modifier = orcish_minority_integrated_small add_province_modifier = { name = orcish_minority_integrated_small duration = -1 hidden = yes } set_province_flag = orcish_minority_small }
+			else_if = { limit = { has_province_modifier = orcish_minority_oppressed_large } remove_province_modifier = orcish_minority_oppressed_large add_province_modifier = { name = orcish_minority_oppressed_large duration = -1 hidden = yes } set_province_flag = orcish_minority_large }
+			else_if = { limit = { has_province_modifier = orcish_minority_coexisting_large } remove_province_modifier = orcish_minority_coexisting_large add_province_modifier = { name = orcish_minority_coexisting_large duration = -1 hidden = yes } set_province_flag = orcish_minority_large }
+			else_if = { limit = { has_province_modifier = orcish_minority_integrated_large } remove_province_modifier = orcish_minority_integrated_large add_province_modifier = { name = orcish_minority_integrated_large duration = -1 hidden = yes } set_province_flag = orcish_minority_large }
+			
+			if = { limit = { has_province_modifier = ruinborn_minority_oppressed_small } remove_province_modifier = ruinborn_minority_oppressed_small add_province_modifier = { name = ruinborn_minority_oppressed_small duration = -1 hidden = yes } set_province_flag = ruinborn_minority_small }
+			else_if = { limit = { has_province_modifier = ruinborn_minority_coexisting_small } remove_province_modifier = ruinborn_minority_coexisting_small add_province_modifier = { name = ruinborn_minority_coexisting_small duration = -1 hidden = yes } set_province_flag = ruinborn_minority_small }
+			else_if = { limit = { has_province_modifier = ruinborn_minority_integrated_small } remove_province_modifier = ruinborn_minority_integrated_small add_province_modifier = { name = ruinborn_minority_integrated_small duration = -1 hidden = yes } set_province_flag = ruinborn_minority_small }
+			else_if = { limit = { has_province_modifier = ruinborn_minority_oppressed_large } remove_province_modifier = ruinborn_minority_oppressed_large add_province_modifier = { name = ruinborn_minority_oppressed_large duration = -1 hidden = yes } set_province_flag = ruinborn_minority_large }
+			else_if = { limit = { has_province_modifier = ruinborn_minority_coexisting_large } remove_province_modifier = ruinborn_minority_coexisting_large add_province_modifier = { name = ruinborn_minority_coexisting_large duration = -1 hidden = yes } set_province_flag = ruinborn_minority_large }
+			else_if = { limit = { has_province_modifier = ruinborn_minority_integrated_large } remove_province_modifier = ruinborn_minority_integrated_large add_province_modifier = { name = ruinborn_minority_integrated_large duration = -1 hidden = yes } set_province_flag = ruinborn_minority_large }
+			
+			if = { limit = { has_province_modifier = troll_minority_oppressed_small } remove_province_modifier = troll_minority_oppressed_small add_province_modifier = { name = troll_minority_oppressed_small duration = -1 hidden = yes } set_province_flag = troll_minority_small }
+			else_if = { limit = { has_province_modifier = troll_minority_coexisting_small } remove_province_modifier = troll_minority_coexisting_small add_province_modifier = { name = troll_minority_coexisting_small duration = -1 hidden = yes } set_province_flag = troll_minority_small }
+			else_if = { limit = { has_province_modifier = troll_minority_integrated_small } remove_province_modifier = troll_minority_integrated_small add_province_modifier = { name = troll_minority_integrated_small duration = -1 hidden = yes } set_province_flag = troll_minority_small }
+			else_if = { limit = { has_province_modifier = troll_minority_oppressed_large } remove_province_modifier = troll_minority_oppressed_large add_province_modifier = { name = troll_minority_oppressed_large duration = -1 hidden = yes } set_province_flag = troll_minority_large }
+			else_if = { limit = { has_province_modifier = troll_minority_coexisting_large } remove_province_modifier = troll_minority_coexisting_large add_province_modifier = { name = troll_minority_coexisting_large duration = -1 hidden = yes } set_province_flag = troll_minority_large }
+			else_if = { limit = { has_province_modifier = troll_minority_integrated_large } remove_province_modifier = troll_minority_integrated_large add_province_modifier = { name = troll_minority_integrated_large duration = -1 hidden = yes } set_province_flag = troll_minority_large }
+			
+		}
+	}
+}
+
+country_event = {
+	id = guisubmod.2
+	title = guisubmod.2.t
+	desc = guisubmod.2.desc
+	picture = RELIGION_eventPicture
+
+	is_triggered_only = yes
+	hidden = yes
+	fire_only_once = yes
+	
+	trigger = {
+		ai = no
+	}
+	
+	option = {
+		name = guisubmod.2.a
+		hold_province = {
+			 if = {
+				limit = { is_city = yes }
+			
+				# if = { limit = { has_province_modifier = dig_1 } remove_province_modifier = dig_1 add_province_modifier = { name = dig_1 duration = -1 hidden = yes } }
+				# if = { limit = { has_province_modifier = dig_2 } remove_province_modifier = dig_2 add_province_modifier = { name = dig_2 duration = -1 hidden = yes } }
+				# if = { limit = { has_province_modifier = dig_3 } remove_province_modifier = dig_3 add_province_modifier = { name = dig_3 duration = -1 hidden = yes } }
+				# if = { limit = { has_province_modifier = dig_4 } remove_province_modifier = dig_4 add_province_modifier = { name = dig_4 duration = -1 hidden = yes } }
+				# if = { limit = { has_province_modifier = dig_5 } remove_province_modifier = dig_5 add_province_modifier = { name = dig_5 duration = -1 hidden = yes } }
+				# if = { limit = { has_province_modifier = dig_6 } remove_province_modifier = dig_6 add_province_modifier = { name = dig_6 duration = -1 hidden = yes } }
+				# if = { limit = { has_province_modifier = dig_7 } remove_province_modifier = dig_7 add_province_modifier = { name = dig_7 duration = -1 hidden = yes } }
+				# if = { limit = { has_province_modifier = dig_8 } remove_province_modifier = dig_8 add_province_modifier = { name = dig_8 duration = -1 hidden = yes } }
+				# if = { limit = { has_province_modifier = dig_9 } remove_province_modifier = dig_9 add_province_modifier = { name = dig_9 duration = -1 hidden = yes } }
+				# if = { limit = { has_province_modifier = dig_10 } remove_province_modifier = dig_10 add_province_modifier = { name = dig_10 duration = -1 hidden = yes } }
+				# if = { limit = { has_province_modifier = dig_11 } remove_province_modifier = dig_11 add_province_modifier = { name = dig_11 duration = -1 hidden = yes } }
+				if = { limit = { has_province_modifier = damaged_hold } remove_province_modifier = damaged_hold add_province_modifier = { name = damaged_hold duration = -1 hidden = yes } set_province_flag = damaged_hold }
+				if = { limit = { has_province_modifier = partially_ruined_hold } remove_province_modifier = partially_ruined_hold add_province_modifier = { name = partially_ruined_hold duration = -1 hidden = yes } set_province_flag = partially_ruined_hold }
+				if = { limit = { has_province_modifier = ruined_hold } remove_province_modifier = ruined_hold add_province_modifier = { name = ruined_hold duration = -1 hidden = yes } set_province_flag = ruined_hold }
+				if = { limit = { has_province_modifier = infested_hold } remove_province_modifier = infested_hold add_province_modifier = { name = infested_hold duration = -1 hidden = yes } set_province_flag = infested_hold }
+				if = { limit = { has_province_modifier = hold_foundry } remove_province_modifier = hold_foundry add_province_modifier = { name = hold_foundry duration = -1 hidden = yes } set_province_flag = hold_foundry }
+				if = { limit = { has_province_modifier = hold_foundry_2 } remove_province_modifier = hold_foundry_2 add_province_modifier = { name = hold_foundry_2 duration = -1 hidden = yes } set_province_flag = hold_foundry_2 }
+				if = { limit = { has_province_modifier = magma_forge } remove_province_modifier = magma_forge add_province_modifier = { name = magma_forge duration = -1 hidden = yes } set_province_flag = magma_forge }
+				if = { limit = { has_province_modifier = hold_city } remove_province_modifier = hold_city add_province_modifier = { name = hold_city duration = -1 hidden = yes } set_province_flag = hold_city }
+				if = { limit = { has_province_modifier = hold_city_2 } remove_province_modifier = hold_city_2 add_province_modifier = { name = hold_city_2 duration = -1 hidden = yes } set_province_flag = hold_city_2 }
+				if = { limit = { has_province_modifier = artificier_hall } remove_province_modifier = artificier_hall add_province_modifier = { name = artificier_hall duration = -1 hidden = yes } set_province_flag = artificier_hall }
+				if = { limit = { has_province_modifier = hold_artisan } remove_province_modifier = hold_artisan add_province_modifier = { name = hold_artisan duration = -1 hidden = yes } set_province_flag = hold_artisan }
+				if = { limit = { has_province_modifier = hold_artisan_2 } remove_province_modifier = hold_artisan_2 add_province_modifier = { name = hold_artisan_2 duration = -1 hidden = yes } set_province_flag = hold_artisan_2 }
+				if = { limit = { has_province_modifier = engineer_manufactory } remove_province_modifier = engineer_manufactory add_province_modifier = { name = engineer_manufactory duration = -1 hidden = yes } set_province_flag = engineer_manufactory }
+				if = { limit = { has_province_modifier = hold_farm } remove_province_modifier = hold_farm add_province_modifier = { name = hold_farm duration = -1 hidden = yes } set_province_flag = hold_farm }
+				if = { limit = { has_province_modifier = hold_farm_2 } remove_province_modifier = hold_farm_2 add_province_modifier = { name = hold_farm_2 duration = -1 hidden = yes } set_province_flag = hold_farm_2 }
+				if = { limit = { has_province_modifier = high_gardens } remove_province_modifier = high_gardens add_province_modifier = { name = high_gardens duration = -1 hidden = yes } set_province_flag = high_gardens }
+				if = { limit = { has_province_modifier = hold_military } remove_province_modifier = hold_military add_province_modifier = { name = hold_military duration = -1 hidden = yes } set_province_flag = hold_military }
+				if = { limit = { has_province_modifier = hold_military_2 } remove_province_modifier = hold_military_2 add_province_modifier = { name = hold_military_2 duration = -1 hidden = yes } set_province_flag = hold_military_2 }
+				if = { limit = { has_province_modifier = military_academy } remove_province_modifier = military_academy add_province_modifier = { name = military_academy duration = -1 hidden = yes } set_province_flag = military_academy }
+			}
+			else = {
+				if = { limit = { has_province_modifier = damaged_hold } set_province_flag = damaged_hold }
+				if = { limit = { has_province_modifier = partially_ruined_hold } set_province_flag = partially_ruined_hold }
+				if = { limit = { has_province_modifier = ruined_hold } set_province_flag = ruined_hold }
+				if = { limit = { has_province_modifier = infested_hold } set_province_flag = infested_hold }
+			}
+		}
+	}
+}
+
+province_event = {
+	id = guisubmod.3
+	title = guisubmod.3.t
+	desc = guisubmod.3.desc
+	picture = RELIGION_eventPicture
+
+	is_triggered_only = yes
+	hidden = yes
+	
+	option = {
+		name = guisubmod.3.a
+		migratory_tag_on_hold_effect = yes
+	}
+}

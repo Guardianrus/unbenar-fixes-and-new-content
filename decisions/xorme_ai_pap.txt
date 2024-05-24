@@ -1,0 +1,32 @@
+country_decisions = {
+    investigate_heresy = {
+		potential = {
+			ai = yes
+			has_dlc = "Emperor"
+			is_papal_controller = yes
+			tag = PAP
+			NOT = { is_year = 1600 }
+			is_year = 1500
+		}
+		allow = {
+			curia_treasury_size = 500
+			is_papal_controller = yes
+			reform_desire = 0.05
+		}
+		effect = {
+			add_curia_treasury = -500
+			add_reform_desire = -0.05
+			add_reform_desire_scale = 0.5
+		}
+		ai_will_do = {
+			factor = 10.0
+			modifier = {
+				factor = 0
+				OR = {
+					NOT = { curia_treasury_size = 2500 }
+					reform_desire = 1.25
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,106 @@
+country_decisions = {
+	dev_sum_clicks_decision = {
+		potential = {
+			has_country_flag = allow_develop_local_area
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_country_modifier = dev_sum_clicks_decision_tapped
+			}
+		}
+		allow = {
+			custom_trigger_tooltip = {
+				tooltip = dev_sum_clicks_decision_tooltip
+			}
+		}
+		effect = {
+			custom_tooltip = dev_sum_clicks_decision_acitve_tooltip
+			hidden_effect = {
+				country_event = {
+					id = ANEX_initalization.3
+				}
+				if = {
+					limit = {
+						ai = yes
+					}
+					add_country_modifier = {
+						name = dev_sum_clicks_decision_tapped
+						duration = 18250
+					}
+				}
+			}
+		}
+	}
+
+	dev_dev_passive_decision = {
+	 	potential = {
+			has_country_flag = allow_develop_local_area
+	 	}
+	 	ai_will_do = {
+	 		factor = 1
+			modifier = {
+				factor = 0
+				has_country_modifier = dev_dev_passive_decision_tapped
+			}
+	 	}
+	 	allow = {
+	 		custom_trigger_tooltip = {
+	 			tooltip = dev_dev_passive_decision_tooltip
+	 		}
+	 	}
+	 	effect = {
+			custom_tooltip = dev_sum_clicks_decision_acitve_tooltip
+			hidden_effect = {
+				country_event = {
+					id = ANEX_initalization.4
+				}
+				if = {
+					limit = {
+						ai = yes
+					}
+					add_country_modifier = {
+						name = dev_dev_passive_decision_tapped
+						duration = 18250
+					}
+				}
+			}
+	 	}
+	}
+
+	dev_lose_decision = {
+		potential = {
+			has_country_flag = allow_develop_local_area
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_country_modifier = dev_lose_decision_tapped
+			}
+		}
+		allow = {
+			custom_trigger_tooltip = {
+				tooltip = dev_lose_decision_tooltip
+			}
+		}
+		effect = {
+			custom_tooltip = dev_sum_clicks_decision_acitve_tooltip
+			hidden_effect = {
+				country_event = {
+					id = ANEX_initalization.5
+				}
+				if = {
+					limit = {
+						ai = yes
+					}
+					add_country_modifier = {
+						name = dev_lose_decision_tapped
+						duration = 18250
+					}
+				}
+			}
+		}
+	}
+}

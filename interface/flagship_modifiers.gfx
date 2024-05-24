@@ -1,0 +1,18 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_flagship_zurantakel_cannons_1"
+		texturefile = "gfx//interface//mass_load_cannons.tga"
+		loadType = "INGAME"
+	}
+
+	spriteType = {
+		name = "GFX_flagship_zurantakel_cannons_2"
+		texturefile = "gfx//interface//mass_load_cannons.tga"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_flagship_ovdal_tundur_durability_0"
+		texturefile = "gfx//interface//hull_sheating.tga"
+		loadType = "INGAME"
+	}
+}

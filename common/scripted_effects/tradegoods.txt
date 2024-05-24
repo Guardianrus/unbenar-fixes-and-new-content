@@ -1,0 +1,237 @@
+
+update_goods = {
+	set_variable = {
+		which = $GOODS$
+		value = 0.00
+	}
+	set_variable = {
+		which = $GOODS$_total
+		value = 0.00
+	}
+	set_variable = {
+		which = $GOODS$_used
+		value = 0.00
+	}
+
+	set_variable = {
+		which = $GOODS$_total_need
+		value = 0
+	}
+
+	every_owned_province = {
+		limit = {
+			trade_goods = $GOODS$
+			NOT = {
+				has_province_modifier = not_enough_resources
+			}
+		}
+
+		export_to_variable = {
+			variable_name = $GOODS$
+			value = modifier:trade_goods_size
+		}
+
+		export_to_variable = {
+			variable_name = tradegood_modifier
+			value = modifier:trade_goods_size_modifier
+		}
+
+		set_variable = {
+			which = $GOODS$_modifier
+			which = $GOODS$
+		}
+
+		multiply_variable = {
+			which = $GOODS$_modifier
+			which = tradegood_modifier
+		}
+
+		change_variable = {
+			which = $GOODS$
+			which = $GOODS$_modifier
+		}
+
+		owner = {
+			change_variable = {
+				which = $GOODS$
+				which = PREV
+			}
+		}
+	}
+	change_variable = {
+		which = $GOODS$_total
+		which = $GOODS$
+	}
+}
+
+update_goods_prov = {
+		export_to_variable = {
+			variable_name = $GOODS$
+			value = modifier:trade_goods_size
+		}
+
+		export_to_variable = {
+			variable_name = tradegood_modifier
+			value = modifier:trade_goods_size_modifier
+		}
+
+		set_variable = {
+			which = $GOODS$_modifier
+			which = $GOODS$
+		}
+
+		multiply_variable = {
+			which = $GOODS$_modifier
+			which = tradegood_modifier
+		}
+
+		change_variable = {
+			which = $GOODS$
+			which = $GOODS$_modifier
+		}
+
+		owner = {
+			change_variable = {
+				which = $GOODS$
+				which = PREV
+			}
+		}
+
+}
+
+last_know_goods = {
+	if = {
+		limit = {
+			NOT = {
+				has_province_modifier = not_enough_resources
+			}
+		}
+		export_to_variable = {
+			variable_name = $GOODS$
+			value = modifier:trade_goods_size
+		}
+
+		export_to_variable = {
+			variable_name = tradegood_modifier
+			value = modifier:trade_goods_size_modifier
+		}
+		change_variable = {
+			which = $GOODS$
+			value = $value$
+		}
+		set_variable = {
+			which = $GOODS$_modifier
+			which = $GOODS$
+		}
+
+		multiply_variable = {
+			which = $GOODS$_modifier
+			which = tradegood_modifier
+		}
+
+		change_variable = {
+			which = $GOODS$
+			which = $GOODS$_modifier
+		}
+		set_variable = {
+			which = last_normal_goods
+			value = 0
+		}
+		set_variable = {
+			which = last_normal_goods
+			which = $GOODS$
+		}
+
+	}
+}
+
+settings_cannon = {
+	set_variable = {
+		which = tin_need
+		value = 0.4
+	}
+	set_variable = {
+		which = copper_need
+		value = 0.6
+	}
+}
+
+settings_metalworking = {
+	set_variable = {
+		which = iron_need
+		value = 1
+	}
+}
+settings_munitions = {
+	set_variable = {
+		which = lead_need
+		value = 1
+	}
+}
+settings_steam_engine = {
+	set_variable = {
+		which = zinc_need
+		value = 0.4
+	}
+	set_variable = {
+		which = copper_need_steam
+		value = 0.6
+	}
+}
+settings_optics = {
+	set_variable = {
+		which = glass_need
+		value = 0.6
+	}
+}
+settings_leather = {
+	set_variable = {
+		which = livestock_need
+		value = 1
+	}
+}
+settings_woodworking = {
+	set_variable = {
+		which = lumber_need
+		value = 1
+	}
+}
+settings_beer= {
+	set_variable = {
+		which = grain_need
+		value = 1.5
+	}
+}
+
+update_goods_beer = {
+	update_goods = {
+		GOODS = grain
+	}
+	update_goods = {
+		GOODS = fungi
+	}
+	set_variable = {
+		which = beer_raw
+		value = 0.00
+	}
+	set_variable = {
+		which = beer_raw_total
+		value = 0.00
+	}
+	set_variable = {
+		which = beer_raw_used
+		value = 0.00
+	}
+	set_variable = {
+		which = beer_raw_total_need
+		value = 0
+	}
+	change_variable ={
+		which = beer_raw
+		which = grain
+	}
+	change_variable = {
+		which = beer_raw
+		which = fungi
+	}
+}

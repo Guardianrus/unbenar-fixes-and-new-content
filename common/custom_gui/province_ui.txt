@@ -1,0 +1,5476 @@
+custom_text_box = {
+	name = province_name_label
+	potential = { always = yes }
+}
+
+custom_text_box = {
+	name = capital_name_label
+	potential = { always = yes }
+}
+
+
+custom_icon = {
+	name = province_autonomy_icon 
+	potential = { }
+}
+
+custom_icon = {
+	name = province_unrest_icon 
+	potential = { }
+}
+
+custom_icon = {
+	name = province_garrison_icon 
+	potential = { }
+}
+
+
+#centaur
+custom_button = {
+	name = province_icon_centaur_so
+	potential = { has_province_modifier = centaur_minority_oppressed_small }
+	trigger = { }
+	effect = {
+		tooltip = { add_province_modifier = { name = centaur_minority_oppressed_small_ui duration = -1 } }
+		hidden_effect = {
+			FROM = { 
+				if = {
+					limit = {
+						NOT = { has_country_flag = racial_military_menu_opened }
+						NOT = { has_country_flag = racial_pop_menu_opened }
+						NOT = { has_country_modifier = racial_pop_menu_cooldown }
+					}
+					set_country_flag = racial_pop_menu_opened
+					pop_menu_cored_dev_calculations = { RACE = centaur }
+					country_event = { id = racial_pop_events_centaur.12 }
+				}
+			}
+		}
+	}
+}
+custom_button = {
+	name = province_icon_centaur_lo
+	tooltip = province_minority_tt
+	potential = { has_province_modifier = centaur_minority_oppressed_large }
+	trigger = { }
+	effect = {
+		tooltip = { add_province_modifier = { name = centaur_minority_oppressed_large_ui duration = -1 } }
+		hidden_effect = {
+			FROM = { 
+				if = {
+					limit = {
+						NOT = { has_country_flag = racial_military_menu_opened }
+						NOT = { has_country_flag = racial_pop_menu_opened }
+						NOT = { has_country_modifier = racial_pop_menu_cooldown }
+					}
+					set_country_flag = racial_pop_menu_opened
+					pop_menu_cored_dev_calculations = { RACE = centaur }
+					country_event = { id = racial_pop_events_centaur.12 }
+				}
+			}
+		}
+	}
+}
+custom_button = {
+	name = province_icon_centaur_sa
+	tooltip = province_minority_tt
+	potential = { has_province_modifier = centaur_minority_coexisting_small }
+	trigger = { }
+	effect = {
+		tooltip = { add_province_modifier = { name = centaur_minority_coexisting_small_ui duration = -1 } }
+		hidden_effect = {
+			FROM = { 
+				if = {
+					limit = {
+						NOT = { has_country_flag = racial_military_menu_opened }
+						NOT = { has_country_flag = racial_pop_menu_opened }
+						NOT = { has_country_modifier = racial_pop_menu_cooldown }
+					}
+					set_country_flag = racial_pop_menu_opened
+					pop_menu_cored_dev_calculations = { RACE = centaur }
+					country_event = { id = racial_pop_events_centaur.12 }
+				}
+			}
+		}
+	}
+}
+custom_button = {
+	name = province_icon_centaur_la
+	tooltip = province_minority_tt
+	potential = { has_province_modifier = centaur_minority_coexisting_large }
+	trigger = { }
+	effect = {
+		tooltip = { add_province_modifier = { name = centaur_minority_coexisting_large_ui duration = -1 } }
+		hidden_effect = {
+			FROM = { 
+				if = {
+					limit = {
+						NOT = { has_country_flag = racial_military_menu_opened }
+						NOT = { has_country_flag = racial_pop_menu_opened }
+						NOT = { has_country_modifier = racial_pop_menu_cooldown }
+					}
+					set_country_flag = racial_pop_menu_opened
+					pop_menu_cored_dev_calculations = { RACE = centaur }
+					country_event = { id = racial_pop_events_centaur.12 }
+				}
+			}
+		}
+	}
+}
+custom_button = {
+	name = province_icon_centaur_si
+	tooltip = province_minority_tt
+	potential = { has_province_modifier = centaur_minority_integrated_small }
+	trigger = { }
+	effect = {
+		tooltip = { add_province_modifier = { name = centaur_minority_integrated_small_ui duration = -1 } }
+		hidden_effect = {
+			FROM = { 
+				if = {
+					limit = {
+						NOT = { has_country_flag = racial_military_menu_opened }
+						NOT = { has_country_flag = racial_pop_menu_opened }
+						NOT = { has_country_modifier = racial_pop_menu_cooldown }
+					}
+					set_country_flag = racial_pop_menu_opened
+					pop_menu_cored_dev_calculations = { RACE = centaur }
+					country_event = { id = racial_pop_events_centaur.12 }
+				}
+			}
+		}
+	}
+}
+custom_button = {
+	name = province_icon_centaur_li
+	tooltip = province_minority_tt
+	potential = { has_province_modifier = centaur_minority_integrated_large }
+	trigger = { }
+	effect = {
+		tooltip = { add_province_modifier = { name = centaur_minority_integrated_large_ui duration = -1 } }
+		hidden_effect = {
+			FROM = { 
+				if = {
+					limit = {
+						NOT = { has_country_flag = racial_military_menu_opened }
+						NOT = { has_country_flag = racial_pop_menu_opened }
+						NOT = { has_country_modifier = racial_pop_menu_cooldown }
+					}
+					set_country_flag = racial_pop_menu_opened
+					pop_menu_cored_dev_calculations = { RACE = centaur }
+					country_event = { id = racial_pop_events_centaur.12 }
+				}
+			}
+		}
+	}
+}
+custom_button = {
+	name = province_icon_centaur_mo
+	tooltip = province_majority_tt
+	potential = { has_province_modifier = centaur_majority_oppressed }
+	trigger = { }
+	effect = {
+		tooltip = { add_province_modifier = { name = centaur_majority_oppressed_ui duration = -1 } }
+		hidden_effect = {
+			FROM = { 
+				if = {
+					limit = {
+						NOT = { has_country_flag = racial_military_menu_opened }
+						NOT = { has_country_flag = racial_pop_menu_opened }
+						NOT = { has_country_modifier = racial_pop_menu_cooldown }
+					}
+					set_country_flag = racial_pop_menu_opened
+					pop_menu_cored_dev_calculations = { RACE = centaur }
+					country_event = { id = racial_pop_events_centaur.12 }
+				}
+			}
+		}
+	}
+}
+custom_button = {
+	name = province_icon_centaur_ma
+	tooltip = province_majority_tt
+	potential = { has_province_modifier = centaur_majority_coexisting }
+	trigger = { }
+	effect = {
+		tooltip = { add_province_modifier = { name = centaur_majority_coexisting_ui duration = -1 } }
+		hidden_effect = {
+			FROM = { 
+				if = {
+					limit = {
+						NOT = { has_country_flag = racial_military_menu_opened }
+						NOT = { has_country_flag = racial_pop_menu_opened }
+						NOT = { has_country_modifier = racial_pop_menu_cooldown }
+					}
+					set_country_flag = racial_pop_menu_opened
+					pop_menu_cored_dev_calculations = { RACE = centaur }
+					country_event = { id = racial_pop_events_centaur.12 }
+				}
+			}
+		}
+	}
+}
+custom_button = {
+	name = province_icon_centaur_mi
+	tooltip = province_majority_tt
+	potential = { OR = { has_province_modifier = centaur_majority_integrated has_province_modifier = centaur_majority_primary } }
+	trigger = { }
+	effect = {
+		tooltip = { add_province_modifier = { name = centaur_majority_integrated_ui duration = -1 } }
+		hidden_effect = {
+			FROM = { 
+				if = {
+					limit = {
+						NOT = { has_country_flag = racial_military_menu_opened }
+						NOT = { has_country_flag = racial_pop_menu_opened }
+						NOT = { has_country_modifier = racial_pop_menu_cooldown }
+					}
+					set_country_flag = racial_pop_menu_opened
+					pop_menu_cored_dev_calculations = { RACE = centaur }
+					country_event = { id = racial_pop_events_centaur.12 }
+				}
+			}
+		}
+	}
+}
+
+
+#dwarven
+custom_button = {
+	name = province_icon_dwarven_so
+	tooltip = province_minority_tt
+	potential = { has_province_modifier = dwarven_minority_oppressed_small }
+	trigger = { }
+	effect = {
+		tooltip = { add_province_modifier = { name = dwarven_minority_oppressed_small_ui duration = -1 } }
+		hidden_effect = {
+			FROM = { 
+				if = {
+					limit = {
+						NOT = { has_country_flag = racial_military_menu_opened }
+						NOT = { has_country_flag = racial_pop_menu_opened }
+						NOT = { has_country_modifier = racial_pop_menu_cooldown }
+					}
+					set_country_flag = racial_pop_menu_opened
+					pop_menu_cored_dev_calculations = { RACE = dwarven }
+					country_event = { id = racial_pop_events_dwarven.12 }
+				}
+			}
+		}
+	}
+}
+custom_button = {
+	name = province_icon_dwarven_lo
+	tooltip = province_minority_tt
+	potential = { has_province_modifier = dwarven_minority_oppressed_large }
+	trigger = { }
+	effect = {
+		tooltip = { add_province_modifier = { name = dwarven_minority_oppressed_large_ui duration = -1 } }
+		hidden_effect = {
+			FROM = { 
+				if = {
+					limit = {
+						NOT = { has_country_flag = racial_military_menu_opened }
+						NOT = { has_country_flag = racial_pop_menu_opened }
+						NOT = { has_country_modifier = racial_pop_menu_cooldown }
+					}
+					set_country_flag = racial_pop_menu_opened
+					pop_menu_cored_dev_calculations = { RACE = dwarven }
+					country_event = { id = racial_pop_events_dwarven.12 }
+				}
+			}
+		}
+	}
+}
+custom_button = {
+	name = province_icon_dwarven_sa
+	tooltip = province_minority_tt
+	potential = { has_province_modifier = dwarven_minority_coexisting_small }
+	trigger = { }
+	effect = {
+		tooltip = { add_province_modifier = { name = dwarven_minority_coexisting_small_ui duration = -1 } }
+		hidden_effect = {
+			FROM = { 
+				if = {
+					limit = {
+						NOT = { has_country_flag = racial_military_menu_opened }
+						NOT = { has_country_flag = racial_pop_menu_opened }
+						NOT = { has_country_modifier = racial_pop_menu_cooldown }
+					}
+					set_country_flag = racial_pop_menu_opened
+					pop_menu_cored_dev_calculations = { RACE = dwarven }
+					country_event = { id = racial_pop_events_dwarven.12 }
+				}
+			}
+		}
+	}
+}
+custom_button = {
+	name = province_icon_dwarven_la
+	tooltip = province_minority_tt
+	potential = { has_province_modifier = dwarven_minority_coexisting_large }
+	trigger = { }
+	effect = {
+		tooltip = { add_province_modifier = { name = dwarven_minority_coexisting_large_ui duration = -1 } }
+		hidden_effect = {
+			FROM = { 
+				if = {
+					limit = {
+						NOT = { has_country_flag = racial_military_menu_opened }
+						NOT = { has_country_flag = racial_pop_menu_opened }
+						NOT = { has_country_modifier = racial_pop_menu_cooldown }
+					}
+					set_country_flag = racial_pop_menu_opened
+					pop_menu_cored_dev_calculations = { RACE = dwarven }
+					country_event = { id = racial_pop_events_dwarven.12 }
+				}
+			}
+		}
+	}
+}
+custom_button = {
+	name = province_icon_dwarven_si
+	tooltip = province_minority_tt
+	potential = { has_province_modifier = dwarven_minority_integrated_small }
+	trigger = { }
+	effect = {
+		tooltip = { add_province_modifier = { name = dwarven_minority_integrated_small_ui duration = -1 } }
+		hidden_effect = {
+			FROM = { 
+				if = {
+					limit = {
+						NOT = { has_country_flag = racial_military_menu_opened }
+						NOT = { has_country_flag = racial_pop_menu_opened }
+						NOT = { has_country_modifier = racial_pop_menu_cooldown }
+					}
+					set_country_flag = racial_pop_menu_opened
+					pop_menu_cored_dev_calculations = { RACE = dwarven }
+					country_event = { id = racial_pop_events_dwarven.12 }
+				}
+			}
+		}
+	}
+}
+custom_button = {
+	name = province_icon_dwarven_li
+	tooltip = province_minority_tt
+	potential = { has_province_modifier = dwarven_minority_integrated_large }
+	trigger = { }
+	effect = {
+		tooltip = { add_province_modifier = { name = dwarven_minority_integrated_large_ui duration = -1 } }
+		hidden_effect = {
+			FROM = { 
+				if = {
+					limit = {
+						NOT = { has_country_flag = racial_military_menu_opened }
+						NOT = { has_country_flag = racial_pop_menu_opened }
+						NOT = { has_country_modifier = racial_pop_menu_cooldown }
+					}
+					set_country_flag = racial_pop_menu_opened
+					pop_menu_cored_dev_calculations = { RACE = dwarven }
+					country_event = { id = racial_pop_events_dwarven.12 }
+				}
+			}
+		}
+	}
+}
+custom_button = {
+	name = province_icon_dwarven_mo
+	tooltip = province_majority_tt
+	potential = { has_province_modifier = dwarven_majority_oppressed }
+	trigger = { }
+	effect = {
+		tooltip = { add_province_modifier = { name = dwarven_majority_oppressed_ui duration = -1 } }
+		hidden_effect = {
+			FROM = { 
+				if = {
+					limit = {
+						NOT = { has_country_flag = racial_military_menu_opened }
+						NOT = { has_country_flag = racial_pop_menu_opened }
+						NOT = { has_country_modifier = racial_pop_menu_cooldown }
+					}
+					set_country_flag = racial_pop_menu_opened
+					pop_menu_cored_dev_calculations = { RACE = dwarven }
+					country_event = { id = racial_pop_events_dwarven.12 }
+				}
+			}
+		}
+	}
+}
+custom_button = {
+	name = province_icon_dwarven_ma
+	tooltip = province_majority_tt
+	potential = { has_province_modifier = dwarven_majority_coexisting }
+	trigger = { }
+	effect = {
+		tooltip = { add_province_modifier = { name = dwarven_majority_coexisting_ui duration = -1 } }
+		hidden_effect = {
+			FROM = { 
+				if = {
+					limit = {
+						NOT = { has_country_flag = racial_military_menu_opened }
+						NOT = { has_country_flag = racial_pop_menu_opened }
+						NOT = { has_country_modifier = racial_pop_menu_cooldown }
+					}
+					set_country_flag = racial_pop_menu_opened
+					pop_menu_cored_dev_calculations = { RACE = dwarven }
+					country_event = { id = racial_pop_events_dwarven.12 }
+				}
+			}
+		}
+	}
+}
+custom_button = {
+	name = province_icon_dwarven_mi
+	tooltip = province_majority_tt
+	potential = { OR = { has_province_modifier = dwarven_majority_integrated has_province_modifier = dwarven_majority_primary } }
+	trigger = { }
+	effect = {
+		tooltip = { add_province_modifier = { name = dwarven_majority_integrated_ui duration = -1 } }
+		hidden_effect = {
+			FROM = { 
+				if = {
+					limit = {
+						NOT = { has_country_flag = racial_military_menu_opened }
+						NOT = { has_country_flag = racial_pop_menu_opened }
+						NOT = { has_country_modifier = racial_pop_menu_cooldown }
+					}
+					set_country_flag = racial_pop_menu_opened
+					pop_menu_cored_dev_calculations = { RACE = dwarven }
+					country_event = { id = racial_pop_events_dwarven.12 }
+				}
+			}
+		}
+	}
+}
+
+
+#elven
+custom_button = {
+	name = province_icon_elven_so
+	tooltip = province_minority_tt
+	potential = { has_province_modifier = elven_minority_oppressed_small }
+	trigger = { }
+	effect = {
+		tooltip = { add_province_modifier = { name = elven_minority_oppressed_small_ui duration = -1 } }
+		hidden_effect = {
+			FROM = { 
+				if = {
+					limit = {
+						NOT = { has_country_flag = racial_military_menu_opened }
+						NOT = { has_country_flag = racial_pop_menu_opened }
+						NOT = { has_country_modifier = racial_pop_menu_cooldown }
+					}
+					set_country_flag = racial_pop_menu_opened
+					pop_menu_cored_dev_calculations = { RACE = elven }
+					country_event = { id = racial_pop_events_elven.12 }
+				}
+			}
+		}
+	}
+}
+custom_button = {
+	name = province_icon_elven_lo
+	tooltip = province_minority_tt
+	potential = { has_province_modifier = elven_minority_oppressed_large }
+	trigger = { }
+	effect = {
+		tooltip = { add_province_modifier = { name = elven_minority_oppressed_large_ui duration = -1 } }
+		hidden_effect = {
+			FROM = { 
+				if = {
+					limit = {
+						NOT = { has_country_flag = racial_military_menu_opened }
+						NOT = { has_country_flag = racial_pop_menu_opened }
+						NOT = { has_country_modifier = racial_pop_menu_cooldown }
+					}
+					set_country_flag = racial_pop_menu_opened
+					pop_menu_cored_dev_calculations = { RACE = elven }
+					country_event = { id = racial_pop_events_elven.12 }
+				}
+			}
+		}
+	}
+}
+custom_button = {
+	name = province_icon_elven_sa
+	tooltip = province_minority_tt
+	potential = { has_province_modifier = elven_minority_coexisting_small }
+	trigger = { }
+	effect = {
+		tooltip = { add_province_modifier = { name = elven_minority_coexisting_small_ui duration = -1 } }
+		hidden_effect = {
+			FROM = { 
+				if = {
+					limit = {
+						NOT = { has_country_flag = racial_military_menu_opened }
+						NOT = { has_country_flag = racial_pop_menu_opened }
+						NOT = { has_country_modifier = racial_pop_menu_cooldown }
+					}
+					set_country_flag = racial_pop_menu_opened
+					pop_menu_cored_dev_calculations = { RACE = elven }
+					country_event = { id = racial_pop_events_elven.12 }
+				}
+			}
+		}
+	}
+}
+custom_button = {
+	name = province_icon_elven_la
+	tooltip = province_minority_tt
+	potential = { has_province_modifier = elven_minority_coexisting_large }
+	trigger = { }
+	effect = {
+		tooltip = { add_province_modifier = { name = elven_minority_coexisting_large_ui duration = -1 } }
+		hidden_effect = {
+			FROM = { 
+				if = {
+					limit = {
+						NOT = { has_country_flag = racial_military_menu_opened }
+						NOT = { has_country_flag = racial_pop_menu_opened }
+						NOT = { has_country_modifier = racial_pop_menu_cooldown }
+					}
+					set_country_flag = racial_pop_menu_opened
+					pop_menu_cored_dev_calculations = { RACE = elven }
+					country_event = { id = racial_pop_events_elven.12 }
+				}
+			}
+		}
+	}
+}
+custom_button = {
+	name = province_icon_elven_si
+	tooltip = province_minority_tt
+	potential = { has_province_modifier = elven_minority_integrated_small }
+	trigger = { }
+	effect = {
+		tooltip = { add_province_modifier = { name = elven_minority_integrated_small_ui duration = -1 } }
+		hidden_effect = {
+			FROM = { 
+				if = {
+					limit = {
+						NOT = { has_country_flag = racial_military_menu_opened }
+						NOT = { has_country_flag = racial_pop_menu_opened }
+						NOT = { has_country_modifier = racial_pop_menu_cooldown }
+					}
+					set_country_flag = racial_pop_menu_opened
+					pop_menu_cored_dev_calculations = { RACE = elven }
+					country_event = { id = racial_pop_events_elven.12 }
+				}
+			}
+		}
+	}
+}
+custom_button = {
+	name = province_icon_elven_li
+	tooltip = province_minority_tt
+	potential = { has_province_modifier = elven_minority_integrated_large }
+	trigger = { }
+	effect = {
+		tooltip = { add_province_modifier = { name = elven_minority_integrated_large_ui duration = -1 } }
+		hidden_effect = {
+			FROM = { 
+				if = {
+					limit = {
+						NOT = { has_country_flag = racial_military_menu_opened }
+						NOT = { has_country_flag = racial_pop_menu_opened }
+						NOT = { has_country_modifier = racial_pop_menu_cooldown }
+					}
+					set_country_flag = racial_pop_menu_opened
+					pop_menu_cored_dev_calculations = { RACE = elven }
+					country_event = { id = racial_pop_events_elven.12 }
+				}
+			}
+		}
+	}
+}
+custom_button = {
+	name = province_icon_elven_mo
+	tooltip = province_majority_tt
+	potential = { has_province_modifier = elven_majority_oppressed }
+	trigger = { }
+	effect = {
+		tooltip = { add_province_modifier = { name = elven_majority_oppressed_ui duration = -1 } }
+		hidden_effect = {
+			FROM = { 
+				if = {
+					limit = {
+						NOT = { has_country_flag = racial_military_menu_opened }
+						NOT = { has_country_flag = racial_pop_menu_opened }
+						NOT = { has_country_modifier = racial_pop_menu_cooldown }
+					}
+					set_country_flag = racial_pop_menu_opened
+					pop_menu_cored_dev_calculations = { RACE = elven }
+					country_event = { id = racial_pop_events_elven.12 }
+				}
+			}
+		}
+	}
+}
+custom_button = {
+	name = province_icon_elven_ma
+	tooltip = province_majority_tt
+	potential = { has_province_modifier = elven_majority_coexisting }
+	trigger = { }
+	effect = {
+		tooltip = { add_province_modifier = { name = elven_majority_coexisting_ui duration = -1 } }
+		hidden_effect = {
+			FROM = { 
+				if = {
+					limit = {
+						NOT = { has_country_flag = racial_military_menu_opened }
+						NOT = { has_country_flag = racial_pop_menu_opened }
+						NOT = { has_country_modifier = racial_pop_menu_cooldown }
+					}
+					set_country_flag = racial_pop_menu_opened
+					pop_menu_cored_dev_calculations = { RACE = elven }
+					country_event = { id = racial_pop_events_elven.12 }
+				}
+			}
+		}
+	}
+}
+custom_button = {
+	name = province_icon_elven_mi
+	tooltip = province_majority_tt
+	potential = { OR = { has_province_modifier = elven_majority_integrated has_province_modifier = elven_majority_primary } }
+	trigger = { }
+	effect = {
+		tooltip = { add_province_modifier = { name = elven_majority_integrated_ui duration = -1 } }
+		hidden_effect = {
+			FROM = { 
+				if = {
+					limit = {
+						NOT = { has_country_flag = racial_military_menu_opened }
+						NOT = { has_country_flag = racial_pop_menu_opened }
+						NOT = { has_country_modifier = racial_pop_menu_cooldown }
+					}
+					set_country_flag = racial_pop_menu_opened
+					pop_menu_cored_dev_calculations = { RACE = elven }
+					country_event = { id = racial_pop_events_elven.12 }
+				}
+			}
+		}
+	}
+}
+
+
+#gnollish
+custom_button = {
+	name = province_icon_gnollish_so
+	tooltip = province_minority_tt
+	potential = { has_province_modifier = gnollish_minority_oppressed_small }
+	trigger = { }
+	effect = {
+		tooltip = { add_province_modifier = { name = gnollish_minority_oppressed_small_ui duration = -1 } }
+		hidden_effect = {
+			FROM = { 
+				if = {
+					limit = {
+						NOT = { has_country_flag = racial_military_menu_opened }
+						NOT = { has_country_flag = racial_pop_menu_opened }
+						NOT = { has_country_modifier = racial_pop_menu_cooldown }
+					}
+					set_country_flag = racial_pop_menu_opened
+					pop_menu_cored_dev_calculations = { RACE = gnollish }
+					country_event = { id = racial_pop_events_gnollish.12 }
+				}
+			}
+		}
+	}
+}
+custom_button = {
+	name = province_icon_gnollish_lo
+	tooltip = province_minority_tt
+	potential = { has_province_modifier = gnollish_minority_oppressed_large }
+	trigger = { }
+	effect = {
+		tooltip = { add_province_modifier = { name = gnollish_minority_oppressed_large_ui duration = -1 } }
+		hidden_effect = {
+			FROM = { 
+				if = {
+					limit = {
+						NOT = { has_country_flag = racial_military_menu_opened }
+						NOT = { has_country_flag = racial_pop_menu_opened }
+						NOT = { has_country_modifier = racial_pop_menu_cooldown }
+					}
+					set_country_flag = racial_pop_menu_opened
+					pop_menu_cored_dev_calculations = { RACE = gnollish }
+					country_event = { id = racial_pop_events_gnollish.12 }
+				}
+			}
+		}
+	}
+}
+custom_button = {
+	name = province_icon_gnollish_sa
+	tooltip = province_minority_tt
+	potential = { has_province_modifier = gnollish_minority_coexisting_small }
+	trigger = { }
+	effect = {
+		tooltip = { add_province_modifier = { name = gnollish_minority_coexisting_small_ui duration = -1 } }
+		hidden_effect = {
+			FROM = { 
+				if = {
+					limit = {
+						NOT = { has_country_flag = racial_military_menu_opened }
+						NOT = { has_country_flag = racial_pop_menu_opened }
+						NOT = { has_country_modifier = racial_pop_menu_cooldown }
+					}
+					set_country_flag = racial_pop_menu_opened
+					pop_menu_cored_dev_calculations = { RACE = gnollish }
+					country_event = { id = racial_pop_events_gnollish.12 }
+				}
+			}
+		}
+	}
+}
+custom_button = {
+	name = province_icon_gnollish_la
+	tooltip = province_minority_tt
+	potential = { has_province_modifier = gnollish_minority_coexisting_large }
+	trigger = { }
+	effect = {
+		tooltip = { add_province_modifier = { name = gnollish_minority_coexisting_large_ui duration = -1 } }
+		hidden_effect = {
+			FROM = { 
+				if = {
+					limit = {
+						NOT = { has_country_flag = racial_military_menu_opened }
+						NOT = { has_country_flag = racial_pop_menu_opened }
+						NOT = { has_country_modifier = racial_pop_menu_cooldown }
+					}
+					set_country_flag = racial_pop_menu_opened
+					pop_menu_cored_dev_calculations = { RACE = gnollish }
+					country_event = { id = racial_pop_events_gnollish.12 }
+				}
+			}
+		}
+	}
+}
+custom_button = {
+	name = province_icon_gnollish_si
+	tooltip = province_minority_tt
+	potential = { has_province_modifier = gnollish_minority_integrated_small }
+	trigger = { }
+	effect = {
+		tooltip = { add_province_modifier = { name = gnollish_minority_integrated_small_ui duration = -1 } }
+		hidden_effect = {
+			FROM = { 
+				if = {
+					limit = {
+						NOT = { has_country_flag = racial_military_menu_opened }
+						NOT = { has_country_flag = racial_pop_menu_opened }
+						NOT = { has_country_modifier = racial_pop_menu_cooldown }
+					}
+					set_country_flag = racial_pop_menu_opened
+					pop_menu_cored_dev_calculations = { RACE = gnollish }
+					country_event = { id = racial_pop_events_gnollish.12 }
+				}
+			}
+		}
+	}
+}
+custom_button = {
+	name = province_icon_gnollish_li
+	tooltip = province_minority_tt
+	potential = { has_province_modifier = gnollish_minority_integrated_large }
+	trigger = { }
+	effect = {
+		tooltip = { add_province_modifier = { name = gnollish_minority_integrated_large_ui duration = -1 } }
+		hidden_effect = {
+			FROM = { 
+				if = {
+					limit = {
+						NOT = { has_country_flag = racial_military_menu_opened }
+						NOT = { has_country_flag = racial_pop_menu_opened }
+						NOT = { has_country_modifier = racial_pop_menu_cooldown }
+					}
+					set_country_flag = racial_pop_menu_opened
+					pop_menu_cored_dev_calculations = { RACE = gnollish }
+					country_event = { id = racial_pop_events_gnollish.12 }
+				}
+			}
+		}
+	}
+}
+custom_button = {
+	name = province_icon_gnollish_mo
+	tooltip = province_majority_tt
+	potential = { has_province_modifier = gnollish_majority_oppressed }
+	trigger = { }
+	effect = {
+		tooltip = { add_province_modifier = { name = gnollish_majority_oppressed_ui duration = -1 } }
+		hidden_effect = {
+			FROM = { 
+				if = {
+					limit = {
+						NOT = { has_country_flag = racial_military_menu_opened }
+						NOT = { has_country_flag = racial_pop_menu_opened }
+						NOT = { has_country_modifier = racial_pop_menu_cooldown }
+					}
+					set_country_flag = racial_pop_menu_opened
+					pop_menu_cored_dev_calculations = { RACE = gnollish }
+					country_event = { id = racial_pop_events_gnollish.12 }
+				}
+			}
+		}
+	}
+}
+custom_button = {
+	name = province_icon_gnollish_ma
+	tooltip = province_majority_tt
+	potential = { has_province_modifier = gnollish_majority_coexisting }
+	trigger = { }
+	effect = {
+		tooltip = { add_province_modifier = { name = gnollish_majority_coexisting_ui duration = -1 } }
+		hidden_effect = {
+			FROM = { 
+				if = {
+					limit = {
+						NOT = { has_country_flag = racial_military_menu_opened }
+						NOT = { has_country_flag = racial_pop_menu_opened }
+						NOT = { has_country_modifier = racial_pop_menu_cooldown }
+					}
+					set_country_flag = racial_pop_menu_opened
+					pop_menu_cored_dev_calculations = { RACE = gnollish }
+					country_event = { id = racial_pop_events_gnollish.12 }
+				}
+			}
+		}
+	}
+}
+custom_button = {
+	name = province_icon_gnollish_mi
+	tooltip = province_majority_tt
+	potential = { OR = { has_province_modifier = gnollish_majority_integrated has_province_modifier = gnollish_majority_primary } }
+	trigger = { }
+	effect = {
+		tooltip = { add_province_modifier = { name = gnollish_majority_integrated_ui duration = -1 } }
+		hidden_effect = {
+			FROM = { 
+				if = {
+					limit = {
+						NOT = { has_country_flag = racial_military_menu_opened }
+						NOT = { has_country_flag = racial_pop_menu_opened }
+						NOT = { has_country_modifier = racial_pop_menu_cooldown }
+					}
+					set_country_flag = racial_pop_menu_opened
+					pop_menu_cored_dev_calculations = { RACE = gnollish }
+					country_event = { id = racial_pop_events_gnollish.12 }
+				}
+			}
+		}
+	}
+}
+
+
+#gnomish
+custom_button = {
+	name = province_icon_gnomish_so
+	tooltip = province_minority_tt
+	potential = { has_province_modifier = gnomish_minority_oppressed_small }
+	trigger = { }
+	effect = {
+		tooltip = { add_province_modifier = { name = gnomish_minority_oppressed_small_ui duration = -1 } }
+		hidden_effect = {
+			FROM = { 
+				if = {
+					limit = {
+						NOT = { has_country_flag = racial_military_menu_opened }
+						NOT = { has_country_flag = racial_pop_menu_opened }
+						NOT = { has_country_modifier = racial_pop_menu_cooldown }
+					}
+					set_country_flag = racial_pop_menu_opened
+					pop_menu_cored_dev_calculations = { RACE = gnomish }
+					country_event = { id = racial_pop_events_gnomish.12 }
+				}
+			}
+		}
+	}
+}
+custom_button = {
+	name = province_icon_gnomish_lo
+	tooltip = province_minority_tt
+	potential = { has_province_modifier = gnomish_minority_oppressed_large }
+	trigger = { }
+	effect = {
+		tooltip = { add_province_modifier = { name = gnomish_minority_oppressed_large_ui duration = -1 } }
+		hidden_effect = {
+			FROM = { 
+				if = {
+					limit = {
+						NOT = { has_country_flag = racial_military_menu_opened }
+						NOT = { has_country_flag = racial_pop_menu_opened }
+						NOT = { has_country_modifier = racial_pop_menu_cooldown }
+					}
+					set_country_flag = racial_pop_menu_opened
+					pop_menu_cored_dev_calculations = { RACE = gnomish }
+					country_event = { id = racial_pop_events_gnomish.12 }
+				}
+			}
+		}
+	}
+}
+custom_button = {
+	name = province_icon_gnomish_sa
+	tooltip = province_minority_tt
+	potential = { has_province_modifier = gnomish_minority_coexisting_small }
+	trigger = { }
+	effect = {
+		tooltip = { add_province_modifier = { name = gnomish_minority_coexisting_small_ui duration = -1 } }
+		hidden_effect = {
+			FROM = { 
+				if = {
+					limit = {
+						NOT = { has_country_flag = racial_military_menu_opened }
+						NOT = { has_country_flag = racial_pop_menu_opened }
+						NOT = { has_country_modifier = racial_pop_menu_cooldown }
+					}
+					set_country_flag = racial_pop_menu_opened
+					pop_menu_cored_dev_calculations = { RACE = gnomish }
+					country_event = { id = racial_pop_events_gnomish.12 }
+				}
+			}
+		}
+	}
+}
+custom_button = {
+	name = province_icon_gnomish_la
+	tooltip = province_minority_tt
+	potential = { has_province_modifier = gnomish_minority_coexisting_large }
+	trigger = { }
+	effect = {
+		tooltip = { add_province_modifier = { name = gnomish_minority_coexisting_large_ui duration = -1 } }
+		hidden_effect = {
+			FROM = { 
+				if = {
+					limit = {
+						NOT = { has_country_flag = racial_military_menu_opened }
+						NOT = { has_country_flag = racial_pop_menu_opened }
+						NOT = { has_country_modifier = racial_pop_menu_cooldown }
+					}
+					set_country_flag = racial_pop_menu_opened
+					pop_menu_cored_dev_calculations = { RACE = gnomish }
+					country_event = { id = racial_pop_events_gnomish.12 }
+				}
+			}
+		}
+	}
+}
+custom_button = {
+	name = province_icon_gnomish_si
+	tooltip = province_minority_tt
+	potential = { has_province_modifier = gnomish_minority_integrated_small }
+	trigger = { }
+	effect = {
+		tooltip = { add_province_modifier = { name = gnomish_minority_integrated_small_ui duration = -1 } }
+		hidden_effect = {
+			FROM = { 
+				if = {
+					limit = {
+						NOT = { has_country_flag = racial_military_menu_opened }
+						NOT = { has_country_flag = racial_pop_menu_opened }
+						NOT = { has_country_modifier = racial_pop_menu_cooldown }
+					}
+					set_country_flag = racial_pop_menu_opened
+					pop_menu_cored_dev_calculations = { RACE = gnomish }
+					country_event = { id = racial_pop_events_gnomish.12 }
+				}
+			}
+		}
+	}
+}
+custom_button = {
+	name = province_icon_gnomish_li
+	tooltip = province_minority_tt
+	potential = { has_province_modifier = gnomish_minority_integrated_large }
+	trigger = { }
+	effect = {
+		tooltip = { add_province_modifier = { name = gnomish_minority_integrated_large_ui duration = -1 } }
+		hidden_effect = {
+			FROM = { 
+				if = {
+					limit = {
+						NOT = { has_country_flag = racial_military_menu_opened }
+						NOT = { has_country_flag = racial_pop_menu_opened }
+						NOT = { has_country_modifier = racial_pop_menu_cooldown }
+					}
+					set_country_flag = racial_pop_menu_opened
+					pop_menu_cored_dev_calculations = { RACE = gnomish }
+					country_event = { id = racial_pop_events_gnomish.12 }
+				}
+			}
+		}
+	}
+}
+custom_button = {
+	name = province_icon_gnomish_mo
+	tooltip = province_majority_tt
+	potential = { has_province_modifier = gnomish_majority_oppressed }
+	trigger = { }
+	effect = {
+		tooltip = { add_province_modifier = { name = gnomish_majority_oppressed_ui duration = -1 } }
+		hidden_effect = {
+			FROM = { 
+				if = {
+					limit = {
+						NOT = { has_country_flag = racial_military_menu_opened }
+						NOT = { has_country_flag = racial_pop_menu_opened }
+						NOT = { has_country_modifier = racial_pop_menu_cooldown }
+					}
+					set_country_flag = racial_pop_menu_opened
+					pop_menu_cored_dev_calculations = { RACE = gnomish }
+					country_event = { id = racial_pop_events_gnomish.12 }
+				}
+			}
+		}
+	}
+}
+custom_button = {
+	name = province_icon_gnomish_ma
+	tooltip = province_majority_tt
+	potential = { has_province_modifier = gnomish_majority_coexisting }
+	trigger = { }
+	effect = {
+		tooltip = { add_province_modifier = { name = gnomish_majority_coexisting_ui duration = -1 } }
+		hidden_effect = {
+			FROM = { 
+				if = {
+					limit = {
+						NOT = { has_country_flag = racial_military_menu_opened }
+						NOT = { has_country_flag = racial_pop_menu_opened }
+						NOT = { has_country_modifier = racial_pop_menu_cooldown }
+					}
+					set_country_flag = racial_pop_menu_opened
+					pop_menu_cored_dev_calculations = { RACE = gnomish }
+					country_event = { id = racial_pop_events_gnomish.12 }
+				}
+			}
+		}
+	}
+}
+custom_button = {
+	name = province_icon_gnomish_mi
+	tooltip = province_majority_tt
+	potential = { OR = { has_province_modifier = gnomish_majority_integrated has_province_modifier = gnomish_majority_primary } }
+	trigger = { }
+	effect = {
+		tooltip = { add_province_modifier = { name = gnomish_majority_integrated_ui duration = -1 } }
+		hidden_effect = {
+			FROM = { 
+				if = {
+					limit = {
+						NOT = { has_country_flag = racial_military_menu_opened }
+						NOT = { has_country_flag = racial_pop_menu_opened }
+						NOT = { has_country_modifier = racial_pop_menu_cooldown }
+					}
+					set_country_flag = racial_pop_menu_opened
+					pop_menu_cored_dev_calculations = { RACE = gnomish }
+					country_event = { id = racial_pop_events_gnomish.12 }
+				}
+			}
+		}
+	}
+}
+
+
+#goblin
+custom_button = {
+	name = province_icon_goblin_so
+	tooltip = province_minority_tt
+	potential = { has_province_modifier = goblin_minority_oppressed_small }
+	trigger = { }
+	effect = {
+		tooltip = { add_province_modifier = { name = goblin_minority_oppressed_small_ui duration = -1 } }
+		hidden_effect = {
+			FROM = { 
+				if = {
+					limit = {
+						NOT = { has_country_flag = racial_military_menu_opened }
+						NOT = { has_country_flag = racial_pop_menu_opened }
+						NOT = { has_country_modifier = racial_pop_menu_cooldown }
+					}
+					set_country_flag = racial_pop_menu_opened
+					pop_menu_cored_dev_calculations = { RACE = goblin }
+					country_event = { id = racial_pop_events_goblin.12 }
+				}
+			}
+		}
+	}
+}
+custom_button = {
+	name = province_icon_goblin_lo
+	tooltip = province_minority_tt
+	potential = { has_province_modifier = goblin_minority_oppressed_large }
+	trigger = { }
+	effect = {
+		tooltip = { add_province_modifier = { name = goblin_minority_oppressed_large_ui duration = -1 } }
+		hidden_effect = {
+			FROM = { 
+				if = {
+					limit = {
+						NOT = { has_country_flag = racial_military_menu_opened }
+						NOT = { has_country_flag = racial_pop_menu_opened }
+						NOT = { has_country_modifier = racial_pop_menu_cooldown }
+					}
+					set_country_flag = racial_pop_menu_opened
+					pop_menu_cored_dev_calculations = { RACE = goblin }
+					country_event = { id = racial_pop_events_goblin.12 }
+				}
+			}
+		}
+	}
+}
+custom_button = {
+	name = province_icon_goblin_sa
+	tooltip = province_minority_tt
+	potential = { has_province_modifier = goblin_minority_coexisting_small }
+	trigger = { }
+	effect = {
+		tooltip = { add_province_modifier = { name = goblin_minority_coexisting_small_ui duration = -1 } }
+		hidden_effect = {
+			FROM = { 
+				if = {
+					limit = {
+						NOT = { has_country_flag = racial_military_menu_opened }
+						NOT = { has_country_flag = racial_pop_menu_opened }
+						NOT = { has_country_modifier = racial_pop_menu_cooldown }
+					}
+					set_country_flag = racial_pop_menu_opened
+					pop_menu_cored_dev_calculations = { RACE = goblin }
+					country_event = { id = racial_pop_events_goblin.12 }
+				}
+			}
+		}
+	}
+}
+custom_button = {
+	name = province_icon_goblin_la
+	tooltip = province_minority_tt
+	potential = { has_province_modifier = goblin_minority_coexisting_large }
+	trigger = { }
+	effect = {
+		tooltip = { add_province_modifier = { name = goblin_minority_coexisting_large_ui duration = -1 } }
+		hidden_effect = {
+			FROM = { 
+				if = {
+					limit = {
+						NOT = { has_country_flag = racial_military_menu_opened }
+						NOT = { has_country_flag = racial_pop_menu_opened }
+						NOT = { has_country_modifier = racial_pop_menu_cooldown }
+					}
+					set_country_flag = racial_pop_menu_opened
+					pop_menu_cored_dev_calculations = { RACE = goblin }
+					country_event = { id = racial_pop_events_goblin.12 }
+				}
+			}
+		}
+	}
+}
+custom_button = {
+	name = province_icon_goblin_si
+	tooltip = province_minority_tt
+	potential = { has_province_modifier = goblin_minority_integrated_small }
+	trigger = { }
+	effect = {
+		tooltip = { add_province_modifier = { name = goblin_minority_integrated_small_ui duration = -1 } }
+		hidden_effect = {
+			FROM = { 
+				if = {
+					limit = {
+						NOT = { has_country_flag = racial_military_menu_opened }
+						NOT = { has_country_flag = racial_pop_menu_opened }
+						NOT = { has_country_modifier = racial_pop_menu_cooldown }
+					}
+					set_country_flag = racial_pop_menu_opened
+					pop_menu_cored_dev_calculations = { RACE = goblin }
+					country_event = { id = racial_pop_events_goblin.12 }
+				}
+			}
+		}
+	}
+}
+custom_button = {
+	name = province_icon_goblin_li
+	tooltip = province_minority_tt
+	potential = { has_province_modifier = goblin_minority_integrated_large }
+	trigger = { }
+	effect = {
+		tooltip = { add_province_modifier = { name = goblin_minority_integrated_large_ui duration = -1 } }
+		hidden_effect = {
+			FROM = { 
+				if = {
+					limit = {
+						NOT = { has_country_flag = racial_military_menu_opened }
+						NOT = { has_country_flag = racial_pop_menu_opened }
+						NOT = { has_country_modifier = racial_pop_menu_cooldown }
+					}
+					set_country_flag = racial_pop_menu_opened
+					pop_menu_cored_dev_calculations = { RACE = goblin }
+					country_event = { id = racial_pop_events_goblin.12 }
+				}
+			}
+		}
+	}
+}
+custom_button = {
+	name = province_icon_goblin_mo
+	tooltip = province_majority_tt
+	potential = { has_province_modifier = goblin_majority_oppressed }
+	trigger = { }
+	effect = {
+		tooltip = { add_province_modifier = { name = goblin_majority_oppressed_ui duration = -1 } }
+		hidden_effect = {
+			FROM = { 
+				if = {
+					limit = {
+						NOT = { has_country_flag = racial_military_menu_opened }
+						NOT = { has_country_flag = racial_pop_menu_opened }
+						NOT = { has_country_modifier = racial_pop_menu_cooldown }
+					}
+					set_country_flag = racial_pop_menu_opened
+					pop_menu_cored_dev_calculations = { RACE = goblin }
+					country_event = { id = racial_pop_events_goblin.12 }
+				}
+			}
+		}
+	}
+}
+custom_button = {
+	name = province_icon_goblin_ma
+	tooltip = province_majority_tt
+	potential = { has_province_modifier = goblin_majority_coexisting }
+	trigger = { }
+	effect = {
+		tooltip = { add_province_modifier = { name = goblin_majority_coexisting_ui duration = -1 } }
+		hidden_effect = {
+			FROM = { 
+				if = {
+					limit = {
+						NOT = { has_country_flag = racial_military_menu_opened }
+						NOT = { has_country_flag = racial_pop_menu_opened }
+						NOT = { has_country_modifier = racial_pop_menu_cooldown }
+					}
+					set_country_flag = racial_pop_menu_opened
+					pop_menu_cored_dev_calculations = { RACE = goblin }
+					country_event = { id = racial_pop_events_goblin.12 }
+				}
+			}
+		}
+	}
+}
+custom_button = {
+	name = province_icon_goblin_mi
+	tooltip = province_majority_tt
+	potential = { OR = { has_province_modifier = goblin_majority_integrated has_province_modifier = goblin_majority_primary } }
+	trigger = { }
+	effect = {
+		tooltip = { add_province_modifier = { name = goblin_majority_integrated_ui duration = -1 } }
+		hidden_effect = {
+			FROM = { 
+				if = {
+					limit = {
+						NOT = { has_country_flag = racial_military_menu_opened }
+						NOT = { has_country_flag = racial_pop_menu_opened }
+						NOT = { has_country_modifier = racial_pop_menu_cooldown }
+					}
+					set_country_flag = racial_pop_menu_opened
+					pop_menu_cored_dev_calculations = { RACE = goblin }
+					country_event = { id = racial_pop_events_goblin.12 }
+				}
+			}
+		}
+	}
+}
+
+
+#half_elven
+custom_button = {
+	name = province_icon_half_elven_so
+	tooltip = province_minority_tt
+	potential = { has_province_modifier = half_elven_minority_oppressed_small }
+	trigger = { }
+	effect = {
+		tooltip = { add_province_modifier = { name = half_elven_minority_oppressed_small_ui duration = -1 } }
+		hidden_effect = {
+			FROM = { 
+				if = {
+					limit = {
+						NOT = { has_country_flag = racial_military_menu_opened }
+						NOT = { has_country_flag = racial_pop_menu_opened }
+						NOT = { has_country_modifier = racial_pop_menu_cooldown }
+					}
+					set_country_flag = racial_pop_menu_opened
+					pop_menu_cored_dev_calculations = { RACE = half_elven }
+					country_event = { id = racial_pop_events_half_elven.12 }
+				}
+			}
+		}
+	}
+}
+custom_button = {
+	name = province_icon_half_elven_lo
+	tooltip = province_minority_tt
+	potential = { has_province_modifier = half_elven_minority_oppressed_large }
+	trigger = { }
+	effect = {
+		tooltip = { add_province_modifier = { name = half_elven_minority_oppressed_large_ui duration = -1 } }
+		hidden_effect = {
+			FROM = { 
+				if = {
+					limit = {
+						NOT = { has_country_flag = racial_military_menu_opened }
+						NOT = { has_country_flag = racial_pop_menu_opened }
+						NOT = { has_country_modifier = racial_pop_menu_cooldown }
+					}
+					set_country_flag = racial_pop_menu_opened
+					pop_menu_cored_dev_calculations = { RACE = half_elven }
+					country_event = { id = racial_pop_events_half_elven.12 }
+				}
+			}
+		}
+	}
+}
+custom_button = {
+	name = province_icon_half_elven_sa
+	tooltip = province_minority_tt
+	potential = { has_province_modifier = half_elven_minority_coexisting_small }
+	trigger = { }
+	effect = {
+		tooltip = { add_province_modifier = { name = half_elven_minority_coexisting_small_ui duration = -1 } }
+		hidden_effect = {
+			FROM = { 
+				if = {
+					limit = {
+						NOT = { has_country_flag = racial_military_menu_opened }
+						NOT = { has_country_flag = racial_pop_menu_opened }
+						NOT = { has_country_modifier = racial_pop_menu_cooldown }
+					}
+					set_country_flag = racial_pop_menu_opened
+					pop_menu_cored_dev_calculations = { RACE = half_elven }
+					country_event = { id = racial_pop_events_half_elven.12 }
+				}
+			}
+		}
+	}
+}
+custom_button = {
+	name = province_icon_half_elven_la
+	tooltip = province_minority_tt
+	potential = { has_province_modifier = half_elven_minority_coexisting_large }
+	trigger = { }
+	effect = {
+		tooltip = { add_province_modifier = { name = half_elven_minority_coexisting_large_ui duration = -1 } }
+		hidden_effect = {
+			FROM = { 
+				if = {
+					limit = {
+						NOT = { has_country_flag = racial_military_menu_opened }
+						NOT = { has_country_flag = racial_pop_menu_opened }
+						NOT = { has_country_modifier = racial_pop_menu_cooldown }
+					}
+					set_country_flag = racial_pop_menu_opened
+					pop_menu_cored_dev_calculations = { RACE = half_elven }
+					country_event = { id = racial_pop_events_half_elven.12 }
+				}
+			}
+		}
+	}
+}
+custom_button = {
+	name = province_icon_half_elven_si
+	tooltip = province_minority_tt
+	potential = { has_province_modifier = half_elven_minority_integrated_small }
+	trigger = { }
+	effect = {
+		tooltip = { add_province_modifier = { name = half_elven_minority_integrated_small_ui duration = -1 } }
+		hidden_effect = {
+			FROM = { 
+				if = {
+					limit = {
+						NOT = { has_country_flag = racial_military_menu_opened }
+						NOT = { has_country_flag = racial_pop_menu_opened }
+						NOT = { has_country_modifier = racial_pop_menu_cooldown }
+					}
+					set_country_flag = racial_pop_menu_opened
+					pop_menu_cored_dev_calculations = { RACE = half_elven }
+					country_event = { id = racial_pop_events_half_elven.12 }
+				}
+			}
+		}
+	}
+}
+custom_button = {
+	name = province_icon_half_elven_li
+	tooltip = province_minority_tt
+	potential = { has_province_modifier = half_elven_minority_integrated_large }
+	trigger = { }
+	effect = {
+		tooltip = { add_province_modifier = { name = half_elven_minority_integrated_large_ui duration = -1 } }
+		hidden_effect = {
+			FROM = { 
+				if = {
+					limit = {
+						NOT = { has_country_flag = racial_military_menu_opened }
+						NOT = { has_country_flag = racial_pop_menu_opened }
+						NOT = { has_country_modifier = racial_pop_menu_cooldown }
+					}
+					set_country_flag = racial_pop_menu_opened
+					pop_menu_cored_dev_calculations = { RACE = half_elven }
+					country_event = { id = racial_pop_events_half_elven.12 }
+				}
+			}
+		}
+	}
+}
+custom_button = {
+	name = province_icon_half_elven_mo
+	tooltip = province_majority_tt
+	potential = { has_province_modifier = half_elven_majority_oppressed }
+	trigger = { }
+	effect = {
+		tooltip = { add_province_modifier = { name = half_elven_majority_oppressed_ui duration = -1 } }
+		hidden_effect = {
+			FROM = { 
+				if = {
+					limit = {
+						NOT = { has_country_flag = racial_military_menu_opened }
+						NOT = { has_country_flag = racial_pop_menu_opened }
+						NOT = { has_country_modifier = racial_pop_menu_cooldown }
+					}
+					set_country_flag = racial_pop_menu_opened
+					pop_menu_cored_dev_calculations = { RACE = half_elven }
+					country_event = { id = racial_pop_events_half_elven.12 }
+				}
+			}
+		}
+	}
+}
+custom_button = {
+	name = province_icon_half_elven_ma
+	tooltip = province_majority_tt
+	potential = { has_province_modifier = half_elven_majority_coexisting }
+	trigger = { }
+	effect = {
+		tooltip = { add_province_modifier = { name = half_elven_majority_coexisting_ui duration = -1 } }
+		hidden_effect = {
+			FROM = { 
+				if = {
+					limit = {
+						NOT = { has_country_flag = racial_military_menu_opened }
+						NOT = { has_country_flag = racial_pop_menu_opened }
+						NOT = { has_country_modifier = racial_pop_menu_cooldown }
+					}
+					set_country_flag = racial_pop_menu_opened
+					pop_menu_cored_dev_calculations = { RACE = half_elven }
+					country_event = { id = racial_pop_events_half_elven.12 }
+				}
+			}
+		}
+	}
+}
+custom_button = {
+	name = province_icon_half_elven_mi
+	tooltip = province_majority_tt
+	potential = { OR = { has_province_modifier = half_elven_majority_integrated has_province_modifier = half_elven_majority_primary } }
+	trigger = { }
+	effect = {
+		tooltip = { add_province_modifier = { name = half_elven_majority_integrated_ui duration = -1 } }
+		hidden_effect = {
+			FROM = { 
+				if = {
+					limit = {
+						NOT = { has_country_flag = racial_military_menu_opened }
+						NOT = { has_country_flag = racial_pop_menu_opened }
+						NOT = { has_country_modifier = racial_pop_menu_cooldown }
+					}
+					set_country_flag = racial_pop_menu_opened
+					pop_menu_cored_dev_calculations = { RACE = half_elven }
+					country_event = { id = racial_pop_events_half_elven.12 }
+				}
+			}
+		}
+	}
+}
+
+
+#half_orcish
+custom_button = {
+	name = province_icon_half_orcish_so
+	tooltip = province_minority_tt
+	potential = { has_province_modifier = half_orcish_minority_oppressed_small }
+	trigger = { }
+	effect = {
+		tooltip = { add_province_modifier = { name = half_orcish_minority_oppressed_small_ui duration = -1 } }
+		hidden_effect = {
+			FROM = { 
+				if = {
+					limit = {
+						NOT = { has_country_flag = racial_military_menu_opened }
+						NOT = { has_country_flag = racial_pop_menu_opened }
+						NOT = { has_country_modifier = racial_pop_menu_cooldown }
+					}
+					set_country_flag = racial_pop_menu_opened
+					pop_menu_cored_dev_calculations = { RACE = half_orcish }
+					country_event = { id = racial_pop_events_half_orcish.12 }
+				}
+			}
+		}
+	}
+}
+custom_button = {
+	name = province_icon_half_orcish_lo
+	tooltip = province_minority_tt
+	potential = { has_province_modifier = half_orcish_minority_oppressed_large }
+	trigger = { }
+	effect = {
+		tooltip = { add_province_modifier = { name = half_orcish_minority_oppressed_large_ui duration = -1 } }
+		hidden_effect = {
+			FROM = { 
+				if = {
+					limit = {
+						NOT = { has_country_flag = racial_military_menu_opened }
+						NOT = { has_country_flag = racial_pop_menu_opened }
+						NOT = { has_country_modifier = racial_pop_menu_cooldown }
+					}
+					set_country_flag = racial_pop_menu_opened
+					pop_menu_cored_dev_calculations = { RACE = half_orcish }
+					country_event = { id = racial_pop_events_half_orcish.12 }
+				}
+			}
+		}
+	}
+}
+custom_button = {
+	name = province_icon_half_orcish_sa
+	tooltip = province_minority_tt
+	potential = { has_province_modifier = half_orcish_minority_coexisting_small }
+	trigger = { }
+	effect = {
+		tooltip = { add_province_modifier = { name = half_orcish_minority_coexisting_small_ui duration = -1 } }
+		hidden_effect = {
+			FROM = { 
+				if = {
+					limit = {
+						NOT = { has_country_flag = racial_military_menu_opened }
+						NOT = { has_country_flag = racial_pop_menu_opened }
+						NOT = { has_country_modifier = racial_pop_menu_cooldown }
+					}
+					set_country_flag = racial_pop_menu_opened
+					pop_menu_cored_dev_calculations = { RACE = half_orcish }
+					country_event = { id = racial_pop_events_half_orcish.12 }
+				}
+			}
+		}
+	}
+}
+custom_button = {
+	name = province_icon_half_orcish_la
+	tooltip = province_minority_tt
+	potential = { has_province_modifier = half_orcish_minority_coexisting_large }
+	trigger = { }
+	effect = {
+		tooltip = { add_province_modifier = { name = half_orcish_minority_coexisting_large_ui duration = -1 } }
+		hidden_effect = {
+			FROM = { 
+				if = {
+					limit = {
+						NOT = { has_country_flag = racial_military_menu_opened }
+						NOT = { has_country_flag = racial_pop_menu_opened }
+						NOT = { has_country_modifier = racial_pop_menu_cooldown }
+					}
+					set_country_flag = racial_pop_menu_opened
+					pop_menu_cored_dev_calculations = { RACE = half_orcish }
+					country_event = { id = racial_pop_events_half_orcish.12 }
+				}
+			}
+		}
+	}
+}
+custom_button = {
+	name = province_icon_half_orcish_si
+	tooltip = province_minority_tt
+	potential = { has_province_modifier = half_orcish_minority_integrated_small }
+	trigger = { }
+	effect = {
+		tooltip = { add_province_modifier = { name = half_orcish_minority_integrated_small_ui duration = -1 } }
+		hidden_effect = {
+			FROM = { 
+				if = {
+					limit = {
+						NOT = { has_country_flag = racial_military_menu_opened }
+						NOT = { has_country_flag = racial_pop_menu_opened }
+						NOT = { has_country_modifier = racial_pop_menu_cooldown }
+					}
+					set_country_flag = racial_pop_menu_opened
+					pop_menu_cored_dev_calculations = { RACE = half_orcish }
+					country_event = { id = racial_pop_events_half_orcish.12 }
+				}
+			}
+		}
+	}
+}
+custom_button = {
+	name = province_icon_half_orcish_li
+	tooltip = province_minority_tt
+	potential = { has_province_modifier = half_orcish_minority_integrated_large }
+	trigger = { }
+	effect = {
+		tooltip = { add_province_modifier = { name = half_orcish_minority_integrated_large_ui duration = -1 } }
+		hidden_effect = {
+			FROM = { 
+				if = {
+					limit = {
+						NOT = { has_country_flag = racial_military_menu_opened }
+						NOT = { has_country_flag = racial_pop_menu_opened }
+						NOT = { has_country_modifier = racial_pop_menu_cooldown }
+					}
+					set_country_flag = racial_pop_menu_opened
+					pop_menu_cored_dev_calculations = { RACE = half_orcish }
+					country_event = { id = racial_pop_events_half_orcish.12 }
+				}
+			}
+		}
+	}
+}
+custom_button = {
+	name = province_icon_half_orcish_mo
+	tooltip = province_majority_tt
+	potential = { has_province_modifier = half_orcish_majority_oppressed }
+	trigger = { }
+	effect = {
+		tooltip = { add_province_modifier = { name = half_orcish_majority_oppressed_ui duration = -1 } }
+		hidden_effect = {
+			FROM = { 
+				if = {
+					limit = {
+						NOT = { has_country_flag = racial_military_menu_opened }
+						NOT = { has_country_flag = racial_pop_menu_opened }
+						NOT = { has_country_modifier = racial_pop_menu_cooldown }
+					}
+					set_country_flag = racial_pop_menu_opened
+					pop_menu_cored_dev_calculations = { RACE = half_orcish }
+					country_event = { id = racial_pop_events_half_orcish.12 }
+				}
+			}
+		}
+	}
+}
+custom_button = {
+	name = province_icon_half_orcish_ma
+	tooltip = province_majority_tt
+	potential = { has_province_modifier = half_orcish_majority_coexisting }
+	trigger = { }
+	effect = {
+		tooltip = { add_province_modifier = { name = half_orcish_majority_coexisting_ui duration = -1 } }
+		hidden_effect = {
+			FROM = { 
+				if = {
+					limit = {
+						NOT = { has_country_flag = racial_military_menu_opened }
+						NOT = { has_country_flag = racial_pop_menu_opened }
+						NOT = { has_country_modifier = racial_pop_menu_cooldown }
+					}
+					set_country_flag = racial_pop_menu_opened
+					pop_menu_cored_dev_calculations = { RACE = half_orcish }
+					country_event = { id = racial_pop_events_half_orcish.12 }
+				}
+			}
+		}
+	}
+}
+custom_button = {
+	name = province_icon_half_orcish_mi
+	tooltip = province_majority_tt
+	potential = { OR = { has_province_modifier = half_orcish_majority_integrated has_province_modifier = half_orcish_majority_primary } }
+	trigger = { }
+	effect = {
+		tooltip = { add_province_modifier = { name = half_orcish_majority_integrated_ui duration = -1 } }
+		hidden_effect = {
+			FROM = { 
+				if = {
+					limit = {
+						NOT = { has_country_flag = racial_military_menu_opened }
+						NOT = { has_country_flag = racial_pop_menu_opened }
+						NOT = { has_country_modifier = racial_pop_menu_cooldown }
+					}
+					set_country_flag = racial_pop_menu_opened
+					pop_menu_cored_dev_calculations = { RACE = half_orcish }
+					country_event = { id = racial_pop_events_half_orcish.12 }
+				}
+			}
+		}
+	}
+}
+
+
+#halfling
+custom_button = {
+	name = province_icon_halfling_so
+	tooltip = province_minority_tt
+	potential = { has_province_modifier = halfling_minority_oppressed_small }
+	trigger = { }
+	effect = {
+		tooltip = { add_province_modifier = { name = halfling_minority_oppressed_small_ui duration = -1 } }
+		hidden_effect = {
+			FROM = { 
+				if = {
+					limit = {
+						NOT = { has_country_flag = racial_military_menu_opened }
+						NOT = { has_country_flag = racial_pop_menu_opened }
+						NOT = { has_country_modifier = racial_pop_menu_cooldown }
+					}
+					set_country_flag = racial_pop_menu_opened
+					pop_menu_cored_dev_calculations = { RACE = halfling }
+					country_event = { id = racial_pop_events_halfling.12 }
+				}
+			}
+		}
+	}
+}
+custom_button = {
+	name = province_icon_halfling_lo
+	tooltip = province_minority_tt
+	potential = { has_province_modifier = halfling_minority_oppressed_large }
+	trigger = { }
+	effect = {
+		tooltip = { add_province_modifier = { name = halfling_minority_oppressed_large_ui duration = -1 } }
+		hidden_effect = {
+			FROM = { 
+				if = {
+					limit = {
+						NOT = { has_country_flag = racial_military_menu_opened }
+						NOT = { has_country_flag = racial_pop_menu_opened }
+						NOT = { has_country_modifier = racial_pop_menu_cooldown }
+					}
+					set_country_flag = racial_pop_menu_opened
+					pop_menu_cored_dev_calculations = { RACE = halfling }
+					country_event = { id = racial_pop_events_halfling.12 }
+				}
+			}
+		}
+	}
+}
+custom_button = {
+	name = province_icon_halfling_sa
+	tooltip = province_minority_tt
+	potential = { has_province_modifier = halfling_minority_coexisting_small }
+	trigger = { }
+	effect = {
+		tooltip = { add_province_modifier = { name = halfling_minority_coexisting_small_ui duration = -1 } }
+		hidden_effect = {
+			FROM = { 
+				if = {
+					limit = {
+						NOT = { has_country_flag = racial_military_menu_opened }
+						NOT = { has_country_flag = racial_pop_menu_opened }
+						NOT = { has_country_modifier = racial_pop_menu_cooldown }
+					}
+					set_country_flag = racial_pop_menu_opened
+					pop_menu_cored_dev_calculations = { RACE = halfling }
+					country_event = { id = racial_pop_events_halfling.12 }
+				}
+			}
+		}
+	}
+}
+custom_button = {
+	name = province_icon_halfling_la
+	tooltip = province_minority_tt
+	potential = { has_province_modifier = halfling_minority_coexisting_large }
+	trigger = { }
+	effect = {
+		tooltip = { add_province_modifier = { name = halfling_minority_coexisting_large_ui duration = -1 } }
+		hidden_effect = {
+			FROM = { 
+				if = {
+					limit = {
+						NOT = { has_country_flag = racial_military_menu_opened }
+						NOT = { has_country_flag = racial_pop_menu_opened }
+						NOT = { has_country_modifier = racial_pop_menu_cooldown }
+					}
+					set_country_flag = racial_pop_menu_opened
+					pop_menu_cored_dev_calculations = { RACE = halfling }
+					country_event = { id = racial_pop_events_halfling.12 }
+				}
+			}
+		}
+	}
+}
+custom_button = {
+	name = province_icon_halfling_si
+	tooltip = province_minority_tt
+	potential = { has_province_modifier = halfling_minority_integrated_small }
+	trigger = { }
+	effect = {
+		tooltip = { add_province_modifier = { name = halfling_minority_integrated_small_ui duration = -1 } }
+		hidden_effect = {
+			FROM = { 
+				if = {
+					limit = {
+						NOT = { has_country_flag = racial_military_menu_opened }
+						NOT = { has_country_flag = racial_pop_menu_opened }
+						NOT = { has_country_modifier = racial_pop_menu_cooldown }
+					}
+					set_country_flag = racial_pop_menu_opened
+					pop_menu_cored_dev_calculations = { RACE = halfling }
+					country_event = { id = racial_pop_events_halfling.12 }
+				}
+			}
+		}
+	}
+}
+custom_button = {
+	name = province_icon_halfling_li
+	tooltip = province_minority_tt
+	potential = { has_province_modifier = halfling_minority_integrated_large }
+	trigger = { }
+	effect = {
+		tooltip = { add_province_modifier = { name = halfling_minority_integrated_large_ui duration = -1 } }
+		hidden_effect = {
+			FROM = { 
+				if = {
+					limit = {
+						NOT = { has_country_flag = racial_military_menu_opened }
+						NOT = { has_country_flag = racial_pop_menu_opened }
+						NOT = { has_country_modifier = racial_pop_menu_cooldown }
+					}
+					set_country_flag = racial_pop_menu_opened
+					pop_menu_cored_dev_calculations = { RACE = halfling }
+					country_event = { id = racial_pop_events_halfling.12 }
+				}
+			}
+		}
+	}
+}
+custom_button = {
+	name = province_icon_halfling_mo
+	tooltip = province_majority_tt
+	potential = { has_province_modifier = halfling_majority_oppressed }
+	trigger = { }
+	effect = {
+		tooltip = { add_province_modifier = { name = halfling_majority_oppressed_ui duration = -1 } }
+		hidden_effect = {
+			FROM = { 
+				if = {
+					limit = {
+						NOT = { has_country_flag = racial_military_menu_opened }
+						NOT = { has_country_flag = racial_pop_menu_opened }
+						NOT = { has_country_modifier = racial_pop_menu_cooldown }
+					}
+					set_country_flag = racial_pop_menu_opened
+					pop_menu_cored_dev_calculations = { RACE = halfling }
+					country_event = { id = racial_pop_events_halfling.12 }
+				}
+			}
+		}
+	}
+}
+custom_button = {
+	name = province_icon_halfling_ma
+	tooltip = province_majority_tt
+	potential = { has_province_modifier = halfling_majority_coexisting }
+	trigger = { }
+	effect = {
+		tooltip = { add_province_modifier = { name = halfling_majority_coexisting_ui duration = -1 } }
+		hidden_effect = {
+			FROM = { 
+				if = {
+					limit = {
+						NOT = { has_country_flag = racial_military_menu_opened }
+						NOT = { has_country_flag = racial_pop_menu_opened }
+						NOT = { has_country_modifier = racial_pop_menu_cooldown }
+					}
+					set_country_flag = racial_pop_menu_opened
+					pop_menu_cored_dev_calculations = { RACE = halfling }
+					country_event = { id = racial_pop_events_halfling.12 }
+				}
+			}
+		}
+	}
+}
+custom_button = {
+	name = province_icon_halfling_mi
+	tooltip = province_majority_tt
+	potential = { OR = { has_province_modifier = halfling_majority_integrated has_province_modifier = halfling_majority_primary } }
+	trigger = { }
+	effect = {
+		tooltip = { add_province_modifier = { name = halfling_majority_integrated_ui duration = -1 } }
+		hidden_effect = {
+			FROM = { 
+				if = {
+					limit = {
+						NOT = { has_country_flag = racial_military_menu_opened }
+						NOT = { has_country_flag = racial_pop_menu_opened }
+						NOT = { has_country_modifier = racial_pop_menu_cooldown }
+					}
+					set_country_flag = racial_pop_menu_opened
+					pop_menu_cored_dev_calculations = { RACE = halfling }
+					country_event = { id = racial_pop_events_halfling.12 }
+				}
+			}
+		}
+	}
+}
+
+
+#harimari
+custom_button = {
+	name = province_icon_harimari_so
+	tooltip = province_minority_tt
+	potential = { has_province_modifier = harimari_minority_oppressed_small }
+	trigger = { }
+	effect = {
+		tooltip = { add_province_modifier = { name = harimari_minority_oppressed_small_ui duration = -1 } }
+		hidden_effect = {
+			FROM = { 
+				if = {
+					limit = {
+						NOT = { has_country_flag = racial_military_menu_opened }
+						NOT = { has_country_flag = racial_pop_menu_opened }
+						NOT = { has_country_modifier = racial_pop_menu_cooldown }
+					}
+					set_country_flag = racial_pop_menu_opened
+					pop_menu_cored_dev_calculations = { RACE = harimari }
+					country_event = { id = racial_pop_events_harimari.12 }
+				}
+			}
+		}
+	}
+}
+custom_button = {
+	name = province_icon_harimari_lo
+	tooltip = province_minority_tt
+	potential = { has_province_modifier = harimari_minority_oppressed_large }
+	trigger = { }
+	effect = {
+		tooltip = { add_province_modifier = { name = harimari_minority_oppressed_large_ui duration = -1 } }
+		hidden_effect = {
+			FROM = { 
+				if = {
+					limit = {
+						NOT = { has_country_flag = racial_military_menu_opened }
+						NOT = { has_country_flag = racial_pop_menu_opened }
+						NOT = { has_country_modifier = racial_pop_menu_cooldown }
+					}
+					set_country_flag = racial_pop_menu_opened
+					pop_menu_cored_dev_calculations = { RACE = harimari }
+					country_event = { id = racial_pop_events_harimari.12 }
+				}
+			}
+		}
+	}
+}
+custom_button = {
+	name = province_icon_harimari_sa
+	tooltip = province_minority_tt
+	potential = { has_province_modifier = harimari_minority_coexisting_small }
+	trigger = { }
+	effect = {
+		tooltip = { add_province_modifier = { name = harimari_minority_coexisting_small_ui duration = -1 } }
+		hidden_effect = {
+			FROM = { 
+				if = {
+					limit = {
+						NOT = { has_country_flag = racial_military_menu_opened }
+						NOT = { has_country_flag = racial_pop_menu_opened }
+						NOT = { has_country_modifier = racial_pop_menu_cooldown }
+					}
+					set_country_flag = racial_pop_menu_opened
+					pop_menu_cored_dev_calculations = { RACE = harimari }
+					country_event = { id = racial_pop_events_harimari.12 }
+				}
+			}
+		}
+	}
+}
+custom_button = {
+	name = province_icon_harimari_la
+	tooltip = province_minority_tt
+	potential = { has_province_modifier = harimari_minority_coexisting_large }
+	trigger = { }
+	effect = {
+		tooltip = { add_province_modifier = { name = harimari_minority_coexisting_large_ui duration = -1 } }
+		hidden_effect = {
+			FROM = { 
+				if = {
+					limit = {
+						NOT = { has_country_flag = racial_military_menu_opened }
+						NOT = { has_country_flag = racial_pop_menu_opened }
+						NOT = { has_country_modifier = racial_pop_menu_cooldown }
+					}
+					set_country_flag = racial_pop_menu_opened
+					pop_menu_cored_dev_calculations = { RACE = harimari }
+					country_event = { id = racial_pop_events_harimari.12 }
+				}
+			}
+		}
+	}
+}
+custom_button = {
+	name = province_icon_harimari_si
+	tooltip = province_minority_tt
+	potential = { has_province_modifier = harimari_minority_integrated_small }
+	trigger = { }
+	effect = {
+		tooltip = { add_province_modifier = { name = harimari_minority_integrated_small_ui duration = -1 } }
+		hidden_effect = {
+			FROM = { 
+				if = {
+					limit = {
+						NOT = { has_country_flag = racial_military_menu_opened }
+						NOT = { has_country_flag = racial_pop_menu_opened }
+						NOT = { has_country_modifier = racial_pop_menu_cooldown }
+					}
+					set_country_flag = racial_pop_menu_opened
+					pop_menu_cored_dev_calculations = { RACE = harimari }
+					country_event = { id = racial_pop_events_harimari.12 }
+				}
+			}
+		}
+	}
+}
+custom_button = {
+	name = province_icon_harimari_li
+	tooltip = province_minority_tt
+	potential = { has_province_modifier = harimari_minority_integrated_large }
+	trigger = { }
+	effect = {
+		tooltip = { add_province_modifier = { name = harimari_minority_integrated_large_ui duration = -1 } }
+		hidden_effect = {
+			FROM = { 
+				if = {
+					limit = {
+						NOT = { has_country_flag = racial_military_menu_opened }
+						NOT = { has_country_flag = racial_pop_menu_opened }
+						NOT = { has_country_modifier = racial_pop_menu_cooldown }
+					}
+					set_country_flag = racial_pop_menu_opened
+					pop_menu_cored_dev_calculations = { RACE = harimari }
+					country_event = { id = racial_pop_events_harimari.12 }
+				}
+			}
+		}
+	}
+}
+custom_button = {
+	name = province_icon_harimari_mo
+	tooltip = province_majority_tt
+	potential = { has_province_modifier = harimari_majority_oppressed }
+	trigger = { }
+	effect = {
+		tooltip = { add_province_modifier = { name = harimari_majority_oppressed_ui duration = -1 } }
+		hidden_effect = {
+			FROM = { 
+				if = {
+					limit = {
+						NOT = { has_country_flag = racial_military_menu_opened }
+						NOT = { has_country_flag = racial_pop_menu_opened }
+						NOT = { has_country_modifier = racial_pop_menu_cooldown }
+					}
+					set_country_flag = racial_pop_menu_opened
+					pop_menu_cored_dev_calculations = { RACE = harimari }
+					country_event = { id = racial_pop_events_harimari.12 }
+				}
+			}
+		}
+	}
+}
+custom_button = {
+	name = province_icon_harimari_ma
+	tooltip = province_majority_tt
+	potential = { has_province_modifier = harimari_majority_coexisting }
+	trigger = { }
+	effect = {
+		tooltip = { add_province_modifier = { name = harimari_majority_coexisting_ui duration = -1 } }
+		hidden_effect = {
+			FROM = { 
+				if = {
+					limit = {
+						NOT = { has_country_flag = racial_military_menu_opened }
+						NOT = { has_country_flag = racial_pop_menu_opened }
+						NOT = { has_country_modifier = racial_pop_menu_cooldown }
+					}
+					set_country_flag = racial_pop_menu_opened
+					pop_menu_cored_dev_calculations = { RACE = harimari }
+					country_event = { id = racial_pop_events_harimari.12 }
+				}
+			}
+		}
+	}
+}
+custom_button = {
+	name = province_icon_harimari_mi
+	tooltip = province_majority_tt
+	potential = { OR = { has_province_modifier = harimari_majority_integrated has_province_modifier = harimari_majority_primary } }
+	trigger = { }
+	effect = {
+		tooltip = { add_province_modifier = { name = harimari_majority_integrated_ui duration = -1 } }
+		hidden_effect = {
+			FROM = { 
+				if = {
+					limit = {
+						NOT = { has_country_flag = racial_military_menu_opened }
+						NOT = { has_country_flag = racial_pop_menu_opened }
+						NOT = { has_country_modifier = racial_pop_menu_cooldown }
+					}
+					set_country_flag = racial_pop_menu_opened
+					pop_menu_cored_dev_calculations = { RACE = harimari }
+					country_event = { id = racial_pop_events_harimari.12 }
+				}
+			}
+		}
+	}
+}
+
+
+#harpy
+custom_button = {
+	name = province_icon_harpy_so
+	tooltip = province_minority_tt
+	potential = { has_province_modifier = harpy_minority_oppressed_small }
+	trigger = { }
+	effect = {
+		tooltip = { add_province_modifier = { name = harpy_minority_oppressed_small_ui duration = -1 } }
+		hidden_effect = {
+			FROM = { 
+				if = {
+					limit = {
+						NOT = { has_country_flag = racial_military_menu_opened }
+						NOT = { has_country_flag = racial_pop_menu_opened }
+						NOT = { has_country_modifier = racial_pop_menu_cooldown }
+					}
+					set_country_flag = racial_pop_menu_opened
+					pop_menu_cored_dev_calculations = { RACE = harpy }
+					country_event = { id = racial_pop_events_harpy.12 }
+				}
+			}
+		}
+	}
+}
+custom_button = {
+	name = province_icon_harpy_lo
+	tooltip = province_minority_tt
+	potential = { has_province_modifier = harpy_minority_oppressed_large }
+	trigger = { }
+	effect = {
+		tooltip = { add_province_modifier = { name = harpy_minority_oppressed_large_ui duration = -1 } }
+		hidden_effect = {
+			FROM = { 
+				if = {
+					limit = {
+						NOT = { has_country_flag = racial_military_menu_opened }
+						NOT = { has_country_flag = racial_pop_menu_opened }
+						NOT = { has_country_modifier = racial_pop_menu_cooldown }
+					}
+					set_country_flag = racial_pop_menu_opened
+					pop_menu_cored_dev_calculations = { RACE = harpy }
+					country_event = { id = racial_pop_events_harpy.12 }
+				}
+			}
+		}
+	}
+}
+custom_button = {
+	name = province_icon_harpy_sa
+	tooltip = province_minority_tt
+	potential = { has_province_modifier = harpy_minority_coexisting_small }
+	trigger = { }
+	effect = {
+		tooltip = { add_province_modifier = { name = harpy_minority_coexisting_small_ui duration = -1 } }
+		hidden_effect = {
+			FROM = { 
+				if = {
+					limit = {
+						NOT = { has_country_flag = racial_military_menu_opened }
+						NOT = { has_country_flag = racial_pop_menu_opened }
+						NOT = { has_country_modifier = racial_pop_menu_cooldown }
+					}
+					set_country_flag = racial_pop_menu_opened
+					pop_menu_cored_dev_calculations = { RACE = harpy }
+					country_event = { id = racial_pop_events_harpy.12 }
+				}
+			}
+		}
+	}
+}
+custom_button = {
+	name = province_icon_harpy_la
+	tooltip = province_minority_tt
+	potential = { has_province_modifier = harpy_minority_coexisting_large }
+	trigger = { }
+	effect = {
+		tooltip = { add_province_modifier = { name = harpy_minority_coexisting_large_ui duration = -1 } }
+		hidden_effect = {
+			FROM = { 
+				if = {
+					limit = {
+						NOT = { has_country_flag = racial_military_menu_opened }
+						NOT = { has_country_flag = racial_pop_menu_opened }
+						NOT = { has_country_modifier = racial_pop_menu_cooldown }
+					}
+					set_country_flag = racial_pop_menu_opened
+					pop_menu_cored_dev_calculations = { RACE = harpy }
+					country_event = { id = racial_pop_events_harpy.12 }
+				}
+			}
+		}
+	}
+}
+custom_button = {
+	name = province_icon_harpy_si
+	tooltip = province_minority_tt
+	potential = { has_province_modifier = harpy_minority_integrated_small }
+	trigger = { }
+	effect = {
+		tooltip = { add_province_modifier = { name = harpy_minority_integrated_small_ui duration = -1 } }
+		hidden_effect = {
+			FROM = { 
+				if = {
+					limit = {
+						NOT = { has_country_flag = racial_military_menu_opened }
+						NOT = { has_country_flag = racial_pop_menu_opened }
+						NOT = { has_country_modifier = racial_pop_menu_cooldown }
+					}
+					set_country_flag = racial_pop_menu_opened
+					pop_menu_cored_dev_calculations = { RACE = harpy }
+					country_event = { id = racial_pop_events_harpy.12 }
+				}
+			}
+		}
+	}
+}
+custom_button = {
+	name = province_icon_harpy_li
+	tooltip = province_minority_tt
+	potential = { has_province_modifier = harpy_minority_integrated_large }
+	trigger = { }
+	effect = {
+		tooltip = { add_province_modifier = { name = harpy_minority_integrated_large_ui duration = -1 } }
+		hidden_effect = {
+			FROM = { 
+				if = {
+					limit = {
+						NOT = { has_country_flag = racial_military_menu_opened }
+						NOT = { has_country_flag = racial_pop_menu_opened }
+						NOT = { has_country_modifier = racial_pop_menu_cooldown }
+					}
+					set_country_flag = racial_pop_menu_opened
+					pop_menu_cored_dev_calculations = { RACE = harpy }
+					country_event = { id = racial_pop_events_harpy.12 }
+				}
+			}
+		}
+	}
+}
+custom_button = {
+	name = province_icon_harpy_mo
+	tooltip = province_majority_tt
+	potential = { has_province_modifier = harpy_majority_oppressed }
+	trigger = { }
+	effect = {
+		tooltip = { add_province_modifier = { name = harpy_majority_oppressed_ui duration = -1 } }
+		hidden_effect = {
+			FROM = { 
+				if = {
+					limit = {
+						NOT = { has_country_flag = racial_military_menu_opened }
+						NOT = { has_country_flag = racial_pop_menu_opened }
+						NOT = { has_country_modifier = racial_pop_menu_cooldown }
+					}
+					set_country_flag = racial_pop_menu_opened
+					pop_menu_cored_dev_calculations = { RACE = harpy }
+					country_event = { id = racial_pop_events_harpy.12 }
+				}
+			}
+		}
+	}
+}
+custom_button = {
+	name = province_icon_harpy_ma
+	tooltip = province_majority_tt
+	potential = { has_province_modifier = harpy_majority_coexisting }
+	trigger = { }
+	effect = {
+		tooltip = { add_province_modifier = { name = harpy_majority_coexisting_ui duration = -1 } }
+		hidden_effect = {
+			FROM = { 
+				if = {
+					limit = {
+						NOT = { has_country_flag = racial_military_menu_opened }
+						NOT = { has_country_flag = racial_pop_menu_opened }
+						NOT = { has_country_modifier = racial_pop_menu_cooldown }
+					}
+					set_country_flag = racial_pop_menu_opened
+					pop_menu_cored_dev_calculations = { RACE = harpy }
+					country_event = { id = racial_pop_events_harpy.12 }
+				}
+			}
+		}
+	}
+}
+custom_button = {
+	name = province_icon_harpy_mi
+	tooltip = province_majority_tt
+	potential = { OR = { has_province_modifier = harpy_majority_integrated has_province_modifier = harpy_majority_primary } }
+	trigger = { }
+	effect = {
+		tooltip = { add_province_modifier = { name = harpy_majority_integrated_ui duration = -1 } }
+		hidden_effect = {
+			FROM = { 
+				if = {
+					limit = {
+						NOT = { has_country_flag = racial_military_menu_opened }
+						NOT = { has_country_flag = racial_pop_menu_opened }
+						NOT = { has_country_modifier = racial_pop_menu_cooldown }
+					}
+					set_country_flag = racial_pop_menu_opened
+					pop_menu_cored_dev_calculations = { RACE = harpy }
+					country_event = { id = racial_pop_events_harpy.12 }
+				}
+			}
+		}
+	}
+}
+
+
+#hobgoblin
+custom_button = {
+	name = province_icon_hobgoblin_so
+	tooltip = province_minority_tt
+	potential = { has_province_modifier = hobgoblin_minority_oppressed_small }
+	trigger = { }
+	effect = {
+		tooltip = { add_province_modifier = { name = hobgoblin_minority_oppressed_small_ui duration = -1 } }
+		hidden_effect = {
+			FROM = { 
+				if = {
+					limit = {
+						NOT = { has_country_flag = racial_military_menu_opened }
+						NOT = { has_country_flag = racial_pop_menu_opened }
+						NOT = { has_country_modifier = racial_pop_menu_cooldown }
+					}
+					set_country_flag = racial_pop_menu_opened
+					pop_menu_cored_dev_calculations = { RACE = hobgoblin }
+					country_event = { id = racial_pop_events_hobgoblin.12 }
+				}
+			}
+		}
+	}
+}
+custom_button = {
+	name = province_icon_hobgoblin_lo
+	tooltip = province_minority_tt
+	potential = { has_province_modifier = hobgoblin_minority_oppressed_large }
+	trigger = { }
+	effect = {
+		tooltip = { add_province_modifier = { name = hobgoblin_minority_oppressed_large_ui duration = -1 } }
+		hidden_effect = {
+			FROM = { 
+				if = {
+					limit = {
+						NOT = { has_country_flag = racial_military_menu_opened }
+						NOT = { has_country_flag = racial_pop_menu_opened }
+						NOT = { has_country_modifier = racial_pop_menu_cooldown }
+					}
+					set_country_flag = racial_pop_menu_opened
+					pop_menu_cored_dev_calculations = { RACE = hobgoblin }
+					country_event = { id = racial_pop_events_hobgoblin.12 }
+				}
+			}
+		}
+	}
+}
+custom_button = {
+	name = province_icon_hobgoblin_sa
+	tooltip = province_minority_tt
+	potential = { has_province_modifier = hobgoblin_minority_coexisting_small }
+	trigger = { }
+	effect = {
+		tooltip = { add_province_modifier = { name = hobgoblin_minority_coexisting_small_ui duration = -1 } }
+		hidden_effect = {
+			FROM = { 
+				if = {
+					limit = {
+						NOT = { has_country_flag = racial_military_menu_opened }
+						NOT = { has_country_flag = racial_pop_menu_opened }
+						NOT = { has_country_modifier = racial_pop_menu_cooldown }
+					}
+					set_country_flag = racial_pop_menu_opened
+					pop_menu_cored_dev_calculations = { RACE = hobgoblin }
+					country_event = { id = racial_pop_events_hobgoblin.12 }
+				}
+			}
+		}
+	}
+}
+custom_button = {
+	name = province_icon_hobgoblin_la
+	tooltip = province_minority_tt
+	potential = { has_province_modifier = hobgoblin_minority_coexisting_large }
+	trigger = { }
+	effect = {
+		tooltip = { add_province_modifier = { name = hobgoblin_minority_coexisting_large_ui duration = -1 } }
+		hidden_effect = {
+			FROM = { 
+				if = {
+					limit = {
+						NOT = { has_country_flag = racial_military_menu_opened }
+						NOT = { has_country_flag = racial_pop_menu_opened }
+						NOT = { has_country_modifier = racial_pop_menu_cooldown }
+					}
+					set_country_flag = racial_pop_menu_opened
+					pop_menu_cored_dev_calculations = { RACE = hobgoblin }
+					country_event = { id = racial_pop_events_hobgoblin.12 }
+				}
+			}
+		}
+	}
+}
+custom_button = {
+	name = province_icon_hobgoblin_si
+	tooltip = province_minority_tt
+	potential = { has_province_modifier = hobgoblin_minority_integrated_small }
+	trigger = { }
+	effect = {
+		tooltip = { add_province_modifier = { name = hobgoblin_minority_integrated_small_ui duration = -1 } }
+		hidden_effect = {
+			FROM = { 
+				if = {
+					limit = {
+						NOT = { has_country_flag = racial_military_menu_opened }
+						NOT = { has_country_flag = racial_pop_menu_opened }
+						NOT = { has_country_modifier = racial_pop_menu_cooldown }
+					}
+					set_country_flag = racial_pop_menu_opened
+					pop_menu_cored_dev_calculations = { RACE = hobgoblin }
+					country_event = { id = racial_pop_events_hobgoblin.12 }
+				}
+			}
+		}
+	}
+}
+custom_button = {
+	name = province_icon_hobgoblin_li
+	tooltip = province_minority_tt
+	potential = { has_province_modifier = hobgoblin_minority_integrated_large }
+	trigger = { }
+	effect = {
+		tooltip = { add_province_modifier = { name = hobgoblin_minority_integrated_large_ui duration = -1 } }
+		hidden_effect = {
+			FROM = { 
+				if = {
+					limit = {
+						NOT = { has_country_flag = racial_military_menu_opened }
+						NOT = { has_country_flag = racial_pop_menu_opened }
+						NOT = { has_country_modifier = racial_pop_menu_cooldown }
+					}
+					set_country_flag = racial_pop_menu_opened
+					pop_menu_cored_dev_calculations = { RACE = hobgoblin }
+					country_event = { id = racial_pop_events_hobgoblin.12 }
+				}
+			}
+		}
+	}
+}
+custom_button = {
+	name = province_icon_hobgoblin_mo
+	tooltip = province_majority_tt
+	potential = { has_province_modifier = hobgoblin_majority_oppressed }
+	trigger = { }
+	effect = {
+		tooltip = { add_province_modifier = { name = hobgoblin_majority_oppressed_ui duration = -1 } }
+		hidden_effect = {
+			FROM = { 
+				if = {
+					limit = {
+						NOT = { has_country_flag = racial_military_menu_opened }
+						NOT = { has_country_flag = racial_pop_menu_opened }
+						NOT = { has_country_modifier = racial_pop_menu_cooldown }
+					}
+					set_country_flag = racial_pop_menu_opened
+					pop_menu_cored_dev_calculations = { RACE = hobgoblin }
+					country_event = { id = racial_pop_events_hobgoblin.12 }
+				}
+			}
+		}
+	}
+}
+custom_button = {
+	name = province_icon_hobgoblin_ma
+	tooltip = province_majority_tt
+	potential = { has_province_modifier = hobgoblin_majority_coexisting }
+	trigger = { }
+	effect = {
+		tooltip = { add_province_modifier = { name = hobgoblin_majority_coexisting_ui duration = -1 } }
+		hidden_effect = {
+			FROM = { 
+				if = {
+					limit = {
+						NOT = { has_country_flag = racial_military_menu_opened }
+						NOT = { has_country_flag = racial_pop_menu_opened }
+						NOT = { has_country_modifier = racial_pop_menu_cooldown }
+					}
+					set_country_flag = racial_pop_menu_opened
+					pop_menu_cored_dev_calculations = { RACE = hobgoblin }
+					country_event = { id = racial_pop_events_hobgoblin.12 }
+				}
+			}
+		}
+	}
+}
+custom_button = {
+	name = province_icon_hobgoblin_mi
+	tooltip = province_majority_tt
+	potential = { OR = { has_province_modifier = hobgoblin_majority_integrated has_province_modifier = hobgoblin_majority_primary } }
+	trigger = { }
+	effect = {
+		tooltip = { add_province_modifier = { name = hobgoblin_majority_integrated_ui duration = -1 } }
+		hidden_effect = {
+			FROM = { 
+				if = {
+					limit = {
+						NOT = { has_country_flag = racial_military_menu_opened }
+						NOT = { has_country_flag = racial_pop_menu_opened }
+						NOT = { has_country_modifier = racial_pop_menu_cooldown }
+					}
+					set_country_flag = racial_pop_menu_opened
+					pop_menu_cored_dev_calculations = { RACE = hobgoblin }
+					country_event = { id = racial_pop_events_hobgoblin.12 }
+				}
+			}
+		}
+	}
+}
+
+
+#human
+custom_button = {
+	name = province_icon_human_so
+	tooltip = province_minority_tt
+	potential = { has_province_modifier = human_minority_oppressed_small }
+	trigger = { }
+	effect = {
+		tooltip = { add_province_modifier = { name = human_minority_oppressed_small_ui duration = -1 } }
+		hidden_effect = {
+			FROM = { 
+				if = {
+					limit = {
+						NOT = { has_country_flag = racial_military_menu_opened }
+						NOT = { has_country_flag = racial_pop_menu_opened }
+						NOT = { has_country_modifier = racial_pop_menu_cooldown }
+					}
+					set_country_flag = racial_pop_menu_opened
+					pop_menu_cored_dev_calculations = { RACE = human }
+					country_event = { id = racial_pop_events_human.12 }
+				}
+			}
+		}
+	}
+}
+custom_button = {
+	name = province_icon_human_lo
+	tooltip = province_minority_tt
+	potential = { has_province_modifier = human_minority_oppressed_large }
+	trigger = { }
+	effect = {
+		tooltip = { add_province_modifier = { name = human_minority_oppressed_large_ui duration = -1 } }
+		hidden_effect = {
+			FROM = { 
+				if = {
+					limit = {
+						NOT = { has_country_flag = racial_military_menu_opened }
+						NOT = { has_country_flag = racial_pop_menu_opened }
+						NOT = { has_country_modifier = racial_pop_menu_cooldown }
+					}
+					set_country_flag = racial_pop_menu_opened
+					pop_menu_cored_dev_calculations = { RACE = human }
+					country_event = { id = racial_pop_events_human.12 }
+				}
+			}
+		}
+	}
+}
+custom_button = {
+	name = province_icon_human_sa
+	tooltip = province_minority_tt
+	potential = { has_province_modifier = human_minority_coexisting_small }
+	trigger = { }
+	effect = {
+		tooltip = { add_province_modifier = { name = human_minority_coexisting_small_ui duration = -1 } }
+		hidden_effect = {
+			FROM = { 
+				if = {
+					limit = {
+						NOT = { has_country_flag = racial_military_menu_opened }
+						NOT = { has_country_flag = racial_pop_menu_opened }
+						NOT = { has_country_modifier = racial_pop_menu_cooldown }
+					}
+					set_country_flag = racial_pop_menu_opened
+					pop_menu_cored_dev_calculations = { RACE = human }
+					country_event = { id = racial_pop_events_human.12 }
+				}
+			}
+		}
+	}
+}
+custom_button = {
+	name = province_icon_human_la
+	tooltip = province_minority_tt
+	potential = { has_province_modifier = human_minority_coexisting_large }
+	trigger = { }
+	effect = {
+		tooltip = { add_province_modifier = { name = human_minority_coexisting_large_ui duration = -1 } }
+		hidden_effect = {
+			FROM = { 
+				if = {
+					limit = {
+						NOT = { has_country_flag = racial_military_menu_opened }
+						NOT = { has_country_flag = racial_pop_menu_opened }
+						NOT = { has_country_modifier = racial_pop_menu_cooldown }
+					}
+					set_country_flag = racial_pop_menu_opened
+					pop_menu_cored_dev_calculations = { RACE = human }
+					country_event = { id = racial_pop_events_human.12 }
+				}
+			}
+		}
+	}
+}
+custom_button = {
+	name = province_icon_human_si
+	tooltip = province_minority_tt
+	potential = { has_province_modifier = human_minority_integrated_small }
+	trigger = { }
+	effect = {
+		tooltip = { add_province_modifier = { name = human_minority_integrated_small_ui duration = -1 } }
+		hidden_effect = {
+			FROM = { 
+				if = {
+					limit = {
+						NOT = { has_country_flag = racial_military_menu_opened }
+						NOT = { has_country_flag = racial_pop_menu_opened }
+						NOT = { has_country_modifier = racial_pop_menu_cooldown }
+					}
+					set_country_flag = racial_pop_menu_opened
+					pop_menu_cored_dev_calculations = { RACE = human }
+					country_event = { id = racial_pop_events_human.12 }
+				}
+			}
+		}
+	}
+}
+custom_button = {
+	name = province_icon_human_li
+	tooltip = province_minority_tt
+	potential = { has_province_modifier = human_minority_integrated_large }
+	trigger = { }
+	effect = {
+		tooltip = { add_province_modifier = { name = human_minority_integrated_large_ui duration = -1 } }
+		hidden_effect = {
+			FROM = { 
+				if = {
+					limit = {
+						NOT = { has_country_flag = racial_military_menu_opened }
+						NOT = { has_country_flag = racial_pop_menu_opened }
+						NOT = { has_country_modifier = racial_pop_menu_cooldown }
+					}
+					set_country_flag = racial_pop_menu_opened
+					pop_menu_cored_dev_calculations = { RACE = human }
+					country_event = { id = racial_pop_events_human.12 }
+				}
+			}
+		}
+	}
+}
+custom_button = {
+	name = province_icon_human_mo
+	tooltip = province_majority_tt
+	potential = { has_province_modifier = human_majority_oppressed }
+	trigger = { }
+	effect = {
+		tooltip = { add_province_modifier = { name = human_majority_oppressed_ui duration = -1 } }
+		hidden_effect = {
+			FROM = { 
+				if = {
+					limit = {
+						NOT = { has_country_flag = racial_military_menu_opened }
+						NOT = { has_country_flag = racial_pop_menu_opened }
+						NOT = { has_country_modifier = racial_pop_menu_cooldown }
+					}
+					set_country_flag = racial_pop_menu_opened
+					pop_menu_cored_dev_calculations = { RACE = human }
+					country_event = { id = racial_pop_events_human.12 }
+				}
+			}
+		}
+	}
+}
+custom_button = {
+	name = province_icon_human_ma
+	tooltip = province_majority_tt
+	potential = { has_province_modifier = human_majority_coexisting }
+	trigger = { }
+	effect = {
+		tooltip = { add_province_modifier = { name = human_majority_coexisting_ui duration = -1 } }
+		hidden_effect = {
+			FROM = { 
+				if = {
+					limit = {
+						NOT = { has_country_flag = racial_military_menu_opened }
+						NOT = { has_country_flag = racial_pop_menu_opened }
+						NOT = { has_country_modifier = racial_pop_menu_cooldown }
+					}
+					set_country_flag = racial_pop_menu_opened
+					pop_menu_cored_dev_calculations = { RACE = human }
+					country_event = { id = racial_pop_events_human.12 }
+				}
+			}
+		}
+	}
+}
+custom_button = {
+	name = province_icon_human_mi
+	tooltip = province_majority_tt
+	potential = { OR = { has_province_modifier = human_majority_integrated has_province_modifier = human_majority_primary } }
+	trigger = { }
+	effect = {
+		tooltip = { add_province_modifier = { name = human_majority_integrated_ui duration = -1 } }
+		hidden_effect = {
+			FROM = { 
+				if = {
+					limit = {
+						NOT = { has_country_flag = racial_military_menu_opened }
+						NOT = { has_country_flag = racial_pop_menu_opened }
+						NOT = { has_country_modifier = racial_pop_menu_cooldown }
+					}
+					set_country_flag = racial_pop_menu_opened
+					pop_menu_cored_dev_calculations = { RACE = human }
+					country_event = { id = racial_pop_events_human.12 }
+				}
+			}
+		}
+	}
+}
+
+
+#kobold
+custom_button = {
+	name = province_icon_kobold_so
+	tooltip = province_minority_tt
+	potential = { has_province_modifier = kobold_minority_oppressed_small }
+	trigger = { }
+	effect = {
+		tooltip = { add_province_modifier = { name = kobold_minority_oppressed_small_ui duration = -1 } }
+		hidden_effect = {
+			FROM = { 
+				if = {
+					limit = {
+						NOT = { has_country_flag = racial_military_menu_opened }
+						NOT = { has_country_flag = racial_pop_menu_opened }
+						NOT = { has_country_modifier = racial_pop_menu_cooldown }
+					}
+					set_country_flag = racial_pop_menu_opened
+					pop_menu_cored_dev_calculations = { RACE = kobold }
+					country_event = { id = racial_pop_events_kobold.12 }
+				}
+			}
+		}
+	}
+}
+custom_button = {
+	name = province_icon_kobold_lo
+	tooltip = province_minority_tt
+	potential = { has_province_modifier = kobold_minority_oppressed_large }
+	trigger = { }
+	effect = {
+		tooltip = { add_province_modifier = { name = kobold_minority_oppressed_large_ui duration = -1 } }
+		hidden_effect = {
+			FROM = { 
+				if = {
+					limit = {
+						NOT = { has_country_flag = racial_military_menu_opened }
+						NOT = { has_country_flag = racial_pop_menu_opened }
+						NOT = { has_country_modifier = racial_pop_menu_cooldown }
+					}
+					set_country_flag = racial_pop_menu_opened
+					pop_menu_cored_dev_calculations = { RACE = kobold }
+					country_event = { id = racial_pop_events_kobold.12 }
+				}
+			}
+		}
+	}
+}
+custom_button = {
+	name = province_icon_kobold_sa
+	tooltip = province_minority_tt
+	potential = { has_province_modifier = kobold_minority_coexisting_small }
+	trigger = { }
+	effect = {
+		tooltip = { add_province_modifier = { name = kobold_minority_coexisting_small_ui duration = -1 } }
+		hidden_effect = {
+			FROM = { 
+				if = {
+					limit = {
+						NOT = { has_country_flag = racial_military_menu_opened }
+						NOT = { has_country_flag = racial_pop_menu_opened }
+						NOT = { has_country_modifier = racial_pop_menu_cooldown }
+					}
+					set_country_flag = racial_pop_menu_opened
+					pop_menu_cored_dev_calculations = { RACE = kobold }
+					country_event = { id = racial_pop_events_kobold.12 }
+				}
+			}
+		}
+	}
+}
+custom_button = {
+	name = province_icon_kobold_la
+	tooltip = province_minority_tt
+	potential = { has_province_modifier = kobold_minority_coexisting_large }
+	trigger = { }
+	effect = {
+		tooltip = { add_province_modifier = { name = kobold_minority_coexisting_large_ui duration = -1 } }
+		hidden_effect = {
+			FROM = { 
+				if = {
+					limit = {
+						NOT = { has_country_flag = racial_military_menu_opened }
+						NOT = { has_country_flag = racial_pop_menu_opened }
+						NOT = { has_country_modifier = racial_pop_menu_cooldown }
+					}
+					set_country_flag = racial_pop_menu_opened
+					pop_menu_cored_dev_calculations = { RACE = kobold }
+					country_event = { id = racial_pop_events_kobold.12 }
+				}
+			}
+		}
+	}
+}
+custom_button = {
+	name = province_icon_kobold_si
+	tooltip = province_minority_tt
+	potential = { has_province_modifier = kobold_minority_integrated_small }
+	trigger = { }
+	effect = {
+		tooltip = { add_province_modifier = { name = kobold_minority_integrated_small_ui duration = -1 } }
+		hidden_effect = {
+			FROM = { 
+				if = {
+					limit = {
+						NOT = { has_country_flag = racial_military_menu_opened }
+						NOT = { has_country_flag = racial_pop_menu_opened }
+						NOT = { has_country_modifier = racial_pop_menu_cooldown }
+					}
+					set_country_flag = racial_pop_menu_opened
+					pop_menu_cored_dev_calculations = { RACE = kobold }
+					country_event = { id = racial_pop_events_kobold.12 }
+				}
+			}
+		}
+	}
+}
+custom_button = {
+	name = province_icon_kobold_li
+	tooltip = province_minority_tt
+	potential = { has_province_modifier = kobold_minority_integrated_large }
+	trigger = { }
+	effect = {
+		tooltip = { add_province_modifier = { name = kobold_minority_integrated_large_ui duration = -1 } }
+		hidden_effect = {
+			FROM = { 
+				if = {
+					limit = {
+						NOT = { has_country_flag = racial_military_menu_opened }
+						NOT = { has_country_flag = racial_pop_menu_opened }
+						NOT = { has_country_modifier = racial_pop_menu_cooldown }
+					}
+					set_country_flag = racial_pop_menu_opened
+					pop_menu_cored_dev_calculations = { RACE = kobold }
+					country_event = { id = racial_pop_events_kobold.12 }
+				}
+			}
+		}
+	}
+}
+custom_button = {
+	name = province_icon_kobold_mo
+	tooltip = province_majority_tt
+	potential = { has_province_modifier = kobold_majority_oppressed }
+	trigger = { }
+	effect = {
+		tooltip = { add_province_modifier = { name = kobold_majority_oppressed_ui duration = -1 } }
+		hidden_effect = {
+			FROM = { 
+				if = {
+					limit = {
+						NOT = { has_country_flag = racial_military_menu_opened }
+						NOT = { has_country_flag = racial_pop_menu_opened }
+						NOT = { has_country_modifier = racial_pop_menu_cooldown }
+					}
+					set_country_flag = racial_pop_menu_opened
+					pop_menu_cored_dev_calculations = { RACE = kobold }
+					country_event = { id = racial_pop_events_kobold.12 }
+				}
+			}
+		}
+	}
+}
+custom_button = {
+	name = province_icon_kobold_ma
+	tooltip = province_majority_tt
+	potential = { has_province_modifier = kobold_majority_coexisting }
+	trigger = { }
+	effect = {
+		tooltip = { add_province_modifier = { name = kobold_majority_coexisting_ui duration = -1 } }
+		hidden_effect = {
+			FROM = { 
+				if = {
+					limit = {
+						NOT = { has_country_flag = racial_military_menu_opened }
+						NOT = { has_country_flag = racial_pop_menu_opened }
+						NOT = { has_country_modifier = racial_pop_menu_cooldown }
+					}
+					set_country_flag = racial_pop_menu_opened
+					pop_menu_cored_dev_calculations = { RACE = kobold }
+					country_event = { id = racial_pop_events_kobold.12 }
+				}
+			}
+		}
+	}
+}
+custom_button = {
+	name = province_icon_kobold_mi
+	tooltip = province_majority_tt
+	potential = { OR = { has_province_modifier = kobold_majority_integrated has_province_modifier = kobold_majority_primary } }
+	trigger = { }
+	effect = {
+		tooltip = { add_province_modifier = { name = kobold_majority_integrated_ui duration = -1 } }
+		hidden_effect = {
+			FROM = { 
+				if = {
+					limit = {
+						NOT = { has_country_flag = racial_military_menu_opened }
+						NOT = { has_country_flag = racial_pop_menu_opened }
+						NOT = { has_country_modifier = racial_pop_menu_cooldown }
+					}
+					set_country_flag = racial_pop_menu_opened
+					pop_menu_cored_dev_calculations = { RACE = kobold }
+					country_event = { id = racial_pop_events_kobold.12 }
+				}
+			}
+		}
+	}
+}
+
+
+#lizardfolk
+custom_button = {
+	name = province_icon_lizardfolk_so
+	tooltip = province_minority_tt
+	potential = { has_province_modifier = lizardfolk_minority_oppressed_small }
+	trigger = { }
+	effect = {
+		tooltip = { add_province_modifier = { name = lizardfolk_minority_oppressed_small_ui duration = -1 } }
+		hidden_effect = {
+			FROM = { 
+				if = {
+					limit = {
+						NOT = { has_country_flag = racial_military_menu_opened }
+						NOT = { has_country_flag = racial_pop_menu_opened }
+						NOT = { has_country_modifier = racial_pop_menu_cooldown }
+					}
+					set_country_flag = racial_pop_menu_opened
+					pop_menu_cored_dev_calculations = { RACE = lizardfolk }
+					country_event = { id = racial_pop_events_lizardfolk.12 }
+				}
+			}
+		}
+	}
+}
+custom_button = {
+	name = province_icon_lizardfolk_lo
+	tooltip = province_minority_tt
+	potential = { has_province_modifier = lizardfolk_minority_oppressed_large }
+	trigger = { }
+	effect = {
+		tooltip = { add_province_modifier = { name = lizardfolk_minority_oppressed_large_ui duration = -1 } }
+		hidden_effect = {
+			FROM = { 
+				if = {
+					limit = {
+						NOT = { has_country_flag = racial_military_menu_opened }
+						NOT = { has_country_flag = racial_pop_menu_opened }
+						NOT = { has_country_modifier = racial_pop_menu_cooldown }
+					}
+					set_country_flag = racial_pop_menu_opened
+					pop_menu_cored_dev_calculations = { RACE = lizardfolk }
+					country_event = { id = racial_pop_events_lizardfolk.12 }
+				}
+			}
+		}
+	}
+}
+custom_button = {
+	name = province_icon_lizardfolk_sa
+	tooltip = province_minority_tt
+	potential = { has_province_modifier = lizardfolk_minority_coexisting_small }
+	trigger = { }
+	effect = {
+		tooltip = { add_province_modifier = { name = lizardfolk_minority_coexisting_small_ui duration = -1 } }
+		hidden_effect = {
+			FROM = { 
+				if = {
+					limit = {
+						NOT = { has_country_flag = racial_military_menu_opened }
+						NOT = { has_country_flag = racial_pop_menu_opened }
+						NOT = { has_country_modifier = racial_pop_menu_cooldown }
+					}
+					set_country_flag = racial_pop_menu_opened
+					pop_menu_cored_dev_calculations = { RACE = lizardfolk }
+					country_event = { id = racial_pop_events_lizardfolk.12 }
+				}
+			}
+		}
+	}
+}
+custom_button = {
+	name = province_icon_lizardfolk_la
+	tooltip = province_minority_tt
+	potential = { has_province_modifier = lizardfolk_minority_coexisting_large }
+	trigger = { }
+	effect = {
+		tooltip = { add_province_modifier = { name = lizardfolk_minority_coexisting_large_ui duration = -1 } }
+		hidden_effect = {
+			FROM = { 
+				if = {
+					limit = {
+						NOT = { has_country_flag = racial_military_menu_opened }
+						NOT = { has_country_flag = racial_pop_menu_opened }
+						NOT = { has_country_modifier = racial_pop_menu_cooldown }
+					}
+					set_country_flag = racial_pop_menu_opened
+					pop_menu_cored_dev_calculations = { RACE = lizardfolk }
+					country_event = { id = racial_pop_events_lizardfolk.12 }
+				}
+			}
+		}
+	}
+}
+custom_button = {
+	name = province_icon_lizardfolk_si
+	tooltip = province_minority_tt
+	potential = { has_province_modifier = lizardfolk_minority_integrated_small }
+	trigger = { }
+	effect = {
+		tooltip = { add_province_modifier = { name = lizardfolk_minority_integrated_small_ui duration = -1 } }
+		hidden_effect = {
+			FROM = { 
+				if = {
+					limit = {
+						NOT = { has_country_flag = racial_military_menu_opened }
+						NOT = { has_country_flag = racial_pop_menu_opened }
+						NOT = { has_country_modifier = racial_pop_menu_cooldown }
+					}
+					set_country_flag = racial_pop_menu_opened
+					pop_menu_cored_dev_calculations = { RACE = lizardfolk }
+					country_event = { id = racial_pop_events_lizardfolk.12 }
+				}
+			}
+		}
+	}
+}
+custom_button = {
+	name = province_icon_lizardfolk_li
+	tooltip = province_minority_tt
+	potential = { has_province_modifier = lizardfolk_minority_integrated_large }
+	trigger = { }
+	effect = {
+		tooltip = { add_province_modifier = { name = lizardfolk_minority_integrated_large_ui duration = -1 } }
+		hidden_effect = {
+			FROM = { 
+				if = {
+					limit = {
+						NOT = { has_country_flag = racial_military_menu_opened }
+						NOT = { has_country_flag = racial_pop_menu_opened }
+						NOT = { has_country_modifier = racial_pop_menu_cooldown }
+					}
+					set_country_flag = racial_pop_menu_opened
+					pop_menu_cored_dev_calculations = { RACE = lizardfolk }
+					country_event = { id = racial_pop_events_lizardfolk.12 }
+				}
+			}
+		}
+	}
+}
+custom_button = {
+	name = province_icon_lizardfolk_mo
+	tooltip = province_majority_tt
+	potential = { has_province_modifier = lizardfolk_majority_oppressed }
+	trigger = { }
+	effect = {
+		tooltip = { add_province_modifier = { name = lizardfolk_majority_oppressed_ui duration = -1 } }
+		hidden_effect = {
+			FROM = { 
+				if = {
+					limit = {
+						NOT = { has_country_flag = racial_military_menu_opened }
+						NOT = { has_country_flag = racial_pop_menu_opened }
+						NOT = { has_country_modifier = racial_pop_menu_cooldown }
+					}
+					set_country_flag = racial_pop_menu_opened
+					pop_menu_cored_dev_calculations = { RACE = lizardfolk }
+					country_event = { id = racial_pop_events_lizardfolk.12 }
+				}
+			}
+		}
+	}
+}
+custom_button = {
+	name = province_icon_lizardfolk_ma
+	tooltip = province_majority_tt
+	potential = { has_province_modifier = lizardfolk_majority_coexisting }
+	trigger = { }
+	effect = {
+		tooltip = { add_province_modifier = { name = lizardfolk_majority_coexisting_ui duration = -1 } }
+		hidden_effect = {
+			FROM = { 
+				if = {
+					limit = {
+						NOT = { has_country_flag = racial_military_menu_opened }
+						NOT = { has_country_flag = racial_pop_menu_opened }
+						NOT = { has_country_modifier = racial_pop_menu_cooldown }
+					}
+					set_country_flag = racial_pop_menu_opened
+					pop_menu_cored_dev_calculations = { RACE = lizardfolk }
+					country_event = { id = racial_pop_events_lizardfolk.12 }
+				}
+			}
+		}
+	}
+}
+custom_button = {
+	name = province_icon_lizardfolk_mi
+	tooltip = province_majority_tt
+	potential = { OR = { has_province_modifier = lizardfolk_majority_integrated has_province_modifier = lizardfolk_majority_primary } }
+	trigger = { }
+	effect = {
+		tooltip = { add_province_modifier = { name = lizardfolk_majority_integrated_ui duration = -1 } }
+		hidden_effect = {
+			FROM = { 
+				if = {
+					limit = {
+						NOT = { has_country_flag = racial_military_menu_opened }
+						NOT = { has_country_flag = racial_pop_menu_opened }
+						NOT = { has_country_modifier = racial_pop_menu_cooldown }
+					}
+					set_country_flag = racial_pop_menu_opened
+					pop_menu_cored_dev_calculations = { RACE = lizardfolk }
+					country_event = { id = racial_pop_events_lizardfolk.12 }
+				}
+			}
+		}
+	}
+}
+
+
+#ogre
+custom_button = {
+	name = province_icon_ogre_so
+	tooltip = province_minority_tt
+	potential = { has_province_modifier = ogre_minority_oppressed_small }
+	trigger = { }
+	effect = {
+		tooltip = { add_province_modifier = { name = ogre_minority_oppressed_small_ui duration = -1 } }
+		hidden_effect = {
+			FROM = { 
+				if = {
+					limit = {
+						NOT = { has_country_flag = racial_military_menu_opened }
+						NOT = { has_country_flag = racial_pop_menu_opened }
+						NOT = { has_country_modifier = racial_pop_menu_cooldown }
+					}
+					set_country_flag = racial_pop_menu_opened
+					pop_menu_cored_dev_calculations = { RACE = ogre }
+					country_event = { id = racial_pop_events_ogre.12 }
+				}
+			}
+		}
+	}
+}
+custom_button = {
+	name = province_icon_ogre_lo
+	tooltip = province_minority_tt
+	potential = { has_province_modifier = ogre_minority_oppressed_large }
+	trigger = { }
+	effect = {
+		tooltip = { add_province_modifier = { name = ogre_minority_oppressed_large_ui duration = -1 } }
+		hidden_effect = {
+			FROM = { 
+				if = {
+					limit = {
+						NOT = { has_country_flag = racial_military_menu_opened }
+						NOT = { has_country_flag = racial_pop_menu_opened }
+						NOT = { has_country_modifier = racial_pop_menu_cooldown }
+					}
+					set_country_flag = racial_pop_menu_opened
+					pop_menu_cored_dev_calculations = { RACE = ogre }
+					country_event = { id = racial_pop_events_ogre.12 }
+				}
+			}
+		}
+	}
+}
+custom_button = {
+	name = province_icon_ogre_sa
+	tooltip = province_minority_tt
+	potential = { has_province_modifier = ogre_minority_coexisting_small }
+	trigger = { }
+	effect = {
+		tooltip = { add_province_modifier = { name = ogre_minority_coexisting_small_ui duration = -1 } }
+		hidden_effect = {
+			FROM = { 
+				if = {
+					limit = {
+						NOT = { has_country_flag = racial_military_menu_opened }
+						NOT = { has_country_flag = racial_pop_menu_opened }
+						NOT = { has_country_modifier = racial_pop_menu_cooldown }
+					}
+					set_country_flag = racial_pop_menu_opened
+					pop_menu_cored_dev_calculations = { RACE = ogre }
+					country_event = { id = racial_pop_events_ogre.12 }
+				}
+			}
+		}
+	}
+}
+custom_button = {
+	name = province_icon_ogre_la
+	tooltip = province_minority_tt
+	potential = { has_province_modifier = ogre_minority_coexisting_large }
+	trigger = { }
+	effect = {
+		tooltip = { add_province_modifier = { name = ogre_minority_coexisting_large_ui duration = -1 } }
+		hidden_effect = {
+			FROM = { 
+				if = {
+					limit = {
+						NOT = { has_country_flag = racial_military_menu_opened }
+						NOT = { has_country_flag = racial_pop_menu_opened }
+						NOT = { has_country_modifier = racial_pop_menu_cooldown }
+					}
+					set_country_flag = racial_pop_menu_opened
+					pop_menu_cored_dev_calculations = { RACE = ogre }
+					country_event = { id = racial_pop_events_ogre.12 }
+				}
+			}
+		}
+	}
+}
+custom_button = {
+	name = province_icon_ogre_si
+	tooltip = province_minority_tt
+	potential = { has_province_modifier = ogre_minority_integrated_small }
+	trigger = { }
+	effect = {
+		tooltip = { add_province_modifier = { name = ogre_minority_integrated_small_ui duration = -1 } }
+		hidden_effect = {
+			FROM = { 
+				if = {
+					limit = {
+						NOT = { has_country_flag = racial_military_menu_opened }
+						NOT = { has_country_flag = racial_pop_menu_opened }
+						NOT = { has_country_modifier = racial_pop_menu_cooldown }
+					}
+					set_country_flag = racial_pop_menu_opened
+					pop_menu_cored_dev_calculations = { RACE = ogre }
+					country_event = { id = racial_pop_events_ogre.12 }
+				}
+			}
+		}
+	}
+}
+custom_button = {
+	name = province_icon_ogre_li
+	tooltip = province_minority_tt
+	potential = { has_province_modifier = ogre_minority_integrated_large }
+	trigger = { }
+	effect = {
+		tooltip = { add_province_modifier = { name = ogre_minority_integrated_large_ui duration = -1 } }
+		hidden_effect = {
+			FROM = { 
+				if = {
+					limit = {
+						NOT = { has_country_flag = racial_military_menu_opened }
+						NOT = { has_country_flag = racial_pop_menu_opened }
+						NOT = { has_country_modifier = racial_pop_menu_cooldown }
+					}
+					set_country_flag = racial_pop_menu_opened
+					pop_menu_cored_dev_calculations = { RACE = ogre }
+					country_event = { id = racial_pop_events_ogre.12 }
+				}
+			}
+		}
+	}
+}
+custom_button = {
+	name = province_icon_ogre_mo
+	tooltip = province_majority_tt
+	potential = { has_province_modifier = ogre_majority_oppressed }
+	trigger = { }
+	effect = {
+		tooltip = { add_province_modifier = { name = ogre_majority_oppressed_ui duration = -1 } }
+		hidden_effect = {
+			FROM = { 
+				if = {
+					limit = {
+						NOT = { has_country_flag = racial_military_menu_opened }
+						NOT = { has_country_flag = racial_pop_menu_opened }
+						NOT = { has_country_modifier = racial_pop_menu_cooldown }
+					}
+					set_country_flag = racial_pop_menu_opened
+					pop_menu_cored_dev_calculations = { RACE = ogre }
+					country_event = { id = racial_pop_events_ogre.12 }
+				}
+			}
+		}
+	}
+}
+custom_button = {
+	name = province_icon_ogre_ma
+	tooltip = province_majority_tt
+	potential = { has_province_modifier = ogre_majority_coexisting }
+	trigger = { }
+	effect = {
+		tooltip = { add_province_modifier = { name = ogre_majority_coexisting_ui duration = -1 } }
+		hidden_effect = {
+			FROM = { 
+				if = {
+					limit = {
+						NOT = { has_country_flag = racial_military_menu_opened }
+						NOT = { has_country_flag = racial_pop_menu_opened }
+						NOT = { has_country_modifier = racial_pop_menu_cooldown }
+					}
+					set_country_flag = racial_pop_menu_opened
+					pop_menu_cored_dev_calculations = { RACE = ogre }
+					country_event = { id = racial_pop_events_ogre.12 }
+				}
+			}
+		}
+	}
+}
+custom_button = {
+	name = province_icon_ogre_mi
+	tooltip = province_majority_tt
+	potential = { OR = { has_province_modifier = ogre_majority_integrated has_province_modifier = ogre_majority_primary } }
+	trigger = { }
+	effect = {
+		tooltip = { add_province_modifier = { name = ogre_majority_integrated_ui duration = -1 } }
+		hidden_effect = {
+			FROM = { 
+				if = {
+					limit = {
+						NOT = { has_country_flag = racial_military_menu_opened }
+						NOT = { has_country_flag = racial_pop_menu_opened }
+						NOT = { has_country_modifier = racial_pop_menu_cooldown }
+					}
+					set_country_flag = racial_pop_menu_opened
+					pop_menu_cored_dev_calculations = { RACE = ogre }
+					country_event = { id = racial_pop_events_ogre.12 }
+				}
+			}
+		}
+	}
+}
+
+
+#orcish
+custom_button = {
+	name = province_icon_orcish_so
+	tooltip = province_minority_tt
+	potential = { has_province_modifier = orcish_minority_oppressed_small }
+	trigger = { }
+	effect = {
+		tooltip = { add_province_modifier = { name = orcish_minority_oppressed_small_ui duration = -1 } }
+		hidden_effect = {
+			FROM = { 
+				if = {
+					limit = {
+						NOT = { has_country_flag = racial_military_menu_opened }
+						NOT = { has_country_flag = racial_pop_menu_opened }
+						NOT = { has_country_modifier = racial_pop_menu_cooldown }
+					}
+					set_country_flag = racial_pop_menu_opened
+					pop_menu_cored_dev_calculations = { RACE = orcish }
+					country_event = { id = racial_pop_events_orcish.12 }
+				}
+			}
+		}
+	}
+}
+custom_button = {
+	name = province_icon_orcish_lo
+	tooltip = province_minority_tt
+	potential = { has_province_modifier = orcish_minority_oppressed_large }
+	trigger = { }
+	effect = {
+		tooltip = { add_province_modifier = { name = orcish_minority_oppressed_large_ui duration = -1 } }
+		hidden_effect = {
+			FROM = { 
+				if = {
+					limit = {
+						NOT = { has_country_flag = racial_military_menu_opened }
+						NOT = { has_country_flag = racial_pop_menu_opened }
+						NOT = { has_country_modifier = racial_pop_menu_cooldown }
+					}
+					set_country_flag = racial_pop_menu_opened
+					pop_menu_cored_dev_calculations = { RACE = orcish }
+					country_event = { id = racial_pop_events_orcish.12 }
+				}
+			}
+		}
+	}
+}
+custom_button = {
+	name = province_icon_orcish_sa
+	tooltip = province_minority_tt
+	potential = { has_province_modifier = orcish_minority_coexisting_small }
+	trigger = { }
+	effect = {
+		tooltip = { add_province_modifier = { name = orcish_minority_coexisting_small_ui duration = -1 } }
+		hidden_effect = {
+			FROM = { 
+				if = {
+					limit = {
+						NOT = { has_country_flag = racial_military_menu_opened }
+						NOT = { has_country_flag = racial_pop_menu_opened }
+						NOT = { has_country_modifier = racial_pop_menu_cooldown }
+					}
+					set_country_flag = racial_pop_menu_opened
+					pop_menu_cored_dev_calculations = { RACE = orcish }
+					country_event = { id = racial_pop_events_orcish.12 }
+				}
+			}
+		}
+	}
+}
+custom_button = {
+	name = province_icon_orcish_la
+	tooltip = province_minority_tt
+	potential = { has_province_modifier = orcish_minority_coexisting_large }
+	trigger = { }
+	effect = {
+		tooltip = { add_province_modifier = { name = orcish_minority_coexisting_large_ui duration = -1 } }
+		hidden_effect = {
+			FROM = { 
+				if = {
+					limit = {
+						NOT = { has_country_flag = racial_military_menu_opened }
+						NOT = { has_country_flag = racial_pop_menu_opened }
+						NOT = { has_country_modifier = racial_pop_menu_cooldown }
+					}
+					set_country_flag = racial_pop_menu_opened
+					pop_menu_cored_dev_calculations = { RACE = orcish }
+					country_event = { id = racial_pop_events_orcish.12 }
+				}
+			}
+		}
+	}
+}
+custom_button = {
+	name = province_icon_orcish_si
+	tooltip = province_minority_tt
+	potential = { has_province_modifier = orcish_minority_integrated_small }
+	trigger = { }
+	effect = {
+		tooltip = { add_province_modifier = { name = orcish_minority_integrated_small_ui duration = -1 } }
+		hidden_effect = {
+			FROM = { 
+				if = {
+					limit = {
+						NOT = { has_country_flag = racial_military_menu_opened }
+						NOT = { has_country_flag = racial_pop_menu_opened }
+						NOT = { has_country_modifier = racial_pop_menu_cooldown }
+					}
+					set_country_flag = racial_pop_menu_opened
+					pop_menu_cored_dev_calculations = { RACE = orcish }
+					country_event = { id = racial_pop_events_orcish.12 }
+				}
+			}
+		}
+	}
+}
+custom_button = {
+	name = province_icon_orcish_li
+	tooltip = province_minority_tt
+	potential = { has_province_modifier = orcish_minority_integrated_large }
+	trigger = { }
+	effect = {
+		tooltip = { add_province_modifier = { name = orcish_minority_integrated_large_ui duration = -1 } }
+		hidden_effect = {
+			FROM = { 
+				if = {
+					limit = {
+						NOT = { has_country_flag = racial_military_menu_opened }
+						NOT = { has_country_flag = racial_pop_menu_opened }
+						NOT = { has_country_modifier = racial_pop_menu_cooldown }
+					}
+					set_country_flag = racial_pop_menu_opened
+					pop_menu_cored_dev_calculations = { RACE = orcish }
+					country_event = { id = racial_pop_events_orcish.12 }
+				}
+			}
+		}
+	}
+}
+custom_button = {
+	name = province_icon_orcish_mo
+	tooltip = province_majority_tt
+	potential = { has_province_modifier = orcish_majority_oppressed }
+	trigger = { }
+	effect = {
+		tooltip = { add_province_modifier = { name = orcish_majority_oppressed_ui duration = -1 } }
+		hidden_effect = {
+			FROM = { 
+				if = {
+					limit = {
+						NOT = { has_country_flag = racial_military_menu_opened }
+						NOT = { has_country_flag = racial_pop_menu_opened }
+						NOT = { has_country_modifier = racial_pop_menu_cooldown }
+					}
+					set_country_flag = racial_pop_menu_opened
+					pop_menu_cored_dev_calculations = { RACE = orcish }
+					country_event = { id = racial_pop_events_orcish.12 }
+				}
+			}
+		}
+	}
+}
+custom_button = {
+	name = province_icon_orcish_ma
+	tooltip = province_majority_tt
+	potential = { has_province_modifier = orcish_majority_coexisting }
+	trigger = { }
+	effect = {
+		tooltip = { add_province_modifier = { name = orcish_majority_coexisting_ui duration = -1 } }
+		hidden_effect = {
+			FROM = { 
+				if = {
+					limit = {
+						NOT = { has_country_flag = racial_military_menu_opened }
+						NOT = { has_country_flag = racial_pop_menu_opened }
+						NOT = { has_country_modifier = racial_pop_menu_cooldown }
+					}
+					set_country_flag = racial_pop_menu_opened
+					pop_menu_cored_dev_calculations = { RACE = orcish }
+					country_event = { id = racial_pop_events_orcish.12 }
+				}
+			}
+		}
+	}
+}
+custom_button = {
+	name = province_icon_orcish_mi
+	tooltip = province_majority_tt
+	potential = { OR = { has_province_modifier = orcish_majority_integrated has_province_modifier = orcish_majority_primary } }
+	trigger = { }
+	effect = {
+		tooltip = { add_province_modifier = { name = orcish_majority_integrated_ui duration = -1 } }
+		hidden_effect = {
+			FROM = { 
+				if = {
+					limit = {
+						NOT = { has_country_flag = racial_military_menu_opened }
+						NOT = { has_country_flag = racial_pop_menu_opened }
+						NOT = { has_country_modifier = racial_pop_menu_cooldown }
+					}
+					set_country_flag = racial_pop_menu_opened
+					pop_menu_cored_dev_calculations = { RACE = orcish }
+					country_event = { id = racial_pop_events_orcish.12 }
+				}
+			}
+		}
+	}
+}
+
+
+#ruinborn
+custom_button = {
+	name = province_icon_ruinborn_so
+	tooltip = province_minority_tt
+	potential = { has_province_modifier = ruinborn_minority_oppressed_small }
+	trigger = { }
+	effect = {
+		tooltip = { add_province_modifier = { name = ruinborn_minority_oppressed_small_ui duration = -1 } }
+		hidden_effect = {
+			FROM = { 
+				if = {
+					limit = {
+						NOT = { has_country_flag = racial_military_menu_opened }
+						NOT = { has_country_flag = racial_pop_menu_opened }
+						NOT = { has_country_modifier = racial_pop_menu_cooldown }
+					}
+					set_country_flag = racial_pop_menu_opened
+					pop_menu_cored_dev_calculations = { RACE = ruinborn }
+					country_event = { id = racial_pop_events_ruinborn.12 }
+				}
+			}
+		}
+	}
+}
+custom_button = {
+	name = province_icon_ruinborn_lo
+	tooltip = province_minority_tt
+	potential = { has_province_modifier = ruinborn_minority_oppressed_large }
+	trigger = { }
+	effect = {
+		tooltip = { add_province_modifier = { name = ruinborn_minority_oppressed_large_ui duration = -1 } }
+		hidden_effect = {
+			FROM = { 
+				if = {
+					limit = {
+						NOT = { has_country_flag = racial_military_menu_opened }
+						NOT = { has_country_flag = racial_pop_menu_opened }
+						NOT = { has_country_modifier = racial_pop_menu_cooldown }
+					}
+					set_country_flag = racial_pop_menu_opened
+					pop_menu_cored_dev_calculations = { RACE = ruinborn }
+					country_event = { id = racial_pop_events_ruinborn.12 }
+				}
+			}
+		}
+	}
+}
+custom_button = {
+	name = province_icon_ruinborn_sa
+	tooltip = province_minority_tt
+	potential = { has_province_modifier = ruinborn_minority_coexisting_small }
+	trigger = { }
+	effect = {
+		tooltip = { add_province_modifier = { name = ruinborn_minority_coexisting_small_ui duration = -1 } }
+		hidden_effect = {
+			FROM = { 
+				if = {
+					limit = {
+						NOT = { has_country_flag = racial_military_menu_opened }
+						NOT = { has_country_flag = racial_pop_menu_opened }
+						NOT = { has_country_modifier = racial_pop_menu_cooldown }
+					}
+					set_country_flag = racial_pop_menu_opened
+					pop_menu_cored_dev_calculations = { RACE = ruinborn }
+					country_event = { id = racial_pop_events_ruinborn.12 }
+				}
+			}
+		}
+	}
+}
+custom_button = {
+	name = province_icon_ruinborn_la
+	tooltip = province_minority_tt
+	potential = { has_province_modifier = ruinborn_minority_coexisting_large }
+	trigger = { }
+	effect = {
+		tooltip = { add_province_modifier = { name = ruinborn_minority_coexisting_large_ui duration = -1 } }
+		hidden_effect = {
+			FROM = { 
+				if = {
+					limit = {
+						NOT = { has_country_flag = racial_military_menu_opened }
+						NOT = { has_country_flag = racial_pop_menu_opened }
+						NOT = { has_country_modifier = racial_pop_menu_cooldown }
+					}
+					set_country_flag = racial_pop_menu_opened
+					pop_menu_cored_dev_calculations = { RACE = ruinborn }
+					country_event = { id = racial_pop_events_ruinborn.12 }
+				}
+			}
+		}
+	}
+}
+custom_button = {
+	name = province_icon_ruinborn_si
+	tooltip = province_minority_tt
+	potential = { has_province_modifier = ruinborn_minority_integrated_small }
+	trigger = { }
+	effect = {
+		tooltip = { add_province_modifier = { name = ruinborn_minority_integrated_small_ui duration = -1 } }
+		hidden_effect = {
+			FROM = { 
+				if = {
+					limit = {
+						NOT = { has_country_flag = racial_military_menu_opened }
+						NOT = { has_country_flag = racial_pop_menu_opened }
+						NOT = { has_country_modifier = racial_pop_menu_cooldown }
+					}
+					set_country_flag = racial_pop_menu_opened
+					pop_menu_cored_dev_calculations = { RACE = ruinborn }
+					country_event = { id = racial_pop_events_ruinborn.12 }
+				}
+			}
+		}
+	}
+}
+custom_button = {
+	name = province_icon_ruinborn_li
+	tooltip = province_minority_tt
+	potential = { has_province_modifier = ruinborn_minority_integrated_large }
+	trigger = { }
+	effect = {
+		tooltip = { add_province_modifier = { name = ruinborn_minority_integrated_large_ui duration = -1 } }
+		hidden_effect = {
+			FROM = { 
+				if = {
+					limit = {
+						NOT = { has_country_flag = racial_military_menu_opened }
+						NOT = { has_country_flag = racial_pop_menu_opened }
+						NOT = { has_country_modifier = racial_pop_menu_cooldown }
+					}
+					set_country_flag = racial_pop_menu_opened
+					pop_menu_cored_dev_calculations = { RACE = ruinborn }
+					country_event = { id = racial_pop_events_ruinborn.12 }
+				}
+			}
+		}
+	}
+}
+custom_button = {
+	name = province_icon_ruinborn_mo
+	tooltip = province_majority_tt
+	potential = { has_province_modifier = ruinborn_majority_oppressed }
+	trigger = { }
+	effect = {
+		tooltip = { add_province_modifier = { name = ruinborn_majority_oppressed_ui duration = -1 } }
+		hidden_effect = {
+			FROM = { 
+				if = {
+					limit = {
+						NOT = { has_country_flag = racial_military_menu_opened }
+						NOT = { has_country_flag = racial_pop_menu_opened }
+						NOT = { has_country_modifier = racial_pop_menu_cooldown }
+					}
+					set_country_flag = racial_pop_menu_opened
+					pop_menu_cored_dev_calculations = { RACE = ruinborn }
+					country_event = { id = racial_pop_events_ruinborn.12 }
+				}
+			}
+		}
+	}
+}
+custom_button = {
+	name = province_icon_ruinborn_ma
+	tooltip = province_majority_tt
+	potential = { has_province_modifier = ruinborn_majority_coexisting }
+	trigger = { }
+	effect = {
+		tooltip = { add_province_modifier = { name = ruinborn_majority_coexisting_ui duration = -1 } }
+		hidden_effect = {
+			FROM = { 
+				if = {
+					limit = {
+						NOT = { has_country_flag = racial_military_menu_opened }
+						NOT = { has_country_flag = racial_pop_menu_opened }
+						NOT = { has_country_modifier = racial_pop_menu_cooldown }
+					}
+					set_country_flag = racial_pop_menu_opened
+					pop_menu_cored_dev_calculations = { RACE = ruinborn }
+					country_event = { id = racial_pop_events_ruinborn.12 }
+				}
+			}
+		}
+	}
+}
+custom_button = {
+	name = province_icon_ruinborn_mi
+	tooltip = province_majority_tt
+	potential = { OR = { has_province_modifier = ruinborn_majority_integrated has_province_modifier = ruinborn_majority_primary } }
+	trigger = { }
+	effect = {
+		tooltip = { add_province_modifier = { name = ruinborn_majority_integrated_ui duration = -1 } }
+		hidden_effect = {
+			FROM = { 
+				if = {
+					limit = {
+						NOT = { has_country_flag = racial_military_menu_opened }
+						NOT = { has_country_flag = racial_pop_menu_opened }
+						NOT = { has_country_modifier = racial_pop_menu_cooldown }
+					}
+					set_country_flag = racial_pop_menu_opened
+					pop_menu_cored_dev_calculations = { RACE = ruinborn }
+					country_event = { id = racial_pop_events_ruinborn.12 }
+				}
+			}
+		}
+	}
+}
+
+
+#troll
+custom_button = {
+	name = province_icon_troll_so
+	tooltip = province_minority_tt
+	potential = { has_province_modifier = troll_minority_oppressed_small }
+	trigger = { }
+	effect = {
+		tooltip = { add_province_modifier = { name = troll_minority_oppressed_small_ui duration = -1 } }
+		hidden_effect = {
+			FROM = { 
+				if = {
+					limit = {
+						NOT = { has_country_flag = racial_military_menu_opened }
+						NOT = { has_country_flag = racial_pop_menu_opened }
+						NOT = { has_country_modifier = racial_pop_menu_cooldown }
+					}
+					set_country_flag = racial_pop_menu_opened
+					pop_menu_cored_dev_calculations = { RACE = troll }
+					country_event = { id = racial_pop_events_troll.12 }
+				}
+			}
+		}
+	}
+}
+custom_button = {
+	name = province_icon_troll_lo
+	tooltip = province_minority_tt
+	potential = { has_province_modifier = troll_minority_oppressed_large }
+	trigger = { }
+	effect = {
+		tooltip = { add_province_modifier = { name = troll_minority_oppressed_large_ui duration = -1 } }
+		hidden_effect = {
+			FROM = { 
+				if = {
+					limit = {
+						NOT = { has_country_flag = racial_military_menu_opened }
+						NOT = { has_country_flag = racial_pop_menu_opened }
+						NOT = { has_country_modifier = racial_pop_menu_cooldown }
+					}
+					set_country_flag = racial_pop_menu_opened
+					pop_menu_cored_dev_calculations = { RACE = troll }
+					country_event = { id = racial_pop_events_troll.12 }
+				}
+			}
+		}
+	}
+}
+custom_button = {
+	name = province_icon_troll_sa
+	tooltip = province_minority_tt
+	potential = { has_province_modifier = troll_minority_coexisting_small }
+	trigger = { }
+	effect = {
+		tooltip = { add_province_modifier = { name = troll_minority_coexisting_small_ui duration = -1 } }
+		hidden_effect = {
+			FROM = { 
+				if = {
+					limit = {
+						NOT = { has_country_flag = racial_military_menu_opened }
+						NOT = { has_country_flag = racial_pop_menu_opened }
+						NOT = { has_country_modifier = racial_pop_menu_cooldown }
+					}
+					set_country_flag = racial_pop_menu_opened
+					pop_menu_cored_dev_calculations = { RACE = troll }
+					country_event = { id = racial_pop_events_troll.12 }
+				}
+			}
+		}
+	}
+}
+custom_button = {
+	name = province_icon_troll_la
+	tooltip = province_minority_tt
+	potential = { has_province_modifier = troll_minority_coexisting_large }
+	trigger = { }
+	effect = {
+		tooltip = { add_province_modifier = { name = troll_minority_coexisting_large_ui duration = -1 } }
+		hidden_effect = {
+			FROM = { 
+				if = {
+					limit = {
+						NOT = { has_country_flag = racial_military_menu_opened }
+						NOT = { has_country_flag = racial_pop_menu_opened }
+						NOT = { has_country_modifier = racial_pop_menu_cooldown }
+					}
+					set_country_flag = racial_pop_menu_opened
+					pop_menu_cored_dev_calculations = { RACE = troll }
+					country_event = { id = racial_pop_events_troll.12 }
+				}
+			}
+		}
+	}
+}
+custom_button = {
+	name = province_icon_troll_si
+	tooltip = province_minority_tt
+	potential = { has_province_modifier = troll_minority_integrated_small }
+	trigger = { }
+	effect = {
+		tooltip = { add_province_modifier = { name = troll_minority_integrated_small_ui duration = -1 } }
+		hidden_effect = {
+			FROM = { 
+				if = {
+					limit = {
+						NOT = { has_country_flag = racial_military_menu_opened }
+						NOT = { has_country_flag = racial_pop_menu_opened }
+						NOT = { has_country_modifier = racial_pop_menu_cooldown }
+					}
+					set_country_flag = racial_pop_menu_opened
+					pop_menu_cored_dev_calculations = { RACE = troll }
+					country_event = { id = racial_pop_events_troll.12 }
+				}
+			}
+		}
+	}
+}
+custom_button = {
+	name = province_icon_troll_li
+	tooltip = province_minority_tt
+	potential = { has_province_modifier = troll_minority_integrated_large }
+	trigger = { }
+	effect = {
+		tooltip = { add_province_modifier = { name = troll_minority_integrated_large_ui duration = -1 } }
+		hidden_effect = {
+			FROM = { 
+				if = {
+					limit = {
+						NOT = { has_country_flag = racial_military_menu_opened }
+						NOT = { has_country_flag = racial_pop_menu_opened }
+						NOT = { has_country_modifier = racial_pop_menu_cooldown }
+					}
+					set_country_flag = racial_pop_menu_opened
+					pop_menu_cored_dev_calculations = { RACE = troll }
+					country_event = { id = racial_pop_events_troll.12 }
+				}
+			}
+		}
+	}
+}
+custom_button = {
+	name = province_icon_troll_mo
+	tooltip = province_majority_tt
+	potential = { has_province_modifier = troll_majority_oppressed }
+	trigger = { }
+	effect = {
+		tooltip = { add_province_modifier = { name = troll_majority_oppressed_ui duration = -1 } }
+		hidden_effect = {
+			FROM = { 
+				if = {
+					limit = {
+						NOT = { has_country_flag = racial_military_menu_opened }
+						NOT = { has_country_flag = racial_pop_menu_opened }
+						NOT = { has_country_modifier = racial_pop_menu_cooldown }
+					}
+					set_country_flag = racial_pop_menu_opened
+					pop_menu_cored_dev_calculations = { RACE = troll }
+					country_event = { id = racial_pop_events_troll.12 }
+				}
+			}
+		}
+	}
+}
+custom_button = {
+	name = province_icon_troll_ma
+	tooltip = province_majority_tt
+	potential = { has_province_modifier = troll_majority_coexisting }
+	trigger = { }
+	effect = {
+		tooltip = { add_province_modifier = { name = troll_majority_coexisting_ui duration = -1 } }
+		hidden_effect = {
+			FROM = { 
+				if = {
+					limit = {
+						NOT = { has_country_flag = racial_military_menu_opened }
+						NOT = { has_country_flag = racial_pop_menu_opened }
+						NOT = { has_country_modifier = racial_pop_menu_cooldown }
+					}
+					set_country_flag = racial_pop_menu_opened
+					pop_menu_cored_dev_calculations = { RACE = troll }
+					country_event = { id = racial_pop_events_troll.12 }
+				}
+			}
+		}
+	}
+}
+custom_button = {
+	name = province_icon_troll_mi
+	tooltip = province_majority_tt
+	potential = { OR = { has_province_modifier = troll_majority_integrated has_province_modifier = troll_majority_primary } }
+	trigger = { }
+	effect = {
+		tooltip = { add_province_modifier = { name = troll_majority_integrated_ui duration = -1 } }
+		hidden_effect = {
+			FROM = { 
+				if = {
+					limit = {
+						NOT = { has_country_flag = racial_military_menu_opened }
+						NOT = { has_country_flag = racial_pop_menu_opened }
+						NOT = { has_country_modifier = racial_pop_menu_cooldown }
+					}
+					set_country_flag = racial_pop_menu_opened
+					pop_menu_cored_dev_calculations = { RACE = troll }
+					country_event = { id = racial_pop_events_troll.12 }
+				}
+			}
+		}
+	}
+}
+
+
+
+#Hold
+custom_button = {
+    name = hold_interface_button
+	tooltip = hold_button_tt
+    potential = {
+		OR = {
+			has_terrain = dwarven_hold
+			has_terrain = dwarven_hold_surface
+		}
+		NOT = { FROM = { has_country_flag = diggy_diggy_province_menu_flag } }
+	}
+	trigger = { }
+	effect = {
+		hidden_effect = {
+			FROM = { set_country_flag = diggy_diggy_province_menu_flag }
+			if = {
+				limit = { owner = { tag = FROM } }
+				if = {
+					limit = {
+						OR = {
+							has_province_modifier = ruined_hold
+							has_province_modifier = partially_ruined_hold
+							has_province_modifier = damaged_hold
+						}
+					}
+					FROM = {
+						every_owned_province = {
+							limit = {
+								OR = {
+									has_terrain = dwarven_hold
+									has_terrain = dwarven_hold_surface
+								}
+							}
+							setup_restoration_speed = yes
+						}
+					}
+				}
+				else_if = {
+					limit = { has_province_modifier = infested_hold }
+				
+				}
+				else = {
+					FROM = {
+						every_owned_province = {
+							limit = {
+								OR = {
+									has_terrain = dwarven_hold
+									has_terrain = dwarven_hold_surface
+								}
+							}
+							if = {
+								limit = { is_capital = yes }
+								setup_digging_deeper_capital = yes
+							}
+							else = {
+								setup_digging_deeper_non_capital = yes
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+custom_button = {
+    name = hold_close_button
+    potential = {
+		OR = {
+			has_terrain = dwarven_hold
+			has_terrain = dwarven_hold_surface
+		}
+		FROM = { has_country_flag = diggy_diggy_province_menu_flag }
+	}
+	effect = { FROM = { clr_country_flag = diggy_diggy_province_menu_flag } }
+}
+custom_button = {
+    name = hold_back_button
+    potential = {
+		OR = {
+			has_terrain = dwarven_hold
+			has_terrain = dwarven_hold_surface
+		}
+		FROM = { has_country_flag = diggy_diggy_province_menu_flag }
+	}
+	effect = { FROM = { clr_country_flag = diggy_diggy_province_menu_flag } }
+}
+
+custom_icon = {
+    name = diggy_province_bg
+    potential = {
+		OR = {
+			has_terrain = dwarven_hold
+			has_terrain = dwarven_hold_surface
+		}
+		FROM = { has_country_flag = diggy_diggy_province_menu_flag }
+	}
+}
+
+custom_icon = {
+	name = dig_build_hidder
+	potential = {
+		OR = {
+			has_construction = digging_deeper
+			has_construction = restoring_hold
+		}
+	}
+}
+
+custom_text_box = {
+	name = diggy_depth_label
+	potential = {
+		OR = {
+			has_terrain = dwarven_hold
+			has_terrain = dwarven_hold_surface
+		}
+		FROM = { has_country_flag = diggy_diggy_province_menu_flag }
+	}
+}
+
+custom_text_box = {
+	name = diggy_depth_value
+	potential = {
+		OR = {
+			has_terrain = dwarven_hold
+			has_terrain = dwarven_hold_surface
+		}
+		FROM = { has_country_flag = diggy_diggy_province_menu_flag }
+	}
+}
+
+custom_button = {
+	name = hold_level_1
+	tooltip = hold_depth_tt
+	potential = {
+		OR = {
+			has_terrain = dwarven_hold
+			has_terrain = dwarven_hold_surface
+		}
+		FROM = { has_country_flag = diggy_diggy_province_menu_flag }
+	}
+	trigger = { }
+	effect = { tooltip = { add_province_modifier = { name = dig_1_ui duration = -1 } } }
+	frame = {
+		number = 1
+		trigger = {
+			OR = {
+				has_province_modifier = dig_2
+				has_province_modifier = dig_3
+				has_province_modifier = dig_4
+				has_province_modifier = dig_5
+				has_province_modifier = dig_6
+				has_province_modifier = dig_7
+				has_province_modifier = dig_8
+				has_province_modifier = dig_9
+				has_province_modifier = dig_10
+				has_province_modifier = dig_11
+				#has_province_modifier = dig_12
+			}
+		}
+	}
+	frame = { number = 2 trigger = { has_province_modifier = dig_1 } }
+	frame = { number = 3 trigger = { always = yes } }
+}
+custom_button = {
+	name = hold_level_2
+	tooltip = hold_depth_tt
+	potential = {
+		OR = {
+			has_terrain = dwarven_hold
+			has_terrain = dwarven_hold_surface
+		}
+		FROM = { has_country_flag = diggy_diggy_province_menu_flag }
+	}
+	trigger = { }
+	effect = { tooltip = { add_province_modifier = { name = dig_2_ui duration = -1 } } }
+	frame = {
+		number = 1
+		trigger = {
+			OR = {
+				has_province_modifier = dig_3
+				has_province_modifier = dig_4
+				has_province_modifier = dig_5
+				has_province_modifier = dig_6
+				has_province_modifier = dig_7
+				has_province_modifier = dig_8
+				has_province_modifier = dig_9
+				has_province_modifier = dig_10
+				has_province_modifier = dig_11
+				# has_province_modifier = dig_12
+			}
+		}
+	}
+	frame = { number = 2 trigger = { has_province_modifier = dig_2 } }
+	frame = { number = 3 trigger = { always = yes } }
+}
+custom_button = {
+	name = hold_level_3
+	tooltip = hold_depth_tt
+	potential = {
+		OR = {
+			has_terrain = dwarven_hold
+			has_terrain = dwarven_hold_surface
+		}
+		FROM = { has_country_flag = diggy_diggy_province_menu_flag }
+	}
+	trigger = { }
+	effect = { tooltip = { add_province_modifier = { name = dig_3_ui duration = -1 } } }
+	frame = {
+		number = 1
+		trigger = {
+			OR = {
+				has_province_modifier = dig_4
+				has_province_modifier = dig_5
+				has_province_modifier = dig_6
+				has_province_modifier = dig_7
+				has_province_modifier = dig_8
+				has_province_modifier = dig_9
+				has_province_modifier = dig_10
+				has_province_modifier = dig_11
+				# has_province_modifier = dig_12
+			}
+		}
+	}
+	frame = { number = 2 trigger = { has_province_modifier = dig_3 } }
+	frame = { number = 3 trigger = { always = yes } }
+}
+custom_button = {
+	name = hold_level_4
+	tooltip = hold_depth_tt
+	potential = {
+		OR = {
+			has_terrain = dwarven_hold
+			has_terrain = dwarven_hold_surface
+		}
+		FROM = { has_country_flag = diggy_diggy_province_menu_flag }
+	}
+	trigger = { }
+	effect = { tooltip = { add_province_modifier = { name = dig_4_ui duration = -1 } } }
+	frame = {
+		number = 1
+		trigger = {
+			OR = {
+				has_province_modifier = dig_5
+				has_province_modifier = dig_6
+				has_province_modifier = dig_7
+				has_province_modifier = dig_8
+				has_province_modifier = dig_9
+				has_province_modifier = dig_10
+				has_province_modifier = dig_11
+				# has_province_modifier = dig_12
+			}
+		}
+	}
+	frame = { number = 2 trigger = { has_province_modifier = dig_4 } }
+	frame = { number = 3 trigger = { always = yes } }
+}
+custom_button = {
+	name = hold_level_5
+	tooltip = hold_depth_tt
+	potential = {
+		OR = {
+			has_terrain = dwarven_hold
+			has_terrain = dwarven_hold_surface
+		}
+		FROM = { has_country_flag = diggy_diggy_province_menu_flag }
+	}
+	trigger = { }
+	effect = { tooltip = { add_province_modifier = { name = dig_5_ui duration = -1 } } }
+	frame = {
+		number = 1
+		trigger = {
+			OR = {
+				has_province_modifier = dig_6
+				has_province_modifier = dig_7
+				has_province_modifier = dig_8
+				has_province_modifier = dig_9
+				has_province_modifier = dig_10
+				has_province_modifier = dig_11
+				# has_province_modifier = dig_12
+			}
+		}
+	}
+	frame = { number = 2 trigger = { has_province_modifier = dig_5 } }
+	frame = { number = 3 trigger = { always = yes } }
+}
+custom_button = {
+	name = hold_level_6
+	tooltip = hold_depth_tt
+	potential = {
+		OR = {
+			has_terrain = dwarven_hold
+			has_terrain = dwarven_hold_surface
+		}
+		FROM = { has_country_flag = diggy_diggy_province_menu_flag }
+	}
+	trigger = { }
+	effect = { tooltip = { add_province_modifier = { name = dig_6_ui duration = -1 } } }
+	frame = {
+		number = 1
+		trigger = {
+			OR = {
+				has_province_modifier = dig_7
+				has_province_modifier = dig_8
+				has_province_modifier = dig_9
+				has_province_modifier = dig_10
+				has_province_modifier = dig_11
+				# has_province_modifier = dig_12
+			}
+		}
+	}
+	frame = { number = 2 trigger = { has_province_modifier = dig_6 } }
+	frame = { number = 3 trigger = { always = yes } }
+}
+custom_button = {
+	name = hold_level_7
+	tooltip = hold_depth_tt
+	potential = {
+		OR = {
+			has_terrain = dwarven_hold
+			has_terrain = dwarven_hold_surface
+		}
+		FROM = { has_country_flag = diggy_diggy_province_menu_flag }
+	}
+	trigger = { }
+	effect = { tooltip = { add_province_modifier = { name = dig_7_ui duration = -1 } } }
+	frame = {
+		number = 1
+		trigger = {
+			OR = {
+				has_province_modifier = dig_8
+				has_province_modifier = dig_9
+				has_province_modifier = dig_10
+				has_province_modifier = dig_11
+				# has_province_modifier = dig_12
+			}
+		}
+	}
+	frame = { number = 2 trigger = { has_province_modifier = dig_7 } }
+	frame = { number = 3 trigger = { always = yes } }
+}
+custom_button = {
+	name = hold_level_8
+	tooltip = hold_depth_tt
+	potential = {
+		OR = {
+			has_terrain = dwarven_hold
+			has_terrain = dwarven_hold_surface
+		}
+		FROM = { has_country_flag = diggy_diggy_province_menu_flag }
+	}
+	trigger = { }
+	effect = { tooltip = { add_province_modifier = { name = dig_8_ui duration = -1 } } }
+	frame = {
+		number = 1
+		trigger = {
+			OR = {
+				has_province_modifier = dig_9
+				has_province_modifier = dig_10
+				has_province_modifier = dig_11
+				# has_province_modifier = dig_12
+			}
+		}
+	}
+	frame = { number = 2 trigger = { has_province_modifier = dig_8 } }
+	frame = { number = 3 trigger = { always = yes } }
+}
+custom_button = {
+	name = hold_level_9
+	tooltip = hold_depth_tt
+	potential = {
+		OR = {
+			has_terrain = dwarven_hold
+			has_terrain = dwarven_hold_surface
+		}
+		FROM = { has_country_flag = diggy_diggy_province_menu_flag }
+	}
+	trigger = { }
+	effect = { tooltip = { add_province_modifier = { name = dig_9_ui duration = -1 } } }
+	frame = {
+		number = 1
+		trigger = {
+			OR = {
+				has_province_modifier = dig_10
+				has_province_modifier = dig_11
+				# has_province_modifier = dig_12
+			}
+		}
+	}
+	frame = { number = 2 trigger = { has_province_modifier = dig_9 } }
+	frame = { number = 3 trigger = { always = yes } }
+}
+custom_button = {
+	name = hold_level_10
+	tooltip = hold_depth_tt
+	potential = {
+		OR = {
+			has_terrain = dwarven_hold
+			has_terrain = dwarven_hold_surface
+		}
+		FROM = { has_country_flag = diggy_diggy_province_menu_flag }
+	}
+	trigger = { }
+	effect = { tooltip = { add_province_modifier = { name = dig_10_ui duration = -1 } } }
+	frame = {
+		number = 1
+		trigger = {
+			OR = {
+				has_province_modifier = dig_11
+				# has_province_modifier = dig_12
+			}
+		}
+	}
+	frame = { number = 2 trigger = { has_province_modifier = dig_10 } }
+	frame = { number = 3 trigger = { always = yes } }
+}
+custom_button = {
+	name = hold_level_11
+	tooltip = hold_depth_tt
+	potential = {
+		OR = {
+			has_terrain = dwarven_hold
+			has_terrain = dwarven_hold_surface
+		}
+		FROM = { has_country_flag = diggy_diggy_province_menu_flag }
+		OR = {
+			province_id = 4119 
+			province_id = 4311
+		}
+	}
+	trigger = { }
+	effect = { tooltip = { add_province_modifier = { name = dig_11_ui duration = -1 } } }
+	# frame = { number = 1 trigger = { has_province_modifier = dig_12 } }
+	frame = { number = 2 trigger = { has_province_modifier = dig_11 } }
+	frame = { number = 3 trigger = { always = yes } }
+}
+# custom_button = {
+# 	name = hold_level_12
+# 	tooltip = hold_depth_tt
+# 	potential = {
+# 		OR = {
+# 			has_terrain = dwarven_hold
+# 			has_terrain = dwarven_hold_surface
+# 		}
+# 		FROM = { has_country_flag = diggy_diggy_province_menu_flag }
+# 		has_province_modifier = dig_12
+# 	}
+# 	trigger = { }
+# 	effect = { tooltip = { add_province_modifier = { name = dig_12_ui duration = -1 } } }
+# 	frame = { number = 2 trigger = { always = yes } }
+# }
+
+custom_icon = {
+    name = diggy_diggy_province_bg
+    potential = {
+		OR = {
+			has_terrain = dwarven_hold
+			has_terrain = dwarven_hold_surface
+		}
+		FROM = { has_country_flag = diggy_diggy_province_menu_flag }
+	}
+}
+
+custom_button = {
+	name = diggy_diggy_dig_button
+	potential = {
+		OR = {
+			has_terrain = dwarven_hold
+			has_terrain = dwarven_hold_surface
+		}
+		FROM = { has_country_flag = diggy_diggy_province_menu_flag }
+	}
+	trigger = {
+		if = {
+			limit = { owner = { tag = FROM } }
+			has_subterranean_race = yes
+			if = {
+				limit = { NOT = { is_capital = yes } }
+				custom_trigger_tooltip = {
+					tooltip = diggy_has_centralized_hold_operations_tt
+					owner = { has_country_flag = hold_operation }
+				}
+			}
+			if = {
+				limit = { owner = { government = native } }
+				owner = { NOT = { government = native } }
+			}
+			owner = {
+				if = {
+					limit = { NOT = { has_country_modifier = dwarven_administration } }
+					if = {
+						limit = {
+							OR = {
+								dwarovar_goblin_culture_primary = yes
+								primary_culture = darkscale_kobold
+							}
+						}
+						adm_tech = 5
+					}
+					else = {
+						adm_tech = 7
+					}
+				}
+				if = {
+					limit = { has_disaster = remnant_stagnation_disaster }
+					NOT = { has_disaster = remnant_stagnation_disaster }
+				}
+			}
+			is_state_core = ROOT
+			controlled_by = ROOT
+			custom_trigger_tooltip = {
+				tooltip = diggy_no_building #This includes armies and such
+				NOT = { has_construction = any }
+			}
+			NOT = { has_construction = army } #For clarity
+			NOT = { has_construction = navy } #For clarity
+			if = {
+				limit = { has_province_modifier = incomplete_hold }
+				NOT = { has_province_modifier = incomplete_hold }
+			}
+			hidden_trigger = { NOT = { has_province_modifier = incomplete_hold_0 } }
+			custom_trigger_tooltip = {
+				tooltip = diggy_max_deepness_tooltip
+				if = {
+					limit = {
+						OR = {
+							province_id = 4119
+							province_id = 4311
+							AND = {
+								province_id = 4119
+								owner = { has_country_flag = I98_may_come_down_flag }
+							}
+						}
+					}
+					NOT = { has_province_modifier = dig_11 }
+				}
+				else = {
+					NOT = { has_province_modifier = dig_10 }
+				}
+			}
+			if = { 
+				limit = { OR = { has_province_modifier = ruined_hold has_province_modifier = infested_hold } } 
+				NOT = { has_province_modifier = ruined_hold }
+				NOT = { has_province_modifier = infested_hold }
+			}
+			else_if = {
+				limit = { has_province_modifier = dig_1 }
+				development = 40
+			}
+			else_if = {
+				limit = { has_province_modifier = dig_2 }
+				development = 50
+			}
+			else_if = {
+				limit = { has_province_modifier = dig_3 }
+				development = 60
+			}
+			else_if = {
+				limit = { has_province_modifier = dig_4 }
+				development = 70
+			}
+			else_if = {
+				limit = { has_province_modifier = dig_5 }
+				development = 80
+			}
+			else_if = {
+				limit = { has_province_modifier = dig_6 }
+				development = 90
+			}
+			else_if = {
+				limit = { has_province_modifier = dig_7 }
+				development = 100
+			}
+			else_if = {
+				limit = { has_province_modifier = dig_8 }
+				development = 110
+			}
+			else_if = {
+				limit = { has_province_modifier = dig_9 }
+				development = 120
+			}
+			else_if = {
+				limit = { has_province_modifier = dig_10 OR = { province_id = 4119 province_id = 4311 } }
+				development = 130
+			}
+			if = {
+				limit = { owner = { has_country_flag = I98_can_befuddle_flag } }
+				custom_trigger_tooltip = {
+					tooltip = I98_not_befuddling_tt
+					NOT = { has_province_flag = I98_befuddling_hold_flag }
+				}
+			}
+		}
+		else = {
+			owner = { tag = FROM }
+		}
+	}
+	effect = {
+		owner = {
+			PREV = {
+				if = {
+					limit = { is_capital = yes }
+					set_variable = { cProgress = 0 }
+					setup_digging_deeper_capital = yes
+					start_digging_deeper = yes
+				}
+				else = {
+					setup_digging_deeper_non_capital = yes
+					start_digging_deeper_non_capital = yes
+				}
+			}
+			set_country_flag = is_digging
+		}
+	}
+	tooltip = start_digging_tt
+}
+custom_button = {
+	name = diggy_stop_digging_button
+	tooltip = stop_digging_tt
+	potential = {
+		OR = {
+			has_terrain = dwarven_hold
+			has_terrain = dwarven_hold_surface
+		}
+		FROM = { has_country_flag = diggy_diggy_province_menu_flag }
+		owner = { tag = FROM }
+		has_construction = digging_deeper
+	}
+	trigger = { }
+	effect = { cancel_construction = yes }
+}
+
+custom_icon = {
+    name = diggy_diggy_dig_icon
+	tooltip = diggy_diggy_bar_progress_tt
+    potential = {
+		OR = {
+			has_terrain = dwarven_hold
+			has_terrain = dwarven_hold_surface
+		}
+		FROM = { has_country_flag = diggy_diggy_province_menu_flag }
+		owner = { tag = FROM }
+		has_construction = digging_deeper
+	}
+}
+custom_icon = {
+    name = diggy_diggy_bar_progress
+	tooltip = diggy_diggy_bar_progress_tt
+    potential = {
+		OR = {
+			has_terrain = dwarven_hold
+			has_terrain = dwarven_hold_surface
+		}
+		FROM = { has_country_flag = diggy_diggy_province_menu_flag }
+		owner = { tag = FROM }
+		has_construction = digging_deeper
+	}
+	frame = { number = 10 trigger = { if = { limit = { is_capital = yes } check_variable = { cProgress = 90 } } else = { construction_progress = 0.90 } } }
+	frame = { number = 9 trigger = { if = { limit = { is_capital = yes } check_variable = { cProgress = 80 } } else = { construction_progress = 0.8 } } }
+	frame = { number = 8 trigger = { if = { limit = { is_capital = yes } check_variable = { cProgress = 70 } } else = { construction_progress = 0.7 } } }
+	frame = { number = 7 trigger = { if = { limit = { is_capital = yes } check_variable = { cProgress = 60 } } else = { construction_progress = 0.6 } } }
+	frame = { number = 6 trigger = { if = { limit = { is_capital = yes } check_variable = { cProgress = 50 } } else = { construction_progress = 0.5 } } }
+	frame = { number = 5 trigger = { if = { limit = { is_capital = yes } check_variable = { cProgress = 40 } } else = { construction_progress = 0.4 } } }
+	frame = { number = 4 trigger = { if = { limit = { is_capital = yes } check_variable = { cProgress = 30 } } else = { construction_progress = 0.3 } } }
+	frame = { number = 3 trigger = { if = { limit = { is_capital = yes } check_variable = { cProgress = 20 } } else = { construction_progress = 0.2 } } }
+	frame = { number = 2 trigger = { if = { limit = { is_capital = yes } check_variable = { cProgress = 10 } } else = { construction_progress = 0.1 } } }
+	frame = { number = 1 trigger = { always = yes } }
+}
+custom_icon = {
+    name = diggy_diggy_bar_frame
+	tooltip = diggy_diggy_bar_progress_tt
+    potential = {
+		OR = {
+			has_terrain = dwarven_hold
+			has_terrain = dwarven_hold_surface
+		}
+		FROM = { has_country_flag = diggy_diggy_province_menu_flag }
+		owner = { tag = FROM }
+		has_construction = digging_deeper
+	}
+}
+
+custom_text_box = {
+	name = diggy_operations_label
+	potential = {
+		OR = {
+			has_terrain = dwarven_hold
+			has_terrain = dwarven_hold_surface
+		}
+		FROM = { has_country_flag = diggy_diggy_province_menu_flag }
+	}
+}
+
+custom_text_box = {
+	name = diggy_cost_label
+	tooltip = diggy_cost_tt
+	potential = {
+		OR = {
+			has_terrain = dwarven_hold
+			has_terrain = dwarven_hold_surface
+		}
+		FROM = { has_country_flag = diggy_diggy_province_menu_flag }
+	}
+}
+
+custom_text_box = {
+	name = diggy_cost_value
+	tooltip = diggy_cost_tt
+	potential = {
+		OR = {
+			has_terrain = dwarven_hold
+			has_terrain = dwarven_hold_surface
+		}
+		FROM = { has_country_flag = diggy_diggy_province_menu_flag }
+		owner = { tag = FROM }
+		NOT = { has_province_modifier = infested_hold }
+	}
+}
+
+custom_icon = {
+	name = diggy_cost_value_gold
+	potential = {
+		OR = {
+			has_terrain = dwarven_hold
+			has_terrain = dwarven_hold_surface
+		}
+		FROM = { has_country_flag = diggy_diggy_province_menu_flag }
+		owner = { tag = FROM }
+		NOT = { has_province_modifier = infested_hold }
+	}
+}
+
+custom_text_box = {
+	name = diggy_time_label
+	tooltip = diggy_time_tt
+	potential = {
+		OR = {
+			has_terrain = dwarven_hold
+			has_terrain = dwarven_hold_surface
+		}
+		FROM = { has_country_flag = diggy_diggy_province_menu_flag }
+	}
+}
+
+custom_text_box = {
+	name = diggy_time_value
+	tooltip = diggy_time_tt
+	potential = {
+		OR = {
+			has_terrain = dwarven_hold
+			has_terrain = dwarven_hold_surface
+		}
+		FROM = { has_country_flag = diggy_diggy_province_menu_flag }
+		owner = { tag = FROM }
+		NOT = { has_province_modifier = infested_hold }
+	}
+}
+
+custom_text_box = {
+	name = diggy_condition_label
+	potential = {
+		OR = {
+			has_terrain = dwarven_hold
+			has_terrain = dwarven_hold_surface
+		}
+		FROM = { has_country_flag = diggy_diggy_province_menu_flag }
+	}
+}
+custom_button = {
+	name = diggy_ruined_icon
+	tooltip = diggy_condition_tt
+	potential = {
+		OR = {
+			has_terrain = dwarven_hold
+			has_terrain = dwarven_hold_surface
+		}
+		FROM = { has_country_flag = diggy_diggy_province_menu_flag }
+		has_province_modifier = ruined_hold
+	}
+	trigger = { }
+	effect = { tooltip = { add_province_modifier = { name = ruined_hold_ui duration = -1 } } }
+}
+custom_button = {
+	name = diggy_partially_ruined_icon
+	tooltip = diggy_condition_tt
+	potential = {
+		OR = {
+			has_terrain = dwarven_hold
+			has_terrain = dwarven_hold_surface
+		}
+		FROM = { has_country_flag = diggy_diggy_province_menu_flag }
+		has_province_modifier = partially_ruined_hold
+	}
+	trigger = { }
+	effect = { tooltip = { add_province_modifier = { name = partially_ruined_hold_ui duration = -1 } } }
+}
+custom_button = {
+	name = diggy_damaged_icon
+	tooltip = diggy_condition_tt
+	potential = {
+		OR = {
+			has_terrain = dwarven_hold
+			has_terrain = dwarven_hold_surface
+		}
+		FROM = { has_country_flag = diggy_diggy_province_menu_flag }
+		has_province_modifier = damaged_hold
+	}
+	trigger = { }
+	effect = { tooltip = { add_province_modifier = { name = damaged_hold_ui duration = -1 } } }
+}
+custom_button = {
+	name = diggy_infested_icon
+	tooltip = diggy_condition_tt
+	potential = {
+		OR = {
+			has_terrain = dwarven_hold
+			has_terrain = dwarven_hold_surface
+		}
+		FROM = { has_country_flag = diggy_diggy_province_menu_flag }
+		has_province_modifier = infested_hold
+	}
+	trigger = { }
+	effect = { tooltip = { add_province_modifier = { name = infested_hold_ui duration = -1 } } }
+}
+custom_icon = {
+	name = diggy_good_contion_icon
+	tooltip = diggy_condition_tt
+	potential = {
+		OR = {
+			has_terrain = dwarven_hold
+			has_terrain = dwarven_hold_surface
+		}
+		FROM = { has_country_flag = diggy_diggy_province_menu_flag }
+		NOT = { has_province_modifier = ruined_hold }
+		NOT = { has_province_modifier = partially_ruined_hold }
+		NOT = { has_province_modifier = damaged_hold }
+		NOT = { has_province_modifier = infested_hold }
+	}
+}
+custom_text_box = {
+	name = diggy_condition_value
+	potential = {
+		OR = {
+			has_terrain = dwarven_hold
+			has_terrain = dwarven_hold_surface
+		}
+		FROM = { has_country_flag = diggy_diggy_province_menu_flag }
+	}
+}
+custom_button = {
+	name = diggy_repair_button
+	tooltip = diggy_repair_button_tt
+	potential = {
+		OR = {
+			has_terrain = dwarven_hold
+			has_terrain = dwarven_hold_surface
+		}
+		FROM = { has_country_flag = diggy_diggy_province_menu_flag }
+		NOT = { has_province_modifier = infested_hold }
+		owner = { tag = FROM }
+		NOT = { has_construction = restoring_hold }
+	}
+	trigger = {
+		if = {
+			limit = { owner = { culture = black_orc } }
+			is_capital = yes
+		}
+		OR = {
+			has_province_modifier = ruined_hold
+			has_province_modifier = partially_ruined_hold
+			has_province_modifier = damaged_hold
+		}
+		NOT = { has_construction = any }
+		is_core = FROM
+		if = {
+			limit = { has_province_flag = cannot_repair_hold }
+			custom_trigger_tooltip = {
+				tooltip = diggy_cannot_repair_hold_tt
+				NOT = { has_province_flag = cannot_repair_hold }
+			}
+		}
+		FROM = {
+			NOT = { num_of_rebel_armies = 1 }
+			is_at_war = no
+			mil_power = 50
+			adm_power = 50
+			dip_power = 50
+			treasury = 100
+		}
+	}
+	effect = {
+		hidden_effect = { setup_restoration_speed = yes }
+		if = {
+			limit = { owner = { culture = black_orc } }
+			remove_province_modifier = blorc_plunder_camp
+			remove_province_modifier = blorc_war_camp
+		}
+		repair_hold = yes
+		hidden_effect = {
+			if = {
+				limit = { is_capital = yes }
+				owner = {
+					PREV = {
+						setup_digging_deeper_capital = yes
+					}
+				}
+			}
+			else = {
+				owner = { PREV = { setup_digging_deeper_non_capital = yes } }
+			}
+		}
+	}
+}
+custom_icon = {
+    name = hold_repair_progress
+	tooltip = hold_building_progress_tt
+    potential = {
+		OR = {
+			has_terrain = dwarven_hold
+			has_terrain = dwarven_hold_surface
+		}
+		FROM = { has_country_flag = diggy_diggy_province_menu_flag }
+		owner = { tag = FROM }
+		has_construction = restoring_hold
+	}
+	frame = { number = 10 trigger = { construction_progress = 0.9 } }
+	frame = { number = 9 trigger = { construction_progress = 0.8 } }
+	frame = { number = 8 trigger = { construction_progress = 0.7 } }
+	frame = { number = 7 trigger = { construction_progress = 0.6 } }
+	frame = { number = 6 trigger = { construction_progress = 0.5 } }
+	frame = { number = 5 trigger = { construction_progress = 0.4 } }
+	frame = { number = 4 trigger = { construction_progress = 0.3 } }
+	frame = { number = 3 trigger = { construction_progress = 0.2 } }
+	frame = { number = 2 trigger = { construction_progress = 0.1 } }
+	frame = { number = 1 trigger = { always = yes } }
+}
+custom_icon = {
+    name = hold_repair_progress_frame
+	tooltip = hold_repair_progress_tt
+    potential = {
+		OR = {
+			has_terrain = dwarven_hold
+			has_terrain = dwarven_hold_surface
+		}
+		FROM = { has_country_flag = diggy_diggy_province_menu_flag }
+		owner = { tag = FROM }
+		has_construction = restoring_hold
+	}
+}
+custom_button = {
+	name = hold_repair_cancel
+	tooltip = hold_repair_cancel_tt
+	potential = {
+		OR = {
+			has_terrain = dwarven_hold
+			has_terrain = dwarven_hold_surface
+		}
+		FROM = { has_country_flag = diggy_diggy_province_menu_flag }
+		owner = { tag = FROM }
+		has_construction = restoring_hold
+	}
+	trigger = { }
+	effect = { cancel_construction = yes }
+}
+
+custom_button = {
+	name = diggy_clear_button
+	tooltip = diggy_clear_button_tt
+	potential = {
+		OR = {
+			has_terrain = dwarven_hold
+			has_terrain = dwarven_hold_surface
+		}
+		FROM = { has_country_flag = diggy_diggy_province_menu_flag }
+		has_province_modifier = infested_hold
+		owner = { tag = FROM }
+		NOT = { has_construction = restoring_hold }
+	}
+	trigger = {
+		FROM = {
+			is_at_war = no
+			NOT = {
+				has_spawned_rebels = cave_goblin_rebel
+				has_spawned_rebels = cave_orc_rebel
+			}
+		}
+	}
+	effect = {
+		infested_hold_clearing = yes
+		hidden_effect = { setup_restoration_speed = yes }
+	}
+}
+
+custom_text_box = {
+	name = diggy_specialisation_label
+	potential = {
+		OR = {
+			has_terrain = dwarven_hold
+			has_terrain = dwarven_hold_surface
+		}
+		FROM = { has_country_flag = diggy_diggy_province_menu_flag }
+	}
+}
+
+custom_icon = {
+    name = diggy_hold_specialisation_none
+	tooltip = hold_specialisation_none_tt
+    potential = {
+		OR = {
+			has_terrain = dwarven_hold
+			has_terrain = dwarven_hold_surface
+		}
+		FROM = { has_country_flag = diggy_diggy_province_menu_flag }
+		NOT = { has_advanced_hold_infrastructure = yes }
+	}
+}
+custom_button = {
+	name = diggy_hold_foundry_icon
+	tooltip = diggy_infrastructure_tt
+	potential = {
+		OR = {
+			has_terrain = dwarven_hold
+			has_terrain = dwarven_hold_surface
+		}
+		FROM = { has_country_flag = diggy_diggy_province_menu_flag }
+		has_province_modifier = hold_foundry
+	}
+	trigger = { }
+	effect = { tooltip = { add_province_modifier = { name = hold_foundry_ui duration = -1 } } }
+}
+custom_button = {
+	name = diggy_hold_foundry_2_icon
+	tooltip = diggy_improved_infrastructure_tt
+	potential = {
+		OR = {
+			has_terrain = dwarven_hold
+			has_terrain = dwarven_hold_surface
+		}
+		FROM = { has_country_flag = diggy_diggy_province_menu_flag }
+		has_province_modifier = hold_foundry_2
+	}
+	trigger = { }
+	effect = { tooltip = { add_province_modifier = { name = hold_foundry_2_ui duration = -1 } } }
+}
+custom_button = {
+	name = diggy_hold_city_icon
+	tooltip = diggy_infrastructure_tt
+	potential = {
+		OR = {
+			has_terrain = dwarven_hold
+			has_terrain = dwarven_hold_surface
+		}
+		FROM = { has_country_flag = diggy_diggy_province_menu_flag }
+		has_province_modifier = hold_city
+	}
+	trigger = { }
+	effect = { tooltip = { add_province_modifier = { name = hold_city_ui duration = -1 } } }
+}
+custom_button = {
+	name = diggy_hold_city_2_icon
+	tooltip = diggy_improved_infrastructure_tt
+	potential = {
+		OR = {
+			has_terrain = dwarven_hold
+			has_terrain = dwarven_hold_surface
+		}
+		FROM = { has_country_flag = diggy_diggy_province_menu_flag }
+		has_province_modifier = hold_city_2
+	}
+	trigger = { }
+	effect = { tooltip = { add_province_modifier = { name = hold_city_2_ui duration = -1 } } }
+}
+custom_button = {
+	name = diggy_hold_artisan_icon
+	tooltip = diggy_infrastructure_tt
+	potential = {
+		OR = {
+			has_terrain = dwarven_hold
+			has_terrain = dwarven_hold_surface
+		}
+		FROM = { has_country_flag = diggy_diggy_province_menu_flag }
+		has_province_modifier = hold_artisan
+	}
+	trigger = { }
+	effect = { tooltip = { add_province_modifier = { name = hold_artisan_ui duration = -1 } } }
+}
+custom_button = {
+	name = diggy_hold_artisan_2_icon
+	tooltip = diggy_improved_infrastructure_tt
+	potential = {
+		OR = {
+			has_terrain = dwarven_hold
+			has_terrain = dwarven_hold_surface
+		}
+		FROM = { has_country_flag = diggy_diggy_province_menu_flag }
+		has_province_modifier = hold_artisan_2
+	}
+	trigger = { }
+	effect = { tooltip = { add_province_modifier = { name = hold_artisan_2_ui duration = -1 } } }
+}
+custom_button = {
+	name = diggy_hold_farm_icon
+	tooltip = diggy_infrastructure_tt
+	potential = {
+		OR = {
+			has_terrain = dwarven_hold
+			has_terrain = dwarven_hold_surface
+		}
+		FROM = { has_country_flag = diggy_diggy_province_menu_flag }
+		has_province_modifier = hold_farm
+	}
+	trigger = { }
+	effect = { tooltip = { add_province_modifier = { name = hold_farm_ui duration = -1 } } }
+}
+custom_button = {
+	name = diggy_hold_farm_2_icon
+	tooltip = diggy_improved_infrastructure_tt
+	potential = {
+		OR = {
+			has_terrain = dwarven_hold
+			has_terrain = dwarven_hold_surface
+		}
+		FROM = { has_country_flag = diggy_diggy_province_menu_flag }
+		has_province_modifier = hold_farm_2
+	}
+	trigger = { }
+	effect = { tooltip = { add_province_modifier = { name = hold_farm_2_ui duration = -1 } } }
+}
+custom_button = {
+	name = diggy_hold_military_icon
+	tooltip = diggy_infrastructure_tt
+	potential = {
+		OR = {
+			has_terrain = dwarven_hold
+			has_terrain = dwarven_hold_surface
+		}
+		FROM = { has_country_flag = diggy_diggy_province_menu_flag }
+		has_province_modifier = hold_military
+	}
+	trigger = { }
+	effect = { tooltip = { add_province_modifier = { name = hold_military_ui duration = -1 } } }
+}
+custom_button = {
+	name = diggy_hold_military_2_icon
+	tooltip = diggy_improved_infrastructure_tt
+	potential = {
+		OR = {
+			has_terrain = dwarven_hold
+			has_terrain = dwarven_hold_surface
+		}
+		FROM = { has_country_flag = diggy_diggy_province_menu_flag }
+		has_province_modifier = hold_military_2
+	}
+	trigger = { }
+	effect = { tooltip = { add_province_modifier = { name = hold_military_2_ui duration = -1 } } }
+}
+
+custom_icon = {
+    name = diggy_hold_wonder_none
+	tooltip = hold_wonder_none_tt
+    potential = {
+		OR = {
+			has_terrain = dwarven_hold
+			has_terrain = dwarven_hold_surface
+		}
+		FROM = { has_country_flag = diggy_diggy_province_menu_flag }
+		NOT = { has_province_modifier = magma_forge }
+		NOT = { has_province_modifier = artificier_hall }
+		NOT = { has_province_modifier = engineer_manufactory }
+		NOT = { has_province_modifier = high_gardens }
+		NOT = { has_province_modifier = military_academy }
+	}
+}
+custom_button = {
+	name = diggy_magma_forge_icon
+	tooltip = hold_wonder_tt
+	potential = {
+		OR = {
+			has_terrain = dwarven_hold
+			has_terrain = dwarven_hold_surface
+		}
+		FROM = { has_country_flag = diggy_diggy_province_menu_flag }
+		has_province_modifier = magma_forge
+	}
+	trigger = { }
+	effect = { tooltip = { add_province_modifier = { name = magma_forge_ui duration = -1 } } }
+}
+custom_button = {
+	name = diggy_artificier_hall_icon
+	tooltip = hold_wonder_tt
+	potential = {
+		OR = {
+			has_terrain = dwarven_hold
+			has_terrain = dwarven_hold_surface
+		}
+		FROM = { has_country_flag = diggy_diggy_province_menu_flag }
+		has_province_modifier = artificier_hall
+	}
+	trigger = { }
+	effect = { tooltip = { add_province_modifier = { name = artificier_hall_ui duration = -1 } } }
+}
+custom_button = {
+	name = diggy_engineer_manufactory_icon
+	tooltip = hold_wonder_tt
+	potential = {
+		OR = {
+			has_terrain = dwarven_hold
+			has_terrain = dwarven_hold_surface
+		}
+		FROM = { has_country_flag = diggy_diggy_province_menu_flag }
+		has_province_modifier = engineer_manufactory
+	}
+	trigger = { }
+	effect = { tooltip = { add_province_modifier = { name = engineer_manufactory_ui duration = -1 } } }
+}
+custom_button = {
+	name = diggy_high_gardens_icon
+	tooltip = hold_wonder_tt
+	potential = {
+		OR = {
+			has_terrain = dwarven_hold
+			has_terrain = dwarven_hold_surface
+		}
+		FROM = { has_country_flag = diggy_diggy_province_menu_flag }
+		has_province_modifier = high_gardens
+	}
+	trigger = { }
+	effect = { tooltip = { add_province_modifier = { name = high_gardens_ui duration = -1 } } }
+}
+custom_button = {
+	name = diggy_military_academy_icon
+	tooltip = hold_wonder_tt
+	potential = {
+		OR = {
+			has_terrain = dwarven_hold
+			has_terrain = dwarven_hold_surface
+		}
+		FROM = { has_country_flag = diggy_diggy_province_menu_flag }
+		has_province_modifier = military_academy
+	}
+	trigger = { }
+	effect = { tooltip = { add_province_modifier = { name = military_academy_ui duration = -1 } } }
+}
+
+custom_button = {
+	name = diggy_specialisation_button
+	tooltip = diggy_specialisation_button_tt
+	potential = {
+		OR = {
+			has_terrain = dwarven_hold
+			has_terrain = dwarven_hold_surface
+		}
+		FROM = { has_country_flag = diggy_diggy_province_menu_flag }
+		owner = { tag = FROM }
+		NOT = { has_improved_hold_infrastructure = yes }
+	}
+	trigger = {
+		is_capital = yes
+		custom_trigger_tooltip = {
+			tooltip = has_hold_infrastructure_tt
+			OR = {
+				has_province_modifier = hold_foundry
+				has_province_modifier = hold_city
+				has_province_modifier = hold_artisan
+				has_province_modifier = hold_farm
+				has_province_modifier = hold_military
+			}
+		}
+		development = 90
+		# if = {
+		#  	limit = { trade_goods = damestear }
+		# 	NOT = { trade_goods = damestear }
+		# }
+		owner = {
+			adm_power = 100
+			dip_power = 100
+			treasury = 3000
+		}
+		custom_trigger_tooltip = {
+			tooltip = dont_dig_tooltip
+			owner = { NOT = { has_country_flag = is_digging } }
+		}
+		custom_trigger_tooltip = {
+			tooltip = dont_build_wonder_tooltip
+			owner = {
+				NOT = { has_country_flag = building_diggy }
+				NOT = { has_country_flag = building_magma_forge }
+				NOT = { has_country_flag = building_artificier_hall }
+				NOT = { has_country_flag = building_engineer_manufactory }
+				NOT = { has_country_flag = building_high_gardens }
+				NOT = { has_country_flag = building_military_academy }
+			}
+		}
+	}
+	effect = {
+		owner = {
+			add_treasury = -3000
+			add_adm_power = -100
+			add_dip_power = -100
+		}
+		hidden_effect = {
+			owner = { set_country_flag = building_diggy }
+			if = { limit = { has_province_modifier = hold_foundry } set_country_flag = building_magma_forge country_event = { id = diggy_project.1 } }
+			else_if = { limit = { has_province_modifier = hold_city } set_country_flag = building_artificier_hall country_event = { id = diggy_project.3 } }
+			else_if = { limit = { has_province_modifier = hold_artisan } set_country_flag = building_engineer_manufactory country_event = { id = diggy_project.5 } }
+			else_if = { limit = { has_province_modifier = hold_farm } set_country_flag = building_high_gardens country_event = { id = diggy_project.7 } }
+			else_if = { limit = { has_province_modifier = hold_military } set_country_flag = building_military_academy country_event = { id = diggy_project.9 } }
+		}
+		add_province_modifier = {
+			name = developing_advanced_infrastructure
+			duration = 18250
+		}
+	}
+}
+
+#blorc
+custom_button = {
+	name = plunder_hold_button
+	tooltip = plunder_hold_button_tt
+	potential = {
+		OR = {
+			has_terrain = dwarven_hold
+			has_terrain = dwarven_hold_surface
+		}
+		owner = {
+			tag = FROM
+			primary_culture = black_orc
+			NOT = { has_reform = roadwarrior_great_convoy }
+			NOT = { has_country_flag = open_hold_plunder_menu }
+		}
+	}
+	
+	trigger = {
+		blorc_can_be_plundered = yes
+		owner = {
+			adm_power = 50
+			dip_power = 50
+			mil_power = 50
+		}
+	}
+	
+	effect = {
+		if = {
+			limit = { owner = { NOT = { has_country_flag = blorc_plunder_capital_set } } }
+			custom_tooltip = blorc_plunder_hold_tooltip
+			hidden_effect = {
+				owner = { 
+					set_country_flag = blorc_plunder_capital_set
+					capital_scope = { set_province_flag = blorc_plunder_capital_@ROOT }
+				}
+			}
+		}
+		blorc_begin_plundering = yes
+		owner = {
+			add_adm_power = -50
+			add_dip_power = -50
+			add_mil_power = -50
+		}
+	}
+}
+
+custom_button = {
+	name = blorc_upgrade_fort_button
+	tooltip = blorc_upgrade_fort_button_tt
+	potential = {
+		OR = {
+			has_terrain = dwarven_hold
+			has_terrain = dwarven_hold_surface
+		}
+		owner = {
+			tag = FROM
+			primary_culture = black_orc
+			has_country_flag = blorc_plunder_capital_set
+			NOT = { has_reform = roadwarrior_great_convoy }
+			NOT = { has_country_flag = open_hold_plunder_menu }
+		}
+	}
+	
+	trigger = {
+		is_core = FROM
+		OR = {
+			has_province_modifier = blorc_plunder_camp
+			has_province_modifier = blorc_war_camp
+		}
+		NOT = { has_construction = any }
+		is_capital = no
+		custom_trigger_tooltip = {
+			tooltip = blorc_not_highest_fort
+			NOT = { province_has_current_tech_fort_trigger = yes }
+		}
+	}
+	
+	effect = {
+		blorc_plunder_fort_upgrade = yes
+	}
+}
+
+#harpy roost
+custom_button = {
+	name = build_roost_button
+	tooltip = build_roost_button_tt
+	potential = {
+		is_city = yes
+		owner = {
+			tag = FROM
+			has_country_modifier = harpy_administration
+		}
+	}
+	
+	trigger = {
+		if = {
+			limit = { is_capital = yes }
+			has_harpy_majority_trigger = yes
+		}
+		OR = {
+			has_terrain = mountain
+			has_terrain = highlands
+			has_terrain = hills
+		}
+		fort_level = 1
+		if = {
+			limit = { has_province_modifier = harpy_roost }
+			NOT = { has_province_modifier = harpy_roost }
+		}
+		if = {
+			limit = { has_province_modifier = harpy_roost_under_construction }
+			NOT = { has_province_modifier = harpy_roost_under_construction }
+		}
+		owner = {
+			adm_power = 50
+			can_build_roost = yes
+		}
+	}
+	
+	effect = {
+		owner = {
+			add_adm_power = -50
+			update_roost_count = yes
+		}
+		if = {
+			limit = { is_capital = yes }
+			add_province_triggered_modifier = harpy_roost
+			add_province_modifier = { name = harpy_roost_under_construction duration = 365 }
+		}
+		else = {
+			add_province_modifier = { name = harpy_roost_under_construction duration = 1825 }
+			if = { limit = { culture_is_harpy = no }
+				add_harpy_minority_size_effect = yes
+				custom_tooltip = province_will_convert_to_harpy_tt
+			}
+			hidden_effect = {
+				province_event = { id = harpy_events.3 days = 365 random = 180 }
+				province_event = { id = harpy_events.4 days = 823 random = 180 }
+				province_event = { id = harpy_events.4 days = 1279 random = 180 }
+				province_event = { id = harpy_events.11 days = 1800 }
+			}
+		}
+	}
+}

@@ -1,0 +1,1579 @@
+namespace = ANEX_initalization
+#MAIN SETUP
+country_event = {
+	id = ANEX_initalization.1
+	title =  ANEX_initalization.1.t
+	desc = ANEX_setting_event.1.t
+	picture = WESTERNISATION_eventPicture
+
+	hidden = yes
+	fire_only_once = yes
+
+	trigger = {
+		has_game_started = yes
+	}
+
+	immediate = {
+		log = "start  ANEX_initalization.1 [GetDate] for country [Root.GetName]"
+		if = {
+			limit = {
+				calc_true_if = {
+					all_countries_including_self = {
+						ai = no
+					}
+					amount = 2
+				}
+			}
+			set_global_flag = MP_mod
+		}
+		else = {
+			set_global_flag = single_mod
+		}
+		# every_country = {
+		# 	country_event = {
+		# 		id = ANEX_initalization.6
+		# 	}
+		# }
+		log = "end  ANEX_initalization.1 [GetDate] for country [Root.GetName]"
+	}
+
+	after = {
+		set_global_flag = xorme_search_for_players_happened
+	}
+	option = {
+
+	}
+}
+
+
+# Создание переменных для отслеживания изменений девелопмента
+country_event = {
+	id = ANEX_initalization.2
+	title = ANEX_initalization.2.t
+	desc = ANEX_setting_event.1.d
+	picture = DIET_eventPicture
+
+	hidden = yes
+
+	trigger = {
+		ai = no
+		OR = {
+			NOT = {
+				check_variable = {
+					which = dev_b_tax
+					value = 1
+				}
+			}
+			NOT = {
+				check_variable = {
+					which = dev_b_prod
+					value = 1
+				}
+			}
+				check_variable = {
+					which = dev_b_mil
+					value = 1
+				}
+			NOT = {
+				check_variable = {
+					which = dev_adm_clicks
+					value = 1
+				}
+			}
+				check_variable = {
+					which = dev_dip_clicks
+					value = 1
+				}
+			NOT = {
+				check_variable = {
+					which = dev_mil_clicks
+					value = 1
+				}
+			}
+			NOT = {
+				check_variable = {
+					which = dev_adm_dev_ideas
+					value = 1
+				}
+			}
+			NOT = {
+				check_variable = {
+					which = dev_dip_dev_ideas
+					value = 1
+				}
+			}
+			NOT = {
+				check_variable = {
+					which = dev_mil_dev_ideas
+					value = 1
+				}
+			}
+			NOT = {
+				check_variable = {
+					which = lose_b_tax
+					value = 1
+				}
+			}
+			NOT = {
+				check_variable = {
+					which = lose_b_prod
+					value = 1
+				}
+			}
+			NOT = {
+				check_variable = {
+					which = lose_b_mil
+					value = 1
+				}
+			}
+		}
+	}
+
+	immediate = {
+		log = "start ANEX_initalization.2 [GetDate] for country [Root.GetName]"
+		# Passive development
+		if = {
+			limit = {
+				NOT = {
+					check_variable = {
+						which = dev_b_tax
+						value = 1
+					}
+				}
+			}
+			set_variable = {
+				which = dev_b_tax
+				value = 0
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					check_variable = {
+						which = dev_b_prod
+						value = 1
+					}
+				}
+			}
+			set_variable = {
+				which = dev_b_prod
+				value = 0
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					check_variable = {
+						which = dev_b_mil
+						value = 1
+					}
+				}
+			}
+			set_variable = {
+				which = dev_b_mil
+				value = 0
+			}
+		}
+		if = {
+			limit = {
+				AND = {
+					NOT = {
+						check_variable = {
+							which = dev_b_tax
+							value = 1
+						}
+					}
+					NOT = {
+						check_variable = {
+							which = dev_b_prod
+							value = 1
+						}
+					}
+					NOT = {
+						check_variable = {
+							which = dev_b_mil
+							value = 1
+						}
+					}
+				}
+			}
+			set_variable = {
+				which = total_b_dev
+				value = 0
+			}
+		}
+
+
+		# Manual Development
+		if = {
+			limit = {
+				NOT = {
+					check_variable = {
+						which = dev_adm_clicks
+						value = 1
+					}
+				}
+			}
+			set_variable = {
+				which = dev_adm_clicks
+				value = 0
+			}
+		}
+
+		if = {
+			limit = {
+				NOT = {
+					check_variable = {
+						which = dev_dip_clicks
+						value = 1
+					}
+				}
+			}
+			set_variable = {
+				which = dev_dip_clicks
+				value = 0
+			}
+		}
+
+		if = {
+			limit = {
+				NOT = {
+					check_variable = {
+						which = dev_mil_clicks
+						value = 1
+					}
+				}
+			}
+			set_variable = {
+				which = dev_mil_clicks
+				value = 0
+			}
+		}
+
+		if = {
+			limit = {
+				AND = {
+					NOT = {
+						check_variable = {
+							which = dev_adm_clicks
+							value = 1
+						}
+					}
+					NOT = {
+						check_variable = {
+							which = dev_dip_clicks
+							value = 1
+						}
+					}
+					NOT = {
+						check_variable = {
+							which = dev_mil_clicks
+							value = 1
+						}
+					}
+				}
+			}
+			set_variable = {
+				which = dev_sum_clicks
+				value = 0
+			}
+		}
+
+
+		# Development Ideas
+		if = {
+			limit = {
+				NOT = {
+					check_variable = {
+						which = dev_adm_dev_ideas
+						value = 1
+					}
+				}
+			}
+			set_variable = {
+				which = dev_adm_dev_ideas
+				value = 0
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					check_variable = {
+						which = dev_dip_dev_ideas
+						value = 1
+					}
+				}
+			}
+			set_variable = {
+				which = dev_dip_dev_ideas
+				value = 0
+			}
+		}
+
+		if = {
+			limit = {
+				NOT = {
+					check_variable = {
+						which = dev_mil_dev_ideas
+						value = 1
+					}
+				}
+			}
+			set_variable = {
+				which = dev_mil_dev_ideas
+				value = 0
+			}
+		}
+
+		if = {
+			limit = {
+				AND = {
+					NOT = {
+						check_variable = {
+							which = dev_adm_dev_ideas
+							value = 1
+						}
+					}
+					NOT = {
+						check_variable = {
+							which = dev_dip_dev_ideas
+							value = 1
+						}
+					}
+					NOT = {
+						check_variable = {
+							which = dev_mil_dev_ideas
+							value = 1
+						}
+					}
+				}
+			}
+			set_variable = {
+				which = dev_sum_dev_ideas
+				value = 0
+			}
+		}
+
+
+		# Burn development
+		if = {
+			limit = {
+				NOT = {
+					check_variable = {
+						which = lose_b_tax
+						value = 1
+					}
+				}
+			}
+			set_variable = {
+				which = lose_b_tax
+				value = 0
+			}
+		}
+
+		if = {
+			limit = {
+				NOT = {
+					check_variable = {
+						which = lose_b_prod
+						value = 1
+					}
+				}
+			}
+			set_variable = {
+				which = lose_b_prod
+				value = 0
+			}
+		}
+
+		if = {
+			limit = {
+				NOT = {
+					check_variable = {
+						which = lose_b_mil
+						value = 1
+					}
+				}
+			}
+			set_variable = {
+				which = lose_b_mil
+				value = 0
+			}
+		}
+
+		if = {
+			limit = {
+				AND = {
+					NOT = {
+						check_variable = {
+							which = lose_b_tax
+							value = 1
+						}
+					}
+					NOT = {
+						check_variable = {
+							which = lose_b_prod
+							value = 1
+						}
+					}
+					NOT = {
+						check_variable = {
+							which = lose_b_mil
+							value = 1
+						}
+					}
+				}
+			}
+			set_variable = {
+				which = total_lose_b
+				value = 0
+			}
+		}
+
+	}
+
+	after = {
+		log = "end ANEX_initalization.2 [GetDate] for country [Root.GetName]"
+	}
+
+	option ={
+		name = ANEX_setting_event.1.a
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+country_event = {
+	id = ANEX_initalization.3
+	title = ANEX_setting_event.1.t
+	desc = ANEX_setting_event.1.d
+	picture = DIET_eventPicture
+
+	hidden = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		log = "start ANEX_initalization.3 [GetDate] for country [Root.GetName]"
+		set_variable = {
+			which = dev_adm_clicks
+			value = 0
+		}
+		set_variable = {
+			which = dev_dip_clicks
+			value = 0
+		}
+		set_variable = {
+			which = dev_mil_clicks
+			value = 0
+		}
+		set_variable = {
+			which = dev_sum_clicks
+			value = 0
+		}
+
+	}
+
+	after = {
+		log = "end ANEX_initalization.3 [GetDate] for country [Root.GetName]"
+	}
+
+	option ={
+		name = ANEX_setting_event.1.a
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+country_event = {
+	id = ANEX_initalization.4
+	title = ANEX_setting_event.1.t
+	desc = ANEX_setting_event.1.d
+	picture = DIET_eventPicture
+
+	hidden = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		log = "start ANEX_initalization.4 [GetDate] for country [Root.GetName]"
+		set_variable = {
+			which = dev_b_tax
+			value = 0
+		}
+		set_variable = {
+			which = dev_b_prod
+			value = 0
+		}
+		set_variable = {
+			which = dev_b_mil
+			value = 0
+		}
+		set_variable = {
+			which = total_b_dev
+			value = 0
+		}
+
+	}
+
+	after = {
+		log = "end ANEX_initalization.4 [GetDate] for country [Root.GetName]"
+	}
+
+	option ={
+		name = ANEX_setting_event.1.a
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+country_event = {
+	id = ANEX_initalization.5
+	title = ANEX_setting_event.1.t
+	desc = ANEX_setting_event.1.d
+	picture = DIET_eventPicture
+
+	hidden = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		log = "start ANEX_initalization.5 [GetDate] for country [Root.GetName]"
+		set_variable = {
+			which = lose_b_tax
+			value = 0
+		}
+		set_variable = {
+			which = lose_b_prod
+			value = 0
+		}
+		set_variable = {
+			which = lose_b_mil
+			value = 0
+		}
+		set_variable = {
+			which = total_lose_b
+			value = 0
+		}
+
+	}
+
+	after = {
+		log = "end ANEX_initalization.5 [GetDate] for country [Root.GetName]"
+	}
+
+	option ={
+		name = ANEX_setting_event.1.a
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+country_event = {
+	id = ANEX_initalization.6
+	title = ANEX_setting_event.1.t
+	desc = ANEX_setting_event.1.d
+	picture = DIET_eventPicture
+
+	hidden = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		log = "start ANEX_initalization.6 [GetDate] for country [Root.GetName]"
+		if = {
+			limit = {
+				has_idea_group = innovativeness_ideas
+			}
+			add_idea = formalized_officer_corps
+			add_idea = scientific_revolution
+			add_idea = dynamic_court
+			add_idea = print_culture
+			add_idea = optimism
+			add_idea = empiricism
+			add_idea = patron_of_art
+		}
+		if = {
+			limit = {
+				has_idea_group = economic_ideas
+			}
+			add_idea = bureaucracy
+			add_idea = organised_construction
+			add_idea = national_bank
+			add_idea = debt_and_loans
+			add_idea = centralization
+			add_idea = nationalistic_enthusiasm
+			add_idea = smithian_economics
+		}
+		if = {
+			limit = {
+				has_idea_group = development_ideas0
+			}
+			add_idea = development_ideas1
+			add_idea = development_ideas2
+			add_idea = development_ideas3
+			add_idea = development_ideas4
+			add_idea = development_ideas5
+			add_idea = development_ideas6
+			add_idea = development_ideas7
+		}
+		if = {
+			limit = {
+				has_idea_group = development_ideas0
+			}
+			add_idea = development_ideas1
+			add_idea = development_ideas2
+			add_idea = development_ideas3
+			add_idea = development_ideas4
+			add_idea = development_ideas5
+			add_idea = development_ideas6
+			add_idea = development_ideas7
+		}
+		if = {
+			limit = {
+				has_idea_group = expansion_ideas
+			}
+			add_idea = additional_colonists
+			add_idea = additional_merchants
+			add_idea = faster_colonists
+			add_idea = factories
+			add_idea = additional_diplomats
+			add_idea = general_colonization_law
+			add_idea = competetive_merchants
+		}
+		if = {
+			limit = {
+				has_idea_group = administrative_ideas
+			}
+			add_idea = organised_mercenary_payment
+			add_idea = adaptability
+			add_idea = benefits_for_mercenaries
+			add_idea = bookkeeping
+			add_idea = organised_mercenary_recruitment
+			add_idea = administrative_efficiency_idea
+			add_idea = civil_servants
+		}
+		if = {
+			limit = {
+				has_idea_group = humanist_ideas
+			}
+			add_idea = tolerance_idea
+			add_idea = local_traditions
+			add_idea = ecumenism
+			add_idea = indirect_rule
+			add_idea = cultural_ties
+			add_idea = benevolence
+			add_idea = humanist_tolerance
+		}
+		if = {
+			limit = {
+				has_idea_group = religious_ideas
+			}
+			add_idea = missionary_schools
+			add_idea = church_attendance_duty
+			add_idea = divine_supremacy
+			add_idea = devoutness
+			add_idea = religious_tradition
+			add_idea = inquisition
+			add_idea = deus_vult
+		}
+		if = {
+			limit = {
+				has_idea_group = regentcourt0
+			}
+			add_idea = regentcourt1
+			add_idea = regentcourt2
+			add_idea = regentcourt3
+			add_idea = regentcourt4
+			add_idea = regentcourt5
+			add_idea = regentcourt6
+			add_idea = regentcourt7
+		}
+		if = {
+			limit = {
+				has_idea_group = ravelian0
+			}
+			add_idea = ravelian1
+			add_idea = ravelian2
+			add_idea = ravelian3
+			add_idea = ravelian4
+			add_idea = ravelian5
+			add_idea = ravelian6
+			add_idea = ravelian7
+		}
+		if = {
+			limit = {
+				has_idea_group = corinite0
+			}
+			add_idea = corinite1
+			add_idea = corinite2
+			add_idea = corinite3
+			add_idea = corinite4
+			add_idea = corinite5
+			add_idea = corinite6
+			add_idea = corinite7
+		}
+		if = {
+			limit = {
+				has_idea_group = thought0
+			}
+			add_idea = thought1
+			add_idea = thought2
+			add_idea = thought3
+			add_idea = thought4
+			add_idea = thought5
+			add_idea = thought6
+			add_idea = thought7
+		}
+		if = {
+			limit = {
+				has_idea_group = the_hunt0
+			}
+			add_idea = the_hunt1
+			add_idea = the_hunt2
+			add_idea = the_hunt3
+			add_idea = the_hunt4
+			add_idea = the_hunt5
+			add_idea = the_hunt6
+			add_idea = the_hunt7
+		}
+		if = {
+			limit = {
+				has_idea_group = anc_worship_0
+			}
+			add_idea = ancworship1
+			add_idea = ancworship2
+			add_idea = ancworship3
+			add_idea = ancworship4
+			add_idea = ancworship5
+			add_idea = ancworship6
+			add_idea = ancworship7
+		}
+		if = {
+			limit = {
+				has_idea_group = dragon_cult_0
+			}
+			add_idea = dragon_cult_1
+			add_idea = dragon_cult_2
+			add_idea = dragon_cult_3
+			add_idea = dragon_cult_4
+			add_idea = dragon_cult_5
+			add_idea = dragon_cult_6
+			add_idea = dragon_cult_7
+		}
+		if = {
+			limit = {
+				has_idea_group = ik_magthaal_0
+			}
+			add_idea = ik_magthaal_1
+			add_idea = ik_magthaal_2
+			add_idea = ik_magthaal_3
+			add_idea = ik_magthaal_4
+			add_idea = ik_magthaal_5
+			add_idea = ik_magthaal_6
+			add_idea = ik_magthaal_7
+		}
+		if = {
+			limit = {
+				has_idea_group = the_jadd_0
+			}
+			add_idea = the_jadd_1
+			add_idea = the_jadd_2
+			add_idea = the_jadd_3
+			add_idea = the_jadd_4
+			add_idea = the_jadd_5
+			add_idea = the_jadd_6
+			add_idea = the_jadd_7
+		}
+		if = {
+			limit = {
+				has_idea_group = skaldhyrric_faith_0
+			}
+			add_idea = skaldhyrric_faith_1
+			add_idea = skaldhyrric_faith_2
+			add_idea = skaldhyrric_faith_3
+			add_idea = skaldhyrric_faith_4
+			add_idea = skaldhyrric_faith_5
+			add_idea = skaldhyrric_faith_6
+			add_idea = skaldhyrric_faith_7
+		}
+		if = {
+			limit = {
+				has_idea_group = old_dookan_0
+			}
+			add_idea = old_dookan_1
+			add_idea = old_dookan_2
+			add_idea = old_dookan_3
+			add_idea = old_dookan_4
+			add_idea = old_dookan_5
+			add_idea = old_dookan_6
+			add_idea = old_dookan_7
+		}
+		if = {
+			limit = {
+				has_idea_group = fey_religion_0
+			}
+			add_idea = fey_religion_1
+			add_idea = fey_religion_2
+			add_idea = fey_religion_3
+			add_idea = fey_religion_4
+			add_idea = fey_religion_5
+			add_idea = fey_religion_6
+			add_idea = fey_religion_7
+		}
+		if = {
+			limit = {
+				has_idea_group = eordellon_0
+			}
+			add_idea = eordellon_1
+			add_idea = eordellon_2
+			add_idea = eordellon_3
+			add_idea = eordellon_4
+			add_idea = eordellon_5
+			add_idea = eordellon_6
+			add_idea = eordellon_7
+		}
+		if = {
+			limit = {
+				has_idea_group = saanorgegh0
+			}
+			add_idea = saanorgegh1
+			add_idea = saanorgegh2
+			add_idea = saanorgegh3
+			add_idea = saanorgegh4
+			add_idea = saanorgegh5
+			add_idea = saanorgegh6
+			add_idea = saanorgegh7
+		}
+		if = {
+			limit = {
+				has_idea_group = justiz0
+			}
+			add_idea = justiz1
+			add_idea = justiz2
+			add_idea = justiz3
+			add_idea = justiz4
+			add_idea = justiz5
+			add_idea = justiz6
+			add_idea = justiz7
+		}
+		if = {
+			limit = {
+				has_idea_group = health_ideas
+			}
+			add_idea = health_ideas_1
+			add_idea = health_ideas_2
+			add_idea = health_ideas_3
+			add_idea = health_ideas_4
+			add_idea = health_ideas_5
+			add_idea = health_ideas_6
+			add_idea = health_ideas_7
+		}
+		if = {
+			limit = {
+				has_idea_group = monarchie0
+			}
+			add_idea = monarchie1
+			add_idea = monarchie2
+			add_idea = monarchie3
+			add_idea = monarchie4
+			add_idea = monarchie5
+			add_idea = monarchie6
+			add_idea = monarchie7
+		}
+		if = {
+			limit = {
+				has_idea_group = Teokratic0
+			}
+			add_idea = aristo1
+			add_idea = aristo2
+			add_idea = aristo3
+			add_idea = aristo4
+			add_idea = aristo5
+			add_idea = aristo6
+			add_idea = aristo7
+		}
+		if = {
+			limit = {
+				has_idea_group = republik0
+			}
+			add_idea = republik1
+			add_idea = republik2
+			add_idea = republik3
+			add_idea = republik4
+			add_idea = republik5
+			add_idea = republik6
+			add_idea = republik7
+		}
+		if = {
+			limit = {
+				has_idea_group = diktatur0
+			}
+			add_idea = diktatur1
+			add_idea = diktatur2
+			add_idea = diktatur3
+			add_idea = diktatur4
+			add_idea = diktatur5
+			add_idea = diktatur6
+			add_idea = diktatur7
+		}
+		if = {
+			limit = {
+				has_idea_group = centaur_horde_idea_0
+			}
+			add_idea = centaur_horde_idea_1
+			add_idea = centaur_horde_idea_2
+			add_idea = centaur_horde_idea_3
+			add_idea = centaur_horde_idea_4
+			add_idea = centaur_horde_idea_5
+			add_idea = centaur_horde_idea_6
+			add_idea = centaur_horde_idea_7
+		}
+		if = {
+			limit = {
+				has_idea_group = public_administr
+			}
+			add_idea = public_administr_1
+			add_idea = public_administr_2
+			add_idea = public_administr_3
+			add_idea = public_administr_4
+			add_idea = public_administr_5
+			add_idea = public_administr_6
+			add_idea = public_administr_7
+		}
+		if = {
+			limit = {
+				has_idea_group = zentra0
+			}
+			add_idea = zentra1
+			add_idea = zentra2
+			add_idea = zentra3
+			add_idea = zentra4
+			add_idea = zentra5
+			add_idea = zentra6
+			add_idea = zentra7
+		}
+		if = {
+			limit = {
+				has_idea_group = dezentra0
+			}
+			add_idea = dezentra1
+			add_idea = dezentra2
+			add_idea = dezentra3
+			add_idea = dezentra4
+			add_idea = dezentra5
+			add_idea = dezentra6
+			add_idea = dezentra7
+		}
+		if = {
+			limit = {
+				has_idea_group = spy_ideas
+			}
+			add_idea = efficient_spies
+			add_idea = agent_training
+			add_idea = vetting
+			add_idea = state_propaganda
+			add_idea = claim_fabrication
+			add_idea = privateers
+			add_idea = audit_checks
+		}
+		if = {
+			limit = {
+				has_idea_group = dynasty0
+			}
+			add_idea = foreign_embassies_2
+			add_idea = establish_cadet_branches
+			add_idea = cabinet
+			add_idea = diplomatic_corps_2
+			add_idea = benign_diplomats
+			add_idea = experienced_diplomats
+			add_idea = dynastie4
+		}
+		if = {
+			limit = {
+				has_idea_group = influence_ideas
+			}
+			add_idea = tribute_system
+			add_idea = flexible_negotiation
+			add_idea = integrated_elites
+			add_idea = additional_loyalist_recruitment
+			add_idea = diplomatic_influence
+			add_idea = postal_service
+			add_idea = marcher_lords
+		}
+		if = {
+			limit = {
+				has_idea_group = trade_ideas
+			}
+			add_idea = shrewd_commerce_practise
+			add_idea = free_trade
+			add_idea = merchant_adventures
+			add_idea = national_trade_policy
+			add_idea = overseas_merchants
+			add_idea = trade_manipulation
+			add_idea = fast_negotiations
+		}
+
+		if = {
+			limit = {
+				has_idea_group = exploration_ideas
+			}
+			add_idea = quest_for_the_new_world
+			add_idea = colonial_ventures
+			add_idea = overseas_exploration
+			add_idea = land_of_opportunity
+			add_idea = vice_roys
+			add_idea = free_colonies
+			add_idea = global_empire
+		}
+		if = {
+			limit = {
+				has_idea_group = heavy_s_idea
+			}
+			add_idea = gross1
+			add_idea = gross2
+			add_idea = gross3
+			add_idea = gross4
+			add_idea = gross5
+			add_idea = gross6
+			add_idea = gross7
+		}if = {
+			limit = {
+				has_idea_group = galle0
+			}
+			add_idea = galle1
+			add_idea = galle2
+			add_idea = galle3
+			add_idea = galle4
+			add_idea = galle5
+			add_idea = galle6
+			add_idea = galle7
+		}
+		if = {
+			limit = {
+				has_idea_group = light_s_idea
+			}
+			add_idea = light_ship1
+			add_idea = light_ship2
+			add_idea = light_ship3
+			add_idea = light_ship4
+			add_idea = light_ship5
+			add_idea = light_ship6
+			add_idea = light_ship7
+		}
+		if = {
+			limit = {
+				has_idea_group = kolonialimperium0
+			}
+			add_idea = kolonialimperium1
+			add_idea = kolonialimperium2
+			add_idea = kolonialimperium3
+			add_idea = kolonialimperium4
+			add_idea = kolonialimperium5
+			add_idea = kolonialimperium6
+			add_idea = kolonialimperium7
+		}
+		if = {
+			limit = {
+				has_idea_group = assimilation0
+			}
+			add_idea = assimilation1
+			add_idea = assimilation2
+			add_idea = assimilation3
+			add_idea = assimilation4
+			add_idea = assimilation5
+			add_idea = assimilation6
+			add_idea = assimilation7
+		}
+		if = {
+			limit = {
+				has_idea_group = society_idea
+			}
+			add_idea = gesellschaft1
+			add_idea = gesellschaft2
+			add_idea = gesellschaft3
+			add_idea = gesellschaft4
+			add_idea = gesellschaft5
+			add_idea = gesellschaft6
+			add_idea = gesellschaft7
+		}
+		if = {
+			limit = {
+				has_idea_group = propaganda0
+			}
+			add_idea = propaganda1
+			add_idea = propaganda2
+			add_idea = propaganda3
+			add_idea = propaganda4
+			add_idea = propaganda5
+			add_idea = propaganda6
+			add_idea = propaganda7
+		}
+		if = {
+			limit = {
+				has_idea_group = flottenbasis0
+			}
+			add_idea = flottenbasis1
+			add_idea = flottenbasis2
+			add_idea = flottenbasis3
+			add_idea = flottenbasis4
+			add_idea = flottenbasis5
+			add_idea = flottenbasis6
+			add_idea = flottenbasis7
+		}
+		if = {
+			limit = {
+				has_idea_group = nationalismus0
+			}
+			add_idea = nationalismus1
+			add_idea = nationalismus2
+			add_idea = nationalismus3
+			add_idea = nationalismus4
+			add_idea = nationalismus5
+			add_idea = nationalismus6
+			add_idea = nationalismus7
+		}
+		if = {
+			limit = {
+				has_idea_group = konigreich0
+			}
+			add_idea = konigreich1
+			add_idea = konigreich2
+			add_idea = konigreich3
+			add_idea = konigreich4
+			add_idea = konigreich5
+			add_idea = konigreich6
+			add_idea = konigreich7
+		}
+		if = {
+			limit = {
+				has_idea_group = imperialismus0
+			}
+			add_idea = imperialismus1
+			add_idea = imperialismus2
+			add_idea = imperialismus3
+			add_idea = imperialismus4
+			add_idea = imperialismus5
+			add_idea = imperialismus6
+			add_idea = imperialismus7
+		}
+		if = {
+			limit = {
+				has_idea_group = maritime_ideas
+			}
+			add_idea = sea_hawks
+			add_idea = merchant_marine
+			add_idea = sheltered_ports
+			add_idea = grand_navy
+			add_idea = ships_penny
+			add_idea = excellent_shipwrights
+			add_idea = naval_fighting_instruction
+		}
+		if = {
+			limit = {
+				has_idea_group = great_power_idea_groups_expanded
+			}
+			add_idea = will_to_power
+			add_idea = sphere_of_influence
+			add_idea = illustrious_council
+			add_idea = meritorious_influence
+			add_idea = governmental_reformation
+			add_idea = bolster_our_administration
+			add_idea = operational_refinement
+		}
+		if = {
+			limit = {
+				has_idea_group = offensive_ideas
+			}
+			add_idea = mobile_warfare
+			add_idea = engineer_corps
+			add_idea = national_conscripts
+			add_idea = superior_firepower
+			add_idea = nation_at_war
+			add_idea = constant_war
+			add_idea = napoleonic_warfare
+		}
+		if = {
+			limit = {
+				has_idea_group = defensive_ideas
+			}
+			add_idea = battlefield_commisions
+			add_idea = military_drill
+			add_idea = improved_manuever
+			add_idea = regimental_system
+			add_idea = defensive_mentality
+			add_idea = supply_trains
+			add_idea = improved_foraging
+		}
+		if = {
+			limit = {
+				has_idea_group = quality_ideas
+			}
+			add_idea = private_to_marshal
+			add_idea = quality_education
+			add_idea = finest_of_horses
+			add_idea = escort_ships
+			add_idea = naval_drill
+			add_idea = copper_bottoms
+			add_idea = massed_battery
+		}
+		if = {
+			limit = {
+				has_idea_group = quantity_ideas
+			}
+			add_idea = the_young_can_serve
+			add_idea = enforced_service
+			add_idea = the_old_and_infirm
+			add_idea = mercenary_contracts
+			add_idea = garrison_conscription
+			add_idea = expanded_supply_trains
+			add_idea = mass_army
+		}
+		if = {
+			limit = {
+				has_idea_group = generalstab0
+			}
+			add_idea = generalstab1
+			add_idea = generalstab2
+			add_idea = generalstab3
+			add_idea = generalstab4
+			add_idea = generalstab5
+			add_idea = generalstab6
+			add_idea = generalstab7
+		}
+		if = {
+			limit = {
+				has_idea_group = standing_army_idea_groups
+			}
+			add_idea = standing_army_1
+			add_idea = standing_army_2
+			add_idea = standing_army_3
+			add_idea = standing_army_4
+			add_idea = standing_army_5
+			add_idea = standing_army_6
+			add_idea = standing_army_7
+		}
+		if = {
+			limit = {
+				has_idea_group = mercenary_army_idea_groups
+			}
+			add_idea = mercenary_idea_1
+			add_idea = mercenary_idea_2
+			add_idea = mercenary_idea_3
+			add_idea = mercenary_idea_4
+			add_idea = mercenary_idea_5
+			add_idea = mercenary_idea_6
+			add_idea = mercenary_idea_7
+		}
+		if = {
+			limit = {
+				has_idea_group = conscription_ideas0
+			}
+			add_idea = conscription_ideas_1
+			add_idea = conscription_ideas_2
+			add_idea = conscription_ideas_3
+			add_idea = conscription_ideas_4
+			add_idea = conscription_ideas_5
+			add_idea = conscription_ideas_6
+			add_idea = conscription_ideas_7
+		}
+		if = {
+			limit = {
+				has_idea_group = weapon_quality_0
+			}
+			add_idea = weapon_quality_1
+			add_idea = weapon_quality_2
+			add_idea = weapon_quality_3
+			add_idea = weapon_quality_4
+			add_idea = weapon_quality_5
+			add_idea = weapon_quality_6
+			add_idea = weapon_quality_7
+		}
+		if = {
+			limit = {
+				has_idea_group = war_production_0
+			}
+			add_idea = war_production_1
+			add_idea = war_production_2
+			add_idea = war_production_3
+			add_idea = war_production_4
+			add_idea = war_production_5
+			add_idea = war_production_6
+			add_idea = war_production_7
+		}
+		if = {
+			limit = {
+				has_idea_group = formation0
+			}
+			add_idea = formation1
+			add_idea = formation2
+			add_idea = formation3
+			add_idea = formation4
+			add_idea = formation5
+			add_idea = formation6
+			add_idea = formation7
+		}
+		if = {
+			limit = {
+				has_idea_group = militarismus0
+			}
+			add_idea = militarismus1
+			add_idea = militarismus2
+			add_idea = militarismus3
+			add_idea = militarismus4
+			add_idea = militarismus5
+			add_idea = militarismus6
+			add_idea = militarismus7
+		}
+		if = {
+			limit = {
+				has_idea_group = shock0
+			}
+			add_idea = shock1
+			add_idea = shock2
+			add_idea = shock3
+			add_idea = shock4
+			add_idea = shock5
+			add_idea = shock6
+			add_idea = shock7
+		}
+		if = {
+			limit = {
+				has_idea_group = fire0
+			}
+			add_idea = fire1
+			add_idea = fire2
+			add_idea = fire3
+			add_idea = fire4
+			add_idea = fire5
+			add_idea = fire6
+			add_idea = fire7
+		}
+		if = {
+			limit = {
+				has_idea_group = cavalary_focus_idea
+			}
+			add_idea = cavalary_focus1
+			add_idea = cavalary_focus2
+			add_idea = cavalary_focus3
+			add_idea = cavalary_focus4
+			add_idea = cavalary_focus5
+			add_idea = cavalary_focus6
+			add_idea = cavalary_focus7
+		}
+		if = {
+			limit = {
+				has_idea_group = infantry_focus_idea
+			}
+			add_idea = infantry_focus1
+			add_idea = infantry_focus2
+			add_idea = infantry_focus3
+			add_idea = infantry_focus4
+			add_idea = infantry_focus5
+			add_idea = infantry_focus6
+			add_idea = infantry_focus7
+		}
+		if = {
+			limit = {
+				has_idea_group = siege_idea
+			}
+			add_idea = siege_idea_1
+			add_idea = siege_idea_2
+			add_idea = siege_idea_3
+			add_idea = siege_idea_4
+			add_idea = siege_idea_5
+			add_idea = siege_idea_6
+			add_idea = siege_idea_7
+		}
+		if = {
+			limit = {
+				has_idea_group = fortress0
+			}
+			add_idea = fortress_1
+			add_idea = fortress_2
+			add_idea = fortress_3
+			add_idea = fortress_4
+			add_idea = fortress_5
+			add_idea = fortress_6
+			add_idea = fortress_7
+		}
+	}
+
+	after = {
+		log = "end ANEX_initalization.6 [GetDate] for country [Root.GetName]"
+	}
+
+	option ={
+		name = ANEX_setting_event.1.a
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+country_event = {
+	id = ANEX_initalization.7
+	title = ANEX_setting_event.1.t
+	desc = ANEX_setting_event.1.d
+	picture = DIET_eventPicture
+
+	hidden = yes
+
+	trigger = {
+		NOT = {
+			has_country_flag = ideas_rdy
+		}
+	}
+
+	immediate = {
+		log = "start ANEX_initalization.7 [GetDate] for country [Root.GetName]"
+		clear_wrong_trigger_ideas = yes
+		country_event = {
+			id = ANEX_initalization.6
+			days = 60
+		}
+		set_country_flag = ideas_rdy
+	}
+
+	after = {
+		log = "end ANEX_initalization.7 [GetDate] for country [Root.GetName]"
+	}
+
+	option ={
+		name = ANEX_setting_event.1.a
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+country_event = {
+	id = ANEX_initalization.8
+	title = ANEX_setting_event.1.t
+	desc = ANEX_setting_event.1.d
+	picture = DIET_eventPicture
+
+	hidden = yes
+
+	trigger = {
+		is_religion_enabled = corinite
+		AND = {
+			tag = A45
+			religion = regent_court
+		}
+
+	}
+
+	immediate = {
+		log = "start ANEX_initalization.7 [GetDate] for country [Root.GetName]"
+		if = {
+			limit = {
+				tag = A45
+				ai = yes
+				exists = A45
+			}
+			change_religion = corinite
+			random_owned_province = {
+				limit = {
+					is_capital = no
+				}
+				change_religion = corinite
+				add_reform_center = corinite
+				add_permanent_province_modifier = {
+					name = "religious_zeal_at_conv"
+					duration = 9000
+				}
+			}
+			capital_scope = {
+				change_religion = corinite
+				add_permanent_province_modifier = {
+					name = "religious_zeal_at_conv"
+					duration = 9000
+				}
+			}
+			set_country_flag = "corinite_reformation" 
+		}
+		# country_event = {
+		# 	id = ANEX_initalization.9
+		# 	years = 20
+		# }
+	}
+
+	after = {
+		log = "end ANEX_initalization.7 [GetDate] for country [Root.GetName]"
+	}
+
+	option ={
+		name = ANEX_setting_event.1.a
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+
+# country_event = {
+# 	id = ANEX_initalization.9
+# 	title = ANEX_setting_event.1.t
+# 	desc = ANEX_setting_event.1.d
+# 	picture = DIET_eventPicture
+
+# 	hidden = yes
+
+# 	is_triggered_only = yes
+
+# 	immediate = {
+# 		log = "start ANEX_initalization.7 [GetDate] for country [Root.GetName]"
+
+# 		if = {
+# 			limit = {
+# 				tag = A30
+# 				ai = yes
+# 				exists = A30
+# 			}
+# 			random_owned_province = {
+# 				limit = {
+# 					is_capital = no
+# 				}
+# 				add_reform_center = regent_court
+# 				add_permanent_province_modifier = {
+# 					name = "religious_zeal_at_conv"
+# 					duration = 9000
+# 				}
+# 			}
+# 		}
+# 		if = {
+# 			limit = {
+# 				tag = A40
+# 				ai = yes
+# 				exists = A40
+# 			}
+# 			random_owned_province = {
+# 				limit = {
+# 					is_capital = no
+# 				}
+# 				add_reform_center = regent_court
+# 				add_permanent_province_modifier = {
+# 					name = "religious_zeal_at_conv"
+# 					duration = 9000
+# 				}
+# 			}
+# 		}
+# 	}
+
+# 	after = {
+# 		log = "end ANEX_initalization.7 [GetDate] for country [Root.GetName]"
+# 	}
+
+# 	option ={
+# 		name = ANEX_setting_event.1.a
+# 		ai_chance = {
+# 			factor = 1
+# 		}
+# 	}
+# }
+

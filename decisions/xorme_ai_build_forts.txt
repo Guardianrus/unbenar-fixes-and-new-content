@@ -1,0 +1,126 @@
+country_decisions = {
+	xorme_ai_build_capital_fort = {
+		potential = {
+			ROOT = { ai = yes }
+			NOT = {
+				has_country_modifier = centaur_administration
+			}
+			capital_scope = {
+				NOT = {
+					OR = {
+						xorme_ai_has_any_fort_trigger = yes
+						xorme_ai_is_building_fort_trigger = yes
+					}
+				}
+			}
+		}
+
+		allow = {
+			NOT = { num_of_loans = 1 }
+			is_in_deficit = no
+			xorme_ai_can_build_fort = yes
+		}
+
+		effect = {
+			capital_scope = {
+				xorme_ai_build_forts_effect = yes
+			}
+		}
+
+		ai_importance = 1000
+
+		ai_will_do = {
+			factor = 100.0
+		}
+	}
+
+	xorme_ai_build_forts = {
+		potential = {
+			ROOT = { has_country_modifier = xorme_ai_valid_nation }
+			is_at_war = no
+			NOT = {
+				has_country_modifier = centaur_administration
+			}
+			capital_scope = {
+				OR = {
+					xorme_ai_has_any_fort_trigger = yes
+					xorme_ai_is_building_fort_trigger = yes
+				}
+			}
+		}
+
+		allow = {
+			custom_trigger_tooltip = {
+				tooltip = xorme_build_fort_tt
+
+				NOT = { num_of_loans = 1 }
+				is_in_deficit = no
+				xorme_ai_can_build_fort = yes
+	
+				any_owned_province = {
+					is_island = no
+					xorme_ai_fort_dev_requirements_trigger = yes
+					NOT = {
+						OR = {
+							xorme_ai_is_building_fort_trigger = yes
+							xorme_ai_has_any_fort_trigger = yes
+							has_influencing_fort = yes
+						}
+					}
+	
+					all_neighbor_province = {
+						NOT = {
+							OR = {
+								xorme_ai_is_building_fort_trigger = yes
+								xorme_ai_has_any_fort_trigger = yes
+								has_influencing_fort = yes
+							}
+						}
+					}
+	
+					any_neighbor_province = {
+						NOT = { owned_by = ROOT }
+					}
+				}
+			}
+		}
+
+		effect = {
+			random_owned_province = {
+				limit = {
+					is_island = no
+					xorme_ai_fort_dev_requirements_trigger = yes
+
+					NOT = {
+						OR = {
+							xorme_ai_is_building_fort_trigger = yes
+							xorme_ai_has_any_fort_trigger = yes
+							has_influencing_fort = yes
+						}
+					}
+
+					any_neighbor_province = {
+						NOT = { owned_by = ROOT }
+					}
+
+					all_neighbor_province = {
+						NOT = {
+							OR = {
+								xorme_ai_is_building_fort_trigger = yes
+								xorme_ai_has_any_fort_trigger = yes
+								has_influencing_fort = yes
+							}
+						}
+					}
+				}
+				xorme_ai_build_forts_effect = yes
+			}
+		}
+
+		ai_importance = 500
+
+		ai_will_do = {
+			factor = 10.0
+		}
+	}
+}

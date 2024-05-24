@@ -1,0 +1,2738 @@
+namespace = xsm_events
+
+#CAN USE FOR RELOAD
+country_event = {
+	id = xsm_events.0
+	hidden = yes
+	title = "none"
+	desc = "none"
+	picture = "none"
+	is_triggered_only = yes
+
+	trigger = {
+		has_country_flag = xorme_subject_overlord@TAG
+	}
+
+	immediate = {
+	}
+
+	option = {}
+}
+#
+
+country_event = {
+	id = xsm_events.1
+	title = xsm_events.1.name
+	desc = xsm_events.1.desc
+	picture = NOBLE_ESTATE_DEMANDS_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_country_flag = xorme_subject_overlord@TAG
+	}
+
+	immediate = {
+		if = {
+			limit = { has_country_flag = xsm_reset }
+			clr_country_flag = xsm_reset
+		}
+	}
+	#Centralization <-> Decentralization (done)
+	option = {
+		name = xsm_events_option.1
+		hidden_effect = {
+			country_event = {
+				id = xsm_events.2
+			}
+		}
+		ai_chance = {
+			factor = 20
+			modifier = {
+				factor = 0
+				OR = {
+					has_country_flag = xsm_events_set_centralization_level_VH@ROOT
+					has_country_flag = xsm_events_set_centralization_level_VL@ROOT
+					has_country_flag = xsm_events_set_centralization_level_L@ROOT
+					has_country_flag = xsm_events_set_centralization_level_N@ROOT
+					has_country_flag = xsm_events_set_centralization_level_H@ROOT
+				}
+			}
+		}
+	}
+	#Militarization <-> Commercialization (N)
+	option = {
+		name = xsm_events_option.2
+		hidden_effect = {
+			country_event = {
+				id = xsm_events.3
+			}
+		}
+		ai_chance = {
+			factor = 20
+			modifier = {
+				factor = 0
+				OR = {
+					has_country_flag = xsm_events_set_mil_max@ROOT
+					has_country_flag = xsm_events_set_mil_high@ROOT
+					has_country_flag = xsm_events_set_mil_com_balance@ROOT
+					has_country_flag = xsm_events_set_com_high@ROOT
+					has_country_flag = xsm_events_set_com_max@ROOT
+				}
+			}
+		}
+	}
+	#Quantity <-> Quality
+	option = {
+		name = xsm_events_option.3
+		hidden_effect = {
+			country_event = {
+				id = xsm_events.4
+			}
+		}
+		ai_chance = {
+			factor = 20
+			modifier = {
+				factor = 0
+				OR = {
+					has_country_flag = xsm_events_set_qq_qal_max@ROOT
+					has_country_flag = xsm_events_set_qq_qal_high@ROOT
+					has_country_flag = xsm_events_set_qq_balance@ROOT
+					has_country_flag = xsm_events_set_qq_quan_high@ROOT
+					has_country_flag = xsm_events_set_qq_quan_max@ROOT
+				}
+			}
+		}
+	}
+	#Development <-> Expansion (N)"
+	option = {
+		name = xsm_events_option.4
+		trigger = {
+			ROOT = { full_idea_group = influence_ideas }
+		}
+		hidden_effect = {
+			country_event = {
+				id = xsm_events.5
+			}
+		}
+		ai_chance = {
+			factor = 20
+			modifier = {
+				factor = 0
+				OR = {
+					has_country_flag = xsm_events_set_de_dev_max@ROOT
+					has_country_flag = xsm_events_set_de_dev_high@ROOT
+					has_country_flag = xsm_events_set_de_dev_exp_balance@ROOT
+					has_country_flag = xsm_events_set_de_exp_high@ROOT
+					has_country_flag = xsm_events_set_de_exp_max@ROOT
+				}
+			}
+		}
+	}
+	#National Focus (done)
+	option = {
+		name = xsm_events_option.5
+		hidden_effect = {
+			country_event = {
+				id = xsm_events.6
+			}
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+	#CLEAR
+	option = {
+		name = xsm_events_option.1.clear
+		hidden_effect = {
+			country_event = {
+				id = xsm_cleanup.2
+			}
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+	#CONFIRM ALL
+	option = {
+		name = xsm_events_option.6.confirm
+		highlight = yes
+		#National Focus | APP
+		if = {
+			limit = {
+				OR = {
+					has_country_flag = xsm_events_set_adm_focus@ROOT
+					has_country_flag = xsm_events_set_dip_focus@ROOT
+					has_country_flag = xsm_events_set_mil_focus@ROOT
+				}
+			}
+			if = {
+				limit = { has_country_flag = xsm_events_set_adm_focus@ROOT }
+				random_subject_country = {
+					limit = {
+						has_country_flag = xorme_overlord_subject@TAG
+						overlord = {
+							has_country_flag = xorme_subject_overlord@TAG
+						}
+					}
+					change_national_focus = ADM
+				}
+				ROOT = {
+					add_adm_power = -35
+					add_corruption = 1
+				}
+				custom_tooltip = xsm_blc_space_tt
+			}
+			else_if = {
+				limit = { has_country_flag = xsm_events_set_dip_focus@ROOT }
+				random_subject_country = {
+					limit = {
+						has_country_flag = xorme_overlord_subject@TAG
+						overlord = {
+							has_country_flag = xorme_subject_overlord@TAG
+						}
+					}
+					change_national_focus = DIP
+				}
+				ROOT = {
+					add_dip_power = -35
+					add_corruption = 1
+				}
+				custom_tooltip = xsm_blc_space_tt
+			}
+			else_if = {
+				limit = { has_country_flag = xsm_events_set_mil_focus@ROOT }
+				random_subject_country = {
+					limit = {
+						has_country_flag = xorme_overlord_subject@TAG
+						overlord = {
+							has_country_flag = xorme_subject_overlord@TAG
+						}
+					}
+					change_national_focus = MIL
+				}
+				ROOT = {
+					add_mil_power = -35
+					add_corruption = 1
+				}
+				custom_tooltip = xsm_blc_space_tt
+			}
+			else = {}
+		}
+		#Centralization <-> Decentralization | APP
+		if = {
+			limit = {
+				OR = {
+					has_country_flag = xsm_events_set_centralization_level_VL@ROOT
+					has_country_flag = xsm_events_set_centralization_level_L@ROOT
+					has_country_flag = xsm_events_set_centralization_level_N@ROOT
+					has_country_flag = xsm_events_set_centralization_level_H@ROOT
+					has_country_flag = xsm_events_set_centralization_level_VH@ROOT
+				}
+			}
+			if = {
+				limit = { has_country_flag = xsm_events_set_centralization_level_VL@ROOT }
+				random_subject_country = {
+					limit = {
+						has_country_flag = xorme_overlord_subject@TAG
+						overlord = {
+							has_country_flag = xorme_subject_overlord@TAG
+						}
+					}
+					if = {
+						limit = { NOT = { has_country_modifier = xsm_subject_centralization_VL } }
+						add_country_modifier = {
+							name = xsm_subject_centralization_VL
+							duration = -1
+						}
+						if = {
+							limit = {
+								OR = {
+									NOT = { has_country_modifier = xsm_subject_centralization_VL }
+									has_country_modifier = xsm_subject_centralization_L
+									has_country_modifier = xsm_subject_centralization_N
+									has_country_modifier = xsm_subject_centralization_H
+									has_country_modifier = xsm_subject_centralization_VH
+								}
+							}
+							remove_country_modifier = xsm_subject_centralization_L
+							remove_country_modifier = xsm_subject_centralization_N
+							remove_country_modifier = xsm_subject_centralization_H
+							remove_country_modifier = xsm_subject_centralization_VH
+						}
+						if = {
+							limit = { FROM = { ai = yes} }
+							FROM = {
+								add_adm_power = -90
+								add_corruption = 1.5
+								hidden_effect = { set_country_flag = xsm_can_have_cd }
+							}
+						}
+						else_if = {
+							limit = {
+								FROM = {
+									ai = yes
+									full_idea_group = influence_ideas
+								}
+							}
+							FROM = {
+								add_adm_power = -45
+								add_corruption = 0.75
+								hidden_effect = { set_country_flag = xsm_can_have_cd }
+							}
+						}
+						else_if = {
+							limit = {
+								FROM = {
+									ai = no
+									full_idea_group = influence_ideas
+								}
+							}
+							FROM = {
+								add_adm_power = -45
+								add_corruption = 1.25
+								hidden_effect = { set_country_flag = xsm_can_have_cd }
+							}
+						}
+						else_if = {
+							limit = { FROM = { ai = no } }
+							FROM = {
+								add_adm_power = -90
+								add_corruption = 2.5
+								hidden_effect = { set_country_flag = xsm_can_have_cd }
+							}
+						}
+						else = {}
+						custom_tooltip = xsm_blc_space_tt
+					}
+					else = {
+
+					}
+				}
+			}
+			else_if = {
+				limit = { has_country_flag = xsm_events_set_centralization_level_L@ROOT }
+				random_subject_country = {
+					limit = {
+						has_country_flag = xorme_overlord_subject@TAG
+						overlord = {
+							has_country_flag = xorme_subject_overlord@TAG
+						}
+					}
+					if = {
+						limit = { NOT = { has_country_modifier = xsm_subject_centralization_L } }
+						add_country_modifier = {
+							name = xsm_subject_centralization_L
+							duration = -1
+						}
+						if = {
+							limit = {
+								OR = {
+									NOT = { has_country_modifier = xsm_subject_centralization_L }
+									has_country_modifier = xsm_subject_centralization_VL
+									has_country_modifier = xsm_subject_centralization_N
+									has_country_modifier = xsm_subject_centralization_H
+									has_country_modifier = xsm_subject_centralization_VH
+								}
+							}
+							remove_country_modifier = xsm_subject_centralization_VL
+							remove_country_modifier = xsm_subject_centralization_N
+							remove_country_modifier = xsm_subject_centralization_H
+							remove_country_modifier = xsm_subject_centralization_VH
+						}
+						if = {
+							limit = { FROM = { ai = yes} }
+							FROM = {
+								add_adm_power = -60
+								add_corruption = 0.5
+								hidden_effect = { set_country_flag = xsm_can_have_cd }
+							}
+						}
+						else_if = {
+							limit = {
+								FROM = {
+									ai = yes
+									full_idea_group = influence_ideas
+								}
+							}
+							FROM = {
+								add_adm_power = -30
+								add_corruption = 0.25
+								hidden_effect = { set_country_flag = xsm_can_have_cd }
+							}
+						}
+						else_if = {
+							limit = {
+								FROM = {
+									ai = no
+									full_idea_group = influence_ideas
+								}
+							}
+							FROM = {
+								add_adm_power = -30
+								add_corruption = 0.75
+								hidden_effect = { set_country_flag = xsm_can_have_cd }
+							}
+						}
+						else_if = {
+							limit = { FROM = { ai = no } }
+							FROM = {
+								add_adm_power = -60
+								add_corruption = 1.5
+								hidden_effect = { set_country_flag = xsm_can_have_cd }
+							}
+						}
+						custom_tooltip = xsm_blc_space_tt
+					}
+					else = {
+
+					}
+				}
+			}
+			else_if = {
+				limit = { has_country_flag = xsm_events_set_centralization_level_N@ROOT }
+				random_subject_country = {
+					limit = {
+						has_country_flag = xorme_overlord_subject@TAG
+						overlord = {
+							has_country_flag = xorme_subject_overlord@TAG
+						}
+					}
+					if = {
+						limit = { NOT = { has_country_modifier = xsm_subject_centralization_N } }
+						add_country_modifier = {
+							name = xsm_subject_centralization_N
+							duration = -1
+						}
+						if = {
+							limit = {
+								OR = {
+									NOT = { has_country_modifier = xsm_subject_centralization_N }
+									has_country_modifier = xsm_subject_centralization_VL
+									has_country_modifier = xsm_subject_centralization_L
+									has_country_modifier = xsm_subject_centralization_H
+									has_country_modifier = xsm_subject_centralization_VH
+								}
+							}
+							remove_country_modifier = xsm_subject_centralization_VL
+							remove_country_modifier = xsm_subject_centralization_L
+							remove_country_modifier = xsm_subject_centralization_H
+							remove_country_modifier = xsm_subject_centralization_VH
+						}
+						if = {
+							limit = { FROM = { ai = yes} }
+							FROM = {
+								add_adm_power = -30
+								hidden_effect = { set_country_flag = xsm_can_have_cd }
+							}
+						}
+						if = {
+							limit = { FROM = { ai = no } }
+							FROM = {
+								add_adm_power = -30
+								add_corruption = 1
+								hidden_effect = { set_country_flag = xsm_can_have_cd }
+							}
+						}
+						custom_tooltip = xsm_blc_space_tt
+					}
+					else = {
+
+					}
+				}
+			}
+			else_if = {
+				limit = { has_country_flag = xsm_events_set_centralization_level_H@ROOT }
+				random_subject_country = {
+					limit = {
+						has_country_flag = xorme_overlord_subject@TAG
+						overlord = {
+							has_country_flag = xorme_subject_overlord@TAG
+						}
+					}
+					if = {
+						limit = { NOT = { has_country_modifier = xsm_subject_centralization_H } }
+						add_country_modifier = {
+							name = xsm_subject_centralization_H
+							duration = -1
+						}
+						if = {
+							limit = {
+								OR = {
+									NOT = { has_country_modifier = xsm_subject_centralization_H }
+									has_country_modifier = xsm_subject_centralization_VL
+									has_country_modifier = xsm_subject_centralization_L
+									has_country_modifier = xsm_subject_centralization_N
+									has_country_modifier = xsm_subject_centralization_VH
+								}
+							}
+							remove_country_modifier = xsm_subject_centralization_VL
+							remove_country_modifier = xsm_subject_centralization_L
+							remove_country_modifier = xsm_subject_centralization_N
+							remove_country_modifier = xsm_subject_centralization_VH
+							if = {
+								limit = { FROM = { ai = yes} }
+								FROM = {
+									add_adm_power = -60
+									add_corruption = 0.5
+									hidden_effect = { set_country_flag = xsm_can_have_cd }
+								}
+							}
+							else_if = {
+								limit = {
+									FROM = {
+										ai = yes
+										full_idea_group = influence_ideas
+									}
+								}
+								FROM = {
+									add_adm_power = -30
+									add_corruption = 0.25
+									hidden_effect = { set_country_flag = xsm_can_have_cd }
+								}
+							}
+							else_if = {
+								limit = {
+									FROM = {
+										ai = no
+										full_idea_group = influence_ideas
+									}
+								}
+								FROM = {
+									add_adm_power = -30
+									add_corruption = 0.75
+									hidden_effect = { set_country_flag = xsm_can_have_cd }
+								}
+							}
+							else_if = {
+								limit = { FROM = { ai = no } }
+								FROM = {
+									add_adm_power = -60
+									add_corruption = 1.5
+									hidden_effect = { set_country_flag = xsm_can_have_cd }
+								}
+							}
+							custom_tooltip = xsm_blc_space_tt
+						}
+						else = {
+
+						}
+					}
+				}
+			}
+			else_if = {
+				limit = { has_country_flag = xsm_events_set_centralization_level_VH@ROOT }
+				random_subject_country = {
+					limit = {
+						has_country_flag = xorme_overlord_subject@TAG
+						overlord = {
+							has_country_flag = xorme_subject_overlord@TAG
+						}
+					}
+					if = {
+						limit = { NOT = { has_country_modifier = xsm_subject_centralization_VH } }
+						add_country_modifier = {
+							name = xsm_subject_centralization_VH
+							duration = -1
+						}
+						if = {
+							limit = {
+								OR = {
+									NOT = { has_country_modifier = xsm_subject_centralization_VH }
+									has_country_modifier = xsm_subject_centralization_VL
+									has_country_modifier = xsm_subject_centralization_L
+									has_country_modifier = xsm_subject_centralization_N
+									has_country_modifier = xsm_subject_centralization_H
+								}
+							}
+							remove_country_modifier = xsm_subject_centralization_VL
+							remove_country_modifier = xsm_subject_centralization_L
+							remove_country_modifier = xsm_subject_centralization_N
+							remove_country_modifier = xsm_subject_centralization_H
+						}
+						if = {
+							limit = { FROM = { ai = yes} }
+							FROM = {
+								add_adm_power = -90
+								add_corruption = 1.5
+								hidden_effect = { set_country_flag = xsm_can_have_cd }
+							}
+						}
+						else_if = {
+							limit = {
+								FROM = {
+									ai = yes
+									full_idea_group = influence_ideas
+								}
+							}
+							FROM = {
+								add_adm_power = -45
+								add_corruption = 0.75
+								hidden_effect = { set_country_flag = xsm_can_have_cd }
+							}
+						}
+						else_if = {
+							limit = {
+								FROM = {
+									ai = no
+									full_idea_group = influence_ideas
+								}
+							}
+							FROM = {
+								add_adm_power = -45
+								add_corruption = 1.25
+								hidden_effect = { set_country_flag = xsm_can_have_cd }
+							}
+						}
+						else_if = {
+							limit = { FROM = { ai = no } }
+							FROM = {
+								add_adm_power = -90
+								add_corruption = 2.5
+								hidden_effect = { set_country_flag = xsm_can_have_cd }
+							}
+						}
+						custom_tooltip = xsm_blc_space_tt
+					}
+					else = {
+
+					}
+				}
+			}
+			else = {}
+		}
+		#Militarization <-> Commercialization | APP
+		if = {
+			limit = {
+				OR = {
+					has_country_flag = xsm_events_set_mil_max@ROOT
+					has_country_flag = xsm_events_set_mil_high@ROOT
+					has_country_flag = xsm_events_set_mil_com_balance@ROOT
+					has_country_flag = xsm_events_set_com_high@ROOT
+					has_country_flag = xsm_events_set_com_max@ROOT
+				}
+			}
+			if = {
+				limit = { has_country_flag = xsm_events_set_mil_max@ROOT }
+				random_subject_country = {
+					limit = {
+						has_country_flag = xorme_overlord_subject@TAG
+						overlord = {
+							has_country_flag = xorme_subject_overlord@TAG
+						}
+					}
+					if = {
+						limit = { NOT = { has_country_modifier = xsm_mc_mil_max } }
+						add_country_modifier = {
+							name = xsm_mc_mil_max
+							duration = -1
+						}
+						if = {
+							limit = {
+								OR = {
+									has_country_modifier = xsm_mc_mil_high
+									has_country_modifier = xsm_mc_mil_com_balance
+									has_country_modifier = xsm_mc_com_high
+									has_country_modifier = xsm_mc_com_max
+								}
+							}
+							remove_country_modifier = xsm_mc_mil_high
+							remove_country_modifier = xsm_mc_mil_com_balance
+							remove_country_modifier = xsm_mc_com_high
+							remove_country_modifier = xsm_mc_com_max
+						}
+						if = {
+							limit = { FROM = { ai = yes} }
+							FROM = {
+								add_adm_power = -45
+								add_mil_power = -45
+								add_corruption = 1.5
+								hidden_effect = { set_country_flag = xsm_can_have_cd }
+							}
+						}
+						else_if = {
+							limit = {
+								FROM = {
+									ai = yes
+									full_idea_group = influence_ideas
+								}
+							}
+							FROM = {
+								add_adm_power = -25
+								add_mil_power = -25
+								add_corruption = 0.75
+								hidden_effect = { set_country_flag = xsm_can_have_cd }
+							}
+						}
+						else_if = {
+							limit = {
+								FROM = {
+									ai = no
+									full_idea_group = influence_ideas
+								}
+							}
+							FROM = {
+								add_adm_power = -25
+								add_mil_power = -25
+								add_corruption = 1.25
+								hidden_effect = { set_country_flag = xsm_can_have_cd }
+							}
+						}
+						else_if = {
+							limit = { FROM = { ai = no } }
+							FROM = {
+								add_adm_power = -45
+								add_mil_power = -45
+								add_corruption = 2.5
+								hidden_effect = { set_country_flag = xsm_can_have_cd }
+							}
+						}
+						custom_tooltip = xsm_blc_space_tt
+					}
+					else = {
+
+					}
+				}
+			}
+			else_if = {
+				limit = { has_country_flag = xsm_events_set_mil_high@ROOT }
+				random_subject_country = {
+					limit = {
+						has_country_flag = xorme_overlord_subject@TAG
+						overlord = {
+							has_country_flag = xorme_subject_overlord@TAG
+						}
+					}
+					if = {
+						limit = { NOT = { has_country_modifier = xsm_mc_mil_high } }
+						add_country_modifier = {
+							name = xsm_mc_mil_high
+							duration = -1
+						}
+						if = {
+							limit = {
+								OR = {
+									has_country_modifier = xsm_mc_mil_max
+									has_country_modifier = xsm_mc_mil_com_balance
+									has_country_modifier = xsm_mc_com_high
+									has_country_modifier = xsm_mc_com_max
+								}
+							}
+							remove_country_modifier = xsm_mc_mil_max
+							remove_country_modifier = xsm_mc_mil_com_balance
+							remove_country_modifier = xsm_mc_com_high
+							remove_country_modifier = xsm_mc_com_max
+						}
+						if = {
+							limit = { FROM = { ai = yes} }
+							FROM = {
+								add_adm_power = -30
+								add_mil_power = -30
+								add_corruption = 0.5
+								hidden_effect = { set_country_flag = xsm_can_have_cd }
+							}
+						}
+						else_if = {
+							limit = {
+								FROM = {
+									ai = yes
+									full_idea_group = influence_ideas
+								}
+							}
+							FROM = {
+								add_adm_power = -15
+								add_mil_power = -15
+								add_corruption = 0.25
+								hidden_effect = { set_country_flag = xsm_can_have_cd }
+							}
+						}
+						else_if = {
+							limit = {
+								FROM = {
+									ai = no
+									full_idea_group = influence_ideas
+								}
+							}
+							FROM = {
+								add_adm_power = -15
+								add_mil_power = -15
+								add_corruption = 0.75
+								hidden_effect = { set_country_flag = xsm_can_have_cd }
+							}
+						}
+						else_if = {
+							limit = { FROM = { ai = no } }
+							FROM = {
+								add_adm_power = -30
+								add_mil_power = -30
+								add_corruption = 1.5
+								hidden_effect = { set_country_flag = xsm_can_have_cd }
+							}
+						}
+						custom_tooltip = xsm_blc_space_tt
+					}
+					else = {
+
+					}
+				}
+			}
+			else_if = {
+				limit = { has_country_flag = xsm_events_set_mil_com_balance@ROOT }
+				random_subject_country = {
+					limit = {
+						has_country_flag = xorme_overlord_subject@TAG
+						overlord = {
+							has_country_flag = xorme_subject_overlord@TAG
+						}
+					}
+					if = {
+						limit = { NOT = { has_country_modifier = xsm_mc_mil_com_balance } }
+						add_country_modifier = {
+							name = xsm_mc_mil_com_balance
+							duration = -1
+						}
+						if = {
+							limit = {
+								OR = {
+									has_country_modifier = xsm_mc_mil_max
+									has_country_modifier = xsm_mc_mil_high
+									has_country_modifier = xsm_mc_com_high
+									has_country_modifier = xsm_mc_com_max
+								}
+							}
+							remove_country_modifier = xsm_mc_mil_max
+							remove_country_modifier = xsm_mc_mil_high
+							remove_country_modifier = xsm_mc_com_high
+							remove_country_modifier = xsm_mc_com_max
+						}
+						if = {
+							limit = { FROM = { ai = yes} }
+							FROM = {
+								add_dip_power = -10
+								add_mil_power = -10
+								add_corruption = 1
+								hidden_effect = { set_country_flag = xsm_can_have_cd }
+							}
+						}
+						else_if = {
+							limit = {
+								FROM = {
+									ai = yes
+									full_idea_group = influence_ideas
+								}
+							}
+							FROM = {
+								add_adm_power = -5
+								add_mil_power = -5
+								add_corruption = 0.5
+								hidden_effect = { set_country_flag = xsm_can_have_cd }
+							}
+						}
+						else_if = {
+							limit = {
+								FROM = {
+									ai = no
+									full_idea_group = influence_ideas
+								}
+							}
+							FROM = {
+								add_adm_power = -5
+								add_mil_power = -5
+								add_corruption = 0.5
+								hidden_effect = { set_country_flag = xsm_can_have_cd }
+							}
+						}
+						else_if = {
+							limit = { FROM = { ai = no } }
+							FROM = {
+								add_dip_power = -10
+								add_mil_power = -10
+								add_corruption = 1
+								hidden_effect = { set_country_flag = xsm_can_have_cd }
+							}
+						}
+						custom_tooltip = xsm_blc_space_tt
+					}
+					else = {
+
+					}
+				}
+			}
+			else_if = {
+				limit = { has_country_flag = xsm_events_set_com_high@ROOT }
+				random_subject_country = {
+					limit = {
+						has_country_flag = xorme_overlord_subject@TAG
+						overlord = {
+							has_country_flag = xorme_subject_overlord@TAG
+						}
+					}
+					if = {
+						limit = { NOT = { has_country_modifier = xsm_mc_com_high } }
+						add_country_modifier = {
+							name = xsm_mc_com_high
+							duration = -1
+						}
+						if = {
+							limit = {
+								OR = {
+									has_country_modifier = xsm_mc_mil_max
+									has_country_modifier = xsm_mc_mil_high
+									has_country_modifier = xsm_mc_mil_com_balance
+									has_country_modifier = xsm_mc_com_max
+								}
+							}
+							remove_country_modifier = xsm_mc_mil_max
+							remove_country_modifier = xsm_mc_mil_high
+							remove_country_modifier = xsm_mc_mil_com_balance
+							remove_country_modifier = xsm_mc_com_max
+						}
+						if = {
+							limit = { FROM = { ai = yes} }
+							FROM = {
+								add_adm_power = -30
+								add_dip_power = -30
+								add_corruption = 0.5
+								hidden_effect = { set_country_flag = xsm_can_have_cd }
+							}
+						}
+						else_if = {
+							limit = {
+								FROM = {
+									ai = yes
+									full_idea_group = influence_ideas
+								}
+							}
+							FROM = {
+								add_adm_power = -15
+								add_mil_power = -15
+								add_corruption = 0.25
+								hidden_effect = { set_country_flag = xsm_can_have_cd }
+							}
+						}
+						else_if = {
+							limit = {
+								FROM = {
+									ai = no
+									full_idea_group = influence_ideas
+								}
+							}
+							FROM = {
+								add_adm_power = -15
+								add_mil_power = -15
+								add_corruption = 0.75
+								hidden_effect = { set_country_flag = xsm_can_have_cd }
+							}
+						}
+						else_if = {
+							limit = { FROM = { ai = no } }
+							FROM = {
+								add_adm_power = -30
+								add_dip_power = -30
+								add_corruption = 1.5
+								hidden_effect = { set_country_flag = xsm_can_have_cd }
+							}
+						}
+						custom_tooltip = xsm_blc_space_tt
+					}
+					else = {
+
+					}
+				}
+			}
+			else_if = {
+				limit = { has_country_flag = xsm_events_set_com_max@ROOT }
+				random_subject_country = {
+					limit = {
+						has_country_flag = xorme_overlord_subject@TAG
+						overlord = {
+							has_country_flag = xorme_subject_overlord@TAG
+						}
+					}
+					if = {
+						limit = { NOT = { has_country_modifier = xsm_mc_com_max } }
+						add_country_modifier = {
+							name = xsm_mc_com_max
+							duration = -1
+						}
+						if = {
+							limit = {
+								OR = {
+									has_country_modifier = xsm_mc_mil_max
+									has_country_modifier = xsm_mc_mil_high
+									has_country_modifier = xsm_mc_mil_com_balance
+									has_country_modifier = xsm_mc_com_high
+								}
+							}
+							remove_country_modifier = xsm_mc_mil_max
+							remove_country_modifier = xsm_mc_mil_high
+							remove_country_modifier = xsm_mc_mil_com_balance
+							remove_country_modifier = xsm_mc_com_high
+						}
+						if = {
+							limit = { FROM = { ai = yes} }
+							FROM = {
+								add_adm_power = -45
+								add_dip_power = -45
+								add_corruption = 1.5
+								hidden_effect = { set_country_flag = xsm_can_have_cd }
+							}
+						}
+						else_if = {
+							limit = {
+								FROM = {
+									ai = yes
+									full_idea_group = influence_ideas
+								}
+							}
+							FROM = {
+								add_adm_power = -25
+								add_mil_power = -25
+								add_corruption = 0.75
+								hidden_effect = { set_country_flag = xsm_can_have_cd }
+							}
+						}
+						else_if = {
+							limit = {
+								FROM = {
+									ai = no
+									full_idea_group = influence_ideas
+								}
+							}
+							FROM = {
+								add_adm_power = -25
+								add_mil_power = -25
+								add_corruption = 1.25
+								hidden_effect = { set_country_flag = xsm_can_have_cd }
+							}
+						}
+						else_if = {
+							limit = { FROM = { ai = no } }
+							FROM = {
+								add_adm_power = -45
+								add_dip_power = -45
+								add_corruption = 2.5
+								hidden_effect = { set_country_flag = xsm_can_have_cd }
+							}
+						}
+						custom_tooltip = xsm_blc_space_tt
+					}
+					else = {
+
+					}
+				}
+			}
+			else = {
+
+			}
+		}
+		#Quantity <-> Quality | APP
+		if = {
+			limit = {
+				OR = {
+					has_country_flag = xsm_events_set_qq_qal_max@ROOT
+					has_country_flag = xsm_events_set_qq_qal_high@ROOT
+					has_country_flag = xsm_events_set_qq_balance@ROOT
+					has_country_flag = xsm_events_set_qq_quan_high@ROOT
+					has_country_flag = xsm_events_set_qq_quan_max@ROOT
+				}
+			}
+			if = {
+				limit = { has_country_flag = xsm_events_set_qq_qal_max@ROOT }
+				random_subject_country = {
+					limit = {
+						has_country_flag = xorme_overlord_subject@TAG
+						overlord = {
+							has_country_flag = xorme_subject_overlord@TAG
+						}
+					}
+					if = {
+						limit = { NOT = { has_country_modifier = xsm_qq_qal_max } }
+						add_country_modifier = {
+							name = xsm_qq_qal_max
+							duration = -1
+						}
+						if = {
+							limit = {
+								OR = {
+									has_country_modifier = xsm_qq_qal_high
+									has_country_modifier = xsm_qq_balance
+									has_country_modifier = xsm_qq_quan_high
+									has_country_modifier = xsm_qq_quan_max
+								}
+							}
+							remove_country_modifier = xsm_qq_qal_high
+							remove_country_modifier = xsm_qq_balance
+							remove_country_modifier = xsm_qq_quan_high
+							remove_country_modifier = xsm_qq_quan_max
+						}
+						if = {
+							limit = { FROM = { ai = yes} }
+							FROM = {
+								add_adm_power = -50
+								add_mil_power = -75
+								add_corruption = 1.5
+								hidden_effect = { set_country_flag = xsm_can_have_cd }
+							}
+						}
+						else_if = {
+							limit = {
+								FROM = {
+									ai = yes
+									full_idea_group = influence_ideas
+								}
+							}
+							FROM = {
+								add_adm_power = -25
+								add_mil_power = -45
+								add_corruption = 0.75
+								hidden_effect = { set_country_flag = xsm_can_have_cd }
+							}
+						}
+						else_if = {
+							limit = {
+								FROM = {
+									ai = no
+									full_idea_group = influence_ideas
+								}
+							}
+							FROM = {
+								add_adm_power = -25
+								add_mil_power = -45
+								add_corruption = 1.25
+								hidden_effect = { set_country_flag = xsm_can_have_cd }
+							}
+						}
+						else_if = {
+							limit = { FROM = { ai = no } }
+							FROM = {
+								add_adm_power = -50
+								add_mil_power = -75
+								add_corruption = 2.5
+								hidden_effect = { set_country_flag = xsm_can_have_cd }
+							}
+						}
+						custom_tooltip = xsm_blc_space_tt
+					}
+					else = {
+
+					}
+				}
+			}
+			else_if = {
+				limit = { has_country_flag = xsm_events_set_qq_qal_high@ROOT }
+				random_subject_country = {
+					limit = {
+						has_country_flag = xorme_overlord_subject@TAG
+						overlord = {
+							has_country_flag = xorme_subject_overlord@TAG
+						}
+					}
+					if = {
+						limit = { NOT = { has_country_modifier = xsm_qq_qal_high } }
+						add_country_modifier = {
+							name = xsm_qq_qal_high
+							duration = -1
+						}
+						if = {
+							limit = {
+								OR = {
+									has_country_modifier = xsm_qq_qal_max
+									has_country_modifier = xsm_qq_balance
+									has_country_modifier = xsm_qq_quan_high
+									has_country_modifier = xsm_qq_quan_max
+								}
+							}
+							remove_country_modifier = xsm_qq_qal_max
+							remove_country_modifier = xsm_qq_balance
+							remove_country_modifier = xsm_qq_quan_high
+							remove_country_modifier = xsm_qq_quan_max
+						}
+						if = {
+							limit = { FROM = { ai = yes} }
+							FROM = {
+								add_adm_power = -25
+								add_mil_power = -50
+								add_corruption = 0.5
+								hidden_effect = { set_country_flag = xsm_can_have_cd }
+							}
+						}
+						else_if = {
+							limit = {
+								FROM = {
+									ai = yes
+									full_idea_group = influence_ideas
+								}
+							}
+							FROM = {
+								add_adm_power = -15
+								add_mil_power = -25
+								add_corruption = 0.25
+								hidden_effect = { set_country_flag = xsm_can_have_cd }
+							}
+						}
+						else_if = {
+							limit = {
+								FROM = {
+									ai = no
+									full_idea_group = influence_ideas
+								}
+							}
+							FROM = {
+								add_adm_power = -15
+								add_mil_power = -25
+								add_corruption = 0.75
+								hidden_effect = { set_country_flag = xsm_can_have_cd }
+							}
+						}
+						else_if = {
+							limit = { FROM = { ai = no } }
+							FROM = {
+								add_adm_power = -25
+								add_mil_power = -50
+								add_corruption = 1.5
+								hidden_effect = { set_country_flag = xsm_can_have_cd }
+							}
+						}
+						custom_tooltip = xsm_blc_space_tt
+					}
+					else = {
+
+					}
+				}
+			}
+			else_if = {
+				limit = { has_country_flag = xsm_events_set_qq_balance@ROOT }
+				random_subject_country = {
+					limit = {
+						has_country_flag = xorme_overlord_subject@TAG
+						overlord = {
+							has_country_flag = xorme_subject_overlord@TAG
+						}
+					}
+					if = {
+						limit = { NOT = { has_country_modifier = xsm_qq_balance } }
+						add_country_modifier = {
+							name = xsm_qq_balance
+							duration = -1
+						}
+						if = {
+							limit = {
+								OR = {
+									has_country_modifier = xsm_qq_qal_max
+									has_country_modifier = xsm_qq_qal_high
+									has_country_modifier = xsm_qq_quan_high
+									has_country_modifier = xsm_qq_quan_max
+								}
+							}
+							remove_country_modifier = xsm_qq_qal_max
+							remove_country_modifier = xsm_qq_qal_high
+							remove_country_modifier = xsm_qq_quan_high
+							remove_country_modifier = xsm_qq_quan_max
+						}
+						if = {
+							limit = { FROM = { ai = yes} }
+							FROM = {
+								add_adm_power = -25
+								add_mil_power = -25
+								add_corruption = 0.5
+								hidden_effect = { set_country_flag = xsm_can_have_cd }
+							}
+						}
+						else_if = {
+							limit = {
+								FROM = {
+									ai = yes
+									full_idea_group = influence_ideas
+								}
+							}
+							FROM = {
+								add_adm_power = -15
+								add_mil_power = -15
+								add_corruption = 0.25
+								hidden_effect = { set_country_flag = xsm_can_have_cd }
+							}
+						}
+						else_if = {
+							limit = {
+								FROM = {
+									ai = no
+									full_idea_group = influence_ideas
+								}
+							}
+							FROM = {
+								add_adm_power = -15
+								add_mil_power = -15
+								add_corruption = 0.5
+								hidden_effect = { set_country_flag = xsm_can_have_cd }
+							}
+						}
+						else_if = {
+							limit = { FROM = { ai = no } }
+							FROM = {
+								add_adm_power = -25
+								add_mil_power = -25
+								add_corruption = 1
+								hidden_effect = { set_country_flag = xsm_can_have_cd }
+							}
+						}
+						custom_tooltip = xsm_blc_space_tt
+					}
+					else = {
+
+					}
+				}
+			}
+			else_if = {
+				limit = { has_country_flag = xsm_events_set_qq_quan_high@ROOT }
+				random_subject_country = {
+					limit = {
+						has_country_flag = xorme_overlord_subject@TAG
+						overlord = {
+							has_country_flag = xorme_subject_overlord@TAG
+						}
+					}
+					if = {
+						limit = { NOT = { has_country_modifier = xsm_qq_quan_high } }
+						add_country_modifier = {
+							name = xsm_qq_quan_high
+							duration = -1
+						}
+						if = {
+							limit = {
+								OR = {
+									has_country_modifier = xsm_qq_qal_max
+									has_country_modifier = xsm_qq_qal_high
+									has_country_modifier = xsm_qq_balance
+									has_country_modifier = xsm_qq_quan_max
+								}
+							}
+							remove_country_modifier = xsm_qq_qal_max
+							remove_country_modifier = xsm_qq_qal_high
+							remove_country_modifier = xsm_qq_balance
+							remove_country_modifier = xsm_qq_quan_max
+						}
+						if = {
+							limit = { FROM = { ai = yes} }
+							FROM = {
+								add_adm_power = -25
+								add_mil_power = -50
+								add_corruption = 0.5
+								hidden_effect = { set_country_flag = xsm_can_have_cd }
+							}
+						}
+						else_if = {
+							limit = {
+								FROM = {
+									ai = yes
+									full_idea_group = influence_ideas
+								}
+							}
+							FROM = {
+								add_adm_power = -15
+								add_mil_power = -25
+								add_corruption = 0.25
+								hidden_effect = { set_country_flag = xsm_can_have_cd }
+							}
+						}
+						else_if = {
+							limit = {
+								FROM = {
+									ai = no
+									full_idea_group = influence_ideas
+								}
+							}
+							FROM = {
+								add_adm_power = -15
+								add_mil_power = -25
+								add_corruption = 0.75
+								hidden_effect = { set_country_flag = xsm_can_have_cd }
+							}
+						}
+						else_if = {
+							limit = { FROM = { ai = no } }
+							FROM = {
+								add_adm_power = -25
+								add_mil_power = -50
+								add_corruption = 1.5
+								hidden_effect = { set_country_flag = xsm_can_have_cd }
+							}
+						}
+						custom_tooltip = xsm_blc_space_tt
+					}
+					else = {
+
+					}
+				}
+			}
+			else_if = {
+				limit = { has_country_flag = xsm_events_set_qq_quan_max@ROOT }
+				random_subject_country = {
+					limit = {
+						has_country_flag = xorme_overlord_subject@TAG
+						overlord = {
+							has_country_flag = xorme_subject_overlord@TAG
+						}
+					}
+					if = {
+						limit = { NOT = { has_country_modifier = xsm_qq_quan_max } }
+						add_country_modifier = {
+							name = xsm_qq_quan_max
+							duration = -1
+						}
+						if = {
+							limit = {
+								OR = {
+									has_country_modifier = xsm_qq_qal_max
+									has_country_modifier = xsm_qq_qal_high
+									has_country_modifier = xsm_qq_balance
+									has_country_modifier = xsm_qq_quan_high
+								}
+							}
+							remove_country_modifier = xsm_qq_qal_max
+							remove_country_modifier = xsm_qq_qal_high
+							remove_country_modifier = xsm_qq_balance
+							remove_country_modifier = xsm_qq_quan_high
+						}
+						if = {
+							limit = { FROM = { ai = yes} }
+							FROM = {
+								add_adm_power = -50
+								add_mil_power = -75
+								add_corruption = 1.5
+								hidden_effect = { set_country_flag = xsm_can_have_cd }
+							}
+						}
+						else_if = {
+							limit = {
+								FROM = {
+									ai = yes
+									full_idea_group = influence_ideas
+								}
+							}
+							FROM = {
+								add_adm_power = -25
+								add_mil_power = -35
+								add_corruption = 0.75
+								hidden_effect = { set_country_flag = xsm_can_have_cd }
+							}
+						}
+						else_if = {
+							limit = {
+								FROM = {
+									ai = no
+									full_idea_group = influence_ideas
+								}
+							}
+							FROM = {
+								add_adm_power = -25
+								add_mil_power = -35
+								add_corruption = 1.25
+								hidden_effect = { set_country_flag = xsm_can_have_cd }
+							}
+						}
+						else_if = {
+							limit = { FROM = { ai = no } }
+							FROM = {
+								add_adm_power = -50
+								add_mil_power = -75
+								add_corruption = 2.5
+								hidden_effect = { set_country_flag = xsm_can_have_cd }
+							}
+						}
+						custom_tooltip = xsm_blc_space_tt
+					}
+					else = {
+
+					}
+				}
+			}
+			else = {
+
+			}
+		}
+		#Development <-> Expansion | APP
+		if = {
+			limit = {
+				full_idea_group = influence_ideas
+				OR = {
+					has_country_flag = xsm_events_set_de_dev_max@ROOT
+					has_country_flag = xsm_events_set_de_dev_high@ROOT
+					has_country_flag = xsm_events_set_de_dev_exp_balance@ROOT
+					has_country_flag = xsm_events_set_de_exp_high@ROOT
+					has_country_flag = xsm_events_set_de_exp_max@ROOT
+				}
+			}
+			if = {
+				limit = { has_country_flag = xsm_events_set_de_dev_max@ROOT }
+				random_subject_country = {
+					limit = {
+						has_country_flag = xorme_overlord_subject@TAG
+						overlord = {
+							has_country_flag = xorme_subject_overlord@TAG
+						}
+					}
+					if = {
+						limit = { NOT = { has_country_modifier = xsm_de_dev_max } }
+						add_country_modifier = {
+							name = xsm_de_dev_max
+							duration = -1
+						}
+						if = {
+							limit = {
+								OR = {
+									has_country_modifier = xsm_de_dev_high
+									has_country_modifier = xsm_de_dev_exp_balance
+									has_country_modifier = xsm_de_exp_high
+									has_country_modifier = xsm_de_exp_max
+								}
+							}
+							remove_country_modifier = xsm_de_dev_high
+							remove_country_modifier = xsm_de_dev_exp_balance
+							remove_country_modifier = xsm_de_exp_high
+							remove_country_modifier = xsm_de_exp_max
+						}
+						if = {
+							limit = { FROM = { ai = yes} }
+							FROM = {
+								add_adm_power = -35
+								add_dip_power = -35
+								add_mil_power = -35
+								add_corruption = 1.5
+								hidden_effect = { set_country_flag = xsm_can_have_cd }
+							}
+						}
+						if = {
+							limit = { FROM = { ai = no } }
+							FROM = {
+								add_adm_power = -35
+								add_dip_power = -35
+								add_mil_power = -35
+								add_corruption = 2.5
+								hidden_effect = { set_country_flag = xsm_can_have_cd }
+							}
+						}
+						custom_tooltip = xsm_blc_space_tt
+					}
+					else = {
+
+					}
+				}
+			}
+			else_if = {
+				limit = { has_country_flag = xsm_events_set_de_dev_high@ROOT }
+				random_subject_country = {
+					limit = {
+						has_country_flag = xorme_overlord_subject@TAG
+						overlord = {
+							has_country_flag = xorme_subject_overlord@TAG
+						}
+					}
+					if = {
+						limit = { NOT = { has_country_modifier = xsm_de_dev_high } }
+						add_country_modifier = {
+							name = xsm_de_dev_high
+							duration = -1
+						}
+						if = {
+							limit = {
+								OR = {
+									has_country_modifier = xsm_de_dev_max
+									has_country_modifier = xsm_de_dev_exp_balance
+									has_country_modifier = xsm_de_exp_high
+									has_country_modifier = xsm_de_exp_max
+								}
+							}
+							remove_country_modifier = xsm_de_dev_max
+							remove_country_modifier = xsm_de_dev_exp_balance
+							remove_country_modifier = xsm_de_exp_high
+							remove_country_modifier = xsm_de_exp_max
+						}
+						if = {
+							limit = { FROM = { ai = yes} }
+							FROM = {
+								add_adm_power = -25
+								add_dip_power = -25
+								add_mil_power = -25
+								add_corruption = 0.5
+								hidden_effect = { set_country_flag = xsm_can_have_cd }
+							}
+						}
+						if = {
+							limit = { FROM = { ai = no } }
+							FROM = {
+								add_adm_power = -25
+								add_dip_power = -25
+								add_mil_power = -25
+								add_corruption = 1.5
+								hidden_effect = { set_country_flag = xsm_can_have_cd }
+							}
+						}
+						custom_tooltip = xsm_blc_space_tt
+					}
+					else = {
+
+					}
+				}
+			}
+			else_if = {
+				limit = { has_country_flag = xsm_events_set_de_dev_exp_balance@ROOT }
+				random_subject_country = {
+					limit = {
+						has_country_flag = xorme_overlord_subject@TAG
+						overlord = {
+							has_country_flag = xorme_subject_overlord@TAG
+						}
+					}
+					if = {
+						limit = { NOT = { has_country_modifier = xsm_de_dev_exp_balance } }
+						add_country_modifier = {
+							name = xsm_de_dev_exp_balance
+							duration = -1
+						}
+						if = {
+							limit = {
+								OR = {
+									has_country_modifier = xsm_de_dev_max
+									has_country_modifier = xsm_de_dev_high
+									has_country_modifier = xsm_de_exp_high
+									has_country_modifier = xsm_de_exp_max
+								}
+							}
+							remove_country_modifier = xsm_de_dev_max
+							remove_country_modifier = xsm_de_dev_high
+							remove_country_modifier = xsm_de_exp_high
+							remove_country_modifier = xsm_de_exp_max
+						}
+						if = {
+							limit = { FROM = { ai = yes} }
+							FROM = {
+								add_adm_power = -10
+								add_dip_power = -10
+								add_mil_power = -10
+								hidden_effect = { set_country_flag = xsm_can_have_cd }
+							}
+						}
+						if = {
+							limit = { FROM = { ai = no } }
+							FROM = {
+								add_adm_power = -10
+								add_dip_power = -10
+								add_mil_power = -10
+								add_corruption = 1
+								hidden_effect = { set_country_flag = xsm_can_have_cd }
+							}
+						}
+						custom_tooltip = xsm_blc_space_tt
+					}
+					else = {
+
+					}
+				}
+			}
+			else_if = {
+				limit = { has_country_flag = xsm_events_set_de_exp_high@ROOT }
+				random_subject_country = {
+					limit = {
+						has_country_flag = xorme_overlord_subject@TAG
+						overlord = {
+							has_country_flag = xorme_subject_overlord@TAG
+						}
+					}
+					if = {
+						limit = { NOT = { has_country_modifier = xsm_de_exp_high } }
+						add_country_modifier = {
+							name = xsm_de_exp_high
+							duration = -1
+						}
+						if = {
+							limit = {
+								OR = {
+									has_country_modifier = xsm_de_dev_max
+									has_country_modifier = xsm_de_dev_high
+									has_country_modifier = xsm_de_dev_exp_balance
+									has_country_modifier = xsm_de_exp_max
+								}
+							}
+							remove_country_modifier = xsm_de_dev_max
+							remove_country_modifier = xsm_de_dev_high
+							remove_country_modifier = xsm_de_dev_exp_balance
+							remove_country_modifier = xsm_de_exp_max
+						}
+						if = {
+							limit = { FROM = { ai = yes} }
+							FROM = {
+								add_adm_power = -25
+								add_dip_power = -25
+								add_mil_power = -25
+								add_corruption = 0.5
+								hidden_effect = { set_country_flag = xsm_can_have_cd }
+							}
+						}
+						if = {
+							limit = { FROM = { ai = no } }
+							FROM = {
+								add_adm_power = -25
+								add_dip_power = -25
+								add_mil_power = -25
+								add_corruption = 1.5
+								hidden_effect = { set_country_flag = xsm_can_have_cd }
+							}
+						}
+						custom_tooltip = xsm_blc_space_tt
+					}
+					else = {
+
+					}
+				}
+			}
+			else_if = {
+				limit = { has_country_flag = xsm_events_set_de_exp_max@ROOT }
+				random_subject_country = {
+					limit = {
+						has_country_flag = xorme_overlord_subject@TAG
+						overlord = {
+							has_country_flag = xorme_subject_overlord@TAG
+						}
+					}
+					if = {
+						limit = { NOT = { has_country_modifier = xsm_de_exp_max } }
+						add_country_modifier = {
+							name = xsm_de_exp_max
+							duration = -1
+						}
+						if = {
+							limit = {
+								OR = {
+									has_country_modifier = xsm_de_dev_max
+									has_country_modifier = xsm_de_dev_high
+									has_country_modifier = xsm_de_dev_exp_balance
+									has_country_modifier = xsm_de_exp_high
+								}
+							}
+							remove_country_modifier = xsm_de_dev_max
+							remove_country_modifier = xsm_de_dev_high
+							remove_country_modifier = xsm_de_dev_exp_balance
+							remove_country_modifier = xsm_de_exp_high
+						}
+						if = {
+							limit = { FROM = { ai = yes} }
+							FROM = {
+								add_adm_power = -35
+								add_dip_power = -35
+								add_mil_power = -35
+								add_corruption = 1.5
+								hidden_effect = { set_country_flag = xsm_can_have_cd }
+							}
+						}
+						if = {
+							limit = { FROM = { ai = no } }
+							FROM = {
+								add_adm_power = -35
+								add_dip_power = -35
+								add_mil_power = -35
+								add_corruption = 2.5
+								hidden_effect = { set_country_flag = xsm_can_have_cd }
+							}
+						}
+						custom_tooltip = xsm_blc_space_tt
+					}
+					else = {
+
+					}
+				}
+			}
+			else = {
+
+			}
+		}
+		#CLEAN IT
+		hidden_effect = {
+			country_event = {
+				id = xsm_cleanup.1
+			}
+			clr_country_flag = uses_the_xsm
+		}
+		ai_chance = {
+			factor = 2
+		}
+	}
+	#EXIT
+	option = {
+		name = xsm_events_option.7.exit
+		hidden_effect = {
+			country_event = {
+				id = xsm_cleanup.1
+			}
+			clr_country_flag = uses_the_xsm
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+#Centralization <-> Decentralization (done)
+country_event = {
+	id = xsm_events.2
+	title = xsm_events.2.name
+	desc = xsm_events.2.desc
+	picture = NOBLE_ESTATE_DEMANDS_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_country_flag = xorme_subject_overlord@TAG
+	}
+
+	#V-HIGH
+	option = {
+		name = xsm_events_2_option.1
+		custom_tooltip =  xsm_events_2_option.1_tt
+		if = {
+			limit = {
+				OR = {
+					has_country_flag = xsm_events_set_centralization_level_VL@ROOT
+					has_country_flag = xsm_events_set_centralization_level_L@ROOT
+					has_country_flag = xsm_events_set_centralization_level_N@ROOT
+					has_country_flag = xsm_events_set_centralization_level_H@ROOT
+				}
+			}
+			set_country_flag = xsm_events_set_centralization_level_VH@ROOT
+			clr_country_flag = xsm_events_set_centralization_level_VL@ROOT
+			clr_country_flag = xsm_events_set_centralization_level_L@ROOT
+			clr_country_flag = xsm_events_set_centralization_level_N@ROOT
+			clr_country_flag = xsm_events_set_centralization_level_H@ROOT
+			hidden_effect = {
+				country_event = {
+					id = xsm_events.1
+				}
+			}
+		}
+		else = {
+			set_country_flag = xsm_events_set_centralization_level_VH@ROOT
+			hidden_effect = {
+				country_event = {
+					id = xsm_events.1
+				}
+			}
+		}
+		ai_chance = {
+			factor = 5
+			modifier = {
+				factor = 0
+				all_subject_country = {
+					liberty_desire = 35
+				}
+			}
+			modifier = {
+				factor = 3.0
+				all_subject_country = {
+					NOT = { liberty_desire = 15 }
+				}
+			}
+		}
+	}
+	#HIGH
+	option = {
+		name = xsm_events_2_option.2
+		custom_tooltip =  xsm_events_2_option.2_tt
+		if = {
+			limit = {
+				OR = {
+					has_country_flag = xsm_events_set_centralization_level_VL@ROOT
+					has_country_flag = xsm_events_set_centralization_level_L@ROOT
+					has_country_flag = xsm_events_set_centralization_level_N@ROOT
+					has_country_flag = xsm_events_set_centralization_level_VH@ROOT
+				}
+			}
+			set_country_flag = xsm_events_set_centralization_level_H@ROOT
+			clr_country_flag = xsm_events_set_centralization_level_VL@ROOT
+			clr_country_flag = xsm_events_set_centralization_level_L@ROOT
+			clr_country_flag = xsm_events_set_centralization_level_N@ROOT
+			clr_country_flag = xsm_events_set_centralization_level_VH@ROOT
+			hidden_effect = {
+				country_event = {
+					id = xsm_events.1
+				}
+			}
+		}
+		else = {
+			set_country_flag = xsm_events_set_centralization_level_H@ROOT
+			hidden_effect = {
+				country_event = {
+					id = xsm_events.1
+				}
+			}
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+	#NORMAL
+	option = {
+		name = xsm_events_2_option.3
+		custom_tooltip =  xsm_events_2_option.3_tt
+		if = {
+			limit = {
+				OR = {
+					has_country_flag = xsm_events_set_centralization_level_VL@ROOT
+					has_country_flag = xsm_events_set_centralization_level_L@ROOT
+					has_country_flag = xsm_events_set_centralization_level_H@ROOT
+					has_country_flag = xsm_events_set_centralization_level_VH@ROOT
+				}
+			}
+			set_country_flag = xsm_events_set_centralization_level_N@ROOT
+			clr_country_flag = xsm_events_set_centralization_level_VL@ROOT
+			clr_country_flag = xsm_events_set_centralization_level_L@ROOT
+			clr_country_flag = xsm_events_set_centralization_level_H@ROOT
+			clr_country_flag = xsm_events_set_centralization_level_VH@ROOT
+			hidden_effect = {
+				country_event = {
+					id = xsm_events.1
+				}
+			}
+		}
+		else = {
+			set_country_flag = xsm_events_set_centralization_level_N@ROOT
+			hidden_effect = {
+				country_event = {
+					id = xsm_events.1
+				}
+			}
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+	#LOW
+	option = {
+		name = xsm_events_2_option.4
+		custom_tooltip =  xsm_events_2_option.4_tt
+		if = {
+			limit = {
+				OR = {
+					has_country_flag = xsm_events_set_centralization_level_VL@ROOT
+					has_country_flag = xsm_events_set_centralization_level_N@ROOT
+					has_country_flag = xsm_events_set_centralization_level_H@ROOT
+					has_country_flag = xsm_events_set_centralization_level_VH@ROOT
+				}
+			}
+			set_country_flag = xsm_events_set_centralization_level_L@ROOT
+			clr_country_flag = xsm_events_set_centralization_level_VL@ROOT
+			clr_country_flag = xsm_events_set_centralization_level_N@ROOT
+			clr_country_flag = xsm_events_set_centralization_level_H@ROOT
+			clr_country_flag = xsm_events_set_centralization_level_VH@ROOT
+			hidden_effect = {
+				country_event = {
+					id = xsm_events.1
+				}
+			}
+		}
+		else = {
+			set_country_flag = xsm_events_set_centralization_level_L@ROOT
+			hidden_effect = {
+				country_event = {
+					id = xsm_events.1
+				}
+			}
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+	#V-LOW
+	option = {
+		name = xsm_events_2_option.5
+		custom_tooltip =  xsm_events_2_option.5_tt
+		if = {
+			limit = {
+				OR = {
+					has_country_flag = xsm_events_set_centralization_level_L@ROOT
+					has_country_flag = xsm_events_set_centralization_level_N@ROOT
+					has_country_flag = xsm_events_set_centralization_level_H@ROOT
+					has_country_flag = xsm_events_set_centralization_level_VH@ROOT
+				}
+			}
+			set_country_flag = xsm_events_set_centralization_level_VL@ROOT
+			clr_country_flag = xsm_events_set_centralization_level_L@ROOT
+			clr_country_flag = xsm_events_set_centralization_level_N@ROOT
+			clr_country_flag = xsm_events_set_centralization_level_H@ROOT
+			clr_country_flag = xsm_events_set_centralization_level_VH@ROOT
+			hidden_effect = {
+				country_event = {
+					id = xsm_events.1
+				}
+			}
+		}
+		else = {
+			set_country_flag = xsm_events_set_centralization_level_VL@ROOT
+			hidden_effect = {
+				country_event = {
+					id = xsm_events.1
+				}
+			}
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 10.0
+				all_subject_country = {
+					liberty_desire = 45
+				}
+			}
+			modifier = {
+				factor = 100.0
+				all_subject_country = {
+					liberty_desire = 90
+				}
+			}
+			modifier = {
+				factor = 0
+				all_subject_country = {
+					NOT = { liberty_desire = 30 }
+				}
+			}
+		}
+	}
+	#GO BACK
+	option = {
+		name = xsm_events_go.back
+		hidden_effect = {
+			country_event = {
+				id = xsm_events.1
+			}
+		}
+	}
+}
+
+#Militarization <-> Commercialization (done)
+country_event = {
+	id = xsm_events.3
+	title = xsm_events.3.name
+	desc = xsm_events.3.desc
+	picture = NOBLE_ESTATE_DEMANDS_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_country_flag = xorme_subject_overlord@TAG
+	}
+
+	#MAX MIL FOCUS
+	option = {
+		name = xsm_events_3_option.1
+		custom_tooltip = xsm_events_3_option.1_tt
+		if = {
+			limit = {
+				OR = {
+					has_country_flag = xsm_events_set_mil_high@ROOT
+					has_country_flag = xsm_events_set_mil_com_balance@ROOT
+					has_country_flag = xsm_events_set_com_high@ROOT
+					has_country_flag = xsm_events_set_com_max@ROOT
+				}
+			}
+			set_country_flag = xsm_events_set_mil_max@ROOT
+			clr_country_flag = xsm_events_set_mil_high@ROOT
+			clr_country_flag = xsm_events_set_mil_com_balance@ROOT
+			clr_country_flag = xsm_events_set_com_high@ROOT
+			clr_country_flag = xsm_events_set_com_max@ROOT
+			hidden_effect = {
+				country_event = {
+					id = xsm_events.1
+				}
+			}
+		}
+		else = {
+			set_country_flag = xsm_events_set_mil_max@ROOT
+			hidden_effect = {
+				country_event = {
+					id = xsm_events.1
+				}
+			}
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+	#HIGH MIL FOCUS
+	option = {
+		name = xsm_events_3_option.2
+		custom_tooltip =  xsm_events_3_option.2_tt
+		if = {
+			limit = {
+				OR = {
+					has_country_flag = xsm_events_set_mil_max@ROOT
+					has_country_flag = xsm_events_set_mil_com_balance@ROOT
+					has_country_flag = xsm_events_set_com_high@ROOT
+					has_country_flag = xsm_events_set_com_max@ROOT
+				}
+			}
+			set_country_flag = xsm_events_set_mil_high@ROOT
+			clr_country_flag = xsm_events_set_mil_max@ROOT
+			clr_country_flag = xsm_events_set_mil_com_balance@ROOT
+			clr_country_flag = xsm_events_set_com_high@ROOT
+			clr_country_flag = xsm_events_set_com_max@ROOT
+			hidden_effect = {
+				country_event = {
+					id = xsm_events.1
+				}
+			}
+		}
+		else = {
+			set_country_flag = xsm_events_set_mil_high@ROOT
+			hidden_effect = {
+				country_event = {
+					id = xsm_events.1
+				}
+			}
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+	#MIL COM BALANCE
+	option = {
+		name = xsm_events_3_option.3
+		custom_tooltip =  xsm_events_3_option.3_tt
+		if = {
+			limit = {
+				OR = {
+					has_country_flag = xsm_events_set_mil_max@ROOT
+					has_country_flag = xsm_events_set_mil_high@ROOT
+					has_country_flag = xsm_events_set_com_high@ROOT
+					has_country_flag = xsm_events_set_com_max@ROOT
+				}
+			}
+			set_country_flag = xsm_events_set_mil_com_balance@ROOT
+			clr_country_flag = xsm_events_set_mil_max@ROOT
+			clr_country_flag = xsm_events_set_mil_high@ROOT
+			clr_country_flag = xsm_events_set_com_high@ROOT
+			clr_country_flag = xsm_events_set_com_max@ROOT
+			hidden_effect = {
+				country_event = {
+					id = xsm_events.1
+				}
+			}
+		}
+		else = {
+			set_country_flag = xsm_events_set_mil_com_balance@ROOT
+			hidden_effect = {
+				country_event = {
+					id = xsm_events.1
+				}
+			}
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+	#HIGH COM FOCUS
+	option = {
+		name = xsm_events_3_option.4
+		custom_tooltip =  xsm_events_3_option.4_tt
+		if = {
+			limit = {
+				OR = {
+					has_country_flag = xsm_events_set_mil_max@ROOT
+					has_country_flag = xsm_events_set_mil_high@ROOT
+					has_country_flag = xsm_events_set_mil_com_balance@ROOT
+					has_country_flag = xsm_events_set_com_max@ROOT
+				}
+			}
+			set_country_flag = xsm_events_set_com_high@ROOT
+			clr_country_flag = xsm_events_set_mil_max@ROOT
+			clr_country_flag = xsm_events_set_mil_high@ROOT
+			clr_country_flag = xsm_events_set_mil_com_balance@ROOT
+			clr_country_flag = xsm_events_set_com_max@ROOT
+			hidden_effect = {
+				country_event = {
+					id = xsm_events.1
+				}
+			}
+		}
+		else = {
+			set_country_flag = xsm_events_set_com_high@ROOT
+			hidden_effect = {
+				country_event = {
+					id = xsm_events.1
+				}
+			}
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+	#MAX COM FOCUS
+	option = {
+		name = xsm_events_3_option.5
+		custom_tooltip =  xsm_events_3_option.5_tt
+		if = {
+			limit = {
+				OR = {
+					has_country_flag = xsm_events_set_mil_max@ROOT
+					has_country_flag = xsm_events_set_mil_high@ROOT
+					has_country_flag = xsm_events_set_mil_com_balance@ROOT
+					has_country_flag = xsm_events_set_com_high@ROOT
+				}
+			}
+			set_country_flag = xsm_events_set_com_max@ROOT
+			clr_country_flag = xsm_events_set_mil_max@ROOT
+			clr_country_flag = xsm_events_set_mil_high@ROOT
+			clr_country_flag = xsm_events_set_mil_com_balance@ROOT
+			clr_country_flag = xsm_events_set_com_high@ROOT
+			hidden_effect = {
+				country_event = {
+					id = xsm_events.1
+				}
+			}
+		}
+		else = {
+			set_country_flag = xsm_events_set_com_max@ROOT
+			hidden_effect = {
+				country_event = {
+					id = xsm_events.1
+				}
+			}
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+	#GO BACK
+	option = {
+		name = xsm_events_go.back
+		hidden_effect = {
+			country_event = {
+				id = xsm_events.1
+			}
+		}
+	}
+}
+
+#Quantity <-> Quality (done)"
+country_event = {
+	id = xsm_events.4
+	title = xsm_events.4.name
+	desc = xsm_events.4.desc
+	picture = NOBLE_ESTATE_DEMANDS_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_country_flag = xorme_subject_overlord@TAG
+	}
+
+	#Max Quality
+	option = {
+		name = xsm_events_4_option.1
+		custom_tooltip =  xsm_events_4_option.1_tt
+		if = {
+			limit = {
+				OR = {
+					has_country_flag = xsm_events_set_qq_qal_high@ROOT
+					has_country_flag = xsm_events_set_qq_balance@ROOT
+					has_country_flag = xsm_events_set_qq_quan_high@ROOT
+					has_country_flag = xsm_events_set_qq_quan_max@ROOT
+				}
+			}
+			set_country_flag = xsm_events_set_qq_qal_max@ROOT
+			clr_country_flag = xsm_events_set_qq_qal_high@ROOT
+			clr_country_flag = xsm_events_set_qq_balance@ROOT
+			clr_country_flag = xsm_events_set_qq_quan_high@ROOT
+			clr_country_flag = xsm_events_set_qq_quan_max@ROOT
+			hidden_effect = {
+				country_event = {
+					id = xsm_events.1
+				}
+			}
+		}
+		else = {
+			set_country_flag = xsm_events_set_qq_qal_max@ROOT
+			hidden_effect = {
+				country_event = {
+					id = xsm_events.1
+				}
+			}
+		}
+		ai_chance = {
+			factor = 5
+		}
+	}
+	#High Quality
+	option = {
+		name = xsm_events_4_option.2
+		custom_tooltip =  xsm_events_4_option.2_tt
+		if = {
+			limit = {
+				OR = {
+					has_country_flag = xsm_events_set_qq_qal_max@ROOT
+					has_country_flag = xsm_events_set_qq_balance@ROOT
+					has_country_flag = xsm_events_set_qq_quan_high@ROOT
+					has_country_flag = xsm_events_set_qq_quan_max@ROOT
+				}
+			}
+			set_country_flag = xsm_events_set_qq_qal_high@ROOT
+			clr_country_flag = xsm_events_set_qq_qal_max@ROOT
+			clr_country_flag = xsm_events_set_qq_balance@ROOT
+			clr_country_flag = xsm_events_set_qq_quan_high@ROOT
+			clr_country_flag = xsm_events_set_qq_quan_max@ROOT
+			hidden_effect = {
+				country_event = {
+					id = xsm_events.1
+				}
+			}
+		}
+		else = {
+			set_country_flag = xsm_events_set_qq_qal_high@ROOT
+			hidden_effect = {
+				country_event = {
+					id = xsm_events.1
+				}
+			}
+		}
+		ai_chance = {
+			factor = 3
+		}
+	}
+	#Balance
+	option = {
+		name = xsm_events_4_option.3
+		if = {
+			limit = {
+				OR = {
+					has_country_flag = xsm_events_set_qq_qal_max@ROOT
+					has_country_flag = xsm_events_set_qq_qal_high@ROOT
+					has_country_flag = xsm_events_set_qq_quan_high@ROOT
+					has_country_flag = xsm_events_set_qq_quan_max@ROOT
+				}
+			}
+			set_country_flag = xsm_events_set_qq_balance@ROOT
+			clr_country_flag = xsm_events_set_qq_qal_max@ROOT
+			clr_country_flag = xsm_events_set_qq_qal_high@ROOT
+			clr_country_flag = xsm_events_set_qq_quan_high@ROOT
+			clr_country_flag = xsm_events_set_qq_quan_max@ROOT
+			hidden_effect = {
+				country_event = {
+					id = xsm_events.1
+				}
+			}
+		}
+		else = {
+			set_country_flag = xsm_events_set_qq_balance@ROOT
+			hidden_effect = {
+				country_event = {
+					id = xsm_events.1
+				}
+			}
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+	#High Quantity
+	option = {
+		name = xsm_events_4_option.4
+		custom_tooltip =  xsm_events_4_option.4_tt
+		if = {
+			limit = {
+				OR = {
+					has_country_flag = xsm_events_set_qq_qal_max@ROOT
+					has_country_flag = xsm_events_set_qq_qal_high@ROOT
+					has_country_flag = xsm_events_set_qq_balance@ROOT
+					has_country_flag = xsm_events_set_qq_quan_max@ROOT
+				}
+			}
+			set_country_flag = xsm_events_set_qq_quan_high@ROOT
+			clr_country_flag = xsm_events_set_qq_qal_max@ROOT
+			clr_country_flag = xsm_events_set_qq_qal_high@ROOT
+			clr_country_flag = xsm_events_set_qq_balance@ROOT
+			clr_country_flag = xsm_events_set_qq_quan_max@ROOT
+			hidden_effect = {
+				country_event = {
+					id = xsm_events.1
+				}
+			}
+		}
+		else = {
+			set_country_flag = xsm_events_set_qq_quan_high@ROOT
+			hidden_effect = {
+				country_event = {
+					id = xsm_events.1
+				}
+			}
+		}
+		ai_chance = {
+			factor = 3
+		}
+	}
+	#Max Quantity
+	option = {
+		name = xsm_events_4_option.5
+		custom_tooltip =  xsm_events_4_option.5_tt
+		if = {
+			limit = {
+				OR = {
+					has_country_flag = xsm_events_set_qq_qal_max@ROOT
+					has_country_flag = xsm_events_set_qq_qal_high@ROOT
+					has_country_flag = xsm_events_set_qq_balance@ROOT
+					has_country_flag = xsm_events_set_qq_quan_high@ROOT
+				}
+			}
+			set_country_flag = xsm_events_set_qq_quan_max@ROOT
+			clr_country_flag = xsm_events_set_qq_qal_max@ROOT
+			clr_country_flag = xsm_events_set_qq_qal_high@ROOT
+			clr_country_flag = xsm_events_set_qq_balance@ROOT
+			clr_country_flag = xsm_events_set_qq_quan_high@ROOT
+			hidden_effect = {
+				country_event = {
+					id = xsm_events.1
+				}
+			}
+		}
+		else = {
+			set_country_flag = xsm_events_set_qq_quan_max@ROOT
+			hidden_effect = {
+				country_event = {
+					id = xsm_events.1
+				}
+			}
+		}
+		ai_chance = {
+			factor = 5
+		}
+	}
+	#GO BACK
+	option = {
+		name = xsm_events_go.back
+		hidden_effect = {
+			country_event = {
+				id = xsm_events.1
+			}
+		}
+	}
+}
+
+#Development <-> Expansion (N)
+country_event = {
+	id = xsm_events.5
+	title = xsm_events.5.name
+	desc = xsm_events.5.desc
+	picture = NOBLE_ESTATE_DEMANDS_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_country_flag = xorme_subject_overlord@TAG
+	}
+
+	#M-DEV
+	option = {
+		name = xsm_events_5_option.1
+		custom_tooltip = xsm_events_5_option.1_tt
+		if = {
+			limit = {
+				OR = {
+					has_country_flag = xsm_events_set_de_dev_high@ROOT
+					has_country_flag = xsm_events_set_de_dev_exp_balance@ROOT
+					has_country_flag = xsm_events_set_de_exp_high@ROOT
+					has_country_flag = xsm_events_set_de_exp_max@ROOT
+				}
+			}
+			set_country_flag = xsm_events_set_de_dev_max@ROOT
+			clr_country_flag = xsm_events_set_de_dev_high@ROOT
+			clr_country_flag = xsm_events_set_de_dev_exp_balance@ROOT
+			clr_country_flag = xsm_events_set_de_exp_high@ROOT
+			clr_country_flag = xsm_events_set_de_exp_max@ROOT
+			hidden_effect = {
+				country_event = {
+					id = xsm_events.1
+				}
+			}
+		}
+		else = {
+			set_country_flag = xsm_events_set_de_dev_max@ROOT
+			hidden_effect = {
+				country_event = {
+					id = xsm_events.1
+				}
+			}
+		}
+		ai_chance = {
+			factor = 10
+		}
+	}
+	#H-DEV
+	option = {
+		name = xsm_events_5_option.2
+		custom_tooltip = xsm_events_5_option.2_tt
+		if = {
+			limit = {
+				OR = {
+					has_country_flag = xsm_events_set_de_dev_max@ROOT
+					has_country_flag = xsm_events_set_de_dev_exp_balance@ROOT
+					has_country_flag = xsm_events_set_de_exp_high@ROOT
+					has_country_flag = xsm_events_set_de_exp_max@ROOT
+				}
+			}
+			set_country_flag = xsm_events_set_de_dev_high@ROOT
+			clr_country_flag = xsm_events_set_de_dev_max@ROOT
+			clr_country_flag = xsm_events_set_de_dev_exp_balance@ROOT
+			clr_country_flag = xsm_events_set_de_exp_high@ROOT
+			clr_country_flag = xsm_events_set_de_exp_max@ROOT
+			hidden_effect = {
+				country_event = {
+					id = xsm_events.1
+				}
+			}
+		}
+		else = {
+			set_country_flag = xsm_events_set_de_dev_high@ROOT
+			hidden_effect = {
+				country_event = {
+					id = xsm_events.1
+				}
+			}
+		}
+		ai_chance = {
+			factor = 5
+		}
+	}
+	#BALANCE-DEV-EXP
+	option = {
+		name = xsm_events_5_option.3
+		custom_tooltip = xsm_events_5_option.3_tt
+		if = {
+			limit = {
+				OR = {
+					has_country_flag = xsm_events_set_de_dev_max@ROOT
+					has_country_flag = xsm_events_set_de_dev_high@ROOT
+					has_country_flag = xsm_events_set_de_exp_high@ROOT
+					has_country_flag = xsm_events_set_de_exp_max@ROOT
+				}
+			}
+			set_country_flag = xsm_events_set_de_dev_exp_balance@ROOT
+			clr_country_flag = xsm_events_set_de_dev_max@ROOT
+			clr_country_flag = xsm_events_set_de_dev_high@ROOT
+			clr_country_flag = xsm_events_set_de_exp_high@ROOT
+			clr_country_flag = xsm_events_set_de_exp_max@ROOT
+			hidden_effect = {
+				country_event = {
+					id = xsm_events.1
+				}
+			}
+		}
+		else = {
+			set_country_flag = xsm_events_set_de_dev_exp_balance@ROOT
+			hidden_effect = {
+				country_event = {
+					id = xsm_events.1
+				}
+			}
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+	#H-EXP
+	option = {
+		name = xsm_events_5_option.4
+		custom_tooltip = xsm_events_5_option.4_tt
+		if = {
+			limit = {
+				OR = {
+					has_country_flag = xsm_events_set_de_dev_max@ROOT
+					has_country_flag = xsm_events_set_de_dev_high@ROOT
+					has_country_flag = xsm_events_set_de_dev_exp_balance@ROOT
+					has_country_flag = xsm_events_set_de_exp_max@ROOT
+				}
+			}
+			set_country_flag = xsm_events_set_de_exp_high@ROOT
+			clr_country_flag = xsm_events_set_de_dev_max@ROOT
+			clr_country_flag = xsm_events_set_de_dev_high@ROOT
+			clr_country_flag = xsm_events_set_de_dev_exp_balance@ROOT
+			clr_country_flag = xsm_events_set_de_exp_max@ROOT
+			hidden_effect = {
+				country_event = {
+					id = xsm_events.1
+				}
+			}
+		}
+		else = {
+			set_country_flag = xsm_events_set_de_exp_high@ROOT
+			hidden_effect = {
+				country_event = {
+					id = xsm_events.1
+				}
+			}
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+	#M-EXP
+	option = {
+		name = xsm_events_5_option.5
+		custom_tooltip = xsm_events_5_option.5_tt
+		if = {
+			limit = {
+				OR = {
+					has_country_flag = xsm_events_set_de_dev_max@ROOT
+					has_country_flag = xsm_events_set_de_dev_high@ROOT
+					has_country_flag = xsm_events_set_de_dev_exp_balance@ROOT
+					has_country_flag = xsm_events_set_de_exp_high@ROOT
+				}
+			}
+			set_country_flag = xsm_events_set_de_exp_max@ROOT
+			clr_country_flag = xsm_events_set_de_dev_max@ROOT
+			clr_country_flag = xsm_events_set_de_dev_high@ROOT
+			clr_country_flag = xsm_events_set_de_dev_exp_balance@ROOT
+			clr_country_flag = xsm_events_set_de_exp_high@ROOT
+			hidden_effect = {
+				country_event = {
+					id = xsm_events.1
+				}
+			}
+		}
+		else = {
+			set_country_flag = xsm_events_set_de_exp_max@ROOT
+			hidden_effect = {
+				country_event = {
+					id = xsm_events.1
+				}
+			}
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+	#GO BACK
+	option = {
+		name = xsm_events_go.back
+		hidden_effect = {
+			country_event = {
+				id = xsm_events.1
+			}
+		}
+	}
+}
+
+#National Focus (done)
+country_event = {
+	id = xsm_events.6
+	title = xsm_events.6.name
+	desc = xsm_events.6.desc
+	picture = NOBLE_ESTATE_DEMANDS_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_country_flag = xorme_subject_overlord@TAG
+	}
+
+	#SET FOCUS - ADM
+	option = {
+		name = xsm_events_6_option.1
+		custom_tooltip = xsm_events_6_option.1_tt
+		if = {
+			limit = {
+				OR = {
+					has_country_flag = xsm_events_set_dip_focus@ROOT
+					has_country_flag = xsm_events_set_mil_focus@ROOT
+				}
+			}
+			set_country_flag = xsm_events_set_adm_focus@ROOT
+			clr_country_flag = xsm_events_set_mil_focus@ROOT
+			clr_country_flag = xsm_events_set_dip_focus@ROOT
+			hidden_effect = {
+				country_event = {
+					id = xsm_events.1
+				}
+			}
+		}
+		else = {
+			set_country_flag = xsm_events_set_adm_focus@ROOT
+			hidden_effect = {
+				country_event = {
+					id = xsm_events.1
+				}
+			}
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+	#SET FOCUS - DIP
+	option = {
+		name = xsm_events_6_option.2
+		custom_tooltip = xsm_events_6_option.2_tt
+		if = {
+			limit = {
+				OR = {
+					has_country_flag = xsm_events_set_adm_focus@ROOT
+					has_country_flag = xsm_events_set_mil_focus@ROOT
+				}
+			}
+			set_country_flag = xsm_events_set_dip_focus@ROOT
+			clr_country_flag = xsm_events_set_adm_focus@ROOT
+			clr_country_flag = xsm_events_set_mil_focus@ROOT
+			hidden_effect = {
+				country_event = {
+					id = xsm_events.1
+				}
+			}
+		}
+		else = {
+			set_country_flag = xsm_events_set_adm_focus@ROOT
+			hidden_effect = {
+				country_event = {
+					id = xsm_events.1
+				}
+			}
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+	#SET FOCUS - MIL
+	option = {
+		name = xsm_events_6_option.3
+		custom_tooltip = xsm_events_6_option.3_tt
+		if = {
+			limit = {
+				OR = {
+					has_country_flag = xsm_events_set_adm_focus@ROOT
+					has_country_flag = xsm_events_set_dip_focus@ROOT
+				}
+			}
+			set_country_flag = xsm_events_set_mil_focus@ROOT
+			clr_country_flag = xsm_events_set_adm_focus@ROOT
+			clr_country_flag = xsm_events_set_dip_focus@ROOT
+			hidden_effect = {
+				country_event = {
+					id = xsm_events.1
+				}
+			}
+		}
+		else = {
+			set_country_flag = xsm_events_set_mil_focus@ROOT
+			hidden_effect = {
+				country_event = {
+					id = xsm_events.1
+				}
+			}
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+	#GO BACK
+	option = {
+		name = xsm_events_go.back
+		hidden_effect = {
+			country_event = {
+				id = xsm_events.1
+			}
+		}
+	}
+}

@@ -1,0 +1,295 @@
+edict_encourage_development = {
+	potential = {
+		NOT = {
+			FROM = {
+				all_province_in_state = {
+					OR = {
+						has_building = town_hall
+						has_building = government_lvl_3
+						has_building = government_lvl_4
+					}
+				}
+			}
+		}
+	}
+
+	allow = {
+		if = {
+			limit = { ROOT = { ai = yes } }
+			ROOT = {
+				is_at_war = no
+				has_country_modifier = xorme_ai_valid_nation
+			}
+		}
+		else = {
+			custom_trigger_tooltip = {
+				tooltip = disable_state_edicts_active.tooltip
+				ROOT = {
+					NOT = {
+						has_country_flag = disable_state_edicts_active
+					}
+				}
+				always = yes
+			}
+		}
+	}
+
+	modifier = {
+		local_development_cost = -0.05
+		local_state_maintenance_modifier = 0.5
+	}
+
+	color = {  244 184 12  }
+
+
+	ai_will_do = {
+		factor = 10.0
+		modifier = {
+			factor = 10.0
+			all_province_in_state = {
+				is_city = yes
+			}
+		}
+		modifier = {
+			factor = 10.0
+			any_province_in_state = {
+				is_capital = yes
+			}
+		}
+		modifier = {
+			factor = 2.5
+			any_province_in_state = {
+				OR = {
+					trade_goods = coal
+					has_latent_trade_goods = coal
+				}
+			}
+		}
+	}
+
+}
+
+edict_encourage_development_2 = {
+	potential = {
+		FROM = {
+			all_province_in_state = {
+				OR = {
+					has_building = town_hall
+					has_building = government_lvl_3
+					has_building = government_lvl_4
+				}
+			}
+		}
+		NOT = {
+			FROM = {
+				all_province_in_state = {
+					OR = {
+						has_building = government_lvl_3
+						has_building = government_lvl_4
+					}
+				}
+			}
+		}
+	}
+
+	allow = {
+		if = {
+			limit = { ROOT = { ai = yes } }
+			ROOT = {
+				is_at_war = no
+				has_country_modifier = xorme_ai_valid_nation
+			}
+		}
+		else = {
+			custom_trigger_tooltip = {
+				tooltip = disable_state_edicts_active.tooltip
+				ROOT = {
+					NOT = {
+						has_country_flag = disable_state_edicts_active
+					}
+				}
+				always = yes
+			}
+		}
+	}
+
+	modifier = {
+		local_development_cost = -0.1
+		local_state_maintenance_modifier = 0.5
+
+	}
+
+	color = {  244 184 12  }
+
+
+	ai_will_do = {
+		factor = 10.0
+		modifier = {
+			factor = 10.0
+			all_province_in_state = {
+				is_city = yes
+			}
+		}
+
+		modifier = {
+			factor = 10.0
+			any_province_in_state = {
+				is_capital = yes
+			}
+		}
+		modifier = {
+			factor = 2.0
+			any_province_in_state = {
+				OR = {
+					trade_goods = coal
+					has_latent_trade_goods = coal
+				}
+			}
+		}
+	}
+
+}
+
+edict_encourage_development_3 = {
+	potential = {
+		FROM = {
+			all_province_in_state = {
+				OR = {
+					has_building = government_lvl_3
+					has_building = government_lvl_4
+				}
+			}
+		}
+		NOT = {
+			FROM = {
+				all_province_in_state = {
+					OR = {
+						has_building = government_lvl_4
+					}
+				}
+			}
+		}
+	}
+
+	allow = {
+		if = {
+			limit = { ROOT = { ai = yes } }
+			ROOT = {
+				is_at_war = no
+				has_country_modifier = xorme_ai_valid_nation
+			}
+		}
+		else = {
+			custom_trigger_tooltip = {
+				tooltip = disable_state_edicts_active.tooltip
+				ROOT = {
+					NOT = {
+						has_country_flag = disable_state_edicts_active
+					}
+				}
+				always = yes
+			}
+		}
+	}
+
+	modifier = {
+		local_development_cost = -0.15
+		local_state_maintenance_modifier = 0.5
+
+	}
+
+	color = {  244 184 12  }
+
+
+	ai_will_do = {
+		factor = 10.0
+		modifier = {
+			factor = 10.0
+			all_province_in_state = {
+				is_city = yes
+			}
+		}
+
+		modifier = {
+			factor = 10.0
+			any_province_in_state = {
+				is_capital = yes
+			}
+		}
+		modifier = {
+			factor = 2.0
+			any_province_in_state = {
+				OR = {
+					trade_goods = coal
+					has_latent_trade_goods = coal
+				}
+			}
+		}
+	}
+
+}
+
+edict_encourage_development_4 = {
+	potential = {
+		FROM = {
+			all_province_in_state = {
+				has_building = government_lvl_4
+			}
+		}
+	}
+
+	allow = {
+		if = {
+			limit = { ROOT = { ai = yes } }
+			ROOT = {
+				is_at_war = no
+				has_country_modifier = xorme_ai_valid_nation
+			}
+		}
+		else = {
+			custom_trigger_tooltip = {
+				tooltip = disable_state_edicts_active.tooltip
+				ROOT = {
+					NOT = {
+						has_country_flag = disable_state_edicts_active
+					}
+				}
+				always = yes
+			}
+		}
+	}
+
+	modifier = {
+		local_development_cost = -0.20
+		local_state_maintenance_modifier = 0.5
+
+	}
+
+	color = {  244 184 12  }
+
+
+	ai_will_do = {
+		factor = 10.0
+		modifier = {
+			factor = 10.0
+			all_province_in_state = {
+				is_city = yes
+			}
+		}
+		modifier = {
+			factor = 4.5
+			any_province_in_state = {
+				is_capital = yes
+			}
+		}
+		modifier = {
+			factor = 2.0
+			any_province_in_state = {
+				OR = {
+					trade_goods = coal
+					has_latent_trade_goods = coal
+				}
+			}
+		}
+	}
+}

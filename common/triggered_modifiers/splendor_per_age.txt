@@ -1,0 +1,32 @@
+splendor_2_age = {
+    potential = {
+        current_age = age_of_reformation
+    }
+
+    trigger = {
+        current_age = age_of_reformation
+    }
+    monthly_splendor = -1
+}
+
+splendor_3_age = {
+    potential = {
+        current_age = age_of_absolutism
+    }
+
+    trigger = {
+        current_age = age_of_absolutism
+    }
+    monthly_splendor = -2
+}
+
+splendor_4_age = {
+    potential = {
+        current_age = age_of_revolutions
+    }
+
+    trigger = {
+        current_age = age_of_revolutions
+    }
+    monthly_splendor = -2
+}

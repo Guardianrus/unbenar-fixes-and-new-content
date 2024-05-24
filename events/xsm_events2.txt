@@ -1,0 +1,250 @@
+namespace = xsm_cleanup
+country_event = {
+	id = xsm_cleanup.1
+	title = "NONE"
+	desc = "NONE"
+	picture = "NONE"
+
+	hidden = yes
+	is_triggered_only = yes
+
+	trigger = {
+
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				has_country_flag = xsm_can_have_cd
+				ai = no
+			}
+			random_subject_country = {
+				limit = {
+					has_country_flag = xorme_overlord_subject@TAG
+				}
+				add_country_modifier = {
+					name = xsm_interaction_cd
+					duration = 365
+				}
+				clr_country_flag = uses_the_xsm
+			}
+		}
+		if = {
+			limit = {
+				has_country_flag = xsm_can_have_cd
+				ai = yes
+			}
+			add_corruption = -1.5
+			random_subject_country = {
+				limit = {
+					has_country_flag = xorme_overlord_subject@TAG
+				}
+				add_country_modifier = {
+					name = xsm_interaction_cd
+					duration = 3654
+				}
+				clr_country_flag = uses_the_xsm
+			}
+		}
+		else = {
+
+		}
+	}
+
+	after = {
+		clr_country_flag = xorme_subject_overlord@TAG
+		clr_country_flag = xsm_can_have_cd
+		random_subject_country = {
+			limit = { has_country_flag = xorme_overlord_subject@TAG }
+			clr_country_flag = xorme_overlord_subject@TAG
+		}
+		#CLR TEMP SELECTION FROM BEFORE
+		clr_country_flag = xsm_events_set_adm_focus@ROOT
+		clr_country_flag = xsm_events_set_dip_focus@ROOT
+		clr_country_flag = xsm_events_set_mil_focus@ROOT
+		#CEN-DEC
+		clr_country_flag = xsm_events_set_centralization_level_VH@ROOT
+		clr_country_flag = xsm_events_set_centralization_level_VL@ROOT
+		clr_country_flag = xsm_events_set_centralization_level_L@ROOT
+		clr_country_flag = xsm_events_set_centralization_level_N@ROOT
+		clr_country_flag = xsm_events_set_centralization_level_H@ROOT
+		#MIL-CEN
+		clr_country_flag = xsm_events_set_mil_max@ROOT
+		clr_country_flag = xsm_events_set_mil_high@ROOT
+		clr_country_flag = xsm_events_set_mil_com_balance@ROOT
+		clr_country_flag = xsm_events_set_com_high@ROOT
+		clr_country_flag = xsm_events_set_com_max@ROOT
+		#DEV-EXP
+		clr_country_flag = xsm_events_set_de_dev_max@ROOT
+		clr_country_flag = xsm_events_set_de_dev_high@ROOT
+		clr_country_flag = xsm_events_set_de_dev_exp_balance@ROOT
+		clr_country_flag = xsm_events_set_de_exp_high@ROOT
+		clr_country_flag = xsm_events_set_de_exp_max@ROOT
+		#QAL-QUAN
+		clr_country_flag = xsm_events_set_qq_qal_max@ROOT
+		clr_country_flag = xsm_events_set_qq_qal_high@ROOT
+		clr_country_flag = xsm_events_set_qq_balance@ROOT
+		clr_country_flag = xsm_events_set_qq_quan_high@ROOT
+		clr_country_flag = xsm_events_set_qq_quan_max@ROOT
+	}
+
+	option = {
+	}
+}
+
+country_event = {
+	id = xsm_cleanup.2
+	title = "NONE"
+	desc = "NONE"
+	picture = "NONE"
+
+	hidden = yes
+	is_triggered_only = yes
+
+	trigger = {
+
+	}
+
+	immediate = {
+		#CLR TEMP SELECTION FROM BEFORE
+		clr_country_flag = xsm_events_set_adm_focus@ROOT
+		clr_country_flag = xsm_events_set_dip_focus@ROOT
+		clr_country_flag = xsm_events_set_mil_focus@ROOT
+		#CEN-DEC
+		clr_country_flag = xsm_events_set_centralization_level_VH@ROOT
+		clr_country_flag = xsm_events_set_centralization_level_VL@ROOT
+		clr_country_flag = xsm_events_set_centralization_level_L@ROOT
+		clr_country_flag = xsm_events_set_centralization_level_N@ROOT
+		clr_country_flag = xsm_events_set_centralization_level_H@ROOT
+		#MIL-CEN
+		clr_country_flag = xsm_events_set_mil_max@ROOT
+		clr_country_flag = xsm_events_set_mil_high@ROOT
+		clr_country_flag = xsm_events_set_mil_com_balance@ROOT
+		clr_country_flag = xsm_events_set_com_high@ROOT
+		clr_country_flag = xsm_events_set_com_max@ROOT
+		#DEV-EXP
+		clr_country_flag = xsm_events_set_de_dev_max@ROOT
+		clr_country_flag = xsm_events_set_de_dev_high@ROOT
+		clr_country_flag = xsm_events_set_de_dev_exp_balance@ROOT
+		clr_country_flag = xsm_events_set_de_exp_high@ROOT
+		clr_country_flag = xsm_events_set_de_exp_max@ROOT
+		#QAL-QUAN
+		clr_country_flag = xsm_events_set_qq_qal_max@ROOT
+		clr_country_flag = xsm_events_set_qq_qal_high@ROOT
+		clr_country_flag = xsm_events_set_qq_balance@ROOT
+		clr_country_flag = xsm_events_set_qq_quan_high@ROOT
+		clr_country_flag = xsm_events_set_qq_quan_max@ROOT
+		#MODFIERS
+		#SET NULL
+		set_country_flag = xsm_reset
+	}
+
+	after = {
+		country_event = {
+			id = xsm_events.1
+		}
+	}
+
+	option = {
+	}
+}
+
+country_event = {
+	id = xsm_cleanup.3
+	title = "NONE"
+	desc = "NONE"
+	picture = "NONE"
+
+	hidden = yes
+
+	trigger = {
+		NOT = { has_country_flag = uses_the_xsm }
+		OR = {
+			is_subject = no
+			is_subject_of_type = tributary_state
+		}
+		OR = {
+			has_country_modifier = xsm_subject_centralization_VL
+			has_country_modifier = xsm_subject_centralization_L
+			has_country_modifier = xsm_subject_centralization_N
+			has_country_modifier = xsm_subject_centralization_H
+			has_country_modifier = xsm_subject_centralization_VH
+			has_country_modifier = xsm_mc_mil_max
+			has_country_modifier = xsm_mc_mil_high
+			has_country_modifier = xsm_mc_mil_com_balance
+			has_country_modifier = xsm_mc_com_high
+			has_country_modifier = xsm_mc_com_max
+			has_country_modifier = xsm_qq_qal_max
+			has_country_modifier = xsm_qq_qal_high
+			has_country_modifier = xsm_qq_balance
+			has_country_modifier = xsm_qq_quan_high
+			has_country_modifier = xsm_qq_quan_max
+			has_country_modifier = xsm_de_dev_max
+			has_country_modifier = xsm_de_dev_high
+			has_country_modifier = xsm_de_dev_exp_balance
+			has_country_modifier = xsm_de_exp_high
+			has_country_modifier = xsm_de_exp_max
+		}
+	}
+
+	immediate = {
+		#CLR TEMP SELECTION FROM BEFORE
+		clr_country_flag = xsm_events_set_adm_focus@ROOT
+		clr_country_flag = xsm_events_set_dip_focus@ROOT
+		clr_country_flag = xsm_events_set_mil_focus@ROOT
+		#CEN-DEC
+		clr_country_flag = xsm_events_set_centralization_level_VH@ROOT
+		clr_country_flag = xsm_events_set_centralization_level_VL@ROOT
+		clr_country_flag = xsm_events_set_centralization_level_L@ROOT
+		clr_country_flag = xsm_events_set_centralization_level_N@ROOT
+		clr_country_flag = xsm_events_set_centralization_level_H@ROOT
+		#MIL-CEN
+		clr_country_flag = xsm_events_set_mil_max@ROOT
+		clr_country_flag = xsm_events_set_mil_high@ROOT
+		clr_country_flag = xsm_events_set_mil_com_balance@ROOT
+		clr_country_flag = xsm_events_set_com_high@ROOT
+		clr_country_flag = xsm_events_set_com_max@ROOT
+		#DEV-EXP
+		clr_country_flag = xsm_events_set_de_dev_max@ROOT
+		clr_country_flag = xsm_events_set_de_dev_high@ROOT
+		clr_country_flag = xsm_events_set_de_dev_exp_balance@ROOT
+		clr_country_flag = xsm_events_set_de_exp_high@ROOT
+		clr_country_flag = xsm_events_set_de_exp_max@ROOT
+		#QAL-QUAN
+		clr_country_flag = xsm_events_set_qq_qal_max@ROOT
+		clr_country_flag = xsm_events_set_qq_qal_high@ROOT
+		clr_country_flag = xsm_events_set_qq_balance@ROOT
+		clr_country_flag = xsm_events_set_qq_quan_high@ROOT
+		clr_country_flag = xsm_events_set_qq_quan_max@ROOT
+		#RMV
+		remove_country_modifier = xsm_subject_centralization_VL
+		remove_country_modifier = xsm_subject_centralization_L
+		remove_country_modifier = xsm_subject_centralization_N
+		remove_country_modifier = xsm_subject_centralization_H
+		remove_country_modifier = xsm_subject_centralization_VH
+		remove_country_modifier = xsm_mc_mil_max
+		remove_country_modifier = xsm_mc_mil_high
+		remove_country_modifier = xsm_mc_mil_com_balance
+		remove_country_modifier = xsm_mc_com_high
+		remove_country_modifier = xsm_mc_com_max
+		remove_country_modifier = xsm_qq_qal_max
+		remove_country_modifier = xsm_qq_qal_high
+		remove_country_modifier = xsm_qq_balance
+		remove_country_modifier = xsm_qq_quan_high
+		remove_country_modifier = xsm_qq_quan_max
+		remove_country_modifier = xsm_de_dev_max
+		remove_country_modifier = xsm_de_dev_high
+		remove_country_modifier = xsm_de_dev_exp_balance
+		remove_country_modifier = xsm_de_exp_high
+		remove_country_modifier = xsm_de_exp_max
+	}
+
+	after = {
+		country_event = {
+			id = xsm_events.1
+		}
+	}
+
+	option = {
+}
+}

@@ -1,0 +1,36 @@
+steal_dev_cost = {
+	category = covert
+
+	alert_index = 42
+	alert_tooltip = demand_dummy_alert_tooltip
+
+	require_acceptance = no
+
+	is_visible = {
+		has_idea = audit_checks
+	}
+
+	is_allowed = {
+		has_spy_network_in = {
+			who = FROM
+			value = 100
+		}
+	}
+	on_accept = {
+		add_spy_network_in = {
+			who = FROM
+			value = -100
+		}
+		add_country_modifier = {
+			name = steal_dev_cost_modifier
+			duration = 3650
+		}
+	}
+
+	ai_acceptance = { # This works similarly to variable_arithmetic_trigger, but does not support triggers generally. Instead, "limit" will be evaluated first and the rest ignored if it isn't passed.
+	}
+
+	ai_will_do = { # this is a trigger
+		always = yes
+	}
+}

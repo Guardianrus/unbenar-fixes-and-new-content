@@ -1,0 +1,81 @@
+amldihr_dutch_republic = {
+	rank = {
+		1 = DWARVEN_CLAN
+		2 = DWARVEN_KINGDOM
+		3 = DWARVEN_EMPIRE
+	}
+	
+	ruler_male = {
+		1 = PETTY_KING
+		2 = CROWN_KING
+		3 = HIGH_KING
+	}
+	
+	ruler_female = {
+		1 = PETTY_QUEEN
+		2 = CROWN_QUEEN
+		3 = HIGH_QUEEN
+	}
+	consort_male  = {
+		1 = KING_CONSORT
+		2 = KING_CONSORT
+		3 = KING_CONSORT
+	}
+
+	consort_female = {
+		1 = QUEEN_CONSORT
+		2 = QUEEN_CONSORT
+		3 = QUEEN_CONSORT
+	}
+
+	trigger = {
+		has_reform = amldihr_dutch_republic_reform
+	}
+}
+
+amldihr_high_monarchy_reform = {
+	rank = {
+		1 = DWARVEN_CLAN
+		2 = DWARVEN_KINGDOM
+		3 = DWARVEN_EMPIRE
+	}
+	
+	ruler_male = {
+		1 = PETTY_KING
+		2 = CROWN_KING
+		3 = HIGH_KING
+	}
+	
+	ruler_female = {
+		1 = PETTY_QUEEN
+		2 = CROWN_QUEEN
+		3 = HIGH_QUEEN
+	}
+	consort_male  = {
+		1 = KING_CONSORT
+		2 = KING_CONSORT
+		3 = KING_CONSORT
+	}
+
+	consort_female = {
+		1 = QUEEN_CONSORT
+		2 = QUEEN_CONSORT
+		3 = QUEEN_CONSORT
+	}
+
+	heir_male = {
+		1 = HEIR
+		2 = HEIR
+		3 = HEIR
+	}
+
+	heir_female = {
+		1 = HEIR_fem
+		2 = HEIR_fem
+		3 = HEIR_fem
+	}
+
+	trigger = {
+		has_reform = amldihr_high_monarchy_reform
+	}
+}

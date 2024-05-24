@@ -1,0 +1,37 @@
+# Leader Traits
+# Leaders can have 1 personality, chance of getting a new one is:
+#  <base chance> * <army tradition gained in battle>
+# Modifiers apply only to the stack lead by the leader.
+
+###############################################
+# General Traits
+###############################################
+
+War_Rune_Mage_general_personality = {
+	allow = {
+		always = no			# cannot have them naturally
+	}
+	siege_ability = 0.10
+	shock_damage_received = -0.05
+	fire_damage_received = -0.05
+	movement_speed = -0.10
+}
+
+DA_Mithradum_war_mage = {
+	allow = {
+		always = no			# cannot have them naturally
+	}
+	discipline = 0.05
+	siege_ability = 0.1
+	morale_damage_received = -0.05
+	movement_speed = -0.05
+}
+
+War_Rune_Mage_admiral_personality = {
+	allow = {
+		always = no 		# cannot have them naturally
+	}
+	heavy_ship_hull_size_modifier = 0.10
+	ship_durability = 0.05
+	naval_attrition = -0.15
+}

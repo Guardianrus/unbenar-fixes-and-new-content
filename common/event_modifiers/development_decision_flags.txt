@@ -1,0 +1,13 @@
+#for dev decision for ai cooldown
+
+dev_sum_clicks_decision_tapped = {
+
+}
+
+dev_dev_passive_decision_tapped = {
+
+}
+
+dev_lose_decision_tapped = {
+
+}

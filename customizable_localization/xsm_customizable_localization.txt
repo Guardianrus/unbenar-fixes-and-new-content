@@ -1,0 +1,463 @@
+#CUR SELECTION
+defined_text = {
+    name = GetXSMFocus
+	random = no
+
+    text = {
+        localisation_key = GetXSMFocusADM
+		trigger = {
+			has_country_flag = xsm_events_set_adm_focus@ROOT
+		}
+    }
+	text = {
+        localisation_key = GetXSMFocusDIP
+		trigger = {
+			has_country_flag = xsm_events_set_dip_focus@ROOT
+		}
+    }
+	text = {
+		 localisation_key = GetXSMFocusMIL
+		trigger = {
+			has_country_flag = xsm_events_set_mil_focus@ROOT
+		}
+	}
+	text = {
+		localisation_key = GetXSMFocusNONE
+	   trigger = {
+		   NOT = {
+				OR = {
+					has_country_flag = xsm_events_set_adm_focus@ROOT
+					has_country_flag = xsm_events_set_dip_focus@ROOT
+					has_country_flag = xsm_events_set_mil_focus@ROOT
+				}
+		   }
+	   }
+   }
+}
+
+defined_text = {
+    name = GetXSMCentralization
+	random = no
+
+    text = {
+    localisation_key = GetXSMCentralizationVH
+		trigger = {
+			has_country_flag = xsm_events_set_centralization_level_VH@ROOT
+		}
+    }
+	text = {
+    localisation_key = GetXSMCentralizationH
+		trigger = {
+			has_country_flag = xsm_events_set_centralization_level_H@ROOT
+		}
+    }
+	text = {
+	localisation_key = GetXSMCentralizationN
+		trigger = {
+			has_country_flag = xsm_events_set_centralization_level_N@ROOT
+		}
+	}
+	text = {
+	localisation_key = GetXSMCentralizationL
+		trigger = {
+			has_country_flag = xsm_events_set_centralization_level_L@ROOT
+		}
+    }
+	text = {
+	localisation_key = GetXSMCentralizationVL
+		trigger = {
+			has_country_flag = xsm_events_set_centralization_level_VL@ROOT
+		}
+    }
+	text = {
+	localisation_key = GetXSMCentralizationNONE
+		trigger = {
+			NOT = {
+				OR = {
+					has_country_flag = xsm_events_set_centralization_level_VL@ROOT
+					has_country_flag = xsm_events_set_centralization_level_L@ROOT
+					has_country_flag = xsm_events_set_centralization_level_N@ROOT
+					has_country_flag = xsm_events_set_centralization_level_H@ROOT
+					has_country_flag = xsm_events_set_centralization_level_VH@ROOT
+				}
+			}
+		}
+    }
+}
+
+defined_text = {
+    name = GetXSMQQ
+	random = no
+
+    text = {
+    localisation_key = GetXSMQQ_Max_Quality
+		trigger = {
+			has_country_flag = xsm_events_set_qq_qal_max@ROOT
+		}
+    }
+	text = {
+    localisation_key = GetXSMQQ_High_Quality
+		trigger = {
+			has_country_flag = xsm_events_set_qq_qal_high@ROOT
+		}
+    }
+	text = {
+	localisation_key = GetXSMQQ_Balance
+		trigger = {
+			has_country_flag = xsm_events_set_qq_balance@ROOT
+		}
+	}
+	text = {
+	localisation_key = GetXSMQQ_High_Quantity
+		trigger = {
+			has_country_flag = xsm_events_set_qq_quan_high@ROOT
+		}
+    }
+	text = {
+	localisation_key = GetXSMQQ_Max_Quantity
+		trigger = {
+			has_country_flag = xsm_events_set_qq_quan_max@ROOT
+		}
+    }
+	text = {
+	localisation_key = GetXSMQQ_NONE
+		trigger = {
+			NOT = {
+				OR = {
+					has_country_flag = xsm_events_set_qq_qal_max@ROOT
+					has_country_flag = xsm_events_set_qq_qal_high@ROOT
+					has_country_flag = xsm_events_set_qq_balance@ROOT
+					has_country_flag = xsm_events_set_qq_quan_high@ROOT
+					has_country_flag = xsm_events_set_qq_quan_max@ROOT
+				}
+			}
+		}
+    }
+}
+
+defined_text = {
+    name = GetXSMMILCEN
+	random = no
+
+    text = {
+    localisation_key = GetXSMMILCEN_mil_max
+		trigger = {
+			has_country_flag = xsm_events_set_mil_max@ROOT
+		}
+    }
+	text = {
+    localisation_key = GetXSMMILCEN_mil_high
+		trigger = {
+			has_country_flag = xsm_events_set_mil_high@ROOT
+		}
+    }
+	text = {
+	localisation_key = GetXSMMILCEN_mil_cen_balance
+		trigger = {
+			has_country_flag = xsm_events_set_mil_com_balance@ROOT
+		}
+	}
+	text = {
+	localisation_key = GetXSMMILCEN_cen_high
+		trigger = {
+			has_country_flag = xsm_events_set_com_high@ROOT
+		}
+    }
+	text = {
+	localisation_key = GetXSMMILCEN_cen_max
+		trigger = {
+			has_country_flag = xsm_events_set_com_max@ROOT
+		}
+    }
+	text = {
+	localisation_key = GetXSMMILCEN_mil_cen_NONE
+		trigger = {
+			NOT = {
+				OR = {
+					has_country_flag = xsm_events_set_mil_max@ROOT
+					has_country_flag = xsm_events_set_mil_high@ROOT
+					has_country_flag = xsm_events_set_mil_com_balance@ROOT
+					has_country_flag = xsm_events_set_com_high@ROOT
+					has_country_flag = xsm_events_set_com_max@ROOT
+				}
+			}
+		}
+    }
+}
+
+defined_text = {
+    name = GetXSMDevExp
+	random = no
+
+	text = {
+	localisation_key = GetXSMDevExpNOInflu
+		trigger = {
+			NOT = { full_idea_group = influence_ideas }
+		}
+    }
+	text = {
+	localisation_key = GetXSMDevExpDevMax
+		trigger = {
+			has_country_flag = xsm_events_set_de_dev_max@ROOT
+		}
+    }
+	text = {
+	localisation_key = GetXSMDevExpDevHigh
+		trigger = {
+			has_country_flag = xsm_events_set_de_dev_high@ROOT
+		}
+    }
+	text = {
+	localisation_key = GetXSMDevExpDevExpMaxBalance
+		trigger = {
+			has_country_flag = xsm_events_set_de_dev_exp_balance@ROOT
+		}
+    }
+	text = {
+	localisation_key = GetXSMDevExpExpHigh
+		trigger = {
+			has_country_flag = xsm_events_set_de_exp_high@ROOT
+		}
+    }
+	text = {
+	localisation_key = GetXSMDevExpExpMax
+		trigger = {
+			has_country_flag = xsm_events_set_de_exp_max@ROOT
+		}
+    }
+	text = {
+	localisation_key = GetXSMDevExpDevExpMaxNONE
+		trigger = {
+			NOT = { has_country_flag = xsm_events_set_de_exp_max@ROOT }
+			NOT = { has_country_flag = xsm_events_set_de_exp_high@ROOT }
+			NOT = { has_country_flag = xsm_events_set_de_dev_exp_balance@ROOT }
+			NOT = { has_country_flag = xsm_events_set_de_dev_high@ROOT }
+			NOT = { has_country_flag = xsm_events_set_de_dev_max@ROOT }
+		}
+	}
+}
+
+#ACTIVE
+defined_text = {
+    name = GetXSMDevExpActive
+	random = no
+
+	text = {
+	localisation_key = GetXSMDevExpDevMaxActive
+		trigger = {
+			has_country_flag = xorme_subject_overlord@TAG
+			any_subject_country = {
+				has_country_flag = xorme_overlord_subject@TAG
+				has_country_modifier = xsm_de_dev_max
+			}
+		}
+    }
+	text = {
+	localisation_key = GetXSMDevExpDevHighActive
+		trigger = {
+			has_country_flag = xorme_subject_overlord@TAG
+			any_subject_country = {
+				has_country_flag = xorme_overlord_subject@TAG
+				has_country_modifier = xsm_de_dev_high
+			}
+		}
+    }
+	text = {
+	localisation_key = GetXSMDevExpDevExpMaxBalanceActive
+		trigger = {
+			has_country_flag = xorme_subject_overlord@TAG
+			any_subject_country = {
+				has_country_flag = xorme_overlord_subject@TAG
+				has_country_modifier = xsm_de_dev_exp_balance
+			}
+		}
+    }
+	text = {
+	localisation_key = GetXSMDevExpExpHighActive
+		trigger = {
+			has_country_flag = xorme_subject_overlord@TAG
+			any_subject_country = {
+				has_country_flag = xorme_overlord_subject@TAG
+				has_country_modifier = xsm_de_exp_high
+			}
+		}
+    }
+	text = {
+	localisation_key = GetXSMDevExpExpMaxActive
+		trigger = {
+			has_country_flag = xorme_subject_overlord@TAG
+			any_subject_country = {
+				has_country_flag = xorme_overlord_subject@TAG
+				has_country_modifier = xsm_de_exp_max
+			}
+		}
+	}
+}
+
+defined_text = {
+    name = GetXSMQQActive
+	random = no
+
+    text = {
+    localisation_key = GetXSMQQ_Max_QualityActive
+		trigger = {
+			has_country_flag = xorme_subject_overlord@TAG
+			any_subject_country = {
+				has_country_flag = xorme_overlord_subject@TAG
+				has_country_modifier = xsm_qq_qal_max
+			}
+		}
+    }
+	text = {
+    localisation_key = GetXSMQQ_High_QualityActive
+		trigger = {
+			has_country_flag = xorme_subject_overlord@TAG
+			any_subject_country = {
+				has_country_flag = xorme_overlord_subject@TAG
+				has_country_modifier = xsm_qq_qal_high
+			}
+		}
+    }
+	text = {
+	localisation_key = GetXSMQQ_BalanceActive
+		trigger = {
+			has_country_flag = xorme_subject_overlord@TAG
+			any_subject_country = {
+				has_country_flag = xorme_overlord_subject@TAG
+				has_country_modifier = xsm_qq_balance
+			}
+		}
+	}
+	text = {
+	localisation_key = GetXSMQQ_High_QuantityActive
+		trigger = {
+			has_country_flag = xorme_subject_overlord@TAG
+			any_subject_country = {
+				has_country_flag = xorme_overlord_subject@TAG
+				has_country_modifier = xsm_qq_quan_high
+			}
+		}
+    }
+	text = {
+	localisation_key = GetXSMQQ_Max_QuantityActive
+		trigger = {
+			has_country_flag = xorme_subject_overlord@TAG
+			any_subject_country = {
+				has_country_flag = xorme_overlord_subject@TAG
+				has_country_modifier = xsm_qq_quan_max
+			}
+		}
+    }
+}
+#
+defined_text = {
+    name = GetXSMCentralizationActive
+	random = no
+
+    text = {
+    localisation_key = GetXSMCentralizationVHActive
+		trigger = {
+			has_country_flag = xorme_subject_overlord@TAG
+			any_subject_country = {
+				has_country_flag = xorme_overlord_subject@TAG
+				has_country_modifier = xsm_subject_centralization_VH
+			}
+		}
+    }
+	text = {
+    localisation_key = GetXSMCentralizationHActive
+		trigger = {
+			has_country_flag = xorme_subject_overlord@TAG
+			any_subject_country = {
+				has_country_flag = xorme_overlord_subject@TAG
+				has_country_modifier = xsm_subject_centralization_H
+			}
+		}
+    }
+	text = {
+	localisation_key = GetXSMCentralizationNActive
+		trigger = {
+			has_country_flag = xorme_subject_overlord@TAG
+			any_subject_country = {
+				has_country_flag = xorme_overlord_subject@TAG
+				has_country_modifier = xsm_subject_centralization_N
+			}
+		}
+	}
+	text = {
+	localisation_key = GetXSMCentralizationLActive
+		trigger = {
+			has_country_flag = xorme_subject_overlord@TAG
+			any_subject_country = {
+				has_country_flag = xorme_overlord_subject@TAG
+				has_country_modifier = xsm_subject_centralization_L
+			}
+		}
+    }
+	text = {
+	localisation_key = GetXSMCentralizationVLActive
+		trigger = {
+			has_country_flag = xorme_subject_overlord@TAG
+			any_subject_country = {
+				has_country_flag = xorme_overlord_subject@TAG
+				has_country_modifier = xsm_subject_centralization_VL
+			}
+		}
+    }
+}
+#
+defined_text = {
+    name = GetXSMMILCENActive
+	random = no
+
+    text = {
+    localisation_key = GetXSMMILCEN_mil_maxActive
+		trigger = {
+			has_country_flag = xorme_subject_overlord@TAG
+			any_subject_country = {
+				has_country_flag = xorme_overlord_subject@TAG
+				has_country_modifier = xsm_mc_mil_max
+			}
+		}
+    }
+	text = {
+    localisation_key = GetXSMMILCEN_mil_highActive
+		trigger = {
+			has_country_flag = xorme_subject_overlord@TAG
+			any_subject_country = {
+				has_country_flag = xorme_overlord_subject@TAG
+				has_country_modifier = xsm_mc_mil_high
+			}
+		}
+    }
+	text = {
+	localisation_key = GetXSMMILCEN_mil_cen_balanceActive
+		trigger = {
+			has_country_flag = xorme_subject_overlord@TAG
+			any_subject_country = {
+				has_country_flag = xorme_overlord_subject@TAG
+				has_country_modifier = xsm_mc_mil_com_balance
+			}
+		}
+	}
+	text = {
+	localisation_key = GetXSMMILCEN_cen_highActive
+		trigger = {
+			has_country_flag = xorme_subject_overlord@TAG
+			any_subject_country = {
+				has_country_flag = xorme_overlord_subject@TAG
+				has_country_modifier = xsm_mc_com_high
+			}
+		}
+    }
+	text = {
+	localisation_key = GetXSMMILCEN_cen_maxActive
+		trigger = {
+			has_country_flag = xorme_subject_overlord@TAG
+			any_subject_country = {
+				has_country_flag = xorme_overlord_subject@TAG
+				has_country_modifier = xsm_mc_com_max
+			}
+		}
+    }
+}

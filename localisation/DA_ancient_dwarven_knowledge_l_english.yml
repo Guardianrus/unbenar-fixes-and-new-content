@@ -1,0 +1,614 @@
+﻿l_english:
+
+DA_Hold_exploration_workaround: "Hold exploration in progress"
+desc_DA_Hold_exploration_workaround: "We sent our expedition in the newly expanded dig level and are waiting for their news"
+DA_Hold_exploration_workaround: "Hold exploration in progress"
+DA_expedition_in_progress: "Expedition in progress"
+DA_ADK_expansion_in_progress: "Research Facility Construction in progress"
+DA_ADK_menu_cooldown: "Expedition cooldown"
+DA_rf_menu_in_use: "Research Facility in use"
+
+####################
+#Decisions
+####################
+
+DA_Dig_adk_1_title: " £ideas£ §GResearch Facility§! Menu"
+DA_Dig_adk_1_desc: "Build a §GResearch Facility§! on Your Holds' current explored Dig Level, starting from Dig Level 2\n\nA §GResearch Facility§! allows you to have unique events giving you §DAncient Dwarven Knowledge§! periodically, as your scientists, artificers and mages study the hold structure, retrieving and analyzing ancient blueprints, gadgets, runes, weapons and armors.\nThe amount of §DAncient Dwarven Knowledge§! we can create in these events §Gincreases§! based On §GResearch Facility§! Level\nThe §GResearch Facility§! require §Y100§! to §Y20000§! gold, based on Dig Level, to be built\nHigher levels of §GResearch Facility§! Unlock special abilities that use §DAncient Dwarven Knowledge§!.\n The chance to unlock said abilities increases with high §Gstability§! and §Dinnovativeness§!\n\nnote that the §GResearch Facility§! works as long as you mantain the same capital, if you move your capital to another hold you will have to rebuild it from scratch, but you will retain all the abilities you have unlocked so far.\n§DAncient Dwarven Knowledge§!: §H[Root.ancientDwarvenKnowledge.GetValue]§!"
+DA_capital_initial_rf: "has §Y100§! gold in treasury and Your capital hold has an already explored Dig Level 2 to build the first level (lvl2) of the §GResearch Facility§!\nOr you have already built a §GResearch Facility§! level 2"
+
+DA_capital_unexpanded_dig_level: "has §Y100§! to §Y20000§! gold in treasury, based on dig level\nYour capital hold has an already explored Dig Level, but you have yet to build a §GResearch Facility§! on it"
+
+DA_Dig_adk_Hold_exploration_title: " £attrition£ Holds Exploration"
+DA_Dig_adk_Hold_exploration_desc: "Explore Your Holds' Dig Level, starting from Dig Level 2\n\nIt is Possible to find §DAncient Dwarven Knowledge§!, §Ygold§!, resources, lost knowledge, ancient buildings and much more!\nWhat our exploration team can find §Gincreases§! based On Dig Level but §RPossible Dangers§! we can find along the way increases as well. Some Holds have unique events, which are triggered by exploration of certain Dig Levels, and can unlock a variety of different interactions.\nThe exploration team require §Y50§! to §Y10000§! gold, based on Dig Level.\n\nAfter having completely explored a dig level in your capital Hold you will be able to build a research §GResearch Facility§! on it\nThis also means that if your capital is not an Hold you will not be able to access the §GResearch Facility§! features"
+DA_Has_unexplored_dig_level_tooltip: "Has §Y50§! to §Y10000§! gold, based on Dig Level\nRequires an Hold with an unexplored Dig Level"
+DA_Exploration_menu_tooltip: "Hold Exploration Menu"
+
+####################
+# events
+####################
+
+# Research facility menu
+
+DA_Research_facility_menu.1.t: "Research Facility"
+DA_Research_facility_menu.1.d1: "§GResearch Facility§! Level: 1 (not built)\nWe have the project to Build the Capital §GResearch Facility§! on Dig Level 2, the only thing that is holding us back is a little bit of gold to finance the construction"
+
+DA_Research_facility_menu.1.d2: "§GResearch Facility§! Level: 2\n\nA §GResearch Facility§! allows you to have unique events giving you §DAncient Dwarven Knowledge§! periodically, as your scientists, artificers and mages study the hold structure, retrieving and analyzing ancient blueprints, gadgets, runes, weapons and armors.\nThe amount of §DAncient Dwarven Knowledge§! we can create in these events §Gincreases§! based On §GResearch Facility§! Level\nThe §GResearch Facility§! require §Y200§! to §Y20000§! gold, based on Dig Level, to be Expanded.\nHigher levels of §GResearch Facility§! Unlock special abilities that use §DAncient Dwarven Knowledge§!.\n The chance to unlock said abilities increases with high §Gstability§! and §Dinnovativeness§!\n\nnote that the §GResearch Facility§! works as long as you mantain the same capital, if you move your capital to another hold you will have to rebuild it from scratch, but you will retain all the abilities you have unlocked so far.\n§DAncient Dwarven Knowledge§!: [Root.ancientDwarvenKnowledge.GetValue]"
+
+DA_Research_facility_menu.1.d3: "§GResearch Facility§! Level: 3\n\nA §GResearch Facility§! allows you to have unique events giving you §DAncient Dwarven Knowledge§! periodically, as your scientists, artificers and mages study the hold structure, retrieving and analyzing ancient blueprints, gadgets, runes, weapons and armors.\nThe amount of §DAncient Dwarven Knowledge§! we can create in these events §Gincreases§! based On §GResearch Facility§! Level\nThe §GResearch Facility§! require §Y200§! to §Y20000§! gold, based on Dig Level, to be Expanded.\nHigher levels of §GResearch Facility§! Unlock special abilities that use §DAncient Dwarven Knowledge§!.\n The chance to unlock said abilities increases with high §Gstability§! and §Dinnovativeness§!\n\nnote that the §GResearch Facility§! works as long as you mantain the same capital, if you move your capital to another hold you will have to rebuild it from scratch, but you will retain all the abilities you have unlocked so far.\n§DAncient Dwarven Knowledge§!: [Root.ancientDwarvenKnowledge.GetValue]"
+
+DA_Research_facility_menu.1.d4: "§GResearch Facility§! Level: 4\n\nA §GResearch Facility§! allows you to have unique events giving you §DAncient Dwarven Knowledge§! periodically, as your scientists, artificers and mages study the hold structure, retrieving and analyzing ancient blueprints, gadgets, runes, weapons and armors.\nThe amount of §DAncient Dwarven Knowledge§! we can create in these events §Gincreases§! based On §GResearch Facility§! Level\nThe §GResearch Facility§! require §Y200§! to §Y20000§! gold, based on Dig Level, to be Expanded.\nHigher levels of §GResearch Facility§! Unlock special abilities that use §DAncient Dwarven Knowledge§!.\n The chance to unlock said abilities increases with high §Gstability§! and §Dinnovativeness§!\n\nnote that the §GResearch Facility§! works as long as you mantain the same capital, if you move your capital to another hold you will have to rebuild it from scratch, but you will retain all the abilities you have unlocked so far.\n§DAncient Dwarven Knowledge§!: [Root.ancientDwarvenKnowledge.GetValue]"
+
+DA_Research_facility_menu.1.d5: "§GResearch Facility§! Level: 5\n\nA §GResearch Facility§! allows you to have unique events giving you §DAncient Dwarven Knowledge§! periodically, as your scientists, artificers and mages study the hold structure, retrieving and analyzing ancient blueprints, gadgets, runes, weapons and armors.\nThe amount of §DAncient Dwarven Knowledge§! we can create in these events §Gincreases§! based On §GResearch Facility§! Level\nThe §GResearch Facility§! require §Y200§! to §Y20000§! gold, based on Dig Level, to be Expanded.\nHigher levels of §GResearch Facility§! Unlock special abilities that use §DAncient Dwarven Knowledge§!.\n The chance to unlock said abilities increases with high §Gstability§! and §Dinnovativeness§!\n\nnote that the §GResearch Facility§! works as long as you mantain the same capital, if you move your capital to another hold you will have to rebuild it from scratch, but you will retain all the abilities you have unlocked so far.\n§DAncient Dwarven Knowledge§!: [Root.ancientDwarvenKnowledge.GetValue]"
+
+DA_Research_facility_menu.1.d6: "§GResearch Facility§! Level: 6\n\nA §GResearch Facility§! allows you to have unique events giving you §DAncient Dwarven Knowledge§! periodically, as your scientists, artificers and mages study the hold structure, retrieving and analyzing ancient blueprints, gadgets, runes, weapons and armors.\nThe amount of §DAncient Dwarven Knowledge§! we can create in these events §Gincreases§! based On §GResearch Facility§! Level\nThe §GResearch Facility§! require §Y200§! to §Y20000§! gold, based on Dig Level, to be Expanded.\nHigher levels of §GResearch Facility§! Unlock special abilities that use §DAncient Dwarven Knowledge§!.\n The chance to unlock said abilities increases with high §Gstability§! and §Dinnovativeness§!\n\nnote that the §GResearch Facility§! works as long as you mantain the same capital, if you move your capital to another hold you will have to rebuild it from scratch, but you will retain all the abilities you have unlocked so far.\n§DAncient Dwarven Knowledge§!: [Root.ancientDwarvenKnowledge.GetValue]"
+
+DA_Research_facility_menu.1.d7: "§GResearch Facility§! Level: 7\n\nA §GResearch Facility§! allows you to have unique events giving you §DAncient Dwarven Knowledge§! periodically, as your scientists, artificers and mages study the hold structure, retrieving and analyzing ancient blueprints, gadgets, runes, weapons and armors.\nThe amount of §DAncient Dwarven Knowledge§! we can create in these events §Gincreases§! based On §GResearch Facility§! Level\nThe §GResearch Facility§! require §Y200§! to §Y20000§! gold, based on Dig Level, to be Expanded.\nHigher levels of §GResearch Facility§! Unlock special abilities that use §DAncient Dwarven Knowledge§!.\n The chance to unlock said abilities increases with high §Gstability§! and §Dinnovativeness§!\n\nnote that the §GResearch Facility§! works as long as you mantain the same capital, if you move your capital to another hold you will have to rebuild it from scratch, but you will retain all the abilities you have unlocked so far.\n§DAncient Dwarven Knowledge§!: [Root.ancientDwarvenKnowledge.GetValue]"
+
+DA_Research_facility_menu.1.d8: "§GResearch Facility§! Level: 8\n\nA §GResearch Facility§! allows you to have unique events giving you §DAncient Dwarven Knowledge§! periodically, as your scientists, artificers and mages study the hold structure, retrieving and analyzing ancient blueprints, gadgets, runes, weapons and armors.\nThe amount of §DAncient Dwarven Knowledge§! we can create in these events §Gincreases§! based On §GResearch Facility§! Level\nThe §GResearch Facility§! require §Y200§! to §Y20000§! gold, based on Dig Level, to be Expanded.\nHigher levels of §GResearch Facility§! Unlock special abilities that use §DAncient Dwarven Knowledge§!.\n The chance to unlock said abilities increases with high §Gstability§! and §Dinnovativeness§!\n\nnote that the §GResearch Facility§! works as long as you mantain the same capital, if you move your capital to another hold you will have to rebuild it from scratch, but you will retain all the abilities you have unlocked so far.\n§DAncient Dwarven Knowledge§!: [Root.ancientDwarvenKnowledge.GetValue]"
+
+DA_Research_facility_menu.1.d9: "§GResearch Facility§! Level: 9\n\nA §GResearch Facility§! allows you to have unique events giving you §DAncient Dwarven Knowledge§! periodically, as your scientists, artificers and mages study the hold structure, retrieving and analyzing ancient blueprints, gadgets, runes, weapons and armors.\nThe amount of §DAncient Dwarven Knowledge§! we can create in these events §Gincreases§! based On §GResearch Facility§! Level\nThe §GResearch Facility§! require §Y200§! to §Y20000§! gold, based on Dig Level, to be Expanded.\nHigher levels of §GResearch Facility§! Unlock special abilities that use §DAncient Dwarven Knowledge§!.\n The chance to unlock said abilities increases with high §Gstability§! and §Dinnovativeness§!\n\nnote that the §GResearch Facility§! works as long as you mantain the same capital, if you move your capital to another hold you will have to rebuild it from scratch, but you will retain all the abilities you have unlocked so far.\n§DAncient Dwarven Knowledge§!: [Root.ancientDwarvenKnowledge.GetValue]"
+
+DA_Research_facility_menu.1.d10: "§GResearch Facility§! Level: 10\n\nA §GResearch Facility§! allows you to have unique events giving you §DAncient Dwarven Knowledge§! periodically, as your scientists, artificers and mages study the hold structure, retrieving and analyzing ancient blueprints, gadgets, runes, weapons and armors.\nThe amount of §DAncient Dwarven Knowledge§! we can create in these events §Gincreases§! based On §GResearch Facility§! Level\nThe §GResearch Facility§! require §Y200§! to §Y20000§! gold, based on Dig Level, to be Expanded.\nHigher levels of §GResearch Facility§! Unlock special abilities that use §DAncient Dwarven Knowledge§!.\n The chance to unlock said abilities increases with high §Gstability§! and §Dinnovativeness§!\n\nnote that the §GResearch Facility§! works as long as you mantain the same capital, if you move your capital to another hold you will have to rebuild it from scratch, but you will retain all the abilities you have unlocked so far.\n§DAncient Dwarven Knowledge§!: [Root.ancientDwarvenKnowledge.GetValue]"
+
+DA_Research_facility_menu.1.d11: "§GResearch Facility§! Level: 11\n\nA §GResearch Facility§! allows you to have unique events giving you §DAncient Dwarven Knowledge§! periodically, as your scientists, artificers and mages study the hold structure, retrieving and analyzing ancient blueprints, gadgets, runes, weapons and armors.\nThe amount of §DAncient Dwarven Knowledge§! we can create in these events §Gincreases§! based On §GResearch Facility§! Level\nThe §GResearch Facility§! require §Y200§! to §Y20000§! gold, based on Dig Level, to be Expanded.\nHigher levels of §GResearch Facility§! Unlock special abilities that use §DAncient Dwarven Knowledge§!.\n The chance to unlock said abilities increases with high §Gstability§! and §Dinnovativeness§!\n\nnote that the §GResearch Facility§! works as long as you mantain the same capital, if you move your capital to another hold you will have to rebuild it from scratch, but you will retain all the abilities you have unlocked so far.\n§DAncient Dwarven Knowledge§!: [Root.ancientDwarvenKnowledge.GetValue]"
+
+DA_Research_facility_menu.1.a: "Expand Research Facility on the next Dig Level"
+DA_Research_facility_menu.1.b: "Become An artificial Great Mage"
+DA_Research_facility_menu.1.b.tooltip: "The process will cost us 10 §DAncient Dwarven Knowledge§! and §Y1000§! gold.\nDetails about the result will be available once you click this option.\nYou can cancel the project afterwards"
+DA_Research_facility_menu.1.c: "Have Ancient Runes Grafted on Your body"
+DA_Research_facility_menu.1.c.tooltip: "The process will cost us 5 §DAncient Dwarven Knowledge§! and §Y100§! gold "
+DA_Research_facility_menu.1.d: "Create Rune Mage Leader"
+DA_Research_facility_menu.1.d.tooltip: "The process will cost us 5 §DAncient Dwarven Knowledge§!, §Y250§! gold and §G50§! Military Power "
+ DA_Research_facility_menu.1.DV_m1:0 "Attract a Damestear Meteorite"
+DA_Research_facility_menu.1.DV_m1.tooltip: "The process will cost us 5 §DAncient Dwarven Knowledge§! and §Y4000§! gold"
+ DA_Research_facility_menu.1.e1:0 "Build Warp Gate"
+ DA_Research_facility_menu.1.e1.tooltip:0 "The process will cost us 5 §DAncient Dwarven Knowledge§! and §Y3000§! gold.\nClick for more details, you can abort the project afterwards"
+ DA_Research_facility_menu.1.e2:0 "Use Warp Gates"
+ DA_Research_facility_menu.1.e2.tooltip:0 "Start choosing targets for instantaneous travel"
+DA_Research_facility_menu.1.N1: "Unlocks Flagship modification"
+DA_Research_facility_menu.1.N1.tooltip: "The process will cost us 10 §DAncient Dwarven Knowledge§!"
+DA_Research_facility_menu.1.MFR: "Restore Gor Burad's Magma Forge"
+DA_Research_facility_menu.1.MF: "Gor Burad's Magma Forge"
+DA_Research_facility_menu.1.HJ: "Ducaniel's Laboratory"
+DA_Research_facility_menu.1.m1: "Apply new mithril alloy in production"
+DA_Research_facility_menu.1.m1.tooltip: "The process will cost us 5 §DAncient Dwarven Knowledge§!\nEvery province producing Mithril will get a §Y+15% goods produced§! as long as there is a dwarven majority in the province.\nThe decision will become available again if you gain a new province producing mithril"
+DA_Research_facility_menu.1.v: "Restore Er-Natvir's control room"
+DA_Research_facility_menu.1.v.tooltip: "The process will cost us 10 §DAncient Dwarven Knowledge§!, §Y4000§! gold"
+DA_Research_facility_menu.1.z: "Organize Opening of the §ORunic Gate§!"
+DA_Research_facility_menu.1.z.tooltip: "The process will cost us 30 §DAncient Dwarven Knowledge§!, §Y20000§! gold and we are not even sure what we could find behind the §ORunic Gate§!.."
+DA_Research_facility_menu.1.Go_back: "Go Back"
+
+#################
+# research facility events
+
+DA_adk.2.t: "Accident in the §GResearch Facility§!"
+DA_adk.2.d: "There has been an explosion inside the §GResearch Facility§!.\nWe weren't able to determine whether it was an accident or if it was planned by someone. No casualties have been reported so far but a good amount of research equipment have been destroyed. We require fundings to make the §GResearch Facility§! operational yet again.\n"
+DA_adk.2.a: "At the very least no one got hurt"
+
+DA_adk.3.t: "Research Facility Expansion"
+DA_adk.3.d1: "We are planning the construction of the Capital §GResearch Facility§!\n The only thing we need right now is enough funding to start the project"
+DA_adk.3.d2: "We shall now start the expansion of the Capital §GResearch Facility§! in the next Explored Dig Level\n As a reminder, Every §GResearch Facility§! Level increases the Amount of §DAncient Dwarven Knowledge§! we get periodically and let us unlock special interactions with it.\n"
+DA_adk.3.a: "Yes, I know, and that is why i'm building it"
+
+DA_adk.4.t: "Research Facility Breakthrough"
+DA_adk.4.d: "The best minds of our nation have worked relentlessly for years and have managed to find some useful practical applications of what our ancestors left behind.\nThey often complain that, even if they had 3 or 4 dwarven lifetimes, they probably wouldn't be able to understand an hundredth of the knowledge that the ancient dwarfs had.\n Then you would see them go back to research while burning with passion and determination"
+DA_adk.4.a: "Great Work, Your efforts will be put to good use"
+
+ DA_adk.40.t:0 "Chief Researcher's Project"
+ DA_adk.40.d:0 "Your Highness, The chief researcher keeps on annoying the Minister of Finances for additional fundings even though the he has already taken quite the sum of money.\nHe claims that he is very close to understanding a crucial point in his research but has run out of fundings.\nWell, the amount of money he is requesting is no laughing matter.\nThe Chief Researcher and Minister of Finances have agreed to accept whatever decision your highness will make about this matter."
+ DA_adk.40.a:0 "Give the additional fundings"
+ DA_adk.40.b:0 "The Minister of Finances is right"
+
+ DA_adk.41.t:0 "Research Results"
+ DA_adk.41.d:0 "The investment we made in research some years ago has finally produced Substantial results. The Chief Researcher is quite proud of himself while he goes on and on about how great the results of his research are.\nThe minister of finances in particualr seems a bit displeased but he understands the importance of the work so he remains silent.\n The problem is the chief researcher, he just goes on and says how great he is and how well he used those additional fundings.\nConscious of the fact the the Minister of Finances is holding himself back from killing him right there you dismiss the Chief Researcher."
+ DA_adk.41.a:0 "Good Work ... you can return to the §GResearch Facility§!"
+
+DA_adk.5.t: "Research Facility Mage Creation"
+DA_adk.5.d: "An unprecedented Breakthrough was reached by our capital Research facility while studying Damestear properties.\nThey managed to create a process that allows a normal dwarf to become a decent mage using specific dwarven runes written with Damestear and mithril powder on the dwarf's body\n They have yet to use this method, as it is quite expensive, but they swear that it will work with their life on the line"
+DA_adk.5.a: "Very interesting, I will think about it"
+DA_adk.5.tooltip: "The process costs us 10 §DAncient Dwarven Knowledge§! and §Y1000§! gold\nCan be used if our ruler is not a Great mage"
+
+ DA_adk.51.t:0 "Advancement in Mage Creation Process"
+ DA_adk.51.d:0 "After various years passed reviewing the mage creation process, the §GResearch Facility§! has optimized the process, rewritten the necessary runes and enhanced the Damestear alloy used.\nThis resulted in a substantial improvement of the initial magical ability of the subject after undergoing the mage creation process compared to the previous version. We cannot have a mage undergo the same procedure twice, but if there will ever be a need to redo it, the result will be much better."
+ DA_adk.51.a:0 "Excellent Work"
+ DA_adk.51.a.tt:0 "The §YMage Creation§! process will be enhanced to Tier 1.\nThe Subject undergoing the operation will now gain:\n - Talented in 5 random schools"
+ DA_adk.51.b:0 "How many times can this be upgraded?"
+ DA_adk.51.b.tt:0 "The §YMage Creation§! process will be enhanced to Tier 2.\nThe Subject undergoing the operation will now gain:\n - Renowned in 2 random schools\n - Talented in 3 random schools"
+ DA_adk.51.c:0 "You guys frighten me sometimes"
+ DA_adk.51.c.tt:0 "The §YMage Creation§! process will be enhanced to Tier 3.\nThe Subject undergoing the operation will now gain:\n - Renowned in 3 random schools\n - Talented in all other schools"
+
+DA_adk.6.t: "Ruler Undergoes Mage Creation process"
+DA_adk.6.d: "Now that we have everything that was needed, the research facility has contacted us again, [Root.Monarch.GetTitle].\nEverything is ready to have someone undergo the mage creation process and are asking if the [Root.Monarch.GetTitle] [Root.Monarch.GetHerHim]self woud like to be the next great mage of our country\n They are quite enthusiastic about it and are pressing for an answer\n\nThere could be post-operation changes in the ruler personality.\n Says a note attached to the message, but the messenger failed to notice it"
+DA_adk.6.a: "That power Shall be used for the country"
+DA_adk.6.tooltip: "The process costs us 10 §DAncient Dwarven Knowledge§!\nThe [Root.Monarch.GetTitle] Goes to the §GResearch Facility§!..."
+ DA_adk.6.tt0:0 "§YTier 0§! process, The [Root.Monarch.GetTitle] undergoing the operation will gain:\n - Talented in 3 random schools"
+ DA_adk.6.tt1:0 "§YTier 1§! process, The [Root.Monarch.GetTitle] undergoing the operation will gain:\n - Talented in 5 random schools"
+ DA_adk.6.tt2:0 "§YTier 2§! process, The [Root.Monarch.GetTitle] undergoing the operation will gain:\n - Renowned in 2 random schools\n - Talented in 3 random schools"
+ DA_adk.6.tt3:0 "§YTier 3§! process, The [Root.Monarch.GetTitle] undergoing the operation will gain:\n - Renowned in 3 random schools\n - Talented in all other schools"
+DA_adk.6.b: "Maybe another time"
+
+DA_adk.7.t: "Research Facility Runic Grafting"
+DA_adk.7.d: "An unprecedented Breakthrough was reached by our capital Research facility while studying Ancint Dwarven Runes.\nThey managed to create a process that allows a mage to slightly enhance their magical capabilities by grafting Runes Directly on the body\nThey seem to be in conflict on whether it is a good idea or not to have your highness use this metod as it is a fairly painful one"
+DA_adk.7.a: "Pain is that my brethren are dieing in useless wars, we will use this"
+DA_adk.7.tooltip: "The process costs us 5 §DAncient Dwarven Knowledge§! and §Y100§! gold\nCan be used while our ruler is studying magic"
+
+DA_adk.8.t: "Ruler Undergoes Runic Grafting"
+DA_adk.8.d: "Even if this process is not dangerous it is still quite painful so I will ask once again, Are you sure, your highness? Asks the Chief Researcher\nI will not change my mind, Proceed with the Grafting operation on my body. Even if it is not much, the power that this operation can give me will help me bring Victory and Prosperity to this country!"
+DA_adk.8.a: "What is a little pain compared to that?"
+DA_adk.8.tooltip: "The process costs us 5 §DAncient Dwarven Knowledge§!\nThe [Root.Monarch.GetTitle] Goes to the §GResearch Facility§!..."
+
+DA_adk.9.t: "Research Facility Militarized Rune Mage"
+DA_adk.9.d: "Thanks to our progressively higher understanding of magical properties, the chief Researcher inform us that we are now able to produce Rune Mage generals thanks to a standardized method developed in a similar way to the mage creation process.\n It is way cheper than its predecessor but the created rune mage has limited abilities compared to what would result from a normal mage creation process.\n We anyway believe this method could be quite useful in enhancing our military might"
+DA_adk.9.a: "This is quite the useful invention, Chief Researcher"
+DA_adk.9.tooltip: "The process will costs us 5 §DAncient Dwarven Knowledge§! and §Y250§! gold\nWe will be able to recruit them from the §GResearch Facility§! menu"
+
+DA_adk.10.t: "New Rune Mage Joins the military"
+DA_adk.10.d: "The time has come to put your life on the line for the country general, are you willing?\n Yes, Your Highness, i wiil bring victory to you\nVery well, Chief Researcher Proceed with the operation\nDo not fear, Your Highness, Everything will go as planned, there is no room for mistakes here."
+DA_adk.10.a: "Create a General Rune Mage"
+DA_adk.10.aM: "Create a Mithril Rune Mage"
+DA_adk.10.b: "Create an Admiral Rune Mage"
+DA_adk.10.Go_back: "Go Back"
+DA_adk.10.tooltip: "The process costs us 5 §DAncient Dwarven Knowledge§!\nOur Vassal Goes to the §GResearch Facility§!..."
+DA_CD_4_tt: "\nCooldown of 4 years"
+DA_CD_5_tt: "\nCooldown of 5 years"
+DA_CD_8_tt: "\nCooldown of 8 years"
+DA_CD_10_tt: "\nCooldown of 10 years"
+DA_adk.10M.tooltip: "The process costs us 7 §DAncient Dwarven Knowledge§!\nOur Vassal Goes to the §GResearch Facility§!..."
+DA_can_mithril_rune_mage_recruit: "Allows the recruitment of a more powerful version of the Rune Mage leader from the research facility.\nMust have unlocked the ability to recruit normal rune mages"
+
+DA_adk.11.t: "Unlocks Runeforged Fort"
+DA_adk.11.d: "The implementation of runic knowledge in dwarven military engineering has brought us a new type of fortification, sturdier than any other.\nAs they require quite the maintanence and specific conditions they are buildable either in truly strategic posistions or in one of our holds\nThe §GResearch Facility§! chief researcher appears quite proud of this invention."
+DA_adk.11.a: "The serpentspine shall become an impenetrable fortress"
+DA_adk.11.tooltip: "The building will cost §Y2000§! gold and is accessable from the special buildings menu"
+
+DA_adk.12.t: "Unlocks Runeforged Amldihr Citadel"
+DA_adk.12.d: "After years of runic study conducted by the §GResearch Facility§! after the implementation of Runeforged Forts, they now claim to have found a way to fortify our capital using the currently best possible combination of technology, new and old.\n As it is quite a colossal project, it will be costly and long "
+DA_adk.12.a: "If we happen to have enough resources, we will implement it"
+DA_adk.12.tooltip: "The capital fortification will cost §Y15000§! gold and is accessable from the special buildings menu"
+
+DA_adk.13.t: "Dwarven Runic Barrier"
+DA_adk.13.d: "The §GResearch Facility§! amazes us with a new discovery.\nThey inform us that there is an ancient runic mechanism in place in every serpentspine entrance or hold.\nThey call it Dwarven Runic Barrier and, while it is still not destroyed, it has long lost its function.\nWe are still nowhere near being able to restore them to their fomer glory, but we can partially restore part of their functions"
+DA_adk.13.a: "This will prove to be quite useful"
+DA_adk.13.tooltip: "Unlocks the ability to upgrade all §YDwarven Runic Barriers§! throughout the serpentspine up to §YTier 1§!"
+DA_can_build_Runic_barrier: "Can upgrade §YDwarven Runic Barriers§! up to §YTier 1§!"
+
+ DA_adk.131.t:0 "Dwarven Runic Barrier advancement"
+ DA_adk.131.d2:0 "Recent Studies On Ancient Runes have brought us review our thoughts about §YDwarven Runic Barriers§!.\nThe §GResearch Facility§! is proud we can now restore this old mechanism to the something very similar to its former glory. May this breakthrough help our nation protect its people from our enemies"
+ DA_adk.131.d3:0 "The §GResearch Facility§! is proud to announce they have finally managed to understand and replicate the intricate patterns composing the §YDwarven Runic Barriers§! and we can now fully restore them to their former glory!\nMay this breakthrough help our nation protect the entire dwarovar from external threats."
+ DA_adk.131.a:0 "Excellent job, as always"
+ DA_adk.131.a.tooltip: "Unlocks the ability to upgrade all §YDwarven Runic Barriers§! throughout the serpentspine up to §YTier 2§!"
+ DA_adk.131.b:0 "Great work"
+ DA_adk.131.b.tooltip: "Unlocks the ability to upgrade all §YDwarven Runic Barriers§! throughout the serpentspine up to §YTier 3§!"
+DA_can_build_Runic_barrier_t2: "Can upgrade §YDwarven Runic Barriers§! up to §YTier 2§!"
+DA_can_build_Runic_barrier_t3: "Can upgrade §YDwarven Runic Barriers§! up to §YTier 3§!"
+
+DA_adk.14.t: "Unlocks Life Engineering"
+DA_adk.14.d: "The §GResearch Facility§! amazes us with a new breakthrough.\nThey have studied The World Tree, or what is left of it, for some years now and they have come to astonishing discoveries.\nThe chief Researcher, who has been leading the project until now has come to us with a proposal to revive the long dead World Tree.\nIt is yet to understand whether the New World Tree would be the same or a completely new World Tree."
+DA_adk.14.a: "As it is a massive project, i will take my time to think about it"
+DA_adk.14.tooltip: "Unlocks the ability to Create a New World Tree"
+DA_can_Create_world_tree: "Can Create World Tree"
+
+DA_adk.15.t: "Unlocks Advanced Life Engineering"
+DA_adk.15.d: "The §GResearch Facility§! amazes us with a new breakthrough.\nThey have studied The, now restored, World Tree for some years now and they have come to astonishing discoveries.\nThe chief Researcher, who has been leading the project until now has come to us with a proposal to Transplant some Branches from the World Tree into the serpent's vale Soil to enrich it significantly\nWe can only do it For the serpents Vale Region as it would permanently damage the Tree if we were to do more."
+DA_adk.15.a: "As it is a massive project, i will take my time to think about it"
+DA_adk.15.tooltip: "Unlocks the ability to Create four World Tree Branches in the serpent's vale region"
+DA_can_Transplant_world_tree: "Can Create World Tree Branches"
+
+ DA_adk.16.t:0 "Warp Gates, the future of travel?"
+ DA_adk.16.d:0 "The amount of knowledge about the properties of magic and runes we have accumulated during the years is simply astonishing. The Research Facility has become one of our primary focuses and has amazed us with yet another invention. They call them warp gates, they are a massive construction which would theoretically allow instantaneous travel between 2 different gates. The space required to set up this building is nothing to scoff at and we assume a Dig level 5 Hold should be enough."
+ DA_adk.16.a:0 "You guys are true madmen, i love it"
+ DA_adk.16.tooltip:0 "Building a Warp Gate costs §Y3000§! gold 5 §DAncient Dwarven Knowledge§! but its usage afterwards will be free"
+
+ DA_adk.17.t:0 "Build a Warp Gate"
+ DA_adk.17.d:0 "Choose one province to build a Warp Gate in.\nYou can build a Warp Gate in an Hold province which Has at least §YDig Level 5§! or in a normal province which has at least §Y80 Development§!.\nRegarding the teleport, you CANNOT teleport special units ( artificers, Mithril guard, and so on) as they would become normal units after the teleportation. You also need to take into consideration that the units undergoing this teleportation will lose all their drill.\n I would like to fix this 2 issues but there is really no way to do so."
+ DA_adk.17.a:0 "Build in [DA_buildable_province1.GetName]"
+ DA_adk.17.tooltip:0 "Building a Warp Gate costs 5 §DAncient Dwarven Knowledge§!\nThe process will take around 2 years to finish"
+ DA_adk.17.b:0 "Build in [DA_buildable_province2.GetName]"
+ DA_adk.17.c:0 "Build in [DA_buildable_province3.GetName]"
+ DA_adk.17.e:0 "Nevermind"
+
+ DA_adk.18.t:0 "Warp Gate Construction Finished"
+ DA_adk.18.d:0 "After 2 years of hard work we have finallt completed the Warp Gate.\nNow, if this is the first Warp Gate we have built we will need another one to access the teleportation option, if not we can now use it"
+ DA_adk.18.a:0 "Excellent"
+
+ DA_dwarven_TP_Gate:0 "Warp Gate"
+ desc_DA_dwarven_TP_Gate:0 "One of the most advanced inventions of the §GResearch Facility§!, Allow instantaneous travel between 2 different gates. Thanks to ts presence trade became a lot easier in this province and the supply of goods never runs out."
+
+ DA_adk.19.t:0 "Warp Gates, departure"
+ DA_adk.19.d:0 "We have now created enough warp gates to use instantaneous travel.\nWe only need to decide from which province should our armies depart and to where.\nRegarding the teleport, you CANNOT teleport special units ( artificers, Mithril guard, and so on) as they would become normal units after the teleportation. You also need to take into consideration that the units undergoing this teleportation will lose all their drill.\nA province under siege or with units engaged in combat is NOT a valid target"
+ DA_adk.19.a:0 "From [DA_possible_tp1.GetName]"
+ DA_adk.19.tooltip:0 "Teleported units will §Rlose§! the gained drill\nSpecial units should NOT be teleported as they would become normal units"
+ DA_adk.19.b:0 "From [DA_possible_tp2.GetName]"
+ DA_adk.19.c:0 "From [DA_possible_tp3.GetName]"
+ DA_adk.19.e:0 "Nevermind"
+
+ DA_adk.20.t:0 "Warp Gates, destination"
+ DA_adk.20.d:0 "Choose a valid target or abort the teleportation"
+ DA_adk.20.a:0 "to [DA_possible_tp_dest1.GetName]"
+ DA_adk.20.tooltip:0 "Teleported units will §Rlose§! the gained drill\nSpecial units should NOT be teleported as they would become normal units"
+ DA_adk.20.b:0 "to [DA_possible_tp_dest2.GetName]"
+ DA_adk.20.c:0 "to [DA_possible_tp_dest3.GetName]"
+ DA_adk.20.e:0 "to [DA_possible_tp_dest4.GetName]"
+ DA_adk.20.f:0 "to [DA_possible_tp_dest5.GetName]"
+ DA_adk.20.go_back:0 "Nevermind"
+
+# leader personalities
+
+DA_Create_leader_cooldown: "Rune Mage Creation Cooldown"
+War_Rune_Mage_general_personality:0 "Rune Mage"
+desc_War_Rune_Mage_general_personality:0 "An artificially created Mage, specialized in defensive magic and runes"
+War_Rune_Mage_general_personality_die_desc:0 "A Loyal Subject, who underwent The Rune Mage transformation process, has left us.\nThe country shall remember our subject's struggle on the battlefield and remember the name so that future generations may be inspired"
+War_Rune_Mage_general_tooltip:0 "A Rune Mage general becomes available for duty."
+
+DA_Mithradum_war_mage:0 "Mithril Rune Mage"
+desc_DA_Mithradum_war_mage:0 "An artificially created Mage, specialized in defensive magic and runes but also underwent the mithril guard training in Mithradum"
+DA_Mithradum_war_mage_die_desc:0 "A Loyal Subject, who underwent The Rune Mage transformation process, has left us.\nThe country shall remember our subject's struggle on the battlefield and remember the name so that future generations may be inspired"
+DA_Mithradum_war_mage_tooltip:0 "A Mithril Rune Mage general becomes available for duty."
+
+War_Rune_Mage_admiral_personality:0 "Rune Mage"
+desc_War_Rune_Mage_admiral_personality:0 "An artificially created Mage, specialized in defensive magic and runes"
+War_Rune_Mage_admiral_personality_die_desc:0 "A Loyal Subject, who underwent The Rune Mage transformation process, has left us.\nThe country shall remember our subject's struggle on the battlefield and remember the name so that future generations may be inspired"
+War_Rune_Mage_admiral_tooltip:0 "A Rune Mage admiral becomes available for duty."
+
+##############################
+# some unique hold related events, the rest are in their own file
+
+
+DA_adk.105.t: "Er-Natvir control room restoration available"
+DA_adk.105.d: "The §GResearch Facility§! wants let us know that the restoration plan for Er-Natvir control room has now been finished and is ready to start.\nPutting together tons of blueprints was one hell of a work but the Chief Researcher guarantees the result will satisfy us."
+DA_adk.105.a: "Good Job"
+DA_adk.105.tooltip: "The process will cost us 10 §DAncient Dwarven Knowledge§! and §Y4000§! gold\nIt will become available on the §GResearch Facility§! menu when all requirements are fullfilled"
+
+DA_adk.106.t: "Restoration of Er-Natvir Control room"
+DA_adk.106.d: "Engineers, mages and artificers have worked together in order to restore The ancient rail system to its former glory.\nAfter months of work we have successfully brought the facility back to life. The control room now works as intended. The engineers remind you that the only 'buffed' railroads will be the ones in our country as they are the only ones we can connect to."
+DA_adk.106.a: "Great work everyone"
+DA_adk.106.tooltip: "The process has consumed 10 §DAncient Dwarven Knowledge§!\nNote that losing ownership of the province, even for a moment, will destroy the control room and you will have to re-restore it so protect it well."
+
+DA_Er_Natvir_cr: "Er-Natvir Rail Control Room"
+desc_DA_Er_Natvir_cr: "The Railroad covering the entire serpentspine is managed by this control room.\nHaving it in our possession and operational let us exploit the dwarven rail more efficiently"
+
+DA_CR_managed_railroad: "Managed Railroad"
+desc_DA_CR_managed_railroad: "the connection to the control room in Er-Natvir makes the rail road more efficient"
+
+DA_managing_cr_rail: "Managing Serpentspine Rail"
+desc_DA_managing_cr_rail: "This country controls Er-Natvir and has completely restored its control room"
+
+
+DA_adk.107.t: "Mithril Workshop Advancement"
+DA_adk.107.d: "During The restoration of the Mithril Workshop we found out that most of the mithril that circulated in ancient times was not pure mithril.\nThe restoration team discovered that they used an alloy made out of less rare materials mixed together with mithril: this alloy has the same properties as pure mithril and even an expert would not be able to differentiate between them.\nThanks to this alloy they could keep up with the large requests of materials without depleting their mines.This was maybe the greatest secret of old Mithradum."
+DA_adk.107.a: "No word shall get out of here, am i clear?"
+DA_adk.107.tooltip: "We can implement the same strategy as old Mithradum.\nThe process will cost us 5 §DAncient Dwarven Knowledge§!"
+
+DA_mithril_production_boost: "Implementing Secret production method"
+desc_DA_mithril_production_boost: "Using our mastery over metals we have increased the amount of mithril we produce in this province"
+
+DA_adk.108.t: "MIthril Guard"
+DA_adk.108.d: "With the expansion of the workshop we restored the old training facilities used by old Mithradum.\nWhile they are nowhere near the old Royal guard of Aul-Dwarov, we have started to train our own soldiers in this facility and many promising individuals have already been pointed out by our instructors.\nIf your highness wish to use them they are at your disposal."
+DA_adk.108.a: "Only the best can serve in the Mithril Guard"
+DA_adk.108.tooltip: "We can now recruit §YMithril Guard§! regiments in Mithradum\n§RThey can ONLY be recruited from Mithradum§!"
+
+DA_adk.109.t: "Hehogrim's Intellect"
+DA_adk.109.d: "Hehodovar's architects and our §GResearch Facility§!'s best scientists have managed to catalogize every blueprint, page and note they could find.\nWhile focused in this fruitless task, they found a very intersting fortification idea on Hehogrim's notes. After weeks of confrontations between the architescts and the scientists they have come up with a new, more efficient, more powerful, type of rune forged fortification which they call §YHehogrim's Runeforged Fort§! in honor of the ancestor. This design results to be a bit more expensive compared to their old design but it will be worth it."
+DA_adk.109.a: "New fortification? Say no more"
+DA_adk.109.tooltip: "We can build §YHehogrim's Runeforged Fort§! from the buildings menu and each of them costs §Y3000§! gold or §Y1500§! gold, if there already is a runforged fort in that province."
+
+##############################
+
+DA_adk_hold_exploration_menu.1.title: "Hold Exploration"
+DA_adk_hold_exploration_menu.1.desc: "Explore Your Holds' Dig Level, starting from Dig Level 2\n\nIt is Possible to find §DAncient Dwarven Knowledge§!, §Ygold§!, resources, lost knowledge, ancient buildings and much more!\nWhat our exploration team can find §Gincreases§! based On Dig Level but §RPossible Dangers§! we can find along the way increases as well. Some Holds have unique events, which are triggered by exploration of certain Dig Levels, and can unlock a variety of different interactions.\nThe exploration team require §Y50§! to §Y10000§! gold, based on Dig Level."
+DA_explore_dig_2_tooltip: "Explore Dig Level 2\nDanger Level §GVery Low§!"
+DA_explore_dig_3_tooltip: "Explore Dig Level 3\nDanger Level §GLow§!"
+DA_explore_dig_4_tooltip: "Explore Dig Level 4\nDanger Level §GLow§!"
+DA_explore_dig_5_tooltip: "Explore Dig Level 5\nDanger Level §YMedium§!"
+DA_explore_dig_6_tooltip: "Explore Dig Level 6\nDanger Level §YMedium§!"
+DA_explore_dig_7_tooltip: "Explore Dig Level 7\nDanger Level §OHigh§!"
+DA_explore_dig_8_tooltip: "Explore Dig Level 8\nDanger Level §OHigh§!"
+DA_explore_dig_9_tooltip: "Explore Dig Level 9\nDanger Level §RVery High§!"
+DA_explore_dig_10_tooltip: "Explore Dig Level 10\nDanger Level §RVery High§!"
+DA_explore_dig_11_tooltip: "Explore Dig Level 11\nDanger Level §Rextremely high§!"
+
+#research facility province modifiers and flags
+DA_Expanded_dig_adk_2: "§GResearch Facility§! Lvl 2: Underground Laboratory"
+DA_local_research_facility_2: "§GResearch Facility§! Lvl 2: Underground Laboratory"
+desc_DA_local_research_facility_2: "A small infrastructure managed by a few individuals"
+DA_Expanded_dig_adk_3: "§GResearch Facility§! Lvl 3: Cavernous Laboratory"
+DA_local_research_facility_3: "§GResearch Facility§! Lvl 3: Cavernous Laboratory"
+desc_DA_local_research_facility_3: "A medium sized infrastructure, operating on 2 different dig levels and managed by qualified dwarfs"
+DA_Expanded_dig_adk_4: "§GResearch Facility§! Lvl 4: Outer Laboratory"
+DA_local_research_facility_4: "§GResearch Facility§! Lvl 4: Outer Laboratory"
+desc_DA_local_research_facility_4: "A relatively big infrastructure, operating on 3 different dig levels and managed by some of the best minds our hold can offer"
+DA_Expanded_dig_adk_5: "§GResearch Facility§! Lvl 5: Inner Laboratory"
+DA_local_research_facility_5: "§GResearch Facility§! Lvl 5: Inner Laboratory"
+desc_DA_local_research_facility_5: "A big infrastructure, operating on 4 different dig levels, organized by dividing work on each dig level to handle excavation, research and applications more efficiently."
+DA_Expanded_dig_adk_6: "§GResearch Facility§! Lvl 6: Central Laboratory"
+DA_local_research_facility_6: "§GResearch Facility§! Lvl 6: Central Laboratory"
+desc_DA_local_research_facility_6: "A big infrastructure, operating on 5 different dig levels, organized by dividing work on each dig level to handle excavation, research and applications more efficiently. This Institute can now be treated as an essentialpart of our country"
+DA_Expanded_dig_adk_7: "§GResearch Facility§! Lvl 7: Labyrinthine Laboratory"
+DA_local_research_facility_7: "§GResearch Facility§! Lvl 7: Labyrinthine Laboratory"
+desc_DA_local_research_facility_7: "A massive infrastructure, operating on 6 different dig levels, organized by dividing work on each dig level to handle excavation, research and applications more efficiently. This Institute is considered greatly by the dwarven scientific community"
+DA_Expanded_dig_adk_8: "§GResearch Facility§! Lvl 8: Deep Laboratory"
+DA_local_research_facility_8: "§GResearch Facility§! Lvl 8: Deep Laboratory"
+desc_DA_local_research_facility_8: "One of the most extensive research facility you can find in all the serpentspine. The best Runesmiths, Scientists, Artificers, Mages and scholars from our country work tirelessly here."
+DA_Expanded_dig_adk_9: "§GResearch Facility§! Lvl 9: Sunless Laboratory"
+DA_local_research_facility_9: "§GResearch Facility§! Lvl 9: Sunless Laboratory"
+desc_DA_local_research_facility_9: "One of the most extensive research facility you can find in all the serpentspine. The best Scientists, Artificers, Mages and scholars from our all the serpentspine work tirelessly here each day."
+DA_Expanded_dig_adk_10: "§GResearch Facility§! Lvl 10: Core Laboratory"
+DA_local_research_facility_10: "§GResearch Facility§! Lvl 10: Core Laboratory"
+desc_DA_local_research_facility_10: "Maybe the Biggest and most advanced §GResearch Facility§! in the Serpentspine. Everyday new theories are the topic of each conversation and everyone working here knows they are living for the progress of the dwarven race or out of pure curiosity"
+DA_Expanded_dig_adk_11: "§GResearch Facility§! Lvl 11: Abyssal Laboratory"
+DA_local_research_facility_11: "§GResearch Facility§! Lvl 11: Abyssal Laboratory"
+desc_DA_local_research_facility_11: "The Greatest §GResearch Facility§! In the World. As you walk on each Dig level you can see stange mechanisms, inventions of who knows which scientist, being tested one after the other. A true paradise for those who seek knowledge without boundaries. The only thing is that there is a littke sense of madness when you look at all these eyes burning with passion and disregarding everything else."
+
+# rf
+
+DA_Expand_dig_2_tooltip: "Establish §GResearch Facility§! on Dig Level 2"
+DA_Expand_dig_3_tooltip: "Establish §GResearch Facility§! on Dig Level 3"
+DA_Expand_dig_4_tooltip: "Establish §GResearch Facility§! on Dig Level 4"
+DA_Expand_dig_5_tooltip: "Establish §GResearch Facility§! on Dig Level 5"
+DA_Expand_dig_6_tooltip: "Establish §GResearch Facility§! on Dig Level 6"
+DA_Expand_dig_7_tooltip: "Establish §GResearch Facility§! on Dig Level 7"
+DA_Expand_dig_8_tooltip: "Establish §GResearch Facility§! on Dig Level 8"
+DA_Expand_dig_9_tooltip: "Establish §GResearch Facility§! on Dig Level 9"
+DA_Expand_dig_10_tooltip: "Establish §GResearch Facility§! on Dig Level 10"
+DA_Expand_dig_11_tooltip: "Establish §GResearch Facility§! on Dig Level 11"
+
+# exploration menu
+
+DA_adk_hold_exploration_menu.1.a: "Explore [DA_explorable_province1.GetName]"
+DA_adk_hold_exploration_menu.1.b: "Explore [DA_explorable_province2.GetName]"
+DA_adk_hold_exploration_menu.1.c: "Explore [DA_explorable_province3.GetName]"
+DA_adk_hold_exploration_menu.1.d: "Explore [DA_explorable_province4.GetName]"
+DA_adk_hold_exploration_menu.1.e: "Explore [DA_explorable_province5.GetName]"
+DA_adk_hold_exploration_menu.1.Go_back: "Go Back"
+
+#explored dig level province modifiers
+DA_looked_dig_adk_2: "Explored §YDig Level 2§!"
+DA_local_explored_dig_2: "Explored §YDig Level 2§!"
+desc_DA_local_explored_dig_2: "Expeditions have explored up to §YDig Level 2§! in this Hold"
+DA_looked_dig_adk_3: "Explored §YDig Level 3§!"
+DA_local_explored_dig_3: "Explored §YDig Level 3§!"
+desc_DA_local_explored_dig_3: "Expeditions have explored up to §YDig Level 3§! in this Hold"
+DA_looked_dig_adk_4: "Explored §YDig Level 4§!"
+DA_local_explored_dig_4: "Explored §YDig Level 4§!"
+desc_DA_local_explored_dig_4: "Expeditions have explored up to §YDig Level 4§! in this Hold"
+DA_looked_dig_adk_5: "Explored §YDig Level 5§!"
+DA_local_explored_dig_5: "Explored §YDig Level 5§!"
+desc_DA_local_explored_dig_5: "Expeditions have explored up to §YDig Level 5§! in this Hold"
+DA_looked_dig_adk_6: "Explored §YDig Level 6§!"
+DA_local_explored_dig_6: "Explored §YDig Level 6§!"
+desc_DA_local_explored_dig_6: "Expeditions have explored up to §YDig Level 6§! in this Hold"
+DA_looked_dig_adk_7: "Explored §YDig Level 7§!"
+DA_local_explored_dig_7: "Explored §YDig Level 7§!"
+desc_DA_local_explored_dig_7: "Expeditions have explored up to §YDig Level 7§! in this Hold"
+DA_looked_dig_adk_8: "Explored §YDig Level 8§!"
+DA_local_explored_dig_8: "Explored §YDig Level 8§!"
+desc_DA_local_explored_dig_8: "Expeditions have explored up to §YDig Level 8§! in this Hold"
+DA_looked_dig_adk_9: "Explored §YDig Level 9§!"
+DA_local_explored_dig_9: "Explored §YDig Level 9§!"
+desc_DA_local_explored_dig_9: "Expeditions have explored up to §YDig Level 9§! in this Hold"
+DA_looked_dig_adk_10: "Explored §YDig Level 10§!"
+DA_local_explored_dig_10: "Explored §YDig Level 10§!"
+desc_DA_local_explored_dig_10: "Expeditions have explored up to §YDig Level 10§! in this Hold"
+DA_looked_dig_adk_11: "Explored §YDig Level 11§!"
+DA_local_explored_dig_11: "Explored §YDig Level 11§!"
+desc_DA_local_explored_dig_11: "Expeditions have explored up to §YDig Level 11§! in this Hold"
+
+# common events outcome
+
+DA_ADK_explore.1.t: "Old workshop"
+DA_ADK_explore.1.d: "After extensive search in the hold structure, we have found a passage leading to a very old workshop.\nHere we found interesting blueprints, gadgets, weapons and armors..\nWe are reorganizing the expedition team to bring it all back so that all these material can be studied in a modern workshop calmly.\n"
+DA_ADK_explore.1.a: "Proceed with caution"
+DA_ADK_explore.1.tooltip: "Old workshop"
+
+DA_ADK_explore.2.t: "Treasure Chest"
+DA_ADK_explore.2.d: "We found a treasure chest, probably the last possession of a very wealthy dwarven family of old.\nWe can deduce that they abandoned their home in a hurry, maybe they were fleeing from something or someone?\nWe are waiting your instruction on how to deal with the treasure."
+DA_ADK_explore.2.a: "Take it, and add the name of this family in our annals"
+DA_ADK_explore.2.tooltip: "Treasure Chest"
+
+DA_ADK_explore.3.t: "Goblin Tide"
+DA_ADK_explore.3.d: "The last message from the vanguard concerned an odd cave filled with signs of intelligent life.\nThis was 3 days ago and now strange noises can be heard coming up from the depths. We should assume the worst, Your Highness."
+DA_ADK_explore.3.a: "Ready the Shields"
+DA_ADK_explore.3.tooltip: "Goblin Tide"
+DA_ADK_reexplore_tooltip: "§RThe Dig level is not yet explored§!\nOur expedition could not fully explore the dig level and we will need to send another exploration team and get a different result to completely survey the dig level."
+
+DA_ADK_explore.4.t: "Mithril Vein"
+DA_ADK_explore.4.d: "After extensive search in the hold structure, we have found a passage leading to an old mine.\nIt is a Mithril Mine that had just been discovered, as we can see from the fact that there is plenty of ores left untouched.\nWe can develop this mine to make it our primary source of income or leave it as it is\nThe choice is Yours, your Highness"
+DA_ADK_explore.4.a: "Make it our goal"
+DA_ADK_explore.goods_change.tooltip: "If you change trade goods in an Hold you could lose the hold specialization modifier!\nConsider yourself warned"
+DA_ADK_explore.4.b: "The current production is good"
+
+DA_ADK_explore.5.t: "Damestear Deposit"
+DA_ADK_explore.5.d: "After extensive search in the hold structure, we have found a passage leading to an old damestear deposit.\nIts size is quite massive, we could work with this for quite sometime\nWe can develop this deposit to make it our primary source of income or leave it as it is\nThe choice is Yours, your Highness"
+DA_ADK_explore.5.a: "Make it our goal"
+DA_ADK_explore.5.b: "The current production is good"
+
+DA_ADK_explore.6.t: "Goblin's Human Slaves"
+DA_ADK_explore.6.d: "The expedition has reported numerous hostile goblin encounters.\nWe managed to defeat them everytime until we reached thier base of operations.\nAfter taking care of the goblins we found a surprising amount of humans.\nThe goblins have kept them as slaves for god knows how much time, how shall we deal with them?"
+DA_ADK_explore.6.a: "Let them settle in our hold and grant them freedom"
+DA_ADK_explore.6.b: "Leave them to their fates"
+A99_add_minority_human_2_tt: "§GAdds/Increases§! §YHuman Minority Size§! in §Y2§! random provinces"
+
+DA_ADK_explore.7.t: "Goblin's Elven Slaves"
+DA_ADK_explore.7.d: "The expedition has reported numerous hostile goblin encounters.\nWe managed to defeat them everytime until we reached thier base of operations.\nAfter taking care of the goblins we found a surprising amount of Elfs.\nThe goblins have kept them as slaves for god knows how much time, how shall we deal with them?"
+DA_ADK_explore.7.a: "Let them settle in our hold and grant them freedom"
+DA_ADK_explore.7.b: "Leave them to their fates"
+A99_add_minority_elven_2_tt: "§GAdds/Increases§! §YElven Minority Size§! in §Y2§! random provinces"
+
+ DA_ADK_explore.8.t:0 "Lost Settlement"
+ DA_ADK_explore.8.d:0 "The expedition reported the discovery of a very old but habitated settlement.\nAfter initial waryness we managed to establish friendly contact and we came to understand this settlement was closed off from the rest of the Hold to survive the Orcs' menace. They have kept a lot of knowledge of old Aul-dwarov which would have otherwise been lost to time.\nWe can welcome our old comrades and get a bit of knowledge in return"
+ DA_ADK_explore.8.a:0 "Annex the settlement and welcome the old dwarves"
+
+ DA_ADK_explore.9.t:0 "Orcs From the Depths"
+ DA_ADK_explore.9.d:0 "We had lost contact with the last exploration team a few days ago and now some orc regiments are coming out from the depths!\nWe can mark the exploration team as dead but we have to deal with the orcs first."
+ DA_ADK_explore.9.a:0 "Protect the people!"
+
+ DA_ADK_explore.10.t:0 "Lost exploration team"
+ DA_ADK_explore.10.d:0 "We have lost contact with the last exploration team. Normally we would notice something amiss from the holds' depth but all is quiet so we can only guess what could have happened to them.\nWe can mark the exploration team as lost or dead and send another one if we wish to"
+ DA_ADK_explore.10.a:0 "Unfortunate"
+
+ DA_ADK_explore.11.t:0 "Hold Ruins"
+ DA_ADK_explore.11.d:0 "The expedition reported the presence or old ruins, dating back to the times of Aul-Dwarov. There is no sign of life, no dwarfs, no goblins, no orcs. All that is left is this ancient city. As it is quite massive we have no way of exploring it efficiently right now even though we have confirmed the absence of any hostile entity.\nThe expedition is on its way back home."
+ DA_ADK_explore.11.a:0 "We will explore it when the time is right"
+
+ DA_explore_hold_ruins_title:0 "Explore Ancient Hold Ruins"
+ DA_explore_hold_ruins_desc:0 "Explore the entirety of the Ancient Hold Ruins to make sure there is nothing to be afraid of"
+
+ DA_Ancient_hold_ruins:0 "Ancient Hold Ruins"
+ desc_DA_Ancient_hold_ruins:0 "A massise underground city, partially detached from the hold structure, was discovered during Hold exploration but was not fully uncovered."
+
+ DA_Ancient_hold_explored:0 "Ancient Hold Ruins explored"
+ desc_DA_Ancient_hold_explored:0 "We have explored the entirety of the Ancient Hold Ruins and found nothing noteworthy.\nIt has been decided to use the city as a museum of sort, to showcase the old architucture"
+
+ DA_ADK_explore.12.t:0 "King's Treasury"
+ DA_ADK_explore.12.d:0 "Our exploration team has discovered a secret passage. After further investigation we ended up reaching a reinforced door with the royal emblem on it.\nWe tried various methods to try bringing the door down and were finally succesfull with a bit of explosives. Inside we found what is believed to be the Hold's treasury or the king's treasury. Whatever the case may be we ended up with a great amount of money."
+ DA_ADK_explore.12.a:0 "Take it all back but keep a part of it for urban development"
+ DA_treasury_boost_development:0 "Treasury invested in Development"
+ desc_DA_treasury_boost_development:0 "the hold's late King treasury has partially been invested in the development of the hold"
+
+ DA_ADK_explore.13.t:0 "Connection"
+ DA_ADK_explore.13.d:0 "Our exploration team found an unusual thing. Our hold seems to be connected to a secondary infrastructure in a nearby province which we didin't even know the presence of. The exploration team has entered from our hold and went out from there."
+ DA_ADK_explore.13.a:0 "Interesting, implement the new infrastructure"
+ DA_secondary_Hold:0 "Secondary Hold infrastructure"
+ desc_DA_secondary_Hold:0 "An old infrastructure connected to the main hold which has greatly increased production efficiency in this province"
+
+ DA_ADK_explore.14.t:0 "Mad Scientist's Lab"
+ DA_ADK_explore.14.d:0 "This is nothing like the old workshops we stumble upon from time to time during exploration. This is a full fledged Laboratory, full of notes, materials, inventions and a tons of other things. We came to learn this lab was managed by a single dwarf who exiled himself in the depth of the Hold to focus exclusively on his research.\nA shame he probably died alone without bringing his genius to full potential."
+ DA_ADK_explore.14.a:0 "A shame indeed, But let's not waste his work"
+ DA_Mad_scientist_lab:0 "Mad scientist's Laboratory"
+ desc_DA_Mad_scientist_lab:0 "A full fledged Laboratory, full of notes, materials, inventions and a tons of other things. We came to learn this lab was managed by a single dwarf who exiled himself in the depth of the Hold to focus exclusively on his research."
+
+ DA_ADK_explore.15.t:0 "Working Workshop"
+ DA_ADK_explore.15.d:0 "Our exploration team found fully functioning workshop in the Depths of ou Hold. There is still a lot of supplies left we can bring back.\nThe workshop is a bit detached from the hold's main structure, but there is a possibility to make it work once again.\n"
+ DA_ADK_explore.15.a:0 "Excellent discovery"
+
+ DA_ADK_explore.16.t:0 "Gold!... Wait"
+ DA_ADK_explore.16.d:0 "Our exploration team has returned from their mission with abundant riches but they all seem quite restless.\nThe Captain, reporting in the royal hall, says: 'Your Highness, we are afraid to have brought back with us something more than just gold. We went inside a seemingly empty goblin nest, took everything we found, and returned. The problem is that there have been some disappearances while travelling back and some screams could be heard from time to time.'\nAs he said so, a feral Screech came from The Depths and the Alarm was triggered.\n'Your Highness, A goblin Tide!'\nYou stand up: 'I want every soldier to take up arms and gather in the market hall, We will take them all down!'\n'YES, Your Highness!'\nAfter sometime you mutter to yourself: 'Why is it always goblins'"
+ DA_ADK_explore.16.a:0 "It could have been worse i suppose"
+
+# hold related exploration events, some are intheir own fils
+
+DA_ADK_explore.103.t: "Er-Natvir Railway control room"
+DA_ADK_explore.103.d: "Our expedition In Er-Natvir has Found The Railroad Control Room, from which all the serpentspine's railroads were controlled and managed.\nIt is now completely ruined but if we were to restore it to its former state we would probably be able to exploit dwarven roads in a more efficient way.\nThe mechanisms used are quite old but there are some blueprints that the §GResearch Facility§! can use to organize an efficient restoration."
+DA_ADK_explore.103.a: "Excellent work"
+DA_ADK_explore.103.tooltip: "The §GResearch Facility§! will contact us again when a practical restoration plan has been formulated"
+
+DA_ADK_explore.104.t: "Mithril Workshop"
+DA_ADK_explore.104.d: "Our expedition In Mithradum has found a very big and old workshop.\nAfter an extensive search of the place, we found out this was the main workshop which was responsible of experimenting with mithril.\nThere are a lot of different metal alloys on these notes, some were being researched and others produced in enormous amounts during the days of Aul-Dwarov.\nWe have the possibility to reestablish the facility and continuw their researches"
+DA_ADK_explore.104.a: "Excellent work"
+DA_ADK_explore.104.tooltip: "The Mithril Workshop construction will become available, every tier needs 2 dig levels to be upgraded, starting from dig level 4 to upgrade to tier 1, dig 6 to tier 2, dig 8 to tier 3."
+DA_can_upgrade_monument_4_8: "needs at least Dig level 4 to upgrade to tier 1\n  Dig level 6 to upgrade to tier 2\n  Dig level 8 to upgrade to tier 3"
+
+DA_ADK_explore.106.t: "Hehogrim's Home"
+DA_ADK_explore.106.d: "Our expedition In Hehodovar has found Hehogrim, The diligent,'s home. As expected from a man of his caliber, every single inch of his house is filled with blueprints and innovative architectural ideas.\nA good amount of time will be required to sort out everything in the research facility and many dwarfs of Hehodovar have come to help us out, hoping to lay their hands on some of Hehogrim's Blueprints and take a bit of fame."
+DA_ADK_explore.106.a: "Excellent work"
+DA_ADK_explore.106.tooltip: "The §GResearch Facility§! will contact us again when everything is sorted out"
+DA_Hehogrim_workshop: "Hehogrim's Home"
+desc_DA_Hehogrim_workshop: "The home of one the greatest dwarven architects who have ever lived.\nIt has become a place of meeting for Hehodovar's architects and through these meetings we have been blessed with a lot of innovative and efficient ideas which have made buildings a lot easier to realize in all our kingdom."
+
+DA_ADK_explore.200.t: "Ovdal Tungr's Shipyard"
+DA_ADK_explore.200.d: "Our expedition In Ovdal Tungr has found the place in which the copper dwarfs designed their ships.\nQuite an abundant amount of designs are scattered everywhere. One in particular has caught our interest, It was the Flagship of old Aul-Dwarov: the sheer size of that ship defies common sense. We can try to recreate it but it will be a costly endeavor."
+DA_ADK_explore.200.a: "I will think about it"
+DA_ADK_explore.200.tooltip: "Allows the construction of old Aul-Dwarov flagship in Ovdal Tungr through the §GResearch Facility§! menu.\nThe process will cost us 10 §DAncient Dwarven Knowledge§! and §Y1000§! gold"
+DA_Aul_dwarov_shipyard: "Aul-Dwarov's Shipyard"
+desc_DA_Aul_dwarov_shipyard: "After discovering the old ship designs we managed to repurpose Ovdal Tungr's Shipyard in order to be way more efficient"
+
+# ADK tooltips 0-10 are already defined by anbennar
+
+gain_11_adk_tooltip:0 "§lOur Expedition has found§! §H11§! §DAncient Dwarven Knowledge§!"
+gain_12_adk_tooltip:0 "§lOur Expedition has found§! §H12§! §DAncient Dwarven Knowledge§!"
+gain_13_adk_tooltip:0 "§lOur Expedition has found§! §H13§! §DAncient Dwarven Knowledge§!"
+gain_14_adk_tooltip:0 "§lOur Expedition has found§! §H14§! §DAncient Dwarven Knowledge§!"
+gain_15_adk_tooltip:0 "§lOur Expedition has found§! §H15§! §DAncient Dwarven Knowledge§!"
+gain_16_adk_tooltip:0 "§lOur Expedition has found§! §H16§! §DAncient Dwarven Knowledge§!"
+gain_17_adk_tooltip:0 "§lOur Expedition has found§! §H17§! §DAncient Dwarven Knowledge§!"
+gain_18_adk_tooltip:0 "§lOur Expedition has found§! §H18§! §DAncient Dwarven Knowledge§!"
+gain_19_adk_tooltip:0 "§lOur Expedition has found§! §H19§! §DAncient Dwarven Knowledge§!"
+gain_20_adk_tooltip:0 "§lOur Expedition has found§! §H20§! §DAncient Dwarven Knowledge§!"
+gain_21_adk_tooltip:0 "§lOur Expedition has found§! §H21§! §DAncient Dwarven Knowledge§!"
+gain_22_adk_tooltip:0 "§lOur Expedition has found§! §H22§! §DAncient Dwarven Knowledge§!"
+gain_23_adk_tooltip:0 "§lOur Expedition has found§! §H23§! §DAncient Dwarven Knowledge§!"
+gain_24_adk_tooltip:0 "§lOur Expedition has found§! §H24§! §DAncient Dwarven Knowledge§!"
+gain_25_adk_tooltip:0 "§lOur Expedition has found§! §H25§! §DAncient Dwarven Knowledge§!"
+gain_26_adk_tooltip:0 "§lOur Expedition has found§! §H26§! §DAncient Dwarven Knowledge§!"
+gain_27_adk_tooltip:0 "§lOur Expedition has found§! §H27§! §DAncient Dwarven Knowledge§!"
+gain_28_adk_tooltip:0 "§lOur Expedition has found§! §H28§! §DAncient Dwarven Knowledge§!"
+gain_29_adk_tooltip:0 "§lOur Expedition has found§! §H29§! §DAncient Dwarven Knowledge§!"
+gain_30_adk_tooltip:0 "§lOur Expedition has found§! §H30§! §DAncient Dwarven Knowledge§!"
+gain_31_adk_tooltip:0 "§lOur Expedition has found§! §H31§! §DAncient Dwarven Knowledge§!"
+gain_32_adk_tooltip:0 "§lOur Expedition has found§! §H32§! §DAncient Dwarven Knowledge§!"
+gain_33_adk_tooltip:0 "§lOur Expedition has found§! §H33§! §DAncient Dwarven Knowledge§!"
+gain_34_adk_tooltip:0 "§lOur Expedition has found§! §H34§! §DAncient Dwarven Knowledge§!"
+gain_35_adk_tooltip:0 "§lOur Expedition has found§! §H35§! §DAncient Dwarven Knowledge§!"
+gain_36_adk_tooltip:0 "§lOur Expedition has found§! §H36§! §DAncient Dwarven Knowledge§!"
+gain_37_adk_tooltip:0 "§lOur Expedition has found§! §H37§! §DAncient Dwarven Knowledge§!"
+gain_38_adk_tooltip:0 "§lOur Expedition has found§! §H38§! §DAncient Dwarven Knowledge§!"
+gain_39_adk_tooltip:0 "§lOur Expedition has found§! §H39§! §DAncient Dwarven Knowledge§!"
+gain_40_adk_tooltip:0 "§lOur Expedition has found§! §H40§! §DAncient Dwarven Knowledge§!"
+gain_41_adk_tooltip:0 "§lOur Expedition has found§! §H41§! §DAncient Dwarven Knowledge§!"
+gain_42_adk_tooltip:0 "§lOur Expedition has found§! §H42§! §DAncient Dwarven Knowledge§!"
+gain_43_adk_tooltip:0 "§lOur Expedition has found§! §H43§! §DAncient Dwarven Knowledge§!"
+gain_44_adk_tooltip:0 "§lOur Expedition has found§! §H44§! §DAncient Dwarven Knowledge§!"
+gain_45_adk_tooltip:0 "§lOur Expedition has found§! §H45§! §DAncient Dwarven Knowledge§!"
+gain_46_adk_tooltip:0 "§lOur Expedition has found§! §H46§! §DAncient Dwarven Knowledge§!"
+gain_47_adk_tooltip:0 "§lOur Expedition has found§! §H47§! §DAncient Dwarven Knowledge§!"
+gain_48_adk_tooltip:0 "§lOur Expedition has found§! §H48§! §DAncient Dwarven Knowledge§!"
+gain_49_adk_tooltip:0 "§lOur Expedition has found§! §H49§! §DAncient Dwarven Knowledge§!"
+gain_50_adk_tooltip:0 "§lOur Expedition has found§! §H50§! §DAncient Dwarven Knowledge§!"
+
+# advisors
+
+Hold_restorer: "Hold Restorer"
+Hold_restorer_desc: "A dwarven mage specialized in architecture"
+
+ DA_runesmith:0 "Runesmith"
+ DA_runesmith_desc:0 "A specialist coming from the Runesmith Estate.\n His runic knowledge applied in manufactury processes increases the production of the whole country"
+
+DA_Gargantuan_flagship: "Gargantuan Flagship"
+DA_Gargantuan_flagship_desc: "Based on the design of old Aul-Dwarov's Flagship retrieved during Ovdal Tungr's exploration, a Ship of incomparable size and military might."
+
+ # roba per il mission tree
+
+ DA_first_exploration:0 "First Exploration"
+ DA_country_restoration_efforts:0 "Restoration Efforts"
+ DA_Restoration_incentive:0 "Restoration incentive"
+ desc_DA_Restoration_incentive:0 "We are prioritizing restoration of this hold"
+ DA_repair_the_runic_barrier:0 "Repair The Runic Barriers"
+ desc_DA_repair_the_runic_barrier:0 "We must restore the ancient mechanism to protect ourselves from external threats"
+ DA_idea_innovation:0 "Runic Overlapping"
+ DA_veteran_adventurers:0 "Veteran Adventurers"
+ DA_Dungeon_museum:0 "Dungeon Museum"
+ desc_DA_Dungeon_museum:0 "An expedition camp repurposed for attracting tourism in this province, thus generating additional income. It also serves as a memento for the adventurers who died for the country in the early days of our reign"
+ DA_reached_the_bottom_tt:0 "Reach The Bottom of any Hold"
+ DA_Give_talented_in_random_tt:0 "§GOur Artificial Mage Ruler will undergo this one-time process and gain talented in 1 random school§!"
+ DA_runesmiths_finance_RFF:0 "§GRunesmiths have gifted us part of their income to finance this new project§!"
+ DA_Warp_gate_tax:0 "Warp Gate's Tax"
+ DA_mages_finance_it:0 "§GMages have gifted us part of their income to finance this new project as they want to see their ruler becoming a great mage himself§!"
+ DA_implementing_prostetics:0 "Implementing prostetics production"
+ DA_has_dwarven_runic_barrier_t2_tt:0 "Has Dwarven Runic Barrier tier 2 or higher"
+ DA_temporary_security:0 "Temporary security"
+ DA_has_dwarven_runic_barrier_t3_tt:0 "Has Dwarven Runic Barrier tier 3"
+ DA_impenetrable_dwarovar:0 "Impenetrable Dwarovar"
+ DA_statal_prosthetics:0 "Statal Prosthetics"
+
+ DA_has_5_ADK:0 "Have 5 §DAncient Dwarven Knowledge§!"
+ DA_has_10_ADK:0 "Have 10 §DAncient Dwarven Knowledge§!"
+ DA_has_15_ADK:0 "Have 15 §DAncient Dwarven Knowledge§!"
+ DA_has_20_ADK:0 "Have 20 §DAncient Dwarven Knowledge§!"
+
+ DA_cost_5_ADK:0 "Consume 5 §DAncient Dwarven Knowledge§!"
+ DA_cost_10_ADK:0 "Consume 10 §DAncient Dwarven Knowledge§!"
+ DA_cost_15_ADK:0 "Consume 15 §DAncient Dwarven Knowledge§!"
+ DA_cost_20_ADK:0 "Consume 20 §DAncient Dwarven Knowledge§!"
+
+ # named some flags for the mission tree 
+ DA_artificial_mage:0 "Artificially Created Mage"
+ DA_can_make_mage:0 "Can create artificial Great Mage"
+ DA_can_make_mage_t1:0 "Improved Mage Creation Process"
+ DA_can_make_mage_t2:0 "Advanced Mage Creation Process"
+ DA_can_make_mage_t3:0 "Apex Mage Creation Process"
+ DA_can_graft_new_runes:0 "Can graft Runes"
+ DA_Can_create_leaders:0 "Can create Rune Mage Generals" 
+ DA_can_build_runeforged_fort:0 "Can Build Runeforged Forts"
+DA_Haraz_Orldhum_exp1: "Found Turrets of Orldhûm"
+DA_can_build_HO_turrets: "Can build Turrets of Orldhûm"
+DA_can_implement_platinum_exoskeletons: "Can implement Platinum Exoscheletons"

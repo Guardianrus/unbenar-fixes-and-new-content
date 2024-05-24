@@ -1,0 +1,45 @@
+country_decisions = {
+	DA_Change_gov_decision = {
+		major = yes
+		potential = {
+			culture_group = dwarven
+			capital_scope = {
+				OR = {
+					has_terrain = dwarven_hold
+					has_terrain = dwarven_hold_surface
+				}
+			}
+			NOT = { has_country_flag = DA_supporting_Runesmiths }
+		}
+		
+		provinces_to_highlight = {
+			owned_by = root
+			OR = {
+				has_terrain = dwarven_hold
+				has_terrain = dwarven_hold_surface
+			}
+		}
+		
+		allow = {
+			capital_scope = {
+				has_province_flag = DA_Expanded_dig_adk_2
+			}
+			NOT = { has_reform = dwarovar_adventurer_reform }
+			treasury = 150
+		}
+		
+		effect = {
+			hidden_effect = {
+				set_country_flag = DA_supporting_Runesmiths
+			}
+			add_treasury = -150
+			country_event = {
+				id = DA_Government_event.1
+				days = 5
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

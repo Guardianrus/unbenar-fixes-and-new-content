@@ -1,0 +1,22 @@
+country_decisions = {
+	national_wonder = {
+		major = yes
+		potential = {
+			always = yes
+		}
+		allow = {
+			custom_trigger_tooltip = {
+				tooltip = national_wonders_tooltip
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		effect = {
+			country_event = {
+				id = national_wonder.1
+			}
+		}
+
+	}
+}

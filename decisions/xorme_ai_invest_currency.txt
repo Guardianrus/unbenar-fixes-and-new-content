@@ -1,0 +1,122 @@
+country_decisions = {
+###################
+##INVEST CURRENCY##
+###################
+#####################################################################
+# AFTER PROPER DEVING / DEV-MNG CHANGES SHOULD BE DYNAMIC 1:2 RATIO #
+#####################################################################
+	xorme_ai_invest_currency = {
+		potential = {
+			has_country_modifier = xorme_ai_valid_nation
+			is_great_power = no
+			is_at_war = no
+			NOT = { has_country_modifier = xorme_invest_currency_cooldown }
+		}
+
+		allow = {
+			treasury = 1200
+			NOT = { num_of_owned_areas = 3 }
+			NOT = { num_of_loans = 1 }
+		}
+
+		effect = {
+			add_treasury = -1000
+			add_adm_power = -10
+			add_dip_power = -10
+			add_mil_power = -10
+			if = {
+				limit = {
+					any_owned_province = {
+						NOT = { development = 20 }
+					}
+				}
+				random_owned_province = {
+					limit = { NOT = { development = 20 } }
+					random_list = {
+						25 = { add_base_tax = 1 }
+						25 = { add_base_production = 1 }
+						25 = { add_base_manpower = 1 }
+						25 = { add_base_tax = 1 add_base_production = 1 add_base_manpower = 1 }
+					}
+				}
+			}
+			else = {
+				random_list = {
+					25 = { add_adm_power = 25 }
+					25 = { add_dip_power = 25 }
+					25 = { add_mil_power = 25 }
+					25 = { add_adm_power = 25 add_dip_power = 25 add_mil_power = 25 }
+				}
+			}
+			add_country_modifier = {
+				name = xorme_invest_currency_cooldown
+				hidden = yes
+				duration = 1825
+			}
+		}
+		ai_will_do = {
+			factor = 1.0
+		}
+	}
+###################
+##INVEST CURRENCY##
+###################
+##################################################################
+# AFTER IMPLEMENTING DEV / D CHANGES SHOULD BE DYNAMIC 1:2 RATIO #
+# 1 - PP 2 - CASH												 #
+##################################################################
+	xorme_ai_invest_currency_great_power = {
+		potential = {
+			has_country_modifier = xorme_ai_valid_nation
+			is_great_power = yes
+			is_at_war = no
+			NOT = { has_country_modifier = xorme_invest_currency_cooldown }
+		}
+
+		allow = {
+			treasury = 8000
+			num_of_owned_areas = 15
+			NOT = { num_of_loans = 1 }
+		}
+
+
+		effect = {
+			add_treasury = -2000
+			add_adm_power = -10
+			add_dip_power = -10
+			add_mil_power = -10
+			if = {
+				limit = {
+					any_owned_province = {
+						NOT = { development = 10 }
+					}
+				}
+				random_owned_province = {
+					limit = { NOT = { development = 10 } }
+					random_list = {
+						25 = { add_base_tax = 1 }
+						25 = { add_base_production = 1 }
+						25 = { add_base_manpower = 1 }
+						25 = { add_base_tax = 1 add_base_production = 1 add_base_manpower = 1 }
+					}
+				}
+			}
+			else = {
+				random_list = {
+					25 = { add_adm_power = 25 }
+					25 = { add_dip_power = 25 }
+					25 = { add_mil_power = 25 }
+					25 = { add_adm_power = 25 add_dip_power = 25 add_mil_power = 25 }
+				}
+			}
+			add_country_modifier = {
+				name = xorme_invest_currency_cooldown
+				hidden = yes
+				duration = 912
+			}
+		}
+		ai_will_do = {
+			factor = 1.0
+		}
+	}
+}

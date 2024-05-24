@@ -1,0 +1,45 @@
+
+zurantakel_cannons_1 = {
+	trigger = {
+		has_country_flag = zurantakel_lvl_2
+	}
+	modifier = {
+		number_of_cannons_flagship_modifier = 0.75
+		naval_maintenance_flagship_modifier = 0.5
+
+	}
+
+	ai_war_score = {
+		factor = 100
+	}
+}
+
+zurantakel_cannons_2 = {
+	trigger = {
+		has_country_flag = zurantakel_lvl_3
+	}
+	modifier = {
+		number_of_cannons_flagship_modifier = 1
+		naval_maintenance_flagship_modifier = 0.5
+
+	}
+
+	ai_war_score = {
+		factor = 100
+	}
+}
+
+ovdal_tundur_durability_0 = {
+	trigger = {
+		has_country_flag = ovdal_tungur_durability
+	}
+	modifier = {
+		flagship_durability = 1
+		naval_maintenance_flagship_modifier = 0.5
+
+	}
+
+	ai_war_score = {
+		factor = 100
+	}
+}

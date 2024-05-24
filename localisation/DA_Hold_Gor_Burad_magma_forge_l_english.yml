@@ -1,0 +1,62 @@
+﻿l_english:
+
+DA_Magma_level: "Magma Level"
+
+DA_ADK_explore.201.t: "Gor Burad's Magma Forge"
+DA_ADK_explore.201.d: "Our expedition in Gor Burad has reached the heart of the volcano, Here we found what was once the Magma Forge, an infrastructure built to use the volcano's Magma to produce Obsidian, basalt and glass as strong as steel.\nThere is one little problem, all these years without maintenaince has degraded the Canals system, which was responsible of managing the volcano's Magma, to a ruinous state. It is not a matter of efficiency, if we leave it as it is THE ENTIRE HOLD COULD COLLAPSE."
+DA_ADK_explore.201.a: "Wait, what did you just say?"
+DA_ADK_explore.201.tooltip: "Enables the §YMagma Forge§! Mechanic.\n§R[4039.DA_Magma_level.GetName]§! will Increase constantly, creating devastation events around Gor Burad more frequently.The §GResearch Facility§! will work tirelessly to present us a restoration plan for the canal system\n§R[4039.DA_Magma_level.GetName]:§! [4039.DA_Magma_level.GetValue]\nYou can see the current §R[4039.DA_Magma_level.GetName]§! from the province modifier.\n§R[4039.DA_Magma_level.GetName]§! will go up by 1 every 2-3 months."
+
+DA_GB_vulcano_unregulated: "Magma Forge, Unregulated"
+desc_DA_GB_vulcano_unregulated: "§R[4039.DA_Magma_level.GetName]:§! [4039.DA_Magma_level.GetValue]"
+DA_GB_vulcano_regulated: "Magma Forge"
+desc_DA_GB_vulcano_regulated: "§R[4039.DA_Magma_level.GetName]:§! [4039.DA_Magma_level.GetValue]"
+DA_unregulated_magma_vein: "Magma Vein, Unregulated"
+desc_DA_unregulated_magma_vein: "A magma vein is devastating the province"
+DA_regulated_magma_vein: "Magma Vein"
+desc_DA_regulated_magma_vein: "The magma vein has been regulated with a miniaturized version of the canal system of Gor Burad"
+
+DA_Magma_forge_event.1.t: "Magma Forge restoration available"
+DA_Magma_forge_event.1.d: "Your Highness, the §GResearch Facility§! have finished their restoration plan for the magma forge's canal system. We can now put an end to this tragedy!\nAt least in theory, they require a considerable amount of fundings to do so. We can only hope our treasury is full enough to allocate them."
+DA_Magma_forge_event.1.a: "It was to be expected"
+DA_Magma_forge_event.1.tooltip: "We can now restore the Magma Forge, the process will cost us 12 §DAncient Dwarven Knowledge§! and §Y2000§! gold\nIt will become available on the §GResearch Facility§! menu when all requirements are fullfilled"
+
+
+DA_Magma_forge_event.2.t: "Magma Forge restoration"
+DA_Magma_forge_event.2.d: "After all the agonizing pain we went through, we have finally restored Gor Burad's Magma Forge\nThe §GResearch Facility§! has told us that we can now exploit the magma veins in a truly efficient way.\nThey do not wish to promise us empty words but we can look forward to what they have in mind."
+DA_Magma_forge_event.2.a: "I have great expectations from them"
+DA_Magma_forge_event.2.tooltip: "the process costs us 12 §DAncient Dwarven Knowledge§!\nWe will not lose the §R[4039.DA_Magma_level.GetName]§! that has been accumulated in Gor Burad but we will stop the devastation events from happening.\nThe §R[4039.DA_Magma_level.GetName]§! can now be accumulated to a max of 100.\nMaybe the §GResearch Facility§! will come up to some idea for it?"
+
+DA_Magma_forge_event.4.t: "The Earth Trembles"
+DA_Magma_forge_event.4.d: "Another catastrophic event caused by the Magma Forge has struck one of our provinces.The people are despairing and devastation is spreading like wildfire."
+DA_Magma_forge_event.4.a: "Where is the §GResearch Facility§! when someone needs it?!?!"
+
+DA_Magma_forge_event.10.t: "Magma Forge"    # MF menu
+DA_Magma_forge_event.10.d: "§R[4039.DA_Magma_level.GetName]:§!  [4039.DA_Magma_level.GetValue]\n\nThe Magma forge can be expanded once when 100 magma level has been reached. Once expanded the Max Magma Level will be increased to 200 and its production will be doubled.\nMagma level increases naturally by around 1 every 2 months"
+DA_Magma_forge_event.10.a: "Regulate Magma Veins"
+DA_Magma_forge_event.10.a.tooltip: "The process will cost us 6 §DAncient Dwarven Knowledge§! and 80 §R[4039.DA_Magma_level.GetName]§!"
+DA_Magma_forge_event.10.b: "Expand Magma Forge Capacity"
+DA_Magma_forge_event.10.b.tooltip: "The process will cost 100 §R[4039.DA_Magma_level.GetName]§!\nIncreases §R[4039.DA_Magma_level.GetName]§! Capacity to 200.\n§R[4039.DA_Magma_level.GetName]§! will increase by 2 istead of 1 every 2 months."
+DA_Magma_forge_event.10.c: "Form new magma vein"
+DA_Magma_forge_event.10.c.tooltip: "The process will cost us §Y1250§! gold 5 §DAncient Dwarven Knowledge§! and 140 §R[4039.DA_Magma_level.GetName]§!\nTo view possible targets click this, you can go back afterwards."
+DA_Magma_forge_event.10.Go_Back: "Go Back"
+
+DA_Magma_forge_event.11.t: "Regulate Magma Veins"
+DA_Magma_forge_event.11.d: "the §GResearch Facility§! has contacted us regarding the Gor Burad's Magma Forge.\nYour highness surely remembers how the provinces adjacent to Gor Burad were devastated and some of them were even flooded by magma veins.\nthe §GResearch Facility§! has created a miniaturized version of Gor Burad's canal system to contain the magma veins and use them to our advantage."
+DA_Magma_forge_event.11.a: "Very nice"
+DA_Magma_forge_event.11.a.tooltip: "The process will cost us §Y750§! gold 6 §DAncient Dwarven Knowledge§! and 80 §R[4039.DA_Magma_level.GetName]§!\nAvailable on the Magma Forge menu, which is accessable from the §GResearch Facility§! menu."
+DA_Magma_forge_event.11.Go_Back: "Go Back"
+
+DA_Magma_forge_event.12.t: "Magma Vein Formation Unlocked"
+DA_Magma_forge_event.12.d: "the §GResearch Facility§! has contacted us regarding the Gor Burad's Magma Forge.\nYour highness surely remembers how the provinces adjacent to Gor Burad were devastated and some of them were even flooded by magma veins, which we managed to regulate thanks to the §GResearch Facility§! efforts. These Magma veins are now considered a strategic resource and are quite useful in defending Gor Burad's zone.\nthe §GResearch Facility§! has informed us there are some magma veins under most of the serpentspine holds and we could use them but, as they are not as surface level as Gor Burad's magma veins, the hold must have dug deep enough for there to be a magma vein available."
+DA_Magma_forge_event.12.a: "Very nice"
+DA_Magma_forge_event.12.a.tooltip: "The process will cost us §Y1250§! gold 5 §DAncient Dwarven Knowledge§! and 140 §R[4039.DA_Magma_level.GetName]§!\nCan only be placed on an Hold which has at least §YDig Level 5§!, or has at least §Y80 Development§!.\nAvailable on the Magma Forge menu, which is accessable from the §GResearch Facility§! menu."
+
+DA_Magma_forge_event.13.t: "Magma Vein Formation"
+DA_Magma_forge_event.13.d: "the §GResearch Facility§! asks us which Hold should we add a magma vein to."
+DA_Magma_forge_event.13.a: "Form Magma Vein in [DA_potential_magma_vein1.GetName]"
+DA_Magma_forge_event.13.b: "Form Magma Vein in [DA_potential_magma_vein2.GetName]"
+DA_Magma_forge_event.13.c: "Form Magma Vein in [DA_potential_magma_vein3.GetName]"
+DA_Magma_forge_event.13.Go_back: "Go Back"
+DA_Magma_forge_event.13.tooltip: "The process cost us 5 §DAncient Dwarven Knowledge§! and 140 §R[4039.DA_Magma_level.GetName]§!\nCan only be placed on an Hold which has at least §YDig Level 5§!, or has at least §Y80 Development§!"
+

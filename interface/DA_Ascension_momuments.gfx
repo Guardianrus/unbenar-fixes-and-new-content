@@ -1,0 +1,22 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_great_project_The_Dwarven_Megalopolis"	
+		texturefile = "gfx//interface//great_projects//great_project_The_Dwarven_Megalopolis.dds"
+	}
+	spriteType = {
+		name = "GFX_great_project_The_Dwarven_Workshop"	
+		texturefile = "gfx//interface//great_projects//great_project_The_Dwarven_Workshop.dds"
+	}
+	spriteType = {
+		name = "GFX_great_project_The_Sky_Hold"	
+		texturefile = "gfx//interface//great_projects//great_project_The_Sky_Hold.dds"
+	}
+	spriteType = {
+		name = "GFX_great_project_The_Dwarven_Laboratory"	
+		texturefile = "gfx//interface//great_projects//great_project_The_Dwarven_Laboratory.dds"
+	}
+	spriteType = {
+		name = "GFX_great_project_Ancient_Research_facility1"	
+		texturefile = "gfx//interface//great_projects//great_project_Ancient_Research_facility1.dds"
+	}
+}

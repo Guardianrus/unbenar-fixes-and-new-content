@@ -1,0 +1,1975 @@
+namespace = ANEX_test
+
+country_event = {
+	id = ANEX_test.1
+	title = ANEX_test.1.t
+	desc = ANEX_test.1.d
+	picture = WESTERNISATION_eventPicture
+
+	is_triggered_only = yes
+	
+
+	immediate = {
+		hidden_effect = {
+			every_country = {
+				add_adm_tech = 1
+				add_dip_tech = 1
+				add_mil_tech = 1
+			}
+		}
+		
+	}
+
+	option = {#иновации
+		name = ANEX_test.1.a1
+		add_idea_group = innovativeness_ideas
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = {
+					adm_tech = 5
+				}
+			}
+			modifier = {
+				factor = 10
+				has_estate = estate_artificers
+			}
+			modifier = {
+				factor = 2
+				calc_true_if = {
+					amount = 10
+					any_owned_province = {
+						OR = {
+							has_building = university
+							has_building = education_lvl_1
+							has_building = education_lvl_2
+	
+						}
+					}					
+				}
+			}
+			modifier = {
+				factor = 2
+				innovativeness = 40
+			}
+			modifier = {
+				factor = 2
+				innovativeness = 60
+			}
+			modifier = {
+				factor = 2
+				innovativeness = 80
+			}
+			modifier = {
+				factor = 10
+				religion = the_thought
+			}
+			modifier = {
+				factor = 2
+				ruler_has_personality = scholar_personality
+			}
+			modifier = {
+				factor = 2
+				ruler_has_personality = free_thinker_personality
+			}
+		}
+		
+	}
+	option = {
+		name = ANEX_test.1.a2
+		add_idea_group = economic_ideas
+
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = {
+					adm_tech = 5
+				}
+			}
+			modifier = {
+				factor = 2
+				personality = ai_capitalist
+			}
+			modifier = {
+				factor = 2
+				personality = ai_balanced
+			}
+			modifier = {
+				factor = 2
+				gold = 1
+			}
+			modifier = {
+				factor = 2
+				inflation = 5
+			}
+			modifier = {
+				factor = 2
+				gold_income_percentage = 0.5
+			}
+			modifier = {
+				factor = 2
+				tax_income_percentage = 0.3
+			}
+			modifier = {
+				factor = 2
+				total_development = 200
+			}
+			modifier = {
+				factor = 2
+
+			}
+		}
+	}
+	option = {
+		name = ANEX_test.1.a3
+		add_idea_group = development_ideas0
+
+		ai_chance = {
+			factor = 1
+			
+		}
+	}
+	option = {
+		name = ANEX_test.1.a4
+		add_idea_group = expansion_ideas
+
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = {
+					adm_tech = 5
+				}
+			}
+			modifier = {
+				factor = 0
+				adm_tech = 15
+			}
+			modifier = {
+				factor = 10
+				OR = {
+					is_colonial_nation = yes
+					has_idea_group = exploration_ideas
+				}
+			}
+			modifier = {
+				factor = 0	#Boys who wanna settle the Dreadmire and in the future, the Serpentspine
+				OR = {
+					any_owned_province = {
+						OR = {
+							region = ourdia_region
+							region = dostanor_region
+							region = the_borders_region
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0	#Serpentspine starts alread get colonists
+				capital_scope = {
+					continent = serpentspine
+				}
+				OR = {
+					has_reform = dwarovar_adventurer_reform
+					has_reform = dwarovar_warband
+					has_reform = dwarovar_squatter
+				}
+			}
+			modifier = {
+				factor = 10	#Serpentspine starts alread get colonists
+				capital_scope = {
+					continent = serpentspine
+				}
+				NOT = { is_year = 1500 }
+				OR = {
+					has_reform = dwarovar_dwarven_clan_reform 
+				}
+			}
+			modifier = {
+				factor = 5
+				has_country_modifier = lake_federation_member
+			}
+		}
+	}
+	option = {
+		name = ANEX_test.1.a5
+		add_idea_group = administrative_ideas
+
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = {
+					adm_tech = 5
+				}
+			}
+			modifier = {
+				factor = 2
+				governing_capacity_percentage = 0.9
+			}
+			modifier = {
+				factor = 2
+				governing_capacity_percentage = 1
+			}
+			modifier = {
+				factor = 10
+				governing_capacity_percentage = 1.1
+			}
+			modifier = {
+				factor = 2
+				personality = ai_militarist
+			}
+			modifier = {
+				factor = 2
+				personality = ai_balanced
+			}
+			modifier = {
+				factor = 2
+				total_development = 600
+			}
+			modifier = {
+				factor = 10
+				total_development = 800
+			}
+			modifier = {
+				factor = 2
+				has_idea_group = mercenary_army_idea_groups
+			}
+			modifier = {
+				factor = 2
+				NOT = {
+					adm_tech = 15
+				}
+			}
+			modifier = {
+				factor = 10
+				OR = {
+					tag = R62
+				}
+			}
+		}
+	}
+	option = {
+		name = ANEX_test.1.a6
+		add_idea_group = humanist_ideas
+
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = {
+					adm_tech = 5
+				}
+			}
+			modifier = {
+				factor = 2
+				religion_group = faithless
+			}
+			modifier = {
+				factor = 2
+				num_of_cities = 25
+				NOT = {
+					religious_unity = 0.5
+				}
+			}
+			modifier = {
+				factor = 2
+				calc_true_if = {
+					amount = 10
+					any_owned_province = {
+						NOT = {
+							OR = {
+								has_owner_accepted_culture = yes
+								has_owner_culture = yes
+							}
+						}						
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				calc_true_if = {
+					amount = 5
+					any_owned_province = {
+						nationalism = 15
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				personality = ai_diplomat
+			}
+			modifier = {
+				factor = 2.0
+				has_idea_group = administrative_ideas
+			}
+		}
+	}
+	option = {
+		name = ANEX_test.1.a7
+		add_idea_group = religious_ideas
+
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = {
+					adm_tech = 5
+				}
+			}
+			modifier = {
+				factor = 2
+				
+				calc_true_if = {
+					amount = 5
+					any_owned_province = {
+						NOT = {
+							has_owner_religion = yes
+						}
+					}
+				}				
+			}
+			modifier = {
+				factor = 2
+				NOT = {
+					religious_unity = 0.75
+				}
+			}
+			modifier = {
+				factor = 2
+				NOT = {
+					religious_unity = 0.85
+				}
+			}
+			modifier = {
+				factor = 2
+				NOT = {
+					religious_unity = 0.95
+				}
+			}
+		}
+	}
+	option = {
+		name = ANEX_test.1.a8
+		add_idea_group = justiz0
+
+		ai_chance = {
+			modifier = {
+				factor = 0
+				NOT = {
+					adm_tech = 5
+				}
+			}
+			factor = 1
+			modifier = {
+				factor = 2
+				personality = ai_balanced
+			}
+			modifier = {
+				factor = 2
+				personality = ai_diplomat
+			}
+			modifier = {
+				factor = 10
+				is_emperor = yes
+			}
+		}
+	}
+	option = {
+		name = ANEX_test.1.a9
+		add_idea_group = health_ideas
+
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = {
+					adm_tech = 5
+				}
+			}
+			modifier = {
+				factor = 2
+				personality = ai_balanced
+			}
+			modifier = {
+				factor = 2
+				has_country_modifier = elven_administration
+				has_country_modifier = dwarven_administration
+			}
+		}
+	}
+	option = {
+		name = ANEX_test.1.a10
+		add_idea_group = monarchie0
+
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = {
+					adm_tech = 5
+				}
+			}
+			modifier = {
+				factor = 2
+				personality = ai_militarist
+			}
+			modifier = {
+				factor = 2
+				government = monarchy
+			}
+		}
+	}
+	option = {
+		name = ANEX_test.1.a11
+		add_idea_group = Teokratic0
+
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = {
+					adm_tech = 5
+				}
+			}
+			modifier = {
+				factor = 2
+				personality = ai_militarist
+			}
+			modifier = {
+				factor = 2
+				government = theocracy
+			}
+		}
+	}
+	option = {
+		name = ANEX_test.1.a12
+		add_idea_group = republik0
+
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = {
+					adm_tech = 5
+				}
+			}
+			modifier = {
+				factor = 2
+				personality = ai_militarist
+			}
+			modifier = {
+				factor = 2
+				government = republic
+			}
+		}
+	}
+	option = {
+		name = ANEX_test.1.a13
+		add_idea_group = diktatur0
+
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = {
+					adm_tech = 5
+				}
+			}
+			modifier = {
+				factor = 2
+				personality = ai_militarist
+			}
+			modifier = {
+				factor = 10
+				government = republic
+			}
+		}
+	}
+	option = {
+		name = ANEX_test.1.a14
+		add_idea_group = centaur_horde_idea_0
+
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = {
+					adm_tech = 5
+				}
+			}
+			modifier = {
+				factor = 100
+				has_country_modifier = centaur_military
+			}
+		}
+	}
+	option = {
+		name = ANEX_test.1.a15
+		add_idea_group = public_administr
+
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = {
+					adm_tech = 5
+				}
+			}
+			modifier = {
+				factor = 2
+				personality = ai_balanced
+			}
+			modifier = {
+				factor = 2
+				governing_capacity_percentage = 0.9
+			}
+			modifier = {
+				factor = 2
+				governing_capacity_percentage = 1
+			}
+			modifier = {
+				factor = 10
+				governing_capacity_percentage = 1.1
+			}
+			modifier = {
+				factor = 2
+				total_development = 500
+			}
+			modifier = {
+				factor = 2
+				total_development = 600
+			}
+			modifier = {
+				factor = 2
+				total_development = 700
+			}
+			modifier = {
+				factor = 2
+				personality = ai_capitalist
+			}
+		}
+	}
+	option = {
+		name = ANEX_test.1.a16
+		add_idea_group = zentra0
+
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = {
+					adm_tech = 5
+				}
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					num_of_cities = 1
+					num_of_cities = 2
+				}
+			}
+			modifier = {
+				factor = 0
+				total_development = 500
+			}
+			modifier = {
+				factor = 2
+				personality = ai_balanced
+			}
+			modifier = {
+				factor = 10
+				NOT = {
+					land_forcelimit = 15
+				}
+			}
+			modifier = {
+				factor = 2
+				NOT = {
+					naval_forcelimit = 15
+				}
+			}
+			modifier = {
+				factor = 2
+				NOT = {
+					total_development = 100
+				}
+			}
+			modifier = {
+				factor = 2
+				calc_true_if = {
+					amount = 4
+					any_owned_province = {
+						is_in_capital_area = yes
+						development = 10
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				calc_true_if = {
+					amount = 4
+					any_owned_province = {
+						is_in_capital_area = yes
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				has_country_modifier = centaur_military
+			}
+		}
+	}
+	option = {
+		name = ANEX_test.1.a17
+		add_idea_group = dezentra0
+
+		ai_chance = {
+			factor = 1
+			
+		}
+	}
+	option = {
+		name = ANEX_test.1.a18
+		add_idea_group = spy_ideas
+
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 2
+				personality = ai_diplomat
+			}
+			modifier = {
+				factor = 2
+				personality = ai_balanced
+			}
+			modifier = {
+				factor = 10
+				any_neighbor_country = {
+					is_rival = ROOT
+				}
+			}
+		}
+	}
+
+	option = {
+		name = ANEX_test.1.a19
+		add_idea_group = dynasty0
+
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				is_subject = yes
+			}
+			modifier = {
+				factor = 2
+				government = monarchy
+			}
+			modifier = {
+				factor = 2
+				is_emperor = yes
+			}
+			modifier = {
+				factor = 4
+				personality = ai_diplomat
+			}
+		}
+	}
+	option = {
+		name = ANEX_test.1.a20
+		add_idea_group = influence_ideas
+
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = {
+					num_of_subjects = 1
+				}
+			}
+			modifier = {
+				factor = 2
+				num_of_subjects = 1
+			}
+			modifier = {
+				factor = 5
+				num_of_subjects = 2
+			}
+			modifier = {
+				factor = 10
+				num_of_subjects = 3
+			}
+			modifier = {
+				factor = 100
+				OR = {
+					tag = A01
+					tag = A13
+					tag = R51
+					tag = Y28
+				}
+			}
+		}
+	}
+	option = {
+		name = ANEX_test.1.a21
+		add_idea_group = trade_ideas
+
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 2
+				has_reform = plutocratic_reform
+			}
+			modifier = {
+				factor = 2
+				is_in_trade_league = yes
+			}
+			modifier = {
+				factor = 2
+				capital_scope = {
+					OR = {
+						region = east_dameshead_region
+						region = west_dameshead_region
+						region = damescrown_region
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				trade_income_percentage = 0.4
+			}
+			modifier = {
+				factor = 2
+				personality = ai_diplomat
+			}
+		}
+	}
+
+	option = {
+		name = ANEX_test.1.a22
+		add_idea_group = exploration_ideas
+
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				OR = {
+					is_tribal = yes
+					AND = {
+						is_subject = yes
+						NOT = {
+							tag = A09
+						}
+					}
+					primitives = yes
+					is_colonial_nation = yes
+					has_reform = free_city
+				}
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					tag = A01
+					tag = Z18
+					tag = A33
+					tag = A11
+					tag = A47
+					tag = A29
+					tag = A05
+					tag = U08
+					tag = Z08
+					tag = A33
+					tag = A79
+					tag = A15
+					tag = A04
+					tag = A22
+					tag = Z05
+					tag = Z68
+					tag = A18
+				}
+			}
+			modifier = {
+				factor = 0
+				current_age = age_of_reformation
+			}
+			modifier = {
+				factor = 0
+				NOT = {
+					any_owned_province = {
+						has_port = yes
+					}
+				}
+			}
+			modifier = {
+				factor = 0.1
+				NOT = { num_of_ports = 3 }
+				NOT = {
+					any_owned_province = {
+						is_in_capital_area = yes
+						has_empty_adjacent_province = yes
+					}
+				}
+			}
+			modifier = {
+				factor = 0.1
+				capital_scope = {
+					NOT = {
+						OR = {
+							region = lencenor_region
+							region = dragon_coast_region
+							region = dalr_region
+							region = west_dameshead_region
+							region = east_dameshead_region
+							region = businor_region
+							# region = akan_region
+							area = vrorenmarch_area
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0.5
+				culture_group = kobold
+			}
+			modifier = {
+				factor = 0.1
+				NOT = { is_year = 1490 }
+				capital_scope = {
+					NOT = {
+						OR = {
+							region = lencenor_region
+							region = dragon_coast_region
+							# region = akan_region
+							area = vrorenmarch_area
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 2.0
+				num_of_ports = 5
+			}
+			modifier = {	#sun elves wanting to reclaim homeland
+				factor = 100
+				primary_culture = sun_elf
+				num_of_ports = 5
+			}
+			modifier = {	#this makes spawned adventurers etc take exploration
+				factor = 10
+				culture_group = kheionai_ruinborn_elf
+			}
+			modifier = {
+				factor = 10
+				OR = {
+					tag = A02 #Deranne
+					tag = A21 #Venail
+					tag = A33 #Verne
+					tag = A11 #Pearlsedge
+					tag = A47 #Eborthil
+					tag = A29 #Busilar
+					tag = Z50 #Grombar
+					tag = A31 #Moonhaven
+
+				}
+			}
+			modifier = {
+				factor = 5
+				OR = {
+					tag = A05 #Reveria
+					tag = U08 #Ekha
+					tag = A79 #Gnomish Hierarchy
+					tag = A09 #Sorncost
+				}
+			}
+			modifier = {
+				factor = 3.5
+				OR = {
+					tag = Z08 #Bjarnrik
+					tag = A19 #Portnamm
+					tag = A80 #Iochand
+					tag = Z10 #Revrhavn
+				}
+			}
+			modifier = {
+				factor = 3
+				OR = {
+					tag = A06 #Nimscodd
+					tag = U07 #Viakkoc
+					tag = A85 #Magisterium
+					tag = A38 #Anbenncost
+					tag = A16 #Wineport
+					tag = A05 #Reveria
+					tag = A04 #Wesdam
+					tag = H66 #Jaherian
+					tag = H67 #Rezankand
+				}
+			}
+		}
+	}
+
+	option = {
+		name = ANEX_test.1.a23
+		add_idea_group = heavy_s_idea
+
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = {
+					num_of_ports = 1
+				}
+			}
+			modifier = {
+				factor = 2
+				num_of_ports = 5
+			}
+			modifier = {
+				factor = 2
+				num_of_ports = 10
+			}
+			modifier = {
+				factor = 0
+				any_owned_province = {
+					any_neighbor_province = {
+						region = dameshead_sea_region
+						area = east_diven_area
+						area = gulf_of_glass_area
+						area = brasanni_sea_area
+						area = sea_of_follies_area
+						area = giants_grave_sea_area
+						area = bay_of_chills_area
+						area = zernuuk_sea_area
+						area = yukelqur_sea_area
+						area = kodarve_sea_area
+					}
+				}
+			}
+			modifier = {
+				factor = 100
+				OR = {
+					tag = A47
+					tag = F23
+				}
+			}
+			modifier = {
+				factor = 10
+				OR = {
+					tag = A02
+					tag = A21
+					tag = Y83
+				}
+			}
+		}
+	}
+	option = {
+		name = ANEX_test.1.a24
+		add_idea_group = galle0
+
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = {
+					num_of_ports = 1
+				}
+			}
+			modifier = {
+				factor = 2
+				any_owned_province = {
+					any_neighbor_province = {
+						region = dameshead_sea_region
+						area = east_diven_area
+						area = gulf_of_glass_area
+						area = brasanni_sea_area
+						area = sea_of_follies_area
+						area = giants_grave_sea_area
+						area = bay_of_chills_area
+						area = zernuuk_sea_area
+						area = yukelqur_sea_area
+						area = kodarve_sea_area
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				num_of_ports = 5
+			}
+			modifier = {
+				factor = 2
+				num_of_ports = 10
+			}
+			modifier = {
+				factor = 5
+				OR = {
+					tag = A45
+					tag = A19
+				}
+			}
+			modifier = {
+				factor = 100
+				OR = {
+					tag = A74
+					tag = U07
+					tag = A22
+					tag = A23
+					tag = F56
+					tag = Y68
+				}
+			}
+		}
+	}
+
+	option = {
+		name = ANEX_test.1.a26
+		add_idea_group = light_s_idea
+
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = {
+					num_of_ports = 1
+				}
+			}
+			modifier = {
+				factor = 2
+				num_of_light_ship = 30
+			}
+			modifier = {
+				factor = 10
+				OR = {
+					tag = A82
+					tag = A11
+					tag = A25
+					tag = Y64
+				}
+			}
+			modifier = {
+				factor = 100
+				OR = {
+					tag = R38
+					tag = Y20
+					tag = Y15
+				}
+			}
+			modifier = {
+				factor = 5
+				has_country_modifier = lake_federation_member
+			}
+		}
+	}
+	option = {
+		name = ANEX_test.1.a27
+		add_idea_group = kolonialimperium0
+
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 2
+				personality = ai_colonialist
+			}
+			modifier = {
+				factor = 2
+				calc_true_if = {
+					OR = {
+						is_subject_of_type = crown_colony
+						is_subject_of_type = self_governing_colony
+						is_subject_of_type = private_enterprise
+					}
+					amount = 2
+				}
+			}
+		}
+	}
+	option = {
+		name = ANEX_test.1.a28
+		add_idea_group = assimilation0
+
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 2
+				has_idea_group = influence_ideas
+			}
+			modifier = {
+				factor = 2
+				any_owned_province = {
+					nationalism = 10
+				}
+			}
+			modifier = {
+				factor = 2
+				num_accepted_cultures = 2
+			}
+			modifier = {
+				factor = 2
+				num_accepted_cultures = 3
+			}
+			modifier = {
+				factor = 2
+				has_idea_group = expansion_ideas
+			}
+			modifier = {
+				factor = 2
+				num_of_subjects = 1
+			}
+			modifier = {
+				factor = 2
+				AND = {
+					NOT = {
+						AND = {
+							has_idea_group = humanist_ideas
+							has_all_reli_idea_groups = yes
+						}
+					}
+					NOT = {
+						religious_unity = 0.7
+					}
+				}
+			}
+		}
+	}
+
+	option = {
+		name = ANEX_test.1.a29
+		add_idea_group = society_idea
+
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 2
+				has_advisor = yes
+			}
+			modifier = {
+				factor = 2
+				num_of_different_cultures_in_court = 2
+			}
+			modifier = {
+				factor = 2
+				num_accepted_cultures = 2
+			}
+			modifier = {
+				factor = 2
+				num_accepted_cultures = 3
+			}
+			modifier = {
+				factor = 10
+				AND = {
+					has_adm_advisor = yes
+					has_dip_advisor = yes
+					has_mil_advisor = yes
+				}
+			}
+		}
+	}
+	option = {
+		name = ANEX_test.1.a30
+		add_idea_group = propaganda0
+
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 2
+				any_owned_province = {
+					nationalism = 5
+				}
+			}
+			modifier = {
+				factor = 2
+				any_neighbor_country = {
+					diplomatic_reputation = 2
+				}
+			}
+			modifier = {
+				factor = 5
+				is_part_of_hre = yes
+			}
+		}
+	}
+
+	option = {
+		name = ANEX_test.1.a31
+		add_idea_group = flottenbasis0
+
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = {
+					num_of_ports = 1
+				}
+			}
+			modifier = {
+				factor = 2
+				OR = {
+					has_idea_group = heavy_s_idea
+					has_idea_group = galle0
+					has_idea_group = light_s_idea
+					has_idea_group = maritime_ideas
+				}
+			}
+			modifier = {
+				factor = 2
+				has_idea_group = heavy_s_idea
+			}
+			modifier = {
+				factor = 2
+				AND = {
+					has_idea_group = light_s_idea
+					NOT = {
+						num_of_cities = 5
+					}
+				}
+			}
+			modifier = {
+				factor = 10
+				AND = {
+					has_idea_group = light_s_idea
+					NOT = {
+						num_of_cities = 2
+					}
+				}
+			}
+			modifier = {
+				factor = 10
+				OR = {
+					tag = A31
+					tag = A22
+					tag = R01
+					tag = R02
+					tag = R03
+					tag = R04
+					tag = Y64
+				}
+				adm_tech = 7
+			}
+		}
+	}
+	option = {
+		name = ANEX_test.1.a32
+		add_idea_group = nationalismus0
+
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 10
+				government_rank = 2
+			}
+			modifier = {
+				factor = 2
+				personality = ai_balanced
+			}
+			modifier = {
+				factor = 2
+				personality = ai_militarist
+			}
+			modifier = {
+				factor = 2
+				any_neighbor_country = {
+					is_rival = ROOT
+				}
+			}		
+		}
+	}
+	option = {
+		name = ANEX_test.1.a33
+		add_idea_group = konigreich0
+
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 10
+				government_rank = 2
+			}
+		}
+	}
+	option = {
+		name = ANEX_test.1.a34
+		add_idea_group = imperialismus0
+
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 10
+				government_rank = 2
+			}
+			modifier = {
+				factor = 10
+				government_rank = 3
+			}
+		}
+	}
+
+	option = {
+		name = ANEX_test.1.a35
+		add_idea_group = maritime_ideas
+
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = {
+					num_of_ports = 1
+				}
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					NOT = {
+						has_idea_group = heavy_s_idea
+					}
+					NOT = {
+						has_idea_group = galle0
+					}
+					NOT = {
+						has_idea_group = light_s_idea
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				has_reform = pirate_republic_reform
+			}
+			modifier = {
+				factor = 5
+				has_idea_group = galle0
+			}
+			modifier = {
+				factor = 2
+				has_idea_group = heavy_s_idea
+			}
+			modifier = {
+				factor = 2
+				has_idea_group = flottenbasis0
+			}
+			modifier = {
+				factor = 2
+				navy_size = 70
+			}
+			modifier = {
+				factor = 2
+				OR = {
+					tag = A29
+					tag = U01
+					tag = A22
+					tag = A40
+					tag = A16
+				}
+			}
+			modifier = {
+				factor = 10
+				OR = {
+					tag = A31
+					tag = Z08
+
+				}
+				adm_tech = 10
+			}
+		}
+	}
+	option = {
+		name = ANEX_test.1.a36
+		add_idea_group = great_power_idea_groups_expanded	
+
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 10
+				NOT = {
+					great_power_rank = 5
+				}
+			}
+		}
+	}
+	option = {
+		name = ANEX_test.1.A37
+		add_idea_group = offensive_ideas
+
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = {
+					mil_tech = 5
+				}
+			}
+			modifier = {
+				factor = 2
+				land_forcelimit =  30
+			}
+			modifier = {
+				factor = 2
+				any_neighbor_country = {
+					is_rival = ROOT
+				}
+			}
+			modifier = {
+				factor = 2
+				personality = ai_militarist
+			}
+			modifier = {
+				factor = 2
+				any_neighbor_country = {
+					AND = {
+						is_rival = ROOT
+						OR = {
+							has_idea_group = defensive_ideas
+							has_idea_group = fortress0
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				has_ruler_modifier =  witch_king_modifier
+			}
+		}
+	}
+
+	option = {
+		name = ANEX_test.1.a38
+		add_idea_group = defensive_ideas
+
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = {
+					mil_tech = 5
+				}
+			}
+			modifier = {
+				factor = 2
+				OR = {
+					has_country_modifier = dwarven_military
+					has_country_modifier = troll_military
+					has_country_modifier = ogre_military
+				}
+			}
+			modifier = {
+				factor = 2
+				personality = ai_militarist
+			}
+			modifier = {
+				factor = 2
+				any_neighbor_country = {
+					AND = {
+						is_rival = ROOT
+						has_idea_group = offensive_ideas
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = ANEX_test.1.a39
+		add_idea_group = quality_ideas
+
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = {
+					adm_tech = 6
+				}
+			}
+			modifier = {
+				factor = 2
+				land_forcelimit =  50
+			}
+			modifier = {
+				factor = 2
+				has_idea_group = standing_army_idea_groups
+			}
+			modifier = {
+				factor = 2
+				has_country_modifier = elven_military
+			}
+			modifier = {
+				factor = 2
+				total_development = 500
+			}
+		}
+	}
+	option = {
+		name = ANEX_test.1.a40
+		add_idea_group = quantity_ideas
+
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = {
+					adm_tech = 6
+				}
+			}
+			modifier = {
+				factor = 2
+				personality = ai_militarist
+			}
+			modifier = {
+				factor = 5
+				NOT = {
+					land_forcelimit = 20
+				}
+			}
+			modifier = {
+				factor = 2
+				any_neighbor_country = {
+					is_rival = ROOT
+					army_balance = {
+						who = ROOT
+						value = 0.5
+					}
+				}
+			}
+			modifier = {
+				factor = 10
+				OR = {
+					has_country_modifier = gnollish_military
+					has_country_modifier = goblin_military 
+				}
+			}
+		}
+	}
+
+	option = {
+		name = ANEX_test.1.a41
+		add_idea_group = generalstab0
+
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = {
+					adm_tech = 6
+				}
+			}
+			modifier = {
+				factor = 2
+				personality = ai_militarist
+			}
+			modifier = {
+				factor = 10
+				army_tradition = 90
+			}
+			modifier = {
+				factor = 10
+				army_professionalism = 0.5
+			}
+		}
+	}
+	option = {
+		name = ANEX_test.1.a42
+		add_idea_group = standing_army_idea_groups
+
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = {
+					adm_tech = 6
+				}
+			}
+			modifier = {
+				factor = 2
+				personality = ai_militarist
+			}
+			modifier = {
+				factor = 10
+				OR = {
+					has_country_modifier = elven_military
+					has_country_modifier = gnomish_military
+					has_country_modifier = dwarven_military
+				}
+			}
+		}
+	}
+	option = {
+		name = ANEX_test.1.a43
+		add_idea_group = mercenary_army_idea_groups
+
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = {
+					adm_tech = 6
+				}
+			}
+			modifier = {
+				factor = 2
+				personality = ai_militarist
+			}
+			modifier = {
+				factor = 1000
+				OR = {
+					tag = A16
+					tag = Y58
+					tag = F47
+					tag = A38
+					has_country_modifier = halfling_military
+				}
+			}
+		}
+	}
+	option = {
+		name = ANEX_test.1.a44
+		add_idea_group = conscription_ideas0
+
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = {
+					adm_tech = 6
+				}
+			}
+			modifier = {
+				factor = 2
+				personality = ai_militarist
+			}
+			modifier = {
+				factor = 2
+				has_idea_group = quantity_ideas
+			}
+			modifier = {
+				factor = 2
+				manpower_percentage = 0.2
+			}
+			modifier = {
+				factor = 2
+				any_neighbor_country = {
+					is_rival = ROOT
+					army_balance = {
+						who = ROOT
+						value = 0.5
+					}
+				}
+			}
+			modifier = {
+				factor = 10
+				OR = {
+					has_country_modifier = kobold_military
+					has_country_modifier = goblin_military
+					has_country_modifier = gnollish_military
+				}
+			}
+		}
+	}
+	option = {
+		name = ANEX_test.1.a45
+		add_idea_group = weapon_quality_0
+
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = {
+					adm_tech = 6
+				}
+			}
+			modifier = {
+				factor = 2
+				personality = ai_militarist
+			}
+			modifier = {
+				factor = 2
+				has_idea_group = offensive_ideas
+			}
+		}
+	}
+	option = {
+		name = ANEX_test.1.a46
+		add_idea_group = war_production_0
+
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = {
+					adm_tech = 6
+				}
+			}
+			modifier = {
+				factor = 2
+				personality = ai_militarist
+			}
+			modifier = {
+				factor = 2
+				any_neighbor_country = {
+					is_rival = ROOT
+					army_balance = {
+						who = ROOT
+						value = 0.5
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				army_tradition = 25
+			}
+			modifier = {
+				factor = 2
+				AND = {
+					army_size_percentage = 1
+					current_income_balance = 15
+				}
+			}
+		}
+	}
+
+	option = {
+		name = ANEX_test.1.a47
+		add_idea_group = formation0
+
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = {
+					adm_tech = 6
+				}
+			}
+			modifier = {
+				factor = 2
+				personality = ai_militarist
+			}
+		}
+	}
+	option = {
+		name = ANEX_test.1.a48
+		add_idea_group = militarismus0
+
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = {
+					adm_tech = 6
+				}
+			}
+			modifier = {
+				factor = 2
+				personality = ai_militarist
+			}
+			modifier = {
+				factor = 2
+			}
+		}
+	}
+	option = {
+		name = ANEX_test.1.a49
+		add_idea_group = shock0
+
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = {
+					adm_tech = 6
+				}
+			}
+			modifier = {
+				factor = 2
+				personality = ai_militarist
+			}
+			modifier = {
+				factor = 10
+				has_idea_group = cavalary_focus_idea
+			}
+			modifier = {
+				factor = 2
+				OR = {
+					has_country_modifier = orcish_military
+					has_country_modifier = centaur_military
+					has_country_modifier = ogre_military
+					has_country_modifier = troll_military
+				}
+			}
+		}
+	}
+
+	option = {
+		name = ANEX_test.1.a50
+		add_idea_group = fire0
+
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = {
+					adm_tech = 6
+				}
+			}
+			modifier = {
+				factor = 2
+				personality = ai_militarist
+			}
+			modifier = {
+				factor = 10
+				mil_tech = 16
+			}
+			modifier = {
+				factor = 10
+				mil_tech = 22
+			}
+			modifier = {
+				factor = 2
+				has_country_modifier = dwarven_military
+			}
+			modifier = {
+				factor = 3
+				has_country_modifier = gnomish_military
+			}
+		}
+	}
+	option = {
+		name = ANEX_test.1.a51
+		add_idea_group = cavalary_focus_idea
+
+		ai_chance = {
+			factor = 1
+			
+			modifier = {
+				factor = 1000
+				OR = {
+					has_country_modifier = centaur_military
+					primary_culture = ghavaanaj
+					tag = F46
+					tag = Y91
+				}				
+			}
+		}
+	}
+	option = {
+		name = ANEX_test.1.a52
+		add_idea_group = infantry_focus_idea
+
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = {
+					adm_tech = 6
+				}
+			}
+			modifier = {
+				factor = 2
+				personality = ai_militarist
+			}
+			modifier = {
+				factor = 10
+				adm_tech = 12
+				OR = {
+					has_country_modifier = gnomish_military
+					has_country_modifier = dwarven_military
+				}
+			}
+		}
+	}
+	option = {
+		name = ANEX_test.1.a53
+		add_idea_group = siege_idea
+
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = {
+					adm_tech = 6
+				}
+			}
+			modifier = {
+				factor = 2
+				personality = ai_militarist
+			}
+			modifier = {
+				factor = 2
+				OR = {
+					has_idea_group = offensive_ideas
+					has_idea_group = weapon_quality_0
+				}
+			}
+			modifier = {
+				factor = 2
+				has_country_modifier = gnomish_military
+			}
+		}
+	}
+
+	option = {
+		name = ANEX_test.1.a54
+		add_idea_group = fortress0
+
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = {
+					adm_tech = 6
+				}
+			}
+			modifier = {
+				factor = 2
+				personality = ai_militarist
+			}
+			modifier = {
+				factor = 10
+				OR = {
+					has_country_modifier = dwarven_military
+					has_country_modifier = harpy_military
+				}
+			}
+			modifier = {
+				factor = 2
+				calc_true_if = {
+					amount = 2
+					any_owned_province = {
+						development = 50
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				any_owned_province = {
+					OR = {
+						has_terrain = dwarven_hold
+						has_terrain = dwarven_hold_surface
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				current_income_balance = 25
+			}
+		}
+	}
+}
+
+country_event = {
+	id = ANEX_test.2
+	title = ANEX_test.1.t
+	desc = ANEX_test.1.d
+	picture = WESTERNISATION_eventPicture
+
+	is_triggered_only = yes
+	
+
+	immediate = {
+		random_owned_province = {
+			export_to_variable = {
+				which = 123
+				value = modifier:local_state_maintenance_modifier
+			}
+		}
+
+	}
+
+	option = {
+		name = ANEX_test.1.a1
+	}
+}

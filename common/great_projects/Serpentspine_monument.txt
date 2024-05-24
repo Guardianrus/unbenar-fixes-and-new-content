@@ -1,0 +1,4472 @@
+kronium_throne = {
+	start = 4119
+	date = 01.01.01
+	time = {
+		months = 0
+	}
+	build_cost = 0
+	can_be_moved = no
+	move_days_per_unit_distance = 1
+	starting_tier = 0
+	type = monument
+	build_trigger = {	
+	}
+	on_built = {		
+	}
+	on_destroyed = {		
+	}
+	can_use_modifiers_trigger = {
+		AND = {
+			development = 40
+			province_is_or_accepts_culture = yes
+			culture_group = dwarven
+
+		}
+	}	
+	can_upgrade_trigger = {
+		AND = {
+			development = 40
+			province_is_or_accepts_culture = yes
+			culture_group = dwarven
+		}
+	}	
+	keep_trigger = {
+	}
+	tier_0 = {
+		upgrade_time = {
+			months = 0
+		}
+		cost_to_upgrade = {
+			factor = 0
+		}
+		province_modifiers = {
+		}
+		area_modifier = {
+		}
+		country_modifiers = {
+			
+		}
+		on_upgraded = {
+		}
+	}
+	tier_1 = {
+		upgrade_time = {
+			months = 120
+		}
+		cost_to_upgrade = {
+			factor = 1500
+		}
+		province_modifiers = {	
+		}
+		area_modifier = {
+			trade_goods_size_modifier = 0.05
+		}
+		country_modifiers = {
+			governing_capacity_modifier = 0.025
+		}
+		on_upgraded = {
+		}
+	}
+	tier_2 = {
+		upgrade_time = {
+			months = 240
+		}
+		cost_to_upgrade = {
+			factor = 5000
+		}
+		province_modifiers = {			
+		}
+		area_modifier = {
+			trade_goods_size_modifier = 0.075
+		}
+		country_modifiers = {
+			yearly_absolutism = 0.25
+			max_absolutism = 5
+			governing_capacity_modifier = 0.05
+			administrative_efficiency = 0.025
+		}
+		on_upgraded = {
+		}
+	}
+	tier_3 = {
+		upgrade_time = {
+			months = 480
+		}
+		cost_to_upgrade = {
+			factor = 10000
+		}
+		province_modifiers = {		
+		}
+		area_modifier = {
+			trade_goods_size_modifier = 0.10
+		}
+		country_modifiers = {
+			yearly_absolutism = 0.5
+			max_absolutism = 10
+			governing_capacity_modifier = 0.1
+			administrative_efficiency = 0.05
+		}
+		on_upgraded = {
+			owner = {
+				add_country_modifier = {
+					name = kronium_throne_one_throne_to_rule_them_all
+					duration = 3650
+				}
+			}
+		}
+	}
+}
+#High Assembly of Amlharaz
+amlharaz_assembly = {
+	start = 4149
+	date = 01.01.01
+	time = {
+		months = 0
+	}
+	build_cost = 0
+	can_be_moved = no
+	move_days_per_unit_distance = 1
+	starting_tier = 0
+	type = monument
+	build_trigger = {	
+	}
+	on_built = {	
+	}
+	on_destroyed = {	
+	}	
+	can_use_modifiers_trigger = {
+		AND = {
+			development = 40
+			province_is_or_accepts_culture = yes
+			culture_group = dwarven
+		}
+	}	
+	can_upgrade_trigger = {
+		AND = {
+			development = 40
+			province_is_or_accepts_culture = yes
+			culture_group = dwarven
+		}
+	}	
+	keep_trigger = {
+	}
+	tier_0 = {
+		upgrade_time = {
+			months = 0
+		}
+		cost_to_upgrade = {
+			factor = 0
+		}
+		province_modifiers = {
+		}
+		area_modifier = {
+		}
+		country_modifiers = {	
+		}
+		on_upgraded = {
+		}
+	}
+	tier_1 = {
+		upgrade_time = {
+			months = 120
+		}
+		cost_to_upgrade = {
+			factor = 1000
+		}
+		province_modifiers = {	
+		}
+		area_modifier = {
+			local_production_efficiency = 0.05
+		}
+		country_modifiers = {
+			vassal_income = 0.15
+		}
+		on_upgraded = {
+		}
+	}
+	tier_2 = {
+		upgrade_time = {
+			months = 240
+		}
+		cost_to_upgrade = {
+			factor = 3500
+		}
+		province_modifiers = {		
+		}
+		area_modifier = {
+			local_production_efficiency = 0.075
+		}
+		country_modifiers = {
+			diplomatic_reputation = 0.5
+			vassal_income = 0.25
+		}
+		on_upgraded = {
+			owner = {
+				define_advisor = {
+					type = statesman
+					name = "Thorin Silvertongue"
+					skill = 3
+					culture = kronium_dwarf
+					religion = ancestor_worship
+					location = 4149
+					discount = yes
+				}
+			}
+		}
+	}
+	tier_3 = {
+		upgrade_time = {
+			months = 480
+		}
+		cost_to_upgrade = {
+			factor = 7000
+		}
+		province_modifiers = {		
+		}
+		area_modifier = {
+			local_production_efficiency = 0.10
+		}
+		country_modifiers = {
+			diplomats = 1
+			diplomatic_reputation = 1
+			vassal_income = 0.33
+		}
+		on_upgraded = {
+		add_base_production = 4
+			owner = {
+				add_country_modifier = {
+					name = amlharaz_assembly_hold_council
+					duration = 10950
+				}
+			}
+		}
+	}
+}
+#Fortress of Verkal Vazkron
+fortress_of_verkal_vazkron = {
+	start = 4122
+	date = 01.01.01
+	time = {
+		months = 0
+	}
+	build_cost = 0
+	can_be_moved = no
+	move_days_per_unit_distance = 1
+	starting_tier = 0
+	type = monument
+	build_trigger = {	
+	}
+	on_built = {		
+	}
+	on_destroyed = {		
+	}	
+	can_use_modifiers_trigger = {
+		AND = {
+			development = 40
+			province_is_or_accepts_culture = yes
+			culture_group = dwarven
+		}
+	}	
+	can_upgrade_trigger = {
+		AND = {
+			development = 40
+			province_is_or_accepts_culture = yes
+			culture_group = dwarven
+		}
+	}	
+	keep_trigger = {
+	}
+	tier_0 = {
+		upgrade_time = {
+			months = 0
+		}
+		cost_to_upgrade = {
+			factor = 0
+		}
+		province_modifiers = {
+		}
+		area_modifier = {
+		}
+		country_modifiers = {		
+		}
+		on_upgraded = {
+		}
+	}
+	tier_1 = {
+		upgrade_time = {
+			months = 120
+		}
+		cost_to_upgrade = {
+			factor = 1000
+		}
+		province_modifiers = {			
+		}
+		area_modifier = {
+			local_defensiveness = 0.15
+		}
+		country_modifiers = {
+			defensiveness = 0.05
+			hostile_attrition = 0.5
+		}
+		on_upgraded = {
+		}
+	}
+	tier_2 = {
+		upgrade_time = {
+			months = 240
+		}
+		cost_to_upgrade = {
+			factor = 3500
+		}
+		province_modifiers = {			
+		}
+		area_modifier = {
+			local_defensiveness = 0.25
+		}
+		country_modifiers = {
+			defensiveness = 0.125
+			hostile_attrition = 0.75
+		}
+		on_upgraded = {
+			owner = {
+				define_advisor = {
+					type = fortification_expert
+					name = "Belgar Forgewall"
+					skill = 3
+					culture = kronium_dwarf
+					religion = ancestor_worship
+					location = 4122
+					discount = yes
+				}
+			}			
+		}
+	}
+	tier_3 = {
+		upgrade_time = {
+			months = 480
+		}
+		cost_to_upgrade = {
+			factor = 7000
+		}
+		province_modifiers = {
+			
+		}
+		area_modifier = {
+			local_defensiveness = 0.5
+		}
+		country_modifiers = {
+			defensiveness = 0.25
+			hostile_attrition = 1
+		}
+		on_upgraded = {
+			every_province_in_state = {
+				add_building = fortress_keep
+			}
+		}
+	}
+}
+#Hall of the Ancestors
+hall_of_the_ancestors = {
+	start = 4128
+	date = 01.01.01
+	time = {
+		months = 0
+	}
+	build_cost = 0
+	can_be_moved = no
+	move_days_per_unit_distance = 1
+	starting_tier = 0
+	type = monument
+	build_trigger = {	
+	}
+	on_built = {		
+	}
+	on_destroyed = {		
+	}	
+	can_use_modifiers_trigger = {
+		AND = {
+			development = 40
+			province_is_or_accepts_culture = yes
+			culture_group = dwarven
+		}
+	}
+	can_upgrade_trigger = {
+		AND = {
+			development = 40
+			province_is_or_accepts_culture = yes
+			culture_group = dwarven
+		}
+	}
+	keep_trigger = {
+	}
+	tier_0 = {
+		upgrade_time = {
+			months = 0
+		}
+		cost_to_upgrade = {
+			factor = 0
+		}
+		province_modifiers = {
+		}
+		area_modifier = {
+			local_defensiveness = 0.15
+		}
+		country_modifiers = {		
+		}
+		on_upgraded = {
+		}
+	}
+	tier_1 = {
+		upgrade_time = {
+			months = 120
+		}
+		cost_to_upgrade = {
+			factor = 1000
+		}
+		province_modifiers = {		
+		}
+		area_modifier = {
+			trade_value_modifier = 0.025
+		}
+		country_modifiers = {
+			manpower_in_true_faith_provinces = 0.05
+			tolerance_own = 1
+		}
+		on_upgraded = {
+		}
+	}
+	tier_2 = {
+		upgrade_time = {
+			months = 240
+		}
+		cost_to_upgrade = {
+			factor = 3500
+		}
+		province_modifiers = {		
+		}
+		area_modifier = {
+			trade_value_modifier = 0.05
+		}
+		country_modifiers = {
+			manpower_in_true_faith_provinces = 0.1
+			tolerance_own = 1.5
+		}
+		on_upgraded = {
+		}
+	}
+	tier_3 = {
+		upgrade_time = {
+			months = 480
+		}
+		cost_to_upgrade = {
+			factor = 7000
+		}
+		province_modifiers = {			
+		}
+		area_modifier = {
+			trade_value_modifier = 0.10
+		}
+		country_modifiers = {
+			manpower_in_true_faith_provinces = 0.15
+			tolerance_own = 2
+		}
+		on_upgraded = {
+		}
+	}
+}
+#Railyard of Er-Natvir
+er_natvir_railyard = {
+	start = 2931
+	date = 01.01.01
+	time = {
+		months = 0
+	}
+	build_cost = 0
+	can_be_moved = no
+	move_days_per_unit_distance = 1
+	starting_tier = 0
+	type = monument
+	build_trigger = {		
+	}
+	on_built = {		
+	}
+	on_destroyed = {		
+	}	
+	can_use_modifiers_trigger = {
+		AND = {
+			development = 40
+			province_is_or_accepts_culture = yes
+		}
+	}	
+	can_upgrade_trigger = {
+		AND = {
+			development = 40
+			province_is_or_accepts_culture = yes
+		}
+	}
+	
+	keep_trigger = {
+	}
+	tier_0 = {
+		upgrade_time = {
+			months = 0
+		}
+		cost_to_upgrade = {
+			factor = 0
+		}
+		province_modifiers = {
+		}
+		area_modifier = {
+		}
+		country_modifiers = {			
+		}
+		on_upgraded = {
+		}
+	}
+	tier_1 = {
+		upgrade_time = {
+			months = 120
+		}
+		cost_to_upgrade = {
+			factor = 1000
+		}
+		province_modifiers = {		
+		}
+		area_modifier = {
+			local_friendly_movement_speed = 0.15
+		}
+		country_modifiers = {
+			movement_speed = 0.05
+			envoy_travel_time = -0.1 
+		}
+		on_upgraded = {
+		}
+	}
+	tier_2 = {
+		upgrade_time = {
+			months = 240
+		}
+		cost_to_upgrade = {
+			factor = 3500
+		}
+		province_modifiers = {		
+		}
+		area_modifier = {
+			local_friendly_movement_speed = 0.25
+		}
+		country_modifiers = {
+			movement_speed = 0.075
+			envoy_travel_time = -0.2
+			global_supply_limit_modifier = 0.15
+		}
+		on_upgraded = {
+		}
+	}
+	tier_3 = {
+		upgrade_time = {
+			months = 480
+		}
+		cost_to_upgrade = {
+			factor = 7000
+		}
+		province_modifiers = {			
+		}
+		area_modifier = {
+			local_friendly_movement_speed = 0.50
+		}
+		country_modifiers = {
+			movement_speed = 0.2	
+			envoy_travel_time = -0.33
+			global_supply_limit_modifier = 0.33
+		}
+		on_upgraded = {
+			owner = {
+				add_country_modifier = {
+				name = er_natvir_railyard_rail_ride
+				duration = 5475
+				}
+			}
+		}
+	}
+}
+#Brothels of Verkal Kozenad
+kozenad_brothel = {
+	start = 4056
+	date = 01.01.01
+	time = {
+		months = 0
+	}
+	build_cost = 0
+	can_be_moved = no
+	move_days_per_unit_distance = 1
+	starting_tier = 0
+	type = monument
+	build_trigger = {	
+	}
+	on_built = {		
+	}
+	on_destroyed = {		
+	}	
+	can_use_modifiers_trigger = {
+		AND = {
+			development = 40
+			province_is_or_accepts_culture = yes
+			culture_group = dwarven
+		}
+	}	
+	can_upgrade_trigger = {
+		AND = {
+			development = 40
+			province_is_or_accepts_culture = yes
+			culture_group = dwarven
+		}
+	}	
+	keep_trigger = {
+	}
+	tier_0 = {
+		upgrade_time = {
+			months = 0
+		}
+		cost_to_upgrade = {
+			factor = 0
+		}
+		province_modifiers = {
+		}
+		area_modifier = {
+		}
+		country_modifiers = {		
+		}
+		on_upgraded = {
+		}
+	}
+	tier_1 = {
+		upgrade_time = {
+			months = 120
+		}
+		cost_to_upgrade = {
+			factor = 1000
+		}
+		province_modifiers = {
+			local_production_efficiency = 0.10
+		}
+		area_modifier = {		
+		}
+		country_modifiers = {
+			global_unrest = -0.5
+			heir_chance = 0.15
+			spy_offence = 0.1
+		}
+		on_upgraded = {
+		}
+	}
+	tier_2 = {
+		upgrade_time = {
+			months = 240
+		}
+		cost_to_upgrade = {
+			factor = 3500
+		}
+		province_modifiers = {
+			local_production_efficiency = 0.15
+		}
+		area_modifier = {			
+		}
+		country_modifiers = {
+			global_unrest = -1
+			heir_chance = 0.3
+			spy_offence = 0.2
+		}
+		on_upgraded = {
+		}
+	}
+	tier_3 = {
+		upgrade_time = {
+			months = 480
+		}
+		cost_to_upgrade = {
+			factor = 7000
+		}
+		province_modifiers = {
+			local_production_efficiency = 0.25
+		}
+		area_modifier = {			
+		}
+		country_modifiers = {
+			global_unrest = -1.5
+			heir_chance = 0.5
+			spy_offence = 0.3
+		}
+		on_upgraded = {
+			4056 = {
+				add_province_modifier = {
+				name = kozenad_brothel_new_ladies_of_the_opal_calling
+				duration = 9125
+				}
+			}
+		}
+	}
+}
+#Goblinslayer Academy
+mithradhum_academy = {
+	start = 4236
+	date = 01.01.01
+	time = {
+		months = 0
+	}
+	build_cost = 0
+	can_be_moved = no
+	move_days_per_unit_distance = 1
+	starting_tier = 0
+	type = monument
+	build_trigger = {	
+	}
+	on_built = {		
+	}
+	on_destroyed = {	
+	}
+	can_use_modifiers_trigger = {
+		AND = {
+			development = 40
+			province_is_or_accepts_culture = yes
+			culture_group = dwarven
+		}
+	}	
+	can_upgrade_trigger = {
+		AND = {
+			development = 40
+			province_is_or_accepts_culture = yes
+			culture_group = dwarven
+		}
+	}
+	keep_trigger = {
+	}
+	tier_0 = {
+		upgrade_time = {
+			months = 0
+		}
+		cost_to_upgrade = {
+			factor = 0
+		}
+		province_modifiers = {
+		}
+		area_modifier = {
+		}
+		country_modifiers = {			
+		}
+		on_upgraded = {
+		}
+	}
+	tier_1 = {
+		upgrade_time = {
+			months = 120
+		}
+		cost_to_upgrade = {
+			factor = 1000
+		}
+		province_modifiers = {
+			local_institution_spread = 0.1
+			trade_goods_size = 0.25
+		}
+		area_modifier = {		
+		}
+		country_modifiers = {
+			army_tradition_decay = -0.001
+			yearly_army_professionalism = 0.001
+		}
+		on_upgraded = {
+		}
+	}
+	tier_2 = {
+		upgrade_time = {
+			months = 240
+		}
+		cost_to_upgrade = {
+			factor = 3500
+		}
+		province_modifiers = {
+			local_institution_spread = 0.2
+			trade_goods_size = 0.5
+		}
+		area_modifier = {		
+		}
+		country_modifiers = {
+			army_tradition_decay = -0.003
+			yearly_army_professionalism = 0.003
+		}
+		on_upgraded = {
+			owner = {
+				add_country_modifier = {
+					name = wargames
+					duration = 3650
+				}
+			}
+		}
+	}
+	tier_3 = {
+		upgrade_time = {
+			months = 480
+		}
+		cost_to_upgrade = {
+			factor = 7000
+		}
+		province_modifiers = {
+			local_institution_spread = 0.33
+			trade_goods_size = 1
+		}
+		area_modifier = {			
+		}
+		country_modifiers = {
+			army_tradition_decay = -0.005
+			yearly_army_professionalism = 0.005
+			free_mil_policy = 1
+		}
+		on_upgraded = {
+			add_building = university
+			owner = {
+				random_list = {
+					60 = {
+						add_mil_power = 100
+					}
+					25 = {
+						change_mil = 1
+					}
+					15 = {
+						add_mil_tech = 1
+					}
+				}
+			}
+		}
+	}
+}
+#Estates of Haraz Orldhûm (Haraz Orldhum)
+orldhum_estates = {
+	start = 2868
+	date = 01.01.01
+	time = {
+		months = 0
+	}
+	build_cost = 0
+	can_be_moved = no
+	move_days_per_unit_distance = 1
+	starting_tier = 0
+	type = monument
+	build_trigger = {	
+	}
+	on_built = {		
+	}
+	on_destroyed = {		
+	}	
+	can_use_modifiers_trigger = {
+		AND = {
+			development = 40
+			province_is_or_accepts_culture = yes
+			culture_group = dwarven
+		}
+	}
+	can_upgrade_trigger = {
+		AND = {
+			development = 40
+			province_is_or_accepts_culture = yes
+			culture_group = dwarven
+		}
+	}
+	keep_trigger = {
+	}
+	tier_0 = {
+		upgrade_time = {
+			months = 0
+		}
+		cost_to_upgrade = {
+			factor = 0
+		}
+		province_modifiers = {
+		}
+		area_modifier = {
+		}
+		country_modifiers = {		
+		}
+		on_upgraded = {
+		}
+	}
+	tier_1 = {
+		upgrade_time = {
+			months = 120
+		}
+		cost_to_upgrade = {
+			factor = 1000
+		}
+		province_modifiers = {
+			local_defensiveness = 0.15
+			local_manpower_modifier = 0.15
+		}
+		area_modifier = {			
+		}
+		country_modifiers = {
+			nobles_loyalty_modifier = 0.05
+			global_autonomy = -0.01
+		}
+		on_upgraded = {
+			owner = {
+				add_estate_loyalty = {
+					estate = estate_nobles
+					loyalty = 5
+				}
+			}
+		}
+	}
+	tier_2 = {
+		upgrade_time = {
+			months = 240
+		}
+		cost_to_upgrade = {
+			factor = 3500
+		}
+		province_modifiers = {
+			local_defensiveness = 0.25
+			local_manpower_modifier = 0.25
+		}
+		area_modifier = {			
+		}
+		country_modifiers = {
+			nobles_influence_modifier = 0.025
+			nobles_loyalty_modifier = 0.075
+			global_autonomy = -0.03
+		}
+		on_upgraded = {
+			add_base_manpower = 2
+			owner = {
+				add_estate_loyalty = {
+					estate = estate_nobles
+					loyalty = 10
+				}
+			}
+		}
+	}
+	tier_3 = {
+		upgrade_time = {
+			months = 480
+		}
+		cost_to_upgrade = {
+			factor = 7000
+		}
+		province_modifiers = {
+			local_defensiveness = 0.5
+			local_manpower_modifier = 0.5
+		}
+		area_modifier = {			
+		}
+		country_modifiers = {
+			nobles_influence_modifier = 0.05
+			nobles_loyalty_modifier = 0.1
+			global_autonomy = -0.05
+			general_cost = -0.05
+		}
+		on_upgraded = {
+			add_base_manpower = 2
+			owner = {
+				add_country_modifier = {
+					name = haraz_orldhum_nobles_pleased_with_hold_improvements
+					duration = 10950
+				}
+				add_estate_loyalty = {
+					estate = estate_nobles
+					loyalty = 15
+				}
+			}
+		}
+	}
+}
+#Asra Bank of Khugdihr
+khugdihr_bank = {
+	start = 2863
+	date = 01.01.01
+	time = {
+		months = 0
+	}
+	build_cost = 0
+	can_be_moved = no
+	move_days_per_unit_distance = 1
+	starting_tier = 0
+	type = monument
+	build_trigger = {	
+	}
+	on_built = {		
+	}
+	on_destroyed = {	
+	}	
+	can_use_modifiers_trigger = {
+		AND = {
+			development = 40
+			province_is_or_accepts_culture = yes
+			culture_group = dwarven
+		}
+	}
+	can_upgrade_trigger = {
+		AND = {
+			development = 40
+			province_is_or_accepts_culture = yes
+			culture_group = dwarven
+		}
+	}
+	keep_trigger = {
+	}
+	tier_0 = {
+		upgrade_time = {
+			months = 0
+		}
+		cost_to_upgrade = {
+			factor = 0
+		}
+		province_modifiers = {
+		}
+		area_modifier = {
+		}
+		country_modifiers = {		
+		}
+		on_upgraded = {
+		}
+	}
+	tier_1 = {
+		upgrade_time = {
+			months = 120
+		}
+		cost_to_upgrade = {
+			factor = 1000
+		}
+		province_modifiers = {
+			local_defensiveness = 0.15
+		}
+		area_modifier = {		
+		}
+		country_modifiers = {
+			inflation_reduction = 0.05
+			inflation_action_cost = -0.15
+			interest = -0.5
+		}
+		on_upgraded = {
+		}
+	}
+	tier_2 = {
+		upgrade_time = {
+			months = 240
+		}
+		cost_to_upgrade = {
+			factor = 3500
+		}
+		province_modifiers = {
+			local_defensiveness = 0.25
+		}
+		area_modifier = {			
+		}
+		country_modifiers = {
+			inflation_reduction = 0.07
+			inflation_action_cost = -0.20
+			interest = -1
+			global_tax_income = 24
+		}
+		on_upgraded = {
+			owner = {
+				define_advisor = {
+					type = master_of_mint
+					name = "Balgor Goldbar"
+					skill = 5
+					culture = agate_dwarf
+					religion = ancestor_worship
+					location = 2863
+					cost_multiplier = 0.5
+
+				}
+			}
+		}
+	}
+	tier_3 = {
+		upgrade_time = {
+			months = 480
+		}
+		cost_to_upgrade = {
+			factor = 7000
+		}
+		province_modifiers = {
+			local_defensiveness = 0.50
+		}
+		area_modifier = {			
+		}
+		country_modifiers = {
+			inflation_reduction = 0.10
+			inflation_action_cost = -0.25
+			interest = -1.5
+			global_tax_income = 48
+		}
+		on_upgraded = {
+			owner = {
+				add_country_modifier = {
+					name = khugdihr_bank_generous_interest_rates
+					duration = 5475
+				}
+			}
+		}
+	}
+}
+#Food Silos of Orlazam
+orlazam_food_silos = {
+	start = 4147
+	date = 01.01.01
+	time = {
+		months = 0
+	}
+	build_cost = 0
+	can_be_moved = no
+	move_days_per_unit_distance = 1
+	starting_tier = 0
+	type = monument
+	build_trigger = {	
+	}
+	on_built = {		
+	}
+	on_destroyed = {		
+	}	
+	can_use_modifiers_trigger = {
+		AND = {
+			development = 40
+			province_is_or_accepts_culture = yes
+			culture_group = dwarven
+		}
+	}
+	can_upgrade_trigger = {
+		AND = {
+			development = 40
+			province_is_or_accepts_culture = yes
+			culture_group = dwarven
+		}
+	}	
+	keep_trigger = {
+	}
+	tier_0 = {
+		upgrade_time = {
+			months = 0
+		}
+		cost_to_upgrade = {
+			factor = 0
+		}
+		province_modifiers = {
+		}
+		area_modifier = {
+		}
+		country_modifiers = {		
+		}
+		on_upgraded = {
+		}
+	}
+	tier_1 = {
+		upgrade_time = {
+			months = 120
+		}
+		cost_to_upgrade = {
+			factor = 1000
+		}
+		province_modifiers = {
+			local_defensiveness = 0.15
+		}
+		area_modifier = {
+		}
+		country_modifiers = {
+			land_attrition = -0.025
+			reinforce_speed = 0.05
+		}
+		on_upgraded = {
+		}
+	}
+	tier_2 = {
+		upgrade_time = {
+			months = 240
+		}
+		cost_to_upgrade = {
+			factor = 3500
+		}
+		province_modifiers = {
+			local_defensiveness = 0.25
+		}
+		area_modifier = {
+		}
+		country_modifiers = {
+			land_attrition = -0.05
+			reinforce_speed = 0.10
+		}
+		on_upgraded = {
+		}
+	}
+	tier_3 = {
+		upgrade_time = {
+			months = 480
+		}
+		cost_to_upgrade = {
+			factor = 7000
+		}
+		province_modifiers = {
+			local_defensiveness = 0.50
+		}
+		area_modifier = {
+		}
+		country_modifiers = {
+			land_attrition = -0.1
+			reinforce_speed = 0.15
+			global_prosperity_growth = 1
+		}
+		on_upgraded = {
+			owner = {
+				add_country_modifier = {
+					name = orlazam_food_silos_shrimp_fried_rice
+					duration = 7300
+				}
+			}
+		}
+	}
+}
+#Razstunad Mines
+ramvault_mines = {
+	start = 4130
+	date = 01.01.01
+	time = {
+		months = 0
+	}
+	build_cost = 0
+	can_be_moved = no
+	move_days_per_unit_distance = 1
+	starting_tier = 0
+	type = monument
+	build_trigger = {	
+	}
+	on_built = {		
+	}
+	on_destroyed = {		
+	}	
+	can_use_modifiers_trigger = {
+		AND = {
+			development = 10
+			province_is_or_accepts_culture = yes
+		}
+	}	
+	can_upgrade_trigger = {
+		AND = {
+			development = 10
+			province_is_or_accepts_culture = yes
+
+		}
+	}	
+	keep_trigger = {
+	}
+	tier_0 = {
+		upgrade_time = {
+			months = 0
+		}
+		cost_to_upgrade = {
+			factor = 0
+		}
+		province_modifiers = {
+		}
+		area_modifier = {
+		}
+		country_modifiers = {		
+		}
+		on_upgraded = {
+		}
+	}
+	tier_1 = {
+		upgrade_time = {
+			months = 120
+		}
+		cost_to_upgrade = {
+			factor = 1000
+		}
+		province_modifiers = {
+			local_development_cost = -0.2
+		}
+		area_modifier = {
+			trade_goods_size = 0.25
+		}
+		country_modifiers = {
+			cavalry_cost = -0.10
+			cav_to_inf_ratio = 0.1
+		}
+		on_upgraded = {
+			change_province_name = "Razstunad Mines"
+			rename_capital = "Razstunad"
+			change_trade_goods = iron
+			add_base_production = 2
+		}
+	}
+	tier_2 = {
+		upgrade_time = {
+			months = 240
+		}
+		cost_to_upgrade = {
+			factor = 2500
+		}
+		province_modifiers = {
+			local_development_cost = -0.4
+		}
+		area_modifier = {
+			trade_goods_size = 0.5
+			allowed_num_of_buildings = 1
+		}
+		country_modifiers = {
+			cavalry_cost = -0.125
+			cav_to_inf_ratio = 0.15
+			cavalry_flanking = 0.25
+		}
+		on_upgraded = {
+			add_base_production = 2
+		}
+	}
+	tier_3 = {
+		upgrade_time = {
+			months = 480
+		}
+		cost_to_upgrade = {
+			factor = 5000
+		}
+		province_modifiers = {
+			local_development_cost = -0.6
+		}
+		area_modifier = {
+			trade_goods_size = 1
+			allowed_num_of_buildings = 1
+		}
+		country_modifiers = {
+			cavalry_cost = -0.15
+			cav_to_inf_ratio = 0.25
+			cavalry_flanking = 0.50
+			leader_land_manuever = 1
+		}
+		on_upgraded = {
+			add_base_production = 2
+			add_unit_construction = {
+				type = cavalry
+				amount = 10
+				speed = 0.05
+				cost = 0
+			}
+			owner = {
+				add_country_modifier = {
+					name = ramvault_mines_rise_of_the_rams
+					duration = 5475
+				}
+			}
+		}
+	}
+}
+#Observatory of Dur-Vazhatun
+vazhatun_observatory = {
+	start = 4020
+	date = 01.01.01
+	time = {
+		months = 0
+	}
+	build_cost = 0
+	can_be_moved = no
+	move_days_per_unit_distance = 1
+	starting_tier = 0
+	type = monument
+	build_trigger = {	
+	}
+	on_built = {		
+	}
+	on_destroyed = {		
+	}	
+	can_use_modifiers_trigger = {
+		AND = {
+			development = 40
+			province_is_or_accepts_culture = yes
+			culture_group = dwarven
+		}
+	}
+
+	can_upgrade_trigger = {
+		AND = {
+			development = 40
+			province_is_or_accepts_culture = yes
+			culture_group = dwarven
+		}
+	}	
+	keep_trigger = {
+	}
+	tier_0 = {
+		upgrade_time = {
+			months = 0
+		}
+		cost_to_upgrade = {
+			factor = 0
+		}
+		province_modifiers = {
+		}
+		area_modifier = {
+		}
+		country_modifiers = {
+			
+		}
+		on_upgraded = {
+		}
+	}
+	tier_1 = {
+		upgrade_time = {
+			months = 120
+		}
+		cost_to_upgrade = {
+			factor = 1000
+		}
+		province_modifiers = {
+			local_defensiveness = 0.15
+			local_institution_spread = 0.15
+		}
+		area_modifier = {
+		}
+		country_modifiers = {
+			innovativeness_gain = 0.15
+			adm_advisor_cost = -0.05
+			adm_tech_cost_modifier = -0.025
+		}
+		on_upgraded = {
+			owner = { 
+				change_innovativeness = 1
+			}
+		}
+	}
+	tier_2 = {
+		upgrade_time = {
+			months = 240
+		}
+		cost_to_upgrade = {
+			factor = 3500
+		}
+		province_modifiers = {
+			local_defensiveness = 0.25
+			local_institution_spread = 0.25
+		}
+		area_modifier = {
+		}
+		country_modifiers = {
+			innovativeness_gain = 0.25
+			adm_advisor_cost = -0.075
+			adm_tech_cost_modifier = -0.05
+		}
+		on_upgraded = {
+			owner = { 
+				change_innovativeness = 2
+			}
+		}
+	}
+	tier_3 = {
+		upgrade_time = {
+			months = 480
+		}
+		cost_to_upgrade = {
+			factor = 7000
+		}
+		province_modifiers = {
+			local_defensiveness = 0.50
+			local_institution_spread = 0.50
+		}
+		area_modifier = {
+		}
+		country_modifiers = {
+			innovativeness_gain = 0.5
+			adm_advisor_cost = -0.1
+			adm_tech_cost_modifier = -0.1
+		}
+		on_upgraded = {
+			owner = { 
+				change_innovativeness = 3
+			}
+		}
+	}
+}
+#Frozen Hold of Krakdhumvror
+krakdhumvror_hold = {
+	start = 4208
+	date = 01.01.01
+	time = {
+		months = 0
+	}
+	build_cost = 0
+	can_be_moved = no
+	move_days_per_unit_distance = 1
+	starting_tier = 0
+	type = monument
+	build_trigger = {	
+	}
+	on_built = {		
+	}
+	on_destroyed = {		
+	}	
+	can_use_modifiers_trigger = {
+		AND = {
+			development = 40
+			province_is_or_accepts_culture = yes
+			culture_group = dwarven
+		}
+	}
+	can_upgrade_trigger = {
+		AND = {
+			development = 40
+			province_is_or_accepts_culture = yes
+			culture_group = dwarven
+		}
+	}
+	keep_trigger = {
+	}
+	tier_0 = {
+		upgrade_time = {
+			months = 0
+		}
+		cost_to_upgrade = {
+			factor = 0
+		}
+		province_modifiers = {
+		}
+		area_modifier = {
+		}
+		country_modifiers = {		
+		}
+		on_upgraded = {
+		}
+	}
+	tier_1 = {
+		upgrade_time = {
+			months = 120
+		}
+		cost_to_upgrade = {
+			factor = 1000
+		}
+		province_modifiers = {
+			trade_goods_size = 0.5
+		}
+		area_modifier = {			
+		}
+		country_modifiers = {
+			global_rebel_suppression_efficiency = 0.1
+			global_unrest = -0.5
+		}
+		on_upgraded = {
+		}
+	}
+	tier_2 = {
+		upgrade_time = {
+			months = 240
+		}
+		cost_to_upgrade = {
+			factor = 3500
+		}
+		province_modifiers = {
+			trade_goods_size = 1
+		}
+		area_modifier = {		
+		}
+		country_modifiers = {
+			global_rebel_suppression_efficiency = 0.2
+			harsh_treatment_cost = -0.15
+			global_unrest = -1
+		}
+		on_upgraded = {
+			owner = {
+				define_advisor = {
+					type = commandant
+					name = "Balbar Blackaxe"
+					skill = 3
+					culture = quartz_dwarf
+					religion = ancestor_worship
+					location = 4208
+					discount = yes
+				}
+			}			
+		}
+	}
+	tier_3 = {
+		upgrade_time = {
+			months = 480
+		}
+		cost_to_upgrade = {
+			factor = 7000
+		}
+		province_modifiers = {
+			trade_goods_size = 1.5
+		}
+		area_modifier = {		
+		}
+		country_modifiers = {
+			global_rebel_suppression_efficiency = 0.3
+			harsh_treatment_cost = -0.25
+			global_unrest = -1.5
+		}
+		on_upgraded = {
+			owner = {
+				add_stability = 1
+			}
+		}
+	}
+}
+#Aqueduct of Hul-Jorkad
+jorkad_aqueduct = {
+	start = 2963
+	date = 01.01.01
+	time = {
+		months = 0
+	}
+	build_cost = 0
+	can_be_moved = no
+	move_days_per_unit_distance = 1
+	starting_tier = 0
+	type = monument
+	build_trigger = {	
+	}
+	on_built = {		
+	}
+	on_destroyed = {		
+	}
+	can_use_modifiers_trigger = {
+		AND = {
+			development = 40
+			province_is_or_accepts_culture = yes
+		}
+	}	
+	can_upgrade_trigger = {
+		AND = {
+			development = 40
+			province_is_or_accepts_culture = yes
+		}
+	}
+	keep_trigger = {
+	}
+	tier_0 = {
+		upgrade_time = {
+			months = 0
+		}
+		cost_to_upgrade = {
+			factor = 0
+		}
+		province_modifiers = {
+		}
+		area_modifier = {
+		}
+		country_modifiers = {		
+		}
+		on_upgraded = {
+		}
+	}
+	tier_1 = {
+		upgrade_time = {
+			months = 120
+		}
+		cost_to_upgrade = {
+			factor = 1000
+		}
+		province_modifiers = {
+			local_defensiveness = 0.15
+			local_production_efficiency = 0.1
+		}
+		area_modifier = {		
+		}
+		country_modifiers = {
+			state_maintenance_modifier = -0.1
+			garrison_size = 0.1
+		}
+		on_upgraded = {
+		}
+	}
+	tier_2 = {
+		upgrade_time = {
+			months = 240
+		}
+		cost_to_upgrade = {
+			factor = 3500
+		}
+		province_modifiers = {
+			local_defensiveness = 0.25
+			local_production_efficiency = 0.2
+		}
+		area_modifier = {		
+		}
+		country_modifiers = {
+			state_maintenance_modifier = -0.15
+			garrison_size = 0.25
+		}
+		on_upgraded = {
+		}
+	}
+
+	tier_3 = {
+		upgrade_time = {
+			months = 480
+		}
+		cost_to_upgrade = {
+			factor = 7000
+		}
+		province_modifiers = {
+			local_defensiveness = 0.5
+			local_production_efficiency = 0.33
+		}
+		area_modifier = {		
+		}
+		country_modifiers = {
+			state_maintenance_modifier = -0.25
+			garrison_size = 0.33
+		}
+		on_upgraded = {
+		}
+	}
+}
+#Sedadhûm Mining Settlement
+sedadhum_mining_settlement = {
+	start = 4211
+	date = 01.01.01
+	time = {
+		months = 0
+	}
+	build_cost = 0
+	can_be_moved = no
+	move_days_per_unit_distance = 1
+	starting_tier = 0
+	type = monument
+	build_trigger = {	
+	}
+	on_built = {		
+	}
+	on_destroyed = {	
+	}
+	can_use_modifiers_trigger = {
+		AND = {
+			development = 10
+			province_is_or_accepts_culture = yes
+			OR = {
+				culture_group = dwarven
+				culture_group = goblin
+				culture_group = kobold
+				culture_group = orcish
+			}
+		}
+	}	
+	can_upgrade_trigger = {
+		AND = {
+			development = 10
+			province_is_or_accepts_culture = yes
+			OR = {
+				culture_group = dwarven
+				culture_group = goblin
+				culture_group = kobold
+				culture_group = orcish
+			}
+		}
+	}	
+	keep_trigger = {
+	}
+	tier_0 = {
+		upgrade_time = {
+			months = 0
+		}
+		cost_to_upgrade = {
+			factor = 0
+		}
+		province_modifiers = {
+		}
+		area_modifier = {
+		}
+		country_modifiers = {	
+		}
+		on_upgraded = {
+		}
+	}
+	tier_1 = {
+		upgrade_time = {
+			months = 120
+		}
+		cost_to_upgrade = {
+			factor = 1000
+		}
+		province_modifiers = {
+			local_development_cost = -0.1
+			trade_goods_size = 0.5
+		}
+		area_modifier = {
+		}
+		country_modifiers = {
+			shock_damage = 0.02
+			shock_damage_received = -0.01
+		}
+		on_upgraded = {
+			change_trade_goods = mithril
+			add_permanent_province_modifier = {
+				name = sedadhum_discovery_of_mithril
+				duration = -1
+			}
+		}
+	}
+	tier_2 = {
+		upgrade_time = {
+			months = 240
+		}
+		cost_to_upgrade = {
+			factor = 2500
+		}
+		province_modifiers = {
+			local_development_cost = -0.2
+			trade_goods_size = 1
+		}
+		area_modifier = {
+		}
+		country_modifiers = {
+			shock_damage = 0.06
+			shock_damage_received = -0.03
+		}
+		on_upgraded = {
+			add_base_production = 2
+		}
+	}
+	tier_3 = {
+		upgrade_time = {
+			months = 480
+		}
+		cost_to_upgrade = {
+			factor = 5000
+		}
+		province_modifiers = {
+			local_development_cost = -0.3
+			allowed_num_of_buildings = 1
+			trade_goods_size = 2
+		}
+		area_modifier = {
+		}
+		country_modifiers = {
+			shock_damage = 0.1
+			shock_damage_received = -0.05
+		}
+		on_upgraded = {
+			add_base_production = 2
+			owner = {
+				add_country_modifier = {
+					name = sedadhum_mithril_plated_soldiers
+					duration = 7300
+				}
+			}
+		}
+	}
+}
+gor_burad_fireglass_forge = {
+	start = 4039
+	date = 01.01.01
+	time = {
+		months = 0
+	}
+	build_cost = 0
+	can_be_moved = no
+	move_days_per_unit_distance = 1
+	starting_tier = 0
+	type = monument
+	build_trigger = {
+	}
+	on_built = {	
+	}
+	on_destroyed = {	
+	}
+	can_use_modifiers_trigger = {
+		AND = {
+			development = 40
+			province_is_or_accepts_culture = yes
+			culture_group = dwarven
+		}
+	}	
+	can_upgrade_trigger = {
+		AND = {
+			development = 40
+			province_is_or_accepts_culture = yes
+			culture_group = dwarven
+		}
+	}
+	keep_trigger = {
+	}
+	tier_0 = {
+		upgrade_time = {
+			months = 0
+		}
+		cost_to_upgrade = {
+			factor = 0
+		}
+		province_modifiers = {
+		}
+		area_modifier = {
+		}
+		country_modifiers = {		
+		}
+		on_upgraded = {
+		}
+	}
+	tier_1 = {
+		upgrade_time = {
+			months = 120
+		}
+		cost_to_upgrade = {
+			factor = 1000
+		}
+		province_modifiers = {
+		trade_goods_size = 1
+		trade_goods_size_modifier = 0.10		
+		}
+		area_modifier = {		
+		}
+		country_modifiers = {
+			prestige = 0.1
+			global_trade_goods_size_modifier = 0.025
+		}
+		on_upgraded = {
+			change_trade_goods = glass
+			add_base_production = 2
+		}
+	}
+	tier_2 = {
+		upgrade_time = {
+			months = 240
+		}
+		cost_to_upgrade = {
+			factor = 3500
+		}
+		province_modifiers = {
+		trade_goods_size = 2
+		trade_goods_size_modifier = 0.20	
+		}
+		area_modifier = {		
+		}
+		country_modifiers = {
+			prestige = 0.25
+			global_trade_goods_size_modifier = 0.05		
+		}
+		on_upgraded = {
+		add_base_production = 2
+		}
+	}
+	tier_3 = {
+		upgrade_time = {
+			months = 480
+		}
+		cost_to_upgrade = {
+			factor = 7000
+		}
+		province_modifiers = {
+		trade_goods_size = 3
+		trade_goods_size_modifier = 0.33
+		allowed_num_of_manufactories = 1
+		}
+		area_modifier = {		
+		}
+		country_modifiers = {
+			prestige = 0.5
+			global_trade_goods_size_modifier = 0.1
+		}
+		on_upgraded = {
+		add_base_production = 4
+		}
+	}
+}
+#The Warding Gate (Verkal Skomdihr)
+verkal_skomdihr_warding_gate = {
+	start = 4100
+	date = 01.01.01
+	time = {
+		months = 0
+	}
+	build_cost = 0
+	can_be_moved = no
+	move_days_per_unit_distance = 1
+	starting_tier = 0
+	type = monument
+	build_trigger = {	
+	}
+	on_built = {	
+	}
+	on_destroyed = {		
+	}	
+	can_use_modifiers_trigger = {
+		AND = {
+			development = 40
+			province_is_or_accepts_culture = yes
+			culture_group = dwarven
+		}
+	}
+	can_upgrade_trigger = {
+		AND = {
+			development = 40
+			province_is_or_accepts_culture = yes
+			culture_group = dwarven
+		}
+	}
+	keep_trigger = {
+	}
+	tier_0 = {
+		upgrade_time = {
+			months = 0
+		}
+		cost_to_upgrade = {
+			factor = 0
+		}
+		province_modifiers = {
+		}
+		area_modifier = {
+		}
+		country_modifiers = {		
+		}
+		on_upgraded = {
+		}
+	}
+	tier_1 = {
+		upgrade_time = {
+			months = 120
+		}
+		cost_to_upgrade = {
+			factor = 1000
+		}
+		province_modifiers = {
+			local_defensiveness = 0.15
+			local_hostile_attrition = 0.5
+		}
+		area_modifier = {		
+		}
+		country_modifiers = {
+			infantry_cost = -0.05
+			infantry_power = 0.05
+		}
+		on_upgraded = {
+		}
+	}
+	tier_2 = {
+		upgrade_time = {
+			months = 240
+		}
+		cost_to_upgrade = {
+			factor = 3500
+		}
+		province_modifiers = {
+			local_defensiveness = 0.25
+			local_hostile_attrition = 1
+		}
+		area_modifier = {		
+		}
+		country_modifiers = {
+			infantry_cost = -0.10
+			infantry_power = 0.1
+		}
+		on_upgraded = {
+		}
+	}
+	tier_3 = {
+		upgrade_time = {
+			months = 480
+		}
+		cost_to_upgrade = {
+			factor = 7000
+		}
+		province_modifiers = {
+			local_defensiveness = 0.5
+			local_hostile_attrition = 2
+		}
+		area_modifier = {		
+		}
+		country_modifiers = {
+			infantry_cost = -0.15
+			infantry_power = 0.15
+			leader_land_fire = 1
+		}
+		on_upgraded = {
+			owner = {
+				add_country_modifier = {
+					name = verkal_skomdihr_warding_gate_extra_firepower
+					duration = 5475
+				}
+			}
+		}
+	}
+}
+#The Tunnel of Love (Ovdal Lodhum)
+ovdal_lodhum_tunnel_of_love = {
+	start = 2973
+	date = 01.01.01
+	time = {
+		months = 0
+	}
+	build_cost = 0
+	can_be_moved = no
+	move_days_per_unit_distance = 1
+	starting_tier = 0
+	type = monument
+	build_trigger = {	
+	}
+	on_built = {	
+	}
+	on_destroyed = {		
+	}	
+	can_use_modifiers_trigger = {
+		AND = {
+			development = 40
+			province_is_or_accepts_culture = yes
+		}
+	}
+	can_upgrade_trigger = {
+		AND = {
+			development = 40
+			province_is_or_accepts_culture = yes
+		}
+	}
+	keep_trigger = {
+	}
+	tier_0 = {
+		upgrade_time = {
+			months = 0
+		}
+		cost_to_upgrade = {
+			factor = 0
+		}
+		province_modifiers = {
+		}
+		area_modifier = {
+		}
+		country_modifiers = {		
+		}
+		on_upgraded = {
+		}
+	}
+	tier_1 = {
+		upgrade_time = {
+			months = 120
+		}
+		cost_to_upgrade = {
+			factor = 1000
+		}
+		province_modifiers = {
+			local_build_time = -0.1
+			local_build_cost = -0.1
+		}
+		area_modifier = {		
+		}
+		country_modifiers = {
+			global_colonial_growth = 10
+		}
+		on_upgraded = {
+		}
+	}
+	tier_2 = {
+		upgrade_time = {
+			months = 240
+		}
+		cost_to_upgrade = {
+			factor = 3500
+		}
+		province_modifiers = {
+			local_build_time = -0.15
+			local_build_cost = -0.15
+		}
+		area_modifier = {		
+		}
+		country_modifiers = {
+			global_colonial_growth = 25
+			colonist_placement_chance = 0.05
+		}
+		on_upgraded = {
+			owner = {
+				add_country_modifier = {
+					name = ovdal_lodhum_tunnel_of_love_colonizing_the_serpentspine
+					duration = 7300
+				}
+			}
+			
+		}
+	}
+	tier_3 = {
+		upgrade_time = {
+			months = 480
+		}
+		cost_to_upgrade = {
+			factor = 15000
+		}
+		province_modifiers = {
+			local_build_time = -0.2
+			local_build_cost = -0.2
+		}
+		area_modifier = {		
+		}
+		country_modifiers = {
+			global_colonial_growth = 40
+			colonist_placement_chance = 0.1
+		}
+		on_upgraded = {
+		}
+	}
+}
+#Great Clast Shafts of Arg-Ôrdstun
+arg_ordstun_great_clast_shafts = {
+	start = 4093
+	date = 01.01.01
+	time = {
+		months = 0
+	}
+	build_cost = 0
+	can_be_moved = no
+	move_days_per_unit_distance = 1
+	starting_tier = 0
+	type = monument
+	build_trigger = {		
+	}
+	on_built = {	
+	}
+	on_destroyed = {	
+	}
+	can_use_modifiers_trigger = {
+		AND = {
+			development = 40
+			province_is_or_accepts_culture = yes
+			culture_group = dwarven
+		}
+	}	
+	can_upgrade_trigger = {
+		AND = {
+			development = 40
+			province_is_or_accepts_culture = yes
+			culture_group = dwarven
+		}
+	}
+	keep_trigger = {
+	}
+	tier_0 = {
+		upgrade_time = {
+			months = 0
+		}
+		cost_to_upgrade = {
+			factor = 0
+		}
+		province_modifiers = {
+		}
+		area_modifier = {
+		}
+		country_modifiers = {		
+		}
+		on_upgraded = {
+		}
+	}
+	tier_1 = {
+		upgrade_time = {
+			months = 120
+		}
+		cost_to_upgrade = {
+			factor = 1000
+		}
+		province_modifiers = {
+			local_development_cost = -0.05
+			trade_goods_size = 0.5
+		}
+		area_modifier = {		
+		}
+		country_modifiers = {
+			development_cost = -0.025
+			production_efficiency = 0.025
+		}
+		on_upgraded = {
+		}
+	}
+	tier_2 = {
+		upgrade_time = {
+			months = 240
+		}
+		cost_to_upgrade = {
+			factor = 3500
+		}
+		province_modifiers = {
+			local_development_cost = -0.1
+			trade_goods_size = 1
+		}
+		area_modifier = {		
+		}
+		country_modifiers = {
+			development_cost = -0.05
+			production_efficiency = 0.05
+		}
+		on_upgraded = {
+		}
+	}
+	tier_3 = {
+		upgrade_time = {
+			months = 480
+		}
+		cost_to_upgrade = {
+			factor = 7000
+		}
+		province_modifiers = {
+			local_development_cost = -0.15
+			trade_goods_size = 1.5
+		}
+		area_modifier = {		
+		}
+		country_modifiers = {
+			development_cost = -0.1
+			production_efficiency = 0.1
+		}
+		on_upgraded = {
+			owner = {
+				add_country_modifier = {
+					name = arg_ordstun_great_clast_shafts_development
+					duration = 5475
+				}
+			}
+		}
+	}
+}
+#The Great Waterfall of Orlghelovar
+orlghelovar_great_waterfall = {
+	start = 4238
+	date = 01.01.01
+	time = {
+		months = 0
+	}
+	build_cost = 0
+	can_be_moved = no
+	move_days_per_unit_distance = 1
+	starting_tier = 0
+	type = monument
+	build_trigger = {	
+	}
+	on_built = {	
+	}
+	on_destroyed = {		
+	}	
+	can_use_modifiers_trigger = {
+		AND = {
+			development = 40
+			province_is_or_accepts_culture = yes
+		}
+	}	
+	can_upgrade_trigger = {
+		AND = {
+			development = 40
+			province_is_or_accepts_culture = yes
+		}
+	}
+	keep_trigger = {
+	}
+	tier_0 = {
+		upgrade_time = {
+			months = 0
+		}
+		cost_to_upgrade = {
+			factor = 0
+		}
+		province_modifiers = {
+		}
+		area_modifier = {
+		}
+		country_modifiers = {
+			
+		}
+		on_upgraded = {
+		}
+	}
+	tier_1 = {
+		upgrade_time = {
+			months = 120
+		}
+		cost_to_upgrade = {
+			factor = 1000
+		}
+		province_modifiers = {
+			local_unrest = -3
+			local_autonomy = -0.025
+			min_local_autonomy = -5
+		}
+		area_modifier = {		
+		}
+		country_modifiers = {
+			stability_cost_modifier = -0.10
+			dip_advisor_cost = -0.05
+		}
+		on_upgraded = {
+		}
+	}
+	tier_2 = {
+		upgrade_time = {
+			months = 240
+		}
+		cost_to_upgrade = {
+			factor = 3500
+		}
+		province_modifiers = {
+			local_unrest = -5
+			min_local_autonomy = -10
+			local_autonomy = -0.05
+		}
+		area_modifier = {		
+		}
+		country_modifiers = {
+			stability_cost_modifier = -0.15
+			dip_advisor_cost = -0.075
+		}
+		on_upgraded = {
+		}
+	}
+	tier_3 = {
+		upgrade_time = {
+			months = 480
+		}
+		cost_to_upgrade = {
+			factor = 7000
+		}
+		province_modifiers = {
+			local_unrest = -10
+			local_autonomy = -0.1
+			min_local_autonomy = -15
+		}
+		area_modifier = {		
+		}
+		country_modifiers = {
+			stability_cost_modifier = -0.2
+			dip_advisor_cost = -0.1
+			monarch_diplomatic_power = 1
+		}
+		on_upgraded = {
+			owner = {
+				random_list = {
+					70 = {
+						add_dip_power = 100
+					}
+					20 = {
+						change_dip = 1
+					}
+					10 = {
+						add_dip_tech = 1
+					}
+				}
+			}
+		}
+	}
+}
+#The Marble Gate (Shaztundihr)
+shaztundihr_marble_gate = {
+	start = 2942
+	date = 01.01.01
+	time = {
+		months = 0
+	}
+	build_cost = 0
+	can_be_moved = no
+	move_days_per_unit_distance = 1
+	starting_tier = 0
+	type = monument
+
+	build_trigger = {	
+	}
+	on_built = {	
+	}
+	on_destroyed = {		
+	}	
+	can_use_modifiers_trigger = {
+		AND = {
+			development = 40
+			province_is_or_accepts_culture = yes
+		}
+	}
+	can_upgrade_trigger = {
+		AND = {
+			development = 40
+			province_is_or_accepts_culture = yes
+		}
+	}	
+	keep_trigger = {
+	}
+	tier_0 = {
+		upgrade_time = {
+			months = 0
+		}
+		cost_to_upgrade = {
+			factor = 0
+		}
+		province_modifiers = {
+		}
+		area_modifier = {
+		}
+		country_modifiers = {		
+		}
+		on_upgraded = {
+		}
+	}
+	tier_1 = {
+		upgrade_time = {
+			months = 120
+		}
+		cost_to_upgrade = {
+			factor = 1000
+		}
+		province_modifiers = {
+			local_defensiveness = 0.15	
+		}
+		area_modifier = {		
+		}
+		country_modifiers = {
+			fort_maintenance_modifier = -0.10
+			prestige = 0.1
+		}
+		on_upgraded = {
+		}
+	}
+	tier_2 = {
+		upgrade_time = {
+			months = 240
+		}
+		cost_to_upgrade = {
+			factor = 3500
+		}
+		province_modifiers = {
+			local_defensiveness = 0.25
+		}
+		area_modifier = {			
+		}
+		country_modifiers = {
+			fort_maintenance_modifier = -0.15
+			prestige = 0.25	
+		}
+		on_upgraded = {
+		}
+	}
+	tier_3 = {
+		upgrade_time = {
+			months = 480
+		}
+		cost_to_upgrade = {
+			factor = 7000
+		}
+		province_modifiers = {
+			local_defensiveness = 0.5
+		}
+		area_modifier = {		
+		}
+		country_modifiers = {
+			fort_maintenance_modifier = -0.20
+			monthly_splendor = 1
+			prestige = 0.5
+		}
+		on_upgraded = {
+		}
+	}
+}
+
+#Earthseed
+earthseed = {
+	start = 4269
+	date = 01.01.01
+	time = {
+		months = 0
+	}
+	build_cost = 0
+	can_be_moved = no
+	move_days_per_unit_distance = 1
+	starting_tier = 0
+	type = monument
+	build_trigger = {	
+	}
+	on_built = {		
+	}
+	on_destroyed = {		
+	}
+	can_use_modifiers_trigger = {
+		AND = {
+			OR = {
+				AND = {
+					religion_group = dwarven
+					has_owner_religion = yes
+				}
+				AND = {
+					owner = {
+						OR = {
+							secondary_religion = ancestor_worship
+							secondary_religion = dwarven_pantheon
+						}
+					}
+				religion_group = dwarven	
+				}	
+			}	
+			development = 10
+			province_is_or_accepts_culture = yes
+			culture_group = dwarven
+		}
+	}
+	can_upgrade_trigger = {
+		AND = {
+			OR = {
+				AND = {
+					religion_group = dwarven
+					has_owner_religion = yes
+				}
+				AND = {
+					owner = {
+						OR = {
+							secondary_religion = ancestor_worship
+							secondary_religion = dwarven_pantheon
+						}
+					}
+				religion_group = dwarven	
+				}	
+			}	
+			development = 10	
+			province_is_or_accepts_culture = yes
+			culture_group = dwarven
+		}
+	}	
+	keep_trigger = {
+	}
+	tier_0 = {
+		upgrade_time = {
+			months = 0
+		}
+		cost_to_upgrade = {
+			factor = 0
+		}
+		province_modifiers = {
+		}
+		area_modifier = {
+		}
+		country_modifiers = {			
+		}
+		on_upgraded = {
+		}
+	}
+	tier_1 = {
+		upgrade_time = {
+			months = 120
+		}
+		cost_to_upgrade = {
+			factor = 1000
+		}
+		province_modifiers = {
+			local_development_cost = -0.2
+			trade_goods_size = 1
+			allowed_num_of_buildings = 1
+		}
+		area_modifier = {		
+		}
+		country_modifiers = {
+			global_missionary_strength = 0.01
+			tolerance_own = 1
+		}
+		on_upgraded = {
+			change_trade_goods = incense
+			owner = {
+				add_estate_loyalty = {
+					estate = estate_church
+					loyalty = 5
+				}
+			}
+		}
+	}
+	tier_2 = {
+		upgrade_time = {
+			months = 240
+		}
+		cost_to_upgrade = {
+			factor = 2500
+		}
+		province_modifiers = {
+			local_development_cost = -0.4
+			trade_goods_size = 1.5
+			allowed_num_of_buildings = 1
+		}
+		area_modifier = {		
+		}
+		country_modifiers = {
+			global_missionary_strength = 0.02
+			tolerance_own = 1.5
+			missionaries = 1
+		}
+		on_upgraded = {
+			add_permanent_province_modifier = {
+				name = religious_center
+				duration = -1
+			}
+			owner = {
+				add_estate_loyalty = {
+					estate = estate_church
+					loyalty = 10
+				}
+			}
+		}
+	}
+	tier_3 = {
+		upgrade_time = {
+			months = 480
+		}
+		cost_to_upgrade = {
+			factor = 5000
+		}
+		province_modifiers = {
+			local_development_cost = -0.6
+			trade_goods_size = 2
+			allowed_num_of_buildings = 2
+		}
+		area_modifier = {		
+		}
+		country_modifiers = {
+			global_missionary_strength = 0.03
+			tolerance_own = 2
+			missionaries = 2
+		}
+		on_upgraded = {
+			owner = {
+				add_country_modifier = {
+					name = earthseed_missionaries
+					duration = 7300
+				}
+				add_estate_loyalty = {
+					estate = estate_church
+					loyalty = 15
+				}
+			}
+		}
+	}
+}
+#The Kazandi Cannon Foundry
+ovdal_kanzad_cannon_foundry = {
+	start = 4247
+	date = 01.01.01
+	time = {
+		months = 0
+	}
+	build_cost = 0
+	can_be_moved = no
+	move_days_per_unit_distance = 1
+	starting_tier = 0
+	type = monument
+	build_trigger = {	
+	}
+	on_built = {	
+	}
+	on_destroyed = {		
+	}	
+	can_use_modifiers_trigger = {
+		AND = {
+			development = 40
+			province_is_or_accepts_culture = yes
+			culture_group = dwarven
+		}
+	}
+	can_upgrade_trigger = {
+		AND = {
+			development = 40
+			province_is_or_accepts_culture = yes
+			culture_group = dwarven
+		}
+	}	
+	keep_trigger = {
+	}
+	tier_0 = {
+		upgrade_time = {
+			months = 0
+		}
+		cost_to_upgrade = {
+			factor = 0
+		}
+		province_modifiers = {
+		}
+		area_modifier = {
+		}
+		country_modifiers = {		
+		}
+		on_upgraded = {
+		}
+	}
+	tier_1 = {
+		upgrade_time = {
+			months = 120
+		}
+		cost_to_upgrade = {
+			factor = 1000
+		}
+		province_modifiers = {
+			trade_goods_size = 0.25
+		}
+		area_modifier = {		
+		}
+		country_modifiers = {
+			artillery_cost = -0.05
+			artillery_fire = 0.1
+		}
+		on_upgraded = {
+			custom_tooltip = can_build_cannon
+		}
+	}
+	tier_2 = {
+		upgrade_time = {
+			months = 240
+		}
+		cost_to_upgrade = {
+			factor = 3500
+		}
+		province_modifiers = {
+			trade_goods_size = 0.5
+		}
+		area_modifier = {			
+		}
+		country_modifiers = {
+			artillery_cost = -0.1
+			artillery_fire = 0.2
+		}
+		on_upgraded = {
+			owner = {
+				define_general = {
+					name = "Thorgrim 'The Cannon' Flamebeard"
+					trait = cannoneer_personality
+					fire = 6
+					shock = 2
+					manuever = 3
+					siege = 5
+				}
+			}
+		}
+	}
+	tier_3 = {
+		upgrade_time = {
+			months = 480
+		}
+		cost_to_upgrade = {
+			factor = 7000
+		}
+		province_modifiers = {
+			trade_goods_size = 1
+			allowed_num_of_manufactories = 1
+		}
+		area_modifier = {			
+		}
+		country_modifiers = {
+			artillery_cost = -0.15
+			artillery_fire = 0.3
+			artillery_levels_available_vs_fort = 1
+		}
+		on_upgraded = {
+			owner = {
+				add_country_modifier = {
+					name = ovdal_kanzad_cannon_foundry_experimental_artillery
+					duration = 7300
+				}
+			}
+		}
+	}
+}
+#The Green Gate (Grozumdhir)
+grozumdhir_green_gate = {
+	start = 4265
+	date = 01.01.01
+	time = {
+		months = 0
+	}
+	build_cost = 0
+	can_be_moved = no
+	move_days_per_unit_distance = 1
+	starting_tier = 0
+	type = monument
+	build_trigger = {	
+	}
+	on_built = {		
+	}
+	on_destroyed = {	
+	}	
+	can_use_modifiers_trigger = {
+		AND = {
+			development = 40
+			province_is_or_accepts_culture = yes
+			culture_group = dwarven
+		}
+	}	
+	can_upgrade_trigger = {
+		AND = {
+			development = 40
+			province_is_or_accepts_culture = yes
+			culture_group = dwarven
+		}
+	}	
+	keep_trigger = {
+	}
+	tier_0 = {
+		upgrade_time = {
+			months = 0
+		}
+		cost_to_upgrade = {
+			factor = 0
+		}
+		province_modifiers = {
+		}
+		area_modifier = {
+		}
+		country_modifiers = {		
+		}
+		on_upgraded = {
+		}
+	}
+	tier_1 = {
+		upgrade_time = {
+			months = 120
+		}
+		cost_to_upgrade = {
+			factor = 1000
+		}
+		province_modifiers = {
+			local_production_efficiency = 0.1
+		}
+		area_modifier = {			
+		}
+		country_modifiers = {
+			num_accepted_cultures = 1
+			tolerance_heathen = 1
+		}
+		on_upgraded = {
+		}
+	}
+	tier_2 = {
+		upgrade_time = {
+			months = 240
+		}
+		cost_to_upgrade = {
+			factor = 3500
+		}
+		province_modifiers = {
+			local_production_efficiency = 0.15
+		}
+		area_modifier = {			
+		}
+		country_modifiers = {
+			num_accepted_cultures = 2
+			tolerance_heathen = 2
+		}
+		on_upgraded = {
+		}
+	}
+	tier_3 = {
+		upgrade_time = {
+			months = 480
+		}
+		cost_to_upgrade = {
+			factor = 7000
+		}
+		province_modifiers = {
+			local_production_efficiency = 0.25
+		}
+		area_modifier = {		
+		}
+		country_modifiers = {
+			num_accepted_cultures = 3
+			tolerance_heathen = 3
+			tolerance_heathen = 2
+		}
+		on_upgraded = {
+			owner = {
+				add_country_modifier = {
+					name = grozumdhir_green_gate_friendlier_relations
+					duration = 7300
+				}
+			}
+		}
+	}
+}
+#The Grand Lake Ballroom (Ovdal Az-An)
+ovdal_az_an_grand_lake_ballroom = {
+	start = 4284
+	date = 01.01.01
+	time = {
+		months = 0
+	}
+	build_cost = 0
+	can_be_moved = no
+	move_days_per_unit_distance = 1
+	starting_tier = 0
+	type = monument
+	build_trigger = {	
+	}
+	on_built = {		
+	}
+	on_destroyed = {	
+	}	
+	can_use_modifiers_trigger = {
+		AND = {
+			development = 40
+			province_is_or_accepts_culture = yes
+			culture_group = dwarven
+		}
+	}	
+	can_upgrade_trigger = {
+		AND = {
+			development = 40
+			province_is_or_accepts_culture = yes
+			culture_group = dwarven
+		}
+	}	
+	keep_trigger = {
+	}
+	tier_0 = {
+		upgrade_time = {
+			months = 0
+		}
+		cost_to_upgrade = {
+			factor = 0
+		}
+		province_modifiers = {
+		}
+		area_modifier = {
+		}
+		country_modifiers = {		
+		}
+		on_upgraded = {
+		}
+	}
+	tier_1 = {
+		upgrade_time = {
+			months = 120
+		}
+		cost_to_upgrade = {
+			factor = 1000
+		}
+		province_modifiers = {
+			local_unrest = -3
+			local_autonomy = -0.025
+			min_local_autonomy = -5	
+		}
+		area_modifier = {		
+		}
+		country_modifiers = {
+			legitimacy = 0.25
+			republican_tradition = 0.1
+			devotion = 0.25
+			horde_unity = 0.25
+			meritocracy = 0.25
+			diplomatic_upkeep = 1
+		}
+		on_upgraded = {
+		}
+	}
+	tier_2 = {
+		upgrade_time = {
+			months = 240
+		}
+		cost_to_upgrade = {
+			factor = 3500
+		}
+		province_modifiers = {
+			local_unrest = -5
+			local_autonomy = -0.05
+			min_local_autonomy = -10
+		}
+		area_modifier = {		
+		}
+		country_modifiers = {
+			legitimacy = 0.5
+			republican_tradition = 0.2
+			devotion = 0.5
+			horde_unity = 0.5
+			meritocracy = 0.5
+			diplomatic_upkeep = 2
+			diplomats = 1
+		}
+		on_upgraded = {
+		}
+	}
+	tier_3 = {
+		upgrade_time = {
+			months = 480
+		}
+		cost_to_upgrade = {
+			factor = 7000
+		}
+		province_modifiers = {
+			local_unrest = -10
+			local_autonomy = -0.1
+			min_local_autonomy = -15
+		}
+		area_modifier = {			
+		}
+		country_modifiers = {
+			legitimacy = 1
+			republican_tradition = 0.3
+			devotion = 1
+			horde_unity = 1
+			meritocracy = 1
+			diplomatic_upkeep = 3
+			diplomats = 1
+			all_estate_loyalty_equilibrium = 0.05
+		}
+		on_upgraded = {
+			owner = {
+				add_country_modifier = {
+					name = ovdal_az_an_display_of_state_power
+					duration = 5475
+				}
+			}
+		}
+	}
+}
+#The Hul-az-Krakazol Breweries
+hul_as_krakazol_breweries = {
+	start = 4266
+	date = 01.01.01
+	time = {
+		months = 0
+	}
+	build_cost = 0
+	can_be_moved = no
+	move_days_per_unit_distance = 1
+	starting_tier = 0
+	type = monument
+	build_trigger = {		
+	}
+	on_built = {	
+	}
+	on_destroyed = {		
+	}	
+	can_use_modifiers_trigger = {
+		AND = {
+			development = 40
+			province_is_or_accepts_culture = yes
+			culture_group = dwarven
+		}
+	}	
+	can_upgrade_trigger = {
+		AND = {
+			development = 40
+			province_is_or_accepts_culture = yes
+			culture_group = dwarven
+		}
+	}	
+	keep_trigger = {
+	}
+	tier_0 = {
+		upgrade_time = {
+			months = 0
+		}
+		cost_to_upgrade = {
+			factor = 0
+		}
+		province_modifiers = {
+		}
+		area_modifier = {
+		}
+		country_modifiers = {		
+		}
+		on_upgraded = {
+		}
+	}
+	tier_1 = {
+		upgrade_time = {
+			months = 120
+		}
+		cost_to_upgrade = {
+			factor = 1000
+		}
+		province_modifiers = {
+			local_defensiveness = 0.15
+			trade_goods_size = 0.5	
+		}
+		area_modifier = {			
+		}
+		country_modifiers = {
+			manpower_recovery_speed = 0.05
+		}
+		on_upgraded = {
+			custom_tooltip = can_build_beer
+			change_trade_goods = grain
+		}
+	}
+	tier_2 = {
+		upgrade_time = {
+			months = 240
+		}
+		cost_to_upgrade = {
+			factor = 3500
+		}
+		province_modifiers = {
+			local_defensiveness = 0.25
+			trade_goods_size = 1
+		}
+		area_modifier = {		
+		}
+		country_modifiers = {
+			global_unrest = -1
+			manpower_recovery_speed = 0.1
+		}
+		on_upgraded = {
+		}
+	}
+	tier_3 = {
+		upgrade_time = {
+			months = 480
+		}
+		cost_to_upgrade = {
+			factor = 7000
+		}
+		province_modifiers = {
+			local_defensiveness = 0.5
+			trade_goods_size = 1.5
+		}
+		area_modifier = {		
+		}
+		country_modifiers = {
+			global_unrest = -1.5
+			manpower_recovery_speed = 0.15
+			leader_land_shock = 1
+		}
+		on_upgraded = {
+		}
+	}
+}
+
+#The Hero's Gate (Verkal Gulan)
+verkal_gulan_hero_gate = {
+	start = 2914
+	date = 01.01.01
+	time = {
+		months = 0
+	}
+	build_cost = 0
+	can_be_moved = no
+	move_days_per_unit_distance = 1
+	starting_tier = 0
+	type = monument
+	build_trigger = {	
+	}
+	on_built = {		
+	}
+	on_destroyed = {		
+	}	
+	can_use_modifiers_trigger = {
+		AND = {
+			development = 40
+			province_is_or_accepts_culture = yes
+			culture_group = dwarven
+		}
+	}	
+	can_upgrade_trigger = {
+		AND = {
+			development = 40
+			province_is_or_accepts_culture = yes
+			culture_group = dwarven
+		}
+	}	
+	keep_trigger = {
+	}
+	tier_0 = {
+		upgrade_time = {
+			months = 0
+		}
+		cost_to_upgrade = {
+			factor = 0
+		}
+		province_modifiers = {
+		}
+		area_modifier = {
+		}
+		country_modifiers = {			
+		}
+		on_upgraded = {
+		}
+	}
+	tier_1 = {
+		upgrade_time = {
+			months = 120
+		}
+		cost_to_upgrade = {
+			factor = 1000
+		}
+		province_modifiers = {
+			local_defensiveness = 0.15	
+		}
+		area_modifier = {			
+		}
+		country_modifiers = {
+			mercenary_cost = -0.10
+			land_forcelimit_modifier = 0.05
+		}
+		on_upgraded = {
+		}
+	}
+	tier_2 = {
+		upgrade_time = {
+			months = 240
+		}
+		cost_to_upgrade = {
+			factor = 3500
+		}
+		province_modifiers = {
+			local_defensiveness = 0.25
+		}
+		area_modifier = {		
+		}
+		country_modifiers = {
+			mercenary_cost = -0.15
+			land_forcelimit_modifier = 0.075
+		}
+		on_upgraded = {
+			owner = {
+				define_advisor = {
+					type = army_organiser
+					name = "Khadan Goldhammer"
+					skill = 3
+					culture = gold_dwarf
+					religion = ancestor_worship
+					location = 2914
+					discount = yes
+				}
+			}			
+		}
+	}
+	tier_3 = {
+		upgrade_time = {
+			months = 480
+		}
+		cost_to_upgrade = {
+			factor = 7000
+		}
+		province_modifiers = {
+			local_defensiveness = 0.5
+		}
+		area_modifier = {		
+		}
+		country_modifiers = {
+			mercenary_cost = -0.20
+			land_forcelimit_modifier = 0.1
+			free_leader_pool = 1
+		}
+		on_upgraded = {
+			owner = {
+				define_general = {
+					name = "Urothr Jr."
+					trait = ruthless_personality
+					fire = 5
+					shock = 5
+					manuever = 5
+					siege = 3
+				}
+			}
+		}
+	}
+}
+#Home of the Seg Band (Seghdihr)
+seghdihr_home_of_the_seg_band = {
+	start = 4124
+	date = 01.01.01
+	time = {
+		months = 0
+	}
+	build_cost = 0
+	can_be_moved = no
+	move_days_per_unit_distance = 1
+	starting_tier = 0
+	type = monument
+	build_trigger = {	
+	}
+	on_built = {		
+	}
+	on_destroyed = {		
+	}	
+	can_use_modifiers_trigger = {
+		AND = {
+			development = 40
+			province_is_or_accepts_culture = yes
+			culture_group = dwarven
+		}
+	}
+	can_upgrade_trigger = {
+		AND = {
+			development = 40
+			province_is_or_accepts_culture = yes
+			culture_group = dwarven
+		}
+	}	
+	keep_trigger = {
+	}
+	tier_0 = {
+		upgrade_time = {
+			months = 0
+		}
+		cost_to_upgrade = {
+			factor = 0
+		}
+		province_modifiers = {
+		}
+		area_modifier = {
+		}
+		country_modifiers = {		
+		}
+		on_upgraded = {
+		}
+	}
+	tier_1 = {
+		upgrade_time = {
+			months = 120
+		}
+		cost_to_upgrade = {
+			factor = 1000
+		}
+		province_modifiers = {
+			local_defensiveness = 0.15
+			local_production_efficiency = 0.10
+		}
+		area_modifier = {		
+		}
+		country_modifiers = {
+			fire_damage_received = -0.015
+			caravan_power = 0.10
+		}
+		on_upgraded = {
+		}
+	}
+	tier_2 = {
+		upgrade_time = {
+			months = 240
+		}
+		cost_to_upgrade = {
+			factor = 3500
+		}
+		province_modifiers = {
+			local_defensiveness = 0.25
+			local_production_efficiency = 0.15
+		}
+		area_modifier = {		
+		}
+		country_modifiers = {
+			fire_damage_received = -0.025
+			caravan_power = 0.2		
+		}
+		on_upgraded = {
+		}
+	}
+	tier_3 = {
+		upgrade_time = {
+			months = 480
+		}
+		cost_to_upgrade = {
+			factor = 7000
+		}
+		province_modifiers = {
+			local_defensiveness = 0.50
+			local_production_efficiency = 0.25
+		}
+		area_modifier = {			
+		}
+		country_modifiers = {
+			fire_damage_received = -0.05
+			caravan_power = 0.33
+			merchants = 1
+		}
+		on_upgraded = {
+			owner = {
+				add_country_modifier = {
+					name = seghdihr_home_of_the_seg_band_warriors_of_the_segbandal
+					duration = 5475
+				}
+			}
+		}
+	}
+}
+#Hehodovar School of Architecture
+hehodovar_school_of_architecture = {
+	start = 4078
+	date = 01.01.01
+	time = {
+		months = 0
+	}
+	build_cost = 0
+	can_be_moved = no
+	move_days_per_unit_distance = 1
+	starting_tier = 0
+	type = monument
+	build_trigger = {	
+	}
+	on_built = {		
+	}
+	on_destroyed = {		
+	}	
+	can_use_modifiers_trigger = {
+		AND = {
+			development = 40
+			province_is_or_accepts_culture = yes
+			culture_group = dwarven
+		}
+	}	
+	can_upgrade_trigger = {
+		AND = {
+			development = 40
+			province_is_or_accepts_culture = yes
+			culture_group = dwarven
+		}
+	}	
+	keep_trigger = {
+	}
+	tier_0 = {
+		upgrade_time = {
+			months = 0
+		}
+		cost_to_upgrade = {
+			factor = 0
+		}
+		province_modifiers = {
+		}
+		area_modifier = {
+		}
+		country_modifiers = {		
+		}
+		on_upgraded = {
+		}
+	}
+	tier_1 = {
+		upgrade_time = {
+			months = 120
+		}
+		cost_to_upgrade = {
+			factor = 1000
+		}
+		province_modifiers = {
+		}
+		area_modifier = {			
+		}
+		country_modifiers = {
+			build_time = -0.05
+		}
+		on_upgraded = {
+		}
+	}
+	tier_2 = {
+		upgrade_time = {
+			months = 240
+		}
+		cost_to_upgrade = {
+			factor = 3500
+		}
+		province_modifiers = {
+		}
+		area_modifier = {		
+		}
+		country_modifiers = {
+			build_cost = -0.05
+			build_time = -0.075
+		}
+		on_upgraded = {
+		}
+	}
+	tier_3 = {
+		upgrade_time = {
+			months = 480
+		}
+		cost_to_upgrade = {
+			factor = 7000
+		}
+		province_modifiers = {
+		}
+		area_modifier = {		
+		}
+		country_modifiers = {
+			build_cost = -0.1
+			build_time = -0.1
+			great_project_upgrade_cost = -0.1
+		}
+		on_upgraded = {
+		}
+	}
+}
+#The Vaulthold (Gor Vazumbrog)
+gor_vazumbrog_the_vaulthold = {
+	start = 4217
+	date = 01.01.01
+	time = {
+		months = 0
+	}
+	build_cost = 0
+	can_be_moved = no
+	move_days_per_unit_distance = 1
+	starting_tier = 0
+	type = monument
+	build_trigger = {	
+	}
+	on_built = {		
+	}
+	on_destroyed = {		
+	}
+	can_use_modifiers_trigger = {
+		AND = {
+			development = 40
+			province_is_or_accepts_culture = yes
+			culture_group = dwarven
+		}
+	}	
+	can_upgrade_trigger = {
+		AND = {
+			development = 40
+			province_is_or_accepts_culture = yes
+			culture_group = dwarven
+		}
+	}	
+	keep_trigger = {
+	}
+	tier_0 = {
+		upgrade_time = {
+			months = 0
+		}
+		cost_to_upgrade = {
+			factor = 0
+		}
+		province_modifiers = {
+		}
+		area_modifier = {
+		}
+		country_modifiers = {		
+		}
+		on_upgraded = {
+		}
+	}
+	tier_1 = {
+		upgrade_time = {
+			months = 120
+		}
+		cost_to_upgrade = {
+			factor = 1000
+		}
+		province_modifiers = {
+			trade_value_modifier = 0.05
+		}
+		area_modifier = {			
+		}
+		country_modifiers = {
+			fire_damage = 0.01
+			shock_damage = 0.01
+		}
+		on_upgraded = {
+		}
+	}
+	tier_2 = {
+		upgrade_time = {
+			months = 240
+		}
+		cost_to_upgrade = {
+			factor = 3500
+		}
+		province_modifiers = {
+			trade_value_modifier = 0.1
+		}
+		area_modifier = {			
+		}
+		country_modifiers = {
+			fire_damage = 0.03
+			shock_damage = 0.03
+			artificers_loyalty_modifier = 0.05
+			artificers_influence_modifier = 0.025
+		}
+		on_upgraded = {
+		}
+	}
+	tier_3 = {
+		upgrade_time = {
+			months = 480
+		}
+		cost_to_upgrade = {
+			factor = 7000
+		}
+		province_modifiers = {
+			trade_value_modifier = 0.15
+		}
+		area_modifier = {		
+		}
+		country_modifiers = {
+			fire_damage = 0.05
+			shock_damage = 0.05
+			artificers_influence_modifier = 0.05
+			artificers_loyalty_modifier = 0.10
+		}
+		on_upgraded = {
+			owner = {
+				add_country_modifier = {
+					name = gor_vazumbrog_the_vaulthold_secrets
+					duration = 3650
+				}
+				mission_reward_artifice_points_5 = yes
+			}
+		}
+	}
+}
+#The Topaz Throne (Gor Ozumbrog)
+gor_ozumbrog_the_topaz_throne = {
+	start = 4218
+	date = 01.01.01
+	time = {
+		months = 0
+	}
+	build_cost = 0
+	can_be_moved = no
+	move_days_per_unit_distance = 1
+	starting_tier = 0
+	type = monument
+	build_trigger = {	
+	}
+	on_built = {	
+	}
+	on_destroyed = {		
+	}	
+	can_use_modifiers_trigger = {
+		AND = {
+			development = 40
+			province_is_or_accepts_culture = yes
+			culture_group = dwarven
+		}
+	}	
+	can_upgrade_trigger = {
+		AND = {
+			development = 40
+			province_is_or_accepts_culture = yes
+			culture_group = dwarven
+		}
+	}	
+	keep_trigger = {
+	}
+	tier_0 = {
+		upgrade_time = {
+			months = 0
+		}
+		cost_to_upgrade = {
+			factor = 0
+		}
+		province_modifiers = {
+		}
+		area_modifier = {
+		}
+		country_modifiers = {		
+		}
+		on_upgraded = {
+		}
+	}
+	tier_1 = {
+		upgrade_time = {
+			months = 120
+		}
+		cost_to_upgrade = {
+			factor = 1000
+		}
+		province_modifiers = {
+			local_production_efficiency = 0.10
+		}
+		area_modifier = {			
+		}
+		country_modifiers = {
+			war_taxes_cost_modifier = -0.33
+		}
+		on_upgraded = {
+		}
+	}
+	tier_2 = {
+		upgrade_time = {
+			months = 240
+		}
+		cost_to_upgrade = {
+			factor = 3500
+		}
+		province_modifiers = {
+			local_production_efficiency = 0.15
+		}
+		area_modifier = {		
+		}
+		country_modifiers = {
+			war_taxes_cost_modifier = -0.33
+			ae_impact = -0.05
+		}
+		on_upgraded = {
+		}
+	}
+	tier_3 = {
+		upgrade_time = {
+			months = 480
+		}
+		cost_to_upgrade = {
+			factor = 7000
+		}
+		province_modifiers = {
+			local_production_efficiency = 0.25
+		}
+		area_modifier = {		
+		}
+		country_modifiers = {
+			war_taxes_cost_modifier = -0.66
+			ae_impact = -0.1
+		}
+		on_upgraded = {
+		}
+	}
+}
+
+#Gardens of Tuwad-Dhûmakon
+tuwad_dhumakon_gardens = {
+	start = 4350
+	date = 01.01.01
+	time = {
+		months = 0
+	}
+	build_cost = 0
+	can_be_moved = no
+	move_days_per_unit_distance = 1
+	starting_tier = 0
+	type = monument
+	build_trigger = {	
+	}
+	on_built = {	
+	}
+	on_destroyed = {		
+	}	
+	can_use_modifiers_trigger = {
+		AND = {
+			development = 40
+			province_is_or_accepts_culture = yes
+			OR = {
+				culture_group = dwarven
+				culture_group = goblin
+				culture_group = hobgoblin
+				culture_group = kobold
+				culture_group = orcish
+			}
+		}
+	}	
+	can_upgrade_trigger = {
+		AND = {
+			development = 40
+			province_is_or_accepts_culture = yes
+			OR = {
+				culture_group = dwarven
+				culture_group = goblin
+				culture_group = hobgoblin
+				culture_group = kobold
+				culture_group = orcish
+			}
+		}
+	}	
+	keep_trigger = {
+	}
+	tier_0 = {
+		upgrade_time = {
+			months = 0
+		}
+		cost_to_upgrade = {
+			factor = 0
+		}
+		province_modifiers = {
+		}
+		area_modifier = {
+		}
+		country_modifiers = {		
+		}
+		on_upgraded = {
+		}
+	}
+	tier_1 = {
+		upgrade_time = {
+			months = 120
+		}
+		cost_to_upgrade = {
+			factor = 1000
+		}
+		province_modifiers = {
+			trade_value_modifier = 0.05
+		}
+		area_modifier = {	
+			local_prosperity_growth = 0.25
+		}
+		country_modifiers = {
+			prestige = 0.1
+			recover_army_morale_speed = 0.05
+		}
+		on_upgraded = {
+		}
+	}
+	tier_2 = {
+		upgrade_time = {
+			months = 240
+		}
+		cost_to_upgrade = {
+			factor = 3500
+		}
+		province_modifiers = {
+			trade_value_modifier = 0.1
+		}
+		area_modifier = {	
+			local_prosperity_growth = 0.5
+		}
+		country_modifiers = {
+			diplomatic_reputation = 0.5
+			prestige = 0.25
+			recover_army_morale_speed = 0.10
+		}
+		on_upgraded = {
+		}
+	}
+	tier_3 = {
+		upgrade_time = {
+			months = 480
+		}
+		cost_to_upgrade = {
+			factor = 7000
+		}
+		province_modifiers = {
+			trade_value_modifier = 0.15
+		}
+		area_modifier = {	
+			local_prosperity_growth = 1
+		}
+		country_modifiers = {
+			diplomatic_reputation = 1
+			prestige = 0.5
+			recover_army_morale_speed = 0.15
+		}
+		on_upgraded = {
+			owner = {
+				add_country_modifier = {
+					name = tuwad_dhumakon_gardens_prosperity
+					duration = 9125
+				}
+			}
+		}
+	}
+}
+#Trade Halls of Gronstunad
+gronstunad_trade_halls = {
+	start = 4311
+	date = 01.01.01
+	time = {
+		months = 0
+	}
+	build_cost = 0
+	can_be_moved = no
+	move_days_per_unit_distance = 1
+	starting_tier = 0
+	type = monument
+	build_trigger = {	
+	}
+	on_built = {		
+	}
+	on_destroyed = {		
+	}	
+	can_use_modifiers_trigger = {
+		AND = {
+			development = 40
+			province_is_or_accepts_culture = yes
+			OR = {
+				culture_group = dwarven
+				culture_group = goblin
+				culture_group = hobgoblin
+				culture_group = kobold
+				culture_group = orcish
+			}
+		}
+	}
+	can_upgrade_trigger = {
+		AND = {
+			development = 40
+			province_is_or_accepts_culture = yes
+			OR = {
+				culture_group = dwarven
+				culture_group = goblin
+				culture_group = hobgoblin
+				culture_group = kobold
+				culture_group = orcish
+			}
+		}
+	}	
+	keep_trigger = {
+	}
+	tier_0 = {
+		upgrade_time = {
+			months = 0
+		}
+		cost_to_upgrade = {
+			factor = 0
+		}
+		province_modifiers = {
+		}
+		area_modifier = {
+		}
+		country_modifiers = {			
+		}
+		on_upgraded = {
+		}
+	}
+	tier_1 = {
+		upgrade_time = {
+			months = 120
+		}
+		cost_to_upgrade = {
+			factor = 1000
+		}
+		province_modifiers = {
+			province_trade_power_modifier = 0.10	
+		}
+		area_modifier = {			
+		}
+		country_modifiers = {
+			trade_efficiency = 0.05
+			trade_steering = 0.05
+		}
+		on_upgraded = {
+			owner = {
+				add_estate_burghers_loyalty_effect = yes
+			}
+		}
+	}
+	tier_2 = {
+		upgrade_time = {
+			months = 240
+		}
+		cost_to_upgrade = {
+			factor = 3500
+		}
+		province_modifiers = {
+			province_trade_power_modifier = 0.20
+		}
+		area_modifier = {			
+		}
+		country_modifiers = {
+			trade_efficiency = 0.075
+			trade_steering = 0.1
+			merchants = 1
+		}
+		on_upgraded = {
+			owner = {
+				add_estate_loyalty = {
+					estate = estate_burghers
+					loyalty = 10
+				}
+				define_advisor = {
+					type = trader
+					name = "Gundobad Goldbeard"
+					skill = 3
+					culture = jade_dwarf
+					religion = ancestor_worship
+					location = 4311
+					discount = yes
+				}
+			}
+			
+		}
+	}
+	tier_3 = {
+		upgrade_time = {
+			months = 480
+		}
+		cost_to_upgrade = {
+			factor = 7000
+		}
+		province_modifiers = {
+			province_trade_power_modifier = 0.33
+		}
+		area_modifier = {			
+		}
+		country_modifiers = {
+			trade_efficiency = 0.1
+			trade_steering = 0.15
+			merchants = 1
+			center_of_trade_upgrade_cost = -0.25
+		}
+		on_upgraded = {
+			owner = {
+				add_estate_burghers_loyalty_effect = yes
+			}
+		}
+	}
+}
+#Mage Academy of Verkal Dromak
+verkal_dromak_mage_academy = {
+	start = 4323
+	date = 01.01.01
+	time = {
+		months = 0
+	}
+	build_cost = 0
+	can_be_moved = no
+	move_days_per_unit_distance = 1
+	starting_tier = 0
+	type = monument
+	build_trigger = {	
+	}
+	on_built = {		
+	}
+	on_destroyed = {		
+	}	
+	can_use_modifiers_trigger = {
+		AND = {
+			development = 40
+			province_is_or_accepts_culture = yes
+			culture_group = dwarven
+
+		}
+	}	
+	can_upgrade_trigger = {
+		AND = {
+			development = 40
+			province_is_or_accepts_culture = yes
+			culture_group = dwarven
+		}
+	}	
+	keep_trigger = {
+	}
+	tier_0 = {
+		upgrade_time = {
+			months = 0
+		}
+		cost_to_upgrade = {
+			factor = 0
+		}
+		province_modifiers = {
+		}
+		area_modifier = {
+		}
+		country_modifiers = {			
+		}
+		on_upgraded = {
+		}
+	}
+	tier_1 = {
+		upgrade_time = {
+			months = 120
+		}
+		cost_to_upgrade = {
+			factor = 1000
+		}
+		province_modifiers = {
+			local_defensiveness = 0.15
+		}
+		area_modifier = {			
+		}
+		country_modifiers = {
+			monarch_lifespan = 0.15
+			mages_loyalty_modifier = 0.025
+		}
+		on_upgraded = {
+			owner = {
+				add_estate_loyalty = {
+					estate = estate_mages
+					loyalty = 5
+				}
+			}
+		}
+	}
+	tier_2 = {
+		upgrade_time = {
+			months = 240
+		}
+		cost_to_upgrade = {
+			factor = 3500
+		}
+		province_modifiers = {
+			local_defensiveness = 0.25
+		}
+		area_modifier = {		
+		}
+		country_modifiers = {
+			monarch_lifespan = 0.30
+			all_power_cost = -0.02
+			mages_influence_modifier = 0.025
+			mages_loyalty_modifier = 0.05
+		}
+		on_upgraded = {
+			owner = {
+				add_estate_loyalty = {
+					estate = estate_mages
+					loyalty = 10
+				}
+				define_advisor = {
+					type = court_mage
+					name = "Ragun Greybeard"
+					skill = 3
+					culture = malachite_dwarf
+					religion = ancestor_worship
+					location = 4323
+					discount = yes
+				}
+			}
+			
+		}
+	}
+	tier_3 = {
+		upgrade_time = {
+			months = 480
+		}
+		cost_to_upgrade = {
+			factor = 7000
+		}
+		province_modifiers = {
+		local_defensiveness = 0.5
+		}
+		area_modifier = {			
+		}
+		country_modifiers = {
+			all_power_cost = -0.05
+			mages_influence_modifier = 0.05
+			mages_loyalty_modifier = 0.1
+			monarch_lifespan = 0.50
+		}
+		on_upgraded = {
+			add_permanent_province_modifier = {
+				name = verkal_dromak_mage_academy_mages_summon_large_damestear_meteor
+				duration = -1
+			}
+			change_trade_goods = damestear
+			set_province_flag = permanent_damestear
+			owner = {
+				add_estate_loyalty = {
+					estate = estate_mages
+					loyalty = 15
+				}
+			}
+		}
+	}
+}
+#Bastion of Vûrdriz-Ândriz
+vurdriz_andriz_bastion = {
+	start = 4313
+	date = 01.01.01
+	time = {
+		months = 0
+	}
+	build_cost = 0
+	can_be_moved = no
+	move_days_per_unit_distance = 1
+	starting_tier = 0
+	type = monument
+	build_trigger = {	
+	}
+	on_built = {		
+	}
+	on_destroyed = {		
+	}	
+	can_use_modifiers_trigger = {
+		AND = {
+			development = 40
+			province_is_or_accepts_culture = yes
+			OR = {
+				culture_group = dwarven
+				culture_group = goblin
+				culture_group = hobgoblin
+				culture_group = kobold
+				culture_group = orcish
+			}
+		}
+	}
+	can_upgrade_trigger = {
+		AND = {
+			development = 40
+			province_is_or_accepts_culture = yes
+			OR = {
+				culture_group = dwarven
+				culture_group = goblin
+				culture_group = hobgoblin
+				culture_group = kobold
+				culture_group = orcish
+			}
+		}
+	}	
+	keep_trigger = {
+	}
+	tier_0 = {
+		upgrade_time = {
+			months = 0
+		}
+		cost_to_upgrade = {
+			factor = 0
+		}
+		province_modifiers = {
+		}
+		area_modifier = {
+		}
+		country_modifiers = {			
+		}
+		on_upgraded = {
+		}
+	}
+	tier_1 = {
+		upgrade_time = {
+			months = 120
+		}
+		cost_to_upgrade = {
+			factor = 1000
+		}
+		province_modifiers = {
+			local_defensiveness = 0.1	
+		}
+		area_modifier = {			
+		}
+		country_modifiers = {
+			global_garrison_growth = 0.1
+			rival_border_fort_maintenance = -0.25
+		}
+		on_upgraded = {
+			add_base_manpower = 1
+		}
+	}
+	tier_2 = {
+		upgrade_time = {
+			months = 240
+		}
+		cost_to_upgrade = {
+			factor = 3500
+		}
+		province_modifiers = {
+			local_defensiveness = 0.25
+		}
+		area_modifier = {			
+		}
+		country_modifiers = {
+			defensiveness = 0.25
+			global_garrison_growth = 0.2
+			rival_border_fort_maintenance = -0.5
+		}
+		on_upgraded = {
+			add_base_manpower = 2
+		}
+	}
+	tier_3 = {
+		upgrade_time = {
+			months = 480
+		}
+		cost_to_upgrade = {
+			factor = 7000
+		}
+		province_modifiers = {
+			local_defensiveness = 0.5
+		}
+		area_modifier = {			
+		}
+		country_modifiers = {
+			defensiveness = 0.50
+			global_garrison_growth = 0.33
+			rival_border_fort_maintenance = -0.9
+		}
+		on_upgraded = {
+			add_base_manpower = 3
+			every_province_in_state = {
+				add_building = fortress_keep
+			}
+		}
+	}
+}
+#The Emerald Spire
+emerald_spire = {
+	start = 4338
+	date = 01.01.01
+	time = {
+		months = 0
+	}
+	build_cost = 0
+	can_be_moved = no
+	move_days_per_unit_distance = 1
+	starting_tier = 0
+	type = monument
+	build_trigger = {	
+	}
+	on_built = {		
+	}
+	on_destroyed = {	
+	}
+	can_use_modifiers_trigger = {
+		AND = {
+			development = 10
+			province_is_or_accepts_culture = yes
+			OR = {
+				culture_group = dwarven
+				culture_group = goblin
+				culture_group = hobgoblin
+				culture_group = kobold
+				culture_group = orcish
+			}
+		}
+	}	
+	can_upgrade_trigger = {
+		AND = {
+			development = 10
+			province_is_or_accepts_culture = yes
+			OR = {
+				culture_group = dwarven
+				culture_group = goblin
+				culture_group = hobgoblin
+				culture_group = kobold
+				culture_group = orcish
+			}
+		}
+	}	
+	keep_trigger = {
+	}
+	tier_0 = {
+		upgrade_time = {
+			months = 0
+		}
+		cost_to_upgrade = {
+			factor = 0
+		}
+		province_modifiers = {
+		}
+		area_modifier = {
+		}
+		country_modifiers = {
+		}
+		on_upgraded = {
+		}
+	}
+	tier_1 = {
+		upgrade_time = {
+			months = 120
+		}
+		cost_to_upgrade = {
+			factor = 1000
+		}
+		province_modifiers = {
+			local_development_cost = -0.2
+		}
+		area_modifier = {
+		}
+		country_modifiers = {
+			improve_relation_modifier = 0.1
+		}
+		on_upgraded = {
+		}
+	}
+	tier_2 = {
+		upgrade_time = {
+			months = 240
+		}
+		cost_to_upgrade = {
+			factor = 2500
+		}
+		province_modifiers = {
+			local_development_cost = -0.4
+		}
+		area_modifier = {
+		}
+		country_modifiers = {
+			improve_relation_modifier = 0.15
+		}
+		on_upgraded = {
+		}
+	}
+	tier_3 = {
+		upgrade_time = {
+			months = 480
+		}
+		cost_to_upgrade = {
+			factor = 5000
+		}
+		province_modifiers = {
+			local_development_cost = -0.6
+			allowed_num_of_buildings = 1
+		}
+		area_modifier = {
+		}
+		country_modifiers = {
+			improve_relation_modifier = 0.2
+			stability_cost_to_declare_war = -1
+		}
+		on_upgraded = {
+			owner = {
+				add_country_modifier = {
+					name = emerald_spire_magnificence_of_the_emerald_spire
+					duration = 7300
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,46 @@
+spriteTypes = {
+####################
+#The Command
+####################
+spriteType = {
+        name = "GFX_great_project_boar_camp"	
+        texturefile = "gfx//interface//great_projects//great_project_boar_camp.dds"
+    }
+spriteType = {
+        name = "GFX_great_project_slaver_camp"	
+        texturefile = "gfx//interface//great_projects//great_project_slaver_camp.dds"
+    }
+spriteType = {
+        name = "GFX_great_project_gerunanin_camp"	
+        texturefile = "gfx//interface//great_projects//great_project_gerunanin_camp.dds"
+    }
+spriteType = {
+        name = "GFX_great_project_dragon_camp"	
+        texturefile = "gfx//interface//great_projects//great_project_dragon_camp.dds"
+    }
+spriteType = {
+        name = "GFX_great_project_elephant_camp"	
+        texturefile = "gfx//interface//great_projects//great_project_elephant_camp.dds"
+    }
+spriteType = {
+        name = "GFX_great_project_tiger_camp"	
+        texturefile = "gfx//interface//great_projects//great_project_tiger_camp.dds"
+    }
+spriteType = {
+        name = "GFX_great_project_nogod_temple"	
+        texturefile = "gfx//interface//great_projects//great_project_nogod_temple.dds"
+    }
+
+spriteType = {
+        name = "GFX_great_project_wolf_camp"	
+        texturefile = "gfx//interface//great_projects//great_project_wolf_camp.dds"
+    }
+spriteType = {
+        name = "GFX_great_project_lion_camp"	
+        texturefile = "gfx//interface//great_projects//great_project_lion_camp.dds"
+    }
+
+}
+
+
+}

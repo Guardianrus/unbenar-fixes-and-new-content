@@ -1,0 +1,9 @@
+﻿l_english:
+
+ DA_Obsidian_event.1.t:0 "The Obsidian Dwarfs"
+ DA_Obsidian_event.1.d:0 "While they have been quite the difficult enemy to defeat, the Obsidian Dwarfs are masters of Runesmithing and their people come from an underground empire which was founded by Aul-Dwarov's exiles. The knowledge they have is certainly useful.\nMany ministers have suggested the integration of the Obsidian Dwarf in our Nation. The last decision Is yours to make."
+ DA_Obsidian_event.1.a:0 "Integrate them"
+ DA_accepting_obsidians:0 "Accepting Obsidian Dwarfs"
+ desc_DA_accepting_obsidians:0 "We have come to the conclusion that integration is more beneficial to our country"
+ DA_obsidian_privilege_tt:0 "Taking this action unlocks a new privilege for the Runesmith Estate"
+ DA_Obsidian_event.1.b:0 "No, they remain enemies"

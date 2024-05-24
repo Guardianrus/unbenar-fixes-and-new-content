@@ -1,0 +1,15 @@
+﻿l_english:
+
+SAMURAI_NAME:0 "$NUM$$ORDER$ Mithril Guard Regiment"
+MODIFIER_ALLOWED_SAMURAI_FRACTION:0 "§YMithril Guard§! Force Limit"
+MODIFIER_LOCAL_HAS_SAMURAI:0 "Province Allows §YMithril Guard§! Infantry"
+SAMURAI_FORCELIMIT:0 "We can recruit up to $LIMIT|Y$ §GMithril Guard§! owing to:\n$FLAMOUNT|Y$ from $PERC|%Y$ of our force-limit of $FL$:\n"
+SAMURAI_LIMIT_CULTURE:0 "$PROVINCE$ is a $CULTURE$ province, so can not recruit §YMithril Guard§! Infantry here"
+ADD_SAMURAI_SUB_UNIT_EFFECT:0 "Get '§GMithril Guard§!' $UNIT$ in $WHERE|Y$."
+SAMURAI_DESC:0 "The Mithril Guard is composed by the best soldiers Mithradum can offer and is regarded as highly as the royal guard.\nEvery dwarf composing this units has undergone years of rigorous training and is then equipped with the greatest mithril armors and weapons Mithradum can offer"
+REGCAT_samurai:0 "§YMithril Guard§!"
+SAMURAI_REGIMENT:0 "§YMithril Guard§! Regiment\n$EFFECT$"
+HAVE_LESS_SAMURAI_THAN:0 "Have less §YMithril Guard§! than §Y$VALUE$§!.\n"
+samurai_modifier:0 "§YMithril Guard§! Hired" 
+HAVE_AT_LEAST_SAMURAI_THAN:0 "Have at least §Y$VALUE$§! §YMithril Guard§!.\n"
+MODIFIER_AMOUNT_OF_SAMURAI:0 "§YMithril Guard§! Force Limit"

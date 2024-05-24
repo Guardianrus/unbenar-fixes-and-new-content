@@ -1,0 +1,21 @@
+country_decisions = {
+	long_lived_amldihr_republic_abdicate = {	
+		potential = {
+			has_reform = amldihr_dutch_republic_reform
+		}
+		
+		allow = {
+			prestige = 0
+			months_of_ruling = 120
+		}
+	
+		effect = {
+			custom_tooltip = step_down_tooltip
+			hidden_effect = { kill_ruler = yes }
+			add_prestige = -50
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

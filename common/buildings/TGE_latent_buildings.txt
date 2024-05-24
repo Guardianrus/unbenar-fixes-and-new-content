@@ -1,0 +1,1184 @@
+# Do not change tags in here without changing every other reference to them.
+# If adding new buildings, make sure they are uniquely named.
+
+# cost = x #==> cost in $ to build (subject to other modifiers)
+# time = x #==> number of months to build.
+# modifier = m # a modifier on the province that the building gives
+# trigger = t # an and trigger that needs to be fullfilled to build and keep the building
+# one_per_country = yes/no # if yes, only one of these can exist in a country
+# manufactory = { trade_good trade_good } # list of trade goods that get a production bonus
+# onmap = yes/no # show as a sprite on the map
+
+# FROM = owner
+# ROOT = province
+
+# Building AI is now mainly hard-coded. The AI will estimate how much it gains yearly from each building,
+# convert the value to ducats, and take the building with biggest yearly return as a percentage of the build cost.
+# If lower than 1%, the AI will not consider the yearly return worth it.
+# It will also require higher yearly return if the economy in not in prime shape.
+# Forts' value also get converted to a yearly return based on terrain and strategic position, as well as available budget for fort maintenance.
+
+# AI can still be modded though; it will multiply the yearly return with the value of ai_will_do.
+# If you don't want the AI to build a building at all, make ai_will_do become 0.
+# AI will consider each building to be worth 0.01 ducats per year as a base, so making ai_will_do above cost will have them build it at some point.
+# It will still check whether it can afford a building before doing so though, but may save up to it.
+
+
+cannon_foundry = {
+	cost = 1000
+	time = 12
+
+	build_trigger = {
+		OR = {
+			NOT = {
+				OR = {
+					has_terrain = dwarven_hold
+					has_terrain = dwarven_hold_surface
+				}
+			}
+			has_great_project = { 
+				type = ovdal_kanzad_cannon_foundry 
+				tier = 1
+			}
+		}
+
+		AND = {
+			development = 10
+			OR = {
+				NOT = {
+					trade_goods = copper
+					trade_goods = tin
+					has_province_flag = has_latent_good
+				}
+				province_id = 4247
+			}
+		}
+		owner = {
+			OR = {
+				innovativeness = 10
+				NOT = { has_dlc = "Rule Britannia" }
+			}
+			check_variable = {
+				which = copper
+				value = 0.4
+			}
+
+			check_variable = {
+				which = tin
+				value = 0.3
+			}
+		}
+	}
+	on_built = {
+		change_trade_goods = cannon
+		hidden_effect = {
+			set_province_flag = has_latent_good
+			add_province_modifier = {
+				name = not_enough_resources
+				duration = -1
+			}
+		}		
+	}
+	on_destroyed = {
+		hidden_effect = {
+			clr_province_flag = has_latent_good
+			remove_province_modifier = not_enough_resources
+		}
+		change_trade_goods = unknown
+	}
+	modifier = {
+		allowed_num_of_buildings = 1
+		local_governing_cost = 1
+	}
+	ai_will_do = {
+		factor = 0
+
+		# modifier = {
+		# 	factor = 0
+		# 	any_owned_province = {
+		# 		has_building = off
+		# 	}
+		# }
+
+		# modifier = {
+		# 	factor = 0
+		# 	FROM = {
+		# 		check_variable = {
+		# 			which = cannon_foundry_amount
+		# 			value = 3
+		# 		}
+
+		# 	}
+		# }
+
+		# modifier = {
+		# 	factor = 0
+		# 	any_owned_province = {
+		# 		has_construction = building
+		# 	}
+		# }
+
+		# modifier = {
+		# 	factor = 0
+		# 	ROOT = {
+		# 		has_province_flag = has_latent_good
+		# 	}
+		# }
+
+	}
+}
+
+metalworking_workshop = {
+	cost = 1000
+	time = 12
+
+	build_trigger = {
+		NOT = {
+			OR = {
+				has_terrain = dwarven_hold
+				has_terrain = dwarven_hold_surface
+			}
+		}
+		AND = {
+			NOT = {
+				trade_goods = iron
+			}
+		}
+		FROM = {
+			OR = {
+				innovativeness = 15
+				NOT = { has_dlc = "Rule Britannia" }
+			}
+			check_variable = {
+				which = iron
+				value = 1
+			}
+		}
+	}
+
+	on_built = {
+		change_trade_goods = metalworking
+		hidden_effect = {
+			set_province_flag = has_latent_good
+			add_province_modifier = {
+				name = not_enough_resources
+				duration = -1
+			}
+		}
+	}
+
+	on_destroyed = {
+		hidden_effect = {
+			clr_province_flag = has_latent_good
+			remove_province_modifier =not_enough_resources
+		}
+		change_trade_goods = unknown
+
+	}
+
+	modifier = {
+		allowed_num_of_buildings = 1
+		local_governing_cost = 1
+
+	}
+
+	ai_will_do = {
+		factor = 0
+
+		# modifier = {
+		# 	factor = 0
+		# 	any_owned_province = {
+		# 		has_building = off_2
+		# 	}
+		# }
+
+		# modifier = {
+		# 	factor = 0
+		# 	FROM = {
+		# 		check_variable = {
+		# 			which = metalworking_workshop_amount
+		# 			value = 3
+		# 		}
+
+		# 	}
+		# }
+
+		# modifier = {
+		# 	factor = 0
+		# 	any_owned_province = {
+		# 		has_construction = building
+		# 	}
+		# }
+
+		# modifier = {
+		# 	factor = 0
+		# 	ROOT = {
+		# 		has_province_flag = has_latent_good
+		# 	}
+		# }
+	}
+}
+
+munition_factory = {
+	cost = 1000
+	time = 12
+
+	build_trigger = {
+		NOT = {
+			OR = {
+				has_terrain = dwarven_hold
+				has_terrain = dwarven_hold_surface
+			}
+		}
+		AND = {
+			NOT = {
+				trade_goods = lead
+				has_province_flag = has_latent_good
+			}
+		}
+		FROM = {
+			OR = {
+				innovativeness = 15
+				NOT = { has_dlc = "Rule Britannia" }
+			}
+			check_variable = {
+				which = lead
+				value = 1.0
+			}
+		}
+	}
+
+	on_built = {
+		change_trade_goods = munitions
+		hidden_effect = {
+			set_province_flag = has_latent_good
+
+			add_province_modifier = {
+				name = not_enough_resources
+				duration = -1
+			}
+		}
+	}
+
+	on_destroyed = {
+		hidden_effect = {
+			clr_province_flag = has_latent_good
+			remove_province_modifier =not_enough_resources
+		}
+		change_trade_goods = unknown
+
+	}
+
+	modifier = {
+		allowed_num_of_buildings = 1
+		local_governing_cost = 1
+	}
+
+	ai_will_do = {
+		factor = 0
+
+		# modifier = {
+		# 	factor = 0
+		# 	any_owned_province = {
+		# 		has_building = off_3
+		# 	}
+		# }
+
+		# modifier = {
+		# 	factor = 0
+		# 	FROM = {
+		# 		check_variable = {
+		# 			which = munition_factory_amount
+		# 			value = 3
+		# 		}
+
+		# 	}
+		# }
+
+		# modifier = {
+		# 	factor = 0
+		# 	any_owned_province = {
+		# 		has_construction = building
+		# 	}
+		# }
+
+		# modifier = {
+		# 	factor = 0
+		# 	ROOT = {
+		# 		has_province_flag = has_latent_good
+		# 	}
+		# }
+	}
+}
+
+wood_workshop = {
+	cost = 400
+	time = 12
+
+	build_trigger = {
+		NOT = {
+			OR = {
+				has_terrain = dwarven_hold
+				has_terrain = dwarven_hold_surface
+			}
+		}
+		ROOT = {
+			trade_goods = lumber
+			development = 10
+			NOT = { has_province_flag = has_latent_good }
+		}
+
+		FROM = {
+			OR = {
+				innovativeness = 5
+				NOT = { has_dlc = "Rule Britannia" }
+			}
+		}
+
+	}
+
+	on_built = {
+		change_trade_goods = woodworking
+		every_province = {
+			limit = {
+				province_id = 1
+			}
+			change_variable = {
+				which = woodworking_workshop
+				value = 1
+			}
+		}
+	}
+
+	on_destroyed = {
+		every_province = {
+			limit = {
+				province_id = 1
+			}
+			subtract_variable = {
+				which = woodworking_workshop
+				value = 1
+			}
+		}
+		change_trade_goods = unknown
+
+	}
+
+	modifier = {
+		allowed_num_of_buildings = 1
+		local_governing_cost = 1
+	}
+
+	ai_will_do = {
+		factor = 0
+
+		# modifier = {
+		# 	factor = 0
+		# 	ROOT = {
+		# 		has_province_flag = has_latent_good
+		# 	}
+		# }
+	}
+}
+
+leather_workshop = {
+	cost = 400
+	time = 12
+
+	build_trigger = {
+		NOT = {
+			OR = {
+				has_terrain = dwarven_hold
+				has_terrain = dwarven_hold_surface
+			}
+		}
+		ROOT = {
+			trade_goods = livestock
+			development = 10
+			NOT = { has_province_flag = has_latent_good }
+		}
+
+		FROM = {
+			OR = {
+				innovativeness = 7
+				NOT = { has_dlc = "Rule Britannia" }
+			}
+		}
+	}
+
+	on_built = {
+		change_trade_goods = leather
+	}
+
+	on_destroyed = {
+		change_trade_goods = unknown
+
+	}
+
+	modifier = {
+		allowed_num_of_buildings = 1
+		local_governing_cost = 1
+	}
+
+	ai_will_do = {
+		factor = 0
+
+		# modifier = {
+		# 	factor = 0
+		# 	ROOT = {
+		# 		has_province_flag = has_latent_good
+		# 	}
+		# }
+
+	}
+}
+
+brewery = {
+	cost = 1000
+	time = 12
+
+	build_trigger = {
+		OR = {
+			NOT = {
+				OR = {
+					has_terrain = dwarven_hold
+					has_terrain = dwarven_hold_surface
+				}
+			}
+			has_great_project = { 
+				type = hul_as_krakazol_breweries 
+				tier = 1
+			}
+		}
+
+		ROOT = {
+			OR = {
+				trade_goods = grain
+				trade_goods = fungi
+			}
+			development = 10
+		}
+
+		FROM = {
+			OR = {
+				innovativeness = 10
+				NOT = { has_dlc = "Rule Britannia" }
+			}
+		}
+	}
+
+	on_built = {
+		change_trade_goods = beer
+	}
+
+	on_destroyed = {
+		change_trade_goods = unknown
+
+	}
+
+	modifier = {
+		allowed_num_of_buildings = 1
+		local_governing_cost = 1
+	}
+
+	ai_will_do = {
+		factor = 0
+
+		# modifier = {
+		# 	factor = 0
+		# 	ROOT = {
+		# 		has_province_flag = has_latent_good
+		# 	}
+		# }
+	}
+}
+
+rum_factory = {
+	cost = 1000
+	time = 12
+
+	build_trigger = {
+		NOT = {
+			OR = {
+				has_terrain = dwarven_hold
+				has_terrain = dwarven_hold_surface
+			}
+		}
+		
+		ROOT = {
+			trade_goods = sugar
+			development = 15
+		}
+
+		FROM = {
+			OR = {
+				innovativeness = 7
+				NOT = { has_dlc = "Rule Britannia" }
+			}
+		}
+	}
+
+	on_built = {
+		change_trade_goods = rum
+	}
+
+	on_destroyed = {
+		change_trade_goods = unknown
+
+	}
+
+	modifier = {
+		allowed_num_of_buildings = 1
+		local_governing_cost = 1
+	}
+
+	ai_will_do = {
+		factor = 0
+
+		# modifier = {
+		# 	factor = 0
+		# 	ROOT = {
+		# 		has_province_flag = has_latent_good
+		# 	}
+		# }
+	}
+}
+
+jewellery_workshop = {
+	cost = 2000
+	time = 12
+
+	build_trigger = {
+		NOT = {
+			OR = {
+				has_terrain = dwarven_hold
+				has_terrain = dwarven_hold_surface
+			}
+		}
+		ROOT = {
+			OR = {
+				trade_goods = amber
+				trade_goods = pearls
+				trade_goods = jade
+				trade_goods = gems
+				trade_goods = silver
+				trade_goods = gold
+			}
+			development = 20
+			NOT = { has_province_flag = has_latent_good }
+		}
+
+		FROM = {
+			OR = {
+				innovativeness = 20
+				NOT = { has_dlc = "Rule Britannia" }
+			}
+		}
+
+
+	}
+
+	on_built = {
+		change_trade_goods = jewellery
+	}
+
+	on_destroyed = {
+		change_trade_goods = unknown
+
+	}
+
+	modifier = {
+		allowed_num_of_buildings = 1
+		local_governing_cost = 1
+	}
+
+	ai_will_do = {
+		factor = 0
+
+		# modifier = {
+		# 	factor = 0
+		# 	ROOT = {
+		# 		has_province_flag = has_latent_good
+		# 	}
+		# }
+	}
+}
+
+steam_engine_manu = {
+	cost = 3000
+	time = 12
+
+	build_trigger = {
+		NOT = {
+			OR = {
+				has_terrain = dwarven_hold
+				has_terrain = dwarven_hold_surface
+			}
+		}
+		AND = {
+			NOT = {
+				trade_goods = zinc
+				trade_goods = copper
+				has_province_flag = has_latent_good
+			}
+
+		}
+		FROM = {
+			has_institution = enlightenment
+			OR = {
+				innovativeness = 30
+				NOT = { has_dlc = "Rule Britannia" }
+			}
+			check_variable = {
+				which = zinc
+				value = 0.4
+			}
+			check_variable = {
+				which = copper
+				value = 0.6
+			}
+		}
+	}
+
+	on_built = {
+		set_province_flag = has_latent_good
+		change_trade_goods = steam_engine
+		add_province_modifier = {
+			name = not_enough_resources
+			duration = -1
+		}
+
+	}
+
+	on_destroyed = {
+		change_trade_goods = unknown
+
+		clr_province_flag = has_latent_good
+		remove_province_modifier = not_enough_resources
+	}
+
+	modifier = {
+		allowed_num_of_buildings = 1
+		local_governing_cost = 1
+	}
+
+	ai_will_do = {
+		factor = 0
+		# modifier = {
+		# 	factor = 0
+		# 	any_owned_province = {
+		# 		has_building = off_4
+		# 	}
+		# }
+
+		# modifier = {
+		# 	factor = 0
+		# 	FROM = {
+		# 		check_variable = {
+		# 			which = steam_engine_manu_amount
+		# 			value = 3
+		# 		}
+
+		# 	}
+		# }
+
+		# modifier = {
+		# 	factor = 0
+		# 	any_owned_province = {
+		# 		has_construction = building
+		# 	}
+		# }
+
+		# modifier = {
+		# 	factor = 0
+		# 	ROOT = {
+		# 		has_province_flag = has_latent_good
+		# 	}
+		# }
+	}
+}
+
+spectacle_factory = {
+	cost = 1000
+	time = 12
+
+	build_trigger = {
+		NOT = {
+			OR = {
+				has_terrain = dwarven_hold
+				has_terrain = dwarven_hold_surface
+			}
+		}
+		AND = {
+			NOT = {
+				trade_goods = glass
+				has_province_flag = has_latent_good
+			}
+		}
+		FROM = {
+			OR = {
+				innovativeness = 15
+				NOT = { has_dlc = "Rule Britannia" }
+			}
+			check_variable = {
+				which = glass
+				value = 0.6
+			}
+		}
+	}
+
+	on_built = {
+		change_trade_goods = optics
+		hidden_effect = {
+			add_province_modifier = {
+				name = not_enough_resources
+				duration = -1
+			}
+		}
+	}
+
+	on_destroyed = {
+		change_trade_goods = unknown
+
+		hidden_effect = {
+			remove_province_modifier =not_enough_resources
+		}
+	}
+
+	modifier = {
+		allowed_num_of_buildings = 1
+		local_governing_cost = 1
+	}
+
+	ai_will_do = {
+		factor = 0
+	# 	modifier = {
+	# 		factor = 0
+	# 		any_owned_province = {
+	# 			has_building = off_5
+	# 		}
+	# 	}
+
+	# 	modifier = {
+	# 		factor = 0
+	# 		FROM = {
+	# 			check_variable = {
+	# 				which = spectacle_factory_amount
+	# 				value = 3
+	# 			}
+
+	# 		}
+	# 	}
+
+	# 	modifier = {
+	# 		factor = 0
+	# 		any_owned_province = {
+	# 			has_construction = building
+	# 		}
+	# 	}
+
+	# 	modifier = {
+	# 		factor = 0
+	# 		ROOT = {
+	# 			has_province_flag = has_latent_good
+	# 		}
+	# 	}
+	}
+}
+
+uniforms_workshop = {
+	cost = 650
+	time = 12
+
+	build_trigger = {
+		NOT = {
+			OR = {
+				has_terrain = dwarven_hold
+				has_terrain = dwarven_hold_surface
+			}
+		}
+		ROOT = {
+			OR = {
+				trade_goods = wool
+				trade_goods = cloth
+				trade_goods = cotton
+			}
+			development = 15
+			NOT = { has_province_flag = has_latent_good }
+		}
+
+		FROM = {
+			OR = {
+				innovativeness = 7
+				NOT = { has_dlc = "Rule Britannia" }
+			}
+		}
+
+
+	}
+
+	on_built = {
+		change_trade_goods = uniforms
+	}
+
+	on_destroyed = {
+		change_trade_goods = unknown
+
+	}
+
+	modifier = {
+		allowed_num_of_buildings = 1
+		local_governing_cost = 1
+	}
+
+	ai_will_do = {
+		factor = 0
+
+		# modifier = {
+		# 	factor = 0
+		# 	ROOT = {
+		# 		has_province_flag = has_latent_good
+		# 	}
+		# }
+	}
+}
+
+mine = {
+	cost = 500
+	time = 1
+
+
+	build_trigger = {
+		AND = {
+			ROOT = {
+				OR = {
+					has_terrain = mountain
+					has_terrain = hills
+					has_terrain = highlands
+					has_terrain = cavern
+					has_terrain = dwarven_road
+				}
+				NOT = { has_province_modifier = mine_fail }
+			}
+		}
+	}
+
+	modifier = {
+
+	}
+
+	allow_in_gold_provinces = no
+
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+
+
+# Ai_def_push_dip = {
+# 	cost = 0
+# 	time = 1
+
+# 	one_per_country = yes
+
+# 	build_trigger = {
+# 		FROM = {
+# 			dip_power = 450
+# 			is_subject = no
+# 			ai = yes
+# 		}
+
+
+# 		OR = {
+# 			AND = {
+# 				FROM = {
+# 					any_owned_province = { trade_goods = copper	}
+
+# 					OR = {
+# 						innovativeness = 7
+# 						NOT = { has_dlc = "Rule Britannia" }
+# 					}
+# 				}
+
+# 				OR = {
+# 					ROOT = { trade_goods = zinc }
+# 					ROOT = { trade_goods = tin }
+# 				}
+
+# 				ROOT = {
+# 					NOT = { base_production = 5 }
+# 				}
+# 			}
+
+# 			AND = {
+# 				ROOT = {
+# 					trade_goods = livestock
+# 					NOT = { development = 10 }
+# 				}
+# 				FROM = {
+# 					OR = {
+# 						innovativeness = 7
+# 						NOT = { has_dlc = "Rule Britannia" }
+# 					}
+# 					adm_tech = 14
+# 				}
+# 			}
+
+# 			AND = {
+# 				ROOT = {
+# 					trade_goods = lumber
+# 					NOT = { development = 10 }
+# 				}
+# 				FROM = {
+# 					OR = {
+# 						innovativeness = 5
+# 						NOT = { has_dlc = "Rule Britannia" }
+# 					}
+# 					adm_tech = 10
+# 				}
+# 			}
+
+# 			AND = {
+# 				ROOT = {
+# 					trade_goods = lead
+# 					NOT = { base_production = 8 }
+# 				}
+# 				FROM = {
+# 					OR = {
+# 						innovativeness = 17
+# 						NOT = { has_dlc = "Rule Britannia" }
+# 					}
+# 					mil_tech = 15
+# 				}
+# 			}
+
+# 			AND = {
+# 				ROOT = {
+# 					trade_goods = iron
+# 					NOT = { base_production = 8 }
+# 				}
+# 				FROM = {
+# 					OR = {
+# 						innovativeness = 15
+# 						NOT = { has_dlc = "Rule Britannia" }
+# 					}
+# 					mil_tech = 18
+# 				}
+# 			}
+# 		}
+
+# 		variable_arithmetic_trigger = {
+# 			export_to_variable = {
+# 				variable_name = Base_tax
+# 				value = base_tax
+# 				who = ROOT
+# 			}
+
+# 			export_to_variable = {
+# 				variable_name = Base_pro
+# 				value = base_production
+# 				who = ROOT
+# 			}
+
+# 			export_to_variable = {
+# 				variable_name = Base_man
+# 				value = base_manpower
+# 				who = ROOT
+# 			}
+
+# 			change_variable = {
+# 				which = Base_tax
+# 				which = Base_man
+# 			}
+
+# 			check_variable = {
+# 				which = Base_tax
+# 				which = Base_pro
+# 			}
+# 		}
+# 	}
+
+# 	potential = {
+# 		ai = yes
+
+# 	}
+
+
+# 	on_built = {
+# 		ROOT = {
+# 			add_base_production = 1
+# 			remove_building = Ai_def_push_dip
+# 			province_event = {
+# 				id = prices_marcin.8
+# 				days = 1
+# 			}
+# 		}
+# 	}
+
+# 	on_destroyed = {
+
+# 	}
+
+# 	modifier = {
+
+# 	}
+
+# 	ai_will_do = {
+# 		factor = 1000
+
+# 	}
+# }
+
+# Ai_def_push_tax = {
+# 	cost = 0
+# 	time = 1
+
+# 	build_trigger = {
+# 		FROM = {
+# 			adm_power = 450
+# 			is_subject = no
+# 			ai = yes
+# 		}
+# 		OR = {
+# 			AND = {
+# 				FROM = {
+# 					any_owned_province = { trade_goods = copper	}
+
+# 					OR = {
+# 						innovativeness = 7
+# 						NOT = { has_dlc = "Rule Britannia" }
+# 					}
+# 				}
+
+# 				OR = {
+# 					ROOT = { trade_goods = zinc }
+# 					ROOT = { trade_goods = tin }
+# 				}
+
+# 				ROOT = {
+# 					NOT = { base_production = 5 }
+# 				}
+# 			}
+
+# 			AND = {
+# 				ROOT = {
+# 					trade_goods = livestock
+# 					NOT = { development = 10 }
+# 				}
+# 				FROM = {
+# 					OR = {
+# 						innovativeness = 7
+# 						NOT = { has_dlc = "Rule Britannia" }
+# 					}
+# 					adm_tech = 14
+# 				}
+# 			}
+
+# 			AND = {
+# 				ROOT = {
+# 					trade_goods = lumber
+# 					NOT = { development = 10 }
+# 				}
+# 				FROM = {
+# 					OR = {
+# 						innovativeness = 5
+# 						NOT = { has_dlc = "Rule Britannia" }
+# 					}
+# 					adm_tech = 10
+# 				}
+# 			}
+
+# 			AND = {
+# 				ROOT = {
+# 					trade_goods = lead
+# 					NOT = { base_production = 8 }
+# 				}
+# 				FROM = {
+# 					OR = {
+# 						innovativeness = 17
+# 						NOT = { has_dlc = "Rule Britannia" }
+# 					}
+# 					mil_tech = 15
+# 				}
+# 			}
+
+# 			AND = {
+# 				ROOT = {
+# 					trade_goods = iron
+# 					NOT = { base_production = 8 }
+# 				}
+# 				FROM = {
+# 					OR = {
+# 						innovativeness = 15
+# 						NOT = { has_dlc = "Rule Britannia" }
+# 					}
+# 					mil_tech = 18
+# 				}
+# 			}
+
+# 		}
+
+# 		variable_arithmetic_trigger = {
+# 			export_to_variable = {
+# 				variable_name = Base_tax
+# 				value = base_tax
+# 				who = ROOT
+# 			}
+
+# 			export_to_variable = {
+# 				variable_name = Base_pro
+# 				value = base_production
+# 				who = ROOT
+# 			}
+
+# 			export_to_variable = {
+# 				variable_name = Base_man
+# 				value = base_manpower
+# 				who = ROOT
+# 			}
+
+# 			change_variable = {
+# 				which = Base_pro
+# 				which = Base_man
+# 			}
+
+# 			check_variable = {
+# 				which = Base_pro
+# 				which = Base_tax
+# 			}
+# 		}
+# 	}
+
+# 	potential = {
+# 		ai = yes
+
+# 	}
+
+
+# 	on_built = {
+# 		ROOT = {
+# 			add_base_tax = 1
+# 			remove_building = Ai_def_push_tax
+# 			province_event = {
+# 				id = prices_marcin.9
+# 				days = 1
+# 			}
+# 		}
+# 	}
+
+# 	on_destroyed = {
+
+# 	}
+
+# 	modifier = {
+
+# 	}
+
+# 	ai_will_do = {
+# 		factor = 1000
+# 	}
+# }
+
+
+

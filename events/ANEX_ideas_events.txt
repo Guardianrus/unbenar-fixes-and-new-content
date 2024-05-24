@@ -1,0 +1,3062 @@
+namespace = ANEX_ideas_events
+
+province_event = {
+	id = ANEX_ideas_events.1
+	title = ANEX_ideas_events.1.t
+	desc = ANEX_setting_event.1.d
+	picture = WESTERNISATION_eventPicture
+
+	hidden = yes
+
+	trigger = {
+		owner = {
+			has_idea = zentra3
+		}
+		any_province_in_state = {
+			is_capital = yes
+		}
+		NOT = {
+			has_province_modifier = zentra_dev_1
+			has_province_modifier = zentra_dev_0
+
+		}
+	}
+
+	immediate = {
+		log = "start ANEX_ideas_events.1 [GetDate] for province [Root.GetName]"
+		if = {
+			limit = {
+				is_capital = yes
+			}
+			add_province_modifier = {
+				name = zentra_dev_0
+				duration = -1
+				hidden = yes
+			}
+		}
+		else = {
+			add_province_modifier = {
+				name = zentra_dev_1
+				duration = -1
+				hidden = yes
+			}
+		}
+		log = "end ANEX_ideas_events.1 [GetDate] for province [Root.GetName]"
+	}
+
+	option = {
+		name = ANEX_setting_event.1.a
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+province_event = {
+	id = ANEX_ideas_events.2
+	title =  ANEX_ideas_events.2.t
+	desc = ANEX_setting_event.1.d
+	picture = OVEREXTENSION_eventPicture
+
+	hidden = yes
+
+	trigger = {
+		OR = {
+			has_province_modifier = zentra_dev_1
+			has_province_modifier = zentra_dev_0
+		}
+		OR = {
+			NOT = {
+				any_province_in_state = {
+					is_capital = yes
+				}
+			}
+			NOT = {
+				owner = {
+					has_idea = zentra3
+				}
+			}
+		}
+	}
+
+	immediate = {
+		log = "start  ANEX_ideas_events.2 [GetDate] for province [Root.GetName]"
+		remove_province_modifier = zentra_dev_0
+		remove_province_modifier = zentra_dev_1
+		log = "end  ANEX_ideas_events.2 [GetDate] for province [Root.GetName]"
+	}
+
+	option = {
+		name = ANEX_setting_event.1.a
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+province_event = {
+	id = ANEX_ideas_events.3
+	title =  ANEX_ideas_events.3.t
+	desc =  ANEX_ideas_events.3.d
+	picture = FEAST_eventPicture
+
+	hidden = yes
+
+	trigger = {
+		owner = {
+			has_idea = development_ideas7
+		}
+		NOT = {
+			development = 15
+			has_province_modifier = development_boom
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 1095
+	}
+
+	immediate = {
+		log = "start ANEX_ideas_events.3 [GetDate] for province [Root.GetName]"
+		add_province_modifier = {
+			name = development_boom
+			duration = 180
+		}
+		log = "end ANEX_ideas_events.3 [GetDate] for province [Root.GetName]"
+	}
+
+	option = {
+		name =  ANEX_ideas_events.3.a
+
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+province_event = {
+	id = ANEX_ideas_events.4
+	title = ANEX_ideas_events.4.t
+	desc = ANEX_setting_event.1.d
+	picture = FEAST_eventPicture
+
+	hidden = yes
+
+	trigger = {
+		owner = {
+			has_idea = health_ideas_2
+		}
+		OR = {
+			has_building = temple
+			has_building = cathedral
+			has_building = great_cathedral_1
+			has_building = great_cathedral_2
+			has_building = great_cathedral_3
+		}		
+	}
+
+	immediate = {
+		log = "start ANEX_ideas_events.4 [GetDate] for province [Root.GetName]"
+		add_province_modifier = {
+			name = devastation_protect
+			duration = -1
+			hidden = yes
+		}
+		log = "end ANEX_ideas_events.4 [GetDate] for province [Root.GetName]"
+	}
+
+	option = {
+		name =  ANEX_setting_event.1.a
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+province_event = {
+	id = ANEX_ideas_events.5
+	title = ANEX_setting_event.1.t
+	desc = ANEX_setting_event.1.d
+	picture = FEAST_eventPicture
+
+	hidden = yes
+
+	trigger = {
+		has_province_modifier = devastation_protect
+		OR = {
+			NOT = {
+				owner = {
+					has_idea = health_ideas_2
+				}
+			}
+			NOT = {
+				OR = {
+					has_building = temple
+					has_building = cathedral
+					has_building = great_cathedral_1
+					has_building = great_cathedral_2
+					has_building = great_cathedral_3		
+				}
+			}
+		}
+	}
+
+	immediate = {
+		log = "start ANEX_ideas_events.5 [GetDate] for province [Root.GetName]"
+		remove_province_modifier = devastation_protect
+		log = "end ANEX_ideas_events.5 [GetDate] for province [Root.GetName]"
+	}
+
+	option = {
+		name =  ANEX_setting_event.1.a
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+country_event = {
+	id = ANEX_ideas_events.6
+	title = ANEX_ideas_events.6.t
+	desc = ANEX_ideas_events.6.d
+	picture = ACCUSATION_eventPicture
+
+	is_triggered_only = yes
+
+
+	option = {
+		log = "start ANEX_ideas_events.6 [GetDate] for country [Root.GetName] option a"
+		name = ANEX_ideas_events.6.a
+
+		add_country_modifier = {
+			name = Compromised_Logistics_modifier
+			duration = 3650
+		}
+
+		ai_chance = {
+			factor = 100
+			modifier = {
+				factor = 0
+				ruler_has_personality = intricate_web_weaver_personality
+			}
+		}
+		log = "end ANEX_ideas_events.6 [GetDate] for country [Root.GetName] option a"
+	}
+
+	option = {
+		name = ANEX_ideas_events.6.b
+		log = "start ANEX_ideas_events.6 [GetDate] for country [Root.GetName] option b"
+
+		highlight = yes
+		trigger = {
+			ruler_has_personality = intricate_web_weaver_personality
+		}
+
+		ai_chance = { factor = 100 }
+
+		define_advisor = {
+			type = spymaster
+			cost_multiplier = 0.50
+			skill = 3
+		}
+		log = "end ANEX_ideas_events.6 [GetDate] for country [Root.GetName] option b"
+	}
+}
+
+
+# country_event = {
+# 	id = ANEX_ideas_events.7
+# 	title = ANEX_setting_event.1.t
+# 	desc = ANEX_setting_event.1.d
+# 	picture = WESTERNISATION_eventPicture
+
+# 	hidden = yes
+
+# 	trigger = {
+# 		had_country_flag = {
+# 			flag = Compromised_Logistics_Flag
+# 			days = 3650
+# 		}
+# 	}
+
+# 	immediate = {
+# 		hidden_effect = {
+# 			clr_country_flag = Compromised_Logistics_Flag
+# 		}
+# 	}
+
+# 	option = {
+# 		name = ANEX_setting_event.1.a
+# 		ai_chance = {
+# 			factor = 1
+# 		}
+# 	}
+# }
+
+province_event = {
+	id = ANEX_ideas_events.8
+	title = ANEX_ideas_events.8.t
+	desc = ANEX_setting_event.1.d
+	picture = WESTERNISATION_eventPicture
+
+	hidden = yes
+
+	trigger = {
+		any_province_in_state = {
+			is_capital = yes
+		}
+		owner = {
+			has_idea = zentra7
+		}
+		NOT = {
+			has_province_modifier = capital_tax_0
+			has_province_modifier = capital_tax_1
+		}
+	}
+
+	immediate = {
+		log = "end ANEX_ideas_events.8 [GetDate] for province [Root.GetName]"
+		if = {
+			limit = {
+				is_capital = yes
+			}
+			add_province_modifier = {
+				name = capital_tax_0
+				duration = -1
+				hidden = yes
+			}
+		}
+		else = {
+			add_province_modifier = {
+				name = capital_tax_1
+				duration = -1
+				hidden = yes
+			}
+		}
+		log = "end ANEX_ideas_events.8 [GetDate] for province [Root.GetName]"
+	}
+
+	option = {
+		name = ANEX_setting_event.1.a
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+province_event = {
+	id = ANEX_ideas_events.9
+	title = ANEX_ideas_events.9.t
+	desc = ANEX_setting_event.1.d
+	picture = WESTERNISATION_eventPicture
+
+	hidden = yes
+
+	trigger = {
+		OR = {
+			has_province_modifier = capital_tax_0
+			has_province_modifier = capital_tax_1
+		}
+		OR = {
+			NOT = {
+				any_province_in_state = {
+					is_capital = yes
+				}
+			}
+			NOT = {
+				owner = {
+					has_idea = zentra7
+				}
+			}
+		}
+	}
+
+	immediate = {
+		log = "start ANEX_ideas_events.9 [GetDate] for province [Root.GetName]"
+		remove_province_modifier = capital_production_0
+		remove_province_modifier = capital_production_1
+	}
+
+	after = {
+		log = "end ANEX_ideas_events.9 [GetDate] for province [Root.GetName]"
+	}
+
+	option = {
+		name = ANEX_setting_event.1.a
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+province_event = {
+	id = ANEX_ideas_events.10
+	title = ANEX_ideas_events.10.t
+	desc = ANEX_setting_event.1.d
+	picture = WESTERNISATION_eventPicture
+
+	hidden = yes
+
+	trigger = {
+		any_province_in_state = {
+			is_capital = yes
+		}
+		owner = {
+			has_idea = zentra1
+		}
+		NOT = {
+			has_province_modifier = capital_building_0
+			has_province_modifier = capital_building_1
+		}
+	}
+
+	immediate = {
+		log = "start ANEX_ideas_events.10 [GetDate] for province [Root.GetName]"
+
+		if = {
+			limit = {
+				is_capital = yes
+			}
+			add_province_modifier = {
+				name = capital_building_0
+				duration = -1
+				hidden = yes
+			}
+		}
+		else = {
+			add_province_modifier = {
+				name = capital_building_1
+				duration = -1
+				hidden = yes
+			}
+		}
+	}
+
+	after = {
+		log = "end ANEX_ideas_events.10 [GetDate] for province [Root.GetName]"
+	}
+
+	option = {
+		name = ANEX_setting_event.1.a
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+province_event = {
+	id = ANEX_ideas_events.11
+	title = ANEX_ideas_events.11.t
+	desc = ANEX_setting_event.1.d
+	picture = WESTERNISATION_eventPicture
+
+	hidden = yes
+
+	trigger = {
+		OR = {
+			has_province_modifier = capital_building_0
+			has_province_modifier = capital_building_1
+		}
+		OR = {
+			NOT = {
+				any_province_in_state = {
+					is_capital = yes
+				}
+			}
+			NOT = {
+				owner = {
+					has_idea = zentra1
+				}
+			}
+		}
+	}
+
+	immediate = {
+		log = "start ANEX_ideas_events.11 [GetDate] for province [Root.GetName]"
+		remove_province_modifier = capital_building_1
+		remove_province_modifier = capital_building_0
+	}
+
+	after = {
+		log = "end ANEX_ideas_events.11 [GetDate] for province [Root.GetName]"
+	}
+
+	option = {
+		name = ANEX_setting_event.1.a
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+province_event = {
+	id = ANEX_ideas_events.12
+	title = ANEX_ideas_events.12.t
+	desc = ANEX_setting_event.1.d
+	picture = WESTERNISATION_eventPicture
+
+	hidden = yes
+
+	trigger = {
+		any_province_in_state = {
+			is_capital = yes
+		}
+		owner = {
+			has_idea = zentra2
+		}
+		NOT = {
+			has_province_modifier = capital_production_0
+			has_province_modifier = capital_production_1
+		}
+	}
+
+	immediate = {
+		log = "start ANEX_ideas_events.12 [GetDate] for province [Root.GetName]"
+
+		if = {
+			limit = {
+				is_capital = yes
+			}
+			add_province_modifier = {
+				name = capital_production_0
+				duration = -1
+				hidden = yes
+			}
+		}
+		else = {
+			add_province_modifier = {
+				name = capital_production_1
+				duration = -1
+				hidden = yes
+			}
+		}
+	}
+
+	after = {
+		log = "end ANEX_ideas_events.12 [GetDate] for province [Root.GetName]"
+	}
+
+	option = {
+		name = ANEX_setting_event.1.a
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+province_event = {
+	id = ANEX_ideas_events.13
+	title = ANEX_ideas_events.13.t
+	desc = ANEX_setting_event.1.d
+	picture = WESTERNISATION_eventPicture
+
+	hidden = yes
+
+	trigger = {
+		OR = {
+			has_province_modifier = capital_production_0
+			has_province_modifier = capital_production_1
+		}
+		OR = {
+			NOT = {
+				any_province_in_state = {
+					is_capital = yes
+				}
+			}
+			NOT = {
+				owner = {
+					has_idea = zentra2
+				}
+			}
+		}
+	}
+
+	immediate = {
+		log = "start ANEX_ideas_events.13 [GetDate] for province [Root.GetName]"
+		remove_province_modifier = capital_production_0
+		remove_province_modifier = capital_production_1
+	}
+
+	after = {
+		log = "end ANEX_ideas_events.13 [GetDate] for province [Root.GetName]"
+	}
+
+	option = {
+		name = ANEX_setting_event.1.a
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+
+province_event = {
+	id = ANEX_ideas_events.14
+	title = ANEX_ideas_events.14.t
+	desc = ANEX_setting_event.1.d
+	picture = WESTERNISATION_eventPicture
+
+	hidden = yes
+
+	trigger = {
+		any_province_in_state = {
+			is_capital = yes
+		}
+		owner = {
+			has_idea = zentra4
+		}
+		NOT = {
+			has_province_modifier = capital_trade_0
+			has_province_modifier = capital_trade_1
+		}
+	}
+
+	immediate = {
+		log = "start ANEX_ideas_events.14 [GetDate] for province [Root.GetName]"
+		if = {
+			limit = {
+				is_capital = yes
+			}
+			add_province_modifier = {
+				name = capital_trade_0
+				duration = -1
+				hidden = yes
+			}
+		}
+		else = {
+			add_province_modifier = {
+				name = capital_trade_1
+				duration = -1
+				hidden = yes
+			}
+		}
+	}
+
+	after = {
+		log = "end ANEX_ideas_events.14 [GetDate] for province [Root.GetName]"
+	}
+
+	option = {
+		name = ANEX_setting_event.1.a
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+province_event = {
+	id = ANEX_ideas_events.15
+	title = ANEX_ideas_events.15.t
+	desc = ANEX_setting_event.1.d
+	picture = WESTERNISATION_eventPicture
+
+	hidden = yes
+
+	trigger = {
+		OR = {
+			has_province_modifier = capital_trade_0
+			has_province_modifier = capital_trade_1
+		}
+		OR = {
+			NOT = {
+				any_province_in_state = {
+					is_capital = yes
+				}
+			}
+			NOT = {
+				owner = {
+					has_idea = zentra4
+				}
+			}
+		}
+	}
+
+	immediate = {
+		log = "start ANEX_ideas_events.15 [GetDate] for province [Root.GetName]"
+
+		remove_province_modifier = capital_trade_0
+		remove_province_modifier = capital_trade_1
+	}
+
+	after = {
+		log = "end ANEX_ideas_events.15 [GetDate] for province [Root.GetName]"
+	}
+
+	option = {
+		name = ANEX_setting_event.1.a
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+
+province_event = {
+	id = ANEX_ideas_events.16
+	title = ANEX_ideas_events.16.t
+	desc = ANEX_setting_event.1.d
+	picture = WESTERNISATION_eventPicture
+
+	hidden = yes
+
+	trigger = {
+		any_province_in_state = {
+			is_capital = yes
+		}
+		owner = {
+			has_idea = zentra5
+		}
+		OR = {
+			NOT = {
+				has_province_modifier = capital_manpower_0
+				has_province_modifier = capital_manpower_1
+			}
+			AND = {
+				NOT = {
+					has_province_modifier = capital_sailors_1
+					has_province_modifier = capital_sailors_0
+				}
+				has_port = yes
+			}
+		}
+	}
+
+	immediate = {
+		log = "start ANEX_ideas_events.16 [GetDate] for province [Root.GetName]"
+
+		if = {
+			limit = {
+				is_capital = yes
+			}
+			add_province_modifier = {
+				name = capital_manpower_0
+				duration = -1
+				hidden = yes
+			}
+		}
+		else_if = {
+			limit = {
+				is_capital = no
+			}
+			add_province_modifier = {
+				name = capital_manpower_1
+				duration = -1
+				hidden = yes
+			}
+		}
+		if = {
+			limit = {
+				has_port = yes
+				is_capital = yes
+			}
+			add_province_modifier = {
+				name = capital_sailors_0
+				duration = -1
+				hidden = yes
+			}
+		}
+		else_if ={
+			limit = {
+				has_port = yes
+			}
+			add_province_modifier = {
+				name = capital_sailors_1
+				duration = -1
+				hidden = yes
+			}
+		}
+	}
+
+	after = {
+		log = "end ANEX_ideas_events.16 [GetDate] for province [Root.GetName]"
+	}
+
+	option = {
+		name = ANEX_setting_event.1.a
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+province_event = {
+	id = ANEX_ideas_events.17
+	title = ANEX_ideas_events.17.t
+	desc = ANEX_setting_event.1.d
+	picture = WESTERNISATION_eventPicture
+
+	hidden = yes
+
+	trigger = {
+		OR = {
+			NOT = {
+				any_province_in_state = {
+					is_capital = yes
+				}
+			}
+			NOT = {
+				owner = {
+					has_idea = zentra5
+				}
+			}
+		}
+		OR = {
+			has_province_modifier = capital_manpower_0
+			has_province_modifier = capital_manpower_1
+			has_province_modifier = capital_sailors_1
+			has_province_modifier = capital_sailors_0
+		}
+	}
+
+	immediate = {
+		log = "end ANEX_ideas_events.17 [GetDate] for province [Root.GetName]"
+
+		remove_province_modifier = capital_manpower_0
+		remove_province_modifier = capital_manpower_1
+		remove_province_modifier = capital_sailors_1
+		remove_province_modifier = capital_sailors_0
+	}
+
+	after = {
+		log = "end ANEX_ideas_events.17 [GetDate] for province [Root.GetName]"
+	}
+
+	option = {
+		name = ANEX_setting_event.1.a
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+
+province_event = {
+	id = ANEX_ideas_events.18
+	title = ANEX_ideas_events.18.t
+	desc = ANEX_setting_event.1.d
+	picture = WESTERNISATION_eventPicture
+
+	hidden = yes
+
+	trigger = {
+		any_province_in_state = {
+			is_capital = yes
+		}
+		owner = {
+			has_idea = zentra6
+		}
+		OR = {
+			NOT = {
+				has_province_modifier = capital_forcelimit_0
+				has_province_modifier = capital_forcelimit_1
+			}
+			AND = {
+				NOT = {
+					has_province_modifier = capital_navy_forcelimit_0
+					has_province_modifier = capital_navy_forcelimit_1
+				}
+				has_port = yes
+			}
+		}
+	}
+
+	immediate = {
+		log = "start ANEX_ideas_events.18 [GetDate] for province [Root.GetName]"
+
+		if = {
+			limit = {
+				is_capital = yes
+			}
+			add_province_modifier = {
+				name = capital_forcelimit_0
+				duration = -1
+				hidden = yes
+			}
+		}
+		else_if = {
+			limit = {
+				is_capital = no
+			}
+			add_province_modifier = {
+				name = capital_forcelimit_1
+				duration = -1
+				hidden = yes
+			}
+		}
+		if = {
+			limit = {
+				has_port = yes
+				is_capital = yes
+			}
+			add_province_modifier = {
+				name = capital_navy_forcelimit_0
+				duration = -1
+				hidden = yes
+			}
+		}
+		else_if ={
+			limit = {
+				has_port = yes
+			}
+			add_province_modifier = {
+				name = capital_navy_forcelimit_1
+				duration = -1
+				hidden = yes
+			}
+		}
+	}
+
+	after = {
+		log = "end ANEX_ideas_events.18 [GetDate] for province [Root.GetName]"
+	}
+
+	option = {
+		name = ANEX_setting_event.1.a
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+province_event = {
+	id = ANEX_ideas_events.19
+	title = ANEX_ideas_events.19.t
+	desc = ANEX_setting_event.1.d
+	picture = WESTERNISATION_eventPicture
+
+	hidden = yes
+
+	trigger = {
+		OR = {
+			NOT = {
+				any_province_in_state = {
+					is_capital = yes
+				}
+			}
+			NOT = {
+				owner = {
+					has_idea = zentra6
+				}
+			}
+		}
+		OR = {
+			has_province_modifier = capital_forcelimit_1
+			has_province_modifier = capital_forcelimit_0
+			has_province_modifier = capital_navy_forcelimit_1
+			has_province_modifier = capital_navy_forcelimit_0
+		}
+	}
+
+	immediate = {
+		log = "start ANEX_ideas_events.19 [GetDate] for province [Root.GetName]"
+
+		remove_province_modifier = capital_forcelimit_1
+		remove_province_modifier = capital_forcelimit_0
+		remove_province_modifier = capital_navy_forcelimit_0
+		remove_province_modifier = capital_navy_forcelimit_1
+	}
+
+	after = {
+		log = "end ANEX_ideas_events.19 [GetDate] for province [Root.GetName]"
+	}
+
+	option = {
+		name = ANEX_setting_event.1.a
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+
+province_event = {
+	id = ANEX_ideas_events.20
+	title = ANEX_ideas_events.20.t
+	desc = ANEX_setting_event.1.d
+	picture = WESTERNISATION_eventPicture
+
+	hidden = yes
+
+	trigger = {
+		any_province_in_state = {
+			is_capital = yes
+		}
+		owner = {
+			full_idea_group = zentra0
+		}
+		NOT = {
+			has_province_modifier = capital_defence_0
+			has_province_modifier = capital_defence_1
+		}
+	}
+
+	immediate = {
+		log = "start ANEX_ideas_events.20 [GetDate] for province [Root.GetName]"
+
+		if = {
+			limit = {
+				is_capital = yes
+			}
+			add_province_modifier = {
+				name = capital_defence_0
+				duration = -1
+				hidden = yes
+			}
+		}
+		else = {
+			add_province_modifier = {
+				name = capital_defence_1
+				duration = -1
+				hidden = yes
+			}
+		}
+	}
+
+	after = {
+		log = "end ANEX_ideas_events.20 [GetDate] for province [Root.GetName]"
+	}
+
+	option = {
+		name = ANEX_setting_event.1.a
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+province_event = {
+	id = ANEX_ideas_events.21
+	title = ANEX_ideas_events.21.t
+	desc = ANEX_setting_event.1.d
+	picture = WESTERNISATION_eventPicture
+
+	hidden = yes
+
+	trigger = {
+		OR = {
+			has_province_modifier = capital_defence_0
+			has_province_modifier = capital_defence_1
+		}
+		OR = {
+			NOT = {
+				any_province_in_state = {
+					is_capital = yes
+				}
+			}
+			NOT = {
+				owner = {
+					full_idea_group = zentra0
+				}
+			}
+		}
+	}
+
+	immediate = {
+		log = "start ANEX_ideas_events.21 [GetDate] for province [Root.GetName]"
+
+		remove_province_modifier = capital_defence_0
+		remove_province_modifier = capital_defence_1
+	}
+
+	after = {
+		log = "end ANEX_ideas_events.21 [GetDate] for province [Root.GetName]"
+	}
+
+	option = {
+		name = ANEX_setting_event.1.a
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+country_event = {
+	id = ANEX_ideas_events.22
+	title = ANEX_ideas_events.22.t
+	desc = ANEX_setting_event.1.d
+	picture = WESTERNISATION_eventPicture
+
+	hidden = yes
+
+	trigger = {
+		has_idea_group = zentra0
+		num_of_owned_provinces_with = {
+			owned_by = ROOT
+			value = 50
+		}
+		NOT = {
+			has_country_flag = full_centralization
+		}
+	}
+
+	immediate = {
+		log = "start ANEX_ideas_events.22 [GetDate] for country [Root.GetName]"
+
+		remove_country_modifier = expensive_management_1
+		remove_country_modifier = expensive_management_2
+		remove_country_modifier = expensive_management_3
+		remove_country_modifier = expensive_management_4
+		remove_country_modifier = expensive_management_5
+		remove_country_modifier = expensive_management_6
+		remove_country_modifier = expensive_management_7
+		remove_country_modifier = expensive_management_8
+		remove_country_modifier = expensive_management_9
+		remove_country_modifier = expensive_management_10
+		remove_country_modifier = expensive_management_11
+		remove_country_modifier = expensive_management_12
+		remove_country_modifier = expensive_management_13
+		remove_country_modifier = expensive_management_14
+		remove_country_modifier = expensive_management_15
+		remove_country_modifier = expensive_management_16
+		remove_country_modifier = expensive_management_17
+		remove_country_modifier = expensive_management_18
+		remove_country_modifier = expensive_management_19
+		remove_country_modifier = expensive_management_20
+		if = {
+			limit = {
+				num_of_owned_provinces_with = {
+					owned_by = ROOT
+					value = 50
+				}
+				NOT = {
+					num_of_owned_provinces_with = {
+						owned_by = ROOT
+						value = 60
+					}
+				}
+			}
+			add_country_modifier = {
+				name = expensive_management_1
+				duration = -1
+			}
+		}
+		else_if = {
+			limit = {
+				num_of_owned_provinces_with = {
+					owned_by = ROOT
+					value = 60
+				}
+				NOT = {
+					num_of_owned_provinces_with = {
+						owned_by = ROOT
+						value = 70
+					}
+				}
+			}
+			add_country_modifier = {
+				name = expensive_management_2
+				duration = -1
+			}
+		}
+		else_if = {
+			limit = {
+				num_of_owned_provinces_with = {
+					owned_by = ROOT
+					value = 70
+				}
+				NOT = {
+					num_of_owned_provinces_with = {
+						owned_by = ROOT
+						value = 80
+					}
+				}
+			}
+			add_country_modifier = {
+				name = expensive_management_3
+				duration = -1
+			}
+		}
+		else_if = {
+			limit = {
+				num_of_owned_provinces_with = {
+					owned_by = ROOT
+					value = 80
+				}
+				NOT = {
+					num_of_owned_provinces_with = {
+						owned_by = ROOT
+						value = 90
+					}
+				}
+			}
+			add_country_modifier = {
+				name = expensive_management_4
+				duration = -1
+			}
+		}
+		else_if = {
+			limit = {
+				num_of_owned_provinces_with = {
+					owned_by = ROOT
+					value = 90
+				}
+				NOT = {
+					num_of_owned_provinces_with = {
+						owned_by = ROOT
+						value = 100
+					}
+				}
+			}
+			add_country_modifier = {
+				name = expensive_management_5
+				duration = -1
+			}
+		}
+		else_if = {
+			limit = {
+				num_of_owned_provinces_with = {
+					owned_by = ROOT
+					value = 100
+				}
+				NOT = {
+					num_of_owned_provinces_with = {
+						owned_by = ROOT
+						value = 110
+					}
+				}
+			}
+			add_country_modifier = {
+				name = expensive_management_6
+				duration = -1
+			}
+		}
+		else_if = {
+			limit = {
+				num_of_owned_provinces_with = {
+					owned_by = ROOT
+					value = 110
+				}
+				NOT = {
+					num_of_owned_provinces_with = {
+						owned_by = ROOT
+						value = 120
+					}
+				}
+			}
+			add_country_modifier = {
+				name = expensive_management_7
+				duration = -1
+			}
+		}
+		else_if = {
+			limit = {
+				num_of_owned_provinces_with = {
+					owned_by = ROOT
+					value = 120
+				}
+				NOT = {
+					num_of_owned_provinces_with = {
+						owned_by = ROOT
+						value = 130
+					}
+				}
+			}
+			add_country_modifier = {
+				name = expensive_management_8
+				duration = -1
+			}
+		}
+		else_if = {
+			limit = {
+				num_of_owned_provinces_with = {
+					owned_by = ROOT
+					value = 130
+				}
+				NOT = {
+					num_of_owned_provinces_with = {
+						owned_by = ROOT
+						value = 140
+					}
+				}
+			}
+			add_country_modifier = {
+				name = expensive_management_9
+				duration = -1
+			}
+		}
+		else_if = {
+			limit = {
+				num_of_owned_provinces_with = {
+					owned_by = ROOT
+					value = 140
+				}
+				NOT = {
+					num_of_owned_provinces_with = {
+						owned_by = ROOT
+						value = 150
+					}
+				}
+			}
+			add_country_modifier = {
+				name = expensive_management_10
+				duration = -1
+			}
+		}
+		else_if = {
+			limit = {
+				num_of_owned_provinces_with = {
+					owned_by = ROOT
+					value = 150
+				}
+				NOT = {
+					num_of_owned_provinces_with = {
+						owned_by = ROOT
+						value = 160
+					}
+				}
+			}
+			add_country_modifier = {
+				name = expensive_management_11
+				duration = -1
+			}
+		}
+		else_if = {
+			limit = {
+				num_of_owned_provinces_with = {
+					owned_by = ROOT
+					value = 160
+				}
+				NOT = {
+					num_of_owned_provinces_with = {
+						owned_by = ROOT
+						value = 170
+					}
+				}
+			}
+			add_country_modifier = {
+				name = expensive_management_12
+				duration = -1
+			}
+		}
+		else_if = {
+			limit = {
+				num_of_owned_provinces_with = {
+					owned_by = ROOT
+					value = 170
+				}
+				NOT = {
+					num_of_owned_provinces_with = {
+						owned_by = ROOT
+						value = 180
+					}
+				}
+			}
+			add_country_modifier = {
+				name = expensive_management_13
+				duration = -1
+			}
+		}
+		else_if = {
+			limit = {
+				num_of_owned_provinces_with = {
+					owned_by = ROOT
+					value = 180
+				}
+				NOT = {
+					num_of_owned_provinces_with = {
+						owned_by = ROOT
+						value = 190
+					}
+				}
+			}
+			add_country_modifier = {
+				name = expensive_management_14
+				duration = -1
+			}
+		}
+		else_if = {
+			limit = {
+				num_of_owned_provinces_with = {
+					owned_by = ROOT
+					value = 190
+				}
+				NOT = {
+					num_of_owned_provinces_with = {
+						owned_by = ROOT
+						value = 200
+					}
+				}
+			}
+			add_country_modifier = {
+				name = expensive_management_15
+				duration = -1
+			}
+		}
+		else_if = {
+			limit = {
+				num_of_owned_provinces_with = {
+					owned_by = ROOT
+					value = 200
+				}
+				NOT = {
+					num_of_owned_provinces_with = {
+						owned_by = ROOT
+						value = 210
+					}
+				}
+			}
+			add_country_modifier = {
+				name = expensive_management_16
+				duration = -1
+			}
+		}
+		else_if = {
+			limit = {
+				num_of_owned_provinces_with = {
+					owned_by = ROOT
+					value = 210
+				}
+				NOT = {
+					num_of_owned_provinces_with = {
+						owned_by = ROOT
+						value = 220
+					}
+				}
+			}
+			add_country_modifier = {
+				name = expensive_management_17
+				duration = -1
+			}
+		}
+		else_if = {
+			limit = {
+				num_of_owned_provinces_with = {
+					owned_by = ROOT
+					value = 220
+				}
+				NOT = {
+					num_of_owned_provinces_with = {
+						owned_by = ROOT
+						value = 230
+					}
+				}
+			}
+			add_country_modifier = {
+				name = expensive_management_18
+				duration = -1
+			}
+		}
+		else_if = {
+			limit = {
+				num_of_owned_provinces_with = {
+					owned_by = ROOT
+					value = 230
+				}
+				NOT = {
+					num_of_owned_provinces_with = {
+						owned_by = ROOT
+						value = 240
+					}
+				}
+			}
+			add_country_modifier = {
+				name = expensive_management_19
+				duration = -1
+			}
+		}
+		else = {
+			add_country_modifier = {
+				name = expensive_management_20
+				duration = -1
+			}
+			set_country_flag = full_centralization
+		}
+	}
+
+	after = {
+		log = "end ANEX_ideas_events.22 [GetDate] for country [Root.GetName]"
+	}
+	option = {
+		name = ANEX_setting_event.1.a
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+
+country_event = {
+	id = ANEX_ideas_events.23
+	title = ANEX_ideas_events.23.t
+	desc = ANEX_setting_event.1.d
+	picture = WESTERNISATION_eventPicture
+
+	hidden = yes
+
+	trigger = {
+		OR = {
+			has_country_modifier = expensive_management_1
+			has_country_modifier = expensive_management_2
+			has_country_modifier = expensive_management_3
+			has_country_modifier = expensive_management_4
+			has_country_modifier = expensive_management_5
+			has_country_modifier = expensive_management_6
+			has_country_modifier = expensive_management_7
+			has_country_modifier = expensive_management_8
+			has_country_modifier = expensive_management_9
+			has_country_modifier = expensive_management_10
+			has_country_modifier = expensive_management_11
+			has_country_modifier = expensive_management_12
+			has_country_modifier = expensive_management_13
+			has_country_modifier = expensive_management_14
+			has_country_modifier = expensive_management_15
+			has_country_modifier = expensive_management_16
+			has_country_modifier = expensive_management_17
+			has_country_modifier = expensive_management_18
+			has_country_modifier = expensive_management_19
+			has_country_modifier = expensive_management_20
+		}
+		NOT = {
+			has_idea_group = zentra0
+		}
+	}
+
+	immediate = {
+		log = "start ANEX_ideas_events.23 [GetDate] for country [Root.GetName]"
+
+		remove_country_modifier = expensive_management_1
+		remove_country_modifier = expensive_management_2
+		remove_country_modifier = expensive_management_3
+		remove_country_modifier = expensive_management_4
+		remove_country_modifier = expensive_management_5
+		remove_country_modifier = expensive_management_6
+		remove_country_modifier = expensive_management_7
+		remove_country_modifier = expensive_management_8
+		remove_country_modifier = expensive_management_9
+		remove_country_modifier = expensive_management_10
+		remove_country_modifier = expensive_management_11
+		remove_country_modifier = expensive_management_12
+		remove_country_modifier = expensive_management_13
+		remove_country_modifier = expensive_management_14
+		remove_country_modifier = expensive_management_15
+		remove_country_modifier = expensive_management_16
+		remove_country_modifier = expensive_management_17
+		remove_country_modifier = expensive_management_18
+		remove_country_modifier = expensive_management_19
+		remove_country_modifier = expensive_management_20
+		clr_country_flag = full_centralization
+	}
+
+	after = {
+		log = "end ANEX_ideas_events.23 [GetDate] for country [Root.GetName]"
+	}
+
+	option = {
+		name = ANEX_setting_event.1.a
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+
+province_event = {
+	id = ANEX_ideas_events.24
+	title = ANEX_ideas_events.24.t
+	desc = ANEX_setting_event.1.d
+	picture = WESTERNISATION_eventPicture
+
+	hidden = yes
+
+	trigger = {
+		owner = {
+			has_idea = dezentra7
+		}
+		OR = {
+			has_building = courthouse
+			has_building = town_hall
+			has_building = government_lvl_3
+			has_building = government_lvl_4
+		}
+		NOT = {
+			has_province_modifier = decentralized_management_1
+			has_province_modifier = decentralized_management_2
+			has_province_modifier = decentralized_management_3
+			has_province_modifier = decentralized_management_4
+		}
+	}
+
+	immediate = {
+		log = "start ANEX_ideas_events.24 [GetDate] for province [Root.GetName]"
+
+		if = {
+			limit = {
+				has_building = courthouse
+			}
+			add_province_modifier = {
+				name = decentralized_management_1
+				duration = -1
+			}
+		}
+		else_if = {
+			limit = {
+				has_building = town_hall
+			}
+			add_province_modifier = {
+				name = decentralized_management_2
+				duration = -1
+			}
+		}
+		else_if = {
+			limit = {
+				has_building = government_lvl_3
+			}
+			add_province_modifier = {
+				name = decentralized_management_3
+				duration = -1
+			}
+		}
+		else_if = {
+			limit = {
+				has_building = government_lvl_4
+			}
+			add_province_modifier = {
+				name = decentralized_management_4
+				duration = -1
+			}
+		}
+
+	}
+
+	after = {
+		log = "end ANEX_ideas_events.24 [GetDate] for province [Root.GetName]"
+	}
+
+	option = {
+		name = ANEX_setting_event.1.a
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+
+province_event = {
+	id = ANEX_ideas_events.25
+	title = ANEX_ideas_events.25.t
+	desc = ANEX_setting_event.1.d
+	picture = WESTERNISATION_eventPicture
+
+	hidden = yes
+
+	trigger = {
+		owner = {
+			has_idea = dezentra3
+		}
+		OR = {
+			province_has_center_of_trade_of_level = 1
+			province_has_center_of_trade_of_level = 2
+			province_has_center_of_trade_of_level = 3
+		}
+		NOT = {
+			has_province_modifier = decentralized_trade_center
+		}
+	}
+
+	immediate = {
+		log = "start ANEX_ideas_events.25 [GetDate] for province [Root.GetName]"
+
+		add_province_modifier = {
+			name = decentralized_trade_center
+			duration = -1
+		}
+	}
+
+	after = {
+		log = "end ANEX_ideas_events.9 [GetDate] for province [Root.GetName]"
+	}
+
+	option = {
+		name = ANEX_setting_event.1.a
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+province_event = {
+	id = ANEX_ideas_events.26
+	title = ANEX_ideas_events.26.t
+	desc = ANEX_setting_event.1.d
+	picture = WESTERNISATION_eventPicture
+
+	hidden = yes
+
+	trigger = {
+		NOT ={
+			owner = {
+				has_idea = dezentra3
+			}
+		}
+		has_province_modifier = decentralized_trade_center
+	}
+
+	immediate = {
+		log = "start ANEX_ideas_events.26 [GetDate] for province [Root.GetName]"
+
+		remove_province_modifier = decentralized_trade_center
+	}
+
+	after = {
+		log = "end ANEX_ideas_events.26 [GetDate] for province [Root.GetName]"
+	}
+
+
+	option = {
+		name = ANEX_setting_event.1.a
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+# province_event = {
+# 	id = ANEX_ideas_events.27
+# 	title = ANEX_ideas_events.27.t
+# 	desc = ANEX_setting_event.1.d
+# 	picture = WESTERNISATION_eventPicture
+
+# 	hidden = yes
+
+# 	trigger = {
+# 		is_city = yes
+# 		has_port = yes
+# 		owner = {
+# 			has_idea = galle1
+# 		}
+# 	}
+
+# 	immediate = {
+# 		log = "start ANEX_ideas_events.27 [GetDate] for province [Root.GetName]"
+
+# 		remove_province_modifier = galley_1
+# 		remove_province_modifier = galley_2
+# 		remove_province_modifier = galley_3
+# 		if = {
+# 			limit = {
+# 				has_building = dock
+# 			}
+# 			add_province_modifier = {
+# 				name = galley_1
+# 				duration = -1
+# 			}
+# 		}
+# 		else_if = {
+# 			limit = {
+# 				has_building = drydock
+# 			 }
+# 			 add_province_modifier = {
+# 				 name = galley_2
+# 				 duration = -1
+# 			 }
+# 		}
+# 		else_if = {
+# 			limit = {
+# 				has_building = navymanpower_lvl_3
+# 			}
+# 			add_province_modifier = {
+# 				name = galley_3
+# 				duration = -1
+# 			}
+# 		}
+# 		remove_province_modifier = galley1
+# 		remove_province_modifier = galley2
+# 		remove_province_modifier = galley3
+# 		remove_province_modifier = galley4
+# 		remove_province_modifier = galley5
+# 		remove_province_modifier = galley6
+# 		remove_province_modifier = galley7
+# 		remove_province_modifier = galley8
+# 		remove_province_modifier = galley9
+# 		remove_province_modifier = galley10
+# 		remove_province_modifier = galley11
+# 		remove_province_modifier = galley12
+# 		remove_province_modifier = galley13
+# 		remove_province_modifier = galley14
+# 		remove_province_modifier = galley15
+# 		if = {
+# 			limit = {
+# 				has_building = dock
+# 				development = 10
+# 				NOT ={
+# 					development = 20
+# 				}
+# 			}
+# 			add_province_modifier = {
+# 				name = galley1
+# 				duration = -1
+# 			}
+# 		}
+# 		else_if = {
+# 			limit = {
+# 				has_building = dock
+# 				development = 20
+# 				NOT ={
+# 					development = 30
+# 				}
+# 			}
+# 			add_province_modifier = {
+# 				name = galley2
+# 				duration = -1
+# 			}
+# 		}
+# 		else_if = {
+# 			limit = {
+# 				has_building = dock
+# 				development = 30
+# 				NOT ={
+# 					development = 40
+# 				}
+# 			}
+# 			add_province_modifier = {
+# 				name = galley3
+# 				duration = -1
+# 			}
+# 		}
+# 		else_if = {
+# 			limit = {
+# 				has_building = dock
+# 				development = 40
+# 				NOT ={
+# 					development = 50
+# 				}
+# 			}
+# 			add_province_modifier = {
+# 				name = galley4
+# 				duration = -1
+# 			}
+# 		}
+# 		else_if = {
+# 			limit = {
+# 				has_building = dock
+# 				development = 50
+# 				NOT ={
+# 					development = 60
+# 				}
+# 			}
+# 			add_province_modifier = {
+# 				name = galley5
+# 				duration = -1
+# 			}
+# 		}
+# 		else_if = {
+# 			limit = {
+# 				has_building = dock
+# 				development = 70
+# 				NOT ={
+# 					development = 80
+# 				}
+# 			}
+# 			add_province_modifier = {
+# 				name = galley6
+# 				duration = -1
+# 			}
+# 		}
+# 		else_if = {
+# 			limit = {
+# 				has_building = dock
+# 				development = 80
+# 				NOT ={
+# 					development = 90
+# 				}
+# 			}
+# 			add_province_modifier = {
+# 				name = galley7
+# 				duration = -1
+# 			}
+# 		}
+# 		else_if = {
+# 			limit = {
+# 				has_building = dock
+# 				development = 90
+# 				NOT ={
+# 					development = 100
+# 				}
+# 			}
+# 			add_province_modifier = {
+# 				name = galley8
+# 				duration = -1
+# 			}
+# 		}
+# 		else_if = {
+# 			limit = {
+# 				has_building = dock
+# 				development = 100
+# 				NOT ={
+# 					development = 110
+# 				}
+# 			}
+# 			add_province_modifier = {
+# 				name = galley9
+# 				duration = -1
+# 			}
+# 		}
+# 		else_if = {
+# 			limit = {
+# 				has_building = dock
+# 				development = 110
+# 				NOT ={
+# 					development = 120
+# 				}
+# 			}
+# 			add_province_modifier = {
+# 				name = galley10
+# 				duration = -1
+# 			}
+# 		}
+# 		else_if = {
+# 			limit = {
+# 				has_building = dock
+# 				development = 120
+# 				NOT ={
+# 					development = 130
+# 				}
+# 			}
+# 			add_province_modifier = {
+# 				name = galley11
+# 				duration = -1
+# 			}
+# 		}
+# 		else_if = {
+# 			limit = {
+# 				has_building = dock
+# 				development = 130
+# 				NOT ={
+# 					development = 140
+# 				}
+# 			}
+# 			add_province_modifier = {
+# 				name = galley12
+# 				duration = -1
+# 			}
+# 		}
+# 		else_if = {
+# 			limit = {
+# 				has_building = dock
+# 				development = 140
+# 			}
+# 			add_province_modifier = {
+# 				name = galley13
+# 				duration = -1
+# 			}
+# 		}
+# 		else_if = {
+# 			limit = {
+# 				has_building = drydock
+# 				development = 10
+# 				NOT ={
+# 					development = 20
+# 				}
+# 			}
+# 			add_province_modifier = {
+# 				name = galley2
+# 				duration = -1
+# 			}
+# 		}
+# 		else_if = {
+# 			limit = {
+# 				has_building = drydock
+# 				development = 20
+# 				NOT ={
+# 					development = 30
+# 				}
+# 			}
+# 			add_province_modifier = {
+# 				name = galley3
+# 				duration = -1
+# 			}
+# 		}
+# 		else_if = {
+# 			limit = {
+# 				has_building = drydock
+# 				development = 30
+# 				NOT ={
+# 					development = 40
+# 				}
+# 			}
+# 			add_province_modifier = {
+# 				name = galley4
+# 				duration = -1
+# 			}
+# 		}
+# 		else_if = {
+# 			limit = {
+# 				has_building = drydock
+# 				development = 40
+# 				NOT ={
+# 					development = 50
+# 				}
+# 			}
+# 			add_province_modifier = {
+# 				name = galley5
+# 				duration = -1
+# 			}
+# 		}
+# 		else_if = {
+# 			limit = {
+# 				has_building = drydock
+# 				development = 50
+# 				NOT ={
+# 					development = 60
+# 				}
+# 			}
+# 			add_province_modifier = {
+# 				name = galley6
+# 				duration = -1
+# 			}
+# 		}
+# 		else_if = {
+# 			limit = {
+# 				has_building = drydock
+# 				development = 70
+# 				NOT ={
+# 					development = 80
+# 				}
+# 			}
+# 			add_province_modifier = {
+# 				name = galley7
+# 				duration = -1
+# 			}
+# 		}
+# 		else_if = {
+# 			limit = {
+# 				has_building = drydock
+# 				development = 80
+# 				NOT ={
+# 					development = 90
+# 				}
+# 			}
+# 			add_province_modifier = {
+# 				name = galley8
+# 				duration = -1
+# 			}
+# 		}
+# 		else_if = {
+# 			limit = {
+# 				has_building = drydock
+# 				development = 90
+# 				NOT ={
+# 					development = 100
+# 				}
+# 			}
+# 			add_province_modifier = {
+# 				name = galley9
+# 				duration = -1
+# 			}
+# 		}
+# 		else_if = {
+# 			limit = {
+# 				has_building = drydock
+# 				development = 100
+# 				NOT ={
+# 					development = 110
+# 				}
+# 			}
+# 			add_province_modifier = {
+# 				name = galley10
+# 				duration = -1
+# 			}
+# 		}
+# 		else_if = {
+# 			limit = {
+# 				has_building = drydock
+# 				development = 110
+# 				NOT ={
+# 					development = 120
+# 				}
+# 			}
+# 			add_province_modifier = {
+# 				name = galley11
+# 				duration = -1
+# 			}
+# 		}
+# 		else_if = {
+# 			limit = {
+# 				has_building = drydock
+# 				development = 120
+# 				NOT ={
+# 					development = 130
+# 				}
+# 			}
+# 			add_province_modifier = {
+# 				name = galley12
+# 				duration = -1
+# 			}
+# 		}
+# 		else_if = {
+# 			limit = {
+# 				has_building = drydock
+# 				development = 130
+# 				NOT ={
+# 					development = 140
+# 				}
+# 			}
+# 			add_province_modifier = {
+# 				name = galley13
+# 				duration = -1
+# 			}
+# 		}
+# 		else_if = {
+# 			limit = {
+# 				has_building = drydock
+# 				development = 140
+# 			}
+# 			add_province_modifier = {
+# 				name = galley14
+# 				duration = -1
+# 			}
+# 		}
+# 		else_if = {
+# 			limit = {
+# 				has_building = navymanpower_lvl_3
+# 				development = 10
+# 				NOT ={
+# 					development = 20
+# 				}
+# 			}
+# 			add_province_modifier = {
+# 				name = galley3
+# 				duration = -1
+# 			}
+# 		}
+# 		else_if = {
+# 			limit = {
+# 				has_building = navymanpower_lvl_3
+# 				development = 20
+# 				NOT ={
+# 					development = 30
+# 				}
+# 			}
+# 			add_province_modifier = {
+# 				name = galley4
+# 				duration = -1
+# 			}
+# 		}
+# 		else_if = {
+# 			limit = {
+# 				has_building = navymanpower_lvl_3
+# 				development = 30
+# 				NOT ={
+# 					development = 40
+# 				}
+# 			}
+# 			add_province_modifier = {
+# 				name = galley5
+# 				duration = -1
+# 			}
+# 		}
+# 		else_if = {
+# 			limit = {
+# 				has_building = navymanpower_lvl_3
+# 				development = 40
+# 				NOT ={
+# 					development = 50
+# 				}
+# 			}
+# 			add_province_modifier = {
+# 				name = galley6
+# 				duration = -1
+# 			}
+# 		}
+# 		else_if = {
+# 			limit = {
+# 				has_building = navymanpower_lvl_3
+# 				development = 50
+# 				NOT ={
+# 					development = 60
+# 				}
+# 			}
+# 			add_province_modifier = {
+# 				name = galley7
+# 				duration = -1
+# 			}
+# 		}
+# 		else_if = {
+# 			limit = {
+# 				has_building = navymanpower_lvl_3
+# 				development = 70
+# 				NOT ={
+# 					development = 80
+# 				}
+# 			}
+# 			add_province_modifier = {
+# 				name = galley8
+# 				duration = -1
+# 			}
+# 		}
+# 		else_if = {
+# 			limit = {
+# 				has_building = navymanpower_lvl_3
+# 				development = 80
+# 				NOT ={
+# 					development = 90
+# 				}
+# 			}
+# 			add_province_modifier = {
+# 				name = galley9
+# 				duration = -1
+# 			}
+# 		}
+# 		else_if = {
+# 			limit = {
+# 				has_building = navymanpower_lvl_3
+# 				development = 90
+# 				NOT ={
+# 					development = 100
+# 				}
+# 			}
+# 			add_province_modifier = {
+# 				name = galley10
+# 				duration = -1
+# 			}
+# 		}
+# 		else_if = {
+# 			limit = {
+# 				has_building = navymanpower_lvl_3
+# 				development = 100
+# 				NOT ={
+# 					development = 110
+# 				}
+# 			}
+# 			add_province_modifier = {
+# 				name = galley11
+# 				duration = -1
+# 			}
+# 		}
+# 		else_if = {
+# 			limit = {
+# 				has_building = navymanpower_lvl_3
+# 				development = 110
+# 				NOT ={
+# 					development = 120
+# 				}
+# 			}
+# 			add_province_modifier = {
+# 				name = galley12
+# 				duration = -1
+# 			}
+# 		}
+# 		else_if = {
+# 			limit = {
+# 				has_building = navymanpower_lvl_3
+# 				development = 120
+# 				NOT ={
+# 					development = 130
+# 				}
+# 			}
+# 			add_province_modifier = {
+# 				name = galley13
+# 				duration = -1
+# 			}
+# 		}
+# 		else_if = {
+# 			limit = {
+# 				has_building = navymanpower_lvl_3
+# 				development = 130
+# 				NOT ={
+# 					development = 140
+# 				}
+# 			}
+# 			add_province_modifier = {
+# 				name = galley14
+# 				duration = -1
+# 			}
+# 		}
+# 		else_if = {
+# 			limit = {
+# 				has_building = navymanpower_lvl_3
+# 				development = 140
+# 			}
+# 			add_province_modifier = {
+# 				name = galley15
+# 				duration = -1
+# 			}
+# 		}
+# 	}
+
+# 	after = {
+# 		log = "end ANEX_ideas_events.27 [GetDate] for province [Root.GetName]"
+# 	}
+
+# 	option = {
+# 		name = ANEX_setting_event.1.a
+# 		ai_chance = {
+# 			factor = 1
+# 		}
+# 	}
+# }
+
+province_event = {
+	id = ANEX_ideas_events.28
+	title = ANEX_setting_event.1.t
+	desc = ANEX_setting_event.1.d
+	picture = WESTERNISATION_eventPicture
+
+	hidden = yes
+
+	trigger = {
+		OR = {
+			AND = {
+				owner = {
+					has_idea = cultural_ties
+				}
+				AND = {
+					NOT = {
+						has_province_modifier = cultural_ties0
+					}
+					AND = {
+						has_owner_accepted_culture = no
+						has_owner_culture = no
+						is_owned_by_trade_company = no
+					}
+				}
+			}
+			AND= {
+				has_province_modifier = cultural_ties0
+				OR = {
+					owner = { NOT = { has_idea = cultural_ties } }
+					has_owner_accepted_culture = yes
+					has_owner_culture = yes
+					is_owned_by_trade_company = yes
+				}
+			}
+	
+		}
+	}
+
+	immediate = {
+		log = "start ANEX_ideas_events.28 [GetDate] for country [Root.GetName]"
+		
+		if = {
+			limit = {
+				owner = {
+					has_idea = cultural_ties
+				}
+				AND = {
+					NOT = {
+						has_province_modifier = cultural_ties0
+					}
+					AND = {
+						has_owner_accepted_culture = no
+						has_owner_culture = no
+						is_owned_by_trade_company = no
+					}
+				}
+			}					
+				
+			add_province_modifier = {
+				name = cultural_ties0
+				duration = -1
+				hidden = yes
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					AND = {
+						has_province_modifier = cultural_ties0
+						OR = {
+							has_owner_accepted_culture = yes
+							has_owner_culture = yes
+							is_owned_by_trade_company = yes
+						}
+					}
+					owner = {
+						NOT = {
+							has_idea = cultural_ties
+						}
+					}
+				}
+			}
+			remove_province_modifier = cultural_ties0
+		}
+	}
+
+	after = {
+		log = "end ANEX_ideas_events.28 [GetDate] for country [Root.GetName]"
+	}
+
+	option = {
+		name = ANEX_setting_event.1.a
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+country_event = {
+	id = ANEX_ideas_events.29
+	title = ANEX_setting_event.1.t
+	desc = ANEX_setting_event.1.d
+	picture = WESTERNISATION_eventPicture
+
+	hidden = yes
+
+	trigger = {
+		has_idea = mercenary_idea_4
+	}
+
+	immediate = {
+		log = "start ANEX_ideas_events.29 [GetDate] for country [Root.GetName]"
+
+		remove_country_modifier = mercenary_maintence_1
+		remove_country_modifier = mercenary_maintence_2
+		remove_country_modifier = mercenary_maintence_3
+		remove_country_modifier = mercenary_maintence_4
+		remove_country_modifier = mercenary_maintence_5
+		remove_country_modifier = mercenary_maintence_6
+		remove_country_modifier = mercenary_maintence_7
+		remove_country_modifier = mercenary_maintence_8
+		remove_country_modifier = mercenary_maintence_9
+		remove_country_modifier = mercenary_maintence_10
+		remove_country_modifier = mercenary_maintence_11
+		remove_country_modifier = mercenary_maintence_12
+		remove_country_modifier = mercenary_maintence_13
+		remove_country_modifier = mercenary_maintence_14
+		remove_country_modifier = mercenary_maintence_15
+		remove_country_modifier = mercenary_maintence_16
+		remove_country_modifier = mercenary_maintence_17
+		remove_country_modifier = mercenary_maintence_18
+		remove_country_modifier = mercenary_maintence_19
+		remove_country_modifier = mercenary_maintence_21
+		remove_country_modifier = mercenary_maintence_22
+		remove_country_modifier = mercenary_maintence_23
+		remove_country_modifier = mercenary_maintence_24
+		remove_country_modifier = mercenary_maintence_25
+		remove_country_modifier = mercenary_maintence_26
+		remove_country_modifier = mercenary_maintence_27
+		remove_country_modifier = mercenary_maintence_28
+		remove_country_modifier = mercenary_maintence_29
+		remove_country_modifier = mercenary_maintence_30
+		remove_country_modifier = mercenary_maintence_31
+		remove_country_modifier = mercenary_maintence_32
+
+		if = { limit = { mil_tech = 1 NOT = { mil_tech = 2 } }	add_country_modifier = { name = mercenary_maintence_1 duration = -1	} }
+		else_if = { limit = { mil_tech = 2 NOT = { mil_tech = 3 } } add_country_modifier = { name = mercenary_maintence_2 duration = -1 } }
+		else_if = { limit = { mil_tech = 3 NOT = { mil_tech = 4 } } add_country_modifier = { name = mercenary_maintence_3 duration = -1 } }
+		else_if = { limit = { mil_tech = 4 NOT = { mil_tech = 5 } } add_country_modifier = { name = mercenary_maintence_4 duration = -1 } }
+		else_if = { limit = { mil_tech = 5 NOT = { mil_tech = 6 } } add_country_modifier = { name = mercenary_maintence_5 duration = -1 } }
+		else_if = { limit = { mil_tech = 6 NOT = { mil_tech = 7 } } add_country_modifier = { name = mercenary_maintence_6 duration = -1 } }
+		else_if = { limit = { mil_tech = 7 NOT = { mil_tech = 8 } } add_country_modifier = { name = mercenary_maintence_7 duration = -1 } }
+		else_if = { limit = { mil_tech = 8 NOT = { mil_tech = 9 } } add_country_modifier = { name = mercenary_maintence_8 duration = -1 } }
+		else_if = { limit = { mil_tech = 9 NOT = { mil_tech = 10 } } add_country_modifier = { name = mercenary_maintence_9 duration = -1 } }
+		else_if = { limit = { mil_tech = 10 NOT = { mil_tech = 11 } } add_country_modifier = { name = mercenary_maintence_10 duration = -1 } }
+		else_if = { limit = { mil_tech = 11 NOT = { mil_tech = 12 } } add_country_modifier = { name = mercenary_maintence_11 duration = -1 } }
+		else_if = { limit = { mil_tech = 12 NOT = { mil_tech = 13 } } add_country_modifier = { name = mercenary_maintence_12 duration = -1 } }
+		else_if = { limit = { mil_tech = 13 NOT = { mil_tech = 14 } } add_country_modifier = { name = mercenary_maintence_13 duration = -1 } }
+		else_if = { limit = { mil_tech = 14 NOT = { mil_tech = 15 } } add_country_modifier = { name = mercenary_maintence_14 duration = -1 } }
+		else_if = { limit = { mil_tech = 15 NOT = { mil_tech = 16 } } add_country_modifier = { name = mercenary_maintence_15 duration = -1 } }
+		else_if = { limit = { mil_tech = 16 NOT = { mil_tech = 17 } } add_country_modifier = { name = mercenary_maintence_16 duration = -1 } }
+		else_if = { limit = { mil_tech = 17 NOT = { mil_tech = 18 } } add_country_modifier = { name = mercenary_maintence_17 duration = -1 } }
+		else_if = { limit = { mil_tech = 18 NOT = { mil_tech = 19 } } add_country_modifier = { name = mercenary_maintence_18 duration = -1 } }
+		else_if = { limit = { mil_tech = 19 NOT = { mil_tech = 20 } } add_country_modifier = { name = mercenary_maintence_19 duration = -1 } }
+		else_if = { limit = { mil_tech = 20 NOT = { mil_tech = 21 } } add_country_modifier = { name = mercenary_maintence_20 duration = -1 } }
+		else_if = { limit = { mil_tech = 21 NOT = { mil_tech = 22 } } add_country_modifier = { name = mercenary_maintence_21 duration = -1 } }
+		else_if = { limit = { mil_tech = 22 NOT = { mil_tech = 23 } } add_country_modifier = { name = mercenary_maintence_22 duration = -1 } }
+		else_if = { limit = { mil_tech = 23 NOT = { mil_tech = 24 } } add_country_modifier = { name = mercenary_maintence_23 duration = -1 } }
+		else_if = { limit = { mil_tech = 24 NOT = { mil_tech = 25 } } add_country_modifier = { name = mercenary_maintence_24 duration = -1 } }
+		else_if = { limit = { mil_tech = 25 NOT = { mil_tech = 26 } } add_country_modifier = { name = mercenary_maintence_25 duration = -1 } }
+		else_if = { limit = { mil_tech = 26 NOT = { mil_tech = 27 } } add_country_modifier = { name = mercenary_maintence_26 duration = -1 } }
+		else_if = { limit = { mil_tech = 27 NOT = { mil_tech = 28 } } add_country_modifier = { name = mercenary_maintence_27 duration = -1 } }
+		else_if = { limit = { mil_tech = 28 NOT = { mil_tech = 29 } } add_country_modifier = { name = mercenary_maintence_28 duration = -1 } }
+		else_if = { limit = { mil_tech = 29 NOT = { mil_tech = 30 } } add_country_modifier = { name = mercenary_maintence_29 duration = -1 } }
+
+	}
+
+	after = {
+		log = "end ANEX_ideas_events.29 [GetDate] for country [Root.GetName]"
+	}
+
+	option = {
+		name = ANEX_setting_event.1.a
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+country_event = {
+	id = ANEX_ideas_events.30
+	title = ANEX_setting_event.1.t
+	desc = ANEX_setting_event.1.d
+	picture = WESTERNISATION_eventPicture
+
+	hidden = yes
+
+	trigger = {
+		ai = yes
+		has_idea_group = influence_ideas
+		NOT = {
+			num_of_subjects = 1
+		}
+		NOT = {
+			has_reform = raja_reform 
+		}
+	}
+
+	immediate = {
+		log = "start ANEX_ideas_events.30 [GetDate] for country [Root.GetName]"
+		remove_idea_group = influence_ideas
+		add_dip_power = 3000
+	}
+
+	after = {
+		log = "end ANEX_ideas_events.30 [GetDate] for country [Root.GetName]"
+	}
+
+	option = {
+		name = ANEX_setting_event.1.a
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+country_event = {
+	id = ANEX_ideas_events.31
+	title = ANEX_setting_event.1.t
+	desc = ANEX_setting_event.1.d
+	picture = WESTERNISATION_eventPicture
+
+	hidden = yes
+
+	trigger = {
+		ai = yes
+		OR = {
+			full_idea_group = exploration_ideas
+			full_idea_group = expansion_ideas
+		}
+		is_year = 1610
+	}
+
+	immediate = {
+		log = "start ANEX_ideas_events.31 [GetDate] for country [Root.GetName]"
+		if = {
+			limit = {
+				full_idea_group = exploration_ideas
+			}
+			remove_idea_group = exploration_ideas
+			add_dip_power = 3000
+		}
+		if = {
+			limit = {
+				full_idea_group = expansion_ideas
+			}
+			remove_idea_group = expansion_ideas
+			add_adm_power = 3000
+		}
+	}
+
+	after = {
+		log = "end ANEX_ideas_events.31 [GetDate] for country [Root.GetName]"
+	}
+
+	option = {
+		name = ANEX_setting_event.1.a
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+
+province_event = {
+	id = ANEX_ideas_events.32
+	title = ANEX_ideas_events.32.t
+	desc = ANEX_ideas_events.32.d
+	picture = WESTERNISATION_eventPicture
+	goto = ROOT
+
+	is_triggered_only = yes
+
+	immediate = {
+		log = "start ANEX_ideas_events.32 [GetDate] for province [Root.GetName]"
+	}
+
+	after = {
+		log = "end ANEX_ideas_events.32 [GetDate] for province [Root.GetName]"
+	}
+
+	option = {
+		name = ANEX_ideas_events.32.a
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+country_event = {
+	id = ANEX_ideas_events.900
+	title =  ANEX_setting_event.1.t
+	desc = ANEX_setting_event.1.d
+	picture = WESTERNISATION_eventPicture
+
+	hidden = yes
+
+	trigger = {
+		ai = yes 
+		adm_tech = 15
+		full_idea_group = expansion_ideas
+		# full_idea_group = exploration_ideas
+		NOT = {
+			any_owned_province = {
+				has_empty_adjacent_province = yes
+			}
+		}
+	}
+
+	immediate = {
+		log = "start ANEX_ideas_events.900 [GetDate] for country [Root.GetName]"
+		if = {
+			limit = {
+				full_idea_group = exploration_ideas
+			}
+			remove_idea_group = exploration_ideas
+			add_dip_power = 3000
+		}
+		if = {
+			limit = {
+				full_idea_group = expansion_ideas
+			}
+			remove_idea_group = expansion_ideas
+			add_adm_power = 3000
+		}
+	}
+
+	after = {
+		log = "end ANEX_ideas_events.900 [GetDate] for country [Root.GetName]"
+	}
+
+	option = {
+		name = ANEX_setting_event.1.a
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+# country_event = {
+# 	id = ANEX_ideas_events.991
+# 	title = ANEX_setting_event.1.t
+# 	desc = ANEX_setting_event.1.d
+# 	picture = ACCUSATION_eventPicture
+
+# 	hidden = yes
+
+# 	trigger = {
+# 		AND  = {
+# 			NOT = {
+# 				OR = {
+# 					has_idea = galle1
+# 					has_idea = light_ship5
+# 					has_idea = merchant_marine
+# 				}
+# 			}
+# 			any_owned_province = {
+# 				has_building = drydock
+# 			}
+# 		}
+# 	}
+
+# 	immediate = {
+# 		log = "start ANEX_ideas_events.991 [GetDate] for country [Root.GetName] "
+# 		every_owned_province = {
+# 			remove_building = drydock
+# 		}
+# 	}
+
+# 	option = {
+# 		name = ANEX_setting_event.1.a
+# 		ai_chance = {
+# 			factor = 1
+# 		}
+# 	}
+
+# 	after = {
+# 		log = "end ANEX_ideas_events.991 [GetDate] for country [Root.GetName] "
+# 	}
+# }
+
+country_event = {
+	id = ANEX_ideas_events.991
+	title = ANEX_setting_event.1.t
+	desc = ANEX_setting_event.1.d
+	picture = ACCUSATION_eventPicture
+
+	hidden = yes
+
+	trigger = {
+		AND  = {
+			NOT = {
+				OR = {
+					has_idea = galle1
+					has_idea = light_ship5
+				}
+			}
+			any_owned_province = {
+				has_building = navymanpower_lvl_3
+			}
+		}
+	}
+
+	immediate = {
+		log = "start ANEX_ideas_events.991 [GetDate] for country [Root.GetName] "
+		every_owned_province = {
+			remove_building = navymanpower_lvl_3
+		}
+	}
+
+	option = {
+		name = ANEX_setting_event.1.a
+		ai_chance = {
+			factor = 1
+		}
+	}
+
+	after = {
+		log = "end ANEX_ideas_events.991 [GetDate] for country [Root.GetName] "
+	}
+}
+
+country_event = {
+	id = ANEX_ideas_events.992
+	title = ANEX_setting_event.1.t
+	desc = ANEX_setting_event.1.d
+	picture = ACCUSATION_eventPicture
+
+	hidden = yes
+
+	trigger = {
+		AND  = {
+			NOT = {
+				OR = {
+					has_idea = gross6
+					has_idea = grand_navy
+				}
+			}
+			any_owned_province = {
+				has_building = grand_shipyard
+			}
+		}
+	}
+
+	immediate = {
+		log = "start ANEX_ideas_events.992 [GetDate] for country [Root.GetName] "
+		every_owned_province = {
+			remove_building = grand_shipyard
+		}
+	}
+
+	option = {
+		name = ANEX_setting_event.1.a
+		ai_chance = {
+			factor = 1
+		}
+	}
+
+	after = {
+		log = "end ANEX_ideas_events.992 [GetDate] for country [Root.GetName] "
+	}
+}
+
+country_event = {
+	id = ANEX_ideas_events.993
+	title = ANEX_setting_event.1.t
+	desc = ANEX_setting_event.1.d
+	picture = ACCUSATION_eventPicture
+
+	hidden = yes
+
+	trigger = {
+		AND  = {
+			NOT = {
+				has_idea = gross6
+			}
+			any_owned_province = {
+				has_building = navyforcelimit_lvl_3
+			}
+		}
+	}
+
+	immediate = {
+		log = "start ANEX_ideas_events.993 [GetDate] for country [Root.GetName] "
+		every_owned_province = {
+			remove_building = navyforcelimit_lvl_3
+		}
+	}
+
+	option = {
+		name = ANEX_setting_event.1.a
+		ai_chance = {
+			factor = 1
+		}
+	}
+
+	after = {
+		log = "end ANEX_ideas_events.993 [GetDate] for country [Root.GetName] "
+	}
+}
+
+# country_event = {
+# 	id = ANEX_ideas_events.994
+# 	title = ANEX_setting_event.1.t
+# 	desc = ANEX_setting_event.1.d
+# 	picture = ACCUSATION_eventPicture
+
+# 	hidden = yes
+
+# 	trigger = {
+# 		AND  = {
+# 			NOT = {
+# 				has_idea = fortress_3
+# 			}
+# 			any_owned_province = {
+# 				OR = {
+# 					has_building = fortress_keep
+# 					has_building = fortress_barracks
+# 					has_building = fortress_towers
+# 					has_building = fortress_artillery
+# 					has_building = fortress_wall
+# 					has_building = fortress_supply
+# 				}
+# 			}
+# 		}
+# 	}
+
+# 	immediate = {
+# 		log = "start ANEX_ideas_events.994 [GetDate] for country [Root.GetName] "
+# 		every_owned_province = {
+# 			remove_building = fortress_keep
+# 			remove_building = fortress_barracks
+# 			remove_building = fortress_towers
+# 			remove_building = fortress_artillery
+# 			remove_building = fortress_wall
+# 			remove_building = fortress_supply
+# 		}
+# 	}
+
+# 	option = {
+# 		name = ANEX_setting_event.1.a
+# 		ai_chance = {
+# 			factor = 1
+# 		}
+# 	}
+
+# 	after = {
+# 		log = "end ANEX_ideas_events.994 [GetDate] for country [Root.GetName] "
+# 	}
+# }
+
+country_event = {
+	id = ANEX_ideas_events.995
+	title = ANEX_setting_event.1.t
+	desc = ANEX_setting_event.1.d
+	picture = ACCUSATION_eventPicture
+
+	hidden = yes
+
+	trigger = {
+		AND  = {
+			NOT = {
+				has_idea = public_administr_2
+			}
+			any_owned_province = {
+				OR = {
+					has_building = town_hall
+					has_building = government_lvl_3
+					has_building = government_lvl_4
+				}
+			}
+		}
+	}
+
+	immediate = {
+		log = "start ANEX_ideas_events.995 [GetDate] for country [Root.GetName] "
+		every_owned_province = {
+			remove_building = town_hall
+			remove_building = government_lvl_3
+			remove_building = government_lvl_4
+		}
+	}
+
+	option = {
+		name = ANEX_setting_event.1.a
+		ai_chance = {
+			factor = 1
+		}
+	}
+
+	after = {
+		log = "end ANEX_ideas_events.995 [GetDate] for country [Root.GetName] "
+	}
+}
+
+province_event = {
+	id = ANEX_ideas_events.996
+	title = ANEX_ideas_events.996.t
+	desc = ANEX_ideas_events.996.d
+	picture = COUNTRY_COLLAPSE_eventPicture
+
+	goto = root
+
+	trigger = {
+		has_manufactory_trigger = yes
+		NOT = {
+			development = 10
+		}
+		NOT = {
+			has_building = ramparts
+		}
+		NOT = { province_id = 4039 }
+	}
+
+	immediate = {
+		log = "start ANEX_ideas_events.996 [GetDate] for province [Root.GetName] "
+	}
+
+	option = {
+		name = ANEX_ideas_events.996.a
+		ai_chance = {
+			factor = 1
+		}
+		remove_building = wharf
+		remove_building = weapons
+		remove_building = textile
+		remove_building = tradecompany
+		remove_building = farm_estate
+		remove_building = mills
+		remove_building = furnace
+		remove_building = plantations
+		# remove_building = ramparts
+		remove_building = soldier_households
+		remove_building = impressment_offices
+		remove_building = state_house
+		remove_building = mage_tower
+		remove_building = tax_house
+	}
+
+	after = {
+		log = "end ANEX_ideas_events.996 [GetDate] for province [Root.GetName] "
+	}
+}
+
+province_event = {
+	id = ANEX_ideas_events.997
+	title = ANEX_setting_event.1.t
+	desc = ANEX_setting_event.1.d
+	picture = ACCUSATION_eventPicture
+
+	hidden = yes
+
+	trigger = {
+		has_building = education_lvl_1
+		NOT = {
+			OR = {
+				has_religi_building_trigger = yes
+				has_building = education_lvl_2
+				has_building = university
+			}
+		}
+	}
+
+	immediate = {
+		log = "start ANEX_ideas_events.997 [GetDate] for province [Root.GetName] "
+		remove_building = education_lvl_1
+	}
+
+	option = {
+		name = ANEX_setting_event.1.a
+		ai_chance = {
+			factor = 1
+		}
+
+	}
+
+	after = {
+		log = "end ANEX_ideas_events.997 [GetDate] for province [Root.GetName] "
+	}
+}
+
+country_event = {
+	id = ANEX_ideas_events.998
+	title = ANEX_setting_event.1.t
+	desc = ANEX_setting_event.1.d
+	picture = ACCUSATION_eventPicture
+
+	hidden = yes
+
+	trigger = {
+		any_owned_province = {
+			OR = {
+				has_building = war_college_1
+				has_building = war_college_2
+				has_building = war_college_3
+			}
+		}
+		NOT = {
+			has_idea = generalstab7
+		}
+	}
+
+	immediate = {
+		log = "start ANEX_ideas_events.998 [GetDate] for country [Root.GetName] "
+		every_owned_province = {
+			remove_building = war_college_1
+			remove_building = war_college_2
+			remove_building = war_college_3
+		}
+	}
+
+	option = {
+		name = ANEX_setting_event.1.a
+		ai_chance = {
+			factor = 1
+		}
+
+	}
+
+	after = {
+		log = "end ANEX_ideas_events.998 [GetDate] for country [Root.GetName] "
+	}
+}
+
+country_event = {
+	id = ANEX_ideas_events.999
+	title = ANEX_setting_event.1.t
+	desc = ANEX_setting_event.1.d
+	picture = ACCUSATION_eventPicture
+
+	hidden = yes
+
+	trigger = {
+		any_owned_province = {
+			OR = {
+				has_building = forcelimit_lvl_3
+				has_building = conscription_center
+			}
+		}
+		NOT = {
+			has_idea = war_production_4
+		}
+	}
+
+	immediate = {
+		log = "start ANEX_ideas_events.999 [GetDate] for country [Root.GetName] "
+		every_owned_province = {
+			remove_building = conscription_center
+			remove_building = forcelimit_lvl_3
+		}
+	}
+
+	option = {
+		name = ANEX_setting_event.1.a
+		ai_chance = {
+			factor = 1
+		}
+
+	}
+
+	after = {
+		log = "end ANEX_ideas_events.999 [GetDate] for country [Root.GetName] "
+	}
+}

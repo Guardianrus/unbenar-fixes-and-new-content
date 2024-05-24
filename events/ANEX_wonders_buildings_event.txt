@@ -1,0 +1,3252 @@
+namespace = national_wonder
+
+country_event = {
+	id = national_wonder.1
+	title = national_wonder.1.t
+	desc = national_wonder.1.d # Определение области что вы хотите построить
+	picture = GREAT_BUILDING_eventPicture
+
+	is_triggered_only = yes
+
+	# option = {
+	# 	name =  national_wonder.1.a
+	# 	country_event = {
+	# 		id = national_wonder.2
+	# 	}
+	# }
+
+	# option = {
+	# 	name =  national_wonder.1.b
+	# 	country_event = {
+	# 		id = national_wonder.6
+	# 	}
+	# }
+
+	# option = {
+	# 	name =  national_wonder.1.c
+	# 	country_event = {
+	# 		id = national_wonder.10
+	# 	}
+	# }
+
+	# option = {
+	# 	name =  national_wonder.1.q
+	# 	country_event = {
+	# 		id = national_wonder.14
+	# 	}
+	# }
+
+	# option = {
+	# 	name =  national_wonder.1.w
+	# 	country_event = {
+	# 		id = national_wonder.18
+	# 	}
+	# }
+
+	# option = {
+	# 	name =  national_wonder.1.e
+	# 	country_event = {
+	# 		id = national_wonder.22
+	# 	}
+	# }
+
+	# option = {
+	# 	name =  national_wonder.1.r
+	# 	country_event = {
+	# 		id = national_wonder.26
+	# 	}
+	# }
+
+	# option = {
+	# 	name =  national_wonder.1.y
+	# 	country_event = {
+	# 		id = national_wonder.30
+	# 	}
+	# }
+
+	# option = {
+	# 	name =  national_wonder.1.u
+	# 	country_event = {
+	# 		id = national_wonder.34
+	# 	}
+	# }
+
+	# option = {
+	# 	name =  national_wonder.1.i
+	# 	country_event = {
+	# 		id = national_wonder.38
+	# 	}
+	# }
+
+	# option = {
+	# 	name =  national_wonder.1.o
+	# 	country_event = {
+	# 		id = national_wonder.42
+	# 	}
+	# }
+
+	option = {# Нац банк
+		name =  national_wonder.1.p
+		country_event = {
+			id = national_wonder.46
+		}
+	}
+
+	option = {# Военный коледж
+		name =  national_wonder.1.f
+		country_event = {
+			id = national_wonder.50
+		}
+	}
+	
+
+	option = {
+		name = national_wonder.2.z
+	}
+
+}
+#################################################################
+############ Cathedral
+#################################################################
+# country_event = {
+# 	id = national_wonder.2
+# 	title = national_wonder.2.t
+# 	desc = national_wonder.2.d #Описание условий для появления кнопки на постройку
+# 	picture = GREAT_BUILDING_eventPicture
+
+# 	is_triggered_only = yes
+
+# 	option = {
+# 		name = national_wonder.2.a # Тригер на постройку конкретного здания
+# 		trigger = {
+			
+# 		}
+# 		country_event = {
+# 			id = national_wonder.3
+# 		}
+# 	}
+
+# 	option = {
+# 		name = national_wonder.2.b
+# 		trigger = {
+			
+# 		}
+# 		country_event = {
+# 			id = national_wonder.4
+# 		}
+# 	}
+
+# 	option = {
+# 		trigger ={
+# 			# full_idea_group = religious_ideas
+# 		}
+# 		name = national_wonder.2.c
+# 		country_event = {
+# 			id = national_wonder.5
+# 		}
+# 	}
+	
+# 	option = {
+# 		name = national_wonder.2.z
+# 		country_event = {
+# 			id = national_wonder.1
+# 		}
+# 	}
+# }
+
+# country_event = {
+# 	id = national_wonder.3
+# 	title = national_wonder.2.t  
+# 	desc = national_wonder.2.d #Описание бонусов постройки и условий строительства
+# 	picture = GREAT_BUILDING_eventPicture
+
+# 	is_triggered_only = yes	
+	
+# 	option = {
+# 		name = national_wonder.3.a # Строим
+# 		add_treasury = -1000
+# 		capital_scope = {
+# 			add_building_construction = {
+# 				building = great_cathedral_1
+# 				speed = 1
+# 				cost = 0
+# 			}
+# 		}
+# 	}
+
+# 	option = {
+# 		name = national_wonder.2.z # Не строим
+# 		country_event = {
+# 			id = national_wonder.1
+# 		}
+# 	}
+# }
+
+# country_event = {
+# 	id = national_wonder.4
+# 	title = national_wonder.4.t  
+# 	desc = national_wonder.4.d # построили
+# 	picture = GREAT_BUILDING_eventPicture
+
+# 	is_triggered_only = yes	
+
+# 	option = {
+# 		name = national_wonder.4.a
+# 		add_treasury = -10000
+# 		capital_scope = {
+# 			add_building_construction = {
+# 				building = great_cathedral_2
+# 				speed = 1
+# 				cost = 0
+# 			}
+# 		}
+# 	}
+	
+# 	option = {
+# 		name = national_wonder.2.z # Не строим
+# 		country_event = {
+# 			id = national_wonder.1
+# 		}
+# 	}
+# }
+
+# country_event = {
+# 	id = national_wonder.5
+# 	title = national_wonder.5.t  
+# 	desc = national_wonder.5.d #Описание бонусов постройки и условий строительства
+# 	picture = GREAT_BUILDING_eventPicture
+
+# 	is_triggered_only = yes	
+
+# 	option = {
+# 		name = national_wonder.2.a # Строим
+# 		add_treasury = -25000
+# 		capital_scope = {
+# 			add_building_construction = {
+# 				building = great_cathedral_3
+# 				speed = 1
+# 				cost = 0
+# 			}
+# 		}
+		
+# 	}
+	
+# 	option = {
+# 		name = national_wonder.2.z # Не строим
+# 		country_event = {
+# 			id = national_wonder.1
+# 		}
+# 	}
+# }
+
+# #################################################################
+# ############ Monument
+# #################################################################
+# country_event = {
+# 	id = national_wonder.6
+# 	title = national_wonder.6.t
+# 	desc = national_wonder.6.d #Описание условий для появления кнопки на постройку
+# 	picture = GREAT_BUILDING_eventPicture
+
+# 	is_triggered_only = yes
+
+# 	option = {
+# 		name = national_wonder.6.a # Тригер на постройку конкретного здания
+# 		trigger = {
+			
+# 		}
+# 		country_event = {
+# 			id = national_wonder.7
+# 		}
+# 	}
+
+# 	option = {
+# 		name = national_wonder.6.b
+# 		trigger = {
+			
+# 		}
+# 		country_event = {
+# 			id = national_wonder.8
+# 		}
+# 	}
+
+# 	option = {
+# 		name = national_wonder.6.c
+# 		country_event = {
+# 			id = national_wonder.9
+# 		}
+# 	}
+	
+# 	option = {
+# 		name = national_wonder.2.z
+# 		country_event = {
+# 			id = national_wonder.1
+# 		}
+# 	}
+# }
+
+# country_event = {
+# 	id = national_wonder.7
+# 	title = national_wonder.7.t  
+# 	desc = national_wonder.7.d #Описание бонусов постройки и условий строительства
+# 	picture = GREAT_BUILDING_eventPicture
+
+# 	is_triggered_only = yes	
+
+	
+# 	option = {
+# 		name = national_wonder.2.a # Строим
+# 		add_treasury = -1000
+# 		capital_scope = {
+# 			add_building_construction = {
+# 				building = monument_1
+# 				speed = 1
+# 				cost = 0
+# 			}
+# 		}
+# 	}
+
+# 	option = {
+# 		name = national_wonder.2.z # Не строим
+# 		country_event = {
+# 			id = national_wonder.1
+# 		}
+# 	}
+# }
+
+# country_event = {
+# 	id = national_wonder.8
+# 	title = national_wonder.8.t  
+# 	desc = national_wonder.8.d # построили
+# 	picture = GREAT_BUILDING_eventPicture
+
+# 	is_triggered_only = yes	
+
+# 	option = {
+# 		name = national_wonder.2.a
+# 		add_treasury = -10000
+# 		capital_scope = {
+# 			add_building_construction = {
+# 				building = monument_2
+# 				speed = 1
+# 				cost = 0
+# 			}
+# 		}
+# 	}
+	
+# 	option = {
+# 		name = national_wonder.2.z # Не строим
+# 		country_event = {
+# 			id = national_wonder.1
+# 		}
+# 	}
+# }
+
+# country_event = {
+# 	id = national_wonder.9
+# 	title = national_wonder.9.t  
+# 	desc = national_wonder.9.d #Описание бонусов постройки и условий строительства
+# 	picture = GREAT_BUILDING_eventPicture
+
+# 	is_triggered_only = yes	
+
+# 	option = {
+# 		name = national_wonder.9.a # Строим
+# 		add_treasury = -25000
+# 		capital_scope = {
+# 			add_building_construction = {
+# 				building = monument_3
+# 				speed = 1
+# 				cost = 0
+# 			}
+# 		}
+		
+# 	}
+	
+# 	option = {
+# 		name = national_wonder.2.z # Не строим
+# 		country_event = {
+# 			id = national_wonder.1
+# 		}
+# 	}
+# }
+
+
+# #################################################################
+# ############ Admiralty
+# #################################################################
+# country_event = {
+# 	id = national_wonder.10
+# 	title = national_wonder.10.t
+# 	desc = national_wonder.10.d #Описание условий для появления кнопки на постройку
+# 	picture = GREAT_BUILDING_eventPicture
+
+# 	is_triggered_only = yes
+
+# 	option = {
+# 		name = national_wonder.10.a # Тригер на постройку конкретного здания
+# 		trigger = {
+			
+# 		}
+# 		country_event = {
+# 			id = national_wonder.11
+# 		}
+# 	}
+
+# 	option = {
+# 		name = national_wonder.10.b
+# 		trigger = {
+			
+# 		}
+# 		country_event = {
+# 			id = national_wonder.12
+# 		}
+# 	}
+
+# 	option = {
+# 		name = national_wonder.10.c
+# 		country_event = {
+# 			id = national_wonder.13
+# 		}
+# 	}
+	
+# 	option = {
+# 		name = national_wonder.2.z
+# 		country_event = {
+# 			id = national_wonder.1
+# 		}
+# 	}
+# }
+
+# country_event = {
+# 	id = national_wonder.11
+# 	title = national_wonder.11.t  
+# 	desc = national_wonder.11.d #Описание бонусов постройки и условий строительства
+# 	picture = GREAT_BUILDING_eventPicture
+
+# 	is_triggered_only = yes	
+
+	
+# 	option = {
+# 		name = national_wonder.11.a # Строим
+# 		capital_scope = {
+# 			add_building_construction = {
+# 				building = admiralty_1
+# 				speed = 1
+# 				cost = 0
+# 			}
+# 		}
+# 	}
+
+# 	option = {
+# 		name = national_wonder.2.z # Не строим
+# 		country_event = {
+# 			id = national_wonder.1
+# 		}
+# 	}
+# }
+
+# country_event = {
+# 	id = national_wonder.12
+# 	title = national_wonder.12.t  
+# 	desc = national_wonder.12.d # построили
+# 	picture = GREAT_BUILDING_eventPicture
+
+# 	is_triggered_only = yes	
+
+# 	option = {
+# 		name = national_wonder.12.a
+# 		capital_scope = {
+# 			add_building_construction = {
+# 				building = admiralty_2
+# 				speed = 1
+# 				cost = 0
+# 			}
+# 		}
+# 	}
+	
+# 	option = {
+# 		name = national_wonder.2.z # Не строим
+# 		country_event = {
+# 			id = national_wonder.1
+# 		}
+# 	}
+# }
+
+# country_event = {
+# 	id = national_wonder.13
+# 	title = national_wonder.13.t  
+# 	desc = national_wonder.13.d #Описание бонусов постройки и условий строительства
+# 	picture = GREAT_BUILDING_eventPicture
+
+# 	is_triggered_only = yes	
+
+# 	option = {
+# 		name = national_wonder.13.a # Строим
+# 		capital_scope = {
+# 			add_building_construction = {
+# 				building = admiralty_3
+# 				speed = 1
+# 				cost = 0
+# 			}
+# 		}
+		
+# 	}
+	
+# 	option = {
+# 		name = national_wonder.2.z # Не строим
+# 		country_event = {
+# 			id = national_wonder.1
+# 		}
+# 	}
+# }
+
+# #################################################################
+# ############ Colonial Office
+# #################################################################
+# country_event = {
+# 	id = national_wonder.14
+# 	title = national_wonder.14.t
+# 	desc = national_wonder.14.d #Описание условий для появления кнопки на постройку
+# 	picture = GREAT_BUILDING_eventPicture
+
+# 	is_triggered_only = yes
+
+# 	option = {
+# 		name = national_wonder.14.a # Тригер на постройку конкретного здания
+# 		trigger = {
+			
+# 		}
+# 		country_event = {
+# 			id = national_wonder.15
+# 		}
+# 	}
+
+# 	option = {
+# 		name = national_wonder.14.b
+# 		trigger = {
+			
+# 		}
+# 		country_event = {
+# 			id = national_wonder.16
+# 		}
+# 	}
+
+# 	option = {
+# 		name = national_wonder.14.c
+# 		country_event = {
+# 			id = national_wonder.17
+# 		}
+# 	}
+	
+# 	option = {
+# 		name = national_wonder.2.z
+# 		country_event = {
+# 			id = national_wonder.1
+# 		}
+# 	}
+# }
+
+# country_event = {
+# 	id = national_wonder.15
+# 	title = national_wonder.15.t  
+# 	desc = national_wonder.15.d #Описание бонусов постройки и условий строительства
+# 	picture = GREAT_BUILDING_eventPicture
+
+# 	is_triggered_only = yes	
+
+	
+# 	option = {
+# 		name = national_wonder.15.a # Строим
+# 		capital_scope = {
+# 			add_building_construction = {
+# 				building = colonial_office_1
+# 				speed = 1
+# 				cost = 0
+# 			}
+# 		}
+# 	}
+
+# 	option = {
+# 		name = national_wonder.2.z # Не строим
+# 		country_event = {
+# 			id = national_wonder.1
+# 		}
+# 	}
+# }
+
+# country_event = {
+# 	id = national_wonder.16
+# 	title = national_wonder.16.t  
+# 	desc = national_wonder.16.d # построили
+# 	picture = GREAT_BUILDING_eventPicture
+
+# 	is_triggered_only = yes	
+
+# 	option = {
+# 		name = national_wonder.16.a
+# 		capital_scope = {
+# 			add_building_construction = {
+# 				building = colonial_office_2
+# 				speed = 1
+# 				cost = 0
+# 			}
+# 		}
+# 	}
+	
+# 	option = {
+# 		name = national_wonder.2.z # Не строим
+# 		country_event = {
+# 			id = national_wonder.1
+# 		}
+# 	}
+# }
+
+# country_event = {
+# 	id = national_wonder.17
+# 	title = national_wonder.17.t  
+# 	desc = national_wonder.17.d #Описание бонусов постройки и условий строительства
+# 	picture = GREAT_BUILDING_eventPicture
+
+# 	is_triggered_only = yes	
+
+# 	option = {
+# 		name = national_wonder.3.a # Строим
+# 		capital_scope = {
+# 			add_building_construction = {
+# 				building = colonial_office_3
+# 				speed = 1
+# 				cost = 0
+# 			}
+# 		}
+		
+# 	}
+	
+# 	option = {
+# 		name = national_wonder.2.z # Не строим
+# 		country_event = {
+# 			id = national_wonder.1
+# 		}
+# 	}
+# }
+
+# #################################################################
+# ############ Triumphal Arch
+# #################################################################
+# country_event = {
+# 	id = national_wonder.18
+# 	title = national_wonder.18.t
+# 	desc = national_wonder.18.d #Описание условий для появления кнопки на постройку
+# 	picture = GREAT_BUILDING_eventPicture
+
+# 	is_triggered_only = yes
+
+# 	option = {
+# 		name = national_wonder.18.a # Тригер на постройку конкретного здания
+# 		trigger = {
+			
+# 		}
+# 		country_event = {
+# 			id = national_wonder.19
+# 		}
+# 	}
+
+# 	option = {
+# 		name = national_wonder.18.b
+# 		trigger = {
+			
+# 		}
+# 		country_event = {
+# 			id = national_wonder.20
+# 		}
+# 	}
+
+# 	option = {
+# 		name = national_wonder.18.c
+# 		country_event = {
+# 			id = national_wonder.21
+# 		}
+# 	}
+	
+# 	option = {
+# 		name = national_wonder.2.z
+# 		country_event = {
+# 			id = national_wonder.1
+# 		}
+# 	}
+# }
+
+# country_event = {
+# 	id = national_wonder.19
+# 	title = national_wonder.19.t  
+# 	desc = national_wonder.19.d #Описание бонусов постройки и условий строительства
+# 	picture = GREAT_BUILDING_eventPicture
+
+# 	is_triggered_only = yes	
+
+	
+# 	option = {
+# 		name = national_wonder.19.a # Строим
+# 		capital_scope = {
+# 			add_building_construction = {
+# 				building = triumphal_arch_1
+# 				speed = 1
+# 				cost = 0
+# 			}
+# 		}
+# 	}
+
+# 	option = {
+# 		name = national_wonder.2.z # Не строим
+# 		country_event = {
+# 			id = national_wonder.1
+# 		}
+# 	}
+# }
+
+# country_event = {
+# 	id = national_wonder.20
+# 	title = national_wonder.20.t  
+# 	desc = national_wonder.20.d # построили
+# 	picture = GREAT_BUILDING_eventPicture
+
+# 	is_triggered_only = yes	
+
+# 	option = {
+# 		name = national_wonder.20.a
+# 		capital_scope = {
+# 			add_building_construction = {
+# 				building = triumphal_arch_2
+# 				speed = 1
+# 				cost = 0
+# 			}
+# 		}
+# 	}
+	
+# 	option = {
+# 		name = national_wonder.2.z # Не строим
+# 		country_event = {
+# 			id = national_wonder.1
+# 		}
+# 	}
+# }
+
+# country_event = {
+# 	id = national_wonder.21
+# 	title = national_wonder.21.t  
+# 	desc = national_wonder.21.d #Описание бонусов постройки и условий строительства
+# 	picture = GREAT_BUILDING_eventPicture
+
+# 	is_triggered_only = yes	
+
+# 	option = {
+# 		name = national_wonder.21.a # Строим
+# 		capital_scope = {
+# 			add_building_construction = {
+# 				building = triumphal_arch_3
+# 				speed = 1
+# 				cost = 0
+# 			}
+# 		}
+		
+# 	}
+	
+# 	option = {
+# 		name = national_wonder.2.z # Не строим
+# 		country_event = {
+# 			id = national_wonder.1
+# 		}
+# 	}
+# }
+
+# #################################################################
+# ############ CIA
+# #################################################################
+# country_event = {
+# 	id = national_wonder.22
+# 	title = national_wonder.22.t
+# 	desc = national_wonder.22.d #Описание условий для появления кнопки на постройку
+# 	picture = GREAT_BUILDING_eventPicture
+
+# 	is_triggered_only = yes
+
+# 	option = {
+# 		name = national_wonder.22.a # Тригер на постройку конкретного здания
+# 		trigger = {
+			
+# 		}
+# 		country_event = {
+# 			id = national_wonder.23
+# 		}
+# 	}
+
+# 	option = {
+# 		name = national_wonder.22.b
+# 		trigger = {
+			
+# 		}
+# 		country_event = {
+# 			id = national_wonder.24
+# 		}
+# 	}
+
+# 	option = {
+# 		name = national_wonder.22.c
+# 		country_event = {
+# 			id = national_wonder.25
+# 		}
+# 	}
+	
+# 	option = {
+# 		name = national_wonder.2.z
+# 		country_event = {
+# 			id = national_wonder.1
+# 		}
+# 	}
+# }
+
+# country_event = {
+# 	id = national_wonder.23
+# 	title = national_wonder.23.t  
+# 	desc = national_wonder.23.d #Описание бонусов постройки и условий строительства
+# 	picture = GREAT_BUILDING_eventPicture
+
+# 	is_triggered_only = yes	
+
+	
+# 	option = {
+# 		name = national_wonder.23.a # Строим
+# 		capital_scope = {
+# 			add_building_construction = {
+# 				building = cia_1
+# 				speed = 1
+# 				cost = 0
+# 			}
+# 		}
+# 	}
+
+# 	option = {
+# 		name = national_wonder.2.z # Не строим
+# 		country_event = {
+# 			id = national_wonder.1
+# 		}
+# 	}
+# }
+
+# country_event = {
+# 	id = national_wonder.24
+# 	title = national_wonder.24.t  
+# 	desc = national_wonder.24.d # построили
+# 	picture = GREAT_BUILDING_eventPicture
+
+# 	is_triggered_only = yes	
+
+# 	option = {
+# 		name = national_wonder.24.a
+# 		capital_scope = {
+# 			add_building_construction = {
+# 				building = cia_2
+# 				speed = 1
+# 				cost = 0
+# 			}
+# 		}
+# 	}
+	
+# 	option = {
+# 		name = national_wonder.2.z # Не строим
+# 		country_event = {
+# 			id = national_wonder.1
+# 		}
+# 	}
+# }
+
+# country_event = {
+# 	id = national_wonder.25
+# 	title = national_wonder.25.t  
+# 	desc = national_wonder.25.d #Описание бонусов постройки и условий строительства
+# 	picture = GREAT_BUILDING_eventPicture
+
+# 	is_triggered_only = yes	
+
+# 	option = {
+# 		name = national_wonder.25.a # Строим
+# 		capital_scope = {
+# 			add_building_construction = {
+# 				building = cia_3
+# 				speed = 1
+# 				cost = 0
+# 			}
+# 		}
+		
+# 	}
+	
+# 	option = {
+# 		name = national_wonder.2.z # Не строим
+# 		country_event = {
+# 			id = national_wonder.1
+# 		}
+# 	}
+# }
+
+# #################################################################
+# ############ Tax Office
+# #################################################################
+# country_event = {
+# 	id = national_wonder.26
+# 	title = national_wonder.26.t
+# 	desc = national_wonder.26.d #Описание условий для появления кнопки на постройку
+# 	picture = GREAT_BUILDING_eventPicture
+
+# 	is_triggered_only = yes
+
+# 	option = {
+# 		name = national_wonder.26.a # Тригер на постройку конкретного здания
+# 		trigger = {
+			
+# 		}
+# 		country_event = {
+# 			id = national_wonder.27
+# 		}
+# 	}
+
+# 	option = {
+# 		name = national_wonder.26.b
+# 		trigger = {
+			
+# 		}
+# 		country_event = {
+# 			id = national_wonder.28
+# 		}
+# 	}
+
+# 	option = {
+# 		name = national_wonder.26.c
+# 		country_event = {
+# 			id = national_wonder.29
+# 		}
+# 	}
+	
+# 	option = {
+# 		name = national_wonder.2.z
+# 		country_event = {
+# 			id = national_wonder.1
+# 		}
+# 	}
+# }
+
+# country_event = {
+# 	id = national_wonder.27
+# 	title = national_wonder.27.t  
+# 	desc = national_wonder.27.d #Описание бонусов постройки и условий строительства
+# 	picture = GREAT_BUILDING_eventPicture
+
+# 	is_triggered_only = yes	
+
+	
+# 	option = {
+# 		name = national_wonder.27.a # Строим
+# 		capital_scope = {
+# 			add_building_construction = {
+# 				building = tax_office_1
+# 				speed = 1
+# 				cost = 0
+# 			}
+# 		}
+# 	}
+
+# 	option = {
+# 		name = national_wonder.2.z # Не строим
+# 		country_event = {
+# 			id = national_wonder.1
+# 		}
+# 	}
+# }
+
+# country_event = {
+# 	id = national_wonder.28
+# 	title = national_wonder.28.t  
+# 	desc = national_wonder.28.d # построили
+# 	picture = GREAT_BUILDING_eventPicture
+
+# 	is_triggered_only = yes	
+
+# 	option = {
+# 		name = national_wonder.28.a
+# 		capital_scope = {
+# 			add_building_construction = {
+# 				building = tax_office_2
+# 				speed = 1
+# 				cost = 0
+# 			}
+# 		}
+# 	}
+	
+# 	option = {
+# 		name = national_wonder.2.z # Не строим
+# 		country_event = {
+# 			id = national_wonder.1
+# 		}
+# 	}
+# }
+
+# country_event = {
+# 	id = national_wonder.29
+# 	title = national_wonder.29.t  
+# 	desc = national_wonder.29.d #Описание бонусов постройки и условий строительства
+# 	picture = GREAT_BUILDING_eventPicture
+
+# 	is_triggered_only = yes	
+
+# 	option = {
+# 		name = national_wonder.29.a # Строим
+# 		capital_scope = {
+# 			add_building_construction = {
+# 				building = tax_office_3
+# 				speed = 1
+# 				cost = 0
+# 			}
+# 		}
+		
+# 	}
+	
+# 	option = {
+# 		name = national_wonder.2.z # Не строим
+# 		country_event = {
+# 			id = national_wonder.1
+# 		}
+# 	}
+# }
+
+# #################################################################
+# ############ University
+# #################################################################
+# country_event = {
+# 	id = national_wonder.30
+# 	title = national_wonder.30.t
+# 	desc = national_wonder.30.d #Описание условий для появления кнопки на постройку
+# 	picture = GREAT_BUILDING_eventPicture
+
+# 	is_triggered_only = yes
+
+# 	option = {
+# 		name = national_wonder.30.a # Тригер на постройку конкретного здания
+# 		trigger = {
+			
+# 		}
+# 		country_event = {
+# 			id = national_wonder.31
+# 		}
+# 	}
+
+# 	option = {
+# 		name = national_wonder.30.b
+# 		trigger = {
+			
+# 		}
+# 		country_event = {
+# 			id = national_wonder.32
+# 		}
+# 	}
+
+# 	option = {
+# 		name = national_wonder.30.c
+# 		country_event = {
+# 			id = national_wonder.33
+# 		}
+# 	}
+	
+# 	option = {
+# 		name = national_wonder.2.z
+# 		country_event = {
+# 			id = national_wonder.1
+# 		}
+# 	}
+# }
+
+# country_event = {
+# 	id = national_wonder.31
+# 	title = national_wonder.31.t  
+# 	desc = national_wonder.31.d #Описание бонусов постройки и условий строительства
+# 	picture = GREAT_BUILDING_eventPicture
+
+# 	is_triggered_only = yes	
+
+	
+# 	option = {
+# 		name = national_wonder.31.a # Строим
+# 		capital_scope = {
+# 			add_building_construction = {
+# 				building = national_university_1
+# 				speed = 1
+# 				cost = 0
+# 			}
+# 		}
+# 	}
+
+# 	option = {
+# 		name = national_wonder.2.z # Не строим
+# 		country_event = {
+# 			id = national_wonder.1
+# 		}
+# 	}
+# }
+
+# country_event = {
+# 	id = national_wonder.32
+# 	title = national_wonder.32.t  
+# 	desc = national_wonder.32.d # построили
+# 	picture = GREAT_BUILDING_eventPicture
+
+# 	is_triggered_only = yes	
+
+# 	option = {
+# 		name = national_wonder.32.a
+# 		capital_scope = {
+# 			add_building_construction = {
+# 				building = national_university_2
+# 				speed = 1
+# 				cost = 0
+# 			}
+# 		}
+# 	}
+	
+# 	option = {
+# 		name = national_wonder.2.z # Не строим
+# 		country_event = {
+# 			id = national_wonder.1
+# 		}
+# 	}
+# }
+
+# country_event = {
+# 	id = national_wonder.33
+# 	title = national_wonder.33.t  
+# 	desc = national_wonder.33.d #Описание бонусов постройки и условий строительства
+# 	picture = GREAT_BUILDING_eventPicture
+
+# 	is_triggered_only = yes	
+
+# 	option = {
+# 		name = national_wonder.33.a # Строим
+# 		capital_scope = {
+# 			add_building_construction = {
+# 				building = national_university_3
+# 				speed = 1
+# 				cost = 0
+# 			}
+# 		}
+		
+# 	}
+	
+# 	option = {
+# 		name = national_wonder.2.z # Не строим
+# 		country_event = {
+# 			id = national_wonder.1
+# 		}
+# 	}
+# }
+
+# #################################################################
+# ############ Departament of Commerce
+# #################################################################
+# country_event = {
+# 	id = national_wonder.34
+# 	title = national_wonder.34.t
+# 	desc = national_wonder.34.d #Описание условий для появления кнопки на постройку
+# 	picture = GREAT_BUILDING_eventPicture
+
+# 	is_triggered_only = yes
+
+# 	option = {
+# 		name = national_wonder.34.a # Тригер на постройку конкретного здания
+# 		trigger = {
+			
+# 		}
+# 		country_event = {
+# 			id = national_wonder.35
+# 		}
+# 	}
+
+# 	option = {
+# 		name = national_wonder.34.b
+# 		trigger = {
+			
+# 		}
+# 		country_event = {
+# 			id = national_wonder.36
+# 		}
+# 	}
+
+# 	option = {
+# 		name = national_wonder.34.c
+# 		country_event = {
+# 			id = national_wonder.37
+# 		}
+# 	}
+	
+# 	option = {
+# 		name = national_wonder.2.z
+# 		country_event = {
+# 			id = national_wonder.1
+# 		}
+# 	}
+# }
+
+# country_event = {
+# 	id = national_wonder.35
+# 	title = national_wonder.35.t  
+# 	desc = national_wonder.35.d #Описание бонусов постройки и условий строительства
+# 	picture = GREAT_BUILDING_eventPicture
+
+# 	is_triggered_only = yes	
+
+	
+# 	option = {
+# 		name = national_wonder.35.a # Строим
+# 		capital_scope = {
+# 			add_building_construction = {
+# 				building = trade_office_1
+# 				speed = 1
+# 				cost = 0
+# 			}
+# 		}
+# 	}
+
+# 	option = {
+# 		name = national_wonder.2.z # Не строим
+# 		country_event = {
+# 			id = national_wonder.1
+# 		}
+# 	}
+# }
+
+# country_event = {
+# 	id = national_wonder.36
+# 	title = national_wonder.36.t  
+# 	desc = national_wonder.36.d # построили
+# 	picture = GREAT_BUILDING_eventPicture
+
+# 	is_triggered_only = yes	
+
+# 	option = {
+# 		name = national_wonder.36.a
+# 		capital_scope = {
+# 			add_building_construction = {
+# 				building = trade_office_2
+# 				speed = 1
+# 				cost = 0
+# 			}
+# 		}
+# 	}
+	
+# 	option = {
+# 		name = national_wonder.2.z # Не строим
+# 		country_event = {
+# 			id = national_wonder.1
+# 		}
+# 	}
+# }
+
+# country_event = {
+# 	id = national_wonder.37
+# 	title = national_wonder.37.t  
+# 	desc = national_wonder.37.d #Описание бонусов постройки и условий строительства
+# 	picture = GREAT_BUILDING_eventPicture
+
+# 	is_triggered_only = yes	
+
+# 	option = {
+# 		name = national_wonder.37.a # Строим
+# 		capital_scope = {
+# 			add_building_construction = {
+# 				building = trade_office_3
+# 				speed = 1
+# 				cost = 0
+# 			}
+# 		}
+		
+# 	}
+	
+# 	option = {
+# 		name = national_wonder.2.z # Не строим
+# 		country_event = {
+# 			id = national_wonder.1
+# 		}
+# 	}
+# }
+
+# #################################################################
+# ############ Naval Arsenal
+# #################################################################
+# country_event = {
+# 	id = national_wonder.38
+# 	title = national_wonder.38.t
+# 	desc = national_wonder.38.d #Описание условий для появления кнопки на постройку
+# 	picture = GREAT_BUILDING_eventPicture
+
+# 	is_triggered_only = yes
+
+# 	option = {
+# 		name = national_wonder.38.a # Тригер на постройку конкретного здания
+# 		trigger = {
+			
+# 		}
+# 		country_event = {
+# 			id = national_wonder.39
+# 		}
+# 	}
+
+# 	option = {
+# 		name = national_wonder.38.b
+# 		trigger = {
+			
+# 		}
+# 		country_event = {
+# 			id = national_wonder.40
+# 		}
+# 	}
+
+# 	option = {
+# 		name = national_wonder.38.c
+# 		country_event = {
+# 			id = national_wonder.41
+# 		}
+# 	}
+	
+# 	option = {
+# 		name = national_wonder.2.z
+# 		country_event = {
+# 			id = national_wonder.1
+# 		}
+# 	}
+# }
+
+# country_event = {
+# 	id = national_wonder.39
+# 	title = national_wonder.39.t  
+# 	desc = national_wonder.39.d #Описание бонусов постройки и условий строительства
+# 	picture = GREAT_BUILDING_eventPicture
+
+# 	is_triggered_only = yes	
+
+	
+# 	option = {
+# 		name = national_wonder.39.a # Строим
+# 		capital_scope = {
+# 			add_building_construction = {
+# 				building = naval_arsenal_1
+# 				speed = 1
+# 				cost = 0
+# 			}
+# 		}
+# 	}
+
+# 	option = {
+# 		name = national_wonder.2.z # Не строим
+# 		country_event = {
+# 			id = national_wonder.1
+# 		}
+# 	}
+# }
+
+# country_event = {
+# 	id = national_wonder.40
+# 	title = national_wonder.40.t  
+# 	desc = national_wonder.40.d # построили
+# 	picture = GREAT_BUILDING_eventPicture
+
+# 	is_triggered_only = yes	
+
+# 	option = {
+# 		name = national_wonder.40.a
+# 		capital_scope = {
+# 			add_building_construction = {
+# 				building = naval_arsenal_2
+# 				speed = 1
+# 				cost = 0
+# 			}
+# 		}
+# 	}
+	
+# 	option = {
+# 		name = national_wonder.2.z # Не строим
+# 		country_event = {
+# 			id = national_wonder.1
+# 		}
+# 	}
+# }
+
+# country_event = {
+# 	id = national_wonder.41
+# 	title = national_wonder.41.t  
+# 	desc = national_wonder.41.d #Описание бонусов постройки и условий строительства
+# 	picture = GREAT_BUILDING_eventPicture
+
+# 	is_triggered_only = yes	
+
+# 	option = {
+# 		name = national_wonder.41.a # Строим
+# 		capital_scope = {
+# 			add_building_construction = {
+# 				building = naval_arsenal_3
+# 				speed = 1
+# 				cost = 0
+# 			}
+# 		}
+		
+# 	}
+	
+# 	option = {
+# 		name = national_wonder.2.z # Не строим
+# 		country_event = {
+# 			id = national_wonder.1
+# 		}
+# 	}
+# }
+
+# #################################################################
+# ############ Manufactory
+# #################################################################
+# country_event = {
+# 	id = national_wonder.42
+# 	title = national_wonder.42.t
+# 	desc = national_wonder.42.d #Описание условий для появления кнопки на постройку
+# 	picture = GREAT_BUILDING_eventPicture
+
+# 	is_triggered_only = yes
+
+# 	option = {
+# 		name = national_wonder.42.a # Тригер на постройку конкретного здания
+# 		trigger = {
+			
+# 		}
+# 		country_event = {
+# 			id = national_wonder.43
+# 		}
+# 	}
+
+# 	option = {
+# 		name = national_wonder.42.b
+# 		trigger = {
+			
+# 		}
+# 		country_event = {
+# 			id = national_wonder.44
+# 		}
+# 	}
+
+# 	option = {
+# 		name = national_wonder.42.c
+# 		country_event = {
+# 			id = national_wonder.45
+# 		}
+# 	}
+	
+# 	option = {
+# 		name = national_wonder.2.z
+# 		country_event = {
+# 			id = national_wonder.1
+# 		}
+# 	}
+# }
+
+# country_event = {
+# 	id = national_wonder.43
+# 	title = national_wonder.43.t  
+# 	desc = national_wonder.43.d #Описание бонусов постройки и условий строительства
+# 	picture = GREAT_BUILDING_eventPicture
+
+# 	is_triggered_only = yes	
+
+	
+# 	option = {
+# 		name = national_wonder.3.a # Строим
+# 		capital_scope = {
+# 			add_building_construction = {
+# 				building = production_office_1
+# 				speed = 1
+# 				cost = 0
+# 			}
+# 		}
+# 	}
+
+# 	option = {
+# 		name = national_wonder.2.z # Не строим
+# 		country_event = {
+# 			id = national_wonder.1
+# 		}
+# 	}
+# }
+
+# country_event = {
+# 	id = national_wonder.44
+# 	title = national_wonder.44.t  
+# 	desc = national_wonder.44.d # построили
+# 	picture = GREAT_BUILDING_eventPicture
+
+# 	is_triggered_only = yes	
+
+# 	option = {
+# 		name = national_wonder.3.a
+# 		capital_scope = {
+# 			add_building_construction = {
+# 				building = production_office_2
+# 				speed = 1
+# 				cost = 0
+# 			}
+# 		}
+# 	}
+	
+# 	option = {
+# 		name = national_wonder.2.z # Не строим
+# 		country_event = {
+# 			id = national_wonder.1
+# 		}
+# 	}
+# }
+
+# country_event = {
+# 	id = national_wonder.45
+# 	title = national_wonder.45.t  
+# 	desc = national_wonder.45.d #Описание бонусов постройки и условий строительства
+# 	picture = GREAT_BUILDING_eventPicture
+
+# 	is_triggered_only = yes	
+
+# 	option = {
+# 		name = national_wonder.3.a # Строим
+# 		capital_scope = {
+# 			add_building_construction = {
+# 				building = production_office_3
+# 				speed = 1
+# 				cost = 0
+# 			}
+# 		}
+		
+# 	}
+	
+# 	option = {
+# 		name = national_wonder.2.z # Не строим
+# 		country_event = {
+# 			id = national_wonder.1
+# 		}
+# 	}
+# }
+
+#################################################################
+############ National Bank
+#################################################################
+
+country_event = {
+	id = national_wonder.46
+	title = national_wonder.46.t
+	desc = national_wonder.46.d   #Описание условий для появления кнопки на постройку
+	picture = GREAT_BUILDING_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = national_wonder.46.a # Тригер на постройку конкретного здания
+		country_event = {
+			id = national_wonder.47
+		}
+	}
+
+	option = {
+		name = national_wonder.46.b
+		
+		country_event = {
+			id = national_wonder.48
+		}
+	}
+
+	option = {
+		name = national_wonder.46.c
+		
+		country_event = {
+			id = national_wonder.49
+		}
+	}
+	
+	option = {
+		name = national_wonder.2.z
+		country_event = {
+			id = national_wonder.1
+		}
+	}
+}
+
+country_event = {
+	id = national_wonder.47
+	title = national_wonder.47.t  
+	desc = national_wonder.47.d #Описание бонусов постройки и условий строительства
+	picture = GREAT_BUILDING_eventPicture
+
+	is_triggered_only = yes	
+
+	
+	option = {
+		name = national_wonder.3.a # Строим
+		trigger = {
+			capital_scope = {
+				NOT = {
+					has_construction = great_project
+
+					has_construction = building
+					has_building = national_bank_1
+					has_building = national_bank_2
+					has_building = national_bank_3
+				}
+			}
+			has_idea = national_bank
+			advisor = master_of_mint
+		}
+		
+		add_treasury = -1000
+		capital_scope = {
+			add_building_construction = {
+				building = national_bank_1
+				speed = 1
+				cost = 0
+			}
+		}
+	}
+
+	option = {
+		name = national_wonder.2.z # Не строим
+		country_event = {
+			id = national_wonder.46
+		}
+	}
+}
+
+country_event = {
+	id = national_wonder.48
+	title = national_wonder.48.t  
+	desc = national_wonder.48.d # построили
+	picture = GREAT_BUILDING_eventPicture
+
+	is_triggered_only = yes	
+
+	option = {
+		name = national_wonder.3.a
+		trigger = {
+			AND = {
+				capital_scope = {
+					NOT = {
+						has_construction = great_project
+
+						has_construction = building
+						has_building = national_bank_2
+						has_building = national_bank_3
+					}
+				}
+				had_country_flag = {
+					flag = bank
+					days = 3650
+				}
+				capital_scope = {
+					has_building = national_bank_1
+				}
+				OR = {
+					government_rank = 3
+					government_rank = 2
+				}
+				OR = {
+					master_of_mint = 3
+					master_of_mint = 4
+					master_of_mint = 5
+					master_of_mint = 6
+					master_of_mint = 7
+					master_of_mint = 8
+					master_of_mint = 9
+				}
+			}
+		}
+		add_treasury = -5000
+		capital_scope = {
+			add_building_construction = {
+				building = national_bank_2
+				speed = 1
+				cost = 0
+			}
+		}
+	}
+	
+	option = {
+		name = national_wonder.2.z # Не строим
+		country_event = {
+			id = national_wonder.46
+		}
+	}
+}
+
+country_event = {
+	id = national_wonder.49
+	title = national_wonder.49.t  
+	desc = national_wonder.49.d #Описание бонусов постройки и условий строительства
+	picture = GREAT_BUILDING_eventPicture
+
+	is_triggered_only = yes	
+
+	option = {
+		name = national_wonder.3.a # Строим
+		trigger = {
+			capital_scope = {
+				NOT = {
+					has_construction = great_project
+
+					has_building = national_bank_1
+					has_building = national_bank_3
+					has_construction = building
+				}
+			}
+			had_country_flag = {
+				flag = bank
+				days = 9125
+			}
+			capital_scope = {
+				has_building = national_bank_2
+			}
+			government_rank = 3
+			master_of_mint = 5
+		}
+		add_treasury = -10000
+		capital_scope = {
+			add_building_construction = {
+				building = national_bank_3
+				speed = 1
+				cost = 0
+			}
+		}
+	}
+	
+	option = {
+		name = national_wonder.2.z # Не строим
+		country_event = {
+			id = national_wonder.46
+		}
+	}
+}
+
+# country_event = {
+# 	id = national_wonder.50
+# 	title = national_wonder.49.t  
+# 	desc = national_wonder.49.d #Описание бонусов постройки и условий строительства
+# 	picture = GREAT_BUILDING_eventPicture
+
+# 	is_triggered_only = yes	
+
+# 	option = {
+# 		name = national_wonder.3.a # Строим
+# 		add_treasury = -10000
+# 		capital_scope = {
+# 			add_building_construction = {
+# 				building = national_bank_3
+# 				speed = 1
+# 				cost = 0
+# 			}
+# 		}
+# 	}
+	
+# 	option = {
+# 		name = national_wonder.2.z # Не строим
+# 		country_event = {
+# 			id = national_wonder.1
+# 		}
+# 	}
+# }
+
+
+# country_event = {
+# 	id = national_wonder.3
+# 	title = national_wonder.3.t
+# 	desc = national_wonder.3.d
+# 	picture = GREAT_BUILDING_eventPicture
+
+# 	is_triggered_only = yes	
+
+# 	option = {
+# 		name = national_wonder.3.a
+# 		trigger = {
+# 			OR = {
+# 				government_rank = 3
+# 				government_rank = 2
+# 				government_rank = 1
+# 			}
+# 			capital_scope = {
+# 				NOT = {
+# 					has_building = monument_1
+# 					has_building = monument_2
+# 					has_building = monument_3
+# 				}
+# 			}
+# 		}
+# 		set_country_flag = imperial_monument_in_progress
+# 		capital_scope = {
+			
+# 		}
+# 		add_treasury = -1000
+# 		hidden_effect = {
+# 			country_event = {
+# 				id = national_wonder.14
+# 				days = 1
+# 			}
+# 		}
+# 	}
+
+# 	option = {
+# 		name = national_wonder.3.z
+# 		trigger = {
+# 			government_rank = 3
+# 			OR ={
+# 				full_idea_group = nationalismus0
+# 				full_idea_group = imperialismus0
+# 				full_idea_group = propaganda0
+# 			}
+# 		}
+# 		set_country_flag = imperial_monument_in_progress
+# 		capital_scope = {
+
+# 		}
+# 		add_treasury = -1000
+# 		hidden_effect = {
+# 			country_event = {
+# 				id = national_wonder.14
+# 				days = 1
+# 			}
+# 		}
+# 	}
+
+# 	option = {
+# 		name = national_wonder.3.x
+# 		trigger = {
+# 			government_rank = 3
+# 			OR ={
+# 				full_idea_group = nationalismus0
+# 				full_idea_group = imperialismus0
+# 				full_idea_group = propaganda0
+# 			}
+# 		}
+# 		set_country_flag = imperial_monument_in_progress
+# 		capital_scope = {
+
+# 		}
+# 		add_treasury = -1000
+# 		hidden_effect = {
+# 			country_event = {
+# 				id = national_wonder.14
+# 				days = 1
+# 			}
+# 		}
+# 	}
+	
+
+# 	option = {
+# 		name = national_wonder.2.b
+# 		trigger = {
+# 			government_rank = 3
+# 			OR ={
+# 				full_idea_group = nationalismus0
+# 				full_idea_group = imperialismus0
+# 				full_idea_group = propaganda0
+# 			}
+# 			capital_scope = {
+# 				has_province_flag = imperial_monument_completed
+# 			}
+# 		}
+# 		set_country_flag = imperial_monument_in_progress
+# 		capital_scope = {
+
+# 		}
+# 		add_treasury = -25000	
+# 		hidden_effect = {
+# 			country_event = {
+# 				id = national_wonder.14
+# 				days = 1825
+# 			}
+# 		}
+# 	}
+
+# 	option = {
+# 		name = national_wonder.2.c
+# 		country_event = {
+# 			id = national_wonder.1
+# 		}
+# 	}
+# }
+
+# country_event = {
+# 	id = national_wonder.4
+# 	title = national_wonder.4.t
+# 	desc = national_wonder.4.d
+# 	picture = GREAT_BUILDING_eventPicture
+
+# 	is_triggered_only = yes	
+
+# 	option = {
+# 		name = national_wonder.2.a
+# 		trigger = {
+# 			AND = {
+# 				navy_tradition = 90
+# 				OR = {
+# 					full_idea_group = heavy_s_idea
+# 					full_idea_group = galle0
+# 					full_idea_group = light_s_idea
+# 					full_idea_group = maritime_ideas
+# 					full_idea_group = flottenbasis0
+# 				}
+# 			}
+# 		}
+# 		set_country_flag = admiralty_in_progress
+# 		capital_scope = {
+# 			add_province_modifier = {
+# 				duration = 3650
+# 			}
+# 		}
+# 		add_treasury = -50000
+# 		hidden_effect = {
+# 			country_event = {
+# 				id = national_wonder.14
+# 				days = 10
+# 			}
+# 		}
+# 	}
+
+# 	option = {
+# 		name = national_wonder.2.b
+# 		trigger = {
+# 			government_rank = 3
+# 			AND = {
+# 				navy_tradition = 90
+# 				OR = {
+# 					full_idea_group = heavy_s_idea
+# 					full_idea_group = galle0
+# 					full_idea_group = light_s_idea
+# 					full_idea_group = maritime_ideas
+# 					full_idea_group = flottenbasis0
+# 			    }
+# 		    }
+# 			capital_scope = {
+# 				has_province_flag = admiralty_1_completed
+# 			}
+# 		}
+# 		set_country_flag = admiralty_in_progress
+# 		capital_scope = {
+
+# 		}
+# 		add_treasury = -25000
+# 		hidden_effect = {
+# 			country_event = {
+# 				id = national_wonder.14
+# 				days = 1825
+# 			}
+# 		}
+# 	}
+
+# 	option = {
+# 		name = national_wonder.2.c
+# 		country_event = {
+# 			id = national_wonder.1
+# 		}
+# 	}
+# }
+
+# country_event = {
+# 	id = national_wonder.5
+# 	title = national_wonder.5.t
+# 	desc = national_wonder.5.d
+# 	picture = GREAT_BUILDING_eventPicture
+
+# 	is_triggered_only = yes	
+
+# 	option = {
+# 		name = national_wonder.2.a
+# 		trigger = {
+# 			OR = {
+# 				any_country = {
+# 					AND = {
+# 						is_subject_of = ROOT
+# 						is_subject_of_type = colony
+# 					}
+# 				}
+# 				OR = {
+# 					full_idea_group = expansion_ideas
+# 					full_idea_group = exploration_ideas
+# 					full_idea_group = colonial_ideas
+# 				}
+# 			}
+# 		}
+# 		set_country_flag = colonial_office_in_progress
+# 		capital_scope = {
+# 			add_province_modifier = {
+# 				duration = 3650
+# 			}
+# 		}
+# 		add_treasury = -50000
+# 		hidden_effect = {
+# 			country_event = {
+# 				id = national_wonder.14
+# 				days = 3650
+# 			}
+# 		}
+# 	}
+
+# 	option = {
+# 		name = national_wonder.2.b
+# 		trigger = {
+# 			OR = {
+# 				any_country = {
+# 					AND = {
+# 						is_subject_of = ROOT
+# 						is_subject_of_type = colony
+# 					}
+# 				}
+# 				OR = {
+# 					full_idea_group = expansion_ideas
+# 					full_idea_group = exploration_ideas
+# 					full_idea_group = colonial_ideas
+# 				}
+# 			}
+# 			capital_scope = {
+# 				has_province_flag = colonial_office_completed
+# 			}
+# 		}
+# 		set_country_flag = colonial_office_in_progress
+# 		capital_scope = {
+
+# 		}
+# 		add_treasury = -25000
+# 		hidden_effect = {
+# 			country_event = {
+# 				id = national_wonder.14
+# 				days = 1825
+# 			}
+# 		}
+# 	}
+
+# 	option = {
+# 		name = national_wonder.2.c
+# 		country_event = {
+# 			id = national_wonder.1
+# 		}
+# 	}
+
+# }
+
+# country_event = {
+# 	id = national_wonder.6
+# 	title = national_wonder.6.t
+# 	desc = national_wonder.6.d
+# 	picture = GREAT_BUILDING_eventPicture
+
+# 	is_triggered_only = yes	
+
+# 	option = {
+# 		name = national_wonder.2.a
+# 		trigger = {
+# 			power_projection = 100
+# 			has_country_flag = humiliated_rival
+# 			full_idea_group = militarismus0
+# 			full_idea_group = offensive_ideas
+# 		}
+# 		set_country_flag = triumphal_arch_1_in_progress
+# 		capital_scope = {
+# 			add_province_modifier = {
+# 				duration = 3650
+# 			}
+# 		}
+# 		add_treasury = -50000
+# 		hidden_effect = {
+# 			country_event = {
+# 				id = national_wonder.14
+# 				days = 3650
+# 			}
+# 		}
+# 	}
+
+# 	option = {
+# 		name = national_wonder.2.b
+# 		trigger = {
+# 			government_rank = 3
+# 			power_projection = 100
+# 			has_country_flag = humiliated_rival
+# 			full_idea_group = militarismus0
+# 			full_idea_group = offensive_ideas
+# 			capital_scope = {
+# 				has_province_flag = triumphal_arch_1_completed
+# 			}
+# 		}
+# 		set_country_flag = triumphal_arch_1_in_progress
+# 		capital_scope = {
+
+# 		}
+# 		add_treasury = -25000
+# 		hidden_effect = {
+# 			country_event = {
+# 				id = national_wonder.14
+# 				days = 1825
+# 			}
+# 		}
+# 	}
+
+# 	option = {
+# 		name = national_wonder.2.c
+# 		country_event = {
+# 			id = national_wonder.1
+# 		}
+# 	}
+
+# }
+
+# country_event = {
+# 	id = national_wonder.7
+# 	title = national_wonder.7.t
+# 	desc = national_wonder.7.d
+# 	picture = GREAT_BUILDING_eventPicture
+
+# 	is_triggered_only = yes	
+
+# 	option = {
+# 		name = national_wonder.2.a
+# 		trigger = {
+# 			full_idea_group = spy_ideas
+# 		}
+# 		set_country_flag = cia_in_progress
+# 		capital_scope = {
+# 			add_province_modifier = {
+# 				duration = 3650
+# 			}
+# 		}
+# 		add_treasury = -50000
+# 		hidden_effect = {
+# 			country_event = {
+# 				id = national_wonder.14
+# 				days = 3650
+# 			}
+# 		}
+# 	}
+
+# 	option = {
+# 		name = national_wonder.2.b
+# 		trigger = {
+# 			government_rank = 3
+# 			full_idea_group = spy_ideas
+# 			capital_scope = {
+# 				has_province_flag = cia_completed
+# 			}
+# 		}
+# 		set_country_flag = cia_in_progress
+# 		capital_scope = {
+
+# 		}
+# 		add_treasury = -25000
+# 		hidden_effect = {
+# 			country_event = {
+# 				id = national_wonder.14
+# 				days = 1825
+# 			}
+# 		}
+# 	}
+
+# 	option = {
+# 		name = national_wonder.2.c
+# 		country_event = {
+# 			id = national_wonder.1
+# 		}
+# 	}
+
+# }
+
+# country_event = {
+# 	id = national_wonder.8
+# 	title = national_wonder.8.t
+# 	desc = national_wonder.8.d
+# 	picture = GREAT_BUILDING_eventPicture
+
+# 	is_triggered_only = yes	
+
+# 	option = {
+# 		name = national_wonder.2.a
+# 		trigger = {
+# 			tax_income_percentage = 0.5
+# 		}
+# 		set_country_flag = tax_office_1_in_progress
+# 		capital_scope = {
+# 			add_province_modifier = {
+# 				duration = 3650
+# 			}
+# 		}
+# 		add_treasury = -50000
+# 		hidden_effect = {
+# 			country_event = {
+# 				id = national_wonder.14
+# 				days = 3650
+# 			}
+# 		}
+# 	}
+
+# 	option = {
+# 		name = national_wonder.2.b
+# 		trigger = {
+# 			government_rank = 3
+# 			tax_income_percentage = 0.5
+# 			capital_scope = {
+# 				has_province_flag = tax_office_1_completed
+# 			}
+# 		}
+# 		set_country_flag = tax_office_1_in_progress
+# 		capital_scope = {
+
+# 		}
+# 		add_treasury = -25000
+# 		hidden_effect = {
+# 			country_event = {
+# 				id = national_wonder.14
+# 				days = 1825
+# 			}
+# 		}
+# 	}
+
+# 	option = {
+# 		name = national_wonder.2.c
+# 		country_event = {
+# 			id = national_wonder.1
+# 		}
+# 	}
+
+# }
+
+# country_event = {
+# 	id = national_wonder.9
+# 	title = national_wonder.9.t
+# 	desc = national_wonder.9.d
+# 	picture = GREAT_BUILDING_eventPicture
+
+# 	is_triggered_only = yes	
+
+# 	option = {
+# 		name = national_wonder.2.a
+# 		trigger = {
+# 			university = 15
+# 			OR ={
+# 				full_idea_group = innovativeness_ideas
+# 				innovativeness = 50
+# 			}
+# 		}
+# 		set_country_flag = national_university_in_progress
+# 		capital_scope = {
+# 			add_province_modifier = {
+# 				duration = 3650
+# 			}
+# 		}
+# 		add_treasury = -50000
+# 		hidden_effect = {
+# 			country_event = {
+# 				id = national_wonder.14
+# 				days = 3650
+# 			}
+# 		}
+# 	}
+
+# 	option = {
+# 		name = national_wonder.2.b
+# 		trigger = {
+# 			government_rank = 3
+# 			university = 15
+# 			OR ={
+# 				full_idea_group = innovativeness_ideas
+# 				innovativeness = 50
+# 			}
+# 			capital_scope = {
+# 				has_province_flag = national_university_completed
+# 			}
+# 		}
+# 		set_country_flag = national_university_in_progress
+# 		capital_scope = {
+
+# 		}
+# 		add_treasury = -25000
+# 		hidden_effect = {
+# 			country_event = {
+# 				id = national_wonder.14
+# 				days = 1825
+# 			}
+# 		}
+# 	}
+
+# 	option = {
+# 		name = national_wonder.2.c
+# 		country_event = {
+# 			id = national_wonder.1
+# 		}
+# 	}
+
+# }
+
+# country_event = {
+# 	id = national_wonder.10
+# 	title = national_wonder.10.t
+# 	desc = national_wonder.10.d
+# 	picture = GREAT_BUILDING_eventPicture
+
+# 	is_triggered_only = yes	
+
+# 	option = {
+# 		name = national_wonder.2.a
+# 		trigger = {
+# 			AND = {
+# 				full_idea_group = trade_ideas
+# 				trade_income_percentage = 0.5
+# 			}
+# 		}
+# 		set_country_flag = trade_office_1_in_progress
+# 		capital_scope = {
+# 			add_province_modifier = {
+# 				duration = 3650
+# 			}
+# 		}
+# 		add_treasury = -50000
+# 		hidden_effect = {
+# 			country_event = {
+# 				id = national_wonder.14
+# 				days = 3650
+# 			}
+# 		}
+# 	}
+
+# 	option = {
+# 		name = national_wonder.2.b
+# 		trigger = {
+# 			government_rank = 3
+# 			AND = {
+# 				full_idea_group = trade_ideas
+# 				trade_income_percentage = 0.5
+# 			}
+# 			capital_scope = {
+# 				has_province_flag = trade_office_1_completed
+# 			}
+# 			treasury = 25000
+# 		}
+# 		set_country_flag = trade_office_1_in_progress
+# 		capital_scope = {
+
+# 		}
+# 		add_treasury = -25000
+# 		hidden_effect = {
+# 			country_event = {
+# 				id = national_wonder.14
+# 				days = 1825
+# 			}
+# 		}
+# 	}
+
+# 	option = {
+# 		name = national_wonder.2.c
+# 		country_event = {
+# 			id = national_wonder.1
+# 		}
+# 	}
+
+# }
+
+# country_event = {
+# 	id = national_wonder.11
+# 	title = national_wonder.11.t
+# 	desc = national_wonder.11.d
+# 	picture = GREAT_BUILDING_eventPicture
+
+# 	is_triggered_only = yes	
+
+# 	option = {
+# 		name = national_wonder.2.a
+# 		trigger = {
+# 			OR = {
+# 				num_of_heavy_ship = 150
+# 				num_of_galley = 300
+# 			}
+# 			OR = {
+# 				full_idea_group = galle0
+# 				full_idea_group = light_s_idea
+# 				full_idea_group = heavy_s_idea
+# 			}
+# 		}
+# 		set_country_flag = naval_arsenal_in_progress
+# 		capital_scope = {
+# 			add_province_modifier = {
+# 				duration = 3650
+# 			}
+# 		}
+# 		add_treasury = -50000
+# 		hidden_effect = {
+# 			country_event = {
+# 				id = national_wonder.14
+# 				days = 3650
+# 			}
+# 		}
+# 	}
+
+# 	option = {
+# 		name = national_wonder.2.b
+# 		trigger = {
+# 			government_rank = 3
+# 			OR = {
+# 				num_of_heavy_ship = 150
+# 				num_of_galley = 300
+# 			}
+# 			OR = {
+# 				full_idea_group = galle0
+# 				full_idea_group = light_s_idea
+# 				full_idea_group = heavy_s_idea
+# 			}
+# 			capital_scope = {
+# 				has_province_flag = naval_arsenal_comleted
+# 			}
+# 		}
+# 		set_country_flag = naval_arsenal_in_progress
+# 		capital_scope = {
+
+# 		}
+# 		add_treasury = -25000
+# 		hidden_effect = {
+# 			country_event = {
+# 				id = national_wonder.14
+# 				days = 1825
+# 			}
+# 		}
+# 	}
+
+# 	option = {
+# 		name = national_wonder.2.c
+# 		country_event = {
+# 			id = national_wonder.1
+# 		}
+# 	}
+
+# }
+
+# country_event = {
+# 	id = national_wonder.12
+# 	title = national_wonder.12.t
+# 	desc = national_wonder.12.d
+# 	picture = GREAT_BUILDING_eventPicture
+
+# 	is_triggered_only = yes	
+
+# 	option = {
+# 		name = national_wonder.2.a
+# 		trigger = {
+# 			num_of_owned_provinces_with = {
+# 				value = 150
+# 				has_manufactory_trigger =yes
+# 			}
+# 			capital_scope = {
+# 				num_free_building_slots = 2
+# 			}
+# 		}
+# 		set_country_flag = production_office_1_in_progress
+# 		capital_scope = {
+# 			add_province_modifier = {
+# 				duration = 3650
+# 			}
+# 		}
+# 		add_treasury = -50000
+# 		hidden_effect = {
+# 			country_event = {
+# 				id = national_wonder.14
+# 				days = 3650
+# 			}
+# 		}
+# 	}
+
+# 	option = {
+# 		name = national_wonder.2.b
+# 		trigger = {
+# 			num_of_owned_provinces_with = {
+# 				value = 150
+# 				has_manufactory_trigger =yes
+# 			}
+# 			capital_scope = {
+# 				has_province_flag = production_office_1_completed
+# 				NOT = {
+# 					has_building = production_office_1
+# 				}
+# 				num_free_building_slots = 2
+# 			}
+# 		}
+# 		set_country_flag = production_office_1_in_progress
+# 		capital_scope = {
+
+# 		}
+# 		add_treasury = -25000
+# 		hidden_effect = {
+# 			country_event = {
+# 				id = national_wonder.14
+# 				days = 1825
+# 			}
+# 		}
+# 	}
+
+# 	option = {
+# 		name = national_wonder.2.c
+# 		country_event = {
+# 			id = national_wonder.1
+# 		}
+# 	}
+
+# }
+
+# country_event = {
+# 	id = national_wonder.13
+# 	title = national_wonder.13.t
+# 	desc = national_wonder.13.d
+# 	picture = GREAT_BUILDING_eventPicture
+
+# 	is_triggered_only = yes	
+
+# 	option = {
+# 		name = national_wonder.2.a
+# 		trigger = {
+# 			has_country_flag = bank
+# 			capital_scope = {
+# 				NOT = {
+# 					has_building = national_bank_1
+# 				}
+# 				num_free_building_slots = 2
+# 			}
+# 		}
+# 		set_country_flag = national_bank_in_progress
+# 		capital_scope = {
+# 			add_province_modifier = {
+# 				duration = 3650
+# 			}
+# 		}
+# 		add_treasury = -50000
+# 		hidden_effect = {
+# 			country_event = {
+# 				id = national_wonder.14
+# 				days = 3650
+# 			}
+# 		}
+# 	}
+
+# 	option = {
+# 		name = national_wonder.2.b
+# 		trigger = {
+# 			has_country_flag = bank
+# 			capital_scope = {
+# 				has_province_flag = national_bank_completed
+# 				NOT = {
+# 					has_building = national_bank_1
+# 				}
+# 				num_free_building_slots = 2
+# 			}
+# 		}
+# 		set_country_flag = national_bank_in_progress
+# 		capital_scope = {
+
+# 		}
+# 		add_treasury = -25000
+# 		hidden_effect = {
+# 			country_event = {
+# 				id = national_wonder.14
+# 				days = 1825
+# 			}
+# 		}
+# 	}
+
+# 	option = {
+# 		name = national_wonder.2.c
+# 		country_event = {
+# 			id = national_wonder.1
+# 		}
+# 	}
+# }
+
+# country_event = {
+# 	id = national_wonder.14
+# 	title = national_wonder.14.t
+# 	desc = national_wonder.14.d
+# 	picture = GREAT_BUILDING_eventPicture
+
+# 	is_triggered_only = yes
+
+# 	option = {
+# 		name = national_wonder.14.a
+# 		if = {
+# 			limit = {
+# 				has_country_flag = great_catedral_in_progress
+# 			}
+# 			if = {
+# 				limit = {
+# 					capital_scope = {
+# 						NOT = {
+# 							has_building = great_cathedral_1
+# 							has_building = great_cathedral_2
+# 							has_building = great_cathedral_3
+# 						}
+# 					}
+# 				}
+# 				clr_country_flag = great_catedral_in_progress
+# 				capital_scope = {
+# 					add_building = great_cathedral_1
+# 					set_province_flag = great_cathedral_1_completed
+# 				}
+# 			}
+# 			else_if = {
+# 				limit = {
+# 					capital_scope = {
+# 						has_building = great_cathedral_1
+# 					}
+# 				}
+# 				clr_country_flag = great_catedral_in_progress
+# 				capital_scope = {
+# 					remove_building = great_cathedral_1
+# 					add_building = great_cathedral_2
+# 					clr_province_flag = great_cathedral_1_completed
+# 					set_province_flag = great_cathedral_2_completed
+# 				}
+# 			}
+# 			else_if = {
+# 				limit = { 
+# 					capital_scope = {
+# 						has_building = great_cathedral_2
+# 					}
+# 				}
+# 				clr_country_flag = great_catedral_in_progress
+# 				capital_scope = {
+# 					remove_building = great_cathedral_2
+# 					add_building = great_cathedral_3
+# 					clr_province_flag = great_cathedral_2_completed
+# 					set_province_flag = great_cathedral_3_completed
+# 				}
+# 			}
+# 		}
+# 		if = {
+# 			limit = {
+# 				has_country_flag = monument_in_progress
+# 			}
+# 			if = {
+# 				limit = {
+# 					capital_scope = {
+# 						NOT = {
+# 							has_building = monument_1
+# 							has_building = monument_2
+# 							has_building = monument_3
+# 						}
+# 					}
+# 				}
+# 				clr_country_flag = imperial_monument_in_progress
+# 				capital_scope = {
+# 					add_building = monument_1
+# 					set_province_flag = monument_1_completed
+# 				}
+# 			}
+# 			else_if = {
+# 				limit = {
+# 					capital_scope = {
+# 						has_building = monument_1
+# 					}
+# 				}
+# 				clr_country_flag = imperial_monument_in_progress
+# 				capital_scope = {
+# 					remove_building = monument_1
+# 					add_building = monument_2
+# 					clr_province_flag = monument_1_completed
+# 					set_province_flag = monument_2_completed					
+# 				}
+# 			}
+# 			else_if = {
+# 				limit = {
+# 					capital_scope = {
+# 						has_building = monument_2
+# 					}
+# 				}
+# 				clr_country_flag = imperial_monument_in_progress
+# 				capital_scope = {
+# 					remove_building = monument_2
+# 					add_building = monument_3
+# 					clr_province_flag = monument_2_completed
+# 					set_province_flag = monument_3_completed
+# 				}
+# 			}
+# 		}
+# 		if = {
+# 			limit = {
+# 				has_country_flag = admiralty_in_progress
+# 			}
+# 			if = {
+# 				limit = {
+# 					capital_scope = {
+# 						NOT = {
+# 							has_building = admiralty_1
+# 							has_building = admiralty_2
+# 							has_building = admiralty_3
+# 						}
+# 					}
+# 				}
+# 				clr_country_flag = admiralty_in_progress
+# 				capital_scope = {
+# 					add_building = admiralty_1
+# 					set_province_flag = admiralty_1_completed
+# 				}
+# 			}
+# 			else_if = {
+# 				limit = {
+# 					capital_scope = {
+# 						has_building = admiralty_1
+# 					}
+# 				}
+# 				clr_country_flag = admiralty_in_progress
+# 				capital_scope = {
+# 					remove_building = admiralty_1
+# 					add_building = admiralty_2
+# 					clr_province_flag = admiralty_1_completed
+# 					set_province_flag = admiralty_2_completed
+# 				}
+# 			}
+# 			else_if = {
+# 				limit = {
+# 					capital_scope = {
+# 						has_building = admiralty_2
+# 					}
+# 				}
+# 				clr_country_flag = admiralty_in_progress
+# 				capital_scope = {
+# 					remove_building = admiralty_2
+# 					add_building = admiralty_3
+# 					clr_province_flag = admiralty_2_completed
+# 					set_province_flag = admiralty_3_completed
+# 				}
+# 			}
+# 		}
+# 		if = {
+# 			limit = {
+# 				has_country_flag = colonial_office_in_progress
+# 			}
+# 			if = {
+# 				limit = {
+# 					capital_scope = {
+# 						NOT = {
+# 							has_building = colonial_office_1
+# 							has_building = colonial_office_2
+# 							has_building = colonial_office_3
+# 						}
+# 					}
+# 				}
+# 				clr_country_flag = colonial_office_in_progress
+# 				capital_scope = {
+# 					set_province_flag = colonial_office_1_completed
+# 					add_building = colonial_office_1
+# 				}
+# 			}
+# 			else_if = {
+# 				limit = {
+# 					capital_scope = {
+# 						has_building = colonial_office_1
+# 					}
+# 				}
+# 				clr_country_flag = colonial_office_in_progress
+# 				capital_scope = {
+# 					remove_building = colonial_office_1
+# 					add_building = colonial_office_2
+# 					clr_province_flag = colonial_office_1_completed
+# 					set_province_flag = colonial_office_2_completed
+# 				}
+# 			}
+# 			else_if = {
+# 				limit = {
+# 					capital_scope = {
+# 						has_building = colonial_office_2
+# 					}
+# 				}
+# 				clr_country_flag = colonial_office_in_progress
+# 				capital_scope = {
+# 					remove_building = colonial_office_2
+# 					add_building = colonial_office_3
+# 					clr_province_flag = colonial_office_2_completed
+# 					set_province_flag = colonial_office_3_completed
+# 				}
+# 			}
+# 		}
+# 		if = {
+# 			limit = {
+# 				has_country_flag = triumphal_arch_in_progress
+# 			}
+# 			if = {
+# 				limit = {
+# 					NOT = {
+# 						has_building = triumphal_arch_1
+# 						has_building = triumphal_arch_2
+# 						has_building = triumphal_arch_3
+# 					}
+# 				}
+# 				clr_country_flag = triumphal_arch_in_progress
+# 				capital_scope = {
+# 					add_building = triumphal_arch_1
+# 					set_province_flag = triumphal_arch_1_completed
+# 				}
+# 			}
+# 			else_if = {
+# 				limit = {
+# 					has_building = triumphal_arch_1
+# 				}
+# 				clr_country_flag = triumphal_arch_in_progress
+# 				capital_scope = {
+# 					remove_building = triumphal_arch_1
+# 					add_building = triumphal_arch_2
+# 					clr_province_flag = triumphal_arch_1_completed
+# 					set_province_flag = triumphal_arch_2_completed
+# 				}
+# 			}
+# 			else_if = {
+# 				limit = {
+# 					has_building = triumphal_arch_2
+# 				}
+# 				clr_country_flag = triumphal_arch_in_progress
+# 				capital_scope = {
+# 					remove_building = triumphal_arch_2
+# 					add_building = triumphal_arch_3
+# 					clr_province_flag = triumphal_arch_2_completed
+# 					set_province_flag = triumphal_arch_3_completed
+# 				}
+# 			}
+# 		}	
+		
+		
+		
+# 		else_if = {
+# 			limit = {
+# 				has_country_flag = cia_in_progress
+# 			}
+# 			clr_country_flag = cia_in_progress
+# 			capital_scope = {
+# 				add_building = cia
+# 				set_province_flag = cia_completed
+# 			}
+# 		}
+# 		else_if = {
+# 			limit = {
+# 				has_country_flag = tax_office_1_in_progress
+# 			}
+# 			clr_country_flag = tax_office_1_in_progress
+# 			capital_scope = {
+# 				add_building = tax_office_1
+# 				set_province_flag = tax_office_1_completed
+# 			}
+# 		}
+# 		else_if = {
+# 			limit = {
+# 				has_country_flag = national_university_in_progress
+# 			}
+# 			clr_country_flag = national_university_in_progress
+# 			capital_scope = {
+# 				add_building = national_university_1
+# 				set_province_flag = national_university_completed
+# 			}
+# 		}
+# 		else_if = {
+# 			limit = {
+# 				has_country_flag = trade_office_1_in_progress
+# 			}
+# 			clr_country_flag = trade_office_1_in_progress
+# 			capital_scope = {
+# 				add_building = trade_office_1
+# 				set_province_flag = trade_office_1_completed
+# 			}
+# 		}
+# 		else_if = {
+# 			limit = {
+# 				has_country_flag = naval_arsenal_in_progress
+# 			}
+# 			clr_country_flag = naval_arsenal_in_progress
+# 			capital_scope = {
+# 				add_building = naval_arsenal_1
+# 				set_province_flag = naval_arsenal_comleted
+# 			}
+# 		}
+# 		else_if = {
+# 			limit = {
+# 				has_country_flag = production_office_1_in_progress
+# 			}
+# 			clr_country_flag = production_office_1_in_progress
+# 			capital_scope = {
+# 				add_building = production_office_1
+# 				set_province_flag = production_office_1_completed
+# 			}
+# 		}
+# 		else = {
+# 			clr_country_flag = national_bank_in_progress
+# 			capital_scope = {
+# 				add_building = national_bank
+# 				set_province_flag = national_bank_completed
+# 			}
+# 		}
+# 	}
+# }
+
+# province_event = {
+# 	id = national_wonder.15
+# 	title = national_wonder.15.t
+# 	desc = national_wonder.15.d
+# 	picture = GREAT_BUILDING_eventPicture
+
+# 	trigger = {
+# 		owner = {
+# 			OR = {
+# 				has_country_flag = national_bank_in_progress
+# 				has_country_flag = cia_in_progress
+# 				has_country_flag = great_catedral_in_progress
+# 				has_country_flag = naval_arsenal_in_progress
+# 				has_country_flag = tax_office_1_in_progress
+# 				has_country_flag = trade_office_1_in_progress
+# 				has_country_flag = imperial_monument_in_progress
+# 				has_country_flag = admiralty_in_progress
+# 				has_country_flag = triumphal_arch_1_in_progress
+# 				has_country_flag = colonial_office_in_progress
+# 				has_country_flag = national_university_in_progress
+# 				has_country_flag = production_office_1_in_progress
+# 			}
+# 		}
+# 		has_province_modifier = wonder_in_progress
+# 		is_capital = no		
+# 	}
+	
+# 	option = {
+# 		name = national_wonder.15.a
+# 		owner = {
+# 			clr_country_flag = national_bank_in_progress
+# 			clr_country_flag = cia_in_progress
+# 			clr_country_flag = great_catedral_in_progress
+# 			clr_country_flag = naval_arsenal_in_progress
+# 			clr_country_flag = tax_office_1_in_progress
+# 			clr_country_flag = trade_office_1_in_progress
+# 			clr_country_flag = imperial_monument_in_progress
+# 			clr_country_flag = admiralty_in_progress
+# 			clr_country_flag = triumphal_arch_1_in_progress
+# 			clr_country_flag = colonial_office_in_progress
+# 			clr_country_flag = national_university_in_progress
+# 			clr_country_flag = production_office_1_in_progress
+# 			remove_country_modifier = wonder_in_progress_1
+# 		}
+# 		remove_province_modifier = wonder_in_progress
+# 	}	
+# }
+#################################################################
+############ War College
+#################################################################
+
+country_event = {
+	id = national_wonder.50
+	title = national_wonder.50.t
+	desc = national_wonder.50.d   #Описание условий для появления кнопки на постройку
+	picture = GREAT_BUILDING_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = national_wonder.50.a # Тригер на постройку конкретного здания
+		country_event = {
+			id = national_wonder.51
+		}
+	}
+
+	option = {
+		name = national_wonder.50.b
+		
+		country_event = {
+			id = national_wonder.52
+		}
+	}
+
+	option = {
+		name = national_wonder.50.c
+		
+		country_event = {
+			id = national_wonder.53
+		}
+	}
+	
+	option = {
+		name = national_wonder.2.z
+		country_event = {
+			id = national_wonder.1
+		}
+	}
+}
+
+country_event = {
+	id = national_wonder.51
+	title = national_wonder.51.t  
+	desc = national_wonder.51.d #Описание бонусов постройки и условий строительства
+	picture = GREAT_BUILDING_eventPicture
+
+	is_triggered_only = yes	
+
+	
+	option = {
+		name = national_wonder.3.a # Строим
+		trigger = {
+			capital_scope = {
+				NOT = {
+					has_construction = great_project
+					has_construction = building
+					has_building = war_college_1
+					has_building = war_college_2
+					has_building = war_college_3
+				}
+			}
+			
+			has_idea = generalstab7
+			advisor = idea_var_advisor_5
+		}
+		add_treasury = -1000
+		capital_scope = {
+			add_building_construction = {
+				building = war_college_1
+				speed = 1
+				cost = 0
+			}
+		}
+	}
+
+	option = {
+		name = national_wonder.2.z # Не строим
+		country_event = {
+			id = national_wonder.50
+		}
+	}
+}
+
+country_event = {
+	id = national_wonder.52
+	title = national_wonder.52.t  
+	desc = national_wonder.52.d # построили
+	picture = GREAT_BUILDING_eventPicture
+
+	is_triggered_only = yes	
+
+	option = {
+		name = national_wonder.3.a
+		trigger = {
+			AND = {
+				capital_scope = {
+					NOT = {
+						has_construction = great_project
+						has_construction = building
+						has_building = war_college_2
+						has_building = war_college_3
+					}
+				}
+				had_country_flag = {
+					flag = military_reform
+					days = 3650
+				}
+				has_idea = generalstab7
+				capital_scope = {
+					has_building = war_college_1
+				}
+				OR = {
+					idea_var_advisor_5 = 3
+					idea_var_advisor_5 = 4
+					idea_var_advisor_5 = 5
+					idea_var_advisor_5 = 6
+					idea_var_advisor_5 = 7
+					idea_var_advisor_5 = 8
+					idea_var_advisor_5 = 9
+				}
+				OR = {
+					government_rank = 2
+					government_rank = 3
+				}
+			}
+		}
+		add_treasury = -5000
+		capital_scope = {
+			add_building_construction = {
+				building = war_college_2
+				speed = 1
+				cost = 0
+			}
+		}
+	}
+	
+	option = {
+		name = national_wonder.2.z # Не строим
+		country_event = {
+			id = national_wonder.50
+		}
+	}
+}
+
+country_event = {
+	id = national_wonder.53
+	title = national_wonder.53.t  
+	desc = national_wonder.53.d #Описание бонусов постройки и условий строительства
+	picture = GREAT_BUILDING_eventPicture
+
+	is_triggered_only = yes	
+
+	option = {
+		name = national_wonder.3.a # Строим
+		trigger = {
+			capital_scope = {
+				NOT ={
+					has_construction = great_project
+					has_construction = building
+					has_building = war_college_1
+					has_building = war_college_3
+				}
+			}
+			government_rank = 3
+			has_idea = generalstab7
+			capital_scope = {
+				has_building = war_college_2
+			}
+			had_country_flag = {
+				flag = military_reform
+				days = 9125
+			}
+			OR = {
+				idea_var_advisor_5 = 5
+				idea_var_advisor_5 = 6
+				idea_var_advisor_5 = 7
+				idea_var_advisor_5 = 8
+				idea_var_advisor_5 = 9
+			}
+		}
+		if = {
+			limit = {
+				capital_scope = {
+					has_building = war_college_1
+					has_building = war_college_3
+				}
+			}
+			country_event = {
+				id = national_wonder.999
+			}
+		}
+		else = {
+			add_treasury = -10000
+			capital_scope = {
+				add_building_construction = {
+					building = war_college_3
+					speed = 1
+					cost = 0
+				}
+			}
+		}
+		
+	}
+	
+	option = {
+		name = national_wonder.2.z # Не строим
+		country_event = {
+			id = national_wonder.50
+		}
+	}
+}
+
+
+country_event = {
+	id = national_wonder.999
+	title = national_wonder.999.t
+	desc = national_wonder.999.d   
+	picture = GREAT_BUILDING_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = national_wonder.999.a 
+		add_treasury = -10000
+	}
+
+	option = {
+		name = national_wonder.999.b
+
+	}
+
+}
+
+province_event = {
+	id = national_wonder.1000
+	title = national_wonder.1000.t
+	desc = national_wonder.1000.d
+	picture = GREAT_BUILDING_eventPicture
+
+	trigger = {
+		has_wonder_building_trigger = yes
+		is_capital = no
+	}
+
+	option = {
+		name = national_wonder.1000.a
+		remove_building = war_college_1
+		remove_building = war_college_2
+		remove_building = war_college_3
+		
+		remove_building = national_bank_1
+		remove_building = national_bank_2
+		remove_building = national_bank_3
+
+		remove_building = great_cathedral_1
+		remove_building = great_cathedral_2
+		remove_building = great_cathedral_3
+
+		remove_building = cia_1
+		remove_building = cia_2
+		remove_building = cia_3
+
+		remove_building = national_university_1
+		remove_building = national_university_2
+		remove_building = national_university_3
+
+		remove_building = naval_arsenal_1
+		remove_building = naval_arsenal_2
+		remove_building = naval_arsenal_3
+
+		remove_building = production_office_1
+		remove_building = production_office_2
+		remove_building = production_office_3
+
+		remove_building = tax_office_1
+		remove_building = tax_office_2
+		remove_building = tax_office_3
+
+		remove_building = trade_office_1
+		remove_building = trade_office_2
+		remove_building = trade_office_3
+
+		remove_building = admiralty_1
+		remove_building = admiralty_2
+		remove_building = admiralty_3
+
+		remove_building = monument_1
+		remove_building = monument_2
+		remove_building = monument_3
+
+		remove_building = triumphal_arch_1
+		remove_building = triumphal_arch_2
+		remove_building = triumphal_arch_3
+
+		remove_building = colonial_office_1
+		remove_building = colonial_office_2
+		remove_building = colonial_office_3
+
+	}
+}
+
+# province_event = {
+# 	id = national_wonder.17
+# 	title = national_wonder.17.t
+# 	desc = national_wonder.17.d
+# 	picture = GREAT_BUILDING_eventPicture
+
+# 	trigger = {
+		
+# 	}
+
+# 	option = {
+# 		name = national_wonder.17.a
+# 	}
+# }

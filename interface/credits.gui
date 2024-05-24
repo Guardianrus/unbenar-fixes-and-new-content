@@ -1,0 +1,100 @@
+guiTypes = {
+#################################################
+### CreditScreen interface ##########################
+#################################################
+
+	instantTextBoxType = {
+		name = "CreditsText"
+		textureFile = ""
+		font = "vic_22"
+		borderSize = {x = 0 y = 0}
+		position = { x= 0 y= 0 }
+		text = ""
+		fixedsize = yes
+		maxwidth = 278
+		maxheight = 36
+		format = centre
+		orientation = "CENTER"
+	}
+
+	instantTextBoxType = {
+		name = "CreditsTextBold"
+		textureFile = ""
+		font = "vic_29s"
+		borderSize = {x = 0 y = 0}
+		position = { x= 0 y= 0 }
+		text = ""
+		fixedsize = yes
+		maxwidth = 278
+		maxheight = 36
+		format = centre
+		orientation = "CENTER"
+	}
+
+
+
+	iconType =
+	{
+		name = "CreditsBar"
+		buttonMesh = "MenuCreditsBg"
+		position = { x= -458 y =-424}
+		orientation = "CENTER"
+	}
+
+	windowType = {
+	name ="CreditsWindow"
+	backGround=""
+	position = { x=-233 y =-200}	
+	size = { x=467 y =556}
+	moveable = 0
+	dontRender = ""
+	horizontalBorder= ""
+	verticalBorder= ""
+	upsound = ""
+	downsound = ""
+	fullscreen=no
+	Orientation = "CENTER"
+
+		iconType =
+		{
+			name ="credits_bg"
+			spriteType = "GFX_credits_bg"
+			position = { x= -294 y =-510}
+			orientation = "CENTER"
+		}
+
+	guiButtonType = {
+		name = "back_button"
+		position = { x = 162 y = 462 }
+		quadTextureSprite ="button_type_1"	
+		tooltip = ""
+		tooltipText =""
+		delayedTooltipText = ""
+		buttonText = "BACK"
+		buttonFont = "vic_18"
+		clicksound = back_click
+	}
+
+
+#iconType = {
+#		name ="CreditsMenuDialog"
+#		buttonMesh = "MenuCreditsGradient"
+#		position = { x= -457 y =-423}
+#		orientation = "CENTER"
+#}
+#
+#	guiButtonType = {
+#		name = "BackButton"
+#		position = { x=341 y =340}
+#		orientation = "CENTER"
+#		quadTextureSprite ="buttonType4"
+#		tooltip = ""
+#		tooltipText =""
+#		delayedTooltipText = ""
+#		buttonText = "Back"
+#		buttonFont = "Main_14_black"
+#		orientation = "CENTER"
+#	}	
+}
+}
+

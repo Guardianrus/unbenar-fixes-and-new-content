@@ -1,0 +1,7 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_xsm_main"
+		texturefile = "gfx//interface//xsm_main.dds"
+		loadType = "INGAME"
+	}
+}

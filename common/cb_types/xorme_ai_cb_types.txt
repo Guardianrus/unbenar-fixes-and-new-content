@@ -1,0 +1,23 @@
+cb_xorme_ai_conquest = {
+	valid_for_subject = no
+	
+	is_triggered_only = yes
+
+	prerequisites = {
+		is_free_or_tributary_trigger = yes
+	}
+
+	war_goal = xorme_ai_conquest
+}
+
+cb_xorme_ai_subjugate = {
+	valid_for_subject = no
+	
+	is_triggered_only = yes
+
+	prerequisites = {
+		is_free_or_tributary_trigger = yes
+	}
+
+	war_goal = xorme_ai_subjugate_cb
+}

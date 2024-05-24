@@ -1,0 +1,74 @@
+
+xorme_subject_manager = {
+	category = influence
+
+	alert_index = 6
+	alert_tooltip = ICON_VASSAL
+
+	require_acceptance = no
+
+	is_visible = {
+		FROM = {
+			is_subject_of = ROOT
+			NOT = { is_subject_of_type = tributary_state }
+			NOT = { is_subject_of_type = colony }
+			NOT = { is_subject_of_type = crown_colony }
+			NOT = { is_subject_of_type = private_enterprise }
+			NOT = { is_subject_of_type = self_governing_colony }
+			# NOT = { is_subject_of_type = xorme_moh_administrative_district }
+		}
+	}
+
+	is_allowed = {
+		is_subject = no
+		is_bankrupt = no
+		NOT = { FROM = { has_country_modifier = xsm_interaction_cd } }
+		hidden_trigger = {
+			NOT = { has_country_flag = uses_the_xsm }
+		}
+		if = {
+			limit = { ai = yes }
+			NOT = { corruption = 3.0 }
+			FROM = { total_development = 40 }
+			stability = 2
+			OR = {
+				adm_power = 150
+				mil_power = 150
+				dip_power = 150
+			}
+		}
+		else = {
+			NOT = { corruption = 20 }
+			OR = {
+				adm_power = 75
+				mil_power = 75
+				dip_power = 75
+			}
+		}
+	}
+
+	on_accept = {
+		ROOT = {
+			set_country_flag = xorme_subject_overlord@TAG
+			set_country_flag = uses_the_xsm
+			country_event = {
+				id = xsm_events.1
+			}
+		}
+		FROM = {
+			set_country_flag = xorme_overlord_subject@TAG
+			set_country_flag = uses_the_xsm
+		}
+	}
+
+	on_decline = {
+	}
+
+	ai_acceptance = { # This works similarly to variable_arithmetic_trigger, but does not support triggers generally. Instead, "limit" will be evaluated first and the rest ignored if it isn't passed.
+		always = yes
+	}
+
+	ai_will_do = { # this is a trigger
+
+	}
+}

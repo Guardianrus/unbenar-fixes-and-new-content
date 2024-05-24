@@ -1,0 +1,970 @@
+######################################################
+##### Idea Variation Advisors by flogi
+######################################################
+
+idea_var_advisor_1 = {		# Administrator
+	monarch_power = ADM
+
+	skill_scaled_modifier = {
+		trigger = {
+			# always = yes
+		}
+		modifier = {
+			meritocracy = 0.25
+			core_creation = -0.01
+		}
+	}
+
+	# Bonus
+	core_creation = -0.05
+
+	chance = {
+		factor = 1
+	}
+
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+idea_var_advisor_2 = {		# Lawyer
+	monarch_power = DIP
+
+	skill_scaled_modifier = {
+		trigger = {
+			# always = yes
+		}
+		modifier = {
+			meritocracy = 0.25
+			liberty_desire = -1
+		}
+
+	}
+
+	# Bonus
+	diplomatic_annexation_cost = -0.05
+
+	chance = {
+		factor = 1
+
+		modifier = {
+			factor = 0
+			owner = {
+				NOT = { vassal = 1 }
+				NOT = { personal_union = 1 }
+			}
+		}
+	}
+
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+
+idea_var_advisor_3 = {		# Architect
+	monarch_power = ADM
+
+	skill_scaled_modifier = {
+		trigger = {
+
+		}
+		modifier = {
+			meritocracy = 0.25
+			build_cost = -0.01
+		}
+
+	}
+
+	# Bonus
+	build_cost = -0.05
+
+	chance = {
+		factor = 1
+	}
+
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+idea_var_advisor_4 = {		# Capitalist
+	monarch_power = ADM
+
+	skill_scaled_modifier = {
+		trigger = {
+
+		}
+		modifier = {
+			meritocracy = 0.25
+			development_cost = -0.01
+		}
+
+	}
+
+	# Bonus
+	development_cost = -0.05
+
+	chance = {
+		factor = 1
+	}
+
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+idea_var_advisor_5 = {		# General staff officier
+	monarch_power = MIL
+
+	skill_scaled_modifier = {
+		trigger = {
+
+		}
+		modifier = {
+			meritocracy = 0.25
+			yearly_army_professionalism = 0.002
+		}
+
+	}
+
+	# Bonus
+	army_tradition = 1
+	navy_tradition = 1
+
+
+	chance = {
+		factor = 1
+	}
+
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+
+idea_var_advisor_6 = {		# Humanist
+	monarch_power = ADM
+
+	skill_scaled_modifier = {
+		trigger = {
+
+		}
+		modifier = {
+			meritocracy = 0.25
+			tolerance_heathen = 0.5
+			tolerance_heretic = 0.5
+		}
+
+	}
+
+	# Bonus
+	embracement_cost = -0.1
+	global_institution_spread = 0.1
+
+	chance = {
+		factor = 1
+
+		modifier = {
+			factor = 0
+			all_province_in_state = { #same as edict_advancement_effort
+				NOT = { current_institution_growth = 0.5 }
+			}
+		}
+	}
+
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+
+idea_var_advisor_7 = {		# Old Admiral
+	monarch_power = DIP
+
+	skill_scaled_modifier = {
+		trigger = {
+
+		}
+		modifier = {
+			meritocracy = 0.25
+			navy_tradition = 0.1
+		}
+
+	}
+
+	# Bonus
+	naval_forcelimit_modifier = 0.25
+
+	chance = {
+		factor = 1
+
+		modifier = {
+			factor = 0
+			has_port = no
+		}
+	}
+
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+idea_var_advisor_8 = {		# Judge
+	monarch_power = ADM
+
+	skill_scaled_modifier = {
+		trigger = {
+
+		}
+		modifier = {
+			meritocracy = 0.25
+			yearly_corruption = -0.05		
+		}
+
+	}
+
+	# Bonus
+
+	yearly_corruption = -0.1
+
+
+	chance = {
+		factor = 1
+	}
+
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+idea_var_advisor_9 = {		# Administrator
+	monarch_power = ADM
+
+	skill_scaled_modifier = {
+		trigger = {
+
+		}
+		modifier = {
+			meritocracy = 0.25
+			administrative_efficiency = 0.01	
+		}
+
+	}
+
+	# Bonus
+
+	state_maintenance_modifier = -0.25
+
+	chance = {
+		factor = 1
+	}
+
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+idea_var_advisor_10 = {		# Colonist
+	monarch_power = DIP
+
+	skill_scaled_modifier = {
+		trigger = {
+
+		}
+		modifier = {
+			meritocracy = 0.25
+		
+			colonist_placement_chance = 0.025
+		}
+
+	}
+
+	# Bonus
+
+	global_colonial_growth = 10
+
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 0
+			owner = { NOT = { num_of_colonists = 1 } }
+		}
+	}
+
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+idea_var_advisor_11 = {		# Siege Expert
+	monarch_power = MIL
+
+	skill_scaled_modifier = {
+		trigger = {
+
+		}
+		modifier = {
+			meritocracy = 0.25
+			siege_ability = 0.02
+		}
+
+	}
+
+	# Bonus
+
+	siege_ability = 0.1
+	land_attrition = -0.1
+
+	chance = {
+		factor = 1
+	}
+
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+idea_var_advisor_12 = {
+	monarch_power = MIL
+
+	skill_scaled_modifier = {
+		trigger = {
+
+		}
+		modifier = {
+			meritocracy = 0.25
+
+			infantry_cost = -0.02
+		}
+	}
+
+	# Bonus
+
+	infantry_power = 0.1
+
+	chance = {
+		factor = 1
+	}
+
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+idea_var_advisor_13 = {
+	monarch_power = MIL
+
+	skill_scaled_modifier = {
+		trigger = {
+
+		}
+		modifier = {
+			meritocracy = 0.25
+			cavalry_cost = -0.03
+		}
+
+	}
+
+	# Bonus
+
+	cavalry_power = 0.1
+
+	chance = {
+		factor = 1
+	}
+
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+idea_var_advisor_14 = {
+	monarch_power = MIL
+
+	skill_scaled_modifier = {
+		trigger = {
+
+		}
+		modifier = {
+			meritocracy = 0.25
+			backrow_artillery_damage = 0.01
+		}
+
+	}
+
+	# Bonus
+
+	artillery_power = 0.1
+
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 0
+			owner = { NOT = { mil_tech = 7 } }
+		}
+
+	}
+
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+idea_var_advisor_15 = {
+	monarch_power = MIL
+
+	skill_scaled_modifier = {
+		trigger = {
+
+		}
+		modifier = {
+			meritocracy = 0.25
+
+			infantry_shock = 0.03
+			cavalry_shock = 0.03
+		}
+
+	}
+
+	# Bonus
+
+	shock_damage = 0.075
+
+	chance = {
+		factor = 1
+	}
+
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+idea_var_advisor_16 = {
+	monarch_power = MIL
+
+	skill_scaled_modifier = {
+		trigger = {
+
+		}
+		modifier = {
+			meritocracy = 0.25
+			land_attrition = -0.02
+		}
+
+	}
+
+	# Bonus
+
+	shock_damage_received = -0.075
+
+	chance = {
+		factor = 1
+	}
+
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+idea_var_advisor_17 = {
+	monarch_power = MIL
+
+	skill_scaled_modifier = {
+		trigger = {
+
+		}
+		modifier = {
+			meritocracy = 0.25
+			infantry_fire = 0.02
+			cavalry_fire = 0.02
+		}
+
+	}
+
+	# Bonus
+
+	fire_damage = 0.075
+
+	chance = {
+		factor = 1
+	}
+
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+idea_var_advisor_18 = {
+	monarch_power = MIL
+
+	skill_scaled_modifier = {
+		trigger = {
+
+		}
+		modifier = {
+			meritocracy = 0.25
+			reserves_organisation = 0.05
+		}
+
+	}
+
+	# Bonus
+
+	fire_damage_received = -0.075
+
+	chance = {
+		factor = 1
+	}
+
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+idea_var_advisor_19 = {
+	monarch_power = DIP
+
+	skill_scaled_modifier = {
+		trigger = {
+
+		}
+		modifier = {
+			meritocracy = 0.25
+			culture_conversion_cost = -0.025
+		}
+
+	}
+
+	# Bonus
+	culture_conversion_cost = -0.1
+
+	chance = {
+		factor = 1
+	}
+
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+idea_var_advisor_20 = {
+	monarch_power = ADM
+
+	skill_scaled_modifier = {
+		trigger = {
+
+		}
+		modifier = {
+			meritocracy = 0.25
+			inflation_reduction = 0.02
+		}
+
+	}
+
+	# Bonus
+
+	interest = -1
+
+	chance = {
+		factor = 1
+	}
+
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+idea_var_advisor_21 = {
+	monarch_power = DIP
+
+	skill_scaled_modifier = {
+		trigger = {
+
+		}
+		modifier = {
+			meritocracy = 0.25
+			trade_efficiency = 0.025
+		}
+
+	}
+
+	# Bonus
+
+	global_own_trade_power = 0.1
+
+	chance = {
+		factor = 1
+	}
+
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+idea_var_advisor_22 = {
+	monarch_power = DIP
+
+	skill_scaled_modifier = {
+		trigger = {
+
+		}
+		modifier = {
+			meritocracy = 0.25
+			sailors_recovery_speed = 0.02	
+		}
+
+	}
+
+	# Bonus
+
+	global_sailors_modifier = 0.2
+
+	chance = {
+		factor = 1
+
+		modifier = {
+			factor = 0
+			has_port = no
+		}
+	}
+
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+idea_var_advisor_23 = {
+	monarch_power = DIP
+
+	skill_scaled_modifier = {
+		trigger = {
+
+		}
+		modifier = {
+			meritocracy = 0.25
+			ae_impact = -0.02
+		}
+
+	}
+
+	# Bonus
+
+	province_warscore_cost = -0.1
+
+	chance = {
+		factor = 1
+	}
+
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+idea_var_advisor_24 = {
+	monarch_power = DIP
+
+	skill_scaled_modifier = {
+		trigger = {
+
+		}
+		modifier = {
+			meritocracy = 0.25
+			heavy_ship_cost = -0.02
+		}
+
+	}
+
+	# Bonus
+	heavy_ship_power = 0.1
+
+	chance = {
+		factor = 1
+
+		modifier = {
+			factor = 0
+			has_port = no
+		}
+	}
+
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+idea_var_advisor_25 = {
+	monarch_power = DIP
+
+	skill_scaled_modifier = {
+		trigger = {
+
+		}
+		modifier = {
+			meritocracy = 0.25
+			galley_cost = -0.02
+		}
+
+	}
+
+	# Bonus
+
+	galley_power = 0.1
+
+	chance = {
+		factor = 1
+
+		modifier = {
+			factor = 0
+			has_port = no
+		}
+	}
+
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+idea_var_advisor_26 = {
+	monarch_power = DIP
+
+	skill_scaled_modifier = {
+		trigger = {
+
+		}
+		modifier = {
+			meritocracy = 0.25
+			light_ship_cost = -0.02
+		}
+
+	}
+
+	# Bonus
+
+	light_ship_power = 0.1
+	transport_power = 0.1
+
+	chance = {
+		factor = 1
+
+		modifier = {
+			factor = 0
+			has_port = no
+		}
+	}
+
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+idea_var_advisor_27 = {
+	monarch_power = DIP
+
+	skill_scaled_modifier = {
+		trigger = {
+
+		}
+		modifier = {
+			meritocracy = 0.25
+			vassal_income = 0.05
+		}
+
+	}
+
+	# Bonus
+
+	reduced_liberty_desire = 10
+
+	chance = {
+		factor = 1
+
+		modifier = {
+			factor = 0
+			owner = { NOT = { num_of_subjects = 1 } }
+		}
+	}
+
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+
+idea_var_advisor_28 = {
+	monarch_power = MIL
+
+	skill_scaled_modifier = {
+		trigger = {
+
+		}
+		modifier = {
+			meritocracy = 0.25
+			reinforce_speed = 0.03
+		}
+
+	}
+
+	# Bonus
+
+	mercenary_discipline = 0.075
+
+	chance = {
+		factor = 1
+	}
+
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 10
+			num_of_mercenaries = 20
+		}
+		modifier = {
+			factor = 2
+			num_of_mercenaries = 40
+		}
+		modifier = {
+			factor = 2
+			num_of_mercenaries = 60
+		}
+		modifier = {
+			factor = 2
+			num_of_mercenaries = 80
+		}
+		modifier = {
+			factor = 2
+			num_of_mercenaries = 100
+		}
+	}
+}
+
+idea_var_advisor_29 = {
+	monarch_power = MIL
+
+	skill_scaled_modifier = {
+		trigger = {
+
+		}
+		modifier = {
+			meritocracy = 0.25
+			drill_decay_modifier = -0.02
+		}
+
+	}
+
+	# Bonus
+
+	yearly_army_professionalism = 0.01
+
+	chance = {
+		factor = 1
+	}
+
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+idea_var_advisor_30 = {
+	monarch_power = ADM
+
+	skill_scaled_modifier = {
+		trigger = {
+
+		}
+		modifier = {
+			meritocracy = 0.25
+
+			war_exhaustion = -0.01
+		}
+
+	}
+
+	# Bonus
+
+	war_exhaustion = -0.05
+
+	chance = {
+		factor = 1
+	}
+
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+idea_var_advisor_31 = {
+	monarch_power = ADM
+
+	skill_scaled_modifier = {
+		trigger = {
+
+		}
+		modifier = {
+			meritocracy = 0.25
+
+			max_absolutism = 5
+		}
+
+	}
+
+	# Bonus
+
+	yearly_absolutism = 0.5
+
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 0
+			OR = {
+			current_age = age_of_discovery
+			current_age = age_of_reformation
+			#current_age = age_of_revolutions
+
+			}
+
+		}
+	}
+
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+idea_var_advisor_32 = {
+	monarch_power = ADM
+
+	skill_scaled_modifier = {
+		trigger = {
+
+		}
+		modifier = {
+			meritocracy = 0.25
+			imperial_mandate = 0.025
+		}
+
+
+	}
+
+	# Bonus
+
+	imperial_authority = 0.1
+
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 0
+			owner = {
+			NOT = {
+			OR = {
+			is_emperor = yes
+			is_emperor_of_china = yes
+			}
+			}
+			}
+		}
+	}
+
+	ai_will_do = {
+		factor = 1
+	}
+}

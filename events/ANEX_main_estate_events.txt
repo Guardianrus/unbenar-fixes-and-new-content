@@ -1,0 +1,126 @@
+namespace = ANEX_main_estate
+
+# country_event = {
+# 	id = ANEX_main_estate.1
+# 	title = ANEX_main_estate.1.t
+# 	desc = ANEX_main_estate.1.d
+# 	picture = DIET_eventPicture
+
+# 	trigger = {
+# 		has_idea = ANEX_main_estate_ideas1
+# 		NOT = {
+# 			has_country_flag = great_nobles
+# 		}
+
+# 	}
+
+# 	option = {
+# 		trigger = {
+# 			has_estate = estate_nobles
+# 		}
+# 		name = ANEX_main_estate.1.a
+# 		set_country_flag = great_nobles
+# 		set_estate_privilege = estate_nobles_main_estate
+# 	}
+
+# 	option = {
+# 		trigger = {
+# 			has_estate = estate_church
+# 		}
+# 		name = ANEX_main_estate.1.b
+# 		set_country_flag = great_chruch
+# 		set_estate_privilege = estate_chruch_main_estate
+# 	}
+
+# 	option = {
+# 		trigger = {
+# 			has_estate = estate_burghers
+# 		}
+# 		name = ANEX_main_estate.1.c
+# 		set_country_flag = great_burgers
+# 		set_estate_privilege = estate_burghers_main_estate
+# 	}
+
+# 	# option = {
+# 	# 	trigger = {
+# 	# 		has_estate = estate_mages
+# 	# 	}
+# 	# 	name = ANEX_main_estate.1.e
+# 	# 	set_country_flag = great_mage
+# 	# 	set_estate_privilege = estate_mages_main_estate
+# 	# }
+
+# 	# option = {
+# 	# 	trigger = {
+# 	# 		has_estate = estate_adventurers
+# 	# 	}
+# 	# 	name = ANEX_main_estate.1.f
+# 	# 	set_country_flag = great_adveture
+# 	# 	set_estate_privilege = estate_adventur_main_estate
+# 	# }
+
+# 	# option = {
+# 	# 	trigger = {
+# 	# 		has_estate = estate_vampires
+# 	# 	}
+# 	# 	name = ANEX_main_estate.1.n
+# 	# 	set_country_flag = great_vampires
+# 	# 	set_estate_privilege = estate_vampier_main_estate
+# 	# }
+
+# 	# option = {
+# 	# 	trigger = {
+# 	# 		has_estate = estate_castonath_patricians
+# 	# 	}
+# 	# 	name = ANEX_main_estate.1.m
+# 	# 	set_country_flag = great_castonath_patricians
+# 	# 	set_estate_privilege = estate_castonath_patricians_main_estate
+# 	# }
+
+# 	option = {
+# 		trigger = {
+# 			has_estate = estate_artificers
+# 		}
+# 		name = ANEX_main_estate.1.k
+# 		set_country_flag = great_artificers
+# 		set_estate_privilege = estate_artificer_main_estate
+# 	}
+
+# 	# option = {
+# 	# 	trigger = {
+# 	# 		has_estate = estate_raj_ministries
+# 	# 	}
+# 	# 	name = ANEX_main_estate.1.l
+# 	# 	set_country_flag = great_raj_ministries
+# 	# 	set_estate_privilege = estate_raj_ministr_main_estate
+# 	# }
+
+# 	option = {
+# 		name = ANEX_main_estate.1.v
+# 		remove_idea_group = ANEX_main_estate_ideas
+# 	}
+# }
+
+# country_event = {
+# 	id = ANEX_main_estate.2
+# 	title = ANEX_main_estate.2.t
+# 	desc = ANEX_main_estate.2.d
+# 	picture = DIET_eventPicture
+
+# 	is_triggered_only = yes
+
+# 	option = {
+# 		name = ANEX_main_estate.2.a
+# 		clr_country_flag = great_nobles
+# 		remove_estate_privilege = estate_nobles_main_estate
+# 		hidden_effect = {
+# 			every_owned_province = {
+# 				spawn_rebels = {
+# 					size = 1
+# 				}
+# 			}
+
+# 		}
+# 	}
+
+# }

@@ -1,0 +1,174 @@
+powerful_education = {
+	potential = {
+		adm_tech = 7
+		NOT = {
+			has_idea = scientific_revolution
+		}
+	}
+	trigger = {
+		education_lvl_1 = 30
+	}
+	technology_cost = -0.05
+	idea_cost = -0.025
+}
+
+powerful_education_2 = {
+	potential = {
+		has_idea = scientific_revolution
+	}
+	trigger = {
+		education_lvl_1 = 30
+	}
+	technology_cost = -0.10
+	idea_cost = -0.05
+}
+
+artilery_with_age = {
+	potential = {
+		current_age = age_of_reformation
+	}
+	trigger = {
+		always = yes
+	}
+	artillery_levels_available_vs_fort = 1
+}
+artilery_with_age_1 = {
+	potential = {
+		current_age = age_of_absolutism
+	}
+	trigger = {
+		always = yes
+	}
+	artillery_levels_available_vs_fort = 2
+}
+artilery_with_age_2 = {
+	potential = {
+		current_age = age_of_revolutions
+	}
+	trigger = {
+		always = yes
+	}
+	artillery_levels_available_vs_fort = 3
+}
+
+low_pp = {
+	potential = {
+		AND = {
+			was_player = yes
+			any_known_country = {
+				is_rival = ROOT
+			}
+		}
+	}
+	trigger = {
+		NOT = {
+			power_projection = 25
+		}
+	}
+		prestige_decay = 0.025
+}
+
+high_pp = {
+	potential = {
+		was_player = yes
+	}
+	trigger = {
+		power_projection = 85
+	}
+	country_military_power = 1
+	country_admin_power = 1
+	country_diplomatic_power = 1
+}
+
+fort_maintence_age_1 = {
+	potential = {
+		current_age = age_of_discovery
+	}
+	trigger = {
+		always = yes
+	}
+	fort_maintenance_modifier = -1
+}
+
+ii_bankruptcy = {
+	potential ={
+		ai = yes
+	}
+	trigger = {
+		is_bankrupt = yes
+	}
+
+	interest = -30
+	global_autonomy = -1
+	global_tax_modifier = 2.5
+}
+
+merc_maintenance_tech_1 = {potential = {mil_tech = 1 NOT = {mil_tech = 2}} trigger = {always = yes}	merc_maintenance_modifier = 0.05}
+merc_maintenance_tech_2 = {potential = {mil_tech = 2 NOT = {mil_tech = 3}} trigger = {always = yes}	merc_maintenance_modifier = 0.1}
+merc_maintenance_tech_3 = {potential = {mil_tech = 3 NOT = {mil_tech = 4}} trigger = {always = yes}	merc_maintenance_modifier = 0.15}
+merc_maintenance_tech_4 = {potential = {mil_tech = 4 NOT = {mil_tech = 5}} trigger = {always = yes}	merc_maintenance_modifier = 0.2}
+merc_maintenance_tech_5 = {potential = {mil_tech = 5 NOT = {mil_tech = 6}} trigger = {always = yes}	merc_maintenance_modifier = 0.25}
+merc_maintenance_tech_6 = {potential = {mil_tech = 6 NOT = {mil_tech = 7}} trigger = {always = yes}	merc_maintenance_modifier = 0.3}
+merc_maintenance_tech_7 = {potential = {mil_tech = 7 NOT = {mil_tech = 8}} trigger = {always = yes}	merc_maintenance_modifier = 0.35}
+merc_maintenance_tech_8 = {potential = {mil_tech = 8 NOT = {mil_tech = 9}} trigger = {always = yes}	merc_maintenance_modifier = 0.4}
+merc_maintenance_tech_9 = {potential = {mil_tech = 9 NOT = {mil_tech = 10}} trigger = {always = yes}	merc_maintenance_modifier = 0.45}
+merc_maintenance_tech_10 = {potential = {mil_tech = 10 NOT = {mil_tech = 11}} trigger = {always = yes}	merc_maintenance_modifier = 0.5}
+merc_maintenance_tech_11 = {potential = {mil_tech = 11 NOT = {mil_tech = 12}} trigger = {always = yes}	merc_maintenance_modifier = 0.55}
+merc_maintenance_tech_12 = {potential = {mil_tech = 12 NOT = {mil_tech = 13}} trigger = {always = yes}	merc_maintenance_modifier = 0.6}
+merc_maintenance_tech_13 = {potential = {mil_tech = 13 NOT = {mil_tech = 14}} trigger = {always = yes}	merc_maintenance_modifier = 0.65}
+merc_maintenance_tech_14 = {potential = {mil_tech = 14 NOT = {mil_tech = 15}} trigger = {always = yes}	merc_maintenance_modifier = 0.7}
+merc_maintenance_tech_15 = {potential = {mil_tech = 15 NOT = {mil_tech = 16}} trigger = {always = yes}	merc_maintenance_modifier = 0.75}
+merc_maintenance_tech_16 = {potential = {mil_tech = 16 NOT = {mil_tech = 17}} trigger = {always = yes}	merc_maintenance_modifier = 0.8}
+merc_maintenance_tech_17 = {potential = {mil_tech = 17 NOT = {mil_tech = 18}} trigger = {always = yes}	merc_maintenance_modifier = 0.85}
+merc_maintenance_tech_18 = {potential = {mil_tech = 18 NOT = {mil_tech = 19}} trigger = {always = yes}	merc_maintenance_modifier = 0.9}
+merc_maintenance_tech_19 = {potential = {mil_tech = 19 NOT = {mil_tech = 20}} trigger = {always = yes}	merc_maintenance_modifier = 0.95}
+merc_maintenance_tech_20 = {potential = {mil_tech = 20 NOT = {mil_tech = 21}} trigger = {always = yes}	merc_maintenance_modifier = 1.0}
+merc_maintenance_tech_21 = {potential = {mil_tech = 21 NOT = {mil_tech = 22}} trigger = {always = yes}	merc_maintenance_modifier = 1.05}
+merc_maintenance_tech_22 = {potential = {mil_tech = 22 NOT = {mil_tech = 23}} trigger = {always = yes}	merc_maintenance_modifier = 1.1}
+merc_maintenance_tech_23 = {potential = {mil_tech = 23 NOT = {mil_tech = 24}} trigger = {always = yes}	merc_maintenance_modifier = 1.15}
+merc_maintenance_tech_24 = {potential = {mil_tech = 24 NOT = {mil_tech = 25}} trigger = {always = yes}	merc_maintenance_modifier = 1.2}
+merc_maintenance_tech_25 = {potential = {mil_tech = 25 NOT = {mil_tech = 26}} trigger = {always = yes}	merc_maintenance_modifier = 1.25}
+merc_maintenance_tech_26 = {potential = {mil_tech = 26 NOT = {mil_tech = 27}} trigger = {always = yes}	merc_maintenance_modifier = 1.3}
+merc_maintenance_tech_27 = {potential = {mil_tech = 27 NOT = {mil_tech = 28}} trigger = {always = yes}	merc_maintenance_modifier = 1.35}
+merc_maintenance_tech_28 = {potential = {mil_tech = 28 NOT = {mil_tech = 29}} trigger = {always = yes}	merc_maintenance_modifier = 1.4}
+merc_maintenance_tech_29 = {potential = {mil_tech = 29 NOT = {mil_tech = 30}} trigger = {always = yes}	merc_maintenance_modifier = 1.45}
+merc_maintenance_tech_30 = {potential = {mil_tech = 30 NOT = {mil_tech = 31}} trigger = {always = yes}	merc_maintenance_modifier = 1.5}
+merc_maintenance_tech_31 = {potential = {mil_tech = 31 NOT = {mil_tech = 32}} trigger = {always = yes}	merc_maintenance_modifier = 1.55}
+merc_maintenance_tech_32 = {potential = {mil_tech = 32 NOT = {mil_tech = 33}} trigger = {always = yes}	merc_maintenance_modifier = 1.6}
+
+inflation1460= {potential = {is_year = 1460 ai=no NOT = {has_country_modifier = monstrous_nation} NOT = {is_year = 1470}} trigger = {always = yes} inflation_reduction = -0.01 advisor_cost = 0.01 build_time = 0.01 }
+inflation1470= {potential = {is_year = 1470 ai=no NOT = {has_country_modifier = monstrous_nation} NOT = {is_year = 1480}} trigger = {always = yes} inflation_reduction = -0.021 advisor_cost = 0.02 build_time = 0.02 }
+inflation1480= {potential = {is_year = 1480 ai=no NOT = {has_country_modifier = monstrous_nation} NOT = {is_year = 1490}} trigger = {always = yes} inflation_reduction = -0.032 advisor_cost = 0.03 build_time = 0.03 }
+inflation1490= {potential = {is_year = 1490 ai=no NOT = {has_country_modifier = monstrous_nation} NOT = {is_year = 1500}} trigger = {always = yes} inflation_reduction = -0.043 advisor_cost = 0.04 build_time = 0.04 }
+inflation1500= {potential = {is_year = 1500 ai=no NOT = {has_country_modifier = monstrous_nation} NOT = {is_year = 1510}} trigger = {always = yes} inflation_reduction = -0.054 advisor_cost = 0.05 build_time = 0.05 }
+inflation1510= {potential = {is_year = 1510 ai=no NOT = {has_country_modifier = monstrous_nation} NOT = {is_year = 1520}} trigger = {always = yes} inflation_reduction = -0.065 advisor_cost = 0.06 build_time = 0.06 }
+inflation1520= {potential = {is_year = 1520 ai=no NOT = {has_country_modifier = monstrous_nation} NOT = {is_year = 1530}} trigger = {always = yes} inflation_reduction = -0.076 advisor_cost = 0.07 build_time = 0.07 }
+inflation1530= {potential = {is_year = 1530 ai=no NOT = {has_country_modifier = monstrous_nation} NOT = {is_year = 1540}} trigger = {always = yes} inflation_reduction = -0.087 advisor_cost = 0.08 build_time = 0.08 }
+inflation1540= {potential = {is_year = 1540 ai=no NOT = {has_country_modifier = monstrous_nation} NOT = {is_year = 1550}} trigger = {always = yes} inflation_reduction = -0.098 advisor_cost = 0.09 build_time = 0.09 }
+inflation1550= {potential = {is_year = 1550 ai=no NOT = {has_country_modifier = monstrous_nation} NOT = {is_year = 1560}} trigger = {always = yes} inflation_reduction = -0.109 advisor_cost = 0.10 build_time = 0.10 }
+inflation1560= {potential = {is_year = 1560 ai=no NOT = {has_country_modifier = monstrous_nation} NOT = {is_year = 1570}} trigger = {always = yes} inflation_reduction = -0.12 advisor_cost = 0.11 build_time = 0.11 }
+inflation1570= {potential = {is_year = 1570 ai=no NOT = {has_country_modifier = monstrous_nation} NOT = {is_year = 1580}} trigger = {always = yes} inflation_reduction = -0.131 advisor_cost = 0.12 build_time = 0.12 }
+inflation1580= {potential = {is_year = 1580 ai=no NOT = {has_country_modifier = monstrous_nation} NOT = {is_year = 1590}} trigger = {always = yes} inflation_reduction = -0.142 advisor_cost = 0.13 build_time = 0.13 }
+inflation1590= {potential = {is_year = 1590 ai=no NOT = {has_country_modifier = monstrous_nation} NOT = {is_year = 1600}} trigger = {always = yes} inflation_reduction = -0.153 advisor_cost = 0.14 build_time = 0.14 }
+inflation1600= {potential = {is_year = 1600 ai=no NOT = {has_country_modifier = monstrous_nation} NOT = {is_year = 1610}} trigger = {always = yes} inflation_reduction = -0.164 advisor_cost = 0.15 build_time = 0.15 }
+inflation1610= {potential = {is_year = 1610 ai=no NOT = {has_country_modifier = monstrous_nation} NOT = {is_year = 1620}} trigger = {always = yes} inflation_reduction = -0.175 advisor_cost = 0.16 build_time = 0.16 }
+inflation1620= {potential = {is_year = 1620 ai=no NOT = {has_country_modifier = monstrous_nation} NOT = {is_year = 1630}} trigger = {always = yes} inflation_reduction = -0.186 advisor_cost = 0.17 build_time = 0.17 }
+inflation1630= {potential = {is_year = 1630 ai=no NOT = {has_country_modifier = monstrous_nation} NOT = {is_year = 1640}} trigger = {always = yes} inflation_reduction = -0.197 advisor_cost = 0.18 build_time = 0.18 }
+inflation1640= {potential = {is_year = 1640 ai=no NOT = {has_country_modifier = monstrous_nation} NOT = {is_year = 1650}} trigger = {always = yes} inflation_reduction = -0.208 advisor_cost = 0.19 build_time = 0.19 }
+inflation1650= {potential = {is_year = 1650 ai=no NOT = {has_country_modifier = monstrous_nation} NOT = {is_year = 1660}} trigger = {always = yes} inflation_reduction = -0.219 advisor_cost = 0.20 build_time = 0.20 }
+inflation1660= {potential = {is_year = 1660 ai=no NOT = {has_country_modifier = monstrous_nation} NOT = {is_year = 1670}} trigger = {always = yes} inflation_reduction = -0.23 advisor_cost = 0.21 build_time = 0.21 }
+inflation1670= {potential = {is_year = 1670 ai=no NOT = {has_country_modifier = monstrous_nation} NOT = {is_year = 1680}} trigger = {always = yes} inflation_reduction = -0.241 advisor_cost = 0.22 build_time = 0.22 }
+inflation1680= {potential = {is_year = 1680 ai=no NOT = {has_country_modifier = monstrous_nation} NOT = {is_year = 1690}} trigger = {always = yes} inflation_reduction = -0.252 advisor_cost = 0.23 build_time = 0.23 }
+inflation1690= {potential = {is_year = 1690 ai=no NOT = {has_country_modifier = monstrous_nation} NOT = {is_year = 1700}} trigger = {always = yes} inflation_reduction = -0.263 advisor_cost = 0.24 build_time = 0.24 }
+inflation1700= {potential = {is_year = 1700 ai=no NOT = {has_country_modifier = monstrous_nation} NOT = {is_year = 1710}} trigger = {always = yes} inflation_reduction = -0.274 advisor_cost = 0.25 build_time = 0.25 }
+inflation1710= {potential = {is_year = 1710 ai=no NOT = {has_country_modifier = monstrous_nation} NOT = {is_year = 1720}} trigger = {always = yes} inflation_reduction = -0.285 advisor_cost = 0.26 build_time = 0.26 }
+inflation1720= {potential = {is_year = 1720 ai=no NOT = {has_country_modifier = monstrous_nation} NOT = {is_year = 1730}} trigger = {always = yes} inflation_reduction = -0.296 advisor_cost = 0.27 build_time = 0.27 }
+inflation1730= {potential = {is_year = 1730 ai=no NOT = {has_country_modifier = monstrous_nation} NOT = {is_year = 1740}} trigger = {always = yes} inflation_reduction = -0.307 advisor_cost = 0.28 build_time = 0.28 }
+inflation1740= {potential = {is_year = 1740 ai=no NOT = {has_country_modifier = monstrous_nation} NOT = {is_year = 1750}} trigger = {always = yes} inflation_reduction = -0.318 advisor_cost = 0.29 build_time = 0.29 }
+inflation1750= {potential = {is_year = 1750 ai=no NOT = {has_country_modifier = monstrous_nation} NOT = {is_year = 1760}} trigger = {always = yes} inflation_reduction = -0.329 advisor_cost = 0.30 build_time = 0.30 }
+inflation1760= {potential = {is_year = 1760 ai=no NOT = {has_country_modifier = monstrous_nation} NOT = {is_year = 1770}} trigger = {always = yes} inflation_reduction = -0.34 advisor_cost = 0.31 build_time = 0.31 }
+inflation1770= {potential = {is_year = 1770 ai=no NOT = {has_country_modifier = monstrous_nation} NOT = {is_year = 1780}} trigger = {always = yes} inflation_reduction = -0.351 advisor_cost = 0.32 build_time = 0.32 }
+inflation1780= {potential = {is_year = 1780 ai=no NOT = {has_country_modifier = monstrous_nation} NOT = {is_year = 1790}} trigger = {always = yes} inflation_reduction = -0.362 advisor_cost = 0.33 build_time = 0.33 }
+inflation1790= {potential = {is_year = 1790 ai=no NOT = {has_country_modifier = monstrous_nation} NOT = {is_year = 1800}} trigger = {always = yes} inflation_reduction = -0.373 advisor_cost = 0.34 build_time = 0.34 }
+inflation1800= {potential = {is_year = 1800 ai=no NOT = {has_country_modifier = monstrous_nation} NOT = {is_year = 1810}} trigger = {always = yes} inflation_reduction = -0.384 advisor_cost = 0.35 build_time = 0.35 }
+inflation1810= {potential = {is_year = 1810 ai=no NOT = {has_country_modifier = monstrous_nation} NOT = {is_year = 1820}} trigger = {always = yes} inflation_reduction = -0.395 advisor_cost = 0.36 build_time = 0.36 }

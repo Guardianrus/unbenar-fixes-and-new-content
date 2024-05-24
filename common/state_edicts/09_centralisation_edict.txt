@@ -1,0 +1,263 @@
+edict_centralization_effort = {
+	potential = {
+		NOT = {
+			FROM = {
+				all_province_in_state = {
+					OR = {
+						has_building = town_hall
+						has_building = government_lvl_3
+						has_building = government_lvl_4
+					}
+				}
+			}
+		}
+	}
+
+	allow = {
+		custom_trigger_tooltip = {
+			tooltip = disable_state_edicts_active.tooltip
+			ROOT = {
+				NOT = {
+					has_country_flag = disable_state_edicts_active
+				}
+			}
+			always = yes
+		}
+	}
+
+	modifier = {
+		local_autonomy = -0.03
+		local_state_maintenance_modifier = -0.25
+	}
+
+	color = {  220 178 155 }
+
+
+	ai_will_do = {
+		factor = 15.0
+		modifier = {
+			factor = 0
+			all_province_in_state = {
+				NOT = { local_autonomy = 60 }
+			}
+		}
+		modifier = {
+			factor = 2.0
+			any_province_in_state = {
+				local_autonomy = 60
+			}
+		}
+		modifier = {
+			factor = 2.0
+			any_province_in_state = {
+				local_autonomy = 80
+			}
+		}
+		modifier = {
+			factor = 2.0
+			any_province_in_state = {
+				local_autonomy = 100
+			}
+		}
+	}
+}
+
+edict_centralization_effort_2 = {
+	potential = {
+		FROM = {
+			all_province_in_state = {
+				OR = {
+					has_building = town_hall
+					has_building = government_lvl_3
+					has_building = government_lvl_4
+				}
+			}
+		}
+		NOT = {
+			FROM = {
+				all_province_in_state = {
+					OR = {
+						has_building = government_lvl_3
+						has_building = government_lvl_4
+					}
+				}
+			}
+		}
+	}
+
+	allow = {
+		custom_trigger_tooltip = {
+			tooltip = disable_state_edicts_active.tooltip
+			ROOT = {
+				NOT = {
+					has_country_flag = disable_state_edicts_active
+				}
+			}
+			always = yes
+		}
+	}
+
+	modifier = {
+		local_autonomy = -0.05
+		local_state_maintenance_modifier = -0.25
+	}
+
+	color = {  220 178 155 }
+
+
+	ai_will_do = {
+		factor = 15.0
+		modifier = {
+			factor = 0
+			all_province_in_state = {
+				NOT = { local_autonomy = 60 }
+			}
+		}
+		modifier = {
+			factor = 2.0
+			any_province_in_state = {
+				local_autonomy = 60
+			}
+		}
+		modifier = {
+			factor = 2.0
+			any_province_in_state = {
+				local_autonomy = 80
+			}
+		}
+		modifier = {
+			factor = 2.0
+			any_province_in_state = {
+				local_autonomy = 100
+			}
+		}
+	}
+}
+
+edict_centralization_effort_3 = {
+	potential = {
+		FROM = {
+			all_province_in_state = {
+				OR = {
+					has_building = government_lvl_3
+					has_building = government_lvl_4
+				}
+			}
+		}
+		NOT = {
+			FROM = {
+				all_province_in_state = {
+					OR = {
+						has_building = government_lvl_4
+					}
+				}
+			}
+		}
+	}
+
+	allow = {
+		custom_trigger_tooltip = {
+			tooltip = disable_state_edicts_active.tooltip
+			ROOT = {
+				NOT = {
+					has_country_flag = disable_state_edicts_active
+				}
+			}
+			always = yes
+		}
+	}
+
+	modifier = {
+		local_autonomy = -0.1
+		local_state_maintenance_modifier = -0.25
+	}
+
+	color = {  220 178 155 }
+
+
+	ai_will_do = {
+		factor = 15.0
+		modifier = {
+			factor = 0
+			all_province_in_state = {
+				NOT = { local_autonomy = 60 }
+			}
+		}
+		modifier = {
+			factor = 2.0
+			any_province_in_state = {
+				local_autonomy = 60
+			}
+		}
+		modifier = {
+			factor = 2.0
+			any_province_in_state = {
+				local_autonomy = 80
+			}
+		}
+		modifier = {
+			factor = 2.0
+			any_province_in_state = {
+				local_autonomy = 100
+			}
+		}
+	}
+}
+
+edict_centralization_effort_4 = {
+	potential = {
+		FROM = {
+			all_province_in_state = {
+				has_building = government_lvl_4
+			}
+		}
+	}
+
+	allow = {
+		custom_trigger_tooltip = {
+			tooltip = disable_state_edicts_active.tooltip
+			ROOT = {
+				NOT = {
+					has_country_flag = disable_state_edicts_active
+				}
+			}
+			always = yes
+		}
+	}
+
+	modifier = {
+		local_autonomy = -0.15
+		local_state_maintenance_modifier = -0.25
+	}
+
+	color = {  220 178 155 }
+
+
+	ai_will_do = {
+		factor = 15.0
+		modifier = {
+			factor = 0
+			all_province_in_state = {
+				NOT = { local_autonomy = 60 }
+			}
+		}
+		modifier = {
+			factor = 2.0
+			any_province_in_state = {
+				local_autonomy = 60
+			}
+		}
+		modifier = {
+			factor = 2.0
+			any_province_in_state = {
+				local_autonomy = 80
+			}
+		}
+		modifier = {
+			factor = 2.0
+			any_province_in_state = {
+				local_autonomy = 100
+			}
+		}
+	}
+}

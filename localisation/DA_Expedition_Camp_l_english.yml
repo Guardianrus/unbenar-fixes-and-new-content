@@ -1,0 +1,66 @@
+﻿l_english:
+
+# set up camp decision
+
+DA_Look_for_adk_title: "Set up §YExpedition Camp§!"
+DA_Look_for_adk_desc: "Having an §YExpedition Camp§! will make it so your expeditions in this province will have additional events, both positive and negative."
+DA_Look_for_adk_tooltip: "One core province has an expedition in progress and does not have an §YExpedition Camp§!"
+
+
+# modifiers
+
+DA_expedition_camp: "§YExpedition Camp§!"
+desc_DA_expedition_camp: "Your Expeditions in this province will have additional events"
+DA_expandable_hold_infrastructure: "Developable Secret Passage"
+desc_DA_expandable_hold_infrastructure: "Found during an expedition in this province, the secret passage is connected to an old Hold facility. We can simply restore and expand using it as a base, thus saving us a bit of effort."
+
+#events
+
+DA_Expedition_camp_event.1.t: "Expedition Camp"
+DA_Expedition_camp_event.1.d: "Funds are already being allocated, shall we proceed and set up the Expedition Camp?\nHaving an Expedition Camp in a province will make it so every expedition we will make in it will get additional events from the Dwarven Knowledge mod and a little boost to the province trade power."
+DA_Expedition_camp_event.1.a: "Set it up"
+DA_Expedition_camp_event.1.Go_Back: "Go Back"
+
+DA_Expedition_camp_event.2.t: "Secret Passage, Ancestor's Workshop\n[DungeonOverlayBackground]"
+DA_Expedition_camp_event.2.d: "[DungeonOverlay]The secret passage led to an old workshop.\nAfter searching around for some time we organized books, materials and other miscellaneous stuff as best as we could to take it back with us and departed.\nIt was the right decision to invest in this activity."
+DA_Expedition_camp_event.2.a: "Excellent job"
+
+DA_Expedition_camp_event.3.t: "Secret Passage\n[DungeonOverlayBackground]"
+DA_Expedition_camp_event.3.d: "[DungeonOverlay]During our expedition we came across a secret passage leading to an unexplored path.\nWe can take a bit of time to explore it or we can keep going on our path, the choice is yours to make."
+DA_Expedition_camp_event.3.a: "let's try it"
+DA_Expedition_camp_event.3.tooltip: "Explore the secret passage..."
+DA_Expedition_camp_event.3.coward: "ignore it"
+
+DA_Expedition_camp_event.10.t: "Secret Passage, Bugbears Den\n[DungeonOverlayBackground]"
+DA_Expedition_camp_event.10.d: "[DungeonOverlay]Shortly after taking the secret passage a pack of bugbears come charging from the depths, a crazed look in their eyes, as if we were their archenemy.\nAfter a strenous battle we realized the end of the cave was their den and they charged at us without holding back because this was their children's home, truly unfortunate outcome."
+DA_Expedition_camp_event.10.a: "Ashen Skies! At least take the meat"
+DA_Expedition_camp_event.10.b: "Ashen Skies! Tend to the injured"
+
+DA_Expedition_camp_event.11.t: "Secret Passage, Old Deposit\n[DungeonOverlayBackground]"
+DA_Expedition_camp_event.11.d: "[DungeonOverlay]after taking the secret passage we came across a large door.\nWe opened it just to discover an old deposit, probably some emergency supply to be used in times of need.\nWe took what was left and still functioning with us."
+DA_Expedition_camp_event.11.a: "Useful"
+
+ DA_Expedition_camp_event.12.t:0 "Abandoned Settlement\n[DungeonOverlayBackground]"
+ DA_Expedition_camp_event.12.d:0 "[DungeonOverlay]Shortly after taking the secret passage We came across some very old dwarven buildings.\nThey appear to be completely void of any form of life, the only useful things we found were here are the metal supplies of what we think was the Blacksmith's shop.\nThe location has been noted and we will be able to restore exploit it in the future"
+ DA_Expedition_camp_event.12.a:0 "Nice"
+ DA_Abandoned_settlement:0 "Old Settlement"
+ desc_DA_Abandoned_settlement:0 "An old settlement has been found in this province, its presence let us save some space and time during contruction work and development."
+
+ DA_Expedition_camp_event.13.t:0 "Mithril Vein\n[DungeonOverlayBackground]"
+ DA_Expedition_camp_event.13.d:0 "[DungeonOverlay]Shortly after taking the secret passage We came across a Mithril vein.\n we didn't even think it was possible to find it during this expedition.\nWe have marked down the location for future use or we ccould simply take some with us now and be done with it"
+ DA_Expedition_camp_event.13.a:0 "Mark the location, we will exploit the vein"
+ DA_Expedition_camp_event.13.b:0 "Take some with you, no need to exploit it all"
+
+ DA_Expedition_camp_event.14.t:0 "Damestear Deposit\n[DungeonOverlayBackground]"
+ DA_Expedition_camp_event.14.d:0 "[DungeonOverlay]Shortly after taking the secret passage We came across an highly fortified building.\nAfter a considerable amount of effort we broke through the entrance and discovered something quite unexpected.\nThis apparently was a Damestear deposit, quite a big one too, which was probably forgotten with the passage of time and no one has come to reclaim it, not until now."
+ DA_Expedition_camp_event.14.a:0 "Exploit it while it lasts"
+ DA_Expedition_camp_event.14.b:0 "Take what you can with you and go on"
+
+DA_Expedition_camp_event.20.t: "Secret Passage, Hold Infrastructure\n[DungeonOverlayBackground]"
+DA_Expedition_camp_event.20.d: "[DungeonOverlay]The secret passage led to what we believe to be part of the Hold infrastructure. Old houses, shops and some whorkshops in ruin can be seen here and there. This was probably a minor settlement, developed exploiting the nearest hold's trade.\nWe have taken note of it as restoring this is definitely more efficient than building one more from scratch."
+DA_Expedition_camp_event.20.a: "Nice discovery"
+
+DA_Expedition_camp_event.21.t: "Secret Passage, Hold Graveyard\n[DungeonOverlayBackground]"
+DA_Expedition_camp_event.21.d: "[DungeonOverlay]The secret passage led to what we believe to be part of the Hold infrastructure.\nA massive graveyard, containing the corpses of our ancestor lies here in an half ruined state.\nWhat shuold we do?\n"
+DA_Expedition_camp_event.21.a: "Take what is valuable, they would understand"
+DA_Expedition_camp_event.21.b: "Honor The Ancestors"

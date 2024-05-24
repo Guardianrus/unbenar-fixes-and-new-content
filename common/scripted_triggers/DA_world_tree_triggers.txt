@@ -1,0 +1,7 @@
+ruler_is_Tree_loved = {
+	OR = {
+		ruler_culture = emerald_orc
+		ruler_culture = forest_goblin
+		ruler_culture = wood_elf
+	}
+}

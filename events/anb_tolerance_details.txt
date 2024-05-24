@@ -1,0 +1,20 @@
+# Blank event to make sure game loads mod
+namespace = anbennar_tolerance_details
+
+country_event = {
+	id = anbennar_tolerance_details.1
+	title = anbennar_tolerance_details.1.t
+	desc = anbennar_tolerance_details.1.d
+	picture = DEBATE_REPUBLICAN_eventPicture
+	
+	is_triggered_only = yes
+
+	
+	trigger = {
+		always = no
+	}
+
+	option = {
+		name = anbennar_tolerance_details.1.a
+	}
+}

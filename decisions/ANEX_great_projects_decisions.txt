@@ -1,0 +1,169 @@
+country_decisions = {
+	build_the_goliath = {
+		major = yes
+	
+		potential = {
+			owns_core_province = 2736
+			tag = H22
+			NOT = {
+				has_country_flag = goliath_built
+			}
+		}
+		
+		provinces_to_highlight = {
+			province_id = 2736
+		}
+		
+		allow = {
+			treasury = 1000
+		}
+	
+		effect = {
+			add_treasury = -1000
+			set_country_flag = goliath_built
+			2736 = {
+				set_province_flag = kheionai_formed_goliath
+			}
+		}
+	}
+	
+	build_the_harbor = {
+		major = yes
+	
+		potential = {
+			owns_core_province = 2738
+			tag = H22
+			NOT = {
+				has_country_flag = harbor_built
+			}
+		}
+		
+		provinces_to_highlight = {
+			province_id = 2738
+		}
+		
+		allow = {
+			treasury = 1000
+		}
+	
+		effect = {
+			add_treasury = -1000
+			set_country_flag = harbor_built
+			2738 = {
+				set_province_flag = kheionai_formed_harbor
+			}
+		}
+	}
+	
+	build_the_library = {
+		major = yes
+	
+		potential = {
+			owns_core_province = 2745
+			tag = H22
+			NOT = {
+				has_country_flag = library_built
+			}
+		}
+		
+		provinces_to_highlight = {
+			province_id = 2745
+		}
+		
+		allow = {
+			treasury = 1000
+		}
+	
+		effect = {
+			add_treasury = -1000
+			set_country_flag = library_built
+			2745 = {
+				set_province_flag = kheionai_formed_library
+			}
+		}
+	}
+	
+	build_the_forge = {
+		major = yes
+	
+		potential = {
+			owns_core_province = 2773
+			tag = H22
+			NOT = {
+				has_country_flag = forge_built
+			}
+		}
+		
+		provinces_to_highlight = {
+			province_id = 2773
+		}
+		
+		allow = {
+			treasury = 1000
+		}
+	
+		effect = {
+			add_treasury = -1000
+			set_country_flag = forge_built
+			2773 = {
+				set_province_flag = kheionai_formed_forge
+			}
+		}
+	}
+	
+	build_the_naval_school = {
+		major = yes
+	
+		potential = {
+			owns_core_province = 2731
+			tag = H22
+			NOT = {
+				has_country_flag = naval_school_built
+			}
+		}
+		
+		provinces_to_highlight = {
+			province_id = 2731
+		}
+		
+		allow = {
+			treasury = 1000
+		}
+	
+		effect = {
+			add_treasury = -1000
+			set_country_flag = naval_school_built
+			2731 = {
+				set_province_flag = kheionai_formed_naval
+			}
+		}
+	}
+	
+	build_the_glassworks = {
+		major = yes
+	
+		potential = {
+			owns_core_province = 2728
+			tag = H22
+			NOT = {
+				has_country_flag = glassworks_built
+			}
+		}
+		
+		provinces_to_highlight = {
+			province_id = 2728
+		}
+		
+		allow = {
+			treasury = 1000
+		}
+	
+		effect = {
+			add_treasury = -1000
+			set_country_flag = glassworks_built
+			2728 = {
+				set_province_flag = kheionai_formed_glassworks
+			}
+		}
+	}
+}

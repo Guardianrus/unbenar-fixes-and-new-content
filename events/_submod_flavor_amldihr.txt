@@ -1,0 +1,51 @@
+namespace = verkalskomdihr
+
+#The Ranger's Captain Logbook - Edited from Base
+country_event = {
+	id = verkalskomdihr.101
+	title = verkalskomdihr.101.t
+	desc = verkalskomdihr.1.d
+	picture = BIG_BOOK_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		always = yes
+	}
+	
+	option = {
+		name = verkalskomdihr.101.a
+		ai_chance = { factor = 50 }
+		lonfarch_area = {
+				limit = {
+					NOT = { is_core = ROOT } 
+					NOT = { is_permanent_claim = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+		ayeth_area = {
+				limit = {
+					NOT = { is_core = ROOT } 
+					NOT = { is_permanent_claim = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+		add_country_modifier = {
+				name = amldihr_deepwoods
+				duration = 7300
+			}	
+		add_prestige = 15
+	}
+	
+	option = {
+		name = verkalskomdihr.101.b
+		ai_chance = { factor = 50 }
+		4100 = {
+				add_province_modifier = {
+					name = "amldihr_destroyed_deepwoods"
+					duration = -1
+				}
+			}
+		add_prestige = 15
+	}
+}

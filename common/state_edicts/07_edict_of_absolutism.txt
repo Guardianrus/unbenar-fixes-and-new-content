@@ -1,0 +1,444 @@
+edict_of_absolutism = {
+
+	potential = {
+		AND = {
+			NOT = {
+				FROM = {
+					all_province_in_state = {
+						OR = {
+							has_building = town_hall
+							has_building = government_lvl_3
+							has_building = government_lvl_4
+						}
+					}
+				}
+			}
+			current_age = age_of_absolutism
+		}
+	}
+
+	allow = {
+		if = {
+			limit = { ROOT = { ai = yes } }
+			ROOT = {
+				is_at_war = no
+				has_country_modifier = xorme_ai_valid_nation
+			}
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					has_country_flag = disable_state_edicts_active
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip =edict_of_absolutism_tooltip
+				has_country_flag = edict_of_absolutism
+			}
+			current_age = age_of_absolutism
+		}
+		else = {
+			custom_trigger_tooltip = {
+				tooltip = disable_state_edicts_active.tooltip
+				ROOT = {
+					NOT = {
+						has_country_flag = disable_state_edicts_active
+					}
+				}
+			}
+		}
+	}
+
+	modifier = {
+		local_monthly_devastation = -0.5
+	}
+
+	color = {  116 198 240  }
+
+
+	ai_will_do = {
+		factor = 10
+		modifier = {
+			factor = 0
+			AND = {
+				has_state_edict = edict_of_absolutism
+				all_province_in_state = {
+					NOT = {
+						devastation = 1
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 5
+			has_state_edict = edict_of_absolutism
+		}
+		modifier = {
+			factor = 0
+
+			AND = {
+				NOT = { has_state_edict = edict_of_absolutism }
+				all_province_in_state = {
+					NOT = {
+						devastation = 2
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 5
+
+			AND = {
+				NOT = { has_state_edict = edict_of_absolutism }
+				all_province_in_state = {
+					devastation = 5
+				}
+			}
+		}
+		modifier = {
+			factor = 5
+
+			AND = {
+				NOT = { has_state_edict = edict_of_absolutism }
+				any_province_in_state = {
+					devastation = 10
+				}
+			}
+		}
+	}
+}
+edict_of_absolutism_1 = {
+
+	potential = {
+		AND = {
+			FROM = {
+				all_province_in_state = {
+					OR = {
+						has_building = town_hall
+						has_building = government_lvl_3
+						has_building = government_lvl_4
+					}
+				}
+			}
+			NOT = {
+				FROM = {
+					all_province_in_state = {
+						OR = {
+							has_building = government_lvl_3
+							has_building = government_lvl_4
+						}
+					}
+				}
+			}
+			current_age = age_of_absolutism
+		}
+	}
+
+	allow = {
+		if = {
+			limit = { ROOT = { ai = yes } }
+			ROOT = {
+				is_at_war = no
+				has_country_modifier = xorme_ai_valid_nation
+			}
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					has_country_flag = disable_state_edicts_active
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip =edict_of_absolutism_tooltip
+				has_country_flag = edict_of_absolutism
+			}
+			current_age = age_of_absolutism
+		}
+		else = {
+			custom_trigger_tooltip = {
+				tooltip = disable_state_edicts_active.tooltip
+				ROOT = {
+					NOT = {
+						has_country_flag = disable_state_edicts_active
+					}
+				}
+			}
+		}
+	}
+
+	modifier = {
+		local_monthly_devastation = -1
+	}
+
+	color = {  116 198 240  }
+
+
+	ai_will_do = {
+		factor = 10
+		modifier = {
+			factor = 0
+			AND = {
+				has_state_edict = edict_of_absolutism
+				all_province_in_state = {
+					NOT = {
+						devastation = 1
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 5
+			has_state_edict = edict_of_absolutism
+		}
+		modifier = {
+			factor = 0
+
+			AND = {
+				NOT = { has_state_edict = edict_of_absolutism }
+				all_province_in_state = {
+					NOT = {
+						devastation = 2
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 5
+
+			AND = {
+				NOT = { has_state_edict = edict_of_absolutism }
+				all_province_in_state = {
+					devastation = 5
+				}
+			}
+		}
+		modifier = {
+			factor = 5
+
+			AND = {
+				NOT = { has_state_edict = edict_of_absolutism }
+				any_province_in_state = {
+					devastation = 10
+				}
+			}
+		}
+	}
+}
+edict_of_absolutism_2 = {
+
+	potential = {
+		AND = {
+			FROM = {
+				all_province_in_state = {
+					OR = {
+						has_building = government_lvl_3
+						has_building = government_lvl_4
+					}
+				}
+			}
+			NOT = {
+				FROM = {
+					all_province_in_state = {
+						OR = {
+							has_building = government_lvl_4
+						}
+					}
+				}
+			}
+			current_age = age_of_absolutism
+		}
+	}
+
+	allow = {
+		if = {
+			limit = { ROOT = { ai = yes } }
+			ROOT = {
+				is_at_war = no
+				has_country_modifier = xorme_ai_valid_nation
+			}
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					has_country_flag = disable_state_edicts_active
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip =edict_of_absolutism_tooltip
+				has_country_flag = edict_of_absolutism
+			}
+			current_age = age_of_absolutism
+		}
+		else = {
+			custom_trigger_tooltip = {
+				tooltip = disable_state_edicts_active.tooltip
+				ROOT = {
+					NOT = {
+						has_country_flag = disable_state_edicts_active
+					}
+				}
+			}
+		}
+	}
+
+	modifier = {
+		local_monthly_devastation = -1.5
+	}
+
+	color = {  116 198 240  }
+
+
+	ai_will_do = {
+		factor = 10
+		modifier = {
+			factor = 0
+			AND = {
+				has_state_edict = edict_of_absolutism
+				all_province_in_state = {
+					NOT = {
+						devastation = 1
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 5
+			has_state_edict = edict_of_absolutism
+		}
+		modifier = {
+			factor = 0
+
+			AND = {
+				NOT = { has_state_edict = edict_of_absolutism }
+				all_province_in_state = {
+					NOT = {
+						devastation = 2
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 5
+
+			AND = {
+				NOT = { has_state_edict = edict_of_absolutism }
+				all_province_in_state = {
+					devastation = 5
+				}
+			}
+		}
+		modifier = {
+			factor = 5
+
+			AND = {
+				NOT = { has_state_edict = edict_of_absolutism }
+				any_province_in_state = {
+					devastation = 10
+				}
+			}
+		}
+	}
+}
+edict_of_absolutism_3 = {
+
+	potential = {
+		AND = {
+			FROM = {
+				all_province_in_state = {
+					has_building = government_lvl_4
+				}
+			}
+			current_age = age_of_absolutism
+		}
+	}
+
+	allow = {
+		if = {
+			limit = { ROOT = { ai = yes } }
+			ROOT = {
+				is_at_war = no
+				has_country_modifier = xorme_ai_valid_nation
+			}
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					has_country_flag = disable_state_edicts_active
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip =edict_of_absolutism_tooltip
+				has_country_flag = edict_of_absolutism
+			}
+			current_age = age_of_absolutism
+		}
+		else = {
+			custom_trigger_tooltip = {
+				tooltip = disable_state_edicts_active.tooltip
+				ROOT = {
+					NOT = {
+						has_country_flag = disable_state_edicts_active
+					}
+				}
+			}
+		}
+	}
+
+	modifier = {
+		local_monthly_devastation = -2
+	}
+
+	color = {  116 198 240  }
+
+
+	ai_will_do = {
+		factor = 10
+		modifier = {
+			factor = 0
+			AND = {
+				has_state_edict = edict_of_absolutism
+				all_province_in_state = {
+					NOT = {
+						devastation = 1
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 5
+			has_state_edict = edict_of_absolutism
+		}
+		modifier = {
+			factor = 0
+
+			AND = {
+				NOT = { has_state_edict = edict_of_absolutism }
+				all_province_in_state = {
+					NOT = {
+						devastation = 2
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 5
+
+			AND = {
+				NOT = { has_state_edict = edict_of_absolutism }
+				all_province_in_state = {
+					devastation = 5
+				}
+			}
+		}
+		modifier = {
+			factor = 5
+
+			AND = {
+				NOT = { has_state_edict = edict_of_absolutism }
+				any_province_in_state = {
+					devastation = 10
+				}
+			}
+		}
+	}
+}

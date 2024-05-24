@@ -1,0 +1,28 @@
+country_decisions = {
+####################
+##REDUCE INFLATION##
+####################
+	xorme_ai_inflation = {
+		potential = {
+			has_country_modifier = xorme_ai_valid_nation
+		}
+
+		allow = {
+			is_at_war = no
+			adm_power = 150
+			inflation = 2
+		}
+
+		effect = {
+			add_adm_power = -50
+			add_inflation = -2
+		}
+		ai_will_do = {
+			factor = 1.0
+			modifier = {
+				factor = 0
+				NOT = { inflation = 4 }
+			}
+		}
+	}
+}

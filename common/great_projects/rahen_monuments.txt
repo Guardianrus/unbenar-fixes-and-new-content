@@ -1,0 +1,1422 @@
+#High Temple of Mindanan
+#Idea - Idea cost, same culture advisor cost, max absolutism
+temple_mindanan = {
+	start = 4384
+	date = -2000.01.01
+	time = {
+		months = 0
+	}
+	build_cost = 0
+	can_be_moved = no
+	move_days_per_unit_distance = 1
+	starting_tier = 0
+	type = monument
+
+	build_trigger = {
+		#anyone		
+	}
+	on_built = {
+		
+	}
+	on_destroyed = {
+		
+	}
+	
+	can_use_modifiers_trigger = {
+		owner = { 
+			culture_group = harimari
+			OR = {
+				religion = high_philosophy
+				secondary_religion = high_philosophy
+			}	
+		}
+		has_province_modifier = temple_complex
+	}
+	
+	can_upgrade_trigger = {
+		owner = { 
+			culture_group = harimari
+			OR = {
+			religion = high_philosophy
+			secondary_religion = high_philosophy
+			}
+		}
+	}
+	
+	keep_trigger = {
+	}
+
+	tier_0 = {
+		upgrade_time = {
+			months = 0
+		}
+		cost_to_upgrade = {
+			factor = 0
+		}
+		province_modifiers = {
+		}
+		area_modifier = {
+		}
+		country_modifiers = {
+			
+		}
+		on_upgraded = {
+		}
+	}
+
+	tier_1 = {
+		upgrade_time = {
+			months = 120
+		}
+		cost_to_upgrade = {
+			factor = 1500
+		}
+		province_modifiers = {
+			
+		}
+		area_modifier = {
+			
+		}
+		country_modifiers = {
+			legitimacy = 0.25
+			max_absolutism = 5
+		}
+		on_upgraded = {
+		}
+	}
+
+	tier_2 = {
+		upgrade_time = {
+			months = 240
+		}
+		cost_to_upgrade = {
+			factor = 4500
+		}
+		province_modifiers = {
+			
+		}
+		area_modifier = {
+			
+		}
+		country_modifiers = {
+			infantry_shock = 0.10
+			legitimacy = 0.5
+			max_absolutism = 10
+		}
+		on_upgraded = {
+		}
+	}
+
+	tier_3 = {
+		upgrade_time = {
+			months = 480
+		}
+		cost_to_upgrade = {
+			factor = 9000
+		}
+		province_modifiers = {
+			
+		}
+		area_modifier = {
+			
+		}
+		country_modifiers = {
+			infantry_shock = 0.20
+			legitimacy = 1
+			max_absolutism = 20
+		}
+		on_upgraded = {
+		}
+	}
+}
+
+#Dye Markets of Sharaajaghal
+#Goods produced locally and globally, flat local goods produced
+dye_market = {
+	start = 4485
+	date = 01.01.01
+	time = {
+		months = 0
+	}
+	build_cost = 0
+	can_be_moved = no
+	move_days_per_unit_distance = 1
+	starting_tier = 1
+	type = monument
+
+	build_trigger = {
+		#anyone		
+	}
+	on_built = {
+		
+	}
+	on_destroyed = {
+		
+	}
+	
+	can_use_modifiers_trigger = {
+		province_is_or_accepts_culture = yes
+		culture_group = middle_raheni
+		has_trade_building_trigger = yes
+	}
+	
+	can_upgrade_trigger = {
+		
+	}
+	
+	keep_trigger = {
+		
+	}
+
+	tier_0 = {
+		upgrade_time = {
+			months = 0
+		}
+		cost_to_upgrade = {
+			factor = 0
+		}
+		province_modifiers = {
+		}
+		area_modifier = {
+		}
+		country_modifiers = {
+			
+		}
+		on_upgraded = {
+		}
+	}
+
+	tier_1 = {
+		upgrade_time = {
+			months = 120
+		}
+		cost_to_upgrade = {
+			factor = 1500
+		}
+		province_modifiers = {
+			trade_goods_size = 1
+		}
+		area_modifier = {
+			
+		}
+		country_modifiers = {
+			global_trade_goods_size_modifier = 0.05
+			global_unrest = -1
+		}
+		on_upgraded = {
+		}
+	}
+
+	tier_2 = {
+		upgrade_time = {
+			months = 240
+		}
+		cost_to_upgrade = {
+			factor = 3500
+		}
+		province_modifiers = {
+			trade_goods_size = 2
+		}
+		area_modifier = {
+			
+		}
+		country_modifiers = {
+			global_trade_goods_size_modifier = 0.10
+			global_unrest = -2
+		}
+		on_upgraded = {
+		}
+	}
+
+	tier_3 = {
+		upgrade_time = {
+			months = 480
+		}
+		cost_to_upgrade = {
+			factor = 9000
+		}
+		province_modifiers = {
+			trade_goods_size = 4
+		}
+		area_modifier = {
+			
+		}
+		country_modifiers = {
+			global_trade_goods_size_modifier = 0.15
+			global_unrest = -2
+		}
+		on_upgraded = {
+			add_center_of_trade_level = 1
+		}
+	}
+}
+
+#Temple of Foresight
+#Tech cost, advisor numbers and cost
+temple_foresight = {
+	start = 4527
+	date = 01.01.01
+	time = {
+		months = 0
+	}
+	build_cost = 0
+	can_be_moved = no
+	move_days_per_unit_distance = 1
+	starting_tier = 1	
+	type = monument
+
+	build_trigger = {
+		#anyone		
+	}
+	on_built = {
+		
+	}
+	on_destroyed = {
+		
+	}
+	
+	can_use_modifiers_trigger = {
+		province_is_or_accepts_culture = yes
+		culture_group = middle_raheni
+		has_province_modifier = temple_complex
+	}
+	
+	can_upgrade_trigger = {
+
+	}
+	
+	keep_trigger = {
+		
+	}
+
+	tier_0 = {
+		upgrade_time = {
+			months = 0
+		}
+		cost_to_upgrade = {
+			factor = 0
+		}
+		province_modifiers = {
+		}
+		area_modifier = {
+		}
+		country_modifiers = {
+			
+		}
+		on_upgraded = {
+		}
+	}
+
+	tier_1 = {
+		upgrade_time = {
+			months = 120
+		}
+		cost_to_upgrade = {
+			factor = 1500
+		}
+		province_modifiers = {
+			
+		}
+		area_modifier = {
+			
+		}
+		country_modifiers = {
+			advisor_pool = 1
+			adm_advisor_cost = -0.025
+		}
+		on_upgraded = {
+		}
+	}
+
+	tier_2 = {
+		upgrade_time = {
+			months = 240
+		}
+		cost_to_upgrade = {
+			factor = 3500
+		}
+		province_modifiers = {
+			
+		}
+		area_modifier = {
+			
+		}
+		country_modifiers = {
+			advisor_pool = 2
+			adm_advisor_cost = -0.05
+		}
+		on_upgraded = {
+		}
+	}
+
+	tier_3 = {
+		upgrade_time = {
+			months = 480
+		}
+		cost_to_upgrade = {
+			factor = 9000
+		}
+		province_modifiers = {
+			
+		}
+		area_modifier = {
+			
+		}
+		country_modifiers = {
+			advisor_pool = 3
+			adm_advisor_cost = -0.1
+			monarch_admin_power = 1
+		}
+		on_upgraded = {
+		}
+	}
+}
+
+#Dhujati League Headquarters
+#More diplo relations, trade efficiency, caravan power
+dhujati_headquarters = {
+	start = 4409
+	date = 01.01.01
+	time = {
+		months = 0
+	}
+	build_cost = 0
+	can_be_moved = no
+	move_days_per_unit_distance = 1
+	starting_tier = 0
+	type = monument
+
+	build_trigger = {
+		#anyone		
+	}
+	on_built = {
+		
+	}
+	on_destroyed = {
+		
+	}
+	
+	can_use_modifiers_trigger = {
+		culture_group = middle_raheni
+		has_owner_accepted_culture = yes
+		province_has_center_of_trade_of_level = 3
+	}
+	
+	can_upgrade_trigger = {
+
+	}
+	
+	keep_trigger = {
+		
+	}
+
+	tier_0 = {
+		upgrade_time = {
+			months = 0
+		}
+		cost_to_upgrade = {
+			factor = 0
+		}
+		province_modifiers = {
+		}
+		area_modifier = {
+		}
+		country_modifiers = {
+			
+		}
+		on_upgraded = {
+		}
+	}
+
+	tier_1 = {
+		upgrade_time = {
+			months = 120
+		}
+		cost_to_upgrade = {
+			factor = 1500
+		}
+		province_modifiers = {
+			
+		}
+		area_modifier = {
+			
+		}
+		country_modifiers = {
+			trade_steering = 0.05
+			trade_efficiency = 0.05
+			caravan_power = 0.15
+		}
+		on_upgraded = {
+		}
+	}
+
+	tier_2 = {
+		upgrade_time = {
+			months = 240
+		}
+		cost_to_upgrade = {
+			factor = 3500
+		}
+		province_modifiers = {
+			
+		}
+		area_modifier = {
+			
+		}
+		country_modifiers = {
+			trade_steering = 0.10
+			trade_efficiency = 0.10
+			caravan_power = 0.15
+		}
+		on_upgraded = {
+		}
+	}
+
+	tier_3 = {
+		upgrade_time = {
+			months = 480
+		}
+		cost_to_upgrade = {
+			factor = 9000
+		}
+		province_modifiers = {
+			
+		}
+		area_modifier = {
+			
+		}
+		country_modifiers = {
+			trade_steering = 0.15
+			trade_efficiency = 0.20
+			caravan_power = 0.25
+		}
+		on_upgraded = {
+		}
+	}
+}
+
+#Lotus Court of the Dhenijanraj
+#Liberty desire, vassal force limit contribution, diplo rep
+court_dhen = {
+	start = 4411
+	date = 01.01.01
+	time = {
+		months = 0
+	}
+	build_cost = 0
+	can_be_moved = no
+	move_days_per_unit_distance = 1
+	starting_tier = 2
+	type = monument
+
+	build_trigger = {
+		#anyone		
+	}
+	on_built = {
+		
+	}
+	on_destroyed = {
+		
+	}
+	
+	can_use_modifiers_trigger = {
+		owner = {
+			has_reform = raja_reform 
+		}
+		province_is_or_accepts_culture = yes
+	}
+	
+	can_upgrade_trigger = {
+
+	}
+	
+	keep_trigger = {
+		
+	}
+
+	tier_0 = {
+		upgrade_time = {
+			months = 0
+		}
+		cost_to_upgrade = {
+			factor = 0
+		}
+		province_modifiers = {
+		}
+		area_modifier = {
+		}
+		country_modifiers = {
+			
+		}
+		on_upgraded = {
+		}
+	}
+
+	tier_1 = {
+		upgrade_time = {
+			months = 120
+		}
+		cost_to_upgrade = {
+			factor = 1500
+		}
+		province_modifiers = {
+			
+		}
+		area_modifier = {
+			
+		}
+		country_modifiers = {
+			reduced_liberty_desire = 5
+			diplomatic_reputation = 1
+			vassal_forcelimit_bonus = 0.10
+			same_culture_advisor_cost = -0.10
+		}
+		on_upgraded = {
+		}
+	}
+
+	tier_2 = {
+		upgrade_time = {
+			months = 240
+		}
+		cost_to_upgrade = {
+			factor = 3500
+		}
+		province_modifiers = {
+			
+		}
+		area_modifier = {
+			
+		}
+		country_modifiers = {
+			reduced_liberty_desire = 10
+			diplomatic_reputation = 1
+			vassal_forcelimit_bonus = 0.15
+			same_culture_advisor_cost = -0.15
+		}
+		on_upgraded = {
+		}
+	}
+
+	tier_3 = {
+		upgrade_time = {
+			months = 480
+		}
+		cost_to_upgrade = {
+			factor = 9000
+		}
+		province_modifiers = {
+			
+		}
+		area_modifier = {
+			
+		}
+		country_modifiers = {
+			reduced_liberty_desire = 15
+			diplomatic_reputation = 2
+			vassal_forcelimit_bonus = 0.20
+			same_culture_advisor_cost = -0.20
+		}
+		on_upgraded = {
+		}
+	}
+}
+
+#Royal Library of Sarnihanpur
+#Tech and idea cost, institution spread
+sarnihanpur_library = {
+	start = 4460
+	date = 01.01.01
+	time = {
+		months = 0
+	}
+	build_cost = 0
+	can_be_moved = no
+	move_days_per_unit_distance = 1
+	starting_tier = 0
+	type = monument
+
+	build_trigger = {
+		4633 = {
+			owned_by = ROOT
+			culture_group = upper_raheni
+			has_owner_accepted_culture = yes
+		}
+		4510 = {
+			owned_by = ROOT
+			culture_group = upper_raheni
+			has_owner_accepted_culture = yes
+		}
+		4460 = {
+			owned_by = ROOT
+			culture_group = upper_raheni
+			has_owner_accepted_culture = yes
+		}		
+	}
+	on_built = {
+		
+	}
+	on_destroyed = {
+		
+	}
+	
+	can_use_modifiers_trigger = {
+		4633 = {
+			owned_by = ROOT
+			culture_group = upper_raheni
+			has_owner_accepted_culture = yes
+		}
+		4510 = {
+			owned_by = ROOT
+			culture_group = upper_raheni
+			has_owner_accepted_culture = yes
+		}
+		4460 = {
+			owned_by = ROOT
+			culture_group = upper_raheni
+			has_owner_accepted_culture = yes
+		}
+	}
+	
+	can_upgrade_trigger = {
+		4633 = {
+			owned_by = ROOT
+			culture_group = upper_raheni
+			has_owner_accepted_culture = yes
+		}
+		4510 = {
+			owned_by = ROOT
+			culture_group = upper_raheni
+			has_owner_accepted_culture = yes
+		}
+		4460 = {
+			owned_by = ROOT
+			culture_group = upper_raheni
+			has_owner_accepted_culture = yes
+		}
+	}
+	
+	keep_trigger = {
+		4633 = {
+			owned_by = ROOT
+			culture_group = upper_raheni
+			has_owner_accepted_culture = yes
+		}
+		4510 = {
+			owned_by = ROOT
+			culture_group = upper_raheni
+			has_owner_accepted_culture = yes
+		}
+		4460 = {
+			owned_by = ROOT
+			culture_group = upper_raheni
+			has_owner_accepted_culture = yes
+		}
+	}
+
+	tier_0 = {
+		upgrade_time = {
+			months = 0
+		}
+		cost_to_upgrade = {
+			factor = 0
+		}
+		province_modifiers = {
+		}
+		area_modifier = {
+		}
+		country_modifiers = {
+			
+		}
+		on_upgraded = {
+		}
+	}
+
+	tier_1 = {
+		upgrade_time = {
+			months = 120
+		}
+		cost_to_upgrade = {
+			factor = 1500
+		}
+		province_modifiers = {
+			
+		}
+		area_modifier = {
+			
+		}
+		country_modifiers = {
+			idea_cost = -0.05
+			innovativeness_gain = 0.10
+		}
+		on_upgraded = {
+		}
+	}
+
+	tier_2 = {
+		upgrade_time = {
+			months = 240
+		}
+		cost_to_upgrade = {
+			factor = 3500
+		}
+		province_modifiers = {
+			
+		}
+		area_modifier = {
+			
+		}
+		country_modifiers = {
+			idea_cost = -0.10
+			innovativeness_gain = 0.25
+		}
+		on_upgraded = {
+		}
+	}
+
+	tier_3 = {
+		upgrade_time = {
+			months = 480
+		}
+		cost_to_upgrade = {
+			factor = 9000
+		}
+		province_modifiers = {
+			
+		}
+		area_modifier = {
+			
+		}
+		country_modifiers = {
+			idea_cost = -0.10
+			innovativeness_gain = 0.33
+		}
+		on_upgraded = {
+		}
+	}
+}
+
+#Khamayodi Training Camp of Sharaja
+#Regiment cost, infantry combat ability
+khamayodi_camp = {
+	start = 4397
+	date = 01.01.01
+	time = {
+		months = 0
+	}
+	build_cost = 0
+	can_be_moved = no
+	move_days_per_unit_distance = 1
+	starting_tier = 1
+	type = monument
+
+	build_trigger = {
+		#anyone		
+	}
+	on_built = {
+		
+	}
+	on_destroyed = {
+		
+	}
+	
+	can_use_modifiers_trigger = {
+		culture_group = upper_raheni
+		has_owner_accepted_culture = yes
+		owner = {
+			any_owned_province = {
+				trade_goods = slaves
+				OR = {
+					has_province_modifier = orcish_majority_coexisting
+					has_province_modifier = orcish_majority_integrated
+					has_province_modifier = half_orcish_majority_coexisting
+					has_province_modifier = half_orcish_majority_integrated
+				}
+			}			
+		}
+	}
+	
+	can_upgrade_trigger = {
+	}
+	
+	keep_trigger = {
+		
+	}
+
+	tier_0 = {
+		upgrade_time = {
+			months = 0
+		}
+		cost_to_upgrade = {
+			factor = 0
+		}
+		province_modifiers = {
+		}
+		area_modifier = {
+		}
+		country_modifiers = {
+			
+		}
+		on_upgraded = {
+		}
+	}
+
+	tier_1 = {
+		upgrade_time = {
+			months = 120
+		}
+		cost_to_upgrade = {
+			factor = 1500
+		}
+		province_modifiers = {
+			
+		}
+		area_modifier = {
+			
+		}
+		country_modifiers = {
+			infantry_cost = -0.10
+			global_regiment_recruit_speed = -0.10
+			infantry_power = 0.05
+		}
+		on_upgraded = {
+		}
+	}
+
+	tier_2 = {
+		upgrade_time = {
+			months = 240
+		}
+		cost_to_upgrade = {
+			factor = 3500
+		}
+		province_modifiers = {
+			
+		}
+		area_modifier = {
+			
+		}
+		country_modifiers = {
+			infantry_cost = -0.15
+			global_regiment_recruit_speed = -0.15
+			infantry_power = 0.10
+		}
+		on_upgraded = {
+		}
+	}
+
+	tier_3 = {
+		upgrade_time = {
+			months = 480
+		}
+		cost_to_upgrade = {
+			factor = 9000
+		}
+		province_modifiers = {
+			
+		}
+		area_modifier = {
+			
+		}
+		country_modifiers = {
+			infantry_cost = -0.20
+			global_regiment_recruit_speed = -0.25
+			infantry_power = 0.15
+			
+		}
+		on_upgraded = {
+		}
+	}
+}
+
+#Ghankedhen Family Foundry
+#Flat local goods produced, changes trade good to coal, flat goods produced
+sheramvi_foundry = {
+	start = 4442
+	date = 01.01.01
+	time = {
+		months = 0
+	}
+	build_cost = 0
+	can_be_moved = no
+	move_days_per_unit_distance = 1
+	starting_tier = 0
+	type = monument
+
+	build_trigger = {
+		#anyone		
+	}
+	on_built = {
+		
+	}
+	on_destroyed = {
+		
+	}
+	
+	can_use_modifiers_trigger = {
+		culture = ghankedhen
+		has_owner_accepted_culture = yes
+		has_building = blacksmith
+	}
+	
+	can_upgrade_trigger = {
+
+	}
+	
+	keep_trigger = {
+		
+	}
+
+	tier_0 = {
+		upgrade_time = {
+			months = 0
+		}
+		cost_to_upgrade = {
+			factor = 0
+		}
+		province_modifiers = {
+		}
+		area_modifier = {
+		}
+		country_modifiers = {
+			
+		}
+		on_upgraded = {
+		}
+	}
+
+	tier_1 = {
+		upgrade_time = {
+			months = 120
+		}
+		cost_to_upgrade = {
+			factor = 1500
+		}
+		province_modifiers = {
+			
+		}
+		area_modifier = {
+			trade_goods_size_modifier = 0.10
+		}
+		country_modifiers = {
+			global_regiment_cost = -0.05
+			fire_damage = 0.05
+		}
+		on_upgraded = {
+		}
+	}
+
+	tier_2 = {
+		upgrade_time = {
+			months = 240
+		}
+		cost_to_upgrade = {
+			factor = 3500
+		}
+		province_modifiers = {
+			
+		}
+		area_modifier = {
+			trade_goods_size_modifier = 0.15
+		}
+		country_modifiers = {
+			global_regiment_cost = -0.10
+			fire_damage = 0.10
+		}
+		on_upgraded = {
+		}
+	}
+
+	tier_3 = {
+		upgrade_time = {
+			months = 480
+		}
+		cost_to_upgrade = {
+			factor = 9000
+		}
+		province_modifiers = {
+			
+		}
+		area_modifier = {
+			trade_goods_size_modifier = 0.20
+		}
+		country_modifiers = {
+			global_regiment_cost = -0.15
+			fire_damage = 0.15
+		}
+		on_upgraded = {
+			change_trade_goods = coal
+			add_base_production = 4
+		}
+	}
+}
+
+#Sardhasi Silk Fields
+#Diplo rep, improve relations, local goods produced
+sardhasi_fields = {
+	start = 4391
+	date = 01.01.01
+	time = {
+		months = 0
+	}
+	build_cost = 0
+	can_be_moved = no
+	move_days_per_unit_distance = 1
+	starting_tier = 0
+	type = monument
+
+	build_trigger = {
+		#anyone		
+	}
+	on_built = {
+		
+	}
+	on_destroyed = {
+		
+	}
+	
+	can_use_modifiers_trigger = {
+	}
+	
+	can_upgrade_trigger = {
+	}
+	
+	keep_trigger = {
+		
+	}
+
+	tier_0 = {
+		upgrade_time = {
+			months = 0
+		}
+		cost_to_upgrade = {
+			factor = 0
+		}
+		province_modifiers = {
+		}
+		area_modifier = {
+		}
+		country_modifiers = {
+			
+		}
+		on_upgraded = {
+		}
+	}
+
+	tier_1 = {
+		upgrade_time = {
+			months = 120
+		}
+		cost_to_upgrade = {
+			factor = 1500
+		}
+		province_modifiers = {
+			trade_goods_size = 1
+		}
+		area_modifier = {
+			
+		}
+		country_modifiers = {
+			improve_relation_modifier = 0.10
+			diplomatic_reputation = 1
+			global_trade_goods_size_modifier = 0.05
+		}
+		on_upgraded = {
+		}
+	}
+
+	tier_2 = {
+		upgrade_time = {
+			months = 240
+		}
+		cost_to_upgrade = {
+			factor = 3500
+		}
+		province_modifiers = {
+			trade_goods_size = 2
+		}
+		area_modifier = {
+			
+		}
+		country_modifiers = {
+			improve_relation_modifier = 0.15
+			diplomatic_reputation = 1
+			global_trade_goods_size_modifier = 0.05
+		}
+		on_upgraded = {
+		}
+	}
+
+	tier_3 = {
+		upgrade_time = {
+			months = 480
+		}
+		cost_to_upgrade = {
+			factor = 9000
+		}
+		province_modifiers = {
+			trade_goods_size = 4
+		}
+		area_modifier = {
+			
+		}
+		country_modifiers = {
+			improve_relation_modifier = 0.20
+			diplomatic_reputation = 2
+			global_trade_goods_size_modifier = 0.10
+		}
+		on_upgraded = {
+		}
+	}
+}
+
+#Market of the World's Desire
+#Spy construction, improve relations, 
+great_market_sramaya = {
+	start = 4420
+	date = 01.01.01
+	time = {
+		months = 0
+	}
+	build_cost = 0
+	can_be_moved = no
+	move_days_per_unit_distance = 1
+	starting_tier = 1
+	type = monument
+
+	build_trigger = {	
+	}
+	on_built = {
+		
+	}
+	on_destroyed = {
+		
+	}
+	
+	can_use_modifiers_trigger = {
+		province_has_center_of_trade_of_level = 3
+		province_is_or_accepts_culture = yes
+		is_strongest_trade_power = owner
+	}
+	
+	can_upgrade_trigger = {
+		province_has_center_of_trade_of_level = 3
+		province_is_or_accepts_culture = yes
+		is_strongest_trade_power = owner
+	}
+	
+	keep_trigger = {
+		
+	}
+
+	tier_0 = {
+		upgrade_time = {
+			months = 0
+		}
+		cost_to_upgrade = {
+			factor = 0
+		}
+		province_modifiers = {
+		}
+		area_modifier = {
+		}
+		country_modifiers = {
+			
+		}
+		on_upgraded = {
+		}
+	}
+
+	tier_1 = {
+		upgrade_time = {
+			months = 120
+		}
+		cost_to_upgrade = {
+			factor = 1500
+		}
+		province_modifiers = {
+			
+		}
+		area_modifier = {
+			
+		}
+		country_modifiers = {
+			global_own_trade_power = 0.10
+			trade_efficiency = 0.05
+			center_of_trade_upgrade_cost = -0.10
+		}
+		on_upgraded = {
+		}
+	}
+
+	tier_2 = {
+		upgrade_time = {
+			months = 240
+		}
+		cost_to_upgrade = {
+			factor = 3500
+		}
+		province_modifiers = {
+			
+		}
+		area_modifier = {
+			
+		}
+		country_modifiers = {
+			global_own_trade_power = 0.15
+			trade_efficiency = 0.10
+			center_of_trade_upgrade_cost = -0.15
+		}
+		on_upgraded = {
+		}
+	}
+
+	tier_3 = {
+		upgrade_time = {
+			months = 480
+		}
+		cost_to_upgrade = {
+			factor = 9000
+		}
+		province_modifiers = {
+			
+		}
+		area_modifier = {
+			
+		}
+		country_modifiers = {
+			global_own_trade_power = 0.20
+			trade_efficiency = 0.15
+			center_of_trade_upgrade_cost = -0.25
+		}
+		on_upgraded = {
+			owner = {
+				add_estate_burghers_loyalty_effect = yes
+			}
+		}
+	}
+}
+
+#Brass Palace of Sramaya
+brass_palace = {
+	start = 4420
+	date = 01.01.01
+	time = {
+		months = 0
+	}
+	build_cost = 0
+	can_be_moved = no
+	move_days_per_unit_distance = 1
+	starting_tier = 0
+	type = monument
+
+	build_trigger = {
+		#anyone		
+	}
+	on_built = {
+		
+	}
+	on_destroyed = {
+		
+	}
+	
+	can_use_modifiers_trigger = {
+		culture = sarniryabsad
+		has_owner_accepted_culture = yes
+		has_province_modifier = temple_complex
+	}
+	
+	can_upgrade_trigger = {
+		
+	}
+	
+	keep_trigger = {
+		
+	}
+
+	tier_0 = {
+		upgrade_time = {
+			months = 0
+		}
+		cost_to_upgrade = {
+			factor = 0
+		}
+		province_modifiers = {
+		}
+		area_modifier = {
+		}
+		country_modifiers = {
+			
+		}
+		on_upgraded = {
+		}
+	}
+
+	tier_1 = {
+		upgrade_time = {
+			months = 120
+		}
+		cost_to_upgrade = {
+			factor = 1500
+		}
+		province_modifiers = {
+			
+		}
+		area_modifier = {
+			
+		}
+		country_modifiers = {
+			global_tax_modifier = 0.10
+			inflation_reduction = 0.05
+			yearly_corruption = -0.05
+		}
+		on_upgraded = {
+		}
+	}
+
+	tier_2 = {
+		upgrade_time = {
+			months = 240
+		}
+		cost_to_upgrade = {
+			factor = 3500
+		}
+		province_modifiers = {
+			
+		}
+		area_modifier = {
+			
+		}
+		country_modifiers = {
+			global_tax_modifier = 0.15
+			inflation_reduction = 0.07
+			yearly_corruption = -0.07
+			administrative_efficiency = 0.025
+		}
+		on_upgraded = {
+		}
+	}
+
+	tier_3 = {
+		upgrade_time = {
+			months = 480
+		}
+		cost_to_upgrade = {
+			factor = 9000
+		}
+		province_modifiers = {
+			
+		}
+		area_modifier = {
+			
+		}
+		country_modifiers = {
+			global_tax_modifier = 0.25
+			inflation_reduction = 0.10
+			yearly_corruption = -0.10
+			administrative_efficiency = 0.05
+		}
+		on_upgraded = {
+		}
+	}
+}

@@ -1,0 +1,186 @@
+ige_gp_ADM = {
+	country_admin_power = 1
+}
+ige_gp_DIP = {
+	country_diplomatic_power = 1
+}
+ige_gp_MIL = {
+	country_military_power = 1
+}
+
+Compromised_Logistics_modifier = {
+	global_supply_limit_modifier = -0.33
+	land_morale = -0.05
+	land_attrition = 0.25
+}
+
+steal_dev_cost_modifier = {
+	development_cost = -0.075
+}
+
+IGE_Jihad = {
+	monthly_piety = -0.0025
+}
+IGE_Legalism = {
+	monthly_piety = 0.0025
+}
+siege_idea_3 = {
+	local_monthly_devastation = -0.10
+}
+benign_legislation_act = {
+	global_tax_modifier = 0.20
+}
+ige_gp_ADM = {
+	country_admin_power = 1
+}
+ige_gp_DIP = {
+	country_diplomatic_power = 1
+}
+ige_gp_MIL = {
+	country_military_power = 1
+}
+IGE_disarmament_modifier = {
+	land_forcelimit_modifier = -0.6
+	naval_forcelimit_modifier = -0.6
+	global_regiment_cost = 0.3
+	global_ship_cost = 0.3
+	drill_gain_modifier = -1
+	discipline = -0.10
+	mil_tech_cost_modifier = 0.50
+}
+IGE_Compromised_Logistics_modifier = {
+	global_supply_limit_modifier = -0.33
+	land_morale = -0.05
+	land_attrition = 0.25
+}
+IGE_evolving_mercenaries_1 = {
+	mercenary_discipline = 0.025
+}
+IGE_evolving_mercenaries_2 = {
+	mercenary_discipline = 0.05
+}
+IGE_evolving_mercenaries_3 = {
+	mercenary_discipline = 0.075
+}
+IGE_evolving_mercenaries_4 = {
+	mercenary_discipline = 0.1
+}
+IGE_colonization_law = {
+	global_colonial_growth = 5
+	colonist_placement_chance = 0.10
+}
+IGE_efficient_bureaucracy = {
+	administrative_efficiency = 0.05
+}
+IGE_Embassies = {
+	ae_impact = -0.05
+}
+IGE_Embassies_1 = {
+	ae_impact = -0.10
+}
+IGE_Embassies_2 = {
+	ae_impact = -0.15
+}
+IGE_Embassies_3 = {
+	ae_impact = -0.20
+}
+
+expensive_management_1 = {
+	state_maintenance_modifier = 0.1
+}
+
+expensive_management_2 = {
+	state_maintenance_modifier = 0.1
+}
+
+expensive_management_3 = {
+	state_maintenance_modifier = 0.1
+}
+
+expensive_management_4 = {
+	state_maintenance_modifier = 0.1
+}
+
+expensive_management_5 = {
+	state_maintenance_modifier = 0.1
+}
+
+expensive_management_6 = {
+	state_maintenance_modifier = 0.1
+}
+
+expensive_management_7 = {
+	state_maintenance_modifier = 0.1
+}
+
+expensive_management_8 = {
+	state_maintenance_modifier = 0.1
+}
+
+expensive_management_9 = {
+	state_maintenance_modifier = 0.1
+}
+
+expensive_management_10 = {
+	state_maintenance_modifier = 0.1
+}
+
+expensive_management_11 = {
+	state_maintenance_modifier = 0.1
+}
+
+expensive_management_12 = {
+	state_maintenance_modifier = 0.1
+}
+
+expensive_management_13 = {
+	state_maintenance_modifier = 0.1
+}
+
+expensive_management_14 = {
+	state_maintenance_modifier = 0.1
+}
+
+expensive_management_15 = {
+	state_maintenance_modifier = 0.1
+}
+
+expensive_management_16 = {
+	state_maintenance_modifier = 0.1
+}
+
+expensive_management_17 = {
+	state_maintenance_modifier = 0.1
+}
+
+expensive_management_18 = {
+	state_maintenance_modifier = 0.1
+}
+
+expensive_management_19 = {
+	state_maintenance_modifier = 0.1
+}
+
+expensive_management_20 = {
+	state_maintenance_modifier = 0.1
+}
+
+idea_variation_big_government_change = {
+	monthly_reform_progress_modifier = -0.5
+}
+
+idea_variation_postpone_reform = {
+	monthly_reform_progress_modifier = -0.5
+}
+
+idea_variation_grant_self_governance = {
+	global_autonomy = 0.10
+	min_autonomy = 15
+}
+
+idea_variation_legacy_laws = {
+	stability_cost_modifier = -0.3
+	development_cost = 0.2
+	idea_cost = 0.1
+}
+

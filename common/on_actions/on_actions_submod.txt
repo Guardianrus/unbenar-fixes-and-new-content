@@ -1,0 +1,64 @@
+
+on_startup = {
+	country_event = { id = guisubmod.1 days = 2 }
+	country_event = { id = guisubmod.2 days = 2 }
+}
+
+on_province_owner_change = {
+	add_majority_of_current_culture = yes
+	update_all_minorities_on_owner_change = yes
+	
+	if = {
+		limit = {
+			OR = {
+				has_terrain = dwarven_hold
+				has_terrain = dwarven_hold_surface
+			}
+		}
+		
+		if = {
+			limit = {
+				FROM = {
+					is_migratory_tribe = yes
+					NOT = { num_of_cities = 2 } # be extra safe - check they're an OPM
+				}
+				is_empty = yes
+			}
+			if = { limit = { FROM = { has_country_flag = damaged_hold } } set_province_flag = damaged_hold add_province_modifier = { name = damaged_hold duration = -1 hidden = yes } FROM = { clr_country_flag = damaged_hold } }
+			if = { limit = { FROM = { has_country_flag = partially_ruined_hold } } set_province_flag = partially_ruined_hold add_province_modifier = { name = partially_ruined_hold duration = -1 hidden = yes } FROM = { clr_country_flag = partially_ruined_hold } }
+			if = { limit = { FROM = { has_country_flag = ruined_hold } } set_province_flag = ruined_hold add_province_modifier = { name = ruined_hold duration = -1 hidden = yes } FROM = { clr_country_flag = ruined_hold } }
+			if = { limit = { FROM = { has_country_flag = infested_hold } } set_province_flag = infested_hold add_province_modifier = { name = infested_hold duration = -1 hidden = yes } FROM = { clr_country_flag = infested_hold } }
+		}
+		migratory_tag_on_hold_effect = yes
+		
+		if = { limit = { has_province_flag = damaged_hold } add_province_modifier = { name = damaged_hold duration = -1 hidden = yes } }
+		if = { limit = { has_province_flag = partially_ruined_hold } add_province_modifier = { name = partially_ruined_hold duration = -1 hidden = yes } }
+		if = { limit = { has_province_flag = ruined_hold } add_province_modifier = { name = ruined_hold duration = -1 hidden = yes } }
+		if = { limit = { has_province_flag = infested_hold } add_province_modifier = { name = infested_hold duration = -1 hidden = yes } }
+		if = { limit = { has_province_flag = hold_foundry } add_province_modifier = { name = hold_foundry duration = -1 hidden = yes } }
+		if = { limit = { has_province_flag = hold_foundry_2 } add_province_modifier = { name = hold_foundry_2 duration = -1 hidden = yes } }
+		if = { limit = { has_province_flag = magma_forge } add_province_modifier = { name = magma_forge duration = -1 hidden = yes } }
+		if = { limit = { has_province_flag = hold_city } add_province_modifier = { name = hold_city duration = -1 hidden = yes } }
+		if = { limit = { has_province_flag = hold_city_2 } add_province_modifier = { name = hold_city_2 duration = -1 hidden = yes } }
+		if = { limit = { has_province_flag = artificier_hall } add_province_modifier = { name = artificier_hall duration = -1 hidden = yes } }
+		if = { limit = { has_province_flag = hold_artisan } add_province_modifier = { name = hold_artisan duration = -1 hidden = yes } }
+		if = { limit = { has_province_flag = hold_artisan_2 } add_province_modifier = { name = hold_artisan_2 duration = -1 hidden = yes } }
+		if = { limit = { has_province_flag = engineer_manufactory } add_province_modifier = { name = engineer_manufactory duration = -1 hidden = yes } }
+		if = { limit = { has_province_flag = hold_farm } add_province_modifier = { name = hold_farm duration = -1 hidden = yes } }
+		if = { limit = { has_province_flag = hold_farm_2 } add_province_modifier = { name = hold_farm_2 duration = -1 hidden = yes } }
+		if = { limit = { has_province_flag = hold_military } add_province_modifier = { name = hold_military duration = -1 hidden = yes } }
+		if = { limit = { has_province_flag = hold_military_2 } add_province_modifier = { name = hold_military_2 duration = -1 hidden = yes } }
+		if = { limit = { has_province_flag = military_academy } add_province_modifier = { name = military_academy duration = -1 hidden = yes } }
+	}
+}
+
+on_colony_finished = {
+	if = { limit = { has_province_modifier = damaged_hold } remove_province_modifier = damaged_hold add_province_modifier = { name = damaged_hold duration = -1 hidden = yes } set_province_flag = damaged_hold }
+	if = { limit = { has_province_modifier = partially_ruined_hold } remove_province_modifier = partially_ruined_hold add_province_modifier = { name = partially_ruined_hold duration = -1 hidden = yes } set_province_flag = partially_ruined_hold }
+	if = { limit = { has_province_modifier = ruined_hold } remove_province_modifier = ruined_hold add_province_modifier = { name = ruined_hold duration = -1 hidden = yes } set_province_flag = ruined_hold }
+	if = { limit = { has_province_modifier = infested_hold } remove_province_modifier = infested_hold add_province_modifier = { name = infested_hold duration = -1 hidden = yes } set_province_flag = infested_hold }
+}
+
+on_abandon_colony = {
+	
+}

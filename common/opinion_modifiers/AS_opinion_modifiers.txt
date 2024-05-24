@@ -1,0 +1,8 @@
+opinion_stalbor = {
+	opinion = 30
+	yearly_decay = 1.0
+}
+opinion_tellum = {
+	opinion = 30
+	yearly_decay = 1.0
+}

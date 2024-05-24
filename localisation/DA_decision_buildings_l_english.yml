@@ -1,0 +1,53 @@
+﻿l_english:
+
+
+Build_DA_Reinforced_capital_fort_title: "Build Capital Fortification"
+Build_DA_Reinforced_capital_fort_desc: "We will begin construction of the capital fortification"
+DA_Reinforced_capital_construction_tooltip: "Begins construction of the capital fortification, costing §Y2000§!"
+
+DA_Buildings_menu.1.t: "Buildings Menu"
+DA_Buildings_menu.1.d: "From This menu you will be able to build Dwarven Knowledge special buildings.\n Currently only three buildings are available for dwarfs, all unlocked by the §GResearch Facility§!."
+DA_ai_building_cooldown: "AI Cooldown"
+DA_Buildings_menu_in_use: "Buildings Menu in use"
+DA_Buildings_menu.1.a: "Build Dwarven Runeforged Fort"
+DA_Buildings_menu.1.aH: "Build Runeforged Fort, Hehogrim's version"
+DA_can_build_Hehogrim_Runeforged_fort: "Owns Hehodovar and has the Hehogrim's Home modifier"
+ DA_Buildings_menu.1.HO:0 "Build Turrets of Orldhum"
+DA_Buildings_menu.1.b: "Build Dwarven Runeforged Amldihr Citadel"
+DA_Runeforged_Amldihr_fort_construction_tooltip: "Begins construction of Amldihr Runeforged Citadel for §Y15000§! gold, modified by local construction cost"
+DA_Buildings_menu.1.Go_back: "Go Back"
+
+DA_building_outcome.1.t: "Build Dwarven Runeforged Fort"
+DA_building_outcome.1.d: "Build a runeforged fort for §Y2000§! gold, modified by local construction cost, In a province that is either an Hold or has a dwarven runic barrier level 1 or higher.\nNeeds an integrated dwarven minority or majority to be built"
+DA_building_outcome.1.a: "Build Runeforged Fort on [DA_buildable_province1.GetName]"
+DA_building_outcome.1.b: "Build Runeforged Fort on [DA_buildable_province2.GetName]"
+DA_building_outcome.1.c: "Build Runeforged Fort on [DA_buildable_province3.GetName]"
+DA_building_outcome.1.Go_back: "Go Back"
+
+
+DA_building_outcome.2.t: "Build Hehogrim's Runeforged Fort"
+DA_building_outcome.2.d: "Build a runeforged fort for §Y3000§! gold, modified by local construction cost, In a province that is either an Hold or has a dwarven runic barrier level 1 or higher.\nNeeds an integrated dwarven minority or majority to be built.\nIf there is a runeforged fort, this building will substitute it and cost only §Y1500§! gold"
+DA_building_outcome.2.a: "Build Hehogrim's Runeforged Fort on [DA_buildable_province1.GetName]"
+DA_building_outcome.2.b: "Build Hehogrim's Runeforged Fort on [DA_buildable_province2.GetName]"
+DA_building_outcome.2.c: "Build Hehogrim's Runeforged Fort on [DA_buildable_province3.GetName]"
+DA_building_outcome.2.Go_back: "Go Back"
+
+ DA_building_outcome.3.t:0 "Build Turrets of Orldhum"
+ DA_building_outcome.3.d:0 "Turrets of Orldhum can only be built in caverns or dwarven roads which do not have dwarven runic barriers or runeforged forts.\nThe construction needs 2 years to be completed"
+ DA_building_outcome.3.a:0 "Build Turrets of Orldhum on [DA_buildable_province1.GetName]"
+ DA_HO_will_be_built_in_2_years:0 "The construction process take around 2 years"
+ DA_building_outcome.3.b:0 "Build Turrets of Orldhum on [DA_buildable_province2.GetName]"
+ DA_building_outcome.3.c:0 "Build Turrets of Orldhum on [DA_buildable_province3.GetName]"
+ DA_building_outcome.3.Go_back:0 "Go Back"
+
+DA_buildings_menu_decision_title: "Access Special Buildings menu"
+DA_buildings_menu_decision_desc: "Allow for the construction of special buildings in specific posistions"
+
+building_DA_Runeforged_fort: "Runeforged Fort"
+building_DA_Runeforged_fort_desc: "The fort has been upgraded using Dwarven Runic Knowledge"
+building_DA_Hehogrim_Runeforged_fort: "Hehogrim's Runeforged Fort"
+building_DA_Hehogrim_Runeforged_fort_desc: "The fort has been upgraded using Dwarven Runic Knowledge and was brought a level higher by Hehodovar's Dwarfs and Hehogrim's Blueprints"
+building_DA_Runeforged_Amldihr_fort: "Runeforged Amldihr Citadel"
+building_DA_Runeforged_Amldihr_fort_desc: "The last line of defense, hopefully we will never have to see how well it works"
+building_DA_Reinforced_capital: "Reinforced Capital"
+building_DA_Reinforced_capital_desc: "The last line of defense, hopefully we will never have to see how well it works"

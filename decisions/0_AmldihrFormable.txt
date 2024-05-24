@@ -1,0 +1,110 @@
+country_decisions = {
+
+	I01_nation_submod = {	#Amldihr
+		major = yes
+		potential = {
+			owns = 4119 #Amldihr
+			OR = {
+				AND = { 
+					current_age = age_of_discovery
+					culture_group = dwarven
+				}
+				has_reform = dwarovar_adventurer_reform
+			}
+			has_country_modifier = dwarven_administration
+			NOT = { has_country_flag = formed_diggy_formable }
+			NOT = { exists = I01 }
+		}
+		provinces_to_highlight = {
+			province_id = 4119
+			NOT = { is_core = ROOT }
+		}
+		allow = {
+			owns_core_province = 4119
+			adm_tech = 7	#around 1500
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+			is_at_war = no
+			num_of_cities = 3
+            special_formation_trigger = yes
+		}
+		effect = {
+			if = {
+				limit = { reform_level = 5 }
+				set_country_flag = dwarovar_adventurer_legacy_4
+			}
+			else_if = {
+				limit = { reform_level = 4 }
+				set_country_flag = dwarovar_adventurer_legacy_3
+			}
+			else_if = {
+				limit = { reform_level = 3 }
+				set_country_flag = dwarovar_adventurer_legacy_2
+			}
+			else_if = {
+				limit = { reform_level = 2 }
+				set_country_flag = dwarovar_adventurer_legacy_1
+			}
+		}
+		effect = {
+			change_tag = I01
+			hidden_effect = { restore_country_name = yes }
+			swap_non_generic_missions = yes
+			remove_non_electors_emperors_from_empire_effect = yes
+
+			add_prestige = 25
+			adventurer_legacy_effect = yes
+			set_country_flag = adventurer_derived_government
+			set_country_flag = formed_diggy_formable
+			clr_country_flag = knightly_order_adventurer
+			country_event = { id = amldihr.101 days = 1 }
+
+			if = {
+				limit = { has_custom_ideas = no }
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			every_owned_province = {
+				limit = { culture = ROOT }
+				change_culture = kronium_dwarf
+			}
+			if = {
+				limit = { ruler_culture = ROOT }
+				set_ruler_culture = kronium_dwarf
+			}
+			if = {
+				limit = { has_heir = yes heir_culture = ROOT }
+				set_heir_culture = kronium_dwarf
+			}
+			if = {
+				limit = { has_consort = yes consort_culture = ROOT }
+				set_consort_culture = kronium_dwarf
+			}
+			change_primary_culture = kronium_dwarf
+
+			if = {
+				limit = { has_country_flag = dwarovar_adventurer_legacy_4 }
+				add_country_modifier = { name = dwarovar_adventurer_legacy_4 duration = 14600 }
+				clr_country_flag = dwarovar_adventurer_legacy_4
+			}
+			if = {
+				limit = { has_country_flag = dwarovar_adventurer_legacy_3 }
+				add_country_modifier = { name = dwarovar_adventurer_legacy_3 duration = 14600 }
+				clr_country_flag = dwarovar_adventurer_legacy_2
+			}
+			if = {
+				limit = { has_country_flag = dwarovar_adventurer_legacy_2 }
+				add_country_modifier = { name = dwarovar_adventurer_legacy_2 duration = 14600 }
+				clr_country_flag = dwarovar_adventurer_legacy_3
+			}
+			if = {
+				limit = { has_country_flag = dwarovar_adventurer_legacy_1 }
+				add_country_modifier = { name = dwarovar_adventurer_legacy_1 duration = 14600 }
+				clr_country_flag = dwarovar_adventurer_legacy_1
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+}

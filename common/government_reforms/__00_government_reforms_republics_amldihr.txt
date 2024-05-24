@@ -1,0 +1,187 @@
+amldihr_dutch_republic_reform = {
+	icon = "sacred_elven_empire"
+	allow_convert = no
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+	# locked_government_type = yes
+	# legacy_equivalent = elected_clans_legacy
+	modifiers = {
+		diplomatic_reputation = 1
+		vassal_income = 0.15
+		stability_cost_modifier = -0.15
+		max_absolutism = 10
+		global_manpower_modifier = 0.10
+		mercenary_manpower = 0.15
+		election_cycle = -16
+		
+	}
+	valid_for_nation_designer = yes
+	nation_designer_cost = 55
+	nation_designer_trigger = {
+		AND = {
+		technology_group = tech_dwarven
+		has_dlc = "Res Publica"
+		}
+		
+	}
+	potential = {
+		OR = {
+			tag = I01
+			have_had_reform = amldihr_dutch_republic_reform
+		}
+	}
+	trigger = {
+		OR = {
+			has_reform = amldihr_dutch_republic_reform
+		}
+	}
+	removed_effect = {
+		if = {
+			# Monarchs seize power
+			limit = { government = monarchy }
+			country_event = { id = dutch_republic.33 }
+		}
+	}
+	royal_marriage = yes
+	queen = yes
+	duration = 10
+	conditional = {
+		allow = {
+			has_dlc = "Res Publica"
+			NOT = { has_dlc = "Mare Nostrum" }
+		}
+		#can_use_trade_post = yes
+	}
+	conditional = {
+		allow = {
+			has_dlc = "Mare Nostrum"
+			NOT = { has_dlc = "Res Publica" }
+		}
+		#can_form_trade_league = yes
+		#trade_city_reform = trading_city
+	}
+	conditional = {
+		allow = {
+			has_dlc = "Res Publica"
+			has_dlc = "Mare Nostrum"
+		}
+		#can_use_trade_post = yes
+		#can_form_trade_league = yes
+		#trade_city_reform = trading_city
+	}
+	conditional = {
+		allow = {
+			has_dlc = "Res Publica"
+		}
+
+		states_general_mechanic = {
+			reformists = {
+				improve_relation_modifier = 0.20
+				manpower_recovery_speed = 0.15
+				republican_tradition = 1
+			}
+
+			clans = {
+				administrative_efficiency = 0.05
+				land_morale = 0.10
+				republican_tradition = -1
+			}
+		}
+	}
+	custom_attributes = {
+		enables_aristocratic_idea_group = yes
+		enables_plutocratic_idea_group = no
+		is_merchant_republic = no
+	}
+}
+
+
+#Parliamentary vs Presidential
+
+# parliamentary_reform defined in common file
+
+#Judicial Review
+judicial_review_submod_reform = {
+	icon = "signoria_reform"
+	allow_normal_conversion = yes
+	potential = {
+			culture_group = dwarven
+	}
+	trigger = {
+		NOT = { is_lesser_in_union = yes }
+		government = republic
+		culture_group = dwarven
+	}
+	modifiers = {
+		tolerance_own = 1
+		tolerance_heathen = 0.50
+	}
+	ai = {
+		factor = 1.5
+	}
+}
+
+#Centralization of Holds
+centralization_of_holds_submod_reform = {
+	icon = "crown"
+	allow_normal_conversion = yes
+	potential = {
+		AND = {
+			OR = { 
+				tag = I01
+				tag = I24
+			}
+			culture_group = dwarven
+		}
+	}
+	trigger = {
+		NOT = { is_lesser_in_union = yes }
+		government = republic
+		culture_group = dwarven
+		4119 = {
+			culture_group = dwarven
+			is_capital_of = ROOT
+		}
+	}
+	modifiers = {
+		global_autonomy = -0.05
+		reduced_liberty_desire_on_same_continent = 5
+	}
+	ai = {
+		factor = 1
+	}
+}
+
+#Requires Dur Vazhatun
+#Vazhatun Scientific Committee
+vazhatun_scientific_committee_submod_reform = {
+	icon = "dutch_republic"
+	allow_normal_conversion = yes
+	potential = {
+		OR = {
+			owns = 4020
+			tag = I01
+			tag = I02
+			tag = I03
+			tag = I04
+		}
+	}
+	trigger = {
+		NOT = { is_lesser_in_union = yes }
+		government = republic
+		culture_group = dwarven
+		AND = {
+			owns = 4020
+			4020 = {
+				culture_group = dwarven
+			}
+		}
+	}
+	modifiers = {
+		global_institution_spread = 0.25
+		embracement_cost = -0.25
+	}
+	ai = {
+		factor = 1
+	}
+}

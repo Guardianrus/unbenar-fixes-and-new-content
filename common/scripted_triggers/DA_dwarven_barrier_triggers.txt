@@ -1,0 +1,625 @@
+has_Dwarven_magic_Barrier = {
+	OR = {
+		has_great_project = {
+			type = Dwarven_magic_Barrier1
+			tier = 1
+		}
+		has_great_project = {
+			type = Dwarven_magic_Barrier2
+			tier = 1
+		}
+		has_great_project = {
+			type = Dwarven_magic_Barrier3
+			tier = 1
+		}
+		has_great_project = {
+			type = Dwarven_magic_Barrier4
+			tier = 1
+		}
+		has_great_project = {
+			type = Dwarven_magic_Barrier5
+			tier = 1
+		}
+		has_great_project = {
+			type = Dwarven_magic_Barrier6
+			tier = 1
+		}
+		has_great_project = {
+			type = Dwarven_magic_Barrier7
+			tier = 1
+		}
+		has_great_project = {
+			type = Dwarven_magic_Barrier8
+			tier = 1
+		}
+		has_great_project = {
+			type = Dwarven_magic_Barrier9
+			tier = 1
+		}
+		has_great_project = {
+			type = Dwarven_magic_Barrier10
+			tier = 1
+		}
+		has_great_project = {
+			type = Dwarven_magic_Barrier11
+			tier = 1
+		}
+		has_great_project = {
+			type = Dwarven_magic_Barrier12
+			tier = 1
+		}
+		has_great_project = {
+			type = Dwarven_magic_Barrier13
+			tier = 1
+		}
+		has_great_project = {
+			type = Dwarven_magic_Barrier14
+			tier = 1
+		}
+		has_great_project = {
+			type = Dwarven_magic_Barrier15
+			tier = 1
+		}
+		has_great_project = {
+			type = Dwarven_magic_Barrier16
+			tier = 1
+		}
+		has_great_project = {
+			type = Dwarven_magic_Barrier17
+			tier = 1
+		}
+		has_great_project = {
+			type = Dwarven_magic_Barrier18
+			tier = 1
+		}
+		has_great_project = {
+			type = Dwarven_magic_Barrier19
+			tier = 1
+		}
+		has_great_project = {
+			type = Dwarven_magic_Barrier20
+			tier = 1
+		}
+		has_great_project = {
+			type = Dwarven_magic_Barrier21
+			tier = 1
+		}
+		has_great_project = {
+			type = Dwarven_magic_Barrier22
+			tier = 1
+		}
+		has_great_project = {
+			type = Dwarven_magic_Barrier23
+			tier = 1
+		}
+		has_great_project = {
+			type = Dwarven_magic_Barrier24
+			tier = 1
+		}
+		has_great_project = {
+			type = Dwarven_magic_Barrier25
+			tier = 1
+		}
+		has_great_project = {
+			type = Dwarven_magic_Barrier26
+			tier = 1
+		}
+		has_great_project = {
+			type = Dwarven_magic_Barrier27
+			tier = 1
+		}
+		has_great_project = {
+			type = Dwarven_magic_Barrier28
+			tier = 1
+		}
+		has_great_project = {
+			type = Dwarven_magic_Barrier29
+			tier = 1
+		}
+		has_great_project = {
+			type = Dwarven_magic_Barrier30
+			tier = 1
+		}
+		has_great_project = {
+			type = Dwarven_magic_Barrier31
+			tier = 1
+		}
+		has_great_project = {
+			type = Dwarven_magic_Barrier32
+			tier = 1
+		}
+		has_great_project = {
+			type = Dwarven_magic_Barrier33
+			tier = 1
+		}
+		has_great_project = {
+			type = Dwarven_magic_Barrier34
+			tier = 1
+		}
+		has_great_project = {
+			type = Dwarven_magic_Barrier35
+			tier = 1
+		}
+		has_great_project = {
+			type = Dwarven_magic_Barrier36
+			tier = 1
+		}
+		has_great_project = {
+			type = Dwarven_magic_Barrier37
+			tier = 1
+		}
+		has_great_project = {
+			type = Dwarven_magic_Barrier38
+			tier = 1
+		}
+		has_great_project = {
+			type = Dwarven_magic_Barrier39
+			tier = 1
+		}
+		has_great_project = {
+			type = Dwarven_magic_Barrier40
+			tier = 1
+		}
+		has_great_project = {
+			type = Dwarven_magic_Barrier41
+			tier = 1
+		}
+		has_great_project = {
+			type = Dwarven_magic_Barrier42
+			tier = 1
+		}
+		has_great_project = {
+			type = Dwarven_magic_Barrier43
+			tier = 1
+		}
+		has_great_project = {
+			type = Dwarven_magic_Barrier44
+			tier = 1
+		}
+		has_great_project = {
+			type = Dwarven_magic_Barrier45
+			tier = 1
+		}
+		has_great_project = {
+			type = Dwarven_magic_Barrier46
+			tier = 1
+		}
+		has_great_project = {
+			type = Dwarven_magic_Barrier47
+			tier = 1
+		}
+		has_great_project = {
+			type = Dwarven_magic_Barrier48
+			tier = 1
+		}
+		has_great_project = {
+			type = Dwarven_magic_Barrier49
+			tier = 1
+		}
+	}
+}
+has_Dwarven_magic_Barrier_t2 = {
+	OR = {
+		has_great_project = {
+			type = Dwarven_magic_Barrier1
+			tier = 2
+		}
+		has_great_project = {
+			type = Dwarven_magic_Barrier2
+			tier = 2
+		}
+		has_great_project = {
+			type = Dwarven_magic_Barrier3
+			tier = 2
+		}
+		has_great_project = {
+			type = Dwarven_magic_Barrier4
+			tier = 2
+		}
+		has_great_project = {
+			type = Dwarven_magic_Barrier5
+			tier = 2
+		}
+		has_great_project = {
+			type = Dwarven_magic_Barrier6
+			tier = 2
+		}
+		has_great_project = {
+			type = Dwarven_magic_Barrier7
+			tier = 2
+		}
+		has_great_project = {
+			type = Dwarven_magic_Barrier8
+			tier = 2
+		}
+		has_great_project = {
+			type = Dwarven_magic_Barrier9
+			tier = 2
+		}
+		has_great_project = {
+			type = Dwarven_magic_Barrier10
+			tier = 2
+		}
+		has_great_project = {
+			type = Dwarven_magic_Barrier11
+			tier = 2
+		}
+		has_great_project = {
+			type = Dwarven_magic_Barrier12
+			tier = 2
+		}
+		has_great_project = {
+			type = Dwarven_magic_Barrier13
+			tier = 2
+		}
+		has_great_project = {
+			type = Dwarven_magic_Barrier14
+			tier = 2
+		}
+		has_great_project = {
+			type = Dwarven_magic_Barrier15
+			tier = 2
+		}
+		has_great_project = {
+			type = Dwarven_magic_Barrier16
+			tier = 2
+		}
+		has_great_project = {
+			type = Dwarven_magic_Barrier17
+			tier = 2
+		}
+		has_great_project = {
+			type = Dwarven_magic_Barrier18
+			tier = 2
+		}
+		has_great_project = {
+			type = Dwarven_magic_Barrier19
+			tier = 2
+		}
+		has_great_project = {
+			type = Dwarven_magic_Barrier20
+			tier = 2
+		}
+		has_great_project = {
+			type = Dwarven_magic_Barrier21
+			tier = 2
+		}
+		has_great_project = {
+			type = Dwarven_magic_Barrier22
+			tier = 2
+		}
+		has_great_project = {
+			type = Dwarven_magic_Barrier23
+			tier = 2
+		}
+		has_great_project = {
+			type = Dwarven_magic_Barrier24
+			tier = 2
+		}
+		has_great_project = {
+			type = Dwarven_magic_Barrier25
+			tier = 2
+		}
+		has_great_project = {
+			type = Dwarven_magic_Barrier26
+			tier = 2
+		}
+		has_great_project = {
+			type = Dwarven_magic_Barrier27
+			tier = 2
+		}
+		has_great_project = {
+			type = Dwarven_magic_Barrier28
+			tier = 2
+		}
+		has_great_project = {
+			type = Dwarven_magic_Barrier29
+			tier = 2
+		}
+		has_great_project = {
+			type = Dwarven_magic_Barrier30
+			tier = 2
+		}
+		has_great_project = {
+			type = Dwarven_magic_Barrier31
+			tier = 2
+		}
+		has_great_project = {
+			type = Dwarven_magic_Barrier32
+			tier = 2
+		}
+		has_great_project = {
+			type = Dwarven_magic_Barrier33
+			tier = 2
+		}
+		has_great_project = {
+			type = Dwarven_magic_Barrier34
+			tier = 2
+		}
+		has_great_project = {
+			type = Dwarven_magic_Barrier35
+			tier = 2
+		}
+		has_great_project = {
+			type = Dwarven_magic_Barrier36
+			tier = 2
+		}
+		has_great_project = {
+			type = Dwarven_magic_Barrier37
+			tier = 2
+		}
+		has_great_project = {
+			type = Dwarven_magic_Barrier38
+			tier = 2
+		}
+		has_great_project = {
+			type = Dwarven_magic_Barrier39
+			tier = 2
+		}
+		has_great_project = {
+			type = Dwarven_magic_Barrier40
+			tier = 2
+		}
+		has_great_project = {
+			type = Dwarven_magic_Barrier41
+			tier = 2
+		}
+		has_great_project = {
+			type = Dwarven_magic_Barrier42
+			tier = 2
+		}
+		has_great_project = {
+			type = Dwarven_magic_Barrier43
+			tier = 2
+		}
+		has_great_project = {
+			type = Dwarven_magic_Barrier44
+			tier = 2
+		}
+		has_great_project = {
+			type = Dwarven_magic_Barrier45
+			tier = 2
+		}
+		has_great_project = {
+			type = Dwarven_magic_Barrier46
+			tier = 2
+		}
+		has_great_project = {
+			type = Dwarven_magic_Barrier47
+			tier = 2
+		}
+		has_great_project = {
+			type = Dwarven_magic_Barrier48
+			tier = 2
+		}
+		has_great_project = {
+			type = Dwarven_magic_Barrier49
+			tier = 2
+		}
+	}
+}
+
+has_Dwarven_magic_Barrier_t3 = {
+	OR = {
+		has_great_project = {
+			type = Dwarven_magic_Barrier1
+			tier = 3
+		}
+		has_great_project = {
+			type = Dwarven_magic_Barrier2
+			tier = 3
+		}
+		has_great_project = {
+			type = Dwarven_magic_Barrier3
+			tier = 3
+		}
+		has_great_project = {
+			type = Dwarven_magic_Barrier4
+			tier = 3
+		}
+		has_great_project = {
+			type = Dwarven_magic_Barrier5
+			tier = 3
+		}
+		has_great_project = {
+			type = Dwarven_magic_Barrier6
+			tier = 3
+		}
+		has_great_project = {
+			type = Dwarven_magic_Barrier7
+			tier = 3
+		}
+		has_great_project = {
+			type = Dwarven_magic_Barrier8
+			tier = 3
+		}
+		has_great_project = {
+			type = Dwarven_magic_Barrier9
+			tier = 3
+		}
+		has_great_project = {
+			type = Dwarven_magic_Barrier10
+			tier = 3
+		}
+		has_great_project = {
+			type = Dwarven_magic_Barrier11
+			tier = 3
+		}
+		has_great_project = {
+			type = Dwarven_magic_Barrier12
+			tier = 3
+		}
+		has_great_project = {
+			type = Dwarven_magic_Barrier13
+			tier = 3
+		}
+		has_great_project = {
+			type = Dwarven_magic_Barrier14
+			tier = 3
+		}
+		has_great_project = {
+			type = Dwarven_magic_Barrier15
+			tier = 3
+		}
+		has_great_project = {
+			type = Dwarven_magic_Barrier16
+			tier = 1
+		}
+		has_great_project = {
+			type = Dwarven_magic_Barrier17
+			tier = 3
+		}
+		has_great_project = {
+			type = Dwarven_magic_Barrier18
+			tier = 3
+		}
+		has_great_project = {
+			type = Dwarven_magic_Barrier19
+			tier = 3
+		}
+		has_great_project = {
+			type = Dwarven_magic_Barrier20
+			tier = 3
+		}
+		has_great_project = {
+			type = Dwarven_magic_Barrier21
+			tier = 3
+		}
+		has_great_project = {
+			type = Dwarven_magic_Barrier22
+			tier = 3
+		}
+		has_great_project = {
+			type = Dwarven_magic_Barrier23
+			tier = 3
+		}
+		has_great_project = {
+			type = Dwarven_magic_Barrier24
+			tier = 3
+		}
+		has_great_project = {
+			type = Dwarven_magic_Barrier25
+			tier = 3
+		}
+		has_great_project = {
+			type = Dwarven_magic_Barrier26
+			tier = 3
+		}
+		has_great_project = {
+			type = Dwarven_magic_Barrier27
+			tier = 3
+		}
+		has_great_project = {
+			type = Dwarven_magic_Barrier28
+			tier = 3
+		}
+		has_great_project = {
+			type = Dwarven_magic_Barrier29
+			tier = 3
+		}
+		has_great_project = {
+			type = Dwarven_magic_Barrier30
+			tier = 3
+		}
+		has_great_project = {
+			type = Dwarven_magic_Barrier31
+			tier = 3
+		}
+		has_great_project = {
+			type = Dwarven_magic_Barrier32
+			tier = 3
+		}
+		has_great_project = {
+			type = Dwarven_magic_Barrier33
+			tier = 3
+		}
+		has_great_project = {
+			type = Dwarven_magic_Barrier34
+			tier = 3
+		}
+		has_great_project = {
+			type = Dwarven_magic_Barrier35
+			tier = 3
+		}
+		has_great_project = {
+			type = Dwarven_magic_Barrier36
+			tier = 3
+		}
+		has_great_project = {
+			type = Dwarven_magic_Barrier37
+			tier = 3
+		}
+		has_great_project = {
+			type = Dwarven_magic_Barrier38
+			tier = 3
+		}
+		has_great_project = {
+			type = Dwarven_magic_Barrier39
+			tier = 3
+		}
+		has_great_project = {
+			type = Dwarven_magic_Barrier40
+			tier = 3
+		}
+		has_great_project = {
+			type = Dwarven_magic_Barrier41
+			tier = 3
+		}
+		has_great_project = {
+			type = Dwarven_magic_Barrier42
+			tier = 3
+		}
+		has_great_project = {
+			type = Dwarven_magic_Barrier43
+			tier = 3
+		}
+		has_great_project = {
+			type = Dwarven_magic_Barrier44
+			tier = 3
+		}
+		has_great_project = {
+			type = Dwarven_magic_Barrier45
+			tier = 3
+		}
+		has_great_project = {
+			type = Dwarven_magic_Barrier46
+			tier = 3
+		}
+		has_great_project = {
+			type = Dwarven_magic_Barrier47
+			tier = 3
+		}
+		has_great_project = {
+			type = Dwarven_magic_Barrier48
+			tier = 3
+		}
+		has_great_project = {
+			type = Dwarven_magic_Barrier49
+			tier = 3
+		}
+	}
+}
+
+DA_can_upgrade_DRB = {
+	OR = {
+		AND = {
+			owner = {
+				has_country_flag = DA_can_build_Runic_barrier
+			}
+			NOT = { has_Dwarven_magic_Barrier = yes }
+		}
+		AND = {
+			has_Dwarven_magic_Barrier = yes
+			owner = {
+				has_country_flag = DA_can_build_Runic_barrier_t2
+			}
+			NOT = { has_Dwarven_magic_Barrier_t2 = yes }
+		}
+		AND = {
+			has_Dwarven_magic_Barrier_t2 = yes
+			owner = {
+				has_country_flag = DA_can_build_Runic_barrier_t3
+			}
+		}
+	}
+}

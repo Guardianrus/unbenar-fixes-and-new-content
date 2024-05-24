@@ -1,0 +1,142 @@
+
+DA_Runeforged_fort = {
+	cost = 2000
+	time = 30
+
+	build_trigger = {
+	}
+
+	bonus_manufactory = { # Will apply an extra modifier if these goods
+		damestear
+		precursor_relics
+		mithril
+	}
+
+	modifier = {
+		fort_level = 2
+		local_hostile_attrition = 2
+	}
+	bonus_modifier = {
+		local_development_cost = -0.2
+	}
+	onmap = no
+	show_separate = yes # Means as a manufactory it will be shown according to the old way
+	influencing_fort = yes
+
+	ai_will_do = {
+		factor = 0
+	}
+	on_built = {
+	}
+	on_destroyed = {
+	}
+}
+
+DA_Hehogrim_Runeforged_fort = {
+	cost = 3000
+	time = 45
+
+	build_trigger = {
+	}
+
+	bonus_manufactory = { # Will apply an extra modifier if these goods
+		damestear
+		precursor_relics
+		mithril
+	}
+
+	modifier = {
+		fort_level = 2
+		local_hostile_attrition = 3
+		local_defensiveness = 0.15
+		local_defender_dice_roll_bonus = 1
+	}
+	bonus_modifier = {
+		local_development_cost = -0.3
+	}
+	onmap = no
+	show_separate = yes # Means as a manufactory it will be shown according to the old way
+	influencing_fort = yes
+
+	ai_will_do = {
+		factor = 0
+	}
+	on_built = {
+		if = {
+			limit = { has_building = DA_Runeforged_fort }
+			remove_building = DA_Runeforged_fort
+		}
+	}
+	on_destroyed = {
+	}
+}
+
+DA_Runeforged_Amldihr_fort = {
+	cost = 15000
+	time = 60
+
+	build_trigger = {
+	}
+
+	bonus_manufactory = { # Will apply an extra modifier if these goods
+		damestear
+		precursor_relics
+		mithril
+	}
+
+	modifier = {
+		fort_level = 4
+		local_hostile_attrition = 5
+		max_attrition = 5
+	}
+	bonus_modifier = {
+		local_development_cost = -0.4
+	}
+	one_per_country = yes
+	onmap = no
+	show_separate = yes # Means as a manufactory it will be shown according to the old way
+	influencing_fort = yes
+
+	ai_will_do = {
+		factor = 0
+	}
+	on_built = {
+	}
+	on_destroyed = {
+	}
+}
+
+DA_Reinforced_capital = {
+	cost = 2000
+	time = 45
+
+	build_trigger = {
+	}
+
+	bonus_manufactory = { # Will apply an extra modifier if these goods
+		damestear
+		precursor_relics
+		mithril
+	}
+
+	modifier = {
+		fort_level = 2
+		local_hostile_attrition = 1
+		max_attrition = 1
+	}
+	bonus_modifier = {
+		local_development_cost = -0.2
+	}
+	one_per_country = yes
+	onmap = no
+	show_separate = yes # Means as a manufactory it will be shown according to the old way
+	influencing_fort = yes
+
+	ai_will_do = {
+		factor = 0
+	}
+	on_built = {
+	}
+	on_destroyed = {
+	}
+}

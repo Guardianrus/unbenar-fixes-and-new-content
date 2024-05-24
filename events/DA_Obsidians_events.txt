@@ -1,0 +1,33 @@
+namespace = DA_Obsidian_event
+
+country_event = {
+	id = DA_Obsidian_event.1 				# accept obsidans with a little malus
+	title = "DA_Obsidian_event.1.t"
+	desc = "DA_Obsidian_event.1.d"
+	picture = DA_research_facility_eventPicture
+
+	trigger = {
+		NOT = { accepted_culture = obsidian_dwarf }
+		any_core_province = {
+			owned_by = root
+			culture = obsidian_dwarf
+		}
+	}
+	mean_time_to_happen = {
+		years = 5
+	}
+
+	option = {
+		name = "DA_Obsidian_event.1.a"
+		add_dip_power = -50
+		add_country_modifier = {
+			name = DA_accepting_obsidians
+			duration = -1
+		}
+		add_accepted_culture = obsidian_dwarf
+		custom_tooltip = DA_obsidian_privilege_tt
+	}
+	option = {
+		name = "DA_Obsidian_event.1.b"
+	}
+}

@@ -1,0 +1,28 @@
+country_decisions = {
+	tradegoods_view = {
+		major = yes
+		potential = {
+			was_player =yes
+		}
+		allow = {
+			custom_trigger_tooltip = {
+				tooltip = tradegoods_view_tooltip
+				NOT = {
+					has_country_flag = open_goods_menu
+				}
+			}
+			
+		}
+		effect = {
+			custom_tooltip =tradegoods_button_effect_tooltip
+			hidden_effect ={
+				country_event = {
+					id = ANEX_tradegoods_event.1
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}

@@ -1,0 +1,220 @@
+
+DA_Explorable_dig_2 = {
+	DA_has_dig_level_2_or_higher = yes
+	NOT = { has_province_flag = DA_looked_dig_adk_2 }
+	NOT = { has_province_flag = DA_expedition_in_progress }
+	owned_by = root
+	owner = {
+		treasury = 50
+	}
+}
+DA_Explorable_dig_3 = {
+	DA_has_dig_level_3_or_higher = yes
+	NOT = { has_province_flag = DA_looked_dig_adk_3 }
+	NOT = { has_province_flag = DA_expedition_in_progress }
+	owned_by = root
+	owner = {
+		treasury = 100
+	}
+}
+DA_Explorable_dig_4 = {
+	DA_has_dig_level_4_or_higher = yes
+	NOT = { has_province_flag = DA_looked_dig_adk_4 }
+	NOT = { has_province_flag = DA_expedition_in_progress }
+	owned_by = root
+	owner = {
+		treasury = 150
+	}
+}
+DA_Explorable_dig_5 = {
+	DA_has_dig_level_5_or_higher = yes
+	NOT = { has_province_flag = DA_looked_dig_adk_5 }
+	NOT = { has_province_flag = DA_expedition_in_progress }
+	owned_by = root
+	owner = {
+		treasury = 300
+	}
+}
+DA_Explorable_dig_6 = {
+	DA_has_dig_level_6_or_higher = yes
+	NOT = { has_province_flag = DA_looked_dig_adk_6 }
+	NOT = { has_province_flag = DA_expedition_in_progress }
+	owned_by = root
+	owner = {
+		treasury = 500
+	}
+}
+DA_Explorable_dig_7 = {
+	DA_has_dig_level_7_or_higher = yes
+	NOT = { has_province_flag = DA_looked_dig_adk_7 }
+	NOT = { has_province_flag = DA_expedition_in_progress }
+	owned_by = root
+	owner = {
+		treasury = 750
+	}
+}
+DA_Explorable_dig_8 = {
+	DA_has_dig_level_8_or_higher = yes
+	NOT = { has_province_flag = DA_looked_dig_adk_8 }
+	NOT = { has_province_flag = DA_expedition_in_progress }
+	owned_by = root
+	owner = {
+		treasury = 1000
+	}
+}
+DA_Explorable_dig_9 = {
+	DA_has_dig_level_9_or_higher = yes
+	NOT = { has_province_flag = DA_looked_dig_adk_9 }
+	NOT = { has_province_flag = DA_expedition_in_progress }
+	owned_by = root
+	owner = {
+		treasury = 2500
+	}
+}
+DA_Explorable_dig_10 = {
+	DA_has_dig_level_10_or_higher = yes
+	NOT = { has_province_flag = DA_looked_dig_adk_10 }
+	NOT = { has_province_flag = DA_expedition_in_progress }
+	owned_by = root
+	owner = {
+		treasury = 5000
+	}
+}
+DA_Explorable_dig_11 = {
+	DA_has_dig_level_11_or_higher = yes
+	NOT = { has_province_flag = DA_looked_dig_adk_11 }
+	NOT = { has_province_flag = DA_expedition_in_progress }
+	owned_by = root
+	owner = {
+		treasury = 10000
+	}
+}
+
+
+DA_Expandable_dig_2 = {
+	DA_has_dig_level_2_or_higher = yes
+	has_province_flag = DA_looked_dig_adk_2
+	NOT = { has_province_flag = DA_Expanded_dig_adk_2 }
+	NOT = { has_province_flag = DA_expedition_in_progress }
+	owner = {
+		treasury = 100
+	}
+}
+
+DA_Expandable_dig_3 = {
+	DA_has_dig_level_3_or_higher = yes
+	has_province_flag = DA_looked_dig_adk_3
+	NOT = { has_province_flag = DA_Expanded_dig_adk_3 }
+	NOT = { has_province_flag = DA_expedition_in_progress }
+	owner = {
+		treasury = 200
+	}
+}
+
+DA_Expandable_dig_4 = {
+	DA_has_dig_level_4_or_higher = yes
+	has_province_flag = DA_looked_dig_adk_4
+	NOT = { has_province_flag = DA_Expanded_dig_adk_4 }
+	NOT = { has_province_flag = DA_expedition_in_progress }
+	owner = {
+		treasury = 300
+	}
+}
+
+DA_Expandable_dig_5 = {
+	DA_has_dig_level_5_or_higher = yes
+	has_province_flag = DA_looked_dig_adk_5
+	NOT = { has_province_flag = DA_Expanded_dig_adk_5 }
+	NOT = { has_province_flag = DA_expedition_in_progress }
+	owner = {
+		treasury = 600
+	}
+}
+
+DA_Expandable_dig_6 = {
+	DA_has_dig_level_6_or_higher = yes
+	has_province_flag = DA_looked_dig_adk_6
+	NOT = { has_province_flag = DA_Expanded_dig_adk_6 }
+	NOT = { has_province_flag = DA_expedition_in_progress }
+	owner = {
+		treasury = 1000
+	}
+}
+
+DA_Expandable_dig_7 = {
+	DA_has_dig_level_7_or_higher = yes
+	has_province_flag = DA_looked_dig_adk_7
+	NOT = { has_province_flag = DA_Expanded_dig_adk_7 }
+	NOT = { has_province_flag = DA_expedition_in_progress }
+	owner = {
+		treasury = 1500
+	}
+}
+
+DA_Expandable_dig_8 = {
+	DA_has_dig_level_8_or_higher = yes
+	has_province_flag = DA_looked_dig_adk_8
+	NOT = { has_province_flag = DA_Expanded_dig_adk_8 }
+	NOT = { has_province_flag = DA_expedition_in_progress }
+	owner = {
+		treasury = 2000
+	}
+}
+
+DA_Expandable_dig_9 = {
+	DA_has_dig_level_9_or_higher = yes
+	has_province_flag = DA_looked_dig_adk_9
+	NOT = { has_province_flag = DA_Expanded_dig_adk_9 }
+	NOT = { has_province_flag = DA_expedition_in_progress }
+	owner = {
+		treasury = 5000
+	}
+}
+
+DA_Expandable_dig_10 = {
+	DA_has_dig_level_10_or_higher = yes
+	has_province_flag = DA_looked_dig_adk_10
+	NOT = { has_province_flag = DA_Expanded_dig_adk_10 }
+	NOT = { has_province_flag = DA_expedition_in_progress }
+	owner = {
+		treasury = 10000
+	}
+}
+
+DA_Expandable_dig_11 = {
+	DA_has_dig_level_11_or_higher = yes
+	has_province_flag = DA_looked_dig_adk_11
+	NOT = { has_province_flag = DA_Expanded_dig_adk_11 }
+	NOT = { has_province_flag = DA_expedition_in_progress }
+	owner = {
+		treasury = 20000
+	}
+}
+
+DA_has_explorable_dig_level = {
+	OR = {
+		DA_Explorable_dig_2 = yes
+		DA_Explorable_dig_3 = yes
+		DA_Explorable_dig_4 = yes
+		DA_Explorable_dig_5 = yes
+		DA_Explorable_dig_6 = yes
+		DA_Explorable_dig_7 = yes
+		DA_Explorable_dig_8 = yes
+		DA_Explorable_dig_9 = yes
+		DA_Explorable_dig_10 = yes
+		DA_Explorable_dig_11 = yes
+	}
+}
+
+DA_has_potential_secondary_hold = {
+	any_neighbor_province = {
+		owned_by = root
+		NOT = {
+			OR = {
+				has_terrain = dwarven_hold
+				has_terrain = dwarven_hold_surface
+			}
+		}
+		NOT = { has_province_modifier = DA_secondary_Hold }
+	}
+}

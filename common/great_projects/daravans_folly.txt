@@ -1,0 +1,319 @@
+####################
+#Daravan's Folly
+####################
+#Nathalaire, City of Pirates
+nathalaire_city_of_pirates = {
+	start = 451
+	date = 01.01.01
+	time = {
+		months = 0
+	}
+	build_cost = 0
+	can_be_moved = no
+	move_days_per_unit_distance = 1
+	starting_tier = 1
+	type = monument
+	build_trigger = {
+		owner = {
+			NOT = {
+				tag = A74
+			}
+		}
+	}
+	on_built = {		
+	}
+	on_destroyed = {	
+	}
+	can_use_modifiers_trigger = {
+		owner = {
+			NOT = {
+				tag = A74
+			}
+		}
+	}	
+	can_upgrade_trigger = {
+		owner = {
+			NOT = {
+				tag = A74
+			}
+		}
+	}	
+	keep_trigger = {
+	}
+
+	tier_0 = {
+		upgrade_time = {
+			months = 0
+		}
+		cost_to_upgrade = {
+			factor = 0
+		}
+		province_modifiers = {
+		}
+		area_modifier = {
+		}
+		country_modifiers = {	
+		}
+		on_upgraded = {
+		}
+	}
+	tier_1 = {
+		upgrade_time = {
+			months = 120
+		}
+		cost_to_upgrade = {
+			factor = 1000
+		}
+		province_modifiers = {
+			local_unrest = 25
+		}
+		area_modifier = {
+		}
+		country_modifiers = {
+
+		}
+		on_upgraded = {
+			spawn_rebels = {
+				type = nationalist_rebels
+				size = 2
+				culture = nathalairey
+				win = yes
+				friend = A74
+			}
+			1303 = {
+				tooltip = {
+					create_pirate = 50
+				}
+				hidden_effect = {
+					create_pirate = 9999
+					create_pirate = 9999
+					create_pirate = 9999
+					create_pirate = 9999
+					create_pirate = 9999
+					create_pirate = 9999
+					create_pirate = 9999
+					create_pirate = 9999
+					create_pirate = 9999
+					create_pirate = 9999
+					create_pirate = 9999
+					create_pirate = 9999
+					create_pirate = 9999
+					create_pirate = 9999
+					create_pirate = 9999
+					create_pirate = 9999
+					create_pirate = 9999
+					create_pirate = 9999
+					create_pirate = 9999
+					create_pirate = 9999
+					create_pirate = 9999
+					create_pirate = 9999
+					create_pirate = 9999
+					create_pirate = 9999
+					create_pirate = 9999
+					create_pirate = 9999
+					create_pirate = 9999
+					create_pirate = 9999
+					create_pirate = 9999
+					create_pirate = 9999
+					create_pirate = 9999
+					create_pirate = 9999
+					create_pirate = 9999
+					create_pirate = 9999
+					create_pirate = 9999
+					create_pirate = 9999
+					create_pirate = 9999
+					create_pirate = 9999
+					while = {
+						limit = { PIR = { num_of_galley = 50 } }
+						kill_units = {
+							who = PIR
+							amount = 1
+							type = galley
+						}
+					}
+				}
+			}
+		}
+	}
+	tier_2 = {
+		upgrade_time = {
+			months = 240
+		}
+		cost_to_upgrade = {
+			factor = 2500
+		}
+		province_modifiers = {
+			local_unrest = 10
+		}
+		area_modifier = {
+		}
+		country_modifiers = {
+
+		}
+		on_upgraded = {
+			spawn_rebels = {
+				type = nationalist_rebels
+				size = 4
+				culture = nathalairey
+				win = yes
+				friend = A74
+			}
+			1303 = {
+				tooltip = {
+					create_pirate = 100
+				}
+				hidden_effect = {
+					create_pirate = 9999
+					create_pirate = 9999
+					create_pirate = 9999
+					create_pirate = 9999
+					create_pirate = 9999
+					create_pirate = 9999
+					create_pirate = 9999
+					create_pirate = 9999
+					create_pirate = 9999
+					create_pirate = 9999
+					create_pirate = 9999
+					create_pirate = 9999
+					create_pirate = 9999
+					create_pirate = 9999
+					create_pirate = 9999
+					create_pirate = 9999
+					create_pirate = 9999
+					create_pirate = 9999
+					create_pirate = 9999
+					create_pirate = 9999
+					create_pirate = 9999
+					create_pirate = 9999
+					create_pirate = 9999
+					create_pirate = 9999
+					create_pirate = 9999
+					create_pirate = 9999
+					create_pirate = 9999
+					create_pirate = 9999
+					create_pirate = 9999
+					create_pirate = 9999
+					create_pirate = 9999
+					create_pirate = 9999
+					create_pirate = 9999
+					create_pirate = 9999
+					create_pirate = 9999
+					create_pirate = 9999
+					create_pirate = 9999
+					create_pirate = 9999
+					while = {
+						limit = { PIR = { num_of_galley = 100 } }
+						kill_units = {
+							who = PIR
+							amount = 1
+							type = galley
+						}
+					}
+				}
+			}
+			add_base_production = 2
+			owner = {
+				define_advisor = {
+					type = spymaster
+					name = "Nara, The Grey Fox"
+					skill = 3
+					culture = nathalairey
+					religion = regent_court
+					location = 451
+					female = yes
+					discount = yes
+				}
+			}
+			
+		}
+	}
+	tier_3 = {
+		upgrade_time = {
+			months = 480
+		}
+		cost_to_upgrade = {
+			factor = 5000
+		}
+		province_modifiers = {
+			province_trade_power_value = 15
+			local_sailors_modifier = 1
+			ship_recruit_speed = -0.33
+		}
+		area_modifier = {
+		}
+		country_modifiers = {
+			spy_offence = 0.25
+			privateer_efficiency = 0.25
+			dip_advisor_cost = -0.05
+		}
+		on_upgraded = {
+			spawn_rebels = {
+				type = nationalist_rebels
+				size = 6
+				culture = nathalairey
+				win = yes
+				friend = A74
+			}
+			1303 = {
+				tooltip = {
+					create_pirate = 150
+				}
+				hidden_effect = {
+					create_pirate = 9999
+					create_pirate = 9999
+					create_pirate = 9999
+					create_pirate = 9999
+					create_pirate = 9999
+					create_pirate = 9999
+					create_pirate = 9999
+					create_pirate = 9999
+					create_pirate = 9999
+					create_pirate = 9999
+					create_pirate = 9999
+					create_pirate = 9999
+					create_pirate = 9999
+					create_pirate = 9999
+					create_pirate = 9999
+					create_pirate = 9999
+					create_pirate = 9999
+					create_pirate = 9999
+					create_pirate = 9999
+					create_pirate = 9999
+					create_pirate = 9999
+					create_pirate = 9999
+					create_pirate = 9999
+					create_pirate = 9999
+					create_pirate = 9999
+					create_pirate = 9999
+					create_pirate = 9999
+					create_pirate = 9999
+					create_pirate = 9999
+					create_pirate = 9999
+					create_pirate = 9999
+					create_pirate = 9999
+					create_pirate = 9999
+					create_pirate = 9999
+					create_pirate = 9999
+					create_pirate = 9999
+					create_pirate = 9999
+					create_pirate = 9999
+					while = {
+						limit = { PIR = { num_of_galley = 150 } }
+						kill_units = {
+							who = PIR
+							amount = 1
+							type = galley
+						}
+					}
+				}
+			}
+			add_base_production = 2
+			owner = {
+				add_country_modifier = {
+					name = nathalaire_city_of_pirates_nathalynes_boon
+					duration = 10950
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,148 @@
+xsm_set_focus_cd = { envoy_travel_time = 0.001 }
+xsm_set_qq_cd = { envoy_travel_time = 0.001 }
+xsm_set_centralization_cd = { envoy_travel_time = 0.001 }
+xsm_interaction_cd = { envoy_travel_time = 0.001 }
+xsm_set_mil_com_cd = { envoy_travel_time = 0.001 }
+#SUBJECT CEN
+xsm_subject_centralization_VL = {
+	liberty_desire = -20
+	global_prosperity_growth = 0.075
+	prestige = 0.5
+}
+xsm_subject_centralization_L = {
+	liberty_desire = -10
+	global_prosperity_growth = 0.05
+	prestige = 0.25
+}
+xsm_subject_centralization_N = {
+
+}
+xsm_subject_centralization_H = {
+	liberty_desire = 10
+	global_monthly_devastation = -0.05
+	fabricate_claims_cost = -0.15
+}
+xsm_subject_centralization_VH = {
+	liberty_desire = 20
+	global_monthly_devastation = -0.1
+	fabricate_claims_cost = -0.3
+}
+#SUBJECT QQ
+xsm_qq_qal_max = {
+	discipline = 0.05
+	land_morale = 0.10
+	land_forcelimit_modifier = -0.20
+	army_tradition = 0.5
+}
+
+xsm_qq_qal_high = {
+	discipline = 0.025
+	land_morale = 0.05
+	land_forcelimit_modifier = -0.10
+	army_tradition = 0.25
+}
+
+xsm_qq_balance = {
+
+}
+
+xsm_qq_quan_high = {
+	discipline = -0.025
+	land_morale = -0.05
+	land_forcelimit_modifier = 0.10
+	global_manpower_modifier = 0.10
+}
+
+xsm_qq_quan_max = {
+	discipline = -0.05
+	land_morale = -0.10
+	land_forcelimit_modifier = 0.20
+	global_manpower_modifier = 0.20
+}
+#SUBJECT MC
+xsm_mc_mil_max = {
+	#BONUS
+	merc_maintenance_modifier = -0.20
+	naval_maintenance_modifier = -0.20
+	land_maintenance_modifier = -0.20
+	manpower_recovery_speed = 0.10
+	#MALUS
+	trade_steering = -0.25
+	production_efficiency = -0.25
+	global_trade_goods_size_modifier = -0.20
+	global_unrest = 1
+}
+
+xsm_mc_mil_high = {
+	#BONUS
+	merc_maintenance_modifier = -0.10
+	naval_maintenance_modifier = -0.10
+	land_maintenance_modifier = -0.10
+	manpower_recovery_speed = 0.10
+	#MALUS
+	trade_steering = -0.20
+	production_efficiency = -0.20
+	global_trade_goods_size_modifier = -0.10
+}
+
+xsm_mc_mil_com_balance = {
+
+}
+
+xsm_mc_com_high = {
+	#BONUS
+	merc_maintenance_modifier = 0.10
+	naval_maintenance_modifier = 0.10
+	land_maintenance_modifier = 0.10
+	manpower_recovery_speed = -0.10
+	#MALUS
+	trade_steering = 0.20
+	production_efficiency = 0.20
+	global_trade_goods_size_modifier = 0.10
+}
+
+xsm_mc_com_max = {
+	#BONUS
+	merc_maintenance_modifier = 0.20
+	naval_maintenance_modifier = 0.20
+	land_maintenance_modifier = 0.20
+	manpower_recovery_speed = -0.10
+	#MALUS
+	trade_steering = 0.25
+	production_efficiency = 0.25
+	global_trade_goods_size_modifier = 0.20
+	global_unrest = -1
+}
+
+#SUBJECT DE
+xsm_de_dev_max = {
+	build_cost = -0.30
+	build_time = -0.30
+	development_cost = -0.1
+	core_creation = 0.2
+}
+
+xsm_de_dev_high = {
+	build_cost = -0.15
+	build_time = -0.15
+	development_cost = -0.05
+	core_creation = 0.1
+}
+
+xsm_de_dev_exp_balance = {
+
+}
+
+xsm_de_exp_high = {
+	build_cost = 0.15
+	build_time = 0.15
+	development_cost = 0.05
+	core_creation = -0.1
+}
+
+xsm_de_exp_max = {
+	build_cost = 0.30
+	build_time = 0.30
+	development_cost = 0.10
+	core_creation = -0.2
+}

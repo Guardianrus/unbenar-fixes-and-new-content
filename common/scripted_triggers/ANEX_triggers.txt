@@ -1,0 +1,160 @@
+
+idea_religion = {
+	OR = {
+		religion = old_dookan
+		religion = great_dookan #
+		religion = skaldhyrric_faith
+		religion = the_jadd
+		religion = irdaeos_worship
+		religion = regent_court
+		religion = corinite
+		religion = ravelian
+		religion = the_thought
+		religion = the_hunt
+		religion = ancestor_worship
+		religion = kobold_dragon_cult
+		religion = fey_court
+		religion = eordellon
+		religion = spring_court #
+		religion = summer_court #
+		religion = winter_court #
+		religion = autumn_court #
+		religion = saanorgegh
+		religion = soise_vio ##
+		religion = old_bulwari_sun_cult ##
+	}
+}
+
+has_all_reli_idea_groups = {
+	OR = {
+		has_idea_group = religious_ideas
+
+		has_idea_group = old_dookan_0
+		has_idea_group = skaldhyrric_faith_0
+		has_idea_group = the_jadd_0
+		has_idea_group = ik_magthaal_0
+		has_idea_group = regentcourt0
+		has_idea_group = ravelian0
+		has_idea_group = corinite0
+		has_idea_group = thought0
+		has_idea_group = the_hunt0
+		has_idea_group = dragon_cult_0
+		has_idea_group = anc_worship_0
+		has_idea_group = fey_religion_0
+		has_idea_group = eordellon_0
+		has_idea_group = saanorgegh0
+		has_idea_group = soise_vio_ideas
+		has_idea_group = old_sun_cult_ideas
+	}
+}
+
+full_all_reli_idea_groups = {
+	OR = {
+		full_idea_group = religious_ideas
+		
+		full_idea_group = old_dookan_0
+		full_idea_group = skaldhyrric_faith_0
+		full_idea_group = the_jadd_0
+		full_idea_group = ik_magthaal_0
+		full_idea_group = regentcourt0
+		full_idea_group = ravelian0
+		full_idea_group = corinite0
+		full_idea_group = thought0
+		full_idea_group = the_hunt0
+		full_idea_group = dragon_cult_0
+		full_idea_group = anc_worship_0
+		full_idea_group = fey_religion_0
+		full_idea_group = eordellon_0
+		full_idea_group = saanorgegh0
+		full_idea_group = soise_vio_ideas
+		full_idea_group = old_sun_cult_ideas
+	}
+}
+
+
+has_wonder_building_trigger = {
+	OR= {
+		has_building = war_college_1
+		has_building = war_college_2
+		has_building = war_college_3
+
+		has_building = national_bank_1
+		has_building = national_bank_2
+		has_building = national_bank_3
+
+		has_building = production_office_1
+		has_building = production_office_2
+		has_building = production_office_3
+
+		has_building = naval_arsenal_1
+		has_building = naval_arsenal_2
+		has_building = naval_arsenal_3
+
+		has_building = trade_office_1
+		has_building = trade_office_2
+		has_building = trade_office_3
+
+		has_building = tax_office_1
+		has_building = tax_office_2
+		has_building = tax_office_3
+
+		has_building = cia_1
+		has_building = cia_2
+		has_building = cia_3
+
+		has_building = triumphal_arch_1
+		has_building = triumphal_arch_2
+		has_building = triumphal_arch_3
+
+		has_building = colonial_office_1
+		has_building = colonial_office_2
+		has_building = colonial_office_3
+
+		has_building = admiralty_1
+		has_building = admiralty_2
+		has_building = admiralty_3
+
+		has_building = monument_1
+		has_building = monument_2
+		has_building = monument_3
+
+		has_building = great_cathedral_1
+		has_building = great_cathedral_2
+		has_building = great_cathedral_3
+
+		has_building = national_university_1
+		has_building = national_university_2
+		has_building = national_university_3
+
+	}
+}
+
+
+can_build_tax_lvl_1 = {	ROOT = { adm_tech = 3 } }
+can_build_tax_lvl_2 = {	ROOT = { adm_tech = 7 } }
+can_build_tax_lvl_3 = {	ROOT = { adm_tech = 10 } }
+can_build_tax_lvl_4 = {	ROOT = { adm_tech = 14	} }
+
+can_build_government_lvl_1 = { ROOT = { adm_tech = 6 } }
+can_build_government_lvl_2 = { ROOT = {	adm_tech = 12 } }
+can_build_government_lvl_3 = { ROOT = { adm_tech = 22 } }
+can_build_government_lvl_4 = { ROOT = {	adm_tech = 29 } }
+
+can_build_landforcelimit = {
+	ROOT = {
+
+	}
+}
+
+
+
+metal_tradegoods_trigger = {
+	OR = {
+		trade_goods = iron
+		trade_goods = copper
+		trade_goods = zinc
+		trade_goods = tin
+		trade_goods = lead
+		trade_goods = mithril
+	}
+}

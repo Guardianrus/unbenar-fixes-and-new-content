@@ -1,0 +1,261 @@
+remove_buildings = {
+	random = {
+		chance = $chance$
+		remove_building = education_lvl_1
+	}
+	random = {
+		chance = $chance$
+		remove_building = education_lvl_2
+	}
+	random = {
+		chance = $chance$
+		remove_building = university
+	}
+	random = {
+		chance = $chance$
+		remove_building = temple
+	}
+	random = {
+		chance = $chance$
+		remove_building = cathedral
+	}
+	random = {
+		chance = $chance$
+		remove_building = theatre_lvl_1
+	}
+	random = {
+		chance = $chance$
+		remove_building = theatre_lvl_2
+	}
+	random = {
+		chance = $chance$
+		remove_building = blacksmith
+	}
+	random = {
+		chance = $chance$
+		remove_building = carpenter
+	}
+	random = {
+		chance = $chance$
+		remove_building = taxation_lvl_1
+	}
+	random = {
+		chance = $chance$
+		remove_building = taxation_lvl_2
+	}
+	random = {
+		chance = $chance$
+		remove_building = taxation_lvl_3
+	}
+	random = {
+		chance = $chance$
+		remove_building = taxation_lvl_4
+	}
+	random = {
+		chance = $chance$
+		remove_building = courthouse
+	}
+	random = {
+		chance = $chance$
+		remove_building = town_hall
+	}
+	random = {
+		chance = $chance$
+		remove_building = government_lvl_3
+	}
+	random = {
+		chance = $chance$
+		remove_building = government_lvl_4
+	}
+	random = {
+		chance = $chance$
+		remove_building = marketplace
+	}
+	random = {
+		chance = $chance$
+		remove_building = trade_depot
+	}
+	random = {
+		chance = $chance$
+		remove_building = stock_exchange
+	}
+	random = {
+		chance = $chance$
+		remove_building = trade_lvl_4
+	}
+	random = {
+		chance = $chance$
+		remove_building = barracks
+	}
+	random = {
+		chance = $chance$
+		remove_building = training_fields
+	}
+	random = {
+		chance = $chance$
+		remove_building = manpower_lvl_3
+	}
+	random = {
+		chance = $chance$
+		remove_building = regimental_camp
+	}
+	random = {
+		chance = $chance$
+		remove_building = conscription_center
+	}
+	random = {
+		chance = $chance$
+		remove_building = forcelimit_lvl_3
+	}
+	random = {
+		chance = $chance$
+		remove_building = dock
+	}
+	random = {
+		chance = $chance$
+		remove_building = drydock
+	}
+	random = {
+		chance = $chance$
+		remove_building = navymanpower_lvl_3
+	}
+	random = {
+		chance = $chance$
+		remove_building = shipyard
+	}
+	random = {
+		chance = $chance$
+		remove_building = grand_shipyard
+	}
+	random = {
+		chance = $chance$
+		remove_building = navyforcelimit_lvl_3
+	}
+	random = {
+		chance = $chance$
+		remove_building = navalbase_lvl_1
+	}
+	random = {
+		chance = $chance$
+		remove_building = navalbase_lvl_2
+	}
+	random = {
+		chance = $chance$
+		remove_building = wharf
+	}
+	random = {
+		chance = $chance$
+		remove_building = weapons
+	}
+	random = {
+		chance = $chance$
+		remove_building = textile
+	}
+	random = {
+		chance = $chance$
+		remove_building = plantations
+	}
+	random = {
+		chance = $chance$
+		remove_building = tradecompany
+	}
+	random = {
+		chance = $chance$
+		remove_building = farm_estate
+	}
+	random = {
+		chance = $chance$
+		remove_building = mills
+	}
+	random = {
+		chance = $chance$
+		remove_building = furnace
+	}
+	random = {
+		chance = $chance$
+		remove_building = soldier_households
+	}
+	random = {
+		chance = $chance$
+		remove_building = impressment_offices
+	}
+	random = {
+		chance = $chance$
+		remove_building = state_house
+	}
+	random = {
+		chance = $chance$
+		remove_building = tax_house
+	}
+	random = {
+		chance = $chance$
+		remove_building = mage_tower
+	}
+	random = {
+		chance = $chance$
+		remove_building = workshop
+	}
+	random = {
+		chance = $chance$
+		remove_building = counting_house
+	}
+	random = {
+		chance = $chance$
+		remove_building = production_lvl_3
+	}
+	random = {
+		chance = $chance$
+		remove_building = production_lvl_4
+	}
+	random = {
+		chance = $chance$
+		remove_building = production_lvl_5
+	}
+}
+
+remove_def_buildings = {
+	random = {
+		chance = $chance$
+		remove_building = fort_15th
+	}
+	random = {
+		chance = $chance$
+		remove_building = fort_16th
+	}
+	random = {
+		chance = $chance$
+		remove_building = fort_17th
+	}
+	random = {
+		chance = $chance$
+		remove_building = fort_18th
+	}
+	random = {
+		chance = $chance$
+		remove_building = fort_magic
+	}
+	random = {
+		chance = $chance$
+		remove_building = fortress_keep
+	}
+	random = {
+		chance = $chance$
+		remove_building = fortress_barracks
+	}
+	random = {
+		chance = $chance$
+		remove_building = fortress_towers
+	}
+	random = {
+		chance = $chance$
+		remove_building = fortress_artillery
+	}
+	random = {
+		chance = $chance$
+		remove_building = fortress_wall
+	}
+	random = {
+		chance = $chance$
+		remove_building = fortress_supply
+	}
+}

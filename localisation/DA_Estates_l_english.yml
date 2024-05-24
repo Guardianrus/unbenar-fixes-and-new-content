@@ -1,0 +1,51 @@
+﻿l_english:
+
+ estate_DA_Runesmiths:0 "Runesmiths"
+ estate_DA_Runesmiths_desc:0 "Runesmiths, Researchers, mages and engineers who have gathered around the §GResearch Facility§! and wish for nothing but to retrive ancient Dwarven Artifacts and study them"
+ estate_DA_Runesmiths_ownership: "Runesmiths Land ownership"
+ DA_Runesmiths_loyalty_modifier:0 "Runesmiths loyalty Modifier"
+ DA_Runesmiths_influence_modifier:0 "Runesmiths influence Modifier"
+ DA_Runesmiths_privilege_slots:0 "Max Runesmiths privileges"
+ EST_VAL_Hold_restorer_ADVISOR:0 "Hiring An Hold Restorer: §Y5.0%§!"
+ DA_supporting_Runesmiths_tt:0 "Unlocks the Runesmiths estate"
+
+####################
+# privileges
+####################
+
+ estate_DA_Runesmiths_RF_2:0 "§GResearch Facility§! Lvl 2: Underground Laboratory"
+ estate_DA_Runesmiths_RF_2_desc:0 "A small infrastructure managed by a few individuals"
+ estate_DA_Runesmiths_RF_4:0 "§GResearch Facility§! Lvl 4: Outer Laboratory"
+ estate_DA_Runesmiths_RF_4_desc:0 "A relatively big infrastructure, operating on 3 different dig levels and managed by some of the best minds our hold can offer"
+ estate_DA_Runesmiths_RF_6:0 "§GResearch Facility§! Lvl 6: Central Laboratory"
+ estate_DA_Runesmiths_RF_6_desc:0 "A big infrastructure, operating on 5 different dig levels, organized by dividing work on each dig level to handle excavation, research and applications more efficiently. This Institute can now be treated as an essentialpart of our country"
+ estate_DA_Runesmiths_RF_8:0 "§GResearch Facility§! Lvl 8: Deep Laboratory"
+ estate_DA_Runesmiths_RF_8_desc:0 "One of the most extensive research facility you can find in all the serpentspine. The best Runesmiths, Scientists, Artificers, Mages and scholars from our country work tirelessly here."
+ estate_DA_Runesmiths_RF_10:0 "§GResearch Facility§! Lvl 10: Core Laboratory"
+ estate_DA_Runesmiths_RF_10_desc:0 "Maybe the Biggest and most advanced §GResearch Facility§! in the Serpentspine. Everyday new theories are the topic of each conversation and everyone working here knows they are living for the progress of the dwarven race or out of pure curiosity"
+ estate_DA_Runesmiths_RF_11:0 "§GResearch Facility§! Lvl 11: Abyssal Laboratory"
+ estate_DA_Runesmiths_RF_11_desc:0 "The Greatest §GResearch Facility§! In the World. As you walk on each Dig level you can see stange mechanisms, inventions of who knows which scientist, being tested one after the other. A true paradise for those who seek knowledge without boundaries. The only thing is that there is a littke sense of madness when you look at all these eyes burning with passion and disregarding everything else."
+ DA_Runesmiths_organization_increased_chances:0 "§GThe estimated time necessary for the Research Facility to unlock an available ability is reduced by 25%§!"
+ estate_DA_Runesmiths_patronage:0 "Runesmiths Patronage"
+ estate_DA_Runesmiths_patronage_desc:0 "By financially backing our Runemages we expect them to work without concerns about the financial side and let their brain work peacefully"
+ DA_runesmiths_patronage_15_tt:0 "§GThe estimated time necessary for the Research Facility to unlock an available ability is reduced by 15%§!"
+ estate_DA_Runesmiths_Forges:0 "Runesmiths Forges"
+ estate_DA_Runesmiths_Forges_desc:0 "Implementing Runes in Manufactury production can help us being more efficient and develop our territories faster, but there will be a slight increase in construction costs"
+ estate_DA_Runesmiths_artificers_cooperation:0 "Artificers Copperation"
+ estate_DA_Runesmiths_artificers_cooperation_desc:0 "A cooperation between these two research focused groups can only be beneficial to our country"
+
+ estate_DA_Obsidian_collab:0 "Obsidian Runesmiths"
+ estate_DA_Obsidian_collab_desc:0 "They were once our sworn enemy but are now part of our great nation. The §GResearch Facility§! is ready to welcome their legendary Runesmithing together with what we have achieved so far"
+ DA_reduced_rune_mages_CD_tt:0 "§GReduce the cooldown in creating a Rune Mage by 1 year§!"
+
+ estate_DA_Hul_Jorkad_genetic_engineering_more:0 "§GModification§!: Enhanced Fertility"
+ estate_DA_Hul_Jorkad_genetic_engineering_more_desc:0 "In Ducaniel's Laboratory we chose to increase fertility and physical prowess of our species, leading to an abnormal growth of the population"
+ estate_DA_Hul_Jorkad_genetic_engineering_better:0 "§GModification§!: Enhanced Magical Prowess"
+ estate_DA_Hul_Jorkad_genetic_engineering_better_desc:0 "In Ducaniel's Laboratory we chose to increase longevity and magical prowess of our species, leading to a decrease in the growth of the population, but nearly a third of our population has unlocked a certain degree of magical abilities."
+ DA_add_magic_study_modifier_25_tt:0 "Magic Study Experience: §G+25.0%§!"
+ DA_common_battlemages_tt:0 "§GIncreased chances of natural War Wizards appearing§!"
+ DA_remove_magic_study_modifier_25_tt:0 "Magic Study Experience: §R-25.0%§!"
+
+####################
+# strange things
+####################

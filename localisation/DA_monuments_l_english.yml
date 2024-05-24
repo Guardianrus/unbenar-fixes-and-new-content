@@ -1,0 +1,50 @@
+﻿l_english:
+
+####################
+#Custom Tooltips
+####################
+
+DA_tooltip_has_dig_level_2_or_higher: "Has at least §YDig Level 2§!, or has at least §Y50 Development§!"
+DA_tooltip_has_dig_level_3_or_higher: "Has at least §YDig Level 3§!, or has at least §Y60 Development§!"
+DA_tooltip_has_dig_level_4_or_higher: "Has at least §YDig Level 4§!, or has at least §Y70 Development§!"
+DA_tooltip_has_dig_level_5_or_higher: "Has at least §YDig Level 5§!, or has at least §Y80 Development§!"
+DA_tooltip_has_dig_level_6_or_higher: "Has at least §YDig Level 6§!, or has at least §Y90 Development§!"
+DA_tooltip_has_dig_level_7_or_higher: "Has at least §YDig Level 7§!, or has at least §Y100 Development§!"
+DA_tooltip_has_dig_level_8_or_higher: "Has at least §YDig Level 8§!, or has at least §Y110 Development§!"
+DA_tooltip_has_dig_level_9_or_higher: "Has at least §YDig Level 9§!, or has at least §Y120 Development§!"
+DA_tooltip_has_dig_level_10_or_higher: "Has at least §YDig Level 10§!, or has at least §Y130 Development§!"
+DA_tooltip_has_dig_level_11_or_higher: "Has at least §YDig Level 11§!, or has at least §Y140 Development§!"
+dwarven_monuments_can_use_tooltip: "§YProvince§! either belongs to a §YSubterranean Race§!, or has a §YSubterranean Racial Minority§! either §GCoexisting§! or §TIntegrated§!"
+
+####################
+# unlockable monuments
+####################
+
+The_Dwarven_Megalopolis_title: "The Citadel Hold"
+The_Dwarven_Megalopolis: "The Citadel Hold"
+great_project_The_Dwarven_Megalopolis: "The Citadel Hold"
+The_Dwarven_Megalopolis_desc: "After discoveing the old maps of Amldihr we are progressively expanding the Hold to resemble the glory of the past.\nWe will make Amldihr the capital of the serpentspine once again!"
+DA_can_upgrade_monument_6_10: "needs at least Dig level 6 to upgrade to tier 1\n  Dig level 8 to upgrade to tier 2\n  Dig level 10 to upgrade to tier 3"
+
+The_Dwarven_Workshop_title: "The Mithril Workshop"
+The_Dwarven_Workshop: "The Mithril Workshop"
+great_project_The_Dwarven_Workshop: "The Mithril Workshop"
+The_Dwarven_Workshop_desc: "Both workshop and lab, this infrastructure was once used to research mithril properties, possible alloys and mass-produce them.\nUpgrading this will help us understand mithril and use it more efficiently."
+
+DA_pr_tr_mithril_guard:0 "Mithril Guard Equipment"
+desc_DA_pr_tr_mithril_guard:0 "The Mithril Workshop provides all the equipment for the Mithril guard"
+desc_DA_can_recruit_Mithril_guard: "The Mithril Guard is composed by the best soldiers Mithradum can offer and is regarded as highly as the royal guard.\nEvery dwarf composing this units has undergone years of rigorous training and is then equipped with the greatest mithril armors and weapons Mithradum can offer"
+DA_can_recruit_Mithril_guard: "Mithril Guard"
+desc_DA_can_recruit_Mithril_guard_pr: "Only after spending years training in this camp, challenging yourself every day, and passing a strict final examination, can one be called to be part of the Mithril guard."
+DA_can_recruit_Mithril_guard_pr: "Mithril Guard Training Camp"
+
+The_Dwarven_Laboratory_title: "Ducaniel's Laboratory"
+The_Dwarven_Laboratory: "Ducaniel's Laboratory"
+great_project_The_Dwarven_Laboratory: "Ducaniel's Laboratory"
+The_Dwarven_Laboratory_desc: "The Laboratory in which Ducaniel, A precursor Elf, experimented for 100 years while besieged by Aul-Dwarov, to create the Orc race through Magic and Genetic Engineering."
+ DA_permanent_precursor_relics:0 "The precursor relics in this province will never be exhausted with the passing of time."
+
+The_Sky_Hold_title: "The Setzunkhupa"
+The_Sky_Hold: "The Setzunkhupa"
+great_project_The_Sky_Hold: "The Setzunkhupa"
+The_Sky_Hold_desc: "A massive observatory, the only dwarven great project located above the surface, was once very famous in Aul-Dwarov.\nWe have now found its blueprints in lower dig levels and can restore it successfully or maybe even make it better."

@@ -1,0 +1,213 @@
+spriteTypes = {
+
+	#submod shit
+	spriteType = {
+		name = "GFX_autonomy_icon"
+		texturefile = "gfx/interface/autonomy_icon.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_button_straight_104_32"
+		texturefile = "gfx/interface/button_straight_104_32.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_global_garrison_growth"
+		texturefile = "gfx/interface/ideas_EU4/global_garrison_growth.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_diggy_province_bg"
+		texturefile = "gfx//interface//custom_gui//diggy_province_bg.dds"
+		transparencecheck = yes
+	}
+	
+	spriteType = {
+		name = "GFX_hold_1_strip"
+		texturefile = "gfx/interface/custom_gui/hold_01_strip.dds"
+		noOfFrames = 3
+	}
+	spriteType = {
+		name = "GFX_hold_2_strip"
+		texturefile = "gfx/interface/custom_gui/hold_02_strip.dds"
+		noOfFrames = 3
+	}
+	spriteType = {
+		name = "GFX_hold_3_strip"
+		texturefile = "gfx/interface/custom_gui/hold_03_strip.dds"
+		noOfFrames = 3
+	}
+	spriteType = {
+		name = "GFX_hold_4_strip"
+		texturefile = "gfx/interface/custom_gui/hold_04_strip.dds"
+		noOfFrames = 3
+	}
+	spriteType = {
+		name = "GFX_hold_5_strip"
+		texturefile = "gfx/interface/custom_gui/hold_05_strip.dds"
+		noOfFrames = 3
+	}
+	spriteType = {
+		name = "GFX_hold_6_strip"
+		texturefile = "gfx/interface/custom_gui/hold_06_strip.dds"
+		noOfFrames = 3
+	}
+	spriteType = {
+		name = "GFX_hold_7_strip"
+		texturefile = "gfx/interface/custom_gui/hold_07_strip.dds"
+		noOfFrames = 3
+	}
+	spriteType = {
+		name = "GFX_hold_8_strip"
+		texturefile = "gfx/interface/custom_gui/hold_08_strip.dds"
+		noOfFrames = 3
+	}
+	spriteType = {
+		name = "GFX_hold_9_strip"
+		texturefile = "gfx/interface/custom_gui/hold_09_strip.dds"
+		noOfFrames = 3
+	}
+	spriteType = {
+		name = "GFX_hold_10_strip"
+		texturefile = "gfx/interface/custom_gui/hold_10_strip.dds"
+		noOfFrames = 3
+	}
+	spriteType = {
+		name = "GFX_hold_11_strip"
+		texturefile = "gfx/interface/custom_gui/hold_11_strip.dds"
+		noOfFrames = 3
+	}
+	spriteType = {
+		name = "GFX_hold_12_strip"
+		texturefile = "gfx/interface/custom_gui/hold_12_strip.dds"
+		noOfFrames = 3
+	}
+
+	spriteType = {
+		name = "GFX_diggydiggy_start"
+		texturefile = "gfx//interface//custom_gui//diggydiggy_start.dds"
+	}
+	spriteType = {
+		name = "GFX_hold_specialisation_button"
+		texturefile = "gfx//interface//custom_gui//hold_specialisation_button.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_diggy_bar_bg"
+		texturefile = "gfx//interface//custom_gui//diggy_bar_bg.dds"
+	}
+	spriteType = {
+		name = "GFX_diggy_bar_frame"
+		texturefile = "gfx//interface//custom_gui//diggy_bar_frame.dds"
+	}
+	spriteType = {
+		name = "GFX_diggy_bar_progress_strip"
+		texturefile = "gfx//interface//custom_gui//diggy_bar_progress_strip.dds"
+		noOfFrames = 10
+	}
+	spriteType = {
+		name = "hold_ruined"
+		texturefile = "gfx//interface//ideas_EU4//hold_ruined.dds"
+	}
+	spriteType = {
+		name = "hold_partially_ruined"
+		texturefile = "gfx//interface//ideas_EU4//hold_partially_ruined.dds"
+	}
+	spriteType = {
+		name = "hold_damaged"
+		texturefile = "gfx//interface//ideas_EU4//hold_damaged.dds"
+	}
+	spriteType = {
+		name = "hold_infested"
+		texturefile = "gfx//interface//ideas_EU4//hold_infested.dds"
+	}
+	spriteType = {
+		name = "hold_good_condition"
+		texturefile = "gfx//interface//ideas_EU4//hold_good_condition.dds"
+	}
+	spriteType = {
+		name = "GFX_progressbar_maison"
+		texturefile = "gfx//interface//custom_gui//progressbar_maison.dds"
+		noOfFrames = 10
+	}
+	spriteType = {
+		name = "GFX_dig_build_hidder"
+		texturefile = "gfx//interface//custom_gui//dig_build_hidder.dds"
+	}
+	spriteType = {
+		name = "GFX_plunder_hold_button"
+		texturefile = "gfx//interface//custom_gui//plunder_hold_button.dds"
+	}
+	spriteType = {
+		name = "GFX_blorc_upgrade_fort_button"
+		texturefile = "gfx//interface//custom_gui//blorc_upgrade_fort_button.dds"
+	}
+	spriteType = {
+		name = "hold_magma_forge"
+		texturefile = "gfx//interface//ideas_EU4//hold_magma_forge.dds"
+	}
+	spriteType = {
+		name = "hold_artificer_hall"
+		texturefile = "gfx//interface//ideas_EU4//hold_artificer_hall.dds"
+	}
+	spriteType = {
+		name = "hold_engineer_manufactory"
+		texturefile = "gfx//interface//ideas_EU4//hold_engineer_manufactory.dds"
+	}
+	spriteType = {
+		name = "hold_high_gardens"
+		texturefile = "gfx//interface//ideas_EU4//hold_high_gardens.dds"
+	}
+	spriteType = {
+		name = "hold_military_academy"
+		texturefile = "gfx//interface//ideas_EU4//hold_military_academy.dds"
+	}
+	spriteType = {
+		name = "GFX_none_icon"
+		texturefile = "gfx//interface//custom_gui//none_icon.dds"
+	}
+	
+	spriteType = {
+		name = "pop_icon_lizardfolk_la"
+		texturefile = "gfx//interface//ideas_EU4//pop_icon_lizardfolk_la.dds"
+	}
+	spriteType = {
+		name = "pop_icon_lizardfolk_li"
+		texturefile = "gfx//interface//ideas_EU4//pop_icon_lizardfolk_li.dds"
+	}
+	spriteType = {
+		name = "pop_icon_lizardfolk_lo"
+		texturefile = "gfx//interface//ideas_EU4//pop_icon_lizardfolk_lo.dds"
+	}
+	spriteType = {
+		name = "pop_icon_lizardfolk_ma"
+		texturefile = "gfx//interface//ideas_EU4//pop_icon_lizardfolk_ma.dds"
+	}
+	spriteType = {
+		name = "pop_icon_lizardfolk_mi"
+		texturefile = "gfx//interface//ideas_EU4//pop_icon_lizardfolk_mi.dds"
+	}
+	spriteType = {
+		name = "pop_icon_lizardfolk_mo"
+		texturefile = "gfx//interface//ideas_EU4//pop_icon_lizardfolk_mo.dds"
+	}
+	spriteType = {
+		name = "pop_icon_lizardfolk_sa"
+		texturefile = "gfx//interface//ideas_EU4//pop_icon_lizardfolk_sa.dds"
+	}
+	spriteType = {
+		name = "pop_icon_lizardfolk_si"
+		texturefile = "gfx//interface//ideas_EU4//pop_icon_lizardfolk_si.dds"
+	}
+	spriteType = {
+		name = "pop_icon_lizardfolk_so"
+		texturefile = "gfx//interface//ideas_EU4//pop_icon_lizardfolk_so.dds"
+	}
+	
+	
+	spriteType = {
+		name = "GFX_build_roost_button"
+		texturefile = "gfx//interface//custom_gui//build_roost_button.dds"
+	}
+	
+}

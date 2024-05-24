@@ -1,0 +1,251 @@
+xsm_subject_centralization_VH_overlord_1 = {
+	potential = {
+		num_of_subjects = 1
+		any_subject_country = {
+			has_country_modifier = xsm_subject_centralization_VH
+		}
+	}
+	trigger = {
+		calc_true_if = {
+			all_subject_country = {
+				has_country_modifier = xsm_subject_centralization_VH
+			}
+			amount = 1
+		}
+	}
+	yearly_corruption = 0.02
+	vassal_income = 0.1
+	vassal_forcelimit_bonus = 0.2
+	liberty_desire_from_subject_development = 0.05
+}
+
+xsm_subject_centralization_VH_overlord_2 = {
+	potential = {
+		num_of_subjects = 3
+		any_subject_country = {
+			has_country_modifier = xsm_subject_centralization_VH
+		}
+	}
+	trigger = {
+		calc_true_if = {
+			all_subject_country = {
+				has_country_modifier = xsm_subject_centralization_VH
+			}
+			amount = 3
+		}
+	}
+	yearly_corruption = 0.02
+	vassal_income = 0.15
+	vassal_forcelimit_bonus = 0.25
+	liberty_desire_from_subject_development = 0.10
+}
+
+xsm_subject_centralization_VH_overlord_3 = {
+	potential = {
+		num_of_subjects = 5
+		any_subject_country = {
+			has_country_modifier = xsm_subject_centralization_VH
+		}
+	}
+	trigger = {
+		calc_true_if = {
+			all_subject_country = {
+				has_country_modifier = xsm_subject_centralization_VH
+			}
+			amount = 5
+		}
+	}
+	yearly_corruption = 0.02
+	vassal_income = 0.2
+	vassal_forcelimit_bonus = 0.3
+	liberty_desire_from_subject_development = 0.15
+}
+
+xsm_subject_centralization_H_overlord_1 = {
+	potential = {
+		num_of_subjects = 1
+		any_subject_country = {
+			has_country_modifier = xsm_subject_centralization_H
+		}
+	}
+	trigger = {
+		calc_true_if = {
+			all_subject_country = {
+				has_country_modifier = xsm_subject_centralization_H
+			}
+			amount = 1
+		}
+	}
+	yearly_corruption = 0.02
+	vassal_income = 0.05
+	vassal_forcelimit_bonus = 0.1
+	liberty_desire_from_subject_development = 0.05
+}
+
+xsm_subject_centralization_H_overlord_2 = {
+	potential = {
+		num_of_subjects = 3
+		any_subject_country = {
+			has_country_modifier = xsm_subject_centralization_H
+		}
+	}
+	trigger = {
+		calc_true_if = {
+			all_subject_country = {
+				has_country_modifier = xsm_subject_centralization_H
+			}
+			amount = 3
+		}
+	}
+	yearly_corruption = 0.02
+	vassal_income = 0.1
+	vassal_forcelimit_bonus = 0.15
+	liberty_desire_from_subject_development = 0.05
+}
+
+xsm_subject_centralization_H_overlord_3 = {
+	potential = {
+		num_of_subjects = 5
+		any_subject_country = {
+			has_country_modifier = xsm_subject_centralization_H
+		}
+	}
+	trigger = {
+		calc_true_if = {
+			all_subject_country = {
+				has_country_modifier = xsm_subject_centralization_H
+			}
+			amount = 5
+		}
+	}
+	yearly_corruption = 0.02
+	vassal_income = 0.15
+	vassal_forcelimit_bonus = 0.20
+	liberty_desire_from_subject_development = 0.05
+}
+###
+xsm_subject_centralization_L_overlord_1 = {
+	potential = {
+		num_of_subjects = 1
+		any_subject_country = {
+			has_country_modifier = xsm_subject_centralization_L
+		}
+	}
+	trigger = {
+		calc_true_if = {
+			all_subject_country = {
+				has_country_modifier = xsm_subject_centralization_L
+			}
+			amount = 1
+		}
+	}
+	yearly_corruption = 0.02
+	vassal_income = -0.05
+	vassal_forcelimit_bonus = -0.1
+	liberty_desire_from_subject_development = -0.05
+}
+
+xsm_subject_centralization_L_overlord_2 = {
+	potential = {
+		num_of_subjects = 3
+		any_subject_country = {
+			has_country_modifier = xsm_subject_centralization_L
+		}
+	}
+	trigger = {
+		calc_true_if = {
+			all_subject_country = {
+				has_country_modifier = xsm_subject_centralization_L
+			}
+			amount = 3
+		}
+	}
+	yearly_corruption = 0.02
+	vassal_income = -0.1
+	vassal_forcelimit_bonus = -0.15
+	liberty_desire_from_subject_development = -0.05
+}
+
+xsm_subject_centralization_L_overlord_3 = {
+	potential = {
+		num_of_subjects = 5
+		any_subject_country = {
+			has_country_modifier = xsm_subject_centralization_L
+		}
+	}
+	trigger = {
+		calc_true_if = {
+			all_subject_country = {
+				has_country_modifier = xsm_subject_centralization_L
+			}
+			amount = 5
+		}
+	}
+	yearly_corruption = 0.02
+	vassal_income = -0.15
+	vassal_forcelimit_bonus = -0.20
+	liberty_desire_from_subject_development = -0.05
+}
+
+xsm_subject_centralization_VL_overlord_1 = {
+	potential = {
+		num_of_subjects = 1
+		any_subject_country = {
+			has_country_modifier = xsm_subject_centralization_VL
+		}
+	}
+	trigger = {
+		calc_true_if = {
+			all_subject_country = {
+				has_country_modifier = xsm_subject_centralization_VL
+			}
+			amount = 1
+		}
+	}
+	liberty_desire_from_subject_development = -0.05
+	yearly_corruption = 0.02
+	vassal_income = -0.1
+	vassal_forcelimit_bonus = -0.2
+}
+
+xsm_subject_centralization_VL_overlord_2 = {
+	potential = {
+		num_of_subjects = 3
+		any_subject_country = {
+			has_country_modifier = xsm_subject_centralization_VL
+		}
+	}
+	trigger = {
+		calc_true_if = {
+			all_subject_country = {
+				has_country_modifier = xsm_subject_centralization_VL
+			}
+			amount = 3
+		}
+	}
+	liberty_desire_from_subject_development = -0.1
+	yearly_corruption = 0.02
+	vassal_income = -0.15
+	vassal_forcelimit_bonus = -0.25
+}
+
+xsm_subject_centralization_VL_overlord_3 = {
+	potential = {
+		num_of_subjects = 5
+		any_subject_country = {
+			has_country_modifier = xsm_subject_centralization_VL
+		}
+	}
+	trigger = {
+		calc_true_if = {
+			all_subject_country = {
+				has_country_modifier = xsm_subject_centralization_VL
+			}
+			amount = 5
+		}
+	}
+	liberty_desire_from_subject_development = -0.15
+	yearly_corruption = 0.02
+	vassal_income = -0.2
+	vassal_forcelimit_bonus = -0.3
+}

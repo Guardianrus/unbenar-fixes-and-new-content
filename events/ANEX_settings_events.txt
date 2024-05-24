@@ -1,0 +1,696 @@
+namespace = ANEX_setting_event
+
+
+
+# country_event = {
+# 	id = ANEX_setting_event.2
+# 	title = ANEX_setting_event.2.t
+# 	desc = ANEX_setting_event.2.d
+# 	picture = WESTERNISATION_eventPicture
+
+
+# 	trigger = {
+# 		NOT = {
+# 			has_country_flag = torar_pussy
+# 		}
+# 	}
+
+# 	option = {
+# 		name = ANEX_setting_event.2.a
+# 		country_event = {
+# 			id = ANEX_setting_event.3
+# 			days = 1
+
+# 		}
+# 		set_country_flag = torar_pussy
+# 		ai_chance = {
+# 			factor = 500
+# 		}
+# 	}
+# 	option = {
+# 		name = ANEX_setting_event.2.b
+# 		set_country_flag = torar_pussy
+# 		country_event = {
+# 			id = ANEX_setting_event.4
+# 			days = 1
+# 		}
+# 	}
+# }
+
+# country_event = {
+# 	id = ANEX_setting_event.3
+# 	title = ANEX_setting_event.3.t
+# 	desc = ANEX_setting_event.3.d
+# 	picture = WESTERNISATION_eventPicture
+
+
+# 	is_triggered_only =yes
+
+
+# 	option = {
+# 		name = ANEX_setting_event.3.a
+# 		add_treasury = 500
+# 	}
+# }
+
+# country_event = {
+# 	id = ANEX_setting_event.4
+# 	title = ANEX_setting_event.4.t
+# 	desc = ANEX_setting_event.4.d
+# 	picture = WESTERNISATION_eventPicture
+
+
+# 	is_triggered_only =yes
+
+
+# 	option = {
+# 		name = ANEX_setting_event.4.a
+# 		add_corruption = 10
+# 		add_treasury = 1000
+
+# 	}
+# }
+
+# country_event = {
+# 	id = ANEX_setting_event.5
+# 	title = ANEX_setting_event.1.t
+# 	desc = ANEX_setting_event.1.d
+
+
+# is_triggered_only = yes
+
+# 	immediate = {
+# 		every_province = {
+# 			if = {
+# 				limit = {
+# 					trade_goods = fish
+# 					NOT = {
+# 						owned_by = A43
+# 					}
+# 				}
+# 				random_list = {
+# 					9 = { }
+# 					1 = {
+# 						change_trade_goods = seafood
+# 					}
+
+# 				}
+
+# 			}
+# 		}
+# 	}
+# 	option = {
+# 		name = ANEX_setting_event.5.a
+# 	}
+# }
+
+# country_event = {
+# 	id = ANEX_setting_event.6
+# 	title = ANEX_setting_event.1.t
+# 	desc = ANEX_setting_event.1.d
+
+
+# 	trigger = {
+
+# 	}
+# 	fire_only_once = yes
+
+# 	immediate = {
+# 		every_province = {
+# 			limit = {
+# 				is_city = yes
+# 			}
+# 			if = {
+# 				limit = {
+# 					OR = {
+# 						province_id = 17
+# 						province_id = 558
+# 						province_id = 661
+# 						province_id = 667
+# 						province_id = 685
+# 						province_id = 739
+# 						province_id = 912
+# 						province_id = 2305
+# 						province_id = 2478
+# 						province_id = 2648
+# 						province_id = 2838
+# 						province_id = 4301
+# 						province_id = 4314
+# 						province_id = 4434
+# 						province_id = 4519
+# 						province_id = 4630
+# 						province_id = 4848
+# 						province_id = 4901
+# 						province_id = 4974
+# 						province_id = 4976
+# 						province_id = 5364
+# 					}
+# 				}
+# 				change_trade_goods = zinc
+# 			}
+# 			if = {
+# 				limit = {
+# 					OR = {
+# 						province_id = 187
+# 						province_id = 189
+# 						province_id = 306
+# 						province_id = 335
+# 						province_id = 356
+# 						province_id = 911
+# 						province_id = 973
+# 						province_id = 2772
+# 						province_id = 4123
+# 						province_id = 4341
+# 						province_id = 4538
+# 						province_id = 4754
+# 						province_id = 4782
+# 						province_id = 4972
+# 						province_id = 5224
+# 						province_id = 5250
+# 						province_id = 5300
+# 						province_id = 5322
+# 					}
+# 				}
+# 				change_trade_goods = lead
+# 			}
+# 			if = {
+# 				limit = {
+# 					OR = {
+# 						province_id = 100
+# 						province_id = 277
+# 						province_id = 377
+# 						province_id = 393
+# 						province_id = 397
+# 						province_id = 733
+# 						province_id = 4247
+# 						province_id = 4352
+# 						province_id = 4439
+# 						province_id = 4580
+# 						province_id = 4783
+# 						province_id = 4909
+# 						province_id = 4941
+# 						province_id = 5020
+# 					}
+# 				}
+# 				change_trade_goods = tin
+# 			}
+# 			if = {
+# 				limit = {
+# 					OR = {
+# 						province_id = 28
+# 						province_id = 160
+# 						province_id = 196
+# 						province_id = 222
+# 						province_id = 254
+# 						province_id = 292
+# 						province_id = 299
+# 						province_id = 383
+# 						province_id = 401
+# 						province_id = 423
+# 						province_id = 715
+# 						province_id = 2472
+# 						province_id = 2494
+# 						province_id = 2530
+# 						province_id = 4353
+# 						province_id = 4787
+# 						province_id = 4793
+# 						province_id = 4840
+# 						province_id = 4852
+# 						province_id = 4950
+# 						province_id = 4956
+# 					}
+# 				}
+# 				change_trade_goods = brass
+# 			}
+# 			if = {
+# 				limit = {
+# 					has_terrain = woods
+# 					has_terrain = forest
+# 					# OR = {
+# 					# 	province_id = 76
+# 					# 	province_id = 117
+# 					# 	province_id = 206
+# 					# 	province_id = 210
+# 					# 	province_id = 225
+# 					# 	province_id = 248
+# 					# 	province_id = 257
+# 					# 	province_id = 273
+# 					# 	province_id = 278
+# 					# 	province_id = 352
+# 					# 	province_id = 420
+# 					# 	province_id = 422
+# 					# 	province_id = 429
+# 					# 	province_id = 434
+# 					# 	province_id = 440
+# 					# 	province_id = 701
+# 					# 	province_id = 713
+# 					# 	province_id = 738
+# 					# 	province_id = 754
+# 					# 	province_id = 867
+# 					# 	province_id = 872
+# 					# 	province_id = 967
+# 					# 	province_id = 986
+# 					# 	province_id = 1044
+# 					# 	province_id = 1126
+# 					# 	province_id = 1143
+# 					# 	province_id = 2049
+# 					# 	province_id = 4622
+# 					# 	province_id = 4824
+# 					# 	province_id = 4939
+# 					# 	province_id = 5021
+# 					# 	province_id = 5234
+# 					# 	province_id = 5243
+# 					# 	province_id = 5345
+# 					# 	province_id = 5362
+# 					# }
+# 				}
+# 				random_list = {
+# 					8 = { }
+# 					1 = {
+# 						change_trade_goods = lumber
+# 					}
+# 				}
+# 			}
+# 			if = {
+# 				limit = {
+# 					OR = {
+# 						province_id = 1
+# 						province_id = 89
+# 						province_id = 106
+# 						province_id = 251
+# 						province_id = 835
+# 						province_id = 953
+# 						province_id = 994
+# 						province_id = 2724
+# 						province_id = 4601
+# 						province_id = 4709
+# 						province_id = 4752
+# 						province_id = 4878
+# 						province_id = 5283
+# 						province_id = 5292
+# 						province_id = 5359
+# 						province_id = 5363
+# 					}
+# 				}
+# 				change_trade_goods = seafood
+# 			}
+# 			if = {
+# 				limit = {
+# 					OR = {
+# 						province_id = 4555
+# 						province_id = 4559
+# 						province_id = 4558
+# 						province_id = 4590
+# 						province_id = 4595
+# 						province_id = 4602
+# 						province_id = 4603
+# 						province_id = 4606
+# 						province_id = 4694
+# 						province_id = 4707
+# 						province_id = 4710
+# 						province_id = 4718
+# 						province_id = 4726
+# 						province_id = 4728
+# 						province_id = 4738
+# 						province_id = 4739
+# 						province_id = 4788
+# 						province_id = 4791
+# 						province_id = 4795
+# 						province_id = 4796
+# 						province_id = 4817
+# 						province_id = 4822
+# 						province_id = 4829
+# 						province_id = 4830
+# 						province_id = 4841
+# 						province_id = 4850
+# 						province_id = 4867
+# 						province_id = 4879
+# 						province_id = 4882
+# 						province_id = 4931
+# 						province_id = 4936
+# 						province_id = 4955
+# 						province_id = 4965
+# 						province_id = 4971
+# 						province_id = 4972
+# 						province_id = 4974
+# 						province_id = 4978
+# 						province_id = 4985
+# 						province_id = 6137
+# 					}
+# 				}
+# 				change_trade_goods = rice
+# 			}
+# 			if = {
+# 				limit = {
+# 					OR = {
+# 						province_id = 2011
+# 						province_id = 2012
+# 						province_id = 2012
+# 						province_id = 2004
+# 					}
+# 				}
+# 				change_trade_goods = saffron
+# 			}
+# 			if = {
+# 				limit = {
+# 					OR = {
+# 						province_id = 4400
+# 						province_id = 582
+# 						province_id = 533
+# 						province_id = 5280
+# 						province_id = 5247
+# 						province_id = 2681
+# 						province_id = 2716
+# 						province_id = 14
+# 					}
+# 				}
+# 				change_trade_goods = pearls
+# 			}
+# 			if = {
+# 				limit = {
+# 					OR = {
+# 						province_id = 995
+# 						province_id = 249
+# 						province_id = 328
+# 						province_id = 510
+
+# 					}
+# 				}
+# 				change_trade_goods = silver
+# 				add_province_modifier = {
+# 					name = silver_debuff
+# 					duration = -1
+# 				}
+# 			}
+
+# 			if = {
+# 				limit ={
+# 					NOT = {
+# 						OR = {
+# 							superregion = escann_superregion
+# 							region = alenic_reach_region
+# 							region = gerudian_coast_region
+# 							superregion = bulwar_superregion
+# 							region = businor_region
+# 							region = akan_region
+# 							region = damescrown_region
+# 							region = west_dameshead_region
+# 							region = east_dameshead_region
+# 							region = the_borders_region
+# 							region = west_forbidden_plains_region
+# 							region = east_forbidden_plains_region
+# 							region = north_salahad_region
+# 							region = esmaria_region
+# 						}
+# 					}
+# 					has_port = yes
+# 					trade_goods = fish
+# 				}
+# 				random_list = {
+# 					5 = {
+
+# 					}
+# 					1 = {
+# 						change_trade_goods = whaling
+# 					}
+# 				}
+# 			}
+# 			if = {
+# 				limit ={
+# 					OR = {
+# 						superregion = rahen_superregion
+# 						superregion = south_haless_superregion
+# 					}
+# 					trade_goods = livestock
+# 				}
+# 				random_list = {
+# 					4 = {
+
+# 					}
+# 					1 = {
+# 						change_trade_goods = elephants
+# 					}
+# 				}
+# 			}
+# 			if = {
+# 				limit ={
+# 					OR = {
+# 						superregion = bulwar_superregion
+# 					}
+# 					OR = {
+# 						has_terrain = drylands
+# 						has_terrain = grasslands
+# 						has_terrain = farmlands
+# 					}
+# 				}
+# 				random_list = {
+# 					4 = {
+
+# 					}
+# 					1 = {
+# 						change_trade_goods = dates
+# 					}
+# 				}
+# 			}
+# 			if = {
+# 				limit ={
+# 					OR = {
+# 						region = east_dameshead_region
+# 						region = esmaria_region
+# 						region = lencenor_region
+# 						region = west_dameshead_region
+# 						region = businor_region
+# 						has_climate = tropical
+# 					}
+# 					OR = {
+# 						trade_goods = rice
+# 						trade_goods = grain
+# 					}
+# 				}
+# 				random_list = {
+# 					7 = {
+
+# 					}
+# 					1 = {
+# 						change_trade_goods = citrus
+# 					}
+# 				}
+# 			}
+# 		}
+
+# 	}
+# 	option = {
+# 		name = ANEX_setting_event.1.a
+# 	}
+# }
+
+
+# country_event = {
+# 	id = ANEX_setting_event.7
+# 	title = ANEX_setting_event.1.t
+# 	desc = ANEX_setting_event.1.d
+
+# 	hidden = yes
+
+# 	trigger = {
+# 		was_player = yes
+# 		OR = {
+# 			NOT = {
+# 				check_variable = {
+# 					which = copper
+# 					value = 1
+# 				}
+# 			}
+# 			NOT = {
+# 				check_variable = {
+# 					which = copper_used
+# 					value = 1
+# 				}
+# 			}
+# 				check_variable = {
+# 					which = copper_total
+# 					value = 1
+# 				}
+# 			NOT = {
+# 				check_variable = {
+# 					which = tin
+# 					value = 1
+# 				}
+# 			}
+# 				check_variable = {
+# 					which = tin_used
+# 					value = 1
+# 				}
+# 			NOT = {
+# 				check_variable = {
+# 					which = tin_total
+# 					value = 1
+# 				}
+# 			}
+# 			NOT = {
+# 				check_variable = {
+# 					which = iron
+# 					value = 1
+# 				}
+# 			}
+# 			NOT = {
+# 				check_variable = {
+# 					which = iron_used
+# 					value = 1
+# 				}
+# 			}
+# 			NOT = {
+# 				check_variable = {
+# 					which = iron_total
+# 					value = 1
+# 				}
+# 			}
+# 			NOT = {
+# 				check_variable = {
+# 					which = lead
+# 					value = 1
+# 				}
+# 			}
+# 			NOT = {
+# 				check_variable = {
+# 					which = lead_used
+# 					value = 1
+# 				}
+# 			}
+# 			NOT = {
+# 				check_variable = {
+# 					which = lead_total
+# 					value = 1
+# 				}
+# 			}
+# 			NOT = {
+# 				check_variable = {
+# 					which = zinc
+# 					value = 1
+# 				}
+# 			}
+# 			NOT = {
+# 				check_variable = {
+# 					which = zinc_used
+# 					value = 1
+# 				}
+# 			}
+# 			NOT = {
+# 				check_variable = {
+# 					which = zinc_total
+# 					value = 1
+# 				}
+# 			}
+# 			NOT = {
+# 				check_variable = {
+# 					which = glass
+# 					value = 1
+# 				}
+# 			}
+# 			NOT = {
+# 				check_variable = {
+# 					which = glass_used
+# 					value = 1
+# 				}
+# 			}
+# 			NOT = {
+# 				check_variable = {
+# 					which = glass_total
+# 					value = 1
+# 				}
+# 			}
+# 		}
+# 	}
+
+# 	immediate = {
+# 		if = {
+# 			limit = {
+# 				NOT = {
+
+# 				}
+# 			}
+# 		}
+# 	}
+
+
+# 	option = {
+# 		name = ANEX_setting_event.1.a
+# 	}
+# }
+
+
+# country_event = {
+# 	id = ANEX_setting_event.7
+# 	title = ANEX_setting_event.1.t
+# 	desc = ANEX_setting_event.1.d
+
+# 	hidden = yes
+# 	is_triggered_only = yes
+# 	immediate = {
+# 		every_province = {
+# 			if = {
+# 				limit ={
+# 					NOT = {
+# 						OR = {
+# 							has_terrain = desert
+# 							has_terrain = glacier
+# 							has_climate = arctic
+# 							has_terrain = cavern
+# 							has_terrain = dwarven_hold
+# 							has_terrain = dwarven_hold_surface
+# 							has_terrain = dwarven_road
+# 							has_terrain = coastal_desert
+# 							has_terrain = city_terrain
+# 						}
+# 					}
+# 					OR = {
+# 						trade_goods = grain
+# 						trade_goods = wine
+# 						trade_goods = wool
+
+
+# 					}
+# 				}
+# 				random_list = {
+# 					15 = {
+
+# 					}
+# 					1 = {
+# 						change_trade_goods = apiculture
+# 					}
+# 				}
+# 			}
+# 			if = {
+# 				limit ={
+# 					OR = {
+# 						region = east_dameshead_region
+# 						region = esmaria_region
+# 						region = lencenor_region
+# 						region = west_dameshead_region
+# 						region = businor_region
+# 						has_climate = tropical
+# 					}
+# 					OR = {
+# 						trade_goods = rice
+# 						trade_goods = grain
+# 						trade_goods = wool
+# 					}
+# 				}
+# 				random_list = {
+# 					7 = {
+
+# 					}
+# 					1 = {
+# 						change_trade_goods = citrus
+# 					}
+# 				}
+# 			}
+# 		}
+
+# 	}
+
+
+# 	option = {
+# 		name = ANEX_setting_event.1.a
+# 	}
+# }

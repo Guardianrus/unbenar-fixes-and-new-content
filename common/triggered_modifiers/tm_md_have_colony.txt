@@ -1,0 +1,25 @@
+tm_md_have_colony = {
+	potential = {
+		current_age = age_of_absolutism
+	}
+	trigger = {
+		OR = {
+			# st_md_have_colony = yes
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 30
+				OR = {
+					continent = north_america
+					continent = south_america
+				}
+				owner_is_colonial_nation = yes
+			}
+			num_of_owned_provinces_with = {
+				value = 20
+				is_overseas = yes
+			}
+			num_of_strong_trade_companies = 2
+		}
+	}
+	global_trade_power = 0.02
+	trade_efficiency = 0.02
+}

@@ -1,0 +1,18 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_DA_Runeforged_fort"	
+		texturefile = "gfx//interface//buildings//DA_Runeforged_fort_image.dds"
+	}
+	spriteType = {
+		name = "GFX_DA_Hehogrim_Runeforged_fort"	
+		texturefile = "gfx//interface//buildings//DA_Hehogrim_Runeforged_fort_image.dds"
+	}
+	spriteType = {
+		name = "GFX_DA_Runeforged_Amldihr_fort"	
+		texturefile = "gfx//interface//buildings//DA_Runeforged_Amldihr_fort_image.dds"
+	}
+	spriteType = {
+		name = "GFX_DA_Reinforced_capital"	
+		texturefile = "gfx//interface//buildings//DA_Reinforced_capital_image.dds"
+	}
+}

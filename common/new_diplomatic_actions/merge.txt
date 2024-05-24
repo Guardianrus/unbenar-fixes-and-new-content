@@ -1,0 +1,53 @@
+
+merge_colony =  {
+
+    category = influence
+    require_acceptance = no
+    is_visible = {
+        overlord_of = FROM
+        FROM = {
+            OR = {
+				is_subject_of_type = colony
+				is_subject_of_type = crown_colony
+				is_subject_of_type = private_enterprise
+				is_subject_of_type = self_governing_colony
+			}
+        }
+    }
+
+    is_allowed = {
+        hidden_trigger = {
+            overlord_of = FROM
+            FROM = {
+                OR = {
+					is_subject_of_type = colony
+					is_subject_of_type = crown_colony
+					is_subject_of_type = private_enterprise
+					is_subject_of_type = self_governing_colony
+				}
+            }
+        }
+
+        is_at_war = no
+
+        FROM = {
+            is_at_war = no
+        }
+    }
+
+    on_accept = {
+		FROM = {
+			every_owned_province = {
+				kill_units = {
+					who = owner
+				}
+			}
+		}
+		inherit = FROM
+    }
+
+    ai_will_do = {
+        always = no
+    }
+
+}

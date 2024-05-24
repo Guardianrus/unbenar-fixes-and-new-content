@@ -1,0 +1,4 @@
+improved_train_efficiency = {
+  local_friendly_movement_speed = 0.1
+  local_hostile_movement_speed = 0.1
+}

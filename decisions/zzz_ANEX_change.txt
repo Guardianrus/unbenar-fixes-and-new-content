@@ -1,0 +1,29 @@
+country_decisions = {
+	hre_unify = {
+		major = yes
+		potential = {
+			is_emperor = yes
+			has_country_flag = unify_HRE
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		allow = {
+			NOT = {
+				any_province = {
+					is_part_of_hre = yes
+					NOT = {
+						owned_by = ROOT
+					}
+				}
+			}			
+		}
+		effect = {
+			log = "start fort for ai [GetDate] for country [Root.GetName]"
+
+			country_event = {
+				id = 9075
+			}
+		}
+	}
+}

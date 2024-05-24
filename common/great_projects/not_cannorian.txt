@@ -1,0 +1,386 @@
+####################
+#Not Cannorian
+####################
+
+
+
+
+
+
+
+atlantis = {
+	start = 1083
+	date = -5000.01.01
+	time = {
+		months = 0
+	}
+	build_cost = 0
+	can_be_moved = no
+	move_days_per_unit_distance = 1
+	starting_tier = 0
+	type = monument
+
+	build_trigger = {
+		#anyone		
+	}
+	on_built = {
+		
+	}
+	on_destroyed = {
+		
+	}
+	can_use_modifiers_trigger = { 
+		owner = { culture_group = elven } 
+	}
+
+	can_upgrade_trigger = { 
+		owner = { culture_group = elven } 
+	}
+	
+	keep_trigger = { 
+		owner = { culture_group = elven } 
+	}
+	
+	tier_0 = {
+		upgrade_time = {
+			months = 0
+		}
+		cost_to_upgrade = {
+			factor = 0
+		}
+		province_modifiers = {
+			
+		}
+		area_modifier = {
+		}
+		country_modifiers = {
+			
+		}
+		on_upgraded = {
+			
+		}
+	}
+
+	tier_1 = {
+		upgrade_time = {
+			months = 120
+		}
+		cost_to_upgrade = {
+			factor = 1500
+		}
+		province_modifiers = {
+			
+		}
+		area_modifier = {
+			
+		}
+		country_modifiers = {
+			administrative_efficiency = 0.025
+			naval_forcelimit_modifier = 0.1
+		}
+		on_upgraded = {
+			
+		}
+	}
+
+	tier_2 = {
+		upgrade_time = {
+			months = 240
+		}
+		cost_to_upgrade = {
+			factor = 4500
+		}
+		province_modifiers = {
+			
+		}
+		area_modifier = {
+			
+		}
+		country_modifiers = {
+			administrative_efficiency = 0.05
+			naval_forcelimit_modifier = 0.15
+			free_policy = 1
+		}
+		on_upgraded = {
+			
+		}
+	}
+
+	tier_3 = {
+		upgrade_time = {
+			months = 480
+		}
+		cost_to_upgrade = {
+			factor = 9000
+		}
+		province_modifiers = {
+			
+		}
+		area_modifier = {
+			
+		}
+		country_modifiers = {
+			administrative_efficiency = 0.05
+			naval_forcelimit_modifier = 0.25
+			free_policy = 1
+		}
+		on_upgraded = {
+			
+		}
+	}
+}
+
+nimscodd_academy = {
+	start = 169
+	date = 428.01.01
+	time = {
+		months = 0
+	}
+	build_cost = 0
+	can_be_moved = no
+	move_days_per_unit_distance = 1
+	starting_tier = 1
+	type = monument
+
+	
+	build_trigger = {
+		#anyone	
+	}
+	on_built = {
+		
+	}
+	on_destroyed = {
+		
+	}
+	can_use_modifiers_trigger = {
+		owner = { culture_group = gnomish }
+	}
+	can_upgrade_trigger = {
+		owner = { culture_group = gnomish }
+		}
+	keep_trigger = {
+		
+	}
+
+
+	tier_0 = {
+		
+		upgrade_time = {
+			months = 0
+		}
+		cost_to_upgrade = {
+			factor = 0
+		}
+		province_modifiers = {
+			
+		}
+		area_modifier = {
+			
+		}
+		country_modifiers = {
+			
+		}
+		on_upgraded = {
+			
+		}
+	}
+
+	tier_1 = {
+		upgrade_time = {
+			months = 120
+		}
+		cost_to_upgrade = {
+			factor = 1500
+		}
+		province_modifiers = {
+			
+		}
+		area_modifier = {
+			
+		}
+		country_modifiers = {
+			technology_cost = -0.05
+			idea_cost = -0.05
+		}
+		on_upgraded = {
+			
+		}
+	}
+
+	tier_2 = {
+		upgrade_time = {
+			months = 240
+		}
+		cost_to_upgrade = {
+			factor = 4500
+		}
+		province_modifiers = {
+			
+		}
+		area_modifier = {
+			
+		}
+		country_modifiers = {
+			technology_cost = -0.10
+			idea_cost = -0.10
+		}
+		on_upgraded = {
+			
+		}
+	}
+
+	tier_3 = {
+		upgrade_time = {
+			months = 480
+		}
+		cost_to_upgrade = {
+			factor = 9000
+		}
+		province_modifiers = {
+			
+		}
+		area_modifier = {
+			
+		}
+		country_modifiers = {
+			technology_cost = -0.15
+			idea_cost = -0.20
+		}
+		on_upgraded = {
+			tooltip = { owner = { mission_reward_artifice_points_5 = yes } }
+			tooltip = { owner = { mission_reward_artifice_points_5 = yes } }
+			tooltip = { owner = { mission_reward_artifice_points_5 = yes } }
+		}
+	}
+}
+
+#Dasmati Halls of Reverence (Dasmatus)
+dasmati_halls_of_reverence = {
+	start = 5668
+	date = 01.01.01
+	time = {
+		months = 0
+	}
+	build_cost = 0
+	can_be_moved = no
+	move_days_per_unit_distance = 1
+	starting_tier = 1
+	type = monument
+	build_trigger = {	
+	}
+	on_built = {
+	}
+	on_destroyed = {	
+	}
+	can_use_modifiers_trigger = {
+		AND = {
+			has_owner_religion = yes
+			province_is_or_accepts_culture = yes
+			OR = {
+				culture_group = bulwari
+				religion = old_bulwari_sun_cult
+			}
+		}
+	}	
+	can_upgrade_trigger = {
+		AND = {
+			has_owner_religion = yes
+			province_is_or_accepts_culture = yes
+			OR = {
+				culture_group = bulwari
+				religion = old_bulwari_sun_cult
+			}
+		}
+	}	
+	keep_trigger = {
+	}
+	tier_0 = {
+		upgrade_time = {
+			months = 0
+		}
+		cost_to_upgrade = {
+			factor = 0
+		}
+		province_modifiers = {
+		}
+		area_modifier = {
+		}
+		country_modifiers = {	
+		}
+		on_upgraded = {
+		}
+	}
+	tier_1 = {
+		upgrade_time = {
+			months = 120
+		}
+		cost_to_upgrade = {
+			factor = 1000
+		}
+		province_modifiers = {
+			local_defensiveness = 0.1
+		}
+		area_modifier = {
+		}
+		country_modifiers = {
+			garrison_size = 0.05
+			legitimacy = 0.25
+			republican_tradition = 0.1
+			devotion = 0.25
+			horde_unity = 0.25
+			meritocracy = 0.25
+		}
+		on_upgraded = {
+		}
+	}
+	tier_2 = {
+		upgrade_time = {
+			months = 240
+		}
+		cost_to_upgrade = {
+			factor = 2500
+		}
+		province_modifiers = {
+			local_defensiveness = 0.2
+			local_sailors_modifier = 0.25
+		}
+		area_modifier = {
+		}
+		country_modifiers = {
+			garrison_size = 0.1
+			legitimacy = 0.5
+			republican_tradition = 0.2
+			devotion = 0.5
+			horde_unity = 0.5
+			meritocracy = 0.5
+			establish_order_cost = -0.1
+		}
+		on_upgraded = {
+		}
+	}
+	tier_3 = {
+		upgrade_time = {
+			months = 480
+		}
+		cost_to_upgrade = {
+			factor = 5000
+		}
+		province_modifiers = {
+			local_defensiveness = 0.33
+			local_sailors_modifier = 0.5
+		}
+		area_modifier = {
+		}
+		country_modifiers = {
+			garrison_size = 0.2
+			legitimacy = 1
+			republican_tradition = 0.3
+			devotion = 1
+			horde_unity = 1
+			meritocracy = 1
+			establish_order_cost = -0.2
+		}
+		on_upgraded = {
+		}
+	}
+}

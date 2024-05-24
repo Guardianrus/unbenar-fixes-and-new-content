@@ -1,0 +1,1689 @@
+namespace = ANEX_event
+
+######################################################################
+###### Содержание фортов (Кастомный цены на форты )
+######################################################################
+province_event = {
+	id = ANEX_event.1
+	title = ANEX_event.1.t
+	desc = ANEX_setting_event.1.d
+	picture = WESTERNISATION_eventPicture
+
+	hidden = yes
+
+	trigger = {
+		has_building = fort_16th
+		garrison = 1
+		NOT = {
+			has_province_modifier = fort_balancer_1
+		}
+	}
+
+	immediate = {
+		log = "start ANEX_event.1 [GetDate] for province [Root.GetName]"
+		add_province_modifier = {
+			name = fort_balancer_1
+			duration = -1
+		}
+	}
+
+	after = {
+		log = "end ANEX_event.1 [GetDate] for province [Root.GetName]"
+	}
+
+	option = {
+		name = ANEX_setting_event.1.a
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+province_event = {
+	id = ANEX_event.2
+	title = ANEX_event.2.t
+	desc = ANEX_setting_event.1.d
+	picture = WESTERNISATION_eventPicture
+
+	hidden = yes
+
+	trigger = {
+		has_building = fort_17th
+		garrison = 1
+		NOT = {
+			has_province_modifier = fort_balancer_2
+		}
+	}
+
+	immediate = {
+		log = "start ANEX_event.2 [GetDate] for province [Root.GetName]"
+		add_province_modifier = {
+			name = fort_balancer_2
+			duration = -1
+		}
+		log = "end ANEX_event.2 [GetDate] for province [Root.GetName]"
+	}
+
+	option = {
+		name = ANEX_setting_event.1.a
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+province_event = {
+	id = ANEX_event.3
+	title = ANEX_event.3.t
+	desc = ANEX_setting_event.1.d
+	picture = WESTERNISATION_eventPicture
+
+	hidden = yes
+
+	trigger = {
+		has_building = fort_18th
+		garrison = 1
+		NOT = {
+			has_province_modifier = fort_balancer_3
+		}
+	}
+
+	immediate = {
+		log = "start ANEX_event.3 [GetDate] for province [Root.GetName]"
+		add_province_modifier = {
+			name = fort_balancer_3
+			duration = -1
+		}
+		log = "end ANEX_event.3 [GetDate] for province [Root.GetName]"
+	}
+
+	option = {
+		name = ANEX_setting_event.1.a
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+province_event = {
+	id = ANEX_event.4
+	title = ANEX_event.4.t
+	desc = ANEX_setting_event.1.d
+	picture = WESTERNISATION_eventPicture
+
+	hidden = yes
+
+	trigger = {
+		OR = {
+			AND = {
+				has_province_modifier = fort_balancer_1
+				OR = {
+					NOT = {
+						garrison = 1
+					}
+					NOT = {
+						has_building = fort_16th
+					}
+				}				
+			}
+			AND = {
+				has_province_modifier = fort_balancer_2
+				OR = {
+					NOT = {
+						garrison = 1
+					}
+					NOT = {
+						has_building = fort_17th
+					}
+				}				
+			}
+			AND = {
+				has_province_modifier = fort_balancer_3
+				OR = {
+					NOT = {
+						garrison = 1
+					}
+					NOT = {
+						has_building = fort_18th
+					}
+				}				
+			}
+		}
+	}
+
+	immediate = {
+		log = "start ANEX_event.4 [GetDate] for province [Root.GetName]"
+		remove_province_modifier = fort_balancer_1
+		remove_province_modifier = fort_balancer_2
+		remove_province_modifier = fort_balancer_3
+		log = "end ANEX_event.4 [GetDate] for province [Root.GetName]"
+	}
+
+	option = {
+		name = ANEX_setting_event.1.a
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+
+######################################################################
+###### Модификаторы Идей
+######################################################################
+
+
+province_event = {
+	id = ANEX_event.33
+	title = ANEX_event.33.t
+	desc = ANEX_setting_event.1.d
+	picture = WESTERNISATION_eventPicture
+
+	hidden = yes
+
+	trigger = {
+		has_terrain = ancient_forest
+		is_fey_attuned_culture = yes
+		NOT = { has_province_modifier = harmonization_deepwood }
+		owner = {
+			AND = {
+				num_of_owned_provinces_with = {
+					superregion = deepwoods_superregion
+					value = 44
+				}
+			}
+			OR ={
+				primary_culture = emerald_orc
+				primary_culture = wood_elf
+			}
+		}
+	}
+
+	immediate = {
+		log = "start ANEX_event.33 [GetDate] for province [Root.GetName]"
+		if = {
+			limit  = {
+				has_terrain = ancient_forest
+				is_fey_attuned_culture = yes
+			}
+			add_province_modifier = {
+				name = harmonization_deepwood
+				duration = -1
+			}
+		}
+		log = "end ANEX_event.33 [GetDate] for province [Root.GetName]"
+	}
+
+	option = {
+		name = ANEX_setting_event.1.a
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+# country_event = {
+# 	id = ANEX_event.34
+# 	title = ANEX_setting_event.1.t
+# 	desc = ANEX_setting_event.1.d
+# 	picture = WESTERNISATION_eventPicture
+
+# 	is_triggered_only = yes
+
+# 	immediate = {
+# 	}
+
+# 	option = {
+# 		name = ANEX_setting_event.1.a
+# 		ai_chance = {
+# 			factor = 1
+# 			modifier = {
+# 				factor = 0
+# 				is_subject = yes
+# 			}
+# 			modifier = {
+# 				factor = 5
+# 				is_emperor = yes
+# 			}
+# 			modifier = {
+# 				factor = 2
+# 				personality = ai_diplomat
+# 			}
+
+# 			modifier = {
+# 				factor = 10
+# 				calc_true_if = {
+# 					num_of_subjects = 1
+# 					amount = 1
+# 				}
+# 			}
+
+# 			modifier = {
+# 				factor = 15
+# 				calc_true_if = {
+# 					num_of_subjects = 1
+# 					amount = 2
+# 				}
+# 			}
+
+# 			modifier = {
+# 				factor = 20
+# 				calc_true_if = {
+# 					num_of_subjects = 1
+# 					amount = 3
+# 				}
+# 			}
+
+# 			modifier = {
+# 				factor = 25
+# 				calc_true_if = {
+# 					num_of_subjects = 1
+# 					amount = 4
+# 				}
+# 			}
+
+# 			modifier = {
+# 				factor = 30
+# 				calc_true_if = {
+# 					num_of_subjects = 1
+# 					amount = 5
+# 				}
+# 			}
+
+# 			modifier = {
+# 				factor = 2
+# 				government = monarchy
+# 			}
+# 		}
+# 	}
+# 	option = {
+# 		name = ANEX_setting_event.1.b
+# 		ai_chance = {
+# 			factor = 1
+# 			modifier = {
+# 				factor = 0
+# 				any_owned_province = {
+# 					NOT = {
+# 						has_empty_adjacent_province = yes
+# 					}
+# 				}
+# 			}
+# 			modifier = {
+# 				factor = 10
+# 				OR = {
+# 					has_idea_group = exploration_ideas
+# 					is_colonial_nation = yes
+# 				}
+# 			}
+# 			modifier = {
+# 				factor = 10	#Boys who wanna settle the Dreadmire and in the future, the Serpentspine
+# 				OR = {
+# 					any_owned_province = {
+# 						OR = {
+# 							region = ourdia_region
+# 							region = dostanor_region
+# 							region = the_borders_region
+# 						}
+# 						has_empty_adjacent_province = yes
+# 					}
+# 				}
+# 			}
+# 			modifier = {
+# 				factor = 0	#Serpentspine starts alread get colonists
+# 				capital_scope = {
+# 					continent = serpentspine
+# 				}
+# 				OR = {
+# 					has_reform = adventurer_reform
+# 					has_reform = dwarovar_warband
+# 					has_reform = dwarovar_squatter
+# 				}
+# 			}
+# 			modifier = {
+# 				factor = 10	#Serpentspine starts alread get colonists
+# 				capital_scope = {
+# 					continent = serpentspine
+# 				}
+# 				NOT = { is_year = 1500 }
+# 				OR = {
+# 					has_reform = dwarven_clan_reform
+# 				}
+# 			}
+# 			modifier = {
+# 				factor = 5
+# 				OR = {
+# 					tag = A11 #Pearlsedge
+# 					tag = A02 #Deranne
+# 					tag = A21 #Venail
+# 					tag = A47 #Eborthil
+# 					tag = A05 #Reveria
+# 					tag = U08 #Ekha
+# 					tag = A19 #Portnamm
+# 					tag = A06 #Nimscodd
+# 					tag = H66 #Jaherian
+# 					tag = H67 #Rezankand
+# 					tag = A79 #Gnomish Hierarchy
+# 				}
+# 			}
+
+# 			modifier = {
+# 				factor = 5
+
+# 				has_country_modifier = lake_federation_member
+# 			}
+# 			modifier = {
+# 				factor = 100
+# 				OR = {
+# 					tag = Z18
+# 					tag = Z50
+# 				}
+# 				adm_tech = 7
+# 				any_owned_province = {
+# 					has_empty_adjacent_province = yes
+# 				}
+# 			}
+# 			modifier = {
+# 				factor = 100
+# 				NOT = { has_dlc = "Third Rome" } # Has siberian frontier instead
+# 				OR = {
+# 					technology_group = tech_orcish
+# 					technology_group = tech_goblin
+# 				}
+# 				any_owned_province = {
+# 					has_empty_adjacent_province = yes
+# 				}
+# 			}
+# 			modifier = {
+# 				factor = 0
+# 				NOT = { has_idea_group = exploration_ideas }
+# 				NOT = { is_colonial_nation = yes }
+# 				NOT = {
+# 					any_owned_province = {
+# 						has_empty_adjacent_province = yes
+# 					}
+# 				}
+# 			}
+# 			modifier = {
+# 				factor = 0.1
+# 				NOT = {
+# 					technology_group = tech_cannorian
+# 					technology_group = tech_gerudian
+# 					technology_group = tech_gnomish
+# 					technology_group = tech_salahadesi
+# 					technology_group = tech_elven
+# 					technology_group = tech_bulwari
+# 					technology_group = tech_islanders
+# 				}
+# 			}
+# 		}
+# 	}
+# }
+
+######################################################################
+###### Установка монстров
+######################################################################
+
+country_event = {
+	id = ANEX_event.40
+	title = ANEX_event.40.t
+	desc = ANEX_setting_event.1.d
+	picture = TRADE_GOODS_PLANTATION_GOODS_IN_WAREHOUSE_eventPicture
+
+	hidden = yes
+
+	trigger = {
+		has_country_modifier = monstrous_nation
+		has_country_flag = no_longer_monstrous
+	}
+
+	immediate = {
+		log = "start ANEX_event.40 [GetDate] for country [Root.GetName]"
+		remove_country_modifier = monstrous_nation
+		log = "end ANEX_event.40 [GetDate] for country [Root.GetName]"
+	}
+
+	option = {
+		name = ANEX_setting_event.1.a
+
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+country_event = {
+	id = ANEX_event.41
+	title = ANEX_event.41.t
+	desc = ANEX_setting_event.1.d
+	picture = TRADE_GOODS_PLANTATION_GOODS_IN_WAREHOUSE_eventPicture
+
+	hidden = yes
+
+	trigger = {
+		NOT = {
+			has_country_flag = monstrous_setup
+		}
+		monstrous_culture = yes
+	}
+
+	immediate = {
+		log = "start ANEX_event.41 [GetDate] for country [Root.GetName]"
+		set_country_flag = monstrous_setup
+		add_country_modifier = {
+			name = monstrous_nation
+			duration = -1
+		}
+		log = "end ANEX_event.41 [GetDate] for country [Root.GetName]"
+	}
+
+	option = {
+		name = ANEX_setting_event.1.a
+
+		ai_chance = {
+			factor = 1
+		}
+	}
+
+}
+
+######################################################################
+###### Ивенты смены культур и динамического дева
+######################################################################
+
+# country_event = {
+# 	id = ANEX_event.997
+# 	title = ANEX_event.997.t
+# 	desc = ANEX_setting_event.1.d
+
+# 	hidden = yes
+
+# 	trigger = {
+# 		owns =  1
+# 		OR = {
+# 			had_global_flag = {
+# 				flag = ANEX_dinamic_culture
+# 				days = 300
+# 			}
+# 			NOT = {
+# 				has_global_flag = ANEX_dinamic_culture
+# 			}
+# 		}
+
+# 	}
+
+# 	mean_time_to_happen = {
+# 		days = 65
+# 	}
+
+# 	immediate = {
+# 		log = "start ANEX_event.997 [GetDate] for country [Root.GetName]"
+# 		clr_global_flag = ANEX_dinamic_culture
+# 		set_global_flag = ANEX_dinamic_culture
+# 		every_province = {
+# 			if = {
+# 				limit = {
+# 					is_city = yes
+# 					is_island = no
+# 					island = no
+# 				}
+# 				# if = { #Anti anclav
+# 				# 	limit = {
+# 				# 		NOT = {
+# 				# 			calc_true_if = {
+# 				# 				any_neighbor_province = {
+# 				# 					culture = PREV
+# 				# 				}
+# 				# 				amount = 1
+# 				# 			}
+# 				# 		}
+# 				# 		NOT = { is_capital = yes }
+# 				# 		NOT = {
+# 				# 			OR = {
+# 				# 				has_owner_culture = yes
+# 				# 				has_owner_accepted_culture = yes
+# 				# 			}
+# 				# 		}
+# 				# 	}
+# 				# 	random_neighbor_province = {
+# 				# 		PREV = { change_culture = PREV }
+# 				# 		PREV = { change_religion = PREV }
+# 				# 	}
+# 				# }
+# 				if = {
+# 					limit = {
+# 						devastation = 50
+# 						NOT = { development = 5 }
+# 					}
+# 					random_neighbor_province = {
+# 						limit = {
+# 							always = yes
+# 						}
+# 						save_event_target_as = DVE_culture_dummy
+# 					}
+# 					change_culture = event_target:DVE_culture_dummy
+# 					change_religion = event_target:DVE_culture_dummy
+# 					add_base_tax = 1
+# 					add_base_manpower = 1
+# 					add_base_production = 1
+# 					add_devastation = -25
+# 				}
+# 				# if = {
+# 				# 	limit = {
+# 				# 		has_global_flag = DVE_Culture_Dynamic_Medium
+# 				# 		devastation = 5
+# 				# 		NOT = { development = 7 }
+# 				# 	}
+# 				# 	random_neighbor_province = {
+# 				# 		limit = {
+# 				# 			NOT = { devastation = 1 }
+# 				# 		}
+# 				# 		save_event_target_as = DVE_culture_dummy
+# 				# 	}
+# 				# 	change_culture = event_target:DVE_culture_dummy
+# 				# 	change_religion = event_target:DVE_culture_dummy
+# 				# 	add_base_tax = 1
+# 				# 	add_base_manpower = 1
+# 				# 	add_base_production = 1
+# 				# 	add_devastation = -10
+# 				# }
+# 				# if = {
+# 				# 	limit = {
+# 				# 		has_global_flag = DVE_Culture_Dynamic_Large
+# 				# 		devastation = 1
+# 				# 		NOT = { development = 10 }
+# 				# 	}
+# 				# 	if = {
+# 				# 		limit = {
+# 				# 			any_neighbor_province = {
+# 				# 				NOT = {	culture = ROOT }
+# 				# 			}
+# 				# 		}
+# 				# 		random_neighbor_province = {
+# 				# 			limit = {
+# 				# 				NOT = { culture = ROOT }
+# 				# 			}
+# 				# 			save_event_target_as = DVE_culture_dummy
+# 				# 		}
+# 				# 	}
+# 				# 	else_if = {
+# 				# 		limit = {
+# 				# 			any_neighbor_province = {
+# 				# 				is_city = yes
+# 				# 			}
+# 				# 		}
+# 				# 		random_neighbor_province = {
+# 				# 			save_event_target_as = DVE_culture_dummy
+# 				# 		}
+# 				# 	}
+# 				# 	else = {
+# 				# 		owner = {
+# 				# 			random_owned_province = {
+# 				# 				has_owner_culture = yes
+# 				# 			}
+# 				# 		}
+# 				# 		save_event_target_as = DVE_culture_dummy
+# 				# 	}
+# 				# 	change_culture = event_target:DVE_culture_dummy
+# 				# 	change_religion = event_target:DVE_culture_dummy
+# 				# 	add_base_tax = 1
+# 				# 	add_base_manpower = 1
+# 				# 	add_base_production = 1
+# 				# 	add_devastation = -100
+# 				# }
+# 				if = {
+# 					limit = {
+# 						NOT = { has_owner_culture = yes }
+# 					}
+# 					# if = {
+# 					# 	limit = {
+# 					# 		has_global_flag = DVE_Culture_Active_Small
+# 					# 	}
+# 					# 	random_list = {
+# 					# 		995 = { } #4/1000 1/125 takes 250 years for a province to convert to its neighbour, and 1/1000, takes 1000 years to form an enclave
+# 					# 		4 = {
+# 					# 			random_neighbor_province = {
+# 					# 				limit = {
+# 					# 					owned_by = PREV
+# 					# 					OR = {
+# 					# 						has_owner_culture = yes
+# 					# 						has_owner_accepted_culture = yes
+# 					# 					}
+# 					# 				}
+# 					# 				PREV = { change_culture = PREV }
+# 					# 			}
+# 					# 		}
+# 					# 		1 = {
+# 					# 			random_province = {
+# 					# 				limit = {
+# 					# 					owned_by = PREV
+# 					# 					is_capital = yes
+# 					# 				}
+# 					# 				PREV = { change_culture = PREV }
+# 					# 			}
+# 					# 		}
+# 					# 	}
+# 					# }
+# 					if = {
+# 						limit = {
+# 							NOT = {
+# 								owner = {
+# 									has_idea = assimilation1
+# 								}
+# 							}
+# 						}
+# 						random_list = {
+# 							495 = { } #4/500 1/125 takes 250 years for a province to convert to its neighbour, and 1/500, takes 500 years to form an enclave
+# 							4 = {
+# 								random_neighbor_province = {
+# 									limit = {
+# 										owned_by = PREV
+# 										OR = {
+# 											has_owner_culture = yes
+# 											has_owner_accepted_culture = yes
+# 										}
+# 									}
+# 									PREV = { change_culture = PREV }
+# 								}
+# 							}
+# 							1 = {
+# 								random_province = {
+# 									limit = {
+# 										owned_by = PREV
+# 									}
+# 									PREV = { change_culture = PREV }
+# 								}
+# 							}
+# 						}
+# 					}
+# 					else_if = {
+# 						limit = {
+# 							ROOT = {
+# 								has_idea = assimilation1
+# 							}
+# 						}
+# 						random_list = {
+# 							245 = { } #4/250 1/62 takes 62 years for a province to convert to its neighbour, and 1/250, takes 250 years to form an enclave
+# 							4 = {
+# 								random_neighbor_province = {
+# 									limit = {
+# 										owned_by = PREV
+# 										OR = {
+# 											has_owner_culture = yes
+# 											has_owner_accepted_culture = yes
+# 										}
+# 									}
+# 									PREV = { change_culture = PREV }
+# 								}
+# 							}
+# 							1 = {
+# 								random_province = {
+# 									limit = {
+# 										owned_by = PREV
+# 										is_capital = yes
+# 									}
+# 									PREV = { change_culture = PREV }
+# 								}
+# 							}
+# 						}
+# 					}
+# 				}
+# 			}
+# 		}
+# 		log = "end ANEX_event.997 [GetDate] for country [Root.GetName]"
+# 	}
+
+
+# 	option = {
+# 		name = ANEX_setting_event.1.a
+# 		ai_chance = {
+# 			factor = 1
+# 		}
+# 	}
+# }
+
+
+province_event = {
+	id = ANEX_event.998
+	title = ANEX_event.998.t
+	desc = ANEX_setting_event.1.d
+	picture = WESTERNISATION_eventPicture
+
+	hidden = yes
+
+	trigger = {
+		is_city = yes
+		OR = {
+			NOT = {
+				development = 20
+				has_province_flag = development_booom
+			}
+			had_province_flag = {
+				flag = development_booom
+				days = 3650
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 365
+	}
+
+	immediate = {
+		log = "start ANEX_event.998 [GetDate] for province [Root.GetName]"
+		clr_province_flag = development_booom
+		set_province_flag = development_booom
+		if = {
+			limit = {
+				is_city = yes
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_local_modifier_value = {
+							which = local_development_cost
+							value = -0.09
+						}
+					}
+					NOT = {	development = 20 }
+					NOT = { devastation = 1 }
+					is_territory = no
+				}
+				random_list = { #once every 30 years
+					9 = { }
+					1 = { add_base_manpower = 1
+						owner = {
+							change_variable = {
+								which = dev_b_mil
+								value =1
+							}
+							change_variable = {
+								which = total_b_dev
+								value = 1
+							}
+						}
+					}
+					1 = { add_base_tax = 1
+						owner ={
+							change_variable = {
+								which = dev_b_tax
+								value =1
+							}
+							change_variable = {
+								which = total_b_dev
+								value = 1
+							}
+						}
+					}
+					1 = { add_base_production = 1
+						owner = {
+							change_variable = {
+								which = dev_b_prod
+								value =1
+							}
+							change_variable = {
+								which = total_b_dev
+								value = 1
+							}
+						}
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_local_modifier_value = {
+							which = local_development_cost
+							value = -0.19
+						}
+					}
+					NOT = {	development = 20 }
+					NOT = { devastation = 1 }
+					is_territory = no
+				}
+				random_list = { #once every 25 years
+					5 = { }
+					1 = { add_base_manpower = 1
+						owner = {
+							change_variable = {
+								which = dev_b_mil
+								value =1
+							}
+							change_variable = {
+								which = total_b_dev
+								value = 1
+							}
+						}
+					}
+					1 = { add_base_tax = 1
+						owner ={
+							change_variable = {
+								which = dev_b_tax
+								value =1
+							}
+							change_variable = {
+								which = total_b_dev
+								value = 1
+							}
+						}
+					}
+					1 = { add_base_production = 1
+						owner = {
+							change_variable = {
+								which = dev_b_prod
+								value =1
+							}
+							change_variable = {
+								which = total_b_dev
+								value = 1
+							}
+						}
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_local_modifier_value = {
+							which = local_development_cost
+							value = -0.29
+						}
+					}
+					NOT = { development = 20 }
+					NOT = { devastation = 1 }
+					is_territory = no
+				}
+				random_list = { #once every 20 years
+					3 = { }
+					1 = { add_base_manpower = 1
+						owner = {
+							change_variable = {
+								which = dev_b_mil
+								value =1
+							}
+							change_variable = {
+								which = total_b_dev
+								value = 1
+							}
+						}
+					}
+					1 = { add_base_tax = 1
+						owner ={
+							change_variable = {
+								which = dev_b_tax
+								value =1
+							}
+							change_variable = {
+								which = total_b_dev
+								value = 1
+							}
+						}
+					}
+					1 = { add_base_production = 1
+						owner = {
+							change_variable = {
+								which = dev_b_prod
+								value =1
+							}
+							change_variable = {
+								which = total_b_dev
+								value = 1
+							}
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					OR = {
+						has_province_modifier = passing_river_estuary_modifier
+						province_has_center_of_trade_of_level = 1
+						province_has_center_of_trade_of_level = 2
+						province_has_center_of_trade_of_level = 3
+					}
+					is_territory = no
+					NOT = { devastation = 1 }
+					NOT = { development = 30 }
+				}
+				random_list = { #once every 15 years
+					2 = { }
+					1 = { add_base_manpower = 1
+						owner = {
+							change_variable = {
+								which = dev_b_mil
+								value =1
+							}
+							change_variable = {
+								which = total_b_dev
+								value = 1
+							}
+						}
+					}
+					1 = { add_base_tax = 1
+						owner ={
+							change_variable = {
+								which = dev_b_tax
+								value =1
+							}
+							change_variable = {
+								which = total_b_dev
+								value = 1
+							}
+						}
+					}
+					1 = { add_base_production = 1
+						owner = {
+							change_variable = {
+								which = dev_b_prod
+								value =1
+							}
+							change_variable = {
+								which = total_b_dev
+								value = 1
+							}
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					is_prosperous = yes
+					NOT = { devastation = 1 }
+				}
+				random_list = { #once every 60 years
+					18 = { }
+					1 = { add_base_manpower = 1
+						owner = {
+							change_variable = {
+								which = dev_b_mil
+								value =1
+							}
+							change_variable = {
+								which = total_b_dev
+								value = 1
+							}
+						}
+					}
+					1 = { add_base_tax = 1
+						owner ={
+							change_variable = {
+								which = dev_b_tax
+								value =1
+							}
+							change_variable = {
+								which = total_b_dev
+								value = 1
+							}
+						}
+					}
+					1 = { add_base_production = 1
+						owner = {
+							change_variable = {
+								which = dev_b_prod
+								value =1
+							}
+							change_variable = {
+								which = total_b_dev
+								value = 1
+							}
+						}
+					}
+				}
+			}
+			if = { #-15% GDC
+				limit = {
+					owner = {
+						NOT = {
+							has_global_modifier_value = {
+								which = development_cost
+								value = -0.14
+							}
+						}
+					}
+					NOT = { development = 20 }
+					NOT = { devastation = 1 }
+					is_territory = no
+				}
+				random_list = { #once every 60 years
+					18 = { }
+					1 = { add_base_manpower = 1
+						owner = {
+							change_variable = {
+								which = dev_b_mil
+								value =1
+							}
+							change_variable = {
+								which = total_b_dev
+								value = 1
+							}
+						}
+					}
+					1 = { add_base_tax = 1
+						owner ={
+							change_variable = {
+								which = dev_b_tax
+								value =1
+							}
+							change_variable = {
+								which = total_b_dev
+								value = 1
+							}
+						}
+					}
+					1 = { add_base_production = 1
+						owner = {
+							change_variable = {
+								which = dev_b_prod
+								value =1
+							}
+							change_variable = {
+								which = total_b_dev
+								value = 1
+							}
+						}
+					}
+				}
+			}
+			else_if = { #-30% GDC
+				limit = {
+					owner = {
+						NOT = {
+							has_global_modifier_value = {
+								which = development_cost
+								value = -0.29
+							}
+						}
+					}
+					NOT = { devastation = 1 }
+					NOT = { development = 20 }
+					is_territory = no
+				}
+				random_list = { #once every 50 years
+					15 = { } #3/120 1/40
+					1 = { add_base_manpower = 1
+						owner = {
+							change_variable = {
+								which = dev_b_mil
+								value =1
+							}
+							change_variable = {
+								which = total_b_dev
+								value = 1
+							}
+						}
+					}
+					1 = { add_base_tax = 1
+						owner ={
+							change_variable = {
+								which = dev_b_tax
+								value =1
+							}
+							change_variable = {
+								which = total_b_dev
+								value = 1
+							}
+						}
+					}
+					1 = { add_base_production = 1
+						owner = {
+							change_variable = {
+								which = dev_b_prod
+								value =1
+							}
+							change_variable = {
+								which = total_b_dev
+								value = 1
+							}
+						}
+					}
+				}
+			}
+			else_if = { #-50% GDC
+				limit = {
+					owner = {
+						NOT = {
+							has_global_modifier_value = {
+								which = development_cost
+								value = -0.49
+							}
+						}
+					}
+					NOT = { devastation = 1 }
+					NOT = { development = 20 }
+					is_territory = no
+				}
+				random_list = { #once every 40 years
+					12 = { }
+					1 = { add_base_manpower = 1
+						owner = {
+							change_variable = {
+								which = dev_b_mil
+								value =1
+							}
+							change_variable = {
+								which = total_b_dev
+								value = 1
+							}
+						}
+					}
+					1 = { add_base_tax = 1
+						owner ={
+							change_variable = {
+								which = dev_b_tax
+								value =1
+							}
+							change_variable = {
+								which = total_b_dev
+								value = 1
+							}
+						}
+					}
+					1 = { add_base_production = 1
+						owner = {
+							change_variable = {
+								which = dev_b_prod
+								value =1
+							}
+							change_variable = {
+								which = total_b_dev
+								value = 1
+							}
+						}
+					}
+				}
+			}
+		}
+		log = "end ANEX_event.998 [GetDate] for province [Root.GetName]"
+	}
+
+	option = {
+		name = ANEX_setting_event.1.a
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+province_event = {
+	id = ANEX_event.999
+	title = ANEX_event.999.t
+	desc = ANEX_setting_event.1.d
+	picture = WESTERNISATION_eventPicture
+
+	hidden = yes
+
+	trigger = {
+		# owner = { NOT = { tag = H16 } }
+		devastation = 10
+		owner = {
+			NOT = { tag = H16 }
+			has_native_migration_government = no
+			has_native_migration_government_except_adventurer = no
+		}
+		# OR = {
+		# 	NOT = {
+		# 		has_province_flag = burn_them_all
+		# 	}
+		# 	had_province_flag = {
+		# 		flag = burn_them_all
+		# 		days = 30
+		# 	}
+		# }
+	}
+
+	mean_time_to_happen = {
+		days = 365
+		modifier = {
+			factor = 0.50
+			devastation = 75
+		}
+		modifier = {
+			factor = 1.1
+			has_influencing_fort = yes
+		}
+		modifier = {
+			factor = 1.3
+			has_fort_building_trigger = yes
+		}
+		modifier = {
+			factor = 2
+			OR = {
+				has_building = temple
+				has_building = cathedral
+			}	
+		}
+		modifier = {
+			factor = 0.50
+			devastation = 50
+		}
+		modifier = {
+			factor = 0.50
+			devastation = 25
+		}
+		modifier = {
+			factor = 0.9
+			development = 10
+		}
+		modifier = {
+			factor = 0.9
+			development = 15
+		}
+		modifier = {
+			factor = 0.9
+			development = 20
+		}
+		modifier = {
+			factor = 0.9
+			development = 25
+		}
+		modifier = {
+			factor = 0.9
+			development = 30
+		}
+		modifier = {
+			factor = 0.9
+			development = 50
+		}
+		modifier = {
+			factor = 0.9
+			development = 75
+		}
+		modifier = {
+			factor = 0.9
+			development = 100
+		}
+		modifier = {
+			factor = 0.9
+			development = 125
+		}
+		modifier = {
+			factor = 0.9
+			development = 150
+		}
+	}
+	
+
+	immediate = {
+		log = "start ANEX_event.999 [GetDate] for province [Root.GetName]"
+		# clr_province_flag = burn_them_all
+		# set_province_flag = burn_them_all
+		# random_list = { #once every 2 years
+		# 	3 = { }
+		# 	1 = {
+		# 		add_base_manpower = -1
+		# 		add_devastation = -5
+		# 		owner = {
+		# 			change_variable = {
+		# 				which = lose_b_mil
+		# 				value =1
+		# 			}
+		# 			change_variable = {
+		# 				which = total_lose_b
+		# 				value = 1
+		# 			}
+		# 		}
+		# 	}
+		# 	1 = {
+		# 		add_base_tax = -1
+		# 		add_devastation = -5
+		# 		owner ={
+		# 			change_variable = {
+		# 				which = lose_b_tax
+		# 				value =1
+		# 			}
+		# 			change_variable = {
+		# 				which = total_lose_b
+		# 				value = 1
+		# 			}
+		# 		}
+		# 	}
+		# 	1 = {
+		# 		add_base_production = -1
+		# 		add_devastation = -5
+		# 		owner = {
+		# 			change_variable = {
+		# 				which = lose_b_prod
+		# 				value =1
+		# 			}
+		# 			change_variable = {
+		# 				which = total_lose_b
+		# 				value = 1
+		# 			}
+		# 		}
+		# 	}
+		# }
+		# if = { #бонус 10 дева
+		# 	limit = {
+		# 		development = 10
+		# 	}
+		# 	random_list = { #once every 2 years
+		# 		3 = { }
+		# 		1 = {
+		# 			add_base_manpower = -1
+		# 			add_devastation = -5
+		# 			owner = {
+		# 				change_variable = {
+		# 					which = lose_b_mil
+		# 					value =1
+		# 				}
+		# 				change_variable = {
+		# 					which = total_lose_b
+		# 					value = 1
+		# 				}
+		# 			}
+		# 		}
+		# 		1 = {
+		# 			add_base_tax = -1
+		# 			add_devastation = -5
+		# 			owner ={
+		# 				change_variable = {
+		# 					which = lose_b_tax
+		# 					value =1
+		# 				}
+		# 				change_variable = {
+		# 					which = total_lose_b
+		# 					value = 1
+		# 				}
+		# 			}
+		# 		}
+		# 		1 = {
+		# 			add_base_production = -1
+		# 			add_devastation = -5
+		# 			owner = {
+		# 				change_variable = {
+		# 					which = lose_b_prod
+		# 					value =1
+		# 				}
+		# 				change_variable = {
+		# 					which = total_lose_b
+		# 					value = 1
+		# 				}
+		# 			}
+		# 		}
+		# 	}
+		# }
+		# if = { #бонус 20 дева
+		# 	limit = {
+		# 		development = 20
+		# 	}
+		# 	random_list = { #once every 2 years
+		# 		3 = { }
+		# 		1 = {add_base_manpower = -1
+		# 			add_devastation = -5
+		# 			owner = {
+		# 				change_variable = {
+		# 					which = lose_b_mil
+		# 					value =1
+		# 				}
+		# 				change_variable = {
+		# 					which = total_lose_b
+		# 					value = 1
+		# 				}
+		# 			}
+		# 		}
+		# 		1 = {
+		# 			add_base_tax = -1
+		# 			add_devastation = -5
+		# 			owner ={
+		# 				change_variable = {
+		# 					which = lose_b_tax
+		# 					value =1
+		# 				}
+		# 				change_variable = {
+		# 					which = total_lose_b
+		# 					value = 1
+		# 				}
+		# 			}
+		# 		}
+		# 		1 = {
+		# 			add_base_production = -1
+		# 			add_devastation = -5
+		# 			owner = {
+		# 				change_variable = {
+		# 					which = lose_b_prod
+		# 					value =1
+		# 				}
+		# 				change_variable = {
+		# 					which = total_lose_b
+		# 					value = 1
+		# 				}
+		# 			}
+		# 		}
+		# 	}
+		# }
+		# if = { #удвоение потерь если больше 25 девостейшена
+		# 	limit = {
+		# 		devastation = 25
+		# 	}
+		# 	random_list = { #once every 2 years
+		# 		3 = { }
+		# 		1 = {
+		# 			add_base_manpower = -1
+		# 			add_devastation = -5
+		# 			owner = {
+		# 				change_variable = {
+		# 					which = lose_b_mil
+		# 					value =1
+		# 				}
+		# 				change_variable = {
+		# 					which = total_lose_b
+		# 					value = 1
+		# 				}
+		# 			}
+		# 		}
+		# 		1 = {
+		# 			add_base_tax = -1
+		# 			add_devastation = -5
+		# 			owner ={
+		# 				change_variable = {
+		# 					which = lose_b_tax
+		# 					value = 1
+		# 				}
+		# 				change_variable = {
+		# 					which = total_lose_b
+		# 					value = 1
+		# 				}
+		# 			}
+		# 		}
+		# 		1 = {
+		# 			add_base_production = -1
+		# 			add_devastation = -5
+		# 			owner = {
+		# 				change_variable = {
+		# 					which = lose_b_prod
+		# 					value =1
+		# 				}
+		# 				change_variable = {
+		# 					which = total_lose_b
+		# 					value = 1
+		# 				}
+		# 			}
+		# 		}
+		# 	}
+		# }
+		# if = { #бонус на 10 дева
+		# 	limit = {
+		# 		devastation = 25
+		# 		development = 10
+		# 	}
+		# 	random_list = { #once every 2 years
+		# 		3 = { }
+		# 		1 = {
+		# 			add_base_manpower = -1
+		# 			add_devastation = -5
+		# 			owner = {
+		# 				change_variable = {
+		# 					which = lose_b_mil
+		# 					value =1
+		# 				}
+		# 				change_variable = {
+		# 					which = total_lose_b
+		# 					value = 1
+		# 				}
+		# 			}
+		# 		}
+		# 		1 = {
+		# 			add_base_tax = -1
+		# 			add_devastation = -5
+		# 			owner ={
+		# 				change_variable = {
+		# 					which = lose_b_tax
+		# 					value =1
+		# 				}
+		# 				change_variable = {
+		# 					which = total_lose_b
+		# 					value = 1
+		# 				}
+		# 			}
+		# 		}
+		# 		1 = {
+		# 			add_base_production = -1
+		# 			add_devastation = -5
+		# 			owner = {
+		# 				change_variable = {
+		# 					which = lose_b_prod
+		# 					value =1
+		# 				}
+		# 				change_variable = {
+		# 					which = total_lose_b
+		# 					value = 1
+		# 				}
+		# 			}
+		# 		}
+		# 	}
+		# }
+		# if = { #бонус на 20 дева
+		# 	limit = {
+		# 		devastation = 25
+		# 		development = 20
+		# 	}
+		# 	random_list = { #once every 2 years
+		# 		3 = { }
+		# 		1 = {
+		# 			add_base_manpower = -1
+		# 			add_devastation = -5
+		# 			owner = {
+		# 				change_variable = {
+		# 					which = lose_b_mil
+		# 					value =1
+		# 				}
+		# 				change_variable = {
+		# 					which = total_lose_b
+		# 					value = 1
+		# 				}
+		# 			}
+		# 		}
+		# 		1 = {
+		# 			add_base_tax = -1
+		# 			add_devastation = -5
+		# 			owner ={
+		# 				change_variable = {
+		# 					which = lose_b_tax
+		# 					value =1
+		# 				}
+		# 				change_variable = {
+		# 					which = total_lose_b
+		# 					value = 1
+		# 				}
+		# 			}
+		# 		}
+		# 		1 = {
+		# 			add_base_production = -1
+		# 			add_devastation = -5
+		# 			owner = {
+		# 				change_variable = {
+		# 					which = lose_b_prod
+		# 					value =1
+		# 				}
+		# 				change_variable = {
+		# 					which = total_lose_b
+		# 					value = 1
+		# 				}
+		# 			}
+		# 		}
+		# 	}
+		# }
+	}
+
+	after = {
+		log = "end ANEX_event.999 [GetDate] for province [Root.GetName]"
+	}
+
+	option = {
+		name = ANEX_setting_event.1.a
+		ai_chance = {
+			factor = 1
+		}
+		trigger = {
+			NOT = {
+				has_province_flag = last_tax
+			}
+		}
+		add_base_tax = -1
+		add_devastation = -5
+		owner ={
+			change_variable = {
+				which = lose_b_tax
+				value =1
+			}
+			change_variable = {
+				which = total_lose_b
+				value = 1
+			}
+		}
+		set_province_flag = last_tax
+		clr_province_flag = last_mil
+		clr_province_flag = last_prod
+	}
+	option = {
+		name = ANEX_setting_event.1.a
+		ai_chance = {
+			factor = 1
+		}
+		trigger = {
+			NOT = {
+				has_province_flag = last_prod
+			}
+		}
+		add_base_production = -1
+		add_devastation = -5
+		owner = {
+			change_variable = {
+				which = lose_b_prod
+				value =1
+			}
+			change_variable = {
+				which = total_lose_b
+				value = 1
+			}
+		}
+		set_province_flag = last_prod
+		clr_province_flag = last_mil
+		clr_province_flag = last_tax
+	}
+	option = {
+		name = ANEX_setting_event.1.a
+		ai_chance = {
+			factor = 1
+		}
+		trigger = {
+			NOT = {
+				has_province_flag = last_mil
+			}
+		}
+		add_base_manpower = -1
+		add_devastation = -5
+		owner = {
+			change_variable = {
+				which = lose_b_mil
+				value =1
+			}
+			change_variable = {
+				which = total_lose_b
+				value = 1
+			}
+		}
+		set_province_flag = last_mil
+		clr_province_flag = last_prod
+		clr_province_flag = last_tax
+	}
+}

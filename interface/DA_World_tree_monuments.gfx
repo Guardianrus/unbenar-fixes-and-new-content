@@ -1,0 +1,22 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_great_project_The_World_Tree_Yggdrasil"	
+		texturefile = "gfx//interface//great_projects//great_project_The_World_Tree_Yggdrasil.dds"
+	}
+	spriteType = {
+		name = "GFX_great_project_World_tree_branch"	
+		texturefile = "gfx//interface//great_projects//great_project_World_tree_branch.dds"
+	}
+	spriteType = {
+		name = "GFX_great_project_World_tree_branch1"	
+		texturefile = "gfx//interface//great_projects//great_project_World_tree_branch1.dds"
+	}
+	spriteType = {
+		name = "GFX_great_project_World_tree_branch2"	
+		texturefile = "gfx//interface//great_projects//great_project_World_tree_branch2.dds"
+	}
+	spriteType = {
+		name = "GFX_great_project_World_tree_branch3"	
+		texturefile = "gfx//interface//great_projects//great_project_World_tree_branch3.dds"
+	}
+}

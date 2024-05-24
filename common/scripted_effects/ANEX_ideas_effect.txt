@@ -1,0 +1,154 @@
+clear_all_ideas = {
+	remove_idea_group = quantity_ideas
+	remove_idea_group = quality_ideas
+	remove_idea_group = offensive_ideas
+	remove_idea_group = innovativeness_ideas
+	# remove_idea_group = economic_ideas
+	# remove_idea_group = development_ideas0
+	remove_idea_group = expansion_ideas
+	remove_idea_group = administrative_ideas
+	remove_idea_group = humanist_ideas
+}
+
+clear_wrong_trigger_ideas = {
+	if = {
+		limit = {
+			AND = {
+				has_idea_group = quantity_ideas
+				has_idea_group = quality_ideas
+			}
+		}
+		random_list = {
+			4 = {remove_idea_group = quality_ideas}
+			1 = {remove_idea_group = quantity_ideas}
+		}
+		add_mil_power = 2800
+	}
+	# if = {
+	# 	limit = {
+	# 		AND = {
+	# 			has_idea_group = economic_ideas
+	# 			has_idea_group = development_ideas0
+	# 		}
+	# 	}
+	# 	random_list = {
+	# 		4 = {remove_idea_group = development_ideas0}
+	# 		1 = {remove_idea_group = economic_ideas}
+	# 	}
+	# 	add_adm_power = 2800
+	# }
+	if = {
+		limit = {
+			AND = {
+				has_idea_group = religious_ideas
+				idea_religion = yes
+			}
+		}
+		remove_idea_group = religious_ideas
+		add_adm_power = 2800
+	}
+	if = {
+		limit = {
+			AND = {
+				has_idea_group = humanist_ideas
+				has_idea_group = religious_ideas
+			}
+		}
+		random_list = {
+			4 = {remove_idea_group = humanist_ideas}
+			1 = {remove_idea_group = religious_ideas}
+		}
+		add_adm_power = 2800
+	}
+	if = {
+		limit = {
+			AND = {
+				has_idea_group = humanist_ideas
+				has_idea_group = religious_ideas
+			}
+		}
+		random_list = {
+			4 = {remove_idea_group = humanist_ideas}
+			1 = {remove_idea_group = religious_ideas}
+		}
+		add_adm_power = 2800
+	}
+	if = {
+		limit = {
+			AND = {
+				has_idea_group = zentra0
+				has_idea_group = dezentra0
+			}
+		}
+		random_list = {
+			4 = {remove_idea_group = dezentra0}
+			1 = {remove_idea_group = zentra0}
+		}
+		add_adm_power = 2800
+	}
+	if = {
+		limit = {
+			AND = {
+				has_idea_group = offensive_ideas
+				has_idea_group = defensive_ideas
+			}
+		}
+		random_list = {
+			1 = {remove_idea_group = defensive_ideas}
+			1 = {remove_idea_group = offensive_ideas}
+		}
+		add_mil_power = 2800
+	}
+	if = {
+		limit = {
+			AND = {
+				has_idea_group = standing_army_idea_groups
+				has_idea_group = conscription_ideas0
+			}
+		}
+		random_list = {
+			1 = {remove_idea_group = standing_army_idea_groups}
+			1 = {remove_idea_group = conscription_ideas0}
+		}
+		add_mil_power = 2800
+	}
+	if = {
+		limit = {
+			AND = {
+				has_idea_group = shock0
+				has_idea_group = fire0
+			}
+		}
+		random_list = {
+			4 = {remove_idea_group = shock0}
+			1 = {remove_idea_group = fire0}
+		}
+		add_mil_power = 2800
+	}
+	if = {
+		limit = {
+			AND = {
+				has_idea_group = cavalary_focus_idea
+				has_idea_group = infantry_focus_idea
+			}
+		}
+		random_list = {
+			4 = {remove_idea_group = cavalary_focus_idea}
+			1 = {remove_idea_group = infantry_focus_idea}
+		}
+		add_mil_power = 2800
+	}
+	if = {
+		limit = {
+			AND = {
+				has_idea_group = siege_idea
+				has_idea_group = fortress0
+			}
+		}
+		random_list = {
+			4 = {remove_idea_group = siege_idea}
+			1 = {remove_idea_group = fortress0}
+		}
+		add_mil_power = 2800
+	}
+}

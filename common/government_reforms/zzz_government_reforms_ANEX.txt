@@ -1,0 +1,1621 @@
+traditionalist_reform = {
+	icon = soldiers_4
+	allow_normal_conversion = yes
+	potential = {
+	}
+	modifiers = {
+		shock_damage = 0.05
+		cavalry_cost = -0.10
+		cav_to_inf_ratio = 0.10
+	}
+	#+10% Tribe Loyalty
+	ai = {
+		factor = 1
+	}
+}
+
+mercenary_corps_reform = {
+	icon = landsknecht
+	allow_normal_conversion = yes
+	effect = {
+		change_variable = {
+			which = Burgher_Influence
+			value = 1
+		}
+	}
+	removed_effect = {
+		change_variable = {
+			which = Burgher_Influence
+			value = -1
+		}
+	}
+
+	modifiers = {
+		mercenary_manpower = 0.25
+		reinforce_speed = 0.25
+		merc_maintenance_modifier = -0.25
+	}
+	custom_attributes = {
+		enables_foreign_worship = yes #10% Religious Unity if you employ mercenaries
+	}
+	ai = {
+		factor = 1
+	}
+}
+
+
+feudal_levies_reform = {
+	icon = "soldiers_2"
+	allow_normal_conversion = yes
+	effect = {
+		change_variable = {
+			which = Noble_Influence
+			value = 1
+		}
+	}
+	removed_effect = {
+		change_variable = {
+			which = Noble_Influence
+			value = -1
+		}
+	}
+	modifiers = {
+		war_taxes_cost_modifier = -1
+		nobles_influence_modifier = 0.05
+		vassal_forcelimit_bonus = 1
+	}
+	custom_attributes = {
+		enables_marcher_lords = yes #25% vassal force limit and manpower
+	}
+	ai = {
+		factor = 1
+	}
+}
+
+empowered_heavy_knights_reform = {
+	icon = mamluk_army
+	allow_normal_conversion = yes
+	effect = {
+		change_variable = {
+			which = Noble_Influence
+			value = 1
+		}
+	}
+	removed_effect = {
+		change_variable = {
+			which = Noble_Influence
+			value = -1
+		}
+	}
+	potential = {
+		check_variable = {
+			which = Noble_Influence
+			value = 2
+		}
+	}
+	trigger = {
+		check_variable = {
+			which = Noble_Influence
+			value = 2
+		}
+	}
+	modifiers = {
+		cavalry_power = 0.10
+		cavalry_cost = 0.05
+	}
+	custom_attributes = {
+		enables_noble_knights = yes #5% shock damage if you have aristocratic ideas.
+	}
+	ai = {
+		factor = 1
+	}
+}
+
+national_guard_reform = {
+	icon = national_guard
+	allow_normal_conversion = yes
+	effect = {
+		change_variable = {
+			which = Royal_Influence
+			value = 1
+		}
+	}
+	removed_effect = {
+		change_variable = {
+			which = Royal_Influence
+			value = -1
+		}
+	}
+	potential = {
+		NOT = { culture_group = latin }
+	}
+	modifiers = {
+		land_morale = 0.05
+		recover_army_morale_speed = 0.1
+	}
+	custom_attributes = {
+		enables_patriotism = yes #+25% Manpower in primary culture provinces
+	}
+	ai = {
+		factor = 1
+	}
+}
+
+empowered_mercenary_corps_reform = {
+	icon = "Teuton_2"
+	allow_normal_conversion = yes
+	effect = {
+		change_variable = {
+			which = Clergy_Influence
+			value = 1
+		}
+	}
+	removed_effect = {
+		change_variable = {
+			which = Clergy_Influence
+			value = -1
+		}
+	}
+	potential = {
+		check_variable = {
+			which = Clergy_Influence
+			value = 2
+		}
+	}
+	trigger = {
+		check_variable = {
+			which = Clergy_Influence
+			value = 2
+		}
+	}
+	modifiers = {
+		land_attrition = -0.1
+		reinforce_speed = 0.25
+		merc_maintenance_modifier = -0.25
+	}
+	custom_attributes = {
+		enables_crusader_order = yes #1% ICA per Tolerance
+	}
+	ai = {
+		factor = 1
+	}
+}
+
+professional_army_reform = {
+	icon = "soldiers"
+	allow_normal_conversion = yes
+	effect = {
+		change_variable = {
+			which = Royal_Influence
+			value = 1
+		}
+	}
+	removed_effect = {
+		change_variable = {
+			which = Royal_Influence
+			value = -1
+		}
+	}
+	potential = {}
+	modifiers = {
+		discipline = 0.05
+		mercenary_discipline = -0.10
+		land_maintenance_modifier = 0.05
+	}
+	custom_attributes = {
+		enables_general_guards = yes #+1.25 AP per General
+	}
+	ai = {
+		factor = 1
+		modifier = {
+			factor = 0
+			NOT = { has_idea_group = quantity_ideas }
+		}
+		modifier = {
+			factor = 10
+			has_idea_group = quantity_ideas
+		}
+	}
+}
+
+empowered_royal_guard_reform = {
+	icon = "hesse_jaegers"
+	allow_normal_conversion = yes
+	effect = {
+		change_variable = {
+			which = Royal_Influence
+			value = 1
+		}
+	}
+	removed_effect = {
+		change_variable = {
+			which = Royal_Influence
+			value = -1
+		}
+	}
+	potential = {
+		check_variable = {
+			which = Royal_Influence
+			value = 2
+		}
+	}
+	trigger = {
+		check_variable = {
+			which = Royal_Influence
+			value = 2
+		}
+	}
+	modifiers = {
+		land_forcelimit_modifier = -0.15
+		drill_gain_modifier = 0.25
+		infantry_power = 0.10
+	}
+	# custom_attributes = {
+		# enables_royal_army_garrisons = yes #+100 Base Manpower in Royal State provinces
+	# }
+	ai = {
+		factor = 10
+	}
+}
+
+
+imperial_circles_reform = {
+	icon = "imperial_army"
+	allow_normal_conversion = yes
+	effect = {
+		change_variable = {
+			which = Royal_Influence
+			value = 1
+		}
+	}
+	removed_effect = {
+		change_variable = {
+			which = Royal_Influence
+			value = -1
+		}
+	}
+	potential = {
+		is_part_of_hre = yes
+		NOT = { culture_group = latin }
+		NOT = { primary_culture = swiss }
+		# NOT = { tag = DTT }
+		# NOT = { tag = SIL }
+	}
+	trigger = {
+		is_part_of_hre = yes
+		total_development = 75
+	}
+	modifiers = {
+		land_forcelimit_modifier = 0.15
+		land_maintenance_modifier = -0.05
+	}
+	ai = {
+		factor = 10
+	}
+}
+
+#####################################################################
+
+
+strenghten_industry_reform = {
+	icon = economy_industry
+   allow_normal_conversion = yes
+   potential = {
+   }
+   modifiers = {
+	   global_tax_modifier = -0.10
+	   build_cost = -0.05
+	   global_trade_goods_size_modifier = 0.1
+   }
+   custom_attributes = {
+	   enables_industrialism = yes #+0.1 Goods produced in manufactory
+   }
+   ai = {
+	   factor = 1
+   }
+}
+
+mercantilism_reform = {
+	icon = economy_trade
+   allow_normal_conversion = yes
+   effect = {
+	   add_mercantilism = 5
+   }
+   modifiers = {
+	   production_efficiency = -0.10
+	   global_prov_trade_power_modifier = 0.15
+	   trade_steering = 0.20
+   }
+   custom_attributes = {
+	   enables_home_market = yes #1.5% Trade Efficiency per 10% Mercantilism
+   }
+   ai = {
+	   factor = 1
+   }
+}
+
+empowered_free_trade_reform = {
+	icon = empowered_free_trade
+   allow_normal_conversion = yes
+   effect = {
+	   add_mercantilism = -10
+   }
+   potential = {
+	   check_variable = {
+		   which = Burgher_Influence
+		   value = 3
+	   }
+   }
+   trigger = {
+	   check_variable = {
+		   which = Burgher_Influence
+		   value = 3
+	   }
+	   NOT = { mercantilism = 25 }
+   }
+   modifiers = {
+	   global_trade_power = -0.10
+	   global_trade_goods_size_modifier = 0.15
+	   merchants = 1
+   }
+   conditional = {
+	   allow = {
+		   has_dlc = "Res Publica"
+		   NOT = { has_dlc = "Mare Nostrum" }
+	   }
+	   can_use_trade_post = yes
+   }
+   ai = {
+	   factor = 1
+   }
+}
+
+noble_taxes_reform = {
+	icon = economy_tax
+   allow_normal_conversion = yes
+   potential = {
+   }
+   modifiers = {
+	   vassal_income = 0.25
+	   global_tax_modifier = 0.15
+	   min_autonomy_in_territories = -0.10
+   }
+   ai = {
+	   factor = 1
+   }
+}
+
+empowered_aristocratic_estates_reform = {
+   icon = empowered_aristocrat_estate
+   allow_normal_conversion = yes
+   potential = {
+	   check_variable = {
+		   which = Burgher_Influence
+		   value = 1
+	   }
+	   check_variable = {
+		   which = Noble_Influence
+		   value = 2
+	   }
+   }
+   trigger = {
+	   check_variable = {
+		   which = Burgher_Influence
+		   value = 1
+	   }
+	   check_variable = {
+		   which = Noble_Influence
+		   value = 2
+	   }
+   }
+   modifiers = {
+	   production_efficiency = 0.10
+	   global_manpower_modifier = 0.10
+   }
+   # custom_attributes = {
+	   # enables_rural_development = yes
+   # }#fixdis
+   ai = {
+	   factor = 10
+   }
+}
+
+empowered_monastic_centres_reform = {
+   icon = empowered_monastery
+   allow_normal_conversion = yes
+   potential = {
+	   check_variable = {
+		   which = Burgher_Influence
+		   value = 1
+	   }
+	   check_variable = {
+		   which = Clergy_Influence
+		   value = 2
+	   }
+   }
+   trigger = {
+	   check_variable = {
+		   which = Burgher_Influence
+		   value = 1
+	   }
+	   check_variable = {
+		   which = Clergy_Influence
+		   value = 2
+	   }
+   }
+   modifiers = {
+	   global_tax_modifier = 0.10
+	   global_trade_power = 0.10
+   }
+   # custom_attributes = {
+	   # enables_monastic_trade = yes
+   # }#fixdis
+   ai = {
+	   factor = 10
+   }
+}
+
+empowered_expand_corvee_reform = {
+   icon = empowered_corvee
+   allow_normal_conversion = yes
+   potential = {
+	   check_variable = {
+		   which = Noble_Influence
+		   value = 2
+	   }
+	   check_variable = {
+		   which = Clergy_Influence
+		   value = 1
+	   }
+   }
+   trigger = {
+	   check_variable = {
+		   which = Noble_Influence
+		   value = 2
+	   }
+	   check_variable = {
+		   which = Clergy_Influence
+		   value = 1
+	   }
+   }
+   modifiers = {
+	   defensiveness = 0.10
+	   global_trade_goods_size_modifier = 0.05
+	   global_manpower_modifier = 0.10
+   }
+   # custom_attributes = {
+	   # enables_corvee = yes #10% Manpower and Production Efficiency in Noble and Clergy Provinces
+   # }#fixdis
+   ai = {
+	   factor = 10
+   }
+   #-10% Burgher Loyalty, +10% Noble and Clergy Loyalty
+}
+
+empowered_enlarge_royal_estate_reform = {
+   icon = empowered_royal_estate
+   allow_normal_conversion = yes
+   potential = {
+	   check_variable = {
+		   which = Royal_Influence
+		   value = 2
+	   }
+   }
+   trigger = {
+	   check_variable = {
+		   which = Royal_Influence
+		   value = 2
+	   }
+   }
+   modifiers = {
+	   governing_capacity = 250
+   }
+   # custom_attributes = {
+	   # enables_royal_domain = yes #10% Tax and Manpower in royal estate provinces
+   # }#fixdis
+   ai = {
+	   factor = 10
+   }
+}
+
+empowered_royal_trading_company_reform = {
+   icon = "GE_trader"
+   allow_normal_conversion = yes
+   potential = {
+	   check_variable = {
+		   which = Royal_Influence
+		   value = 2
+	   }
+	   check_variable = {
+		   which = Burgher_Influence
+		   value = 2
+	   }
+	#    NOT = { has_reform = elective_monarchy_reform }
+   }
+   trigger = {
+	   check_variable = {
+		   which = Royal_Influence
+		   value = 2
+	   }
+	   check_variable = {
+		   which = Burgher_Influence
+		   value = 2
+	   }
+   }
+   modifiers = {
+	   trade_efficiency = 0.10
+	   trade_company_investment_cost = -0.25
+   }
+   ai = {
+	   factor = 10
+   }
+}
+
+# elective_monarchy_reform = {
+# 	icon = "ballot_box"
+# 	allow_normal_conversion = yes
+# 	valid_for_nation_designer = yes
+# 	nation_designer_cost = 10
+# 	election_on_death = yes
+# 	#has_term_election = yes
+# 	#duration = 100
+# 	potential = {
+# 		OR = {
+# 			have_had_reform = feudalism_reform
+# 			has_reform = feudalism_reform
+# 		}
+# 		NOT = { tag = POL }
+# 	}
+# 	modifiers = {
+# 		heir_chance = 1.0
+# 	}
+# 	custom_attributes = {
+# 		enables_elective_monarchy = yes
+# 	}
+# }
+
+arch_monarchy = {
+	icon = "king"
+	allow_normal_conversion = yes
+	valid_for_nation_designer = yes
+	nation_designer_cost = 10
+	can_form_trade_league = yes
+	lock_level_when_selected = yes
+	monarchy = yes
+	potential = {
+		has_idea = justiz2
+
+	}
+	trigger = {
+		always = yes
+	}
+	modifiers = {
+		diplomatic_reputation = 1
+		diplomatic_upkeep = 2
+		stability_cost_to_declare_war = 3
+		accept_vassalization_reasons = 10
+	}
+	custom_attributes = {
+		enables_blood_tax = yes #5% manpower per non-colonial subject
+	}
+	conditional = {
+		allow = { has_dlc = "Res Publica" }
+		is_elective = yes
+	}
+}
+
+margrave_reform = {
+	icon = march
+	allow_normal_conversion = yes
+	potential = {
+		is_part_of_hre = yes
+		NOT = { total_development = 200 }
+	}
+	trigger = {
+		is_part_of_hre = yes
+		NOT = { total_development = 100 }
+	}
+	valid_for_nation_designer = yes
+	nation_designer_cost = 10
+	modifiers = {
+		defensiveness = 0.10
+		global_manpower_modifier = 0.15
+		nobles_influence_modifier = 0.10
+	}
+}
+
+
+diplomatic_positions_reform = {
+	icon = noble_diplomat
+	allow_normal_conversion = yes
+	effect = {
+		change_variable = {
+			which = Noble_Influence
+			value = 1
+		}
+	}
+	removed_effect = {
+		change_variable = {
+			which = Noble_Influence
+			value = -1
+		}
+	}
+	modifiers = {
+		diplomatic_reputation = 1
+	}
+	custom_attributes = {
+		enables_noble_diplomats = yes #privileges for 25 opinion//10% improve relation
+	}
+
+	ai = {
+		factor = 1
+	}
+}
+
+akritai_privileges_reform = {
+	icon = "soldiers_2"
+	allow_normal_conversion = yes
+
+	effect = {
+		change_variable = {
+			which = Noble_Influence
+			value = 1
+		}
+	}
+	removed_effect = {
+		change_variable = {
+			which = Noble_Influence
+			value = -1
+		}
+	}
+	modifiers = {
+		defensiveness = 0.15
+		nobles_influence_modifier = 0.05
+	}
+	custom_attributes = {
+		enables_fortified_settlements = yes #-10% dev cost in states with a fort
+	}
+	ai = {
+		factor = 100
+	}
+}
+
+
+house_of_knights_reform = {
+	icon = house_of_knights
+	allow_normal_conversion = yes
+	trigger = {
+		NOT = {
+			tag = Y58
+		}
+	}
+	effect = {
+		change_variable = {
+			which = Noble_Influence
+			value = 1
+		}
+	}
+	removed_effect = {
+		change_variable = {
+			which = Noble_Influence
+			value = -1
+		}
+	}
+	modifiers = {
+		prestige = 0.5
+		leader_cost = -0.20
+		nobles_loyalty_modifier = 0.05
+	}
+	ai = {
+		factor = 100
+	}
+}
+
+imperial_knights_reform = {
+	icon = reichsritter
+	allow_normal_conversion = yes
+	effect = {
+		change_variable = {
+			which = Noble_Influence
+			value = 1
+		}
+	}
+	removed_effect = {
+		change_variable = {
+			which = Noble_Influence
+			value = -1
+		}
+	}
+	potential = {
+		is_part_of_hre = yes
+		NOT = { total_development = 150 }
+	}
+	trigger = {
+		NOT = { total_development = 100 }
+	}
+	modifiers = {
+		min_autonomy = 15
+		leader_land_shock = 1
+	}
+	custom_attributes = {
+		enables_imperial_knights = yes #Unlocks Imperial Knights Mercenary Company
+	}
+	ai = {
+		factor = 10
+	}
+}
+
+
+regional_forts_reform = {
+	icon = fort
+	allow_normal_conversion = yes
+	effect = {
+		change_variable = {
+			which = Noble_Influence
+			value = 1
+		}
+	}
+	removed_effect = {
+		change_variable = {
+			which = Noble_Influence
+			value = -1
+		}
+	}
+	potential = {
+		NOT = { technology_group = eastern }
+	}
+	modifiers = {
+		garrison_size = 0.15
+		fort_maintenance_modifier = -0.1
+	}
+	custom_attributes = {
+		enables_administrative_forts = yes #-25% State Maintenance in states with forts
+	}
+	ai = {
+		factor = 1
+		modifier = {
+			factor = 5
+			calc_true_if = {
+				all_subject_country = {
+					OR = {
+						is_march = yes
+						is_vassal = yes
+						is_lesser_in_union = yes
+					}
+				}
+				amount = 1
+			}
+		}
+	}
+}
+
+
+#############################
+###########Tier4#############
+#############################
+
+
+integrate_moneyloaners_reform = {
+	icon = banker
+	allow_normal_conversion = yes
+	effect = {
+		change_variable = {
+			which = Royal_Influence
+			value = 1
+		}
+	}
+	removed_effect = {
+		change_variable = {
+			which = Royal_Influence
+			value = -1
+		}
+	}
+	potential = {
+		NOT = { culture_group = latin }
+	}
+	modifiers = {
+		interest = -1
+		inflation_reduction = 0.05
+	}
+	# custom_attributes = {
+		# enables_merchant_privileges = yes #+1 merchantilism when you ask for contribution from the burghers.
+	# }
+	ai = {
+		factor = 1
+	}
+}
+
+empowered_clergy_in_administration_reform = {
+	icon = "bishop's_law"
+	allow_normal_conversion = yes
+	effect = {
+		change_variable = {
+			which = Clergy_Influence
+			value = 1
+		}
+	}
+	potential = {
+		check_variable = {
+			which = Clergy_Influence
+			value = 2
+		}
+	}
+	trigger = {
+		check_variable = {
+			which = Clergy_Influence
+			value = 2
+		}
+	}
+	modifiers = {
+		free_adm_policy = 1
+		warscore_cost_vs_other_religion = -0.10
+		church_loyalty_modifier = 0.05
+		church_influence_modifier = 0.10
+	}
+	removed_effect = {
+		change_variable = {
+			which = Clergy_Influence
+			value = -1
+		}
+	}
+	ai = {
+		factor = 10
+	}
+}
+
+colonial_govenors_reform = {
+	icon = colonial_rule
+	allow_normal_conversion = yes
+	effect = {
+		change_variable = {
+			which = Burgher_Influence
+			value = 1
+		}
+	}
+	removed_effect = {
+		change_variable = {
+			which = Burgher_Influence
+			value = -1
+		}
+	}
+	potential = {
+		OR = {
+			has_idea = colonial_ventures
+			has_reform = colonial_govenors_reform
+			num_of_colonists = 1
+		}
+	}
+	trigger = {
+		calc_true_if = {
+			all_subject_country = {
+				is_colonial_nation = yes
+			}
+			amount = 2
+		}
+	}
+	modifiers = {
+		global_tariffs = 0.25
+		reduced_liberty_desire = 5
+	}
+	ai = {
+		factor = 10
+	}
+}
+
+academy_of_science_reform = {
+	icon = paper_with_seal
+	allow_normal_conversion = yes
+	effect = {
+		change_variable = {
+			which = Burgher_Influence
+			value = 1
+		}
+	}
+	removed_effect = {
+		change_variable = {
+			which = Burgher_Influence
+			value = -1
+		}
+	}
+	modifiers = {
+		technology_cost = -0.05
+		prestige = 0.25
+	}
+	ai = {
+		factor = 100
+	}
+}
+
+the_judicature_ordinance_reform = {
+	icon = gustavus_adolphus
+	allow_normal_conversion = yes
+	effect = {
+		change_variable = {
+			which = Burgher_Influence
+			value = 1
+		}
+	}
+	removed_effect = {
+		change_variable = {
+			which = Burgher_Influence
+			value = -1
+		}
+	}
+	modifiers = {
+		monthly_reform_progress_modifier = 0.10
+		global_unrest = -1
+	}
+	ai = {
+		factor = 100
+	}
+}
+
+supreme_govenor_reform = {
+	icon = england_elizabeth
+	allow_normal_conversion = yes
+	effect = {
+		change_variable = {
+			which = Royal_Influence
+			value = 1
+		}
+	}
+	removed_effect = {
+		change_variable = {
+			which = Royal_Influence
+			value = -1
+		}
+	}
+	modifiers = {
+		tolerance_heretic = 1
+		expel_minorities_cost = -0.15
+	}
+	ai = {
+		factor = 100
+	}
+}
+
+cultural_investment_reform = {
+	icon = granada_trader
+	allow_normal_conversion = yes
+	effect = {
+		change_variable = {
+			which = Burgher_Influence
+			value = 1
+		}
+	}
+	removed_effect = {
+		change_variable = {
+			which = Burgher_Influence
+			value = -1
+		}
+	}
+	modifiers = {
+		global_trade_power = 0.10
+		trade_efficiency = 0.05
+	}
+	custom_attributes = {
+		enables_foreign_artists = yes #0.1 Prestige per Merchant.
+	}
+	ai = {
+		factor = 100
+	}
+}
+
+
+#############################
+###########Tier5#############
+#############################
+
+feudal_vassals_reform = {
+	icon = castle
+	allow_normal_conversion = yes
+	potential = {
+		NOT = {
+			has_reform = greentide_horde
+		}
+	}
+	modifiers = {
+		vassal_income = 0.25
+		vassal_forcelimit_bonus = 1.00
+	}
+	custom_attributes = {
+		enables_noble_estate = yes
+	}
+	ai = {
+		factor = 1
+	}
+}
+
+empowered_royal_decree_reform = {
+	icon = "austrian_empire"
+	allow_normal_conversion = yes
+	potential = {
+		check_variable = {
+			which = Royal_Influence
+			value = 3
+		}
+		# NOT = { has_reform = elective_monarchy_reform }
+	}
+	trigger = {
+		check_variable = {
+			which = Royal_Influence
+			value = 3
+		}
+	}
+	modifiers = {
+		max_absolutism = 10
+		yearly_absolutism = 0.1
+		nobles_influence_modifier = -0.10
+		burghers_influence_modifier = -0.10
+		church_influence_modifier = -0.10
+	}
+	custom_attributes = {
+		enables_royal_council = yes
+	}
+	ai = {
+		factor = 10
+	}
+	#-10% All estate Influence
+}
+
+empowered_divine_blood_reform = {
+	icon = "theocratic_law"
+	allow_normal_conversion = yes
+	has_devotion = yes
+	effect = {
+		add_devotion = 50
+	}
+	potential = {
+		check_variable = {
+			which = Royal_Influence
+			value = 2
+		}
+		check_variable = {
+			which = Clergy_Influence
+			value = 2
+		}
+		# NOT = { has_reform = elective_monarchy_reform }
+	}
+	trigger = {
+		check_variable = {
+			which = Royal_Influence
+			value = 2
+		}
+		check_variable = {
+			which = Clergy_Influence
+			value = 2
+		}
+	}
+	modifiers = {
+		tolerance_own = 1
+		diplomatic_reputation = 1
+		max_absolutism = 5
+		devotion = 0.5
+	}
+	custom_attributes = {
+		enables_divine_blood = yes
+	}
+	ai = {
+		factor = 10
+	}
+}
+
+empowered_monastic_militarism_reform = {
+	icon = "brothers_in_arms"
+	allow_normal_conversion = yes
+	potential = {
+		check_variable = {
+			which = Noble_Influence
+			value = 2
+		}
+		check_variable = {
+			which = Clergy_Influence
+			value = 2
+		}
+		# NOT = { has_reform = elective_monarchy_reform }
+	}
+	trigger = {
+		check_variable = {
+			which = Noble_Influence
+			value = 2
+		}
+		check_variable = {
+			which = Clergy_Influence
+			value = 2
+		}
+	}
+	modifiers = {
+		free_mil_policy = 1
+		max_absolutism = -5
+	}
+	custom_attributes = {
+		enables_militant_orders = yes #20% manpower and 0.5AT during war with heretics n heathens
+	}
+	ai = {
+		factor = 10
+	}
+}
+
+empowered_aristocratic_court_reform = {
+	icon = "szlachta_noble_2"
+	allow_normal_conversion = yes
+	potential = {
+		check_variable = {
+			which = Noble_Influence
+			value = 4
+		}
+		NOT = { culture_group = germanic }
+		# NOT = { has_reform = elective_monarchy_reform }
+	}
+	trigger = {
+		check_variable = {
+			which = Noble_Influence
+			value = 4
+		}
+	}
+	modifiers = {
+		army_tradition_decay = -0.005
+	}
+	# custom_attributes = {
+		# enables_shocking_general = yes #+1 Shock on General
+	# }#fixdis
+	ai = {
+		factor = 10
+	}
+	#+15% Noble Loyalty
+}
+
+empowered_general_estates_reform = {
+	icon = "poland_sejm"
+	allow_normal_conversion = yes
+	potential = {
+		# NOT = { has_reform = elective_monarchy_reform }
+		check_variable = {
+			which = Burgher_Influence
+			value = 3
+		}
+	}
+	trigger = {
+		check_variable = {
+			which = Burgher_Influence
+			value = 3
+		}
+	}
+	modifiers = {
+		state_maintenance_modifier = -0.25
+		max_absolutism = -5
+	}
+	custom_attributes = {
+		enables_burgher_council = yes
+	}
+	ai = {
+		factor = 0
+	}
+}
+
+empowered_church_councils_reform = {
+	icon = "bishop"
+	allow_normal_conversion = yes
+	potential = {
+		# NOT = { has_reform = elective_monarchy_reform }
+		check_variable = {
+			which = Clergy_Influence
+			value = 3
+		}
+	}
+	trigger = {
+		check_variable = {
+			which = Clergy_Influence
+			value = 3
+		}
+	}
+	modifiers = {
+		tolerance_own = 1
+		global_missionary_strength = 0.02
+	}
+	custom_attributes = {
+		enables_church_poorhouses = yes
+	}
+	ai = {
+		factor = 1
+	}
+}
+
+# noble_electors_reform = {
+# 	icon = man_on_podium
+# 	allow_normal_conversion = yes
+# 	potential = {
+# 		# has_reform = elective_monarchy_reform
+# 	}
+# 	modifiers = {
+# 		monarch_military_power = 1
+# 		max_absolutism = -5
+# 	}
+# 	custom_attributes = {
+# 		enables_noble_electors = yes
+# 	}
+# 	ai = {
+# 		factor = 1
+# 	}
+# }
+
+# royal_electors_reform = {
+# 	icon = king
+# 	allow_normal_conversion = yes
+# 	potential = {
+# 		# has_reform = elective_monarchy_reform
+# 	}
+# 	modifiers = {
+# 		max_absolutism = 10
+# 	}
+# 	custom_attributes = {
+# 		enables_royal_electors = yes
+# 	}
+# 	ai = {
+# 		factor = 1
+# 	}
+# }
+
+# parliamental_electors_reform = {
+# 	icon = judge
+# 	allow_normal_conversion = yes
+# 	potential = {
+# 		# has_reform = elective_monarchy_reform
+# 	}
+# 	modifiers = {
+# 		legitimacy = 0.5
+# 	}
+# 	custom_attributes = {
+# 		enables_bureacratic_apparatus = yes
+# 	}
+# 	conditional = {
+# 		allow = { has_dlc = "Common Sense" }
+# 		has_parliament = yes
+# 	}
+# 	ai = {
+# 		factor = 1
+# 	}
+# }
+
+# papal_electors_reform = {
+# 	icon = clergyman
+# 	allow_normal_conversion = yes
+# 	potential = {
+# 		# has_reform = elective_monarchy_reform
+# 		religion = catholic
+# 	}
+# 	modifiers = {
+# 		tolerance_own = 1
+# 	}
+# 	custom_attributes = {
+# 		enables_papal_favor = yes
+# 	}
+# 	ai = {
+# 		factor = 1
+# 	}
+# }
+
+
+################################
+##########Theocracy
+################################
+
+expel_heathens_reform = {
+	icon = "landscape"
+	allow_normal_conversion = yes
+	potential = {
+		is_adventurer = no
+	}
+	modifiers = {
+		development_cost = -0.10
+		culture_conversion_cost = -0.10
+		expel_minorities_cost = -0.20
+	}
+	ai = {
+		factor = 1
+	}
+}
+
+colonial_mission_reform = {
+	icon = "colonial_church"
+	allow_normal_conversion = yes
+	potential = {
+		num_of_ports = 1
+	}
+	modifiers = {
+		range = 0.25
+		colonist_placement_chance = 0.10
+	}
+	ai = {
+		factor = 0
+	}
+}
+
+dynastic_theocracy_reform = {
+	allow_normal_conversion = yes
+	icon = "feudal_theocracy"
+	valid_for_nation_designer = yes
+	nation_designer_cost = 0
+	queen = yes
+	heir = yes
+	royal_marriage = yes
+	maintain_dynasty = yes
+	modifiers = {
+		devotion = 0.25
+	}
+	custom_attributes = {
+		enables_hereditary_theocracy = yes
+	}
+	ai = {
+		factor = 1
+	}
+}
+
+#T4 Theocracy
+
+holy_orthodoxy_reform = {
+	icon = "holy_orthodoxy"
+	allow_normal_conversion = yes
+	potential = {
+		NOT = {
+			has_reform = adventurer_reform
+		}
+	}
+	modifiers = {
+		yearly_corruption = -0.10
+		devotion = 0.5
+	}
+	ai = {
+		factor = 1
+	}
+}
+
+inquisition_reform = {
+	icon = "inquisition"
+	allow_normal_conversion = yes
+	potential = {
+		NOT = {
+			has_reform = adventurer_reform
+		}
+	}
+	modifiers = {
+		global_missionary_strength = 0.01
+		global_heretic_missionary_strength = 0.02
+		prestige_per_development_from_conversion = 0.2
+	}
+	ai = {
+		factor = 1
+	}
+}
+
+religious_pragmatism_reform = {
+	icon = "religious_pragmatism"
+	allow_normal_conversion = yes
+	potential = {
+		NOT = {
+			has_reform = adventurer_reform
+		}
+	}
+	modifiers = {
+		religious_unity = 0.10
+		advisor_cost = -0.05
+	}
+	ai = {
+		factor = 1
+	}
+}
+
+
+#############################
+#T6
+#############################
+holy_war_reform = {
+	potential = {
+		NOT ={
+			has_reform = adventurer_reform
+		}
+	}
+	icon = "holy_war"
+	allow_normal_conversion = yes
+	modifiers = {
+		manpower_recovery_speed = 0.10
+	}
+	custom_attributes = {
+		enables_holy_war = yes
+	}
+	ai = {
+		factor = 1
+	}
+}
+
+militarized_monasteries_reform = {
+	potential = {
+		NOT ={
+			has_reform = adventurer_reform
+		}
+	}
+	icon = "militarized_monasteries"
+	allow_normal_conversion = yes
+	modifiers = {
+		army_tradition = 0.5
+		defensiveness = 0.10
+	}
+	ai = {
+		factor = 1
+	}
+}
+
+brothers_in_arms_reform = {
+	potential = {
+		NOT ={
+			has_reform = adventurer_reform
+		}
+	}
+	icon = "brothers_in_arms"
+	allow_normal_conversion = yes
+
+	rulers_can_be_generals = yes
+	heirs_can_be_generals = yes
+
+	modifiers = {
+		mercenary_discipline = 0.025
+		mercenary_manpower = 0.25
+	}
+	ai = {
+		factor = 1
+	}
+}
+
+
+the_bishops_army_reform = {
+	potential = {
+		NOT ={
+			has_reform = adventurer_reform
+		}
+	}
+	icon = "bishops_army"
+	allow_normal_conversion = yes
+	modifiers = {
+		free_mil_policy = 1
+		max_absolutism = 5
+	}
+	ai = {
+		factor = 1
+	}
+}
+
+
+###########################################
+#T7 Diplomacy
+###########################################
+
+unrestricted_diplomacy_reform = {
+	potential = {
+		NOT ={
+			has_reform = adventurer_reform
+		}
+	}
+	icon = "unrestricted_diplomacy"
+	allow_normal_conversion = yes
+	modifiers = {
+		diplomatic_reputation = 1
+	}
+	custom_attributes = {
+		enables_unrestricted_diplomats = yes
+	}
+	ai = {
+		factor = 1
+	}
+}
+
+holy_claims_reform = {
+	potential = {
+		NOT ={
+			has_reform = adventurer_reform
+		}
+	}
+	icon = "holy_claims"
+	allow_normal_conversion = yes
+	modifiers = {
+		ae_impact = -0.10
+	}
+	conditional = {
+		allow = { has_dlc = "Third Rome" }
+		claim_states = yes
+	}
+	ai = {
+		factor = 1
+	}
+}
+
+network_of_faithful_allies_reform = {
+	potential = {
+		NOT ={
+			has_reform = adventurer_reform
+		}
+	}
+	icon = "network_of_faithful_allies"
+	allow_normal_conversion = yes
+	modifiers = {
+		vassal_income = 0.2
+		vassal_forcelimit_bonus = 0.50
+		reduced_liberty_desire = 10
+	}
+	ai = {
+		factor = 1
+	}
+}
+
+
+the_bishops_diplomacy_reform = {
+	potential = {
+		NOT ={
+			has_reform = adventurer_reform
+		}
+	}
+	icon = "bishops_diplomacy"
+	allow_normal_conversion = yes
+	modifiers = {
+		free_dip_policy = 1
+		max_absolutism = 5
+	}
+	ai = {
+		factor = 1
+	}
+}
+
+
+######################################################
+#T8 Mobilize the faithful
+######################################################
+
+secular_law_reform = {
+	potential = {
+		NOT ={
+			has_reform = adventurer_reform
+		}
+	}
+	icon = "secular_law"
+	allow_normal_conversion = yes
+	modifiers = {
+		global_unrest = -1
+		tolerance_heretic = 1
+	}
+	ai = {
+		factor = 1
+	}
+}
+
+theocratic_law_reform = {
+	potential = {
+		NOT ={
+			has_reform = adventurer_reform
+		}
+	}
+	icon = "theocratic_law"
+	allow_normal_conversion = yes
+	modifiers = {
+		stability_cost_modifier = -0.15
+		devotion = 0.5
+	}
+	ai = {
+		factor = 1
+	}
+}
+
+the_bishops_law_reform = {
+	potential = {
+		NOT ={
+			has_reform = adventurer_reform
+		}
+	}
+	icon = "bishop's_law"
+	allow_normal_conversion = yes
+	modifiers = {
+		free_adm_policy = 1
+		max_absolutism = 5
+	}
+	ai = {
+		factor = 1
+	}
+}

@@ -1,0 +1,288 @@
+#FROM = country
+edict_defensive_edict = {
+	potential = {
+		NOT = {
+			FROM = {
+				all_province_in_state = {
+					OR = {
+						has_building = town_hall
+						has_building = government_lvl_3
+						has_building = government_lvl_4
+					}
+				}
+			}
+		}					
+	}
+
+	allow = {
+		if = {
+			limit = { 
+				ROOT = {
+					ai = yes
+				}
+			}
+			FROM = {
+				has_siege = yes
+			}
+			ROOT = {
+				AND = {
+					is_at_war = yes
+					has_country_modifier = xorme_ai_valid_nation
+				}
+			}
+		}
+		else = {
+			custom_trigger_tooltip = {
+				tooltip = disable_state_edicts_active.tooltip
+				ROOT = {
+					NOT = {
+						has_country_flag = disable_state_edicts_active
+					}
+				}
+				always = yes
+			}
+		}
+	}
+
+	modifier = {
+		local_defensiveness = 0.25
+	}
+
+	color = {  46 114 55  }
+
+
+	ai_will_do = {
+		factor = 1000.0
+		modifier = {
+			factor = 0
+			all_province_in_state = {
+				NOT = { fort_level = 1 }
+			}
+		}
+		modifier = {
+			factor = 0.1
+			all_province_in_state = {
+				fort_level = 1
+				NOT = { controlled_by = owner }
+			}
+		}
+		modifier = {
+			factor = 2.0
+			any_province_in_state = {
+				fort_level = 1
+				has_siege = yes
+			}
+		}
+	}
+}
+
+edict_defensive_edict_2 = {
+	potential = {
+		FROM = {
+			all_province_in_state = {
+				OR = {
+					has_building = town_hall
+					has_building = government_lvl_3
+					has_building = government_lvl_4
+				}
+			}
+		}
+		NOT = {
+			FROM = {
+				all_province_in_state = {
+					OR = {
+						has_building = government_lvl_3
+						has_building = government_lvl_4
+					}
+				}
+			}
+		}
+	}
+
+	allow = {
+		if = {
+			limit = { ROOT = { ai = yes } }
+			ROOT = {
+				is_at_war = yes
+				has_country_modifier = xorme_ai_valid_nation
+			}
+		}
+		else = {
+			custom_trigger_tooltip = {
+				tooltip = disable_state_edicts_active.tooltip
+				ROOT = {
+					NOT = {
+						has_country_flag = disable_state_edicts_active
+					}
+				}
+				always = yes
+			}
+		}
+	}
+
+	modifier = {
+		local_defensiveness = 0.5
+	}
+
+	color = {  46 114 55  }
+
+
+	ai_will_do = {
+		factor = 1000.0
+		modifier = {
+			factor = 0
+			all_province_in_state = {
+				NOT = { fort_level = 1 }
+			}
+		}
+		modifier = {
+			factor = 0.1
+			all_province_in_state = {
+				fort_level = 1
+				NOT = { controlled_by = owner }
+			}
+		}
+		modifier = {
+			factor = 2.0
+			any_province_in_state = {
+				fort_level = 1
+				has_siege = yes
+			}
+		}
+	}
+}
+
+edict_defensive_edict_3 = {
+	potential = {
+		FROM = {
+			all_province_in_state = {
+				OR = {
+					has_building = government_lvl_3
+					has_building = government_lvl_4
+				}
+			}
+		}
+		NOT = {
+			FROM = {
+				all_province_in_state = {
+					OR = {
+						has_building = government_lvl_4
+					}
+				}
+			}
+		}
+	}
+
+	allow = {
+		if = {
+			limit = { ROOT = { ai = yes } }
+			ROOT = {
+				is_at_war = yes
+				has_country_modifier = xorme_ai_valid_nation
+			}
+		}
+		else = {
+			custom_trigger_tooltip = {
+				tooltip = disable_state_edicts_active.tooltip
+				ROOT = {
+					NOT = {
+						has_country_flag = disable_state_edicts_active
+					}
+				}
+				always = yes
+			}
+		}
+	}
+
+	modifier = {
+		local_defensiveness = 0.75
+	}
+
+	color = {  46 114 55  }
+
+
+	ai_will_do = {
+		factor = 1000.0
+		modifier = {
+			factor = 0
+			all_province_in_state = {
+				NOT = { fort_level = 1 }
+			}
+		}
+		modifier = {
+			factor = 0.1
+			all_province_in_state = {
+				fort_level = 1
+				NOT = { controlled_by = owner }
+			}
+		}
+		modifier = {
+			factor = 2.0
+			any_province_in_state = {
+				fort_level = 1
+				has_siege = yes
+			}
+		}
+	}
+}
+
+edict_defensive_edict_4 = {
+	potential = {
+		FROM = {
+			all_province_in_state = {
+				has_building = government_lvl_4
+			}
+		}
+	}
+
+	allow = {
+		if = {
+			limit = { ROOT = { ai = yes } }
+			ROOT = {
+				is_at_war = yes
+				has_country_modifier = xorme_ai_valid_nation
+			}
+		}
+		else = {
+			custom_trigger_tooltip = {
+				tooltip = disable_state_edicts_active.tooltip
+				ROOT = {
+					NOT = {
+						has_country_flag = disable_state_edicts_active
+					}
+				}
+				always = yes
+			}
+		}
+	}
+
+	modifier = {
+		local_defensiveness = 1
+	}
+
+	color = {  46 114 55  }
+
+	ai_will_do = {
+		factor = 1000.0
+		modifier = {
+			factor = 0
+			all_province_in_state = {
+				NOT = { fort_level = 1 }
+			}
+		}
+		modifier = {
+			factor = 0.1
+			all_province_in_state = {
+				fort_level = 1
+				NOT = { controlled_by = owner }
+			}
+		}
+		modifier = {
+			factor = 2.0
+			any_province_in_state = {
+				fort_level = 1
+				has_siege = yes
+			}
+		}
+	}
+}

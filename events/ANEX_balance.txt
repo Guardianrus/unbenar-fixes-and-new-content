@@ -1,0 +1,750 @@
+namespace = ANEX_balance
+
+country_event = {
+	id = ANEX_balance.1
+	title =ANEX_balance.1.t
+	desc = ANEX_setting_event.1.d
+	picture = TRADE_GOODS_PLANTATION_GOODS_IN_WAREHOUSE_eventPicture
+
+	hidden = yes
+
+	trigger = {
+		ai = no
+		OR = {
+			had_country_flag = {
+				days = 100
+				flag = sdrc
+			}
+			NOT ={
+				has_country_flag = sdrc
+			}
+		}
+		
+	}
+
+	immediate = {
+		log = "start  ANEX_balance.1 [GetDate] for country [Root.GetName]"
+		clr_country_flag = sdrc
+		set_country_flag = sdrc
+		clr_modifers = {
+			modifier = shock_damage_received
+		}
+		cap_modifier = {
+			modifier = shock_damage_received
+			cap = 0.5
+		}
+		log = "end ANEX_balance.1 [GetDate] for country [Root.GetName]"
+	}
+
+	option = {
+		name = ANEX_setting_event.1.a
+
+		ai_chance = {
+			factor = 1
+		}
+	}
+
+}
+
+country_event = {
+	id = ANEX_balance.2
+	title = ANEX_balance.2.t
+	desc = ANEX_setting_event.1.d
+	picture = TRADE_GOODS_PLANTATION_GOODS_IN_WAREHOUSE_eventPicture
+
+	hidden = yes
+
+	trigger = {
+		ai = no
+		OR = {
+			had_country_flag = {
+				days = 100
+				flag = fdrc
+			}
+			NOT = {
+				has_country_flag = fdrc
+			}
+		}			
+	}
+
+	immediate = {
+		log = "start  ANEX_balance.2 [GetDate] for country [Root.GetName]"
+		clr_country_flag = fdrc
+		set_country_flag = fdrc
+		clr_modifers = {
+			modifier = fire_damage_received
+		}
+		cap_modifier = {
+			modifier = fire_damage_received
+			cap = 0.5
+		}
+		log = "end ANEX_balance.2 [GetDate] for country [Root.GetName]"
+	}
+
+	option = {
+		name = ANEX_setting_event.1.a
+
+		ai_chance = {
+			factor = 1
+		}
+	}
+
+}
+
+# country_event = {
+# 	id = ANEX_balance.13
+# 	title = ANEX_setting_event.1.t
+# 	desc = ANEX_setting_event.1.d
+# 	picture = TRADE_GOODS_PLANTATION_GOODS_IN_WAREHOUSE_eventPicture
+
+
+# 	trigger = {
+# 		any_province = {
+# 			if = {
+# 				limit = {
+# 					province_id = 1652
+# 					num_of_units_in_province = {
+# 						type = transport
+# 						amount = 3
+# 						who = ROOT
+# 					}
+# 				}
+# 				durration = -1
+# 			}
+# 		}
+# 	}
+# 	immediate = {
+# 		set_global_flag = 123
+# 		add_province_modifier = {
+# 			name = A11_people_of_the_seas
+# 			duration = -1
+# 		}
+
+# 	}
+
+# 	option = {
+# 		name = ANEX_setting_event.1.a
+
+# 		ai_chance = {
+# 			factor = 1
+# 		}
+# 	}
+
+# }
+
+country_event = {
+	id = ANEX_balance.3
+	title = ANEX_balance.3.t
+	desc = ANEX_setting_event.1.d
+	picture = TRADE_GOODS_PLANTATION_GOODS_IN_WAREHOUSE_eventPicture
+
+	hidden = yes
+
+	trigger = {
+		has_idea_group = great_power_idea_groups_expanded
+		is_great_power = no
+	}
+
+	immediate = {
+		remove_idea_group = great_power_idea_groups_expanded
+	}
+
+	option = {
+		name = ANEX_setting_event.1.a
+
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+country_event = {
+	id = ANEX_balance.4
+	title = ANEX_balance.4.t
+	desc = ANEX_setting_event.1.d
+	picture = TRADE_GOODS_PLANTATION_GOODS_IN_WAREHOUSE_eventPicture
+
+	hidden = yes
+
+	trigger = {
+		has_all_reli_idea_groups = yes
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				has_idea_group = regentcourt0
+				NOT = {
+					religion = regent_court
+				}
+			}
+			remove_idea_group = regentcourt0
+			
+		}
+		if = {
+			limit = {
+				has_idea_group = ravelian0
+				NOT = {
+					religion = ravelian
+				}
+			}
+			remove_idea_group = ravelian0
+			
+		}
+		if = {
+			limit = {
+				has_idea_group = corinite0
+				NOT = {
+					religion = corinite
+				}
+			}
+			remove_idea_group = corinite0
+			
+		}
+		if = {
+			limit = {
+				has_idea_group = thought0
+				NOT = {
+					religion = the_thought
+				}
+			}
+			remove_idea_group = thought0
+			
+		}
+		if = {
+			limit = {
+				has_idea_group = the_hunt0
+				NOT = {
+					religion = the_hunt
+				}
+			}
+			remove_idea_group = the_hunt0
+			
+		}
+		if = {
+			limit = {
+				has_idea_group = anc_worship_0
+				NOT = {
+					religion = ancestor_worship
+				}
+			}
+			remove_idea_group = anc_worship_0
+			
+		}
+		if = {
+			limit = {
+				has_idea_group = dragon_cult_0
+				NOT = {
+					religion = kobold_dragon_cult
+				}
+			}
+			remove_idea_group = dragon_cult_0
+			
+		}
+		if = {
+			limit = {
+				has_idea_group = ik_magthaal_0
+				NOT = {
+					religion = irdaeos_worship
+				}
+			}
+			remove_idea_group = ik_magthaal_0
+			
+		}
+		if = {
+			limit = {
+				has_idea_group = the_jadd_0
+				NOT = {
+					religion = the_jadd
+				}
+			}
+			remove_idea_group = the_jadd_0
+			
+		}
+		if = {
+			limit = {
+				has_idea_group = old_dookan_0
+				NOT = {
+					OR = {
+						religion = old_dookan
+						religion = great_dookan
+					}
+				}
+			}
+			remove_idea_group = old_dookan_0
+			
+		}
+		if = {
+			limit = {
+				has_idea_group = skaldhyrric_faith_0
+				NOT = {
+					religion = skaldhyrric_faith
+				}
+			}
+			remove_idea_group = skaldhyrric_faith_0
+			
+		}
+		if = {
+			limit = {
+				has_idea_group = eordellon_0
+				NOT = {
+					OR ={
+						religion = eordellon
+						religion = spring_court
+						religion = summer_court
+						religion = winter_court
+						religion = autumn_court
+					}
+				}
+			}
+			remove_idea_group = eordellon_0
+			
+		}
+	}
+
+	option = {
+		name = ANEX_setting_event.1.a
+
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+
+
+country_event = {
+	id = ANEX_balance.5
+	title = ANEX_balance.5.t
+	desc = ANEX_setting_event.1.d
+	picture = WESTERNISATION_eventPicture
+
+	hidden = yes
+	trigger = {
+		was_player = yes
+		NOT = {
+			has_country_flag = save_main_culture
+		}
+	}
+
+	immediate = {
+		set_country_flag = save_main_culture
+		save_primary_culture = yes
+	}
+
+
+	option = {
+		name = ANEX_setting_event.1.a
+	}
+}
+
+country_event = {
+	id = ANEX_balance.6
+	title = ANEX_balance.6.t
+	desc = ANEX_setting_event.1.d
+	picture = WESTERNISATION_eventPicture
+
+	hidden = yes
+	is_triggered_only = yes
+
+	immediate = {
+		log = "start  ANEX_balance.6 [GetDate] for country [Root.GetName]"
+		# export_to_variable = {
+		# 	which = ANEX_temp_main_culture
+		# 	value = primary_culture
+		# 	who = ROOT
+		# }
+		if = {
+			limit = {
+				culture_group = elven
+				high_tolerance_elven_race_trigger = no
+			}
+			change_primary_culture = variable:my_primary_culture
+			country_event = { id = ANEX_balance.7 }
+		}
+		else_if = {
+			limit = {
+				culture_group = elven
+				high_tolerance_elven_race_trigger = yes
+			}
+			country_event = { id = racial_modifiers.5 }	#Racial Admin and Military - on primary culture change
+		}
+		if = {
+			limit = {
+				culture_group = halfling
+				high_tolerance_halfling_race_trigger = no
+			}
+			change_primary_culture = variable:my_primary_culture
+			country_event = { id = ANEX_balance.7 }
+		}
+		else_if = {
+			limit = {
+				culture_group = halfling
+				high_tolerance_halfling_race_trigger = yes
+			}
+			country_event = { id = racial_modifiers.5 }	#Racial Admin and Military - on primary culture change
+		}
+		if = {
+			limit = {
+				culture_group = dwarven
+				high_tolerance_dwarven_race_trigger = no
+			}
+			change_primary_culture = variable:my_primary_culture
+			country_event = { id = ANEX_balance.7 }
+		}
+		else_if = {
+			limit = {
+				culture_group = dwarven
+				high_tolerance_dwarven_race_trigger = yes
+			}
+			country_event = { id = racial_modifiers.5 }	#Racial Admin and Military - on primary culture change
+		}
+		if = {
+			limit = {
+				culture_group = gnomish
+				high_tolerance_gnomish_race_trigger = no
+			}
+			change_primary_culture = variable:my_primary_culture
+			country_event = { id = ANEX_balance.7 }
+		}
+		else_if = {
+			limit = {
+				culture_group = gnomish
+				high_tolerance_gnomish_race_trigger = yes
+			}
+			country_event = { id = racial_modifiers.5 }	#Racial Admin and Military - on primary culture change
+		}
+		if = {
+			limit = {
+				culture_group = orcish
+				high_tolerance_orcish_race_trigger = no
+			}
+			change_primary_culture = variable:my_primary_culture
+			country_event = { id = ANEX_balance.7 }
+		}
+		else_if = {
+			limit = {
+				culture_group = orcish
+				high_tolerance_orcish_race_trigger = yes
+			}
+			country_event = { id = racial_modifiers.5 }	#Racial Admin and Military - on primary culture change
+		}
+		if = {
+			limit = {
+				culture_group = kobold
+				high_tolerance_kobold_race_trigger = no
+			}
+			change_primary_culture = variable:my_primary_culture
+			country_event = { id = ANEX_balance.7 }
+		}
+		else_if = {
+			limit = {
+				culture_group = kobold
+				high_tolerance_kobold_race_trigger = yes
+			}
+			country_event = { id = racial_modifiers.5 }	#Racial Admin and Military - on primary culture change
+		}
+		if = {
+			limit = {
+				culture_is_half_orcish = yes
+				high_tolerance_half_orcish_race_trigger = no
+			}
+			change_primary_culture = variable:my_primary_culture
+			country_event = { id = ANEX_balance.7 }
+		}
+		else_if = {
+			limit = {
+				culture_is_half_orcish = yes
+				high_tolerance_half_orcish_race_trigger = yes
+			}
+			country_event = { id = racial_modifiers.5 }	#Racial Admin and Military - on primary culture change
+		}
+		if = {
+			limit = {
+				culture_is_human = yes
+				high_tolerance_human_race_trigger = no
+			}
+			change_primary_culture = variable:my_primary_culture
+			country_event = { id = ANEX_balance.7 }
+		}
+		else_if = {
+			limit = {
+				culture_is_human = yes
+				high_tolerance_human_race_trigger = yes
+			}
+			country_event = { id = racial_modifiers.5 }	#Racial Admin and Military - on primary culture change
+		}
+		if = {
+			limit = {
+				culture_group = gnollish
+				high_tolerance_gnollish_race_trigger = no
+			}
+			change_primary_culture = variable:my_primary_culture
+			country_event = { id = ANEX_balance.7 }
+		}
+		else_if = {
+			limit = {
+				culture_group = gnollish
+				high_tolerance_gnollish_race_trigger = yes
+			}
+			country_event = { id = racial_modifiers.5 }	#Racial Admin and Military - on primary culture change
+		}
+		if = {
+			limit = {
+				culture_is_ruinborn = yes
+				high_tolerance_ruinborn_race_trigger = no
+			}
+			change_primary_culture = variable:my_primary_culture
+			country_event = { id = ANEX_balance.7 }
+		}
+		else_if = {
+			limit = {
+				culture_is_ruinborn = yes
+				high_tolerance_ruinborn_race_trigger = yes
+			}
+			country_event = { id = racial_modifiers.5 }	#Racial Admin and Military - on primary culture change
+		}
+		if = {
+			limit = {
+				culture_group = goblin
+				high_tolerance_goblin_race_trigger = no
+			}
+			change_primary_culture = variable:my_primary_culture
+			country_event = { id = ANEX_balance.7 }
+		}
+		else_if = {
+			limit = {
+				culture_group = goblin
+				high_tolerance_goblin_race_trigger = yes
+			}
+			country_event = { id = racial_modifiers.5 }	#Racial Admin and Military - on primary culture change
+		}
+		if = {
+			limit = {
+				culture_group = harpy
+				high_tolerance_harpy_race_trigger = no
+			}
+			change_primary_culture = variable:my_primary_culture
+			country_event = { id = ANEX_balance.7 }
+		}
+		else_if = {
+			limit = {
+				culture_group = harpy
+				high_tolerance_harpy_race_trigger = yes
+			}
+			country_event = { id = racial_modifiers.5 }	#Racial Admin and Military - on primary culture change
+		}
+		if = {
+			limit = {
+				culture_is_troll = yes
+				high_tolerance_troll_race_trigger = no
+			}
+			change_primary_culture = variable:my_primary_culture
+			country_event = { id = ANEX_balance.7 }
+		}
+		else_if = {
+			limit = {
+				culture_is_troll = yes
+				high_tolerance_troll_race_trigger = yes
+			}
+			country_event = { id = racial_modifiers.5 }	#Racial Admin and Military - on primary culture change
+		}
+		if = {
+			limit = {
+				culture_is_half_elven = yes
+				high_tolerance_half_elven_race_trigger = no
+			}
+			change_primary_culture = variable:my_primary_culture
+			country_event = { id = ANEX_balance.7 }
+		}
+		else_if = {
+			limit = {
+				culture_is_half_elven = yes
+				high_tolerance_half_elven_race_trigger = yes
+			}
+			country_event = { id = racial_modifiers.5 }	#Racial Admin and Military - on primary culture change
+		}
+		if = {
+			limit = {
+				culture_group = harimari
+				high_tolerance_harimari_race_trigger = no
+			}
+			change_primary_culture = variable:my_primary_culture
+			country_event = { id = ANEX_balance.7 }
+		}
+		else_if = {
+			limit = {
+				culture_group = harimari
+				high_tolerance_harimari_race_trigger = yes
+			}
+			country_event = { id = racial_modifiers.5 }	#Racial Admin and Military - on primary culture change
+		}
+		if = {
+			limit = {
+				culture_group = hobgoblin
+				high_tolerance_hobgoblin_race_trigger = no
+			}
+			change_primary_culture = variable:my_primary_culture
+			country_event = { id = ANEX_balance.7 }
+		}
+		else_if = {
+			limit = {
+				culture_group = hobgoblin
+				high_tolerance_hobgoblin_race_trigger = yes
+			}
+			country_event = { id = racial_modifiers.5 }	#Racial Admin and Military - on primary culture change
+		}
+		if = {
+			limit = {
+				culture_group = centaur
+				high_tolerance_centaur_race_trigger = no
+			}
+			change_primary_culture = variable:my_primary_culture
+			country_event = { id = ANEX_balance.7 }
+		}
+		else_if = {
+			limit = {
+				culture_group = centaur
+				high_tolerance_centaur_race_trigger = yes
+			}
+			country_event = { id = racial_modifiers.5 }	#Racial Admin and Military - on primary culture change
+		}
+		if = {
+			limit = {
+				culture_group = ogre
+				high_tolerance_ogre_race_trigger = no
+			}
+			change_primary_culture = variable:my_primary_culture
+			country_event = { id = ANEX_balance.7 }
+		}
+		else_if = {
+			limit = {
+				culture_group = ogre
+				high_tolerance_ogre_race_trigger = yes
+			}
+			country_event = { id = racial_modifiers.5 }	#Racial Admin and Military - on primary culture change
+		}
+		log = "end ANEX_balance.6 [GetDate] for country [Root.GetName]"
+	}
+
+
+	option = {
+		name = ANEX_setting_event.1.a
+	}
+}
+
+
+country_event = {
+	id = ANEX_balance.7
+	title = ANEX_balance.7.t
+	desc = ANEX_balance.7.d
+	picture = WESTERNISATION_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = ANEX_balance.7.a
+		log = "start ANEX_balance.7 [GetDate] for country [Root.GetName]"
+		ai_chance = { factor = 100 }
+		if = {
+			limit = {
+				NOT = {
+					has_country_flag = 100_dipback
+				}
+			}
+			add_dip_power = 100
+			set_country_flag = 100_dipback
+		}
+		log = "end ANEX_balance.7 [GetDate] for country [Root.GetName]"
+	}
+}
+
+province_event = {
+	id = ANEX_balance.8
+	title = ANEX_balance.8.t
+	desc = ANEX_setting_event.1.d
+	picture = WESTERNISATION_eventPicture
+
+	trigger = {
+		OR = {
+			trade_goods = gold
+			trade_goods = silver
+		}
+		has_production_building_trigger = yes
+	}
+
+	hidden = yes
+	immediate = {
+		log = "start ANEX_balance.8 [GetDate] for country [Root.GetName]"
+		remove_building = workshop
+		remove_building = counting_house
+		remove_building = production_lvl_3
+		remove_building = production_lvl_4
+		remove_building = production_lvl_5
+	}
+
+	after = {
+		log = "end ANEX_balance.8 [GetDate] for province [Root.GetName]"
+	}
+	option = {
+		name = ANEX_setting_event.1.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+province_event = {
+	id = ANEX_balance.9
+	title = ANEX_balance.8.t
+	desc = ANEX_setting_event.1.d
+	picture = WESTERNISATION_eventPicture
+
+	trigger = {
+		OR = {
+			has_building = navalbase_lvl_1
+			has_building = navalbase_lvl_2
+		}
+		OR = {
+			owner = {	NOT = {	has_idea = flottenbasis1	}	}
+			NOT = {
+				has_fort_building_trigger = yes
+			}
+		}
+	}
+
+	hidden = yes
+	immediate = {
+		log = "start ANEX_balance.9 [GetDate] for country [Root.GetName]"
+		remove_building = navalbase_lvl_1
+		remove_building = navalbase_lvl_2
+	}
+
+	after = {
+		log = "end ANEX_balance.9 [GetDate] for province [Root.GetName]"
+	}
+	option = {
+		name = ANEX_setting_event.1.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+# province_event = {
+# 	id = ANEX_balance.8
+# 	title = ANEX_setting_event.1.t
+# 	desc = ANEX_setting_event.1.d
+
+# 	is_triggered_only = yes
+
+# 	trigger = {
+# 		has_influencing_fort = no
+# 		has_fort_trigger = yes
+# 	}
+# 	hidden = yes
+# 	immediate = {
+# 		if
+# 	}
+
+# 	option = {
+# 		name = ANEX_setting_event.1.a
+# 		ai_chance = { factor = 100 }
+# 	}
+# }

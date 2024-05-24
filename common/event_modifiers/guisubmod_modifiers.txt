@@ -1,0 +1,2088 @@
+dig_1_ui = {
+	local_development_cost = -1.0 #30
+	trade_goods_size = 0.05
+	local_state_maintenance_modifier = 0.1
+	local_defensiveness = 0.05
+	local_missionary_strength = 0.025
+	picture = "hold_01"
+}
+
+
+dig_2_ui = {
+	local_development_cost = -2.25 #40
+	trade_goods_size = 0.15
+	local_tax_modifier = 0.1
+	local_state_maintenance_modifier = 0.2
+	local_defensiveness = 0.145
+	local_missionary_strength = 0.035
+	picture = "hold_02"
+}
+
+dig_3_ui = {
+	local_development_cost = -3.6 #50
+	trade_goods_size = 0.3
+	local_tax_modifier = 0.2
+	local_state_maintenance_modifier = 0.3
+	local_defensiveness = 0.15
+	min_local_autonomy = 5
+	local_missionary_strength = 0.045
+	picture = "hold_03"
+}
+
+dig_4_ui = {
+	local_development_cost = -5.5 #60
+	trade_goods_size = 0.5
+	local_tax_modifier = 0.3
+	local_state_maintenance_modifier = 0.4
+	local_defensiveness = 0.2
+	min_local_autonomy = 10
+	local_build_time = 0.1
+	local_missionary_strength = 0.055
+	allowed_num_of_manufactories = 1
+	picture = "hold_04"
+}
+
+dig_5_ui = {
+	local_development_cost = -7.7 #70
+	trade_goods_size = 0.75
+	local_tax_modifier = 0.4
+	local_state_maintenance_modifier = 0.5
+	local_defensiveness = 0.25
+	min_local_autonomy = 15
+	local_build_time = 0.15
+	local_missionary_strength = 0.065
+	allowed_num_of_manufactories = 1
+	picture = "hold_05"
+}
+
+dig_6_ui = {
+	local_development_cost = -10.2 #80
+	trade_goods_size = 1
+	local_tax_modifier = 0.5
+	local_state_maintenance_modifier = 0.6
+	local_defensiveness = 0.3
+	min_local_autonomy = 20
+	local_build_time = 0.2
+	local_missionary_strength = 0.075
+	allowed_num_of_manufactories = 1
+	picture = "hold_06"
+}
+
+dig_7_ui = {
+	local_development_cost = -13.0 #90
+	trade_goods_size = 1.5
+	local_tax_modifier = 0.6
+	local_state_maintenance_modifier = 0.7
+	local_defensiveness = 0.35
+	min_local_autonomy = 25
+	local_build_time = 0.25
+	local_missionary_strength = 0.085
+	allowed_num_of_manufactories = 1
+	picture = "hold_07"
+}
+
+dig_8_ui = {
+	local_development_cost = -16.05 #100
+	trade_goods_size = 2
+	local_tax_modifier = 0.7
+	local_state_maintenance_modifier = 0.8
+	local_defensiveness = 0.4
+	min_local_autonomy = 30
+	local_build_time = 0.3
+	local_missionary_strength = 0.095
+	allowed_num_of_manufactories = 1
+	picture = "hold_08"
+}
+
+dig_9_ui = {
+	local_development_cost = -19.5 #110
+	trade_goods_size = 2.5
+	local_tax_modifier = 0.8
+	local_state_maintenance_modifier = 0.9
+	local_defensiveness = 0.45
+	min_local_autonomy = 35
+	local_build_time = 0.35
+	local_missionary_strength = 0.105
+	allowed_num_of_manufactories = 2
+	picture = "hold_09"
+}
+
+
+dig_10_ui = {
+	local_development_cost = -23.2 #120
+	trade_goods_size = 3.5
+	local_tax_modifier = 1
+	local_state_maintenance_modifier = 1
+	local_defensiveness = 0.5
+	min_local_autonomy = 40
+	local_build_time = 0.4
+	local_missionary_strength = 0.115
+	allowed_num_of_manufactories = 2
+	picture = "hold_10"
+}
+
+dig_11_ui = {
+	local_development_cost = -26.75 #130
+	trade_goods_size = 5
+	local_tax_modifier = 1.25
+	local_state_maintenance_modifier = 1.25
+	local_defensiveness = 0.75
+	min_local_autonomy = 50
+	local_build_time = 0.5
+	local_missionary_strength = 0.125
+	allowed_num_of_manufactories = 3
+	picture = "hold_11"
+}
+
+
+
+hold_foundry_ui = {
+	trade_goods_size = 1
+	global_regiment_cost = -0.02
+	army_tradition = 0.15
+	picture = "hold_foundry"
+}
+
+hold_foundry_2_ui = {
+	trade_goods_size = 1.25
+	global_regiment_cost = -0.035
+	army_tradition = 0.2
+	picture = "hold_foundry_2"
+}
+
+magma_forge_ui = {
+	trade_goods_size = 1
+	global_trade_goods_size_modifier = 0.025
+	fire_damage_received = -0.025
+	shock_damage_received = -0.025
+	prestige = 0.5
+	picture = "hold_magma_forge"
+}
+
+hold_city_ui = {
+	trade_goods_size = 0.5
+	local_tax_modifier = 0.2
+	global_tax_modifier = 0.02
+	picture = "hold_city"
+}
+
+hold_city_2_ui = {
+	trade_goods_size = 0.75
+	local_tax_modifier = 0.25
+	global_tax_modifier = 0.035
+	picture = "hold_city_2"
+}
+
+artificier_hall_ui = {
+	technology_cost = -0.05
+	idea_cost = -0.05
+	global_institution_spread = 0.05
+	prestige = 0.5
+	picture = "hold_artificer_hall"
+}
+
+hold_artisan_ui = {
+	trade_goods_size = 1
+	province_trade_power_modifier = 0.15
+	trade_value_modifier = 0.1
+	trade_efficiency = 0.02
+	picture = "hold_artisan"
+}
+
+hold_artisan_2_ui = {
+	trade_goods_size = 1.5
+	province_trade_power_modifier = 0.25
+	trade_value_modifier = 0.15
+	trade_efficiency = 0.035
+	picture = "hold_artisan_2"
+}
+
+engineer_manufactory_ui = {
+	trade_goods_size = 1.5
+	province_trade_power_value = 15
+	trade_value_modifier = 0.25
+	trade_efficiency = 0.075
+	prestige = 0.5
+	picture = "hold_engineer_manufactory"
+}
+
+hold_farm_ui = {
+	trade_goods_size = 2.5
+	local_development_cost = -0.1
+	local_manpower_modifier = 0.5
+	global_manpower_modifier = 0.05
+	picture = "hold_farm"
+}
+
+hold_farm_2_ui = {
+	trade_goods_size = 4
+	local_development_cost = -0.2
+	local_manpower_modifier = 0.75
+	global_manpower_modifier = 0.075
+	picture = "hold_farm_2"
+}
+
+high_gardens_ui = {
+	trade_goods_size = 4
+	local_development_cost = -0.5
+	global_manpower_modifier = 0.10	
+	prestige = 0.5
+	picture = "hold_high_gardens"
+}
+
+hold_military_ui = {
+	yearly_army_professionalism = 0.002
+	drill_gain_modifier = 0.02
+	regiment_recruit_speed = -0.25
+	picture = "hold_military"
+}
+
+hold_military_2_ui = {
+	yearly_army_professionalism = 0.0035
+	drill_gain_modifier = 0.035
+	regiment_recruit_speed = -0.5
+	picture = "hold_military_2"
+}
+
+military_academy_ui = {
+	free_leader_pool = 1
+	discipline = 0.025
+	prestige = 0.5
+	picture = "hold_military_academy"
+}
+
+damaged_hold_ui = {
+	local_development_cost = 0.45
+	local_defensiveness = -0.15
+	trade_goods_size = -1.5
+	local_tax_modifier = -0.25
+	local_state_maintenance_modifier = 0.75
+	picture = "hold_damaged"
+}
+
+partially_ruined_hold_ui = {
+	local_development_cost = 0.75
+	local_defensiveness = -0.35
+	trade_goods_size = -2
+	local_tax_modifier = -0.5
+	local_state_maintenance_modifier = 1
+	picture = "hold_partially_ruined"
+}
+
+ruined_hold_ui = {
+	local_development_cost = 1.5
+	local_defensiveness = -0.50
+	trade_goods_size = -4
+	local_tax_modifier = -1
+	local_state_maintenance_modifier = 2
+	picture = "hold_ruined"
+}
+
+infested_hold_ui = {
+	local_development_cost = 2
+	trade_goods_size = -6
+	local_tax_modifier = -2
+	local_unrest = 10
+	local_state_maintenance_modifier = 4
+	picture = "hold_infested"
+}
+
+hold_being_restored_ui = {
+	local_state_maintenance_modifier = 1
+	global_tax_modifier = -0.05
+	production_efficiency = -0.05
+	picture = "hold_being_restored"
+}
+
+
+
+
+#Elves - when oppressed they don't contribute much but when integrated they help the economy greatly with their elvish crafts
+#Elven Minority
+elven_minority_oppressed_small_ui = {
+	local_unrest = 1
+	
+	local_tax_modifier = 0.1
+	picture = "pop_icon_elf_so"
+}
+
+elven_minority_oppressed_large_ui = {
+	local_unrest = 2
+	
+	local_tax_modifier = 0.2
+	picture = "pop_icon_elf_lo"
+}
+
+elven_minority_coexisting_small_ui = {
+	local_unrest = 1
+	local_state_maintenance_modifier = 0.05
+	
+	local_tax_modifier = 0.1
+	trade_value_modifier = 0.05
+	picture = "pop_icon_elf_sa"
+}
+
+elven_minority_coexisting_large_ui = {
+	local_unrest = 2
+	local_state_maintenance_modifier = 0.10
+	
+	local_tax_modifier = 0.2
+	trade_value_modifier = 0.1
+	picture = "pop_icon_elf_la"
+}
+
+elven_minority_integrated_small_ui = {
+	local_state_maintenance_modifier = 0.15
+	local_autonomy = 0.025
+	
+	local_tax_modifier = 0.1
+	trade_value_modifier = 0.1
+	local_production_efficiency = 0.05
+	picture = "pop_icon_elf_si"
+}
+
+elven_minority_integrated_large_ui = {
+	local_state_maintenance_modifier = 0.2
+	local_autonomy = 0.05
+	
+	local_tax_modifier = 0.2
+	trade_value_modifier = 0.1
+	local_production_efficiency = 0.1
+	picture = "pop_icon_elf_li"
+}
+
+#Elven Majority
+elven_majority_oppressed_ui = {
+	
+	local_tax_modifier = 0.2
+	
+	local_culture_conversion_cost = -0.25
+	local_culture_conversion_time = -0.25
+	picture = "pop_icon_elf_mo"
+}
+
+elven_majority_coexisting_ui = {
+	
+	local_tax_modifier = 0.2
+	trade_value_modifier = 0.1
+	
+	local_culture_conversion_cost = 0.25
+	picture = "pop_icon_elf_ma"
+}
+
+elven_majority_integrated_ui = {
+	
+	local_tax_modifier = 0.2
+	trade_value_modifier = 0.1
+	local_production_efficiency = 0.1
+	
+	local_missionary_strength = 0.01
+	local_culture_conversion_cost = 0.50
+	picture = "pop_icon_elf_mi"
+}
+
+elven_majority_primary_ui = {
+	
+	local_tax_modifier = 0.2
+	trade_value_modifier = 0.1
+	local_production_efficiency = 0.1
+	local_missionary_strength = 0.01
+	
+	picture = "pop_icon_elf_mp"
+}
+
+
+
+#Dwarves - when oppressed they're just builders used for manual labour, when integrated they can focus on more intricate dwarven works
+#Dwarf Minority
+dwarven_minority_oppressed_small_ui = {
+	local_unrest = 1
+	
+	local_fort_maintenance_modifier = -0.075
+	picture = "pop_icon_dwarf_so"
+}
+
+dwarven_minority_oppressed_large_ui = {
+	local_unrest = 2
+	
+	local_fort_maintenance_modifier = -0.15
+	picture = "pop_icon_dwarf_lo"
+}
+
+dwarven_minority_coexisting_small_ui = {
+	local_unrest = 1
+	local_state_maintenance_modifier = 0.05
+	
+	local_fort_maintenance_modifier = -0.075
+	local_build_cost = -0.05					#dwarven builders
+	picture = "pop_icon_dwarf_sa"
+}
+dwarven_minority_coexisting_large_ui = {
+	local_unrest = 1
+	local_state_maintenance_modifier = 0.10
+	
+	local_fort_maintenance_modifier = -0.15
+	local_build_cost = -0.1
+	picture = "pop_icon_dwarf_la"
+}
+
+dwarven_minority_integrated_small_ui = {
+	local_state_maintenance_modifier = 0.15
+	local_autonomy = 0.025
+	
+	local_fort_maintenance_modifier = -0.075
+	local_build_cost = -0.05
+	trade_goods_size_modifier = 0.05		
+	picture = "pop_icon_dwarf_si"
+}
+
+dwarven_minority_integrated_large_ui = {
+	local_state_maintenance_modifier = 0.20
+	local_autonomy = 0.05
+	
+	local_fort_maintenance_modifier = -0.15
+	local_build_cost = -0.1
+	trade_goods_size_modifier = 0.1		#More dwarves allow some to focus on their craft in addition to manual labour
+	picture = "pop_icon_dwarf_li"
+}
+
+#Dwarf Majority
+dwarven_majority_oppressed_ui = {
+	
+	local_fort_maintenance_modifier = -0.15
+	
+	local_culture_conversion_cost = -0.25
+	local_culture_conversion_time = -0.25
+	picture = "pop_icon_dwarf_mo"
+}
+
+dwarven_majority_coexisting_ui = {
+	
+	local_fort_maintenance_modifier = -0.15
+	local_build_cost = -0.1
+	
+	local_culture_conversion_cost = 0.25
+	picture = "pop_icon_dwarf_ma"
+}
+
+dwarven_majority_integrated_ui = {
+	
+	local_fort_maintenance_modifier = -0.15
+	local_build_cost = -0.1
+	trade_goods_size_modifier = 0.1			#More dwarves allow some to focus on their craft in addition to manual labour
+	
+	local_missionary_strength = 0.01
+	local_culture_conversion_cost = 0.50
+	picture = "pop_icon_dwarf_mi"
+}
+
+dwarven_majority_primary_ui = {
+	
+	local_fort_maintenance_modifier = -0.15
+	local_build_cost = -0.1
+	trade_goods_size_modifier = 0.1	
+	local_missionary_strength = 0.01
+	
+	picture = "pop_icon_dwarf_mp"
+}
+
+
+
+#Gnomes - when oppressed they offer meagre goods and trinkets, when integrated they offer a booming academic community
+#Gnomish Minority
+gnomish_minority_oppressed_small_ui = {
+	local_unrest = 1
+	
+	local_production_efficiency = 0.05			#Gnomes are clever tinkers and artisans
+	picture = "pop_icon_gnome_so"
+}
+
+gnomish_minority_oppressed_large_ui = {
+	local_unrest = 2
+	
+	local_production_efficiency = 0.1
+	picture = "pop_icon_gnome_lo"
+}
+
+gnomish_minority_coexisting_small_ui = {
+	local_unrest = 1
+	local_state_maintenance_modifier = 0.05
+	
+	local_production_efficiency = 0.05
+	local_institution_spread = 0.05
+	picture = "pop_icon_gnome_sa"
+}
+gnomish_minority_coexisting_large_ui = {
+	local_unrest = 2
+	local_state_maintenance_modifier = 0.10
+	
+	local_production_efficiency = 0.1
+	local_institution_spread = 0.1
+	picture = "pop_icon_gnome_la"
+}
+
+gnomish_minority_integrated_small_ui = {
+	local_state_maintenance_modifier = 0.15
+	local_autonomy = 0.025
+	
+	local_production_efficiency = 0.05
+	local_institution_spread = 0.05
+	local_tax_modifier = 0.05
+	picture = "pop_icon_gnome_si"
+}
+
+gnomish_minority_integrated_large_ui = {
+	local_state_maintenance_modifier = 0.20
+	local_autonomy = 0.05
+	
+	local_production_efficiency = 0.1
+	local_institution_spread = 0.1
+	local_tax_modifier = 0.1
+	picture = "pop_icon_gnome_li"
+}
+
+#Gnomish Majority
+gnomish_majority_oppressed_ui = {
+	
+	local_production_efficiency = 0.1
+	
+	local_culture_conversion_cost = -0.25
+	local_culture_conversion_time = -0.25
+	picture = "pop_icon_gnome_mo"
+}
+
+gnomish_majority_coexisting_ui = {
+	
+	local_production_efficiency = 0.1
+	local_institution_spread = 0.1
+	
+	local_culture_conversion_cost = 0.25
+	picture = "pop_icon_gnome_ma"
+}
+
+gnomish_majority_integrated_ui = {
+	
+	local_production_efficiency = 0.1
+	local_institution_spread = 0.1
+	local_tax_modifier = 0.1
+	
+	local_missionary_strength = 0.01
+	local_culture_conversion_cost = 0.50
+	picture = "pop_icon_gnome_mi"
+}
+
+gnomish_majority_primary_ui = {
+	
+	local_production_efficiency = 0.1
+	local_institution_spread = 0.1
+	local_tax_modifier = 0.1
+	local_missionary_strength = 0.01
+	
+	picture = "pop_icon_gnome_mp"
+}
+
+
+#Halflings - when oppressed they're good for growing provinces, when integrated they're super good at growing provinces + help a lot with trade
+#Halfling Minority
+halfling_minority_oppressed_small_ui = {
+	local_unrest = 1
+	
+	local_development_cost = -0.05				#The abundance and versatility of halflings make them suited for any odd jobs that thrive in an urban setting
+	picture = "pop_icon_halfling_so"
+}
+
+halfling_minority_oppressed_large_ui = {
+	local_unrest = 2
+	
+	local_development_cost = -0.1
+	picture = "pop_icon_halfling_lo"
+}
+
+halfling_minority_coexisting_small_ui = {
+	local_unrest = 1
+	local_state_maintenance_modifier = 0.05
+	
+	local_development_cost = -0.05
+	province_trade_power_modifier = 0.05		#Halfling wares and stores pop-up
+	picture = "pop_icon_halfling_sa"
+}
+
+halfling_minority_coexisting_large_ui = {
+	local_unrest = 2
+	local_state_maintenance_modifier = 0.10
+	
+	local_development_cost = -0.1
+	province_trade_power_modifier = 0.1
+	picture = "pop_icon_halfling_la"
+}
+
+halfling_minority_integrated_small_ui = {
+	local_state_maintenance_modifier = 0.15
+	local_autonomy = 0.025
+	
+	local_development_cost = -0.05
+	province_trade_power_modifier = 0.05		#Halfling wares and stores pop-up
+	supply_limit_modifier = 0.1
+	picture = "pop_icon_halfling_si"
+}
+
+halfling_minority_integrated_large_ui = {
+	local_state_maintenance_modifier = 0.20
+	local_autonomy = 0.05
+	
+	local_development_cost = -0.1
+	province_trade_power_modifier = 0.1
+	supply_limit_modifier = 0.25				#halfling runners and networks
+	picture = "pop_icon_halfling_li"
+}
+
+#Halfling Majority
+halfling_majority_oppressed_ui = {
+	
+	local_development_cost = -0.1
+	
+	local_culture_conversion_cost = -0.25
+	local_culture_conversion_time = -0.25
+	picture = "pop_icon_halfling_mo"
+}
+
+halfling_majority_coexisting_ui = {
+	
+	local_development_cost = -0.1
+	province_trade_power_modifier = 0.1
+	
+	local_culture_conversion_cost = 0.25
+	picture = "pop_icon_halfling_ma"
+}
+
+halfling_majority_integrated_ui = {
+	
+	local_development_cost = -0.1
+	province_trade_power_modifier = 0.1
+	supply_limit_modifier = 0.25				#halfling runners and networks
+	
+	local_missionary_strength = 0.01
+	local_culture_conversion_cost = 0.50
+	picture = "pop_icon_halfling_mi"
+}
+
+halfling_majority_primary_ui = {
+	
+	local_development_cost = -0.1
+	province_trade_power_modifier = 0.1
+	supply_limit_modifier = 0.25
+	local_missionary_strength = 0.01
+	
+	picture = "pop_icon_halfling_mp"
+}
+
+
+#Humans - when oppressed they're just cannon fodder, then integrated they help develop provinces
+#Human Minority
+human_minority_oppressed_small_ui = {
+	local_unrest = 1
+	
+	local_manpower_modifier = 0.05				#If you're gonna have humans in your province you're gonna draft them to your army cos they're so abundant and versatile
+	picture = "pop_icon_human_so"
+}
+
+human_minority_oppressed_large_ui = {
+	local_unrest = 2
+	
+	local_manpower_modifier = 0.1
+	picture = "pop_icon_human_lo"
+}
+
+human_minority_coexisting_small_ui = {
+	local_unrest = 1
+	local_state_maintenance_modifier = 0.05
+	
+	local_manpower_modifier = 0.05			
+	local_development_cost = -0.05
+	picture = "pop_icon_human_sa"
+}
+
+human_minority_coexisting_large_ui = {
+	local_unrest = 1
+	local_state_maintenance_modifier = 0.10
+	
+	local_manpower_modifier = 0.1			
+	local_development_cost = -0.1				#There's a reason why humans have huge cities and are the most powerful
+	picture = "pop_icon_human_la"
+}
+
+human_minority_integrated_small_ui = {
+	local_state_maintenance_modifier = 0.15
+	local_autonomy = 0.025
+	
+	local_manpower_modifier = 0.05			
+	local_development_cost = -0.05
+	local_sailors_modifier = 0.1
+	picture = "pop_icon_human_si"
+}
+
+human_minority_integrated_large_ui = {
+	local_state_maintenance_modifier = 0.20
+	local_autonomy = 0.05
+	
+	local_manpower_modifier = 0.1			
+	local_development_cost = -0.1				#There's a reason why humans have huge cities and are the most powerful
+	local_sailors_modifier = 0.2
+	picture = "pop_icon_human_li"
+}
+
+#Human Majority
+human_majority_oppressed_ui = {
+	
+	local_manpower_modifier = 0.1			
+	
+	local_culture_conversion_cost = -0.25
+	local_culture_conversion_time = -0.25
+	picture = "pop_icon_human_mo"
+}
+
+human_majority_coexisting_ui = {
+
+	local_manpower_modifier = 0.1			
+	local_development_cost = -0.1				#There's a reason why humans have huge cities and are the most powerful
+	
+	local_culture_conversion_cost = 0.25
+	picture = "pop_icon_human_ma"
+}
+
+human_majority_integrated_ui = {
+	
+	local_manpower_modifier = 0.1			
+	local_development_cost = -0.1				#There's a reason why humans have huge cities and are the most powerful
+	local_sailors_modifier = 0.2
+	
+	local_missionary_strength = 0.01
+	local_culture_conversion_cost = 0.50
+	picture = "pop_icon_human_mi"
+}
+
+human_majority_primary_ui = {
+	
+	local_manpower_modifier = 0.1			
+	local_development_cost = -0.1
+	local_sailors_modifier = 0.2
+	local_missionary_strength = 0.01
+	
+	picture = "pop_icon_human_mp"
+}
+
+#Half Orcish - when oppressed they're just thugs and guards, when integrated they defend provinces
+#Half Orc Minority
+half_orcish_minority_oppressed_small_ui = {
+	local_unrest = 1
+	
+	local_manpower_modifier = 0.075
+	picture = "pop_icon_half_orc_so"
+}
+
+half_orcish_minority_oppressed_large_ui = {
+	local_unrest = 2
+	
+	local_manpower_modifier = 0.15
+	picture = "pop_icon_half_orc_lo"
+}
+
+half_orcish_minority_coexisting_small_ui = {
+	local_unrest = 1
+	local_state_maintenance_modifier = 0.05
+	
+	local_manpower_modifier = 0.075
+	local_sailors_modifier = 0.075
+	picture = "pop_icon_half_orc_sa"
+}
+
+half_orcish_minority_coexisting_large_ui = {
+	local_unrest = 2
+	local_state_maintenance_modifier = 0.10
+	
+	local_manpower_modifier = 0.15
+	local_sailors_modifier = 0.15
+	picture = "pop_icon_half_orc_la"
+}
+
+half_orcish_minority_integrated_small_ui = {
+	local_state_maintenance_modifier = 0.15
+	local_autonomy = 0.025
+	
+	local_manpower_modifier = 0.075
+	local_sailors_modifier = 0.075
+	trade_goods_size_modifier = 0.05
+	picture = "pop_icon_half_orc_si"
+}
+
+half_orcish_minority_integrated_large_ui = {
+	local_state_maintenance_modifier = 0.20
+	local_autonomy = 0.05
+	
+	local_manpower_modifier = 0.15
+	local_sailors_modifier = 0.15
+	trade_goods_size_modifier = 0.1
+	picture = "pop_icon_half_orc_li"
+}
+
+#Half Orc Majority
+half_orcish_majority_oppressed_ui = {
+	
+	local_manpower_modifier = 0.15
+
+	local_culture_conversion_cost = -0.25
+	local_culture_conversion_time = -0.25
+	picture = "pop_icon_half_orc_mo"
+}
+
+half_orcish_majority_coexisting_ui = {
+	
+	local_manpower_modifier = 0.15
+	local_sailors_modifier = 0.15
+	
+	local_culture_conversion_cost = 0.25
+	picture = "pop_icon_half_orc_ma"
+}
+
+half_orcish_majority_integrated_ui = {
+
+	local_manpower_modifier = 0.15
+	local_sailors_modifier = 0.15
+	trade_goods_size_modifier = 0.1
+	
+	local_missionary_strength = 0.01
+	local_culture_conversion_cost = 0.50
+	picture = "pop_icon_half_orc_mi"
+}
+
+half_orcish_majority_primary_ui = {
+
+	local_manpower_modifier = 0.15
+	local_sailors_modifier = 0.15
+	trade_goods_size_modifier = 0.1
+	local_missionary_strength = 0.01
+	
+	picture = "pop_icon_half_orc_mp"
+}
+
+
+#Half Elven - when oppressed they're just thugs and guards, when integrated they defend provinces
+#Half Elven Minority
+half_elven_minority_oppressed_small_ui = {
+	local_unrest = 1
+	
+	local_tax_modifier = 0.05
+	picture = "pop_icon_half_elf_so"
+}
+
+half_elven_minority_oppressed_large_ui = {
+	local_unrest = 2
+	
+	local_tax_modifier = 0.1
+	picture = "pop_icon_half_elf_lo"
+}
+
+half_elven_minority_coexisting_small_ui = {
+	local_unrest = 1
+	local_state_maintenance_modifier = 0.05
+	
+	local_tax_modifier = 0.05
+	local_development_cost = -0.05
+	picture = "pop_icon_half_elf_sa"
+}
+
+half_elven_minority_coexisting_large_ui = {
+	local_unrest = 2
+	local_state_maintenance_modifier = 0.10
+	
+	local_tax_modifier = 0.1
+	local_development_cost = -0.1
+	picture = "pop_icon_half_elf_la"
+}
+
+half_elven_minority_integrated_small_ui = {
+	local_state_maintenance_modifier = 0.15
+	local_autonomy = 0.025
+	
+	local_tax_modifier = 0.05
+	local_development_cost = -0.05
+	local_core_creation = -0.1
+	picture = "pop_icon_half_elf_si"
+}
+
+half_elven_minority_integrated_large_ui = {
+	local_state_maintenance_modifier = 0.20
+	local_autonomy = 0.05
+	
+	local_tax_modifier = 0.1
+	local_development_cost = -0.1
+	local_core_creation = -0.2
+	picture = "pop_icon_half_elf_li"
+}
+
+#Half Elven Majority - will never happen but sure
+half_elven_majority_oppressed_ui = {
+	
+	local_tax_modifier = 0.1
+	
+	local_culture_conversion_cost = -0.25
+	local_culture_conversion_time = -0.25
+	picture = "pop_icon_half_elf_mo"
+}
+
+half_elven_majority_coexisting_ui = {
+	
+	local_tax_modifier = 0.1
+	local_development_cost = -0.1
+	
+	local_culture_conversion_cost = 0.25
+	picture = "pop_icon_half_elf_ma"
+}
+
+half_elven_majority_integrated_ui = {
+
+	local_tax_modifier = 0.1
+	local_development_cost = -0.1
+	local_core_creation = -0.2			#they are diplomats so they can argue your case, in anbennar they are signs of legitimacy
+	
+	local_missionary_strength = 0.01
+	local_culture_conversion_cost = 0.50
+	picture = "pop_icon_half_elf_mi"
+}
+
+half_elven_majority_primary_ui = {
+
+	local_tax_modifier = 0.1
+	local_development_cost = -0.1
+	local_core_creation = -0.2
+	local_missionary_strength = 0.01
+	
+	picture = "pop_icon_half_elf_mp"
+}
+
+
+#Ruinborn Elf - when oppressed they're just thugs and guards, when integrated they defend provinces
+#Ruinborn Elf Minority
+ruinborn_minority_oppressed_small_ui = {
+	local_unrest = 1
+	
+	local_build_cost = -0.05		#cheap labour
+	picture = "pop_icon_ruinborn_so"
+}
+
+ruinborn_minority_oppressed_large_ui = {
+	local_unrest = 2
+	
+	local_build_cost = -0.1
+	picture = "pop_icon_ruinborn_lo"
+}
+
+ruinborn_minority_coexisting_small_ui = {
+	local_unrest = 1
+	local_state_maintenance_modifier = 0.05
+	
+	local_build_cost = -0.05
+	supply_limit_modifier = 0.1
+	picture = "pop_icon_ruinborn_sa"
+}
+
+ruinborn_minority_coexisting_large_ui = {
+	local_unrest = 2
+	local_state_maintenance_modifier = 0.10
+	
+	local_build_cost = -0.1
+	supply_limit_modifier = 0.2
+	picture = "pop_icon_ruinborn_la"
+}
+
+ruinborn_minority_integrated_small_ui = {
+	local_state_maintenance_modifier = 0.15
+	local_autonomy = 0.025
+	
+	local_build_cost = -0.05
+	supply_limit_modifier = 0.1
+	local_monthly_devastation = -0.05
+	picture = "pop_icon_ruinborn_si"
+}
+
+ruinborn_minority_integrated_large_ui = {
+	local_state_maintenance_modifier = 0.20
+	local_autonomy = 0.05
+	
+	local_build_cost = -0.1
+	supply_limit_modifier = 0.2
+	local_monthly_devastation = -0.1
+	picture = "pop_icon_ruinborn_li"
+}
+
+#Ruinborn Elf Majority - will never happen but sure
+ruinborn_majority_oppressed_ui = {
+	
+	local_build_cost = -0.1
+	
+	local_culture_conversion_cost = -0.25
+	local_culture_conversion_time = -0.25
+	picture = "pop_icon_ruinborn_mo"
+}
+
+ruinborn_majority_coexisting_ui = {
+	
+	local_build_cost = -0.1
+	supply_limit_modifier = 0.2
+	
+	local_culture_conversion_cost = 0.25
+	picture = "pop_icon_ruinborn_ma"
+}
+
+ruinborn_majority_integrated_ui = {
+
+	local_build_cost = -0.1
+	supply_limit_modifier = 0.2
+	local_monthly_devastation = -0.1
+	
+	local_missionary_strength = 0.01
+	local_culture_conversion_cost = 0.50
+	picture = "pop_icon_ruinborn_mi"
+}
+
+ruinborn_majority_primary_ui = {
+
+	local_build_cost = -0.1
+	supply_limit_modifier = 0.2
+	local_monthly_devastation = -0.1
+	local_missionary_strength = 0.01
+	
+	picture = "pop_icon_ruinborn_mp"
+}
+
+#Monstrous Races - HARDER to integrate
+
+
+#Orcish - when oppressed they're just cheap manual labour, when integrated they help boost armies
+#Orcish Minority
+orcish_minority_oppressed_small_ui = {
+	local_unrest = 3
+	
+	#local_build_cost = -0.05				#Cheap manual labour
+	trade_goods_size_modifier = 0.05		#its slaves now
+	#local_manpower_modifier = 0.1
+	picture = "pop_icon_orc_so"
+}
+
+orcish_minority_oppressed_large_ui = {
+	local_unrest = 4
+	
+	#local_build_cost = -0.1
+	trade_goods_size_modifier = 0.1
+	picture = "pop_icon_orc_lo"
+}
+
+orcish_minority_coexisting_small_ui = {
+	local_unrest = 2
+	local_state_maintenance_modifier = 0.05
+	
+	trade_goods_size_modifier = 0.05
+	local_manpower_modifier = 0.1
+	picture = "pop_icon_orc_sa"
+}
+
+orcish_minority_coexisting_large_ui = {
+	local_unrest = 3
+	local_state_maintenance_modifier = 0.10
+	
+	trade_goods_size_modifier = 0.1
+	local_manpower_modifier = 0.2
+	picture = "pop_icon_orc_la"
+}
+
+orcish_minority_integrated_small_ui = {
+	local_state_maintenance_modifier = 0.15
+	local_autonomy = 0.025
+	
+	trade_goods_size_modifier = 0.05
+	local_manpower_modifier = 0.1
+	local_regiment_cost = -0.1
+	picture = "pop_icon_orc_si"
+}
+
+orcish_minority_integrated_large_ui = {
+	local_state_maintenance_modifier = 0.20
+	local_autonomy = 0.05
+	
+	trade_goods_size_modifier = 0.1
+	local_manpower_modifier = 0.2
+	local_regiment_cost = -0.2
+	picture = "pop_icon_orc_li"
+}
+
+#Orcish Majority
+orcish_majority_oppressed_ui = {
+
+	trade_goods_size_modifier = 0.1
+	
+	local_culture_conversion_cost = -0.25
+	local_culture_conversion_time = -0.25
+	picture = "pop_icon_orc_mo"
+}
+
+orcish_majority_coexisting_ui = {
+
+	trade_goods_size_modifier = 0.1
+	local_manpower_modifier = 0.2
+	
+	local_culture_conversion_cost = 0.25
+	picture = "pop_icon_orc_ma"
+}
+
+orcish_majority_integrated_ui = {
+	
+	trade_goods_size_modifier = 0.1
+	local_manpower_modifier = 0.2
+	local_regiment_cost = -0.2
+	
+	local_missionary_strength = 0.01
+	local_culture_conversion_cost = 0.50
+	picture = "pop_icon_orc_mi"
+}
+
+orcish_majority_primary_ui = {
+	
+	trade_goods_size_modifier = 0.1
+	local_manpower_modifier = 0.2
+	local_regiment_cost = -0.2
+	local_missionary_strength = 0.01
+	
+	picture = "pop_icon_orc_mp"
+}
+
+#Kobold - when oppressed they're just cheap manual labour, when integrated they help harass enemies
+#Kobold Minority
+kobold_minority_oppressed_small_ui = {
+	local_unrest = 1
+	
+	local_build_cost = -0.1				#Cheap manual labour
+	picture = "pop_icon_kobold_so"
+}
+
+kobold_minority_oppressed_large_ui = {
+	local_unrest = 2
+	
+	local_build_cost = -0.2
+	picture = "pop_icon_kobold_lo"
+}
+
+kobold_minority_coexisting_small_ui = {
+	local_unrest = 1
+	local_state_maintenance_modifier = 0.05
+	
+	local_build_cost = -0.1
+	local_build_time = -0.05
+	picture = "pop_icon_kobold_sa"
+}
+
+kobold_minority_coexisting_large_ui = {
+	local_unrest = 2
+	local_state_maintenance_modifier = 0.10
+	
+	local_build_cost = -0.2
+	local_build_time = -0.1
+	picture = "pop_icon_kobold_la"
+}
+
+kobold_minority_integrated_small_ui = {
+	local_state_maintenance_modifier = 0.15
+	local_autonomy = 0.025
+	
+	local_build_cost = -0.1
+	local_build_time = -0.05
+	local_hostile_attrition = 0.5		#Kobolds can now coexist and can defend provinces
+	picture = "pop_icon_kobold_si"
+}
+
+kobold_minority_integrated_large_ui = {
+	local_state_maintenance_modifier = 0.20
+	local_autonomy = 0.05
+	
+	local_build_cost = -0.2
+	local_build_time = -0.1
+	local_hostile_attrition = 1
+	picture = "pop_icon_kobold_li"
+}
+
+#Kobold Majority
+kobold_majority_oppressed_ui = {
+	
+	local_build_cost = -0.2
+	
+	local_culture_conversion_cost = -0.25
+	local_culture_conversion_time = -0.25
+	picture = "pop_icon_kobold_mo"
+}
+
+kobold_majority_coexisting_ui = {
+	
+	local_build_cost = -0.2
+	local_build_time = -0.1
+	
+	local_culture_conversion_cost = 0.25
+	picture = "pop_icon_kobold_ma"
+}
+
+kobold_majority_integrated_ui = {
+
+	local_build_cost = -0.2
+	local_build_time = -0.1
+	local_hostile_attrition = 1
+	
+	local_missionary_strength = 0.01
+	local_culture_conversion_cost = 0.50
+	picture = "pop_icon_kobold_mi"
+}
+
+kobold_majority_primary_ui = {
+
+	local_build_cost = -0.2
+	local_build_time = -0.1
+	local_hostile_attrition = 1
+	local_missionary_strength = 0.01
+	
+	picture = "pop_icon_kobold_mp"
+}
+
+#Gnollish - when oppressed they're just mercs, when integrated are good scavengerfolk
+#Gnollish Minority
+gnollish_minority_oppressed_small_ui = {
+	local_unrest = 2
+	
+	trade_goods_size_modifier = 0.05
+	picture = "pop_icon_gnoll_so"
+}
+
+gnollish_minority_oppressed_large_ui = {
+	local_unrest = 4
+	
+	trade_goods_size_modifier = 0.1
+	picture = "pop_icon_gnoll_lo"
+}
+
+gnollish_minority_coexisting_small_ui = {
+	local_unrest = 1
+	local_state_maintenance_modifier = 0.05
+	
+	trade_goods_size_modifier = 0.05
+	local_manpower_modifier = 0.05
+	picture = "pop_icon_gnoll_sa"
+}
+
+gnollish_minority_coexisting_large_ui = {
+	local_unrest = 3
+	local_state_maintenance_modifier = 0.10
+	
+	trade_goods_size_modifier = 0.1
+	local_manpower_modifier = 0.1
+	picture = "pop_icon_gnoll_la"
+}
+
+gnollish_minority_integrated_small_ui = {
+	local_state_maintenance_modifier = 0.15
+	local_autonomy = 0.025
+	
+	trade_goods_size_modifier = 0.05
+	local_manpower_modifier = 0.05
+	province_trade_power_value = 0.05
+	picture = "pop_icon_gnoll_si"
+}
+
+gnollish_minority_integrated_large_ui = {
+	local_state_maintenance_modifier = 0.20
+	local_autonomy = 0.05
+	
+	trade_goods_size_modifier = 0.1
+	local_manpower_modifier = 0.1
+	province_trade_power_value = 0.1
+	picture = "pop_icon_gnoll_li"
+}
+
+#Gnollish Majority
+gnollish_majority_oppressed_ui = {
+	
+	trade_goods_size_modifier = 0.1
+	
+	local_culture_conversion_cost = -0.25
+	local_culture_conversion_time = -0.25
+	picture = "pop_icon_gnoll_mo"
+}
+
+gnollish_majority_coexisting_ui = {
+	
+	trade_goods_size_modifier = 0.1
+	local_manpower_modifier = 0.1
+	
+	local_culture_conversion_cost = 0.25
+	picture = "pop_icon_gnoll_ma"
+}
+
+gnollish_majority_integrated_ui = {
+
+	trade_goods_size_modifier = 0.1
+	local_manpower_modifier = 0.1
+	province_trade_power_value = 0.1
+	
+	local_missionary_strength = 0.01
+	local_culture_conversion_cost = 0.50
+	picture = "pop_icon_gnoll_mi"
+}
+
+gnollish_majority_primary_ui = {
+
+	trade_goods_size_modifier = 0.1
+	local_manpower_modifier = 0.1
+	province_trade_power_value = 0.1
+	local_missionary_strength = 0.01
+	
+	picture = "pop_icon_gnoll_mp"
+}
+
+
+#Harpy - when oppressed they're just mercs, when integrated are good scavengerfolk
+#Harpy Minority
+harpy_minority_oppressed_small_ui = {
+	local_unrest = 2
+	
+	local_build_time = -0.05
+	picture = "pop_icon_harpy_so"
+}
+
+harpy_minority_oppressed_large_ui = {
+	local_unrest = 4
+	
+	local_build_time = -0.1
+	picture = "pop_icon_harpy_lo"
+}
+
+harpy_minority_coexisting_small_ui = {
+	local_unrest = 1
+	local_state_maintenance_modifier = 0.05
+	
+	local_build_time = -0.05
+	local_friendly_movement_speed = 0.1			#halfling guides and scouts
+	picture = "pop_icon_harpy_sa"
+}
+
+harpy_minority_coexisting_large_ui = {
+	local_unrest = 3
+	local_state_maintenance_modifier = 0.10
+	
+	local_build_time = -0.1
+	local_friendly_movement_speed = 0.2
+	picture = "pop_icon_harpy_la"
+}
+
+harpy_minority_integrated_small_ui = {
+	local_state_maintenance_modifier = 0.15
+	local_autonomy = 0.025
+	
+	local_build_time = -0.05
+	local_friendly_movement_speed = 0.1
+	local_hostile_attrition = 1
+	picture = "pop_icon_harpy_si"
+}
+
+harpy_minority_integrated_large_ui = {
+	local_state_maintenance_modifier = 0.20
+	local_autonomy = 0.05
+	
+	local_build_time = -0.1
+	local_friendly_movement_speed = 0.2
+	local_hostile_attrition = 2
+	picture = "pop_icon_harpy_li"
+}
+
+#Harpy Majority
+harpy_majority_oppressed_ui = {
+	
+	local_build_time = -0.1
+	
+	local_culture_conversion_cost = -0.25
+	local_culture_conversion_time = -0.25
+	picture = "pop_icon_harpy_mo"
+}
+
+harpy_majority_coexisting_ui = {
+	
+	local_build_time = -0.1
+	local_friendly_movement_speed = 0.2
+	
+	local_culture_conversion_cost = 0.25
+	picture = "pop_icon_harpy_ma"
+}
+
+harpy_majority_integrated_ui = {
+
+	local_build_time = -0.1
+	local_friendly_movement_speed = 0.2
+	local_hostile_attrition = 2
+	
+	local_missionary_strength = 0.01
+	local_culture_conversion_cost = 0.50
+	picture = "pop_icon_harpy_mi"
+}
+
+harpy_majority_primary_ui = {
+
+	local_build_time = -0.1
+	local_friendly_movement_speed = 0.2
+	local_hostile_attrition = 2
+	local_missionary_strength = 0.01
+	
+	picture = "pop_icon_harpy_mp"
+}
+
+
+
+#Goblin - when oppressed they're just mercs, when integrated are good scavengerfolk
+#Goblin Minority
+goblin_minority_oppressed_small_ui = {
+	local_unrest = 1
+	
+	local_regiment_cost = -0.1
+	picture = "pop_icon_goblin_so"
+}
+
+goblin_minority_oppressed_large_ui = {
+	local_unrest = 2
+	
+	local_regiment_cost = -0.2
+	picture = "pop_icon_goblin_lo"
+}
+
+goblin_minority_coexisting_small_ui = {
+	local_unrest = 1
+	local_state_maintenance_modifier = 0.05
+	
+	local_regiment_cost = -0.1
+	local_hostile_movement_speed = -0.1
+	picture = "pop_icon_goblin_sa"
+}
+
+goblin_minority_coexisting_large_ui = {
+	local_unrest = 2
+	local_state_maintenance_modifier = 0.10
+	
+	local_regiment_cost = -0.2
+	local_hostile_movement_speed = -0.2
+	picture = "pop_icon_goblin_la"
+}
+
+goblin_minority_integrated_small_ui = {
+	local_state_maintenance_modifier = 0.15
+	local_autonomy = 0.025
+	
+	local_regiment_cost = -0.1
+	local_hostile_movement_speed = -0.1
+	local_production_efficiency = 0.1
+	picture = "pop_icon_goblin_si"
+}
+
+goblin_minority_integrated_large_ui = {
+	local_state_maintenance_modifier = 0.20
+	local_autonomy = 0.05
+	
+	local_regiment_cost = -0.1
+	local_hostile_movement_speed = -0.2
+	local_production_efficiency = 0.2
+	picture = "pop_icon_goblin_li"
+}
+
+#Goblin Majority
+goblin_majority_oppressed_ui = {
+	
+	local_regiment_cost = -0.2
+	
+	local_culture_conversion_cost = -0.25
+	local_culture_conversion_time = -0.25
+	picture = "pop_icon_goblin_mo"
+}
+
+goblin_majority_coexisting_ui = {
+	
+	local_regiment_cost = -0.2
+	local_hostile_movement_speed = -0.2
+	
+	local_culture_conversion_cost = 0.25
+	picture = "pop_icon_goblin_ma"
+}
+
+goblin_majority_integrated_ui = {
+
+	local_regiment_cost = -0.2
+	local_hostile_movement_speed = -0.2
+	local_production_efficiency = 0.2
+	
+	local_missionary_strength = 0.01
+	local_culture_conversion_cost = 0.50
+	picture = "pop_icon_goblin_mi"
+}
+
+goblin_majority_primary_ui = {
+
+	local_regiment_cost = -0.2
+	local_hostile_movement_speed = -0.2
+	local_production_efficiency = 0.2
+	local_missionary_strength = 0.01
+	
+	picture = "pop_icon_goblin_mp"
+}
+
+
+#Troll - when oppressed they're just mercs, when integrated are good scavengerfolk
+#Troll Minority
+troll_minority_oppressed_small_ui = {
+	local_unrest = 3
+	
+	supply_limit_modifier = 0.05
+	picture = "pop_icon_troll_so"
+}
+
+troll_minority_oppressed_large_ui = {
+	local_unrest = 4
+	
+	supply_limit_modifier = 0.1
+	picture = "pop_icon_troll_lo"
+}
+
+troll_minority_coexisting_small_ui = {
+	local_unrest = 2
+	local_state_maintenance_modifier = 0.05
+	
+	supply_limit_modifier = 0.05
+ 	local_hostile_movement_speed = -0.1
+	picture = "pop_icon_troll_sa"
+}
+
+troll_minority_coexisting_large_ui = {
+	local_unrest = 3
+	local_state_maintenance_modifier = 0.10
+	
+	supply_limit_modifier = 0.1
+ 	local_hostile_movement_speed = -0.2
+	picture = "pop_icon_troll_la"
+}
+
+troll_minority_integrated_small_ui = {
+	local_state_maintenance_modifier = 0.15
+	local_autonomy = 0.025
+	
+	supply_limit_modifier = 0.05
+ 	local_hostile_movement_speed = -0.1
+	local_manpower_modifier = 0.1
+	picture = "pop_icon_troll_si"
+}
+
+troll_minority_integrated_large_ui = {
+	local_state_maintenance_modifier = 0.20
+	local_autonomy = 0.05
+	
+	supply_limit_modifier = 0.1
+ 	local_hostile_movement_speed = -0.2
+	local_manpower_modifier = 0.2
+	picture = "pop_icon_troll_li"
+}
+
+#Troll Majority
+troll_majority_oppressed_ui = {
+	
+	supply_limit_modifier = 0.1
+	
+	local_culture_conversion_cost = -0.25
+	local_culture_conversion_time = -0.25
+	picture = "pop_icon_troll_mo"
+}
+
+troll_majority_coexisting_ui = {
+	
+	supply_limit_modifier = 0.1
+ 	local_hostile_movement_speed = -0.2
+	
+	local_culture_conversion_cost = 0.25
+	picture = "pop_icon_troll_ma"
+}
+
+troll_majority_integrated_ui = {
+
+	supply_limit_modifier = 0.1
+ 	local_hostile_movement_speed = -0.2
+	local_manpower_modifier = 0.2
+	
+	local_missionary_strength = 0.01
+	local_culture_conversion_cost = 0.50
+	picture = "pop_icon_troll_mi"
+}
+
+troll_majority_primary_ui = {
+
+	supply_limit_modifier = 0.1
+ 	local_hostile_movement_speed = -0.2
+	local_manpower_modifier = 0.2
+	local_missionary_strength = 0.01
+	
+	picture = "pop_icon_troll_mp"
+}
+
+#Ogre - oppressed : quick labour cos they strong, coexisting: tax collector brutes, integrated: military lads
+#Ogre Minority
+ogre_minority_oppressed_small_ui = {
+	local_unrest = 3
+	
+	local_build_time = -0.1
+	picture = "pop_icon_ogre_so"
+}
+
+ogre_minority_oppressed_large_ui = {
+	local_unrest = 4
+	
+	local_build_time = -0.2
+	picture = "pop_icon_ogre_lo"
+}
+
+ogre_minority_coexisting_small_ui = {
+	local_unrest = 2
+	local_state_maintenance_modifier = 0.05
+	
+	local_build_time = -0.1
+	local_tax_modifier = 0.05
+	picture = "pop_icon_ogre_sa"
+}
+
+ogre_minority_coexisting_large_ui = {
+	local_unrest = 3
+	local_state_maintenance_modifier = 0.10
+	
+	local_build_time = -0.2
+	local_tax_modifier = 0.1
+	picture = "pop_icon_ogre_la"
+}
+
+ogre_minority_integrated_small_ui = {
+	local_state_maintenance_modifier = 0.15
+	local_autonomy = 0.025
+	
+	local_build_time = -0.1
+	local_tax_modifier = 0.05
+	local_manpower_modifier = 0.1
+	picture = "pop_icon_ogre_si"
+}
+
+ogre_minority_integrated_large_ui = {
+	local_state_maintenance_modifier = 0.20
+	local_autonomy = 0.05
+	
+	local_build_time = -0.2
+	local_tax_modifier = 0.1
+	local_manpower_modifier = 0.2
+	picture = "pop_icon_ogre_li"
+}
+
+#Ogre Majority
+ogre_majority_oppressed_ui = {
+	
+	local_build_time = -0.2
+	
+	local_culture_conversion_cost = -0.25
+	local_culture_conversion_time = -0.25
+	picture = "pop_icon_ogre_mo"
+}
+
+ogre_majority_coexisting_ui = {
+	
+	local_build_time = -0.2
+	local_tax_modifier = 0.1
+	
+	local_culture_conversion_cost = 0.25
+	picture = "pop_icon_ogre_ma"
+}
+
+ogre_majority_integrated_ui = {
+
+	local_build_time = -0.2
+	local_tax_modifier = 0.1
+	local_manpower_modifier = 0.2
+	
+	local_missionary_strength = 0.01
+	local_culture_conversion_cost = 0.50
+	picture = "pop_icon_ogre_mi"
+}
+
+ogre_majority_primary_ui = {
+
+	local_build_time = -0.2
+	local_tax_modifier = 0.1
+	local_manpower_modifier = 0.2
+	local_missionary_strength = 0.01
+	
+	picture = "pop_icon_ogre_mp"
+}
+
+
+
+#Centaur - oppressed: couriers, coexisting: better supply network, integrated: forward scouts
+#Centaur Minority
+centaur_minority_oppressed_small_ui = {
+	local_unrest = 3
+	
+	province_trade_power_modifier = 0.05
+	picture = "pop_icon_centaur_so"
+}
+
+centaur_minority_oppressed_large_ui = {
+	local_unrest = 4
+	
+	province_trade_power_modifier = 0.1
+	picture = "pop_icon_centaur_lo"
+}
+
+centaur_minority_coexisting_small_ui = {
+	local_unrest = 2
+	local_state_maintenance_modifier = 0.05
+	
+	province_trade_power_modifier = 0.05
+ 	supply_limit_modifier = 0.05
+	picture = "pop_icon_centaur_sa"
+}
+
+centaur_minority_coexisting_large_ui = {
+	local_unrest = 3
+	local_state_maintenance_modifier = 0.10
+	
+	province_trade_power_modifier = 0.1
+ 	supply_limit_modifier = 0.1
+	picture = "pop_icon_centaur_la"
+}
+
+centaur_minority_integrated_small_ui = {
+	local_state_maintenance_modifier = 0.15
+	local_autonomy = 0.025
+	
+	province_trade_power_modifier = 0.05
+ 	supply_limit_modifier = 0.05
+	local_friendly_movement_speed = 0.1
+	picture = "pop_icon_centaur_si"
+}
+
+centaur_minority_integrated_large_ui = {
+	local_state_maintenance_modifier = 0.20
+	local_autonomy = 0.05
+	
+	province_trade_power_modifier = 0.1
+ 	supply_limit_modifier = 0.1
+	local_friendly_movement_speed = 0.2
+	picture = "pop_icon_centaur_li"
+}
+
+#Centaur Majority
+centaur_majority_oppressed_ui = {
+	
+	province_trade_power_modifier = 0.1
+	
+	local_culture_conversion_cost = -0.25
+	local_culture_conversion_time = -0.25
+	picture = "pop_icon_centaur_mo"
+}
+
+centaur_majority_coexisting_ui = {
+	
+	province_trade_power_modifier = 0.1
+ 	supply_limit_modifier = 0.1
+	
+	local_culture_conversion_cost = 0.25
+	picture = "pop_icon_centaur_ma"
+}
+
+centaur_majority_integrated_ui = {
+
+	province_trade_power_modifier = 0.1
+ 	supply_limit_modifier = 0.1
+	local_friendly_movement_speed = 0.2
+	
+	local_missionary_strength = 0.01
+	local_culture_conversion_cost = 0.50
+	picture = "pop_icon_centaur_mi"
+}
+
+centaur_majority_primary_ui = {
+
+	province_trade_power_modifier = 0.1
+ 	supply_limit_modifier = 0.1
+	local_friendly_movement_speed = 0.2
+	local_missionary_strength = 0.01
+	
+	picture = "pop_icon_centaur_mp"
+}
+
+#Harimari - oppressed: begrudging tax collectors, coexisting: tax collectors, integrated: adminstrators (essentially this makes it easier to rule the province)
+#Harimari Minority
+harimari_minority_oppressed_small_ui = {
+	local_unrest = 2
+	
+	local_tax_modifier = 0.05
+	picture = "pop_icon_harimari_so"
+}
+
+harimari_minority_oppressed_large_ui = {
+	local_unrest = 4
+	
+	local_tax_modifier = 0.1
+	picture = "pop_icon_harimari_lo"
+}
+
+harimari_minority_coexisting_small_ui = {
+	local_unrest = 1
+	local_state_maintenance_modifier = 0.05
+	
+	local_tax_modifier = 0.05
+ 	local_hostile_attrition = 0.5
+	picture = "pop_icon_harimari_sa"
+}
+
+harimari_minority_coexisting_large_ui = {
+	local_unrest = 2
+	local_state_maintenance_modifier = 0.10
+	
+	local_tax_modifier = 0.1
+ 	local_hostile_attrition = 1
+	picture = "pop_icon_harimari_la"
+}
+
+harimari_minority_integrated_small_ui = {
+	local_state_maintenance_modifier = 0.15
+	local_autonomy = 0.025
+	
+	local_tax_modifier = 0.05
+ 	local_hostile_attrition = 0.5
+	local_governing_cost = -0.05
+	picture = "pop_icon_harimari_si"
+}
+
+harimari_minority_integrated_large_ui = {
+	local_state_maintenance_modifier = 0.20
+	local_autonomy = 0.05
+	
+	local_tax_modifier = 0.1
+ 	local_hostile_attrition = 1
+	local_governing_cost = -0.1
+	picture = "pop_icon_harimari_li"
+}
+
+#Harimari Majority
+harimari_majority_oppressed_ui = {
+	
+	local_tax_modifier = 0.1
+	
+	local_culture_conversion_cost = -0.25
+	local_culture_conversion_time = -0.25
+	picture = "pop_icon_harimari_mo"
+}
+
+harimari_majority_coexisting_ui = {
+	
+	local_tax_modifier = 0.1
+ 	local_hostile_attrition = 1
+	
+	local_culture_conversion_cost = 0.25
+	picture = "pop_icon_harimari_ma"
+}
+
+harimari_majority_integrated_ui = {
+
+	local_tax_modifier = 0.1
+ 	local_hostile_attrition = 1
+	local_governing_cost = -0.1
+	
+	local_missionary_strength = 0.01
+	local_culture_conversion_cost = 0.50
+	picture = "pop_icon_harimari_mi"
+}
+
+harimari_majority_primary_ui = {
+
+	local_tax_modifier = 0.1
+ 	local_hostile_attrition = 1
+	local_governing_cost = -0.1
+	local_missionary_strength = 0.01
+	
+	picture = "pop_icon_harimari_mp"
+}
+
+#Hobgoblin - oppressed: begrudging protectors, coexisting: taskmasters, integrated: reduces unrest (essentially this makes it easier to rule the province)
+#Hobgoblin Minority
+hobgoblin_minority_oppressed_small_ui = {
+	local_unrest = -1
+	local_manpower_modifier = 0.05
+	picture = "pop_icon_hobgoblin_so"
+}
+
+hobgoblin_minority_oppressed_large_ui = {
+	local_unrest = -2
+	local_manpower_modifier = 0.1
+	picture = "pop_icon_hobgoblin_lo"
+}
+
+hobgoblin_minority_coexisting_small_ui = {
+	local_state_maintenance_modifier = 0.05
+	
+	local_unrest = -1
+	local_manpower_modifier = 0.05
+ 	regiment_recruit_speed = -0.1
+	picture = "pop_icon_hobgoblin_sa"
+}
+
+hobgoblin_minority_coexisting_large_ui = {
+	local_state_maintenance_modifier = 0.10
+	
+	local_unrest = -2
+	local_manpower_modifier = 0.1
+ 	regiment_recruit_speed = -0.2
+	picture = "pop_icon_hobgoblin_la"
+}
+
+hobgoblin_minority_integrated_small_ui = {
+	local_state_maintenance_modifier = 0.15
+	local_autonomy = 0.025
+	
+	local_unrest = -1
+ 	regiment_recruit_speed = -0.1
+	local_manpower_modifier = 0.1
+	picture = "pop_icon_hobgoblin_si"
+}
+
+hobgoblin_minority_integrated_large_ui = {
+	local_state_maintenance_modifier = 0.20
+	local_autonomy = 0.05
+	
+	local_unrest = -2
+ 	regiment_recruit_speed = -0.2
+	local_manpower_modifier = 0.2
+	picture = "pop_icon_hobgoblin_li"
+}
+
+#Hobgoblin Majority
+hobgoblin_majority_oppressed_ui = {
+	
+	local_unrest = -2
+	
+	local_culture_conversion_cost = -0.25
+	local_culture_conversion_time = -0.25
+	picture = "pop_icon_hobgoblin_mo"
+}
+
+hobgoblin_majority_coexisting_ui = {
+	
+	local_unrest = -2
+ 	regiment_recruit_speed = -0.2
+	
+	local_culture_conversion_cost = 0.25
+	picture = "pop_icon_hobgoblin_ma"
+}
+
+hobgoblin_majority_integrated_ui = {
+
+	local_unrest = -2
+ 	regiment_recruit_speed = -0.2
+	local_manpower_modifier = 0.2
+	
+	local_missionary_strength = 0.01
+	local_culture_conversion_cost = 0.50
+	picture = "pop_icon_hobgoblin_mi"
+}
+
+hobgoblin_majority_primary_ui = {
+
+	local_unrest = -2
+ 	regiment_recruit_speed = -0.2
+	local_manpower_modifier = 0.2
+	local_missionary_strength = 0.01
+	
+	picture = "pop_icon_hobgoblin_mp"
+}
+
+#Lizardfolk - when oppressed they are simply a workhorses, but when integrated they help to defend your land and are more willing to equip your armies with their weapons
+#Lizardfolk Minority
+lizardfolk_minority_oppressed_small_ui = {
+	local_unrest = 3
+	local_production_efficiency = 0.05
+	picture = "pop_icon_lizardfolk_so"
+}
+
+lizardfolk_minority_oppressed_large_ui = {
+	local_unrest = 4
+	local_production_efficiency = 0.1
+	picture = "pop_icon_lizardfolk_lo"
+}
+
+lizardfolk_minority_coexisting_small_ui = {
+	local_unrest = 2
+	local_state_maintenance_modifier = 0.05
+	local_production_efficiency = 0.05
+	local_hostile_attrition = 0.5
+	picture = "pop_icon_lizardfolk_sa"
+}
+
+lizardfolk_minority_coexisting_large_ui = {
+	local_unrest = 3
+	local_state_maintenance_modifier = 0.10
+	local_production_efficiency = 0.1
+	local_hostile_attrition = 1
+	picture = "pop_icon_lizardfolk_la"
+}
+
+lizardfolk_minority_integrated_small_ui = {
+	local_state_maintenance_modifier = 0.15
+	local_autonomy = 0.025
+	local_production_efficiency = 0.05
+	local_hostile_attrition = 0.5
+	local_regiment_cost = -0.1
+	picture = "pop_icon_lizardfolk_si"
+}
+
+lizardfolk_minority_integrated_large_ui = {
+	local_state_maintenance_modifier = 0.20
+	local_autonomy = 0.05
+	local_production_efficiency = 0.1
+	local_hostile_attrition = 1
+	local_regiment_cost = -0.2
+	picture = "pop_icon_lizardfolk_li"
+}
+
+#Lizardfolk Majority
+lizardfolk_majority_oppressed_ui = {
+	local_production_efficiency = 0.1
+	local_culture_conversion_cost = -0.25
+	local_culture_conversion_time = -0.25
+	picture = "pop_icon_lizardfolk_mo"
+}
+
+lizardfolk_majority_coexisting_ui = {
+	local_production_efficiency = 0.1
+	local_hostile_attrition = 1
+	local_culture_conversion_cost = 0.25
+	picture = "pop_icon_lizardfolk_ma"
+}
+
+lizardfolk_majority_integrated_ui = {
+	local_production_efficiency = 0.1
+	local_hostile_attrition = 1
+	local_regiment_cost = -0.2
+
+	local_missionary_strength = 0.01
+	local_culture_conversion_cost = 0.50
+	picture = "pop_icon_lizardfolk_mi"
+}
+
+lizardfolk_majority_primary_ui = {
+	local_production_efficiency = 0.1
+	local_hostile_attrition = 1
+	local_regiment_cost = -0.2
+	local_missionary_strength = 0.01
+	
+	picture = "pop_icon_lizardfolk_mp"
+}

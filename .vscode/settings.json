@@ -1,0 +1,9 @@
+{
+    "markdown.validate.enabled": false,
+    "cwtools.errors.vanilla": true,
+    "debug.onTaskErrors": "showErrors",
+    "cwtools.errors.ignore": [],
+    "accessibility.signals.lineHasError": {
+        "sound": "on"
+    }
+}

@@ -1,0 +1,6 @@
+spriteTypes = {
+	spriteType = {
+		name = "DA_research_facility_eventPicture"	
+		texturefile = "gfx//interface//event_pictures//DA_research_facility_ev_pic.dds"
+	}
+}

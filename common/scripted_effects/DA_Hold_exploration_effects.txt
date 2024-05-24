@@ -1,0 +1,2979 @@
+
+Da_explore_dig_2_effect = {
+	random_list = {
+		48 = {
+			province_event = { 
+				id = DA_ADK_explore.1		#found ADK
+				days = 10
+			}
+		}
+		43 = {
+			province_event = { 
+				id = DA_ADK_explore.2		#found Gold
+				days = 10
+			}
+		}
+		4 = {
+			province_event = { 
+				id = DA_ADK_explore.15		# well mantained workshop
+				days = 10
+			}
+		}
+		1 = {
+			province_event = { 
+				id = DA_ADK_explore.16		# exploration team with gold, chased by goblins
+				days = 10
+			}
+		}
+		4 = {
+			province_event = { 
+				id = DA_ADK_explore.3		#found goblins
+				days = 10
+			}
+		}
+		1 = {
+			province_event = { 
+				id = DA_ADK_explore.9		#found orcs from the depths
+				days = 10
+			}
+		}
+		1 = {
+			trigger = {
+				NOT = { trade_goods = mithril }
+			}
+			province_event = { 
+				id = DA_ADK_explore.4		#found mithril
+				days = 10
+			}
+		}
+		1 = {
+			trigger = {
+				NOT = { trade_goods = damestear }
+			}
+			province_event = { 
+				id = DA_ADK_explore.5		#found damestear
+				days = 10
+			}
+		}
+		2 = {
+			province_event = { 
+				id = DA_ADK_explore.6		#found humans
+				days = 10
+			}
+		}
+		2 = {
+			province_event = { 
+				id = DA_ADK_explore.7		#found elfs
+				days = 10
+			}
+		}
+		1 = {
+			province_event = { 
+				id = DA_ADK_explore.8		#lost settlement
+				days = 10
+			}
+		}
+		1 = {
+			province_event = { 
+				id = DA_ADK_explore.10		#lost expedition
+				days = 10
+			}
+		}
+		1 = {
+			trigger = {
+				NOT = { has_province_modifier = DA_Ancient_hold_ruins }
+				NOT = { has_province_modifier = DA_Ancient_hold_explored }
+			}
+			province_event = { 
+				id = DA_ADK_explore.11		#found ruins of hold
+				days = 10
+			}
+		}
+		100 = {
+			trigger = {
+				province_id = 2868
+				NOT = { has_province_flag = DA_Haraz_Orldhum_exp1 }
+			}
+			province_event = { 
+				id = DA_ADK_explore.210		#found Turrets of Orldhûm
+				days = 10
+			}
+		}
+	}
+}
+Da_explore_dig_3_effect = {
+	random_list = {
+		53 = {
+			province_event = { 
+				id = DA_ADK_explore.1
+				days = 10
+				tooltip = DA_ADK_explore.1.tooltip
+			}
+		}
+		23 = {
+			province_event = { 
+				id = DA_ADK_explore.2
+				days = 10
+				tooltip = DA_ADK_explore.2.tooltip
+			}
+		}
+		4 = {
+			province_event = { 
+				id = DA_ADK_explore.15		# well mantained workshop
+				days = 10
+			}
+		}
+		2 = {
+			province_event = { 
+				id = DA_ADK_explore.16		# exploration team with gold, chased by goblins
+				days = 10
+			}
+		}
+		5 = {
+			province_event = { 
+				id = DA_ADK_explore.3
+				days = 10
+				tooltip = DA_ADK_explore.3.tooltip
+			}
+		}
+		2 = {
+			province_event = { 
+				id = DA_ADK_explore.9		#found orcs from the depths
+				days = 10
+			}
+		}
+		1 = {
+			trigger = {
+				NOT = { trade_goods = mithril }
+			}
+			province_event = { 
+				id = DA_ADK_explore.4		#found mithril
+				days = 10
+			}
+		}
+		1 = {
+			trigger = {
+				NOT = { trade_goods = damestear }
+			}
+			province_event = { 
+				id = DA_ADK_explore.5		#found damestear
+				days = 10
+			}
+		}
+		2 = {
+			province_event = { 
+				id = DA_ADK_explore.6		#found humans
+				days = 10
+			}
+		}
+		2 = {
+			province_event = { 
+				id = DA_ADK_explore.7		#found elfs
+				days = 10
+			}
+		}
+		1 = {
+			province_event = { 
+				id = DA_ADK_explore.8		#lost settlement
+				days = 10
+			}
+		}
+		1 = {
+			province_event = { 
+				id = DA_ADK_explore.10		#lost expedition
+				days = 10
+			}
+		}
+		1 = {
+			trigger = {
+				NOT = { has_province_modifier = DA_Ancient_hold_ruins }
+				NOT = { has_province_modifier = DA_Ancient_hold_explored }
+			}
+			province_event = { 
+				id = DA_ADK_explore.11		#found ruins of hold
+				days = 10
+			}
+		}
+		2 = {
+			trigger = {
+				DA_has_potential_secondary_hold = yes
+			}
+			province_event = { 
+				id = DA_ADK_explore.13		#found secondary hold
+				days = 10
+			}
+		}
+		100 = {
+			trigger = {
+				province_id = 2931
+				NOT = { has_province_flag = DA_er_natvir_CR_found }
+			}
+			province_event = { 
+				id = DA_ADK_explore.103		#found er-natvir cr
+				days = 10
+			}
+		}
+		100 = {
+			trigger = {
+				province_id = 4020
+				NOT = { has_province_flag = DA_dur_vaz_blueprints_found }
+			}
+			province_event = { 
+				id = DA_ADK_explore.105		#found dur vaz blueprints
+				days = 10
+			}
+		}
+		100 = {
+			trigger = {
+				province_id = 4078
+				NOT = { has_province_flag = DA_Hehogrim_home_found }
+			}
+			province_event = { 
+				id = DA_ADK_explore.106		#found hehogrim's home
+				days = 10
+			}
+		}
+		100 = {
+			trigger = {
+				province_id = 526
+				NOT = { has_province_flag = DA_dwarven_shipyard_found }
+			}
+			province_event = { 
+				id = DA_ADK_explore.200		#found ovdal tungr shipyard
+				days = 10
+			}
+		}
+		100 = {
+			trigger = {
+				province_id = 2963
+				NOT = { has_province_flag = DA_Ducaniel_lab_found }
+			}
+			province_event = { 
+				id = DA_ADK_explore.202		#found Ducaniel's Lab
+				days = 10
+			}
+		}
+		1000 = {
+			trigger = {
+				province_id = 4056
+				NOT = { has_province_flag = DA_Verkal_koz_warning1 }
+			}
+			province_event = { 
+				id = DA_ADK_explore.203		# Verkal Kozenad, first warning
+				days = 10
+			}
+		}
+		1000 = {
+			trigger = {
+				province_id = 2868
+				NOT = { has_province_flag = DA_Haraz_Orldhum_exp1 }
+			}
+			province_event = { 
+				id = DA_ADK_explore.210		#found Turrets of Orldhûm
+				days = 10
+			}
+		}
+	}
+}
+Da_explore_dig_4_effect = {
+	random_list = {
+		33 = {
+			province_event = { 
+				id = DA_ADK_explore.1
+				days = 10
+				tooltip = DA_ADK_explore.1.tooltip
+			}
+		}
+		32 = {
+			province_event = { 
+				id = DA_ADK_explore.2
+				days = 10
+				tooltip = DA_ADK_explore.2.tooltip
+			}
+		}
+		6 = {
+			province_event = { 
+				id = DA_ADK_explore.15		# well mantained workshop
+				days = 10
+			}
+		}
+		3 = {
+			province_event = { 
+				id = DA_ADK_explore.16		# exploration team with gold, chased by goblins
+				days = 10
+			}
+		}
+		11 = {
+			province_event = { 
+				id = DA_ADK_explore.3
+				days = 10
+				tooltip = DA_ADK_explore.3.tooltip
+			}
+		}
+		5 = {
+			province_event = { 
+				id = DA_ADK_explore.9		#found orcs from the depths
+				days = 10
+			}
+		}
+		1 = {
+			trigger = {
+				NOT = { trade_goods = mithril }
+			}
+			province_event = { 
+				id = DA_ADK_explore.4		#found mithril
+				days = 10
+			}
+		}
+		1 = {
+			trigger = {
+				NOT = { trade_goods = damestear }
+			}
+			province_event = { 
+				id = DA_ADK_explore.5		#found damestear
+				days = 10
+			}
+		}
+		2 = {
+			province_event = { 
+				id = DA_ADK_explore.6		#found humans
+				days = 10
+			}
+		}
+		2 = {
+			province_event = { 
+				id = DA_ADK_explore.7		#found elfs
+				days = 10
+			}
+		}
+		2 = {
+			province_event = { 
+				id = DA_ADK_explore.8		#lost settlement
+				days = 10
+			}
+		}
+		1 = {
+			province_event = { 
+				id = DA_ADK_explore.10		#lost expedition
+				days = 10
+			}
+		}
+		1 = {
+			trigger = {
+				NOT = { has_province_modifier = DA_Ancient_hold_ruins }
+				NOT = { has_province_modifier = DA_Ancient_hold_explored }
+			}
+			province_event = { 
+				id = DA_ADK_explore.11		#found ruins of hold
+				days = 10
+			}
+		}
+		3 = {
+			trigger = {
+				NOT = { has_province_flag = DA_found_king_treasury }
+			}
+			province_event = { 
+				id = DA_ADK_explore.12		#found hold's late king treasury
+				days = 10
+			}
+		}
+		1 = {
+			trigger = {
+				DA_has_potential_secondary_hold = yes
+			}
+			province_event = { 
+				id = DA_ADK_explore.13		#found secondary hold
+				days = 10
+			}
+		}
+		2 = {
+			trigger = {
+				NOT = { has_province_modifier = DA_Mad_scientist_lab }
+			}
+			province_event = { 
+				id = DA_ADK_explore.14		#found Mad scientist's lab
+				days = 10
+			}
+		}
+		100 = {
+			trigger = {
+				province_id = 2931
+				NOT = { has_province_flag = DA_er_natvir_CR_found }
+			}
+			province_event = { 
+				id = DA_ADK_explore.103		#found er-natvir cr
+				days = 10
+			}
+		}
+		100 = {
+			trigger = {
+				province_id = 4020
+				NOT = { has_province_flag = DA_dur_vaz_blueprints_found }
+			}
+			province_event = { 
+				id = DA_ADK_explore.105		#found dur vaz blueprints
+				days = 10
+			}
+		}
+		100 = {
+			trigger = {
+				province_id = 4236
+				NOT = { has_province_flag = DA_Mithril_workshop_found }
+			}
+			province_event = { 
+				id = DA_ADK_explore.104		#found mithril workshop in mithradum
+				days = 10
+			}
+		}
+		100 = {
+			trigger = {
+				province_id = 4078
+				NOT = { has_province_flag = DA_Hehogrim_home_found }
+			}
+			province_event = { 
+				id = DA_ADK_explore.106		#found hehogrim's home
+				days = 10
+			}
+		}
+		100 = {
+			trigger = {
+				province_id = 526
+				NOT = { has_province_flag = DA_dwarven_shipyard_found }
+			}
+			province_event = { 
+				id = DA_ADK_explore.200		#found ovdal tungr shipyard
+				days = 10
+			}
+		}
+		100 = {
+			trigger = {
+				province_id = 4039
+				NOT = { has_province_flag = DA_Magma_forge_found }
+			}
+			province_event = { 
+				id = DA_ADK_explore.201		#found Magma Forge
+				days = 10
+			}
+		}
+		100 = {
+			trigger = {
+				province_id = 2963
+				NOT = { has_province_flag = DA_Ducaniel_lab_found }
+			}
+			province_event = { 
+				id = DA_ADK_explore.202		#found Ducaniel's Lab
+				days = 10
+			}
+		}
+		1000 = {
+			trigger = {
+				province_id = 4056
+				NOT = { has_province_flag = DA_Verkal_koz_warning1 }
+			}
+			province_event = { 
+				id = DA_ADK_explore.203		# Verkal Kozenad, first warning
+				days = 10
+			}
+		}
+		1000 = {
+			trigger = {
+				province_id = 4056
+				has_province_flag = DA_Verkal_koz_warning1
+				NOT = { has_province_flag = DA_Verkal_koz_warning2 }
+			}
+			province_event = { 
+				id = DA_ADK_explore.204		# Verkal Kozenad, second warning
+				days = 10
+			}
+		}
+		1000 = {
+			trigger = {
+				province_id = 2868
+				NOT = { has_province_flag = DA_Haraz_Orldhum_exp1 }
+			}
+			province_event = { 
+				id = DA_ADK_explore.210		#found Turrets of Orldhûm
+				days = 10
+			}
+		}
+		100 = {
+			trigger = {
+				province_id = 2868
+				has_province_flag = DA_Haraz_Orldhum_exp1
+				NOT = { has_province_flag = DA_Haraz_Orldhum_exp2 }
+			}
+			province_event = { 
+				id = DA_ADK_explore.211		#found Turrets of Orldhûm
+				days = 10
+			}
+		}
+	}
+}
+Da_explore_dig_5_effect = {
+	random_list = {
+		32 = {
+			province_event = { 
+				id = DA_ADK_explore.1
+				days = 10
+				tooltip = DA_ADK_explore.1.tooltip
+			}
+		}
+		27 = {
+			province_event = { 
+				id = DA_ADK_explore.2
+				days = 10
+				tooltip = DA_ADK_explore.2.tooltip
+			}
+		}
+		7 = {
+			province_event = { 
+				id = DA_ADK_explore.15		# well mantained workshop
+				days = 10
+			}
+		}
+		4 = {
+			province_event = { 
+				id = DA_ADK_explore.16		# exploration team with gold, chased by goblins
+				days = 10
+			}
+		}
+		11 = {
+			province_event = { 
+				id = DA_ADK_explore.3
+				days = 10
+				tooltip = DA_ADK_explore.3.tooltip
+			}
+		}
+		8 = {
+			province_event = { 
+				id = DA_ADK_explore.9		#found orcs from the depths
+				days = 10
+			}
+		}
+		1 = {
+			trigger = {
+				NOT = { trade_goods = mithril }
+			}
+			province_event = { 
+				id = DA_ADK_explore.4		#found mithril
+				days = 10
+			}
+		}
+		1 = {
+			trigger = {
+				NOT = { trade_goods = damestear }
+			}
+			province_event = { 
+				id = DA_ADK_explore.5		#found damestear
+				days = 10
+			}
+		}
+		2 = {
+			province_event = { 
+				id = DA_ADK_explore.6		#found humans
+				days = 10
+			}
+		}
+		2 = {
+			province_event = { 
+				id = DA_ADK_explore.7		#found elfs
+				days = 10
+			}
+		}
+		2 = {
+			province_event = { 
+				id = DA_ADK_explore.8		#lost settlement
+				days = 10
+			}
+		}
+		1 = {
+			province_event = { 
+				id = DA_ADK_explore.10		#lost expedition
+				days = 10
+			}
+		}
+		1 = {
+			trigger = {
+				NOT = { has_province_modifier = DA_Ancient_hold_ruins }
+				NOT = { has_province_modifier = DA_Ancient_hold_explored }
+			}
+			province_event = { 
+				id = DA_ADK_explore.11		#found ruins of hold
+				days = 10
+			}
+		}
+		3 = {
+			trigger = {
+				NOT = { has_province_flag = DA_found_king_treasury }
+			}
+			province_event = { 
+				id = DA_ADK_explore.12		#found hold's late king treasury
+				days = 10
+			}
+		}
+		1 = {
+			trigger = {
+				DA_has_potential_secondary_hold = yes
+			}
+			province_event = { 
+				id = DA_ADK_explore.13		#found secondary hold
+				days = 10
+			}
+		}
+		2 = {
+			trigger = {
+				NOT = { has_province_modifier = DA_Mad_scientist_lab }
+			}
+			province_event = { 
+				id = DA_ADK_explore.14		#found Mad scientist's lab
+				days = 10
+			}
+		}
+		100 = {
+			trigger = {
+				province_id = 2931
+				NOT = { has_province_flag = DA_er_natvir_CR_found }
+			}
+			province_event = { 
+				id = DA_ADK_explore.103		#found er-natvir cr
+				days = 10
+			}
+		}
+		100 = {
+			trigger = {
+				province_id = 4020
+				NOT = { has_province_flag = DA_dur_vaz_blueprints_found }
+			}
+			province_event = { 
+				id = DA_ADK_explore.105		#found dur vaz blueprints
+				days = 10
+			}
+		}
+		100 = {
+			trigger = {
+				province_id = 4236
+				NOT = { has_province_flag = DA_Mithril_workshop_found }
+			}
+			province_event = { 
+				id = DA_ADK_explore.104		#found mithril workshop in mithradum
+				days = 10
+			}
+		}
+		100 = {
+			trigger = {
+				province_id = 4078
+				NOT = { has_province_flag = DA_Hehogrim_home_found }
+			}
+			province_event = { 
+				id = DA_ADK_explore.106		#found hehogrim's home
+				days = 10
+			}
+		}
+		100 = {
+			trigger = {
+				province_id = 526
+				NOT = { has_province_flag = DA_dwarven_shipyard_found }
+			}
+			province_event = { 
+				id = DA_ADK_explore.200		#found ovdal tungr shipyard
+				days = 10
+			}
+		}
+		100 = {
+			trigger = {
+				province_id = 4039
+				NOT = { has_province_flag = DA_Magma_forge_found }
+			}
+			province_event = { 
+				id = DA_ADK_explore.201		#found Magma Forge
+				days = 10
+			}
+		}
+		100 = {
+			trigger = {
+				province_id = 2963
+				NOT = { has_province_flag = DA_Ducaniel_lab_found }
+			}
+			province_event = { 
+				id = DA_ADK_explore.202		#found Ducaniel's Lab
+				days = 10
+			}
+		}
+		1000 = {
+			trigger = {
+				province_id = 4119
+				NOT = { has_province_flag = DA_Amldihr_maps }
+			}
+			province_event = { 
+				id = DA_ADK_explore.90		#found Amldihr's maps
+				days = 10
+			}
+		}
+		1000 = {
+			trigger = {
+				province_id = 4056
+				NOT = { has_province_flag = DA_Verkal_koz_warning1 }
+			}
+			province_event = { 
+				id = DA_ADK_explore.203		# Verkal Kozenad, first warning
+				days = 10
+			}
+		}
+		1000 = {
+			trigger = {
+				province_id = 4056
+				has_province_flag = DA_Verkal_koz_warning1
+				NOT = { has_province_flag = DA_Verkal_koz_warning2 }
+			}
+			province_event = { 
+				id = DA_ADK_explore.204		# Verkal Kozenad, second warning
+				days = 10
+			}
+		}
+		1000 = {
+			trigger = {
+				province_id = 4056
+				has_province_flag = DA_Verkal_koz_warning1
+				has_province_flag = DA_Verkal_koz_warning2
+				NOT = { has_province_flag = DA_Verkal_koz_warning3 }
+			}
+			province_event = { 
+				id = DA_ADK_explore.205		# Verkal Kozenad, third warning
+				days = 10
+			}
+		}
+		1000 = {
+			trigger = {
+				province_id = 2868
+				NOT = { has_province_flag = DA_Haraz_Orldhum_exp1 }
+			}
+			province_event = { 
+				id = DA_ADK_explore.210		#found Turrets of Orldhûm
+				days = 10
+			}
+		}
+		1000 = {
+			trigger = {
+				province_id = 2868
+				has_province_flag = DA_Haraz_Orldhum_exp1
+				NOT = { has_province_flag = DA_Haraz_Orldhum_exp2 }
+			}
+			province_event = { 
+				id = DA_ADK_explore.211		#found Turrets of Orldhûm
+				days = 10
+			}
+		}
+	}
+}
+Da_explore_dig_6_effect = {
+	random_list = {
+		31 = {
+			province_event = { 
+				id = DA_ADK_explore.1
+				days = 10
+				tooltip = DA_ADK_explore.1.tooltip
+			}
+		}
+		20 = {
+			province_event = { 
+				id = DA_ADK_explore.2
+				days = 10
+				tooltip = DA_ADK_explore.2.tooltip
+			}
+		}
+		10 = {
+			province_event = { 
+				id = DA_ADK_explore.15		# well mantained workshop
+				days = 10
+			}
+		}
+		8 = {
+			province_event = { 
+				id = DA_ADK_explore.16		# exploration team with gold, chased by goblins
+				days = 10
+			}
+		}
+		10 = {
+			province_event = { 
+				id = DA_ADK_explore.3
+				days = 10
+				tooltip = DA_ADK_explore.3.tooltip
+			}
+		}
+		8 = {
+			province_event = { 
+				id = DA_ADK_explore.9		#found orcs from the depths
+				days = 10
+			}
+		}
+		2 = {
+			trigger = {
+				NOT = { trade_goods = mithril }
+			}
+			province_event = { 
+				id = DA_ADK_explore.4		#found mithril
+				days = 10
+			}
+		}
+		2 = {
+			trigger = {
+				NOT = { trade_goods = damestear }
+			}
+			province_event = { 
+				id = DA_ADK_explore.5		#found damestear
+				days = 10
+			}
+		}
+		2 = {
+			province_event = { 
+				id = DA_ADK_explore.6		#found humans
+				days = 10
+			}
+		}
+		2 = {
+			province_event = { 
+				id = DA_ADK_explore.7		#found elfs
+				days = 10
+			}
+		}
+		3 = {
+			province_event = { 
+				id = DA_ADK_explore.8		#lost settlement
+				days = 10
+			}
+		}
+		2 = {
+			province_event = { 
+				id = DA_ADK_explore.10		#lost expedition
+				days = 10
+			}
+		}
+		1 = {
+			trigger = {
+				NOT = { has_province_modifier = DA_Ancient_hold_ruins }
+				NOT = { has_province_modifier = DA_Ancient_hold_explored }
+			}
+			province_event = { 
+				id = DA_ADK_explore.11		#found ruins of hold
+				days = 10
+			}
+		}
+		3 = {
+			trigger = {
+				NOT = { has_province_flag = DA_found_king_treasury }
+			}
+			province_event = { 
+				id = DA_ADK_explore.12		#found hold's late king treasury
+				days = 10
+			}
+		}
+		1 = {
+			trigger = {
+				DA_has_potential_secondary_hold = yes
+			}
+			province_event = { 
+				id = DA_ADK_explore.13		#found secondary hold
+				days = 10
+			}
+		}
+		2 = {
+			trigger = {
+				NOT = { has_province_modifier = DA_Mad_scientist_lab }
+			}
+			province_event = { 
+				id = DA_ADK_explore.14		#found Mad scientist's lab
+				days = 10
+			}
+		}
+		1000 = {
+			trigger = {
+				province_id = 2931
+				NOT = { has_province_flag = DA_er_natvir_CR_found }
+			}
+			province_event = { 
+				id = DA_ADK_explore.103		#found er-natvir cr
+				days = 10
+			}
+		}
+		1000 = {
+			trigger = {
+				province_id = 4020
+				NOT = { has_province_flag = DA_dur_vaz_blueprints_found }
+			}
+			province_event = { 
+				id = DA_ADK_explore.105		#found dur vaz blueprints
+				days = 10
+			}
+		}
+		1000 = {
+			trigger = {
+				province_id = 4236
+				NOT = { has_province_flag = DA_Mithril_workshop_found }
+			}
+			province_event = { 
+				id = DA_ADK_explore.104		#found mithril workshop in mithradum
+				days = 10
+			}
+		}
+		1000 = {
+			trigger = {
+				province_id = 4078
+				NOT = { has_province_flag = DA_Hehogrim_home_found }
+			}
+			province_event = { 
+				id = DA_ADK_explore.106		#found hehogrim's home
+				days = 10
+			}
+		}
+		1000 = {
+			trigger = {
+				province_id = 526
+				NOT = { has_province_flag = DA_dwarven_shipyard_found }
+			}
+			province_event = { 
+				id = DA_ADK_explore.200		#found ovdal tungr shipyard
+				days = 10
+			}
+		}
+		1000 = {
+			trigger = {
+				province_id = 4039
+				NOT = { has_province_flag = DA_Magma_forge_found }
+			}
+			province_event = { 
+				id = DA_ADK_explore.201		#found Magma Forge
+				days = 10
+			}
+		}
+		1000 = {
+			trigger = {
+				province_id = 2963
+				NOT = { has_province_flag = DA_Ducaniel_lab_found }
+			}
+			province_event = { 
+				id = DA_ADK_explore.202		#found Ducaniel's Lab
+				days = 10
+			}
+		}
+		1000 = {
+			trigger = {
+				province_id = 4056
+				NOT = { has_province_flag = DA_Verkal_koz_warning1 }
+			}
+			province_event = { 
+				id = DA_ADK_explore.203		# Verkal Kozenad, first warning
+				days = 10
+			}
+		}
+		1000 = {
+			trigger = {
+				province_id = 4056
+				has_province_flag = DA_Verkal_koz_warning1
+				NOT = { has_province_flag = DA_Verkal_koz_warning2 }
+			}
+			province_event = { 
+				id = DA_ADK_explore.204		# Verkal Kozenad, second warning
+				days = 10
+			}
+		}
+		1000 = {
+			trigger = {
+				province_id = 4056
+				has_province_flag = DA_Verkal_koz_warning1
+				has_province_flag = DA_Verkal_koz_warning2
+				NOT = { has_province_flag = DA_Verkal_koz_warning3 }
+			}
+			province_event = { 
+				id = DA_ADK_explore.205		# Verkal Kozenad, third warning
+				days = 10
+			}
+		}
+		1000 = {
+			trigger = {
+				province_id = 2868
+				NOT = { has_province_flag = DA_Haraz_Orldhum_exp1 }
+			}
+			province_event = { 
+				id = DA_ADK_explore.210		#found Turrets of Orldhûm
+				days = 10
+			}
+		}
+		1000 = {
+			trigger = {
+				province_id = 2868
+				has_province_flag = DA_Haraz_Orldhum_exp1
+				NOT = { has_province_flag = DA_Haraz_Orldhum_exp2 }
+			}
+			province_event = { 
+				id = DA_ADK_explore.211		#found cages, exoskeleton
+				days = 10
+			}
+		}
+		1000 = {
+			trigger = {
+				province_id = 2868
+				has_province_flag = DA_Haraz_Orldhum_exp1
+				has_province_flag = DA_Haraz_Orldhum_exp2
+				NOT = { has_province_flag = DA_Haraz_Orldhum_exp3 }
+			}
+			province_event = { 
+				id = DA_ADK_explore.212		#found golems
+				days = 10
+			}
+		}
+		1000 = {
+			trigger = {
+				province_id = 2868
+				has_province_flag = DA_Haraz_Orldhum_exp1
+				has_province_flag = DA_Haraz_Orldhum_exp2
+				has_province_flag = DA_Haraz_Orldhum_exp3
+				NOT = { has_province_flag = DA_Haraz_Orldhum_exp4 }
+			}
+			province_event = { 
+				id = DA_ADK_explore.213		#found exoskeleton workshop
+				days = 10
+			}
+		}
+		1000 = {
+			trigger = {
+				province_id = 4119
+				NOT = { has_province_flag = DA_Amldihr_maps }
+			}
+			province_event = { 
+				id = DA_ADK_explore.90		#found Amldihr's maps
+				days = 10
+			}
+		}
+	}
+}
+Da_explore_dig_7_effect = {
+	random_list = {
+		26 = {
+			province_event = { 
+				id = DA_ADK_explore.1
+				days = 10
+				tooltip = DA_ADK_explore.1.tooltip
+			}
+		}
+		20 = {
+			province_event = { 
+				id = DA_ADK_explore.2
+				days = 10
+				tooltip = DA_ADK_explore.2.tooltip
+			}
+		}
+		10 = {
+			province_event = { 
+				id = DA_ADK_explore.15		# well mantained workshop
+				days = 10
+			}
+		}
+		8 = {
+			province_event = { 
+				id = DA_ADK_explore.16		# exploration team with gold, chased by goblins
+				days = 10
+			}
+		}
+		13 = {
+			province_event = { 
+				id = DA_ADK_explore.3
+				days = 10
+				tooltip = DA_ADK_explore.3.tooltip
+			}
+		}
+		10 = {
+			province_event = { 
+				id = DA_ADK_explore.9		#found orcs from the depths
+				days = 10
+			}
+		}
+		2 = {
+			trigger = {
+				NOT = { trade_goods = mithril }
+			}
+			province_event = { 
+				id = DA_ADK_explore.4		#found mithril
+				days = 10
+			}
+		}
+		2 = {
+			trigger = {
+				NOT = { trade_goods = damestear }
+			}
+			province_event = { 
+				id = DA_ADK_explore.5		#found damestear
+				days = 10
+			}
+		}
+		2 = {
+			province_event = { 
+				id = DA_ADK_explore.6		#found humans
+				days = 10
+			}
+		}
+		2 = {
+			province_event = { 
+				id = DA_ADK_explore.7		#found elfs
+				days = 10
+			}
+		}
+		3 = {
+			province_event = { 
+				id = DA_ADK_explore.8		#lost settlement
+				days = 10
+			}
+		}
+		2 = {
+			province_event = { 
+				id = DA_ADK_explore.10		#lost expedition
+				days = 10
+			}
+		}
+		1 = {
+			trigger = {
+				NOT = { has_province_modifier = DA_Ancient_hold_ruins }
+				NOT = { has_province_modifier = DA_Ancient_hold_explored }
+			}
+			province_event = { 
+				id = DA_ADK_explore.11		#found ruins of hold
+				days = 10
+			}
+		}
+		3 = {
+			trigger = {
+				NOT = { has_province_flag = DA_found_king_treasury }
+			}
+			province_event = { 
+				id = DA_ADK_explore.12		#found hold's late king treasury
+				days = 10
+			}
+		}
+		1 = {
+			trigger = {
+				DA_has_potential_secondary_hold = yes
+			}
+			province_event = { 
+				id = DA_ADK_explore.13		#found secondary hold
+				days = 10
+			}
+		}
+		2 = {
+			trigger = {
+				NOT = { has_province_modifier = DA_Mad_scientist_lab }
+			}
+			province_event = { 
+				id = DA_ADK_explore.14		#found Mad scientist's lab
+				days = 10
+			}
+		}
+		1000 = {
+			trigger = {
+				province_id = 2931
+				NOT = { has_province_flag = DA_er_natvir_CR_found }
+			}
+			province_event = { 
+				id = DA_ADK_explore.103		#found er-natvir cr
+				days = 10
+			}
+		}
+		1000 = {
+			trigger = {
+				province_id = 4020
+				NOT = { has_province_flag = DA_dur_vaz_blueprints_found }
+			}
+			province_event = { 
+				id = DA_ADK_explore.105		#found dur vaz blueprints
+				days = 10
+			}
+		}
+		1000 = {
+			trigger = {
+				province_id = 4236
+				NOT = { has_province_flag = DA_Mithril_workshop_found }
+			}
+			province_event = { 
+				id = DA_ADK_explore.104		#found mithril workshop in mithradum
+				days = 10
+			}
+		}
+		1000 = {
+			trigger = {
+				province_id = 4078
+				NOT = { has_province_flag = DA_Hehogrim_home_found }
+			}
+			province_event = { 
+				id = DA_ADK_explore.106		#found hehogrim's home
+				days = 10
+			}
+		}
+		1000 = {
+			trigger = {
+				province_id = 526
+				NOT = { has_province_flag = DA_dwarven_shipyard_found }
+			}
+			province_event = { 
+				id = DA_ADK_explore.200		#found ovdal tungr shipyard
+				days = 10
+			}
+		}
+		1000 = {
+			trigger = {
+				province_id = 4039
+				NOT = { has_province_flag = DA_Magma_forge_found }
+			}
+			province_event = { 
+				id = DA_ADK_explore.201		#found Magma Forge
+				days = 10
+			}
+		}
+		1000 = {
+			trigger = {
+				province_id = 2963
+				NOT = { has_province_flag = DA_Ducaniel_lab_found }
+			}
+			province_event = { 
+				id = DA_ADK_explore.202		#found Ducaniel's Lab
+				days = 10
+			}
+		}
+		1000 = {
+			trigger = {
+				province_id = 4056
+				NOT = { has_province_flag = DA_Verkal_koz_warning1 }
+			}
+			province_event = { 
+				id = DA_ADK_explore.203		# Verkal Kozenad, first warning
+				days = 10
+			}
+		}
+		1000 = {
+			trigger = {
+				province_id = 4056
+				has_province_flag = DA_Verkal_koz_warning1
+				NOT = { has_province_flag = DA_Verkal_koz_warning2 }
+			}
+			province_event = { 
+				id = DA_ADK_explore.204		# Verkal Kozenad, second warning
+				days = 10
+			}
+		}
+		1000 = {
+			trigger = {
+				province_id = 4056
+				has_province_flag = DA_Verkal_koz_warning1
+				has_province_flag = DA_Verkal_koz_warning2
+				NOT = { has_province_flag = DA_Verkal_koz_warning3 }
+			}
+			province_event = { 
+				id = DA_ADK_explore.205		# Verkal Kozenad, third warning
+				days = 10
+			}
+		}
+		1000 = {
+			trigger = {
+				province_id = 2868
+				NOT = { has_province_flag = DA_Haraz_Orldhum_exp1 }
+			}
+			province_event = { 
+				id = DA_ADK_explore.210		#found Turrets of Orldhûm
+				days = 10
+			}
+		}
+		1000 = {
+			trigger = {
+				province_id = 2868
+				has_province_flag = DA_Haraz_Orldhum_exp1
+				NOT = { has_province_flag = DA_Haraz_Orldhum_exp2 }
+			}
+			province_event = { 
+				id = DA_ADK_explore.211		#found cages, exoskeleton
+				days = 10
+			}
+		}
+		1000 = {
+			trigger = {
+				province_id = 2868
+				has_province_flag = DA_Haraz_Orldhum_exp1
+				has_province_flag = DA_Haraz_Orldhum_exp2
+				NOT = { has_province_flag = DA_Haraz_Orldhum_exp3 }
+			}
+			province_event = { 
+				id = DA_ADK_explore.212		#found golems
+				days = 10
+			}
+		}
+		1000 = {
+			trigger = {
+				province_id = 2868
+				has_province_flag = DA_Haraz_Orldhum_exp1
+				has_province_flag = DA_Haraz_Orldhum_exp2
+				has_province_flag = DA_Haraz_Orldhum_exp3
+				NOT = { has_province_flag = DA_Haraz_Orldhum_exp4 }
+			}
+			province_event = { 
+				id = DA_ADK_explore.213		#found exoskeleton workshop
+				days = 10
+			}
+		}
+		1000 = {
+			trigger = {
+				province_id = 4119
+				NOT = { has_province_flag = DA_Amldihr_maps }
+			}
+			province_event = { 
+				id = DA_ADK_explore.90		#found Amldihr's maps
+				days = 10
+			}
+		}
+	}
+}
+Da_explore_dig_8_effect = {
+	random_list = {
+		28 = {
+			province_event = { 
+				id = DA_ADK_explore.1
+				days = 10
+				tooltip = DA_ADK_explore.1.tooltip
+			}
+		}
+		18 = {
+			province_event = { 
+				id = DA_ADK_explore.2
+				days = 10
+				tooltip = DA_ADK_explore.2.tooltip
+			}
+		}
+		8 = {
+			province_event = { 
+				id = DA_ADK_explore.15		# well mantained workshop
+				days = 10
+			}
+		}
+		6 = {
+			province_event = { 
+				id = DA_ADK_explore.16		# exploration team with gold, chased by goblins
+				days = 10
+			}
+		}
+		14 = {
+			province_event = { 
+				id = DA_ADK_explore.3
+				days = 10
+				tooltip = DA_ADK_explore.3.tooltip
+			}
+		}
+		14 = {
+			province_event = { 
+				id = DA_ADK_explore.9		#found orcs from the depths
+				days = 10
+			}
+		}
+		2 = {
+			trigger = {
+				NOT = { trade_goods = mithril }
+			}
+			province_event = { 
+				id = DA_ADK_explore.4		#found mithril
+				days = 10
+			}
+		}
+		2 = {
+			trigger = {
+				NOT = { trade_goods = damestear }
+			}
+			province_event = { 
+				id = DA_ADK_explore.5		#found damestear
+				days = 10
+			}
+		}
+		2 = {
+			province_event = { 
+				id = DA_ADK_explore.6		#found humans
+				days = 10
+			}
+		}
+		2 = {
+			province_event = { 
+				id = DA_ADK_explore.7		#found elfs
+				days = 10
+			}
+		}
+		3 = {
+			province_event = { 
+				id = DA_ADK_explore.8		#lost settlement
+				days = 10
+			}
+		}
+		1 = {
+			province_event = { 
+				id = DA_ADK_explore.10		#lost expedition
+				days = 10
+			}
+		}
+		1 = {
+			trigger = {
+				NOT = { has_province_modifier = DA_Ancient_hold_ruins }
+				NOT = { has_province_modifier = DA_Ancient_hold_explored }
+			}
+			province_event = { 
+				id = DA_ADK_explore.11		#found ruins of hold
+				days = 10
+			}
+		}
+		3 = {
+			trigger = {
+				NOT = { has_province_flag = DA_found_king_treasury }
+			}
+			province_event = { 
+				id = DA_ADK_explore.12		#found hold's late king treasury
+				days = 10
+			}
+		}
+		1 = {
+			trigger = {
+				DA_has_potential_secondary_hold = yes
+			}
+			province_event = { 
+				id = DA_ADK_explore.13		#found secondary hold
+				days = 10
+			}
+		}
+		2 = {
+			trigger = {
+				NOT = { has_province_modifier = DA_Mad_scientist_lab }
+			}
+			province_event = { 
+				id = DA_ADK_explore.14		#found Mad scientist's lab
+				days = 10
+			}
+		}
+		1000 = {
+			trigger = {
+				province_id = 2931
+				NOT = { has_province_flag = DA_er_natvir_CR_found }
+			}
+			province_event = { 
+				id = DA_ADK_explore.103		#found er-natvir cr
+				days = 10
+			}
+		}
+		1000 = {
+			trigger = {
+				province_id = 4020
+				NOT = { has_province_flag = DA_dur_vaz_blueprints_found }
+			}
+			province_event = { 
+				id = DA_ADK_explore.105		#found dur vaz blueprints
+				days = 10
+			}
+		}
+		1000 = {
+			trigger = {
+				province_id = 4236
+				NOT = { has_province_flag = DA_Mithril_workshop_found }
+			}
+			province_event = { 
+				id = DA_ADK_explore.104		#found mithril workshop in mithradum
+				days = 10
+			}
+		}
+		1000 = {
+			trigger = {
+				province_id = 4078
+				NOT = { has_province_flag = DA_Hehogrim_home_found }
+			}
+			province_event = { 
+				id = DA_ADK_explore.106		#found hehogrim's home
+				days = 10
+			}
+		}
+		1000 = {
+			trigger = {
+				province_id = 526
+				NOT = { has_province_flag = DA_dwarven_shipyard_found }
+			}
+			province_event = { 
+				id = DA_ADK_explore.200		#found ovdal tungr shipyard
+				days = 10
+			}
+		}
+		1000 = {
+			trigger = {
+				province_id = 4039
+				NOT = { has_province_flag = DA_Magma_forge_found }
+			}
+			province_event = { 
+				id = DA_ADK_explore.201		#found Magma Forge
+				days = 10
+			}
+		}
+		1000 = {
+			trigger = {
+				province_id = 2963
+				NOT = { has_province_flag = DA_Ducaniel_lab_found }
+			}
+			province_event = { 
+				id = DA_ADK_explore.202		#found Ducaniel's Lab
+				days = 10
+			}
+		}
+		1000 = {
+			trigger = {
+				province_id = 4056
+				NOT = { has_province_flag = DA_Verkal_koz_warning1 }
+			}
+			province_event = { 
+				id = DA_ADK_explore.203		# Verkal Kozenad, first warning
+				days = 10
+			}
+		}
+		1000 = {
+			trigger = {
+				province_id = 4056
+				has_province_flag = DA_Verkal_koz_warning1
+				NOT = { has_province_flag = DA_Verkal_koz_warning2 }
+			}
+			province_event = { 
+				id = DA_ADK_explore.204		# Verkal Kozenad, second warning
+				days = 10
+			}
+		}
+		1000 = {
+			trigger = {
+				province_id = 4056
+				has_province_flag = DA_Verkal_koz_warning1
+				has_province_flag = DA_Verkal_koz_warning2
+				NOT = { has_province_flag = DA_Verkal_koz_warning3 }
+			}
+			province_event = { 
+				id = DA_ADK_explore.205		# Verkal Kozenad, third warning
+				days = 10
+			}
+		}
+		1000 = {
+			trigger = {
+				province_id = 2868
+				NOT = { has_province_flag = DA_Haraz_Orldhum_exp1 }
+			}
+			province_event = { 
+				id = DA_ADK_explore.210		#found Turrets of Orldhûm
+				days = 10
+			}
+		}
+		1000 = {
+			trigger = {
+				province_id = 2868
+				has_province_flag = DA_Haraz_Orldhum_exp1
+				NOT = { has_province_flag = DA_Haraz_Orldhum_exp2 }
+			}
+			province_event = { 
+				id = DA_ADK_explore.211		#found cages, exoskeleton
+				days = 10
+			}
+		}
+		1000 = {
+			trigger = {
+				province_id = 2868
+				has_province_flag = DA_Haraz_Orldhum_exp1
+				has_province_flag = DA_Haraz_Orldhum_exp2
+				NOT = { has_province_flag = DA_Haraz_Orldhum_exp3 }
+			}
+			province_event = { 
+				id = DA_ADK_explore.212		#found golems
+				days = 10
+			}
+		}
+		1000 = {
+			trigger = {
+				province_id = 2868
+				has_province_flag = DA_Haraz_Orldhum_exp1
+				has_province_flag = DA_Haraz_Orldhum_exp2
+				has_province_flag = DA_Haraz_Orldhum_exp3
+				NOT = { has_province_flag = DA_Haraz_Orldhum_exp4 }
+			}
+			province_event = { 
+				id = DA_ADK_explore.213		#found exoskeleton workshop
+				days = 10
+			}
+		}
+		1000 = {
+			trigger = {
+				province_id = 4119
+				NOT = { has_province_flag = DA_Amldihr_maps }
+			}
+			province_event = { 
+				id = DA_ADK_explore.90		#found Amldihr's maps
+				days = 10
+			}
+		}
+	}
+}
+Da_explore_dig_9_effect = {
+	random_list = {
+		29 = {
+			province_event = { 
+				id = DA_ADK_explore.1
+				days = 10
+				tooltip = DA_ADK_explore.1.tooltip
+			}
+		}
+		12 = {
+			province_event = { 
+				id = DA_ADK_explore.2
+				days = 10
+				tooltip = DA_ADK_explore.2.tooltip
+			}
+		}
+		6 = {
+			province_event = { 
+				id = DA_ADK_explore.15		# well mantained workshop
+				days = 10
+			}
+		}
+		6 = {
+			province_event = { 
+				id = DA_ADK_explore.16		# exploration team with gold, chased by goblins
+				days = 10
+			}
+		}
+		17 = {
+			province_event = { 
+				id = DA_ADK_explore.3
+				days = 10
+				tooltip = DA_ADK_explore.3.tooltip
+			}
+		}
+		15 = {
+			province_event = { 
+				id = DA_ADK_explore.9		#found orcs from the depths
+				days = 10
+			}
+		}
+		2 = {
+			trigger = {
+				NOT = { trade_goods = mithril }
+			}
+			province_event = { 
+				id = DA_ADK_explore.4		#found mithril
+				days = 10
+			}
+		}
+		3 = {
+			trigger = {
+				NOT = { trade_goods = damestear }
+			}
+			province_event = { 
+				id = DA_ADK_explore.5		#found damestear
+				days = 10
+			}
+		}
+		2 = {
+			province_event = { 
+				id = DA_ADK_explore.6		#found humans
+				days = 10
+			}
+		}
+		2 = {
+			province_event = { 
+				id = DA_ADK_explore.7		#found elfs
+				days = 10
+			}
+		}
+		3 = {
+			province_event = { 
+				id = DA_ADK_explore.8		#lost settlement
+				days = 10
+			}
+		}
+		1 = {
+			province_event = { 
+				id = DA_ADK_explore.10		#lost expedition
+				days = 10
+			}
+		}
+		1 = {
+			trigger = {
+				NOT = { has_province_modifier = DA_Ancient_hold_ruins }
+				NOT = { has_province_modifier = DA_Ancient_hold_explored }
+			}
+			province_event = { 
+				id = DA_ADK_explore.11		#found ruins of hold
+				days = 10
+			}
+		}
+		3 = {
+			trigger = {
+				NOT = { has_province_flag = DA_found_king_treasury }
+			}
+			province_event = { 
+				id = DA_ADK_explore.12		#found hold's late king treasury
+				days = 10
+			}
+		}
+		1 = {
+			trigger = {
+				DA_has_potential_secondary_hold = yes
+			}
+			province_event = { 
+				id = DA_ADK_explore.13		#found secondary hold
+				days = 10
+			}
+		}
+		2 = {
+			trigger = {
+				NOT = { has_province_modifier = DA_Mad_scientist_lab }
+			}
+			province_event = { 
+				id = DA_ADK_explore.14		#found Mad scientist's lab
+				days = 10
+			}
+		}
+		1000 = {
+			trigger = {
+				province_id = 2931
+				NOT = { has_province_flag = DA_er_natvir_CR_found }
+			}
+			province_event = { 
+				id = DA_ADK_explore.103		#found er-natvir cr
+				days = 10
+			}
+		}
+		1000 = {
+			trigger = {
+				province_id = 4020
+				NOT = { has_province_flag = DA_dur_vaz_blueprints_found }
+			}
+			province_event = { 
+				id = DA_ADK_explore.105		#found dur vaz blueprints
+				days = 10
+			}
+		}
+		1000 = {
+			trigger = {
+				province_id = 4236
+				NOT = { has_province_flag = DA_Mithril_workshop_found }
+			}
+			province_event = { 
+				id = DA_ADK_explore.104		#found mithril workshop in mithradum
+				days = 10
+			}
+		}
+		1000 = {
+			trigger = {
+				province_id = 4078
+				NOT = { has_province_flag = DA_Hehogrim_home_found }
+			}
+			province_event = { 
+				id = DA_ADK_explore.106		#found hehogrim's home
+				days = 10
+			}
+		}
+		1000 = {
+			trigger = {
+				province_id = 526
+				NOT = { has_province_flag = DA_dwarven_shipyard_found }
+			}
+			province_event = { 
+				id = DA_ADK_explore.200		#found ovdal tungr shipyard
+				days = 10
+			}
+		}
+		1000 = {
+			trigger = {
+				province_id = 4039
+				NOT = { has_province_flag = DA_Magma_forge_found }
+			}
+			province_event = { 
+				id = DA_ADK_explore.201		#found Magma Forge
+				days = 10
+			}
+		}
+		1000 = {
+			trigger = {
+				province_id = 2963
+				NOT = { has_province_flag = DA_Ducaniel_lab_found }
+			}
+			province_event = { 
+				id = DA_ADK_explore.202		#found Ducaniel's Lab
+				days = 10
+			}
+		}
+		1000 = {
+			trigger = {
+				province_id = 4056
+				NOT = { has_province_flag = DA_Verkal_koz_warning1 }
+			}
+			province_event = { 
+				id = DA_ADK_explore.203		# Verkal Kozenad, first warning
+				days = 10
+			}
+		}
+		1000 = {
+			trigger = {
+				province_id = 4056
+				has_province_flag = DA_Verkal_koz_warning1
+				NOT = { has_province_flag = DA_Verkal_koz_warning2 }
+			}
+			province_event = { 
+				id = DA_ADK_explore.204		# Verkal Kozenad, second warning
+				days = 10
+			}
+		}
+		1000 = {
+			trigger = {
+				province_id = 4056
+				has_province_flag = DA_Verkal_koz_warning1
+				has_province_flag = DA_Verkal_koz_warning2
+				NOT = { has_province_flag = DA_Verkal_koz_warning3 }
+			}
+			province_event = { 
+				id = DA_ADK_explore.205		# Verkal Kozenad, third warning
+				days = 10
+			}
+		}
+		1000 = {
+			trigger = {
+				province_id = 2868
+				NOT = { has_province_flag = DA_Haraz_Orldhum_exp1 }
+			}
+			province_event = { 
+				id = DA_ADK_explore.210		#found Turrets of Orldhûm
+				days = 10
+			}
+		}
+		1000 = {
+			trigger = {
+				province_id = 2868
+				has_province_flag = DA_Haraz_Orldhum_exp1
+				NOT = { has_province_flag = DA_Haraz_Orldhum_exp2 }
+			}
+			province_event = { 
+				id = DA_ADK_explore.211		#found cages, exoskeleton
+				days = 10
+			}
+		}
+		1000 = {
+			trigger = {
+				province_id = 2868
+				has_province_flag = DA_Haraz_Orldhum_exp1
+				has_province_flag = DA_Haraz_Orldhum_exp2
+				NOT = { has_province_flag = DA_Haraz_Orldhum_exp3 }
+			}
+			province_event = { 
+				id = DA_ADK_explore.212		#found golems
+				days = 10
+			}
+		}
+		1000 = {
+			trigger = {
+				province_id = 2868
+				has_province_flag = DA_Haraz_Orldhum_exp1
+				has_province_flag = DA_Haraz_Orldhum_exp2
+				has_province_flag = DA_Haraz_Orldhum_exp3
+				NOT = { has_province_flag = DA_Haraz_Orldhum_exp4 }
+			}
+			province_event = { 
+				id = DA_ADK_explore.213		#found exoskeleton workshop
+				days = 10
+			}
+		}
+		1000 = {
+			trigger = {
+				province_id = 4119
+				NOT = { has_province_flag = DA_Amldihr_maps }
+			}
+			province_event = { 
+				id = DA_ADK_explore.90		#found Amldihr's maps
+				days = 10
+			}
+		}
+	}
+}
+
+Da_explore_dig_10_effect = {
+	random_list = {
+		29 = {
+			province_event = { 
+				id = DA_ADK_explore.1
+				days = 10
+				tooltip = DA_ADK_explore.1.tooltip
+			}
+		}
+		9 = {
+			province_event = { 
+				id = DA_ADK_explore.2
+				days = 10
+				tooltip = DA_ADK_explore.2.tooltip
+			}
+		}
+		4 = {
+			province_event = { 
+				id = DA_ADK_explore.15		# well mantained workshop
+				days = 10
+			}
+		}
+		4 = {
+			province_event = { 
+				id = DA_ADK_explore.16		# exploration team with gold, chased by goblins
+				days = 10
+			}
+		}
+		17 = {
+			province_event = { 
+				id = DA_ADK_explore.3
+				days = 10
+				tooltip = DA_ADK_explore.3.tooltip
+			}
+		}
+		17 = {
+			province_event = { 
+				id = DA_ADK_explore.9		#found orcs from the depths
+				days = 10
+			}
+		}
+		2 = {
+			trigger = {
+				NOT = { trade_goods = mithril }
+			}
+			province_event = { 
+				id = DA_ADK_explore.4		#found mithril
+				days = 10
+			}
+		}
+		3 = {
+			trigger = {
+				NOT = { trade_goods = damestear }
+			}
+			province_event = { 
+				id = DA_ADK_explore.5		#found damestear
+				days = 10
+			}
+		}
+		2 = {
+			province_event = { 
+				id = DA_ADK_explore.6		#found humans
+				days = 10
+			}
+		}
+		2 = {
+			province_event = { 
+				id = DA_ADK_explore.7		#found elfs
+				days = 10
+			}
+		}
+		1 = {
+			province_event = { 
+				id = DA_ADK_explore.10		#lost expedition
+				days = 10
+			}
+		}
+		5 = {
+			trigger = {
+				NOT = { has_province_flag = DA_found_king_treasury }
+			}
+			province_event = { 
+				id = DA_ADK_explore.12		#found hold's late king treasury
+				days = 10
+			}
+		}
+		1 = {
+			trigger = {
+				DA_has_potential_secondary_hold = yes
+			}
+			province_event = { 
+				id = DA_ADK_explore.13		#found secondary hold
+				days = 10
+			}
+		}
+		2 = {
+			trigger = {
+				NOT = { has_province_modifier = DA_Mad_scientist_lab }
+			}
+			province_event = { 
+				id = DA_ADK_explore.14		#found Mad scientist's lab
+				days = 10
+			}
+		}
+		1 = {
+			trigger = {
+				NOT = { has_province_modifier = DA_Ancient_hold_ruins }
+				NOT = { has_province_modifier = DA_Ancient_hold_explored }
+			}
+			province_event = { 
+				id = DA_ADK_explore.11		#found ruins of hold
+				days = 10
+			}
+		}
+		1000 = {
+			trigger = {
+				province_id = 2931
+				NOT = { has_province_flag = DA_er_natvir_CR_found }
+			}
+			province_event = { 
+				id = DA_ADK_explore.103		#found er-natvir cr
+				days = 10
+			}
+		}
+		1000 = {
+			trigger = {
+				province_id = 4020
+				NOT = { has_province_flag = DA_dur_vaz_blueprints_found }
+			}
+			province_event = { 
+				id = DA_ADK_explore.105		#found dur vaz blueprints
+				days = 10
+			}
+		}
+		1000 = {
+			trigger = {
+				province_id = 4236
+				NOT = { has_province_flag = DA_Mithril_workshop_found }
+			}
+			province_event = { 
+				id = DA_ADK_explore.104		#found mithril workshop in mithradum
+				days = 10
+			}
+		}
+		1000 = {
+			trigger = {
+				province_id = 4078
+				NOT = { has_province_flag = DA_Hehogrim_home_found }
+			}
+			province_event = { 
+				id = DA_ADK_explore.106		#found hehogrim's home
+				days = 10
+			}
+		}
+		1000 = {
+			trigger = {
+				province_id = 526
+				NOT = { has_province_flag = DA_dwarven_shipyard_found }
+			}
+			province_event = { 
+				id = DA_ADK_explore.200		#found ovdal tungr shipyard
+				days = 10
+			}
+		}
+		1000 = {
+			trigger = {
+				province_id = 4039
+				NOT = { has_province_flag = DA_Magma_forge_found }
+			}
+			province_event = { 
+				id = DA_ADK_explore.201		#found Magma Forge
+				days = 10
+			}
+		}
+		1000 = {
+			trigger = {
+				province_id = 2963
+				NOT = { has_province_flag = DA_Ducaniel_lab_found }
+			}
+			province_event = { 
+				id = DA_ADK_explore.202		#found Ducaniel's Lab
+				days = 10
+			}
+		}
+		1000 = {
+			trigger = {
+				province_id = 4056
+				NOT = { has_province_flag = DA_Verkal_koz_warning1 }
+			}
+			province_event = { 
+				id = DA_ADK_explore.203		# Verkal Kozenad, first warning
+				days = 10
+			}
+		}
+		1000 = {
+			trigger = {
+				province_id = 4056
+				has_province_flag = DA_Verkal_koz_warning1
+				NOT = { has_province_flag = DA_Verkal_koz_warning2 }
+			}
+			province_event = { 
+				id = DA_ADK_explore.204		# Verkal Kozenad, second warning
+				days = 10
+			}
+		}
+		1000 = {
+			trigger = {
+				province_id = 4056
+				has_province_flag = DA_Verkal_koz_warning1
+				has_province_flag = DA_Verkal_koz_warning2
+				NOT = { has_province_flag = DA_Verkal_koz_warning3 }
+			}
+			province_event = { 
+				id = DA_ADK_explore.205		# Verkal Kozenad, third warning
+				days = 10
+			}
+		}
+		1000 = {
+			trigger = {
+				province_id = 4056
+				has_province_flag = DA_Verkal_koz_warning1
+				has_province_flag = DA_Verkal_koz_warning2
+				has_province_flag = DA_Verkal_koz_warning3
+				NOT = { has_province_modifier = DA_continous_Undeads }
+			}
+			province_event = { 
+				id = DA_ADK_explore.206		# Verkal Kozenad, ghosts
+				days = 10
+			}
+		}
+		1000 = {
+			trigger = {
+				province_id = 2868
+				NOT = { has_province_flag = DA_Haraz_Orldhum_exp1 }
+			}
+			province_event = { 
+				id = DA_ADK_explore.210		#found Turrets of Orldhûm
+				days = 10
+			}
+		}
+		1000 = {
+			trigger = {
+				province_id = 2868
+				has_province_flag = DA_Haraz_Orldhum_exp1
+				NOT = { has_province_flag = DA_Haraz_Orldhum_exp2 }
+			}
+			province_event = { 
+				id = DA_ADK_explore.211		#found cages, exoskeleton
+				days = 10
+			}
+		}
+		1000 = {
+			trigger = {
+				province_id = 2868
+				has_province_flag = DA_Haraz_Orldhum_exp1
+				has_province_flag = DA_Haraz_Orldhum_exp2
+				NOT = { has_province_flag = DA_Haraz_Orldhum_exp3 }
+			}
+			province_event = { 
+				id = DA_ADK_explore.212		#found golems
+				days = 10
+			}
+		}
+		1000 = {
+			trigger = {
+				province_id = 2868
+				has_province_flag = DA_Haraz_Orldhum_exp1
+				has_province_flag = DA_Haraz_Orldhum_exp2
+				has_province_flag = DA_Haraz_Orldhum_exp3
+				NOT = { has_province_flag = DA_Haraz_Orldhum_exp4 }
+			}
+			province_event = { 
+				id = DA_ADK_explore.213		#found exoskeleton workshop
+				days = 10
+			}
+		}
+		1000 = {
+			trigger = {
+				province_id = 4119
+				NOT = { has_province_flag = DA_Amldihr_maps }
+			}
+			province_event = { 
+				id = DA_ADK_explore.90		#found Amldihr's maps
+				days = 10
+			}
+		}
+	}
+}
+Da_explore_dig_11_effect = {
+	random_list = {
+		22 = {
+			trigger = {
+				NOT = { province_id = 4119 }
+			}
+			province_event = { 
+				id = DA_ADK_explore.1
+				days = 10
+				tooltip = DA_ADK_explore.1.tooltip
+			}
+		}
+		3 = {
+			trigger = {
+				NOT = { province_id = 4119 }
+			}
+			province_event = { 
+				id = DA_ADK_explore.2
+				days = 10
+				tooltip = DA_ADK_explore.2.tooltip
+			}
+		}
+		4 = {
+			trigger = {
+				NOT = { province_id = 4119 }
+			}
+			province_event = { 
+				id = DA_ADK_explore.15		# well mantained workshop
+				days = 10
+			}
+		}
+		1 = {
+			trigger = {
+				NOT = { province_id = 4119 }
+			}
+			province_event = { 
+				id = DA_ADK_explore.16		# exploration team with gold, chased by goblins
+				days = 10
+			}
+		}
+		28 = {
+			trigger = {
+				NOT = { province_id = 4119 }
+			}
+			province_event = {
+				id = DA_ADK_explore.3
+				days = 10
+				tooltip = DA_ADK_explore.3.tooltip
+			}
+		}
+		13 = {
+			province_event = { 
+				id = DA_ADK_explore.9		#found orcs from the depths
+				days = 10
+			}
+		}
+		4 = {
+			trigger = {
+				NOT = { province_id = 4119 }
+				NOT = { trade_goods = mithril }
+			}
+			province_event = { 
+				id = DA_ADK_explore.4		#found mithril
+				days = 10
+			}
+		}
+		3 = {
+			trigger = {
+				NOT = { province_id = 4119 }
+				NOT = { trade_goods = damestear }
+			}
+			province_event = { 
+				id = DA_ADK_explore.5		#found damestear
+				days = 10
+			}
+		}
+		2 = {
+			trigger = {
+				NOT = { province_id = 4119 }
+			}
+			province_event = { 
+				id = DA_ADK_explore.6		#found humans
+				days = 10
+			}
+		}
+		2 = {
+			trigger = {
+				NOT = { province_id = 4119 }
+			}
+			province_event = { 
+				id = DA_ADK_explore.7		#found elfs
+				days = 10
+			}
+		}
+		100 = {
+			trigger = {
+				NOT = { has_province_modifier = DA_Ancient_hold_ruins }
+				NOT = { has_province_modifier = DA_Ancient_hold_explored }
+				NOT = { province_id = 4119 }
+			}
+			province_event = { 
+				id = DA_ADK_explore.11		#found ruins of hold
+				days = 10
+			}
+		}
+		100 = {
+			trigger = {
+				NOT = { has_province_flag = DA_found_king_treasury }
+				NOT = { province_id = 4119 }
+			}
+			province_event = { 
+				id = DA_ADK_explore.12		#found hold's late king treasury
+				days = 10
+			}
+		}
+		100 = {
+			trigger = {
+				NOT = { has_province_modifier = DA_Mad_scientist_lab }
+				NOT = { province_id = 4119 }
+			}
+			province_event = { 
+				id = DA_ADK_explore.14		#found Mad scientist's lab
+				days = 10
+			}
+		}
+		1000 = {
+			trigger = {
+				province_id = 4056
+				has_province_flag = DA_Verkal_koz_warning1
+				has_province_flag = DA_Verkal_koz_warning2
+				has_province_flag = DA_Verkal_koz_warning3
+				NOT = { has_province_modifier = DA_continous_Undeads }
+			}
+			province_event = { 
+				id = DA_ADK_explore.206		# Verkal Kozenad, ghosts
+				days = 10
+			}
+		}
+		1000 = {
+			trigger = {
+				province_id = 4119
+			}
+			province_event = {
+				id = DA_ADK_explore.100
+				days = 20
+			}
+		}
+
+	}
+}
+DA_Set_level_as_explored = {
+	if = {
+		limit = { 
+			DA_has_dig_level_2_or_higher = yes
+			NOT = { has_province_flag = DA_looked_dig_adk_2 }
+		}
+		set_province_flag = DA_looked_dig_adk_2
+		hidden_effect = {
+			add_permanent_province_modifier = {
+				name = DA_local_explored_dig_2
+				duration = -1
+			}
+		}
+	}
+	else_if = {
+		limit = { 
+			DA_has_dig_level_3_or_higher = yes
+			NOT = { has_province_flag = DA_looked_dig_adk_3 }
+		}
+		set_province_flag = DA_looked_dig_adk_3
+		hidden_effect = {
+			remove_province_modifier = DA_local_explored_dig_2
+			add_permanent_province_modifier = {
+				name = DA_local_explored_dig_3
+				duration = -1
+			}
+		}
+	}
+	else_if = {
+		limit = { 
+			DA_has_dig_level_4_or_higher = yes
+			NOT = { has_province_flag = DA_looked_dig_adk_4 }
+		}
+		set_province_flag = DA_looked_dig_adk_4
+		hidden_effect = {
+			remove_province_modifier = DA_local_explored_dig_3
+			add_permanent_province_modifier = {
+				name = DA_local_explored_dig_4
+				duration = -1
+			}
+		}
+	}
+	else_if = {
+		limit = { 
+			DA_has_dig_level_5_or_higher = yes
+			NOT = { has_province_flag = DA_looked_dig_adk_5 }
+		}
+		set_province_flag = DA_looked_dig_adk_5
+		hidden_effect = {
+			remove_province_modifier = DA_local_explored_dig_4
+			add_permanent_province_modifier = {
+				name = DA_local_explored_dig_5
+				duration = -1
+			}
+		}
+	}
+	else_if = {
+		limit = { 
+			DA_has_dig_level_6_or_higher = yes
+			NOT = { has_province_flag = DA_looked_dig_adk_6 }
+		}
+		set_province_flag = DA_looked_dig_adk_6
+		hidden_effect = {
+			remove_province_modifier = DA_local_explored_dig_5
+			add_permanent_province_modifier = {
+				name = DA_local_explored_dig_6
+				duration = -1
+			}
+		}
+	}
+	else_if = {
+		limit = { 
+			DA_has_dig_level_7_or_higher = yes
+			NOT = { has_province_flag = DA_looked_dig_adk_7 }
+		}
+		set_province_flag = DA_looked_dig_adk_7
+		hidden_effect = {
+			remove_province_modifier = DA_local_explored_dig_6
+			add_permanent_province_modifier = {
+				name = DA_local_explored_dig_7
+				duration = -1
+			}
+		}
+	}
+	else_if = {
+		limit = { 
+			# add_prestige = 2
+			DA_has_dig_level_8_or_higher = yes
+			NOT = { has_province_flag = DA_looked_dig_adk_8 }
+		}
+		set_province_flag = DA_looked_dig_adk_8
+		hidden_effect = {
+			remove_province_modifier = DA_local_explored_dig_7
+			add_permanent_province_modifier = {
+				name = DA_local_explored_dig_8
+				duration = -1
+			}
+		}
+	}
+	else_if = {
+		limit = { 
+			DA_has_dig_level_9_or_higher = yes
+			NOT = { has_province_flag = DA_looked_dig_adk_9 }
+		}
+		set_province_flag = DA_looked_dig_adk_9
+		hidden_effect = {
+			remove_province_modifier = DA_local_explored_dig_8
+			add_permanent_province_modifier = {
+				name = DA_local_explored_dig_9
+				duration = -1
+			}
+		}
+	}
+	else_if = {
+		limit = { 
+			DA_has_dig_level_10_or_higher = yes
+			NOT = { has_province_flag = DA_looked_dig_adk_10 }
+		}
+		set_province_flag = DA_looked_dig_adk_10
+		hidden_effect = {
+			remove_province_modifier = DA_local_explored_dig_9
+			add_permanent_province_modifier = {
+				name = DA_local_explored_dig_10
+				duration = -1
+			}
+		}
+	}
+	else_if = {
+		limit = { 
+			DA_has_dig_level_11_or_higher = yes
+			NOT = { has_province_flag = DA_looked_dig_adk_11 }
+		}
+		set_province_flag = DA_looked_dig_adk_11
+		hidden_effect = {
+			remove_province_modifier = DA_local_explored_dig_10
+			add_permanent_province_modifier = {
+				name = DA_local_explored_dig_11
+				duration = -1
+			}
+		}
+	}
+	else = { # should never go here
+		add_base_tax = 1
+		
+	}
+}
+DA_create_War_Rune_Mage_general_effect = {
+	custom_tooltip = War_Rune_Mage_general_tooltip
+	hidden_effect = {
+		set_saved_name = {
+			key = root_name_male
+			type = advisor
+			scope = ROOT
+		}
+		set_saved_name = {
+			key = root_name_female
+			type = advisor
+			female = yes
+			scope = ROOT
+		}
+		if = {
+			limit = {
+				army_tradition = 0.00
+				NOT = { army_tradition = 20 }
+			}
+			random_list = {
+				50 = {
+					define_general = {
+						fire = 4
+						shock = 2
+						manuever = 0
+						siege = 2
+						trait = War_Rune_Mage_general_personality
+						name = root_name_male
+					}
+				}
+				50 = {
+					define_general = {
+						fire = 4
+						shock = 2
+						manuever = 0
+						siege = 2
+						trait = War_Rune_Mage_general_personality
+						female = yes
+						name = root_name_female
+					}
+				}
+			}
+		}
+		
+		if = {
+			limit = {
+				army_tradition = 20
+				NOT = { army_tradition = 40 }
+			}
+			random_list = {
+				50 = {
+					define_general = {
+						fire = 5
+						shock = 3
+						manuever = 1
+						siege = 3
+						trait = War_Rune_Mage_general_personality
+						name = root_name_male
+					}
+				}
+				50 = {
+					define_general = {
+						fire = 5
+						shock = 3
+						manuever = 1
+						siege = 3
+						trait = War_Rune_Mage_general_personality
+						female = yes
+						name = root_name_female
+					}
+				}
+			}
+		}
+		
+		if = {
+			limit = {
+				army_tradition = 40
+				NOT = { army_tradition = 60 }
+			}
+			random_list = {
+				50 = {
+					define_general = {
+						fire = 6
+						shock = 4
+						manuever = 1
+						siege = 4
+						trait = War_Rune_Mage_general_personality
+						name = root_name_male
+					}
+				}
+				50 = {
+					define_general = {
+						fire = 6
+						shock = 4
+						manuever = 1
+						siege = 4
+						trait = War_Rune_Mage_general_personality
+						female = yes
+						name = root_name_female
+					}
+				}
+			}
+		}
+		
+		if = {
+			limit = {
+				army_tradition = 60
+				NOT = { army_tradition = 80 }
+			}
+			random_list = {
+				50 = {
+					define_general = {
+						fire = 7
+						shock = 4
+						manuever = 2
+						siege = 5
+						trait = War_Rune_Mage_general_personality
+						name = root_name_male
+					}
+				}
+				50 = {
+					define_general = {
+						fire = 7
+						shock = 4
+						manuever = 2
+						siege = 5
+						trait = War_Rune_Mage_general_personality
+						female = yes
+						name = root_name_female
+					}
+				}
+			}
+		}
+		
+		if = {
+			limit = {
+				army_tradition = 80
+			}
+			random_list = {
+				50 = {
+					define_general = {
+						fire = 9
+						shock = 4
+						manuever = 2
+						siege = 6
+						trait = War_Rune_Mage_general_personality
+						name = root_name_male
+					}
+				}
+				50 = {
+					define_general = {
+						fire = 9
+						shock = 4
+						manuever = 2
+						siege = 6
+						trait = War_Rune_Mage_general_personality
+						female = yes
+						name = root_name_female
+					}
+				}
+			}
+		}
+			
+		clear_saved_name = root_name_male
+		clear_saved_name = root_name_female
+	}
+}
+
+DA_create_War_Rune_Mage_admiral_effect = {
+	custom_tooltip = War_Rune_Mage_admiral_tooltip
+	hidden_effect = {
+		set_saved_name = {
+			key = root_name_male
+			type = advisor
+			scope = ROOT
+		}
+		set_saved_name = {
+			key = root_name_female
+			type = advisor
+			female = yes
+			scope = ROOT
+		}
+		if = {
+			limit = {
+				navy_tradition = 0.00
+				NOT = { navy_tradition = 20 }
+			}
+			random_list = {
+				50 = {
+					define_admiral = {
+						fire = 4
+						shock = 2
+						manuever = 0
+						siege = 2
+						trait = War_Rune_Mage_admiral_personality
+						name = root_name_male
+					}
+				}
+				50 = {
+					define_admiral = {
+						fire = 4
+						shock = 2
+						manuever = 0
+						siege = 2
+						trait = War_Rune_Mage_admiral_personality
+						female = yes
+						name = root_name_female
+					}
+				}
+			}
+		}
+		
+		if = {
+			limit = {
+				navy_tradition = 20
+				NOT = { navy_tradition = 40 }
+			}
+			random_list = {
+				50 = {
+					define_admiral = {
+						fire = 5
+						shock = 3
+						manuever = 1
+						siege = 3
+						trait = War_Rune_Mage_admiral_personality
+						name = root_name_male
+					}
+				}
+				50 = {
+					define_admiral = {
+						fire = 5
+						shock = 3
+						manuever = 1
+						siege = 3
+						trait = War_Rune_Mage_admiral_personality
+						female = yes
+						name = root_name_female
+					}
+				}
+			}
+		}
+		
+		if = {
+			limit = {
+				navy_tradition = 40
+				NOT = { navy_tradition = 60 }
+			}
+			random_list = {
+				50 = {
+					define_admiral = {
+						fire = 6
+						shock = 4
+						manuever = 1
+						siege = 4
+						trait = War_Rune_Mage_admiral_personality
+						name = root_name_male
+					}
+				}
+				50 = {
+					define_admiral = {
+						fire = 6
+						shock = 4
+						manuever = 1
+						siege = 4
+						trait = War_Rune_Mage_admiral_personality
+						female = yes
+						name = root_name_female
+					}
+				}
+			}
+		}
+		
+		if = {
+			limit = {
+				navy_tradition = 60
+				NOT = { navy_tradition = 80 }
+			}
+			random_list = {
+				50 = {
+					define_admiral = {
+						fire = 7
+						shock = 4
+						manuever = 2
+						siege = 5
+						trait = War_Rune_Mage_admiral_personality
+						name = root_name_male
+					}
+				}
+				50 = {
+					define_admiral = {
+						fire = 7
+						shock = 4
+						manuever = 2
+						siege = 5
+						trait = War_Rune_Mage_admiral_personality
+						female = yes
+						name = root_name_female
+					}
+				}
+			}
+		}
+		
+		if = {
+			limit = {
+				navy_tradition = 80
+			}
+			random_list = {
+				50 = {
+					define_admiral = {
+						fire = 8
+						shock = 4
+						manuever = 3
+						siege = 6
+						trait = War_Rune_Mage_admiral_personality
+						name = root_name_male
+					}
+				}
+				50 = {
+					define_admiral = {
+						fire = 8
+						shock = 4
+						manuever = 3
+						siege = 6
+						trait = War_Rune_Mage_admiral_personality
+						female = yes
+						name = root_name_female
+					}
+				}
+			}
+		}
+			
+		clear_saved_name = root_name_male
+		clear_saved_name = root_name_female
+	}
+}
+
+DA_create_Mithril_rune_mage_effect = {
+	custom_tooltip = DA_Mithradum_war_mage_tooltip
+	hidden_effect = {
+		set_saved_name = {
+			key = root_name_male
+			type = advisor
+			scope = ROOT
+		}
+		set_saved_name = {
+			key = root_name_female
+			type = advisor
+			female = yes
+			scope = ROOT
+		}
+		if = {
+			limit = {
+				army_tradition = 0.00
+				NOT = { army_tradition = 20 }
+			}
+			random_list = {
+				50 = {
+					define_general = {
+						fire = 4
+						shock = 3
+						manuever = 1
+						siege = 2
+						trait = DA_Mithradum_war_mage
+						name = root_name_male
+					}
+				}
+				50 = {
+					define_general = {
+						fire = 4
+						shock = 3
+						manuever = 1
+						siege = 2
+						trait = DA_Mithradum_war_mage
+						female = yes
+						name = root_name_female
+					}
+				}
+			}
+		}
+		
+		if = {
+			limit = {
+				army_tradition = 20
+				NOT = { army_tradition = 40 }
+			}
+			random_list = {
+				50 = {
+					define_general = {
+						fire = 6
+						shock = 4
+						manuever = 3
+						siege = 3
+						trait = DA_Mithradum_war_mage
+						name = root_name_male
+					}
+				}
+				50 = {
+					define_general = {
+						fire = 6
+						shock = 4
+						manuever = 3
+						siege = 3
+						trait = DA_Mithradum_war_mage
+						female = yes
+						name = root_name_female
+					}
+				}
+			}
+		}
+		
+		if = {
+			limit = {
+				army_tradition = 40
+				NOT = { army_tradition = 60 }
+			}
+			random_list = {
+				50 = {
+					define_general = {
+						fire = 7
+						shock = 5
+						manuever = 4
+						siege = 4
+						trait = DA_Mithradum_war_mage
+						name = root_name_male
+					}
+				}
+				50 = {
+					define_general = {
+						fire = 7
+						shock = 5
+						manuever = 4
+						siege = 4
+						trait = DA_Mithradum_war_mage
+						female = yes
+						name = root_name_female
+					}
+				}
+			}
+		}
+		
+		if = {
+			limit = {
+				army_tradition = 60
+				NOT = { army_tradition = 80 }
+			}
+			random_list = {
+				50 = {
+					define_general = {
+						fire = 8
+						shock = 5
+						manuever = 4
+						siege = 5
+						trait = DA_Mithradum_war_mage
+						name = root_name_male
+					}
+				}
+				50 = {
+					define_general = {
+						fire = 8
+						shock = 5
+						manuever = 4
+						siege = 5
+						trait = DA_Mithradum_war_mage
+						female = yes
+						name = root_name_female
+					}
+				}
+			}
+		}
+		
+		if = {
+			limit = {
+				army_tradition = 80
+			}
+			random_list = {
+				50 = {
+					define_general = {
+						fire = 10
+						shock = 6
+						manuever = 5
+						siege = 7
+						trait = DA_Mithradum_war_mage
+						name = root_name_male
+					}
+				}
+				50 = {
+					define_general = {
+						fire = 10
+						shock = 6
+						manuever = 5
+						siege = 7
+						trait = DA_Mithradum_war_mage
+						female = yes
+						name = root_name_female
+					}
+				}
+			}
+		}
+			
+		clear_saved_name = root_name_male
+		clear_saved_name = root_name_female
+	}
+}

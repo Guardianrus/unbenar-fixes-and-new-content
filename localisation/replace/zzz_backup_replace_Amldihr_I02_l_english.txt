@@ -1,0 +1,238 @@
+﻿l_english:
+
+##Mission Titles and Description
+
+ F49_monstrosity_title:0 "Question of Monstrosity"
+ F49_monstrosity_desc:0 "If we are to build a great nation in Salahad we must make efforts to look inward and make efforts to transform how we govern into a more civilized model. We must be seen as equals if we are to survive."
+
+ F49_catching_up_title:0 "Catching Up"
+ F49_catching_up_desc:0 "We have capered about pillaging, looting, and kidnapping for centuries. We don't have the infrastructure or bureaucracy set up to run a civilized nation. We need to at least match our neighbors."
+
+ F49_worshipping_the_sun_title:0 "Worshipping the Sun"
+ F49_worshipping_the_sun_desc:0 "Although originally a false conversion in order to preserve our sovereignty, Jasiene quickly became enamored with the desert elf Jaddar and faithfully converted herself and her people to this new faith. Now, as our nation is quickly adopting the ways of The Jadd, many still cling to our traditional huntress religion. This ancient religion can no longer be tolerated. We must make efforts to proselytize the light of Surael for the stability and unity of the realm."
+
+ F49_merchant_class_title:0 "Encourage Merchant Class"
+ F49_merchant_class_desc:0 "It is clear we cannot develop our nation with our treasury and resources alone. But an advisor has recently proposed a wonderful idea that could kill two Harimari with one stone. If we encourage the more entrepreneurial of our tribeswoman to invest in our projects, we could develop our country as well as our position as a civilized nation."
+
+ F49_ennoblement_title:0 "Ennoblement of Tribes"
+ F49_ennoblement_desc:0 "The time has come. Our stalwart ruler has a vision. Surael blesses us with his favor. And our nation has progressed into civilized society exponentially through our efforts. The last of the puzzle pieces must come together. We must present the Chieftesses of our land with an opportunity to become full-fledged nobility."
+
+ F49_the_desert_elves_title:0 "A Vital Alliance"
+ F49_the_desert_elves_desc:0 "The Desert Elves to our west marched into the Desert of Salahad with legions of cavalry. They are fierce, disciplined, and luckily for us, open to an alliance, as we have rescued a group of dying soldiers for breeding, which they received as goodwill. We must keep on their good side for the sake of our very independence."
+
+ F49_alliance_title:0 "The Desert Elves"
+ F49_alliance_desc:0 "With the marriage our Chieftess and Jaddar, friendly relations between Jadd and Elayenna have been secured, although this arrangement has been kept secret from their people. Still, their elven people know much more than us, and as we have recently converted to their faith "The Jadd", they may be willing to give us more aid in order to strengthen our realm and effectively spread Surael's light."
+
+ F49_powerful_secret_title:0 "A Powerful Secret"
+ F49_powerful_secret_desc:0 "Although our heir Jaddareesa's true identity as the love-child between the Elf Jaddar and our Chieftess Jasiene has been kept secret from the people, she has begun to show incredible magical potential. For the safety of the realm, we must prepare somewhere she can learn her abilities to the fullest extent, as well as find some way to justify the inevitable vanishing of funds to our project."
+
+ F49_wonderful_gift_title:0 "A Wonderful Gift"
+ F49_wonderful_gift_desc:0 "Jaddareesa has shown an excellent understanding of both warfare, as well as her own magical abilities. One of her greatest contributions to our military was in the form of wards, powerful abjuration spells that greatly alleviate much of the trouble harpies have when protecting fortifications."
+
+ F49_controlling_life_title:0 "Controlling Life and Death"
+ F49_controlling_life_desc:0 "Jaddareesa loves her father, Jaddar, and Jaddar loves her, but there are many individuals in our realm wishing to see Jaddareesa leading the Jaddari legions into Bulwar, not least of all Jaddareesa herself, as is her birthright, eventually showing the harpies of the west the light of Surael, but Jaddareesa has been barred from her birthright, and with the lifespan of Harpies less than that of Elves, there is little hope of that dream becoming reality. However, Jaddareesa has noticed in her studies a certain type of magic, forbidden magic, that may be just what she needs to reclaim what is hers."
+
+ F49_desert_for_sands_title:0 "See the Desert for the Sands"
+ F49_desert_for_sands_desc:0 "We have created our home in the mountains and in the deserts. We have created beautiful hanging gardens, crafted marvelous glittering crowns, as well as cared and nurtured many desert oases. Few other civilizations could claim to have eeked out an existence as efficiently as the Siadunan Harpies. But we know longer wish to simply eek out an existence in Salahad. We need to produce abundance, both in food, metals, and trade goods. Our ruler, a talented and powerful mage, along with her mage advisors, have devised an incredibly ambitious plan. We will drain our ancestral home, deserts and hills of no consequence, and transfer that life energy to the more fertile Rahen Coast, using transmutation magic. We hope this solution will create abundance to feed, arm, and provide prosperity for our empire, although we will have to give up our sentimentality to our ancestral home, as it will likely never be the same."
+
+ F49_true_heir_title:0 "True Heiress of Jaddari"
+ F49_true_heir_desc:0 "We have reclaimed what was stolen from us, what we were denied. We have taken our place as true heirs of Jaddari, and by extension, the Jaherian Empire, as we always should have been."
+
+ F49_plans_for_consolidation_title:0 "Plans for Consolidation"
+ F49_plans_for_consolidation_desc:0 "We have sat in our tiny roosts in the mountains for millennia until Jaher conquered and broke the Queendom of Siadanlen, and then we sat again until the Desert Elves of Jaddar enlightened our people. We will no longer sit around and wait for destiny to meet us. We shall meet it, in battle."
+
+ F49_caravan_city_title:0 "The Caravan City"
+ F49_caravan_city_desc:0 "Davharral to the South, the so-called "Caravan City", has been an excellent source of mates for our people, however it is time we take this city and finally have access to the coast, and Rahen..."
+
+ F49_silk_turbans_title:0 "Land of Silk Turbans"
+ F49_silk_turbans_desc:0 "The Raghamidesh people of Southern Rahen are largely merchants following the Silk Turban school of High Philosophy. They are quite adept at sea trade and have largely remained independent from the Raj. This will be their downfall."
+
+ F49_secure_trade_title:0 "Secure Trade in West Rahen"
+ F49_secure_trade_desc:0 "With the southern periphery of Rahen under our control, we may begin our efforts to monopolize trade in the West Rahen Gulf. After all, what is more civilized than mercantilism?"
+
+ F49_creative_diplomacy_title:0 "Creative "Diplomacy""
+ F49_creative_diplomacy_desc:0 "Our newer Harpy generations have been blessed with the beautiful and exquisite appearance of our elven mates while retaining the fierce and fiery spirits of our people. Because we may breed with any species and our attractiveness is largely universal, our Harpy "diplomats" are incredibly persuasive, and perfectly suited to further our nation's diplomatic interests abroad."
+
+ F49_an_offer_title:0 "An Offer from Dhenijanraj"
+ F49_an_offer_desc:0 "Our recent advances into Rahen both from the south and from the north, as well as our increased diplomatic presence in the Raj, have attracted the attention The Raja. One of our scouts is reporting sight of an emissary only a day's journey from reaching our capital..."
+
+ F49_leech_title:0 "A Leech from Within"
+ F49_leech_desc:0 "As expected the Raj is a corrupt, counterfeit copy of what an empire should be. The Harimari and Raheni peoples can do little to stop our advances in Rahen. Like a leech we will suck Rahen dry."
+
+ F49_a_new_queen_title:0 "A New Queen in Town"
+ F49_a_new_queen_desc:0 "With the fall of the Raja, we are now the dominant position in Rahen, only rivaled by the Hobgoblins to the Northeast. We are the heirs to the Harimraj, which shall from this day forth be ruled by Harpies."
+
+ F49_a_jadd_matriarchy_title:0 "A Jadd Matriarchy"
+ F49_a_jadd_matriarchy_desc:0 "We have done more than Jaddar and his desert legion could ever have hoped to accomplish. Although they may have shown us the true faith of the Jadd, we will be the ones to shine its light on all corners of the world. We will create an empire ruled by Harpies in the name of the Sun, a matriarchy whose purpose shall be to mother the lesser races, and teach them the light of Surael."
+
+ F49_harpies_of_a_feather_title:0 "Harpies of a Feather"
+ F49_harpies_of_a_feather_desc:0 "Our sisters to the north used to be the same as our people in every way, a true family the Siadunan Harpies were. Unfortunately, we have progressed into the light through Surael and they have not. But we will not leave our sisters behind."
+
+ F49_hanging_cities_title:0 "Hanging Cities, Desert Gems"
+ F49_hanging_cities_desc:0 "The Crest of Ishtara and the Hanging Cities of the Siadunan Peaks are just a couple examples of the wonderful creations Siadunan Harpies can manifest. Our grand people and glorious culture will simply not be complete unless we are united."
+
+ F49_no_room_for_heroes_title:0 "No Room for Heroes"
+ F49_no_room_for_heroes_desc:0 "The Gold Dwarves of Verkal Gulen have holed up behind Hero's Gate for centuries, before our written or oral history even speaks. The Vale is rightful Harpy land, it is time we finally take it back."
+
+ F49_family_title:0 "Family vs Family"
+ F49_family_desc:0 "The Ghankedhen people of Northwest Rahen are well-known for their strong family bonds and close-knit people. It is here we shall begin our ventures into the north of Rahen. We will show them our family is simply better than theirs."
+
+ F49_connecting_our_lands_title:0 "Connecting our Lands"
+ F49_connecting_our_lands_desc:0 "We have expanded into Rahen through the mountains in the north and the coasts to the south. We have gained much fertile and resource-rich land, however our lands have become wide and our caravans and supply lines grow inefficient. We must connect the rest of our lands around the Paravimvata."
+
+ F49_tame_title:0 "Tame the Paravimvata"
+ F49_tame_desc:0 "Although we have made great developments around the Paravimvata Mountains and have solved our supply issues, our advisors have come up with an incredibly ambitious idea. We could create roads and tunnels directly through the mountains that only Harpies could conceivably make use of. This will provide great benefits for both civilian and military uses. It would take quite an amount of resources, however, or perhaps the talents of an incredibly powerful mage's transmutation magic..."
+
+ F49_salahad_harpy_unification_title:0 "Salahad Harpy Unification"
+ F49_salahad_harpy_unification_desc:0 "With the Harpies of East Salahad completely under our rule the necessity of their cultural integration is unquestionable. We must decide to pursue a gradual or immediate approach with our sisters."
+
+ F49_dove_title:0 "A Young Dove Comes Forth"
+ F49_dove_desc:0 "One of the chieftesses under us has been a strong proponent of Siadunan Harpy unification and has contributed much to our cause since we have begun to pursue our goals more aggressively. This chieftess has recently come to us with a most interesting tribute, a young Harpy maiden with an incredible gift for warfare."
+
+ F49_mining_title:0 "Mining the Paravimvata"
+ F49_mining_desc:0 "Since time immemorial we have lived next to the Paravimvata, but never have we been able to use its resources as we are today. While the western mountains are barren and desolate, the eastern mountains of Rahen are brimming with valuable minerals such as iron, copper, and even gold!"
+ 
+# Below Used For Reference:
+# krak_pillage:0 "Capital Hold Sacked"
+# I02_vales_bounty_tooltip:0 "All provinces in §YSerpent's Vale§! must have §YManufacturies§! built or §YM10 Production Development§!, excluding §YDwarven Roads§!"
+# I02_irrigation_repaired_tooltip:0 "Serpent's Vale Irrigation Repaired"
+# krak_grim_legion_2_tooltip:0 "The unique mercenary company §YThe Grim Legion§! will become available. You must own Hul-Jorkad to hire it."
+# krak_mage_heir_tooltip:0 "This will either guarantee a §Mmagically-gifted heir§! for a monarchy, or increase the stability of your realm through §GRespect§! or §RFear§! for a republic."
+# krak_upgrades_tooltip:0 "We will recieve new §MIcecraft techniques§!"
+# krak_upgrades_tooltip_2:0 "The extra resources extracted from the Giant's Anvil will allow us to upgrade our §MIcecraft techniques§!"
+ 
+ #Events
+ #[Root.Monarch.GetTitle] [Root.Monarch.GetName]    \n\n   §GEXAMPLE TEXT§!
+ 
+ amldihr.101.t:0 "The Aul Kron Dhûmankon"
+ amldihr.101.d:0 "Amldihr, meaning Gates of the Assembly, was where the united empire of Aul-Dwarov was founded and where the High Assembly of Holds met to advise the High King, who bore the legendary Dwarovkron. Ruled by a legislative body representing the various clans throughout the mountains, Aul-Dwarov, in particular, was home to the unique High Assembly, or Amlharaz, which was a council that comprised of the lesser kings and their most powerful subjects.\n\nNow, we bore the name of this legendary hold, who for centuries, if not millennia, was soiled by the Black Orcs.\n\nFew Dwarves object to the recreation of a High King, and many wish to see the Assembly of Holds reestablished, eventually reclaiming the mountains and reforming Aul-Dwarov in all its glory. Many, however, are hesitant to give their power to a sole monarch, even [Root.Monarch.GetName], whom most in our company would give their life for. The clans are an ancient institution, one who may simply create the complacency, nepotism, and decadence that left the Old Dwarovar unprepared for its impending doom.\n\nTwo factions formed over the issue of how to run this new government. One group, originally called the Amlavad az Nez, desired a government by the people. Dwarves would be allowed to vote for their High King, who in theory would rule as suited the people of Amldihr, and not for the clans' will or for self-serving purposes. The other group was the Dwarven clans, the most powerful of which were the Adstunad, Azgheled, Nezvelad, and Shazstun clans. These clans, who had committed many of their own hired adventurers and thousands of crowns in funding to the refounding of Amldihr, expected representation, and appealed to many, more conservative, Dwarves’ sense of tradition and duty.\n\nIn the end, a new system was established, the Aul Kron Dhûmankon, or All Crown Domain. In this system, often called simply the All Crown System, important individuals, mostly land-owning Dwarves, would vote on their preferred candidate, and that candidate would become the High King and rule effectively as a Monarch. Eventually the two parties would begin to be referred to as simply The Reformists and The Clans. However, this system was far from perfect, as ideally each ruler would rule for ten years, but if the Clans held popular support, they would often rule for life. Throughout Amldihr’s fresh new history, it was a constant political battle, and both parties would experience at moments incredible popular support and at other times debilitating opposition to their respective positions."
+ amldihr.101.a:0 "As rightful heirs to Aul-Dwarov, we shall carve out our place in Dwarven history!"
+ 
+ amldihr.102.t:0 "Amldihr Event 2"
+ amldihr.102.d:0 "Test Text"
+ amldihr.102.a:0 "Assure our sisters their local traditions will not be disturbed."
+ amldihr.102.b:0 "All will be civilized under the light of The Jadd."
+ 
+ amldihr.103.t:0 "Amldihr Event 3"
+ amldihr.103.d:0 "Test Text"
+ amldihr.103.a:0 "Soon this simple courtyard will be the very center of the world."
+ amldihr.103.b:0 "A bunch of tigers see *us* as monsters?!"
+ 
+ amldihr.104.t:0 "Amldihr Event 4"
+ amldihr.104.d:0 "Test Text"
+ amldihr.104.a:0 "Let us hope it is not a declaration of war."
+ amldihr.104.b:0 "A bunch of tigers see *us* as monsters?!"
+ 
+ amldihr.105.t:0 "Amldihr Event 5"
+ amldihr.105.d:0 "Test Text"
+ amldihr.105.a:0 "This is the opportunity we need to limit their expansion."
+ amldihr.105.b:0 "We do not negotiate with monsters!"
+ 
+ amldihr.106.t:0 "Amldihr Event 6"
+ amldihr.106.d:0 "Test Text"
+ amldihr.106.a:0 "Being close to the Raja can only aid our efforts in Rahen."
+ amldihr.106.b:0 "A bunch of tigers see *us* as monsters?!"
+ 
+ amldihr.107.t:0 "Amldihr Event 7"
+ amldihr.107.d:0 "Test Text"
+ amldihr.107.a:0 "We shall attempt to integrate them, as long as they accept the light of Jadd."
+ amldihr.107.b:0 "The Jadd may proclaim the tolerance of all races, but I do not."
+ 
+ amldihr.108.t:0 "Amldihr Event 8"
+ amldihr.108.d:0 "Test Text"
+ amldihr.108.a:0 "Let us not just adopt the title, but everything that comes with it!"
+ amldihr.108.b:0 "We will only perform what the Raja has requested, and nothing more."
+ 
+ #Tooltips
+ 
+ blank_example_tooltip:0 "Blank Example Tooltip"
+ blank_example_tooltip:0 "Blank Example Tooltip"
+ blank_example_tooltip:0 "Blank Example Tooltip"
+ blank_example_tooltip:0 "Blank Example Tooltip"
+ blank_example_tooltip:0 "Blank Example Tooltip"
+ blank_example_tooltip:0 "Blank Example Tooltip"
+ blank_example_tooltip:0 "Blank Example Tooltip"
+ blank_example_tooltip:0 "Blank Example Tooltip"
+ blank_example_tooltip:0 "Blank Example Tooltip"
+ blank_example_tooltip:0 "Blank Example Tooltip"
+ blank_example_tooltip:0 "Blank Example Tooltip"
+ blank_example_tooltip:0 "Blank Example Tooltip"
+ 
+ 
+ 
+ #Mission Mods
+ 
+ blank_example_mission_mod:0 "Blank Example Mission Mod"
+ blank_example_mission_mod:0 "Blank Example Mission Mod"
+ blank_example_mission_mod:0 "Blank Example Mission Mod"
+ blank_example_mission_mod:0 "Blank Example Mission Mod"
+ blank_example_mission_mod:0 "Blank Example Mission Mod"
+ blank_example_mission_mod:0 "Blank Example Mission Mod"
+ blank_example_mission_mod:0 "Blank Example Mission Mod"
+ blank_example_mission_mod:0 "Blank Example Mission Mod"
+ blank_example_mission_mod:0 "Blank Example Mission Mod"
+ blank_example_mission_mod:0 "Blank Example Mission Mod"
+ blank_example_mission_mod:0 "Blank Example Mission Mod"
+ blank_example_mission_mod:0 "Blank Example Mission Mod"
+ blank_example_mission_mod:0 "Blank Example Mission Mod"
+ blank_example_mission_mod:0 "Blank Example Mission Mod"
+ blank_example_mission_mod:0 "Blank Example Mission Mod"
+ blank_example_mission_mod:0 "Blank Example Mission Mod"
+ blank_example_mission_mod:0 "Blank Example Mission Mod"
+ blank_example_mission_mod:0 "Blank Example Mission Mod"
+ blank_example_mission_mod:0 "Blank Example Mission Mod"
+ blank_example_mission_mod:0 "Blank Example Mission Mod"
+ blank_example_mission_mod:0 "Blank Example Mission Mod"
+ blank_example_mission_mod:0 "Blank Example Mission Mod"
+ 
+ #Gov Reform Stuff
+ clans_MECHANIC_TOOLTIP:0 "Clans"
+ reformists_MECHANIC_TOOLTIP:0 "Reformists"
+ clans:0 "Clans in Power"
+ reformists:0 "Reformists in Power"
+ #elections.720.df:0 "The strengthening of the Reformists has forced $MONARCH$ to accept the election of a new [Root.Monarch.GetTitle]. Both the Reformists and the Clans have put forward a new candidate."
+ #elections.721.df:0 "The unfortunate passing of $MONARCH$ forces us to hold a premature election. Both the Reformists and the Clans have put forward a new candidate."
+ #elections.720.y:0 "A Reformist Candidate"
+ #elections.720.z:0 "A Clan Candidate"
+ damescrown_republic_reform:0 "Crownsman Republic"
+ damescrown_republic_reform_desc:0 "The Republic of Damescrown is a plutocratic league of several cities, most prominently the city of Damescrown itself. The politics of the republic are dominated by the wealthy and influential Calasanni Trade Company (also known as the CLSTC), and Calasanni leaders often have the influence to extend term lengths indefinitely."
+ 
+ elections.720.dz:0 "The strengthening of the Reformists has forced $MONARCH$ to accept the election of a new [Root.Monarch.GetTitle]. Both the Reformists and the Clans have put forward a new candidate."
+ elections.721.dz:0 "The unfortunate passing of $MONARCH$ forces us to hold a premature election. Both the Reformists and the Clans have put forward a new candidate."
+ elections.720.y:0 "A Candidate loyal to Amldihr and its people."
+ elections.720.z:0 "A Candidate loyal to one of the major clans."
+ 
+ I01_amldihr_dutch_republic_reform:0 "Amldihr"
+ I01_amldihr_dutch_republic_reform_ADJ:0 "Amldihr"
+ 
+ amldihr_dutch_republic_reform:0 "Aul Kron Dhûmankon"
+ amldihr_dutch_republic_reform_desc:0 "Meaning "All Crown Domain", or less literally, Crown Owned by All— Amldihr was originally ruled completely by the Dwarven Clans in the Assembly. Our nation, however, formed by intrepid adventurers and entrepreneurial burghers, while respectful of tradition and the ways of the Old Dwarovar, was all too wary of the disastrous consequences complete clan dominance had on the Aul-Dwarov. So a compromise was reached. A new system of government called the All Crown Domain, or often simply the All Crown System, was put in place.\n\nThis system gave the common people (burghers, clergy, and landowning Dwarves mostly) say in who their high king was. These Dwarves are called Reformists, after the Dwarves who advocated for this system at Amldihr's refounding. The other group recognized by the All Crown System, the Dwarven Clans, or simply “the Clans”, were ancient nobility tracing their roots to Aul-Dwarov. While the Reformists are in power they favor a republican-style of government, with strict term limits. When the Clans hold sway, the ruler of Amldihr rules for life, or until he or she steps down.\n\n§gEach of your rulers will rule for either a 10-year term, or for life, depending on who currently holds more sway. Also available is the “Step Down as Ruler” decision.§!"
+ 
+ centralization_of_holds_submod_reform:0 "Centralizaion of Holds"
+ centralization_of_holds_submod_reform_desc:0 "With Amldihr Hold ours and us the rightful claimants of its name, and by extension, The Dwarven Empire, we shall insist that a separation of powers is not conducive to a strong and united effort to reform Aul-Dwarov."
+ vazhatun_scientific_committee_submod_reform:0 "Vazhatun Scientific Committee"
+ vazhatun_scientific_committee_submod_reform_desc:0 "With Dûr-Vazhatun back in Dwarven care many astronomers, inventors, and other scientific-types are flocking back to its gates. If we are to create a modern Dwarven state it might behoove us to create a scientific committee to oversee such things as medicine and artificery, who would then be responsible for administering the research and development of our nation’s advancements."
+ judicial_review_submod_reform:0 "Judicial Review"
+ judicial_review_submod_reform_desc:0 "Dwarves value law and order. Proud and traditional, it was often the clans who would create, interpret, and execute law. Society is changing, however, and we can no longer allow one person or group to be the judge, jury, and executioner, even our illustrious ruler. We will set up courts made up of only the most qualified judges, and allow individual holds to interpret laws made by the state based on such things as textualism, precedent, and moral reasoning."
+ 
+ 
+ #Decisions
+ long_lived_amldihr_republic_abdicate:0 "The clans have remained in power for many years thanks to our $MONARCH$. It is time they stepped down."
+ long_lived_amldihr_republic_abdicate_title:0 "Step Down as Ruler"
+ long_lived_amldihr_republic_abdicate_desc:0 "The clans have remained in power for many years thanks to our beloved ruler $MONARCH$. However, in order to preserve the All Crown system, it is time they stepped down."
+ I01_nation_submod_title:0 "Refound Amldihr  §G(SUBMOD PATH)!§!"
+ I01_nation_submod_desc:0 "§GThis is the submod-specific decision! Click this decision if you have the submod installed!§!\n\nAmldihr, meaning Gates of the Assembly, was the main hold in the days of Aul-Dwarov. When the Dwarovar was united under one empire it was at Amldihr where the High King sat and held assembly with the lesser kings of the Dwarovar. We may have a long road ahead, and our new government must cater to both the old clans and the adventurer freeman who founded this old yet new nation. But we will reclaim our home!"
+ I01_nation_submod:0 "Reform Amldihr §GSUBMOD PATH!§!"
+ 
+ #Gov Name Stuff
+ DWARVEN_CLAN:0 "Dwarven Clan"
+ DWARVEN_KINGDOM:0 "Dwarven Kingdom"
+ DWARVEN_EMPIRE:0 "Dwarven Empire"
+ PETTY_KING:0 "Petty King"
+ CROWN_KING:0 "Crown King"
+ HIGH_KING:0 "High King"
+ PETTY_QUEEN:0 "Petty Queen"
+ CROWN_QUEEN:0 "Crown Queen"
+ HIGH_QUEEN:0 "High Queen"
+ KING_CONSORT:0 "King Consort"
+ QUEEN_CONSORT:0 "Queen Consort"

@@ -1,0 +1,32 @@
+amldihr_high_monarchy_reform = { #amldihr monarchy - unlocked via mission
+	icon = "regionally_elected_commanders"
+	allow_convert = no
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+	# locked_government_type = yes
+
+	potential = {
+		OR = {
+			has_reform = amldihr_high_monarchy_reform
+			have_had_reform = amldihr_high_monarchy_reform
+		}
+	}
+	legacy_equivalent = feudal_monarchy
+	valid_for_nation_designer = yes
+	nation_designer_cost = 75
+
+	modifiers = {
+		diplomatic_reputation = 1
+		max_absolutism = 20
+		global_manpower_modifier = 0.10
+		mercenary_manpower = 0.15
+		improve_relation_modifier = 0.10
+		land_morale = 0.075
+		same_culture_advisor_cost = -0.15
+	}
+
+	custom_attributes = {
+		locked_government_type = yes
+		maintain_dynasty = yes
+	}
+}

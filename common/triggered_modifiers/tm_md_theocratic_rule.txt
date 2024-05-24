@@ -1,0 +1,28 @@
+tm_md_theocratic_rule = {
+	potential = {
+		current_age = age_of_reformation
+	}
+	trigger = {
+		OR = {
+			estate_influence = {
+				estate = estate_church
+				influence = 60
+			}
+			estate_influence = {
+				estate = estate_brahmins
+				influence = 60
+			}
+			estate_influence = {
+				estate = estate_shinukhorchi
+				influence = 60
+			}
+			AND = {
+				NOT = { has_estate = estate_church }
+				NOT = { has_estate = estate_brahmins }					
+				NOT = { has_estate = estate_shinukhorchi }
+				tolerance_to_this = 4
+			}
+		}
+	}
+	diplomatic_reputation = 1
+}

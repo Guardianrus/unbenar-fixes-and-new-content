@@ -1,0 +1,609 @@
+monarch_power = ADM
+
+# applied when a country is ahead of time in this technology
+ahead_of_time = {
+	production_efficiency = 0.2
+	build_cost = -0.05
+	yearly_corruption = -0.05
+	yearly_harmony = 0.1
+	# monthly_russian_modernization = 0.05
+}
+
+# Pre-era techs
+technology = { #Tribal Government
+	# Tech 0
+	year = 1350
+	
+	tribal_despotism_legacy = yes 	
+	tribal_federation_legacy = yes 
+	
+	native_earthwork = yes
+	native_palisade = yes
+	native_fortified_house = yes
+	native_three_sisters_field = yes
+	native_irrigation = yes
+	native_storehouse = yes
+	native_longhouse = yes
+	native_sweat_lodge = yes
+	native_great_trail = yes
+	native_ceremonial_fire_pit = yes
+
+	#effect = { } # When a country researches the technology
+
+	warcamp = yes
+	guild_hall = yes
+	native_fortified_house = yes
+	quest_board = yes
+	foragers_camp = yes
+	pioneer_office = yes
+	mustering_field = yes
+	local_exchange = yes
+
+	monument_1 = yes
+	great_cathedral_1 = yes
+	admiralty_1 = yes 
+	national_university_1 = yes
+	colonial_office_1 = yes
+	triumphal_arch_1 = yes 
+	cia_1 = yes
+	tax_office_1 = yes 
+	trade_office_1 = yes
+	naval_arsenal_1 = yes
+	production_office_1 = yes
+	national_bank_1 = yes
+	#world_tree_lvl_1 = yes
+	#world_tree_lvl_2 = yes
+	#world_tree_lvl_3 = yes
+	#world_tree_root = yes
+	#world_tree_dead_root = yes
+	#destroyed_world_tree = yes
+	#destroying_root = yes
+}
+
+technology = { #Advanced Tribes
+	# Tech 1
+	year = 1390
+	expects_institution = {
+		feudalism = 0.25
+	}
+	mine =yes
+	tribal_democracy_legacy = yes
+	tribal_kingdom_legacy = yes
+}
+
+technology = { #Feudal Monarchy
+	# Tech 2
+	year = 1420
+	expects_institution = {
+		feudalism = 0.5
+	}
+
+	#Monarchies
+	despotic_monarchy = yes	
+	feudal_monarchy = yes
+	oligarchic_republic = yes
+}
+
+# The 30 big techs from here on
+
+technology = { #Medieval Administration
+	# Tech 3
+	year = 1440
+	expects_institution = {
+		feudalism = 0.5
+	}
+
+	education_lvl_1 =yes
+	taxation_lvl_1 = yes
+
+
+	production_efficiency	=	0.02
+	may_support_rebels = yes
+	
+	mage_tower = yes
+}
+ 
+technology = { #Temples
+	# Tech 4
+	year = 1453
+	expects_institution = {
+		feudalism = 0.5
+	}
+	allowed_idea_groups = 1
+
+	# Temple
+	temple = yes
+	carpenter = yes
+
+
+
+}
+
+technology = { #National Ideas
+	# Tech 5
+	year = 1466
+	expects_institution = {
+		feudalism = 0.5
+		renaissance = 0.15
+	}
+	
+	production_efficiency	 =	0.02
+
+	tax_house = yes
+	allowed_idea_groups = 2
+
+	infrastructure_lvl_1 = yes
+
+}
+
+technology = { #Workshop
+	# Tech 6
+	year = 1479
+	expects_institution = {
+		feudalism = 0.5
+		renaissance = 0.3
+	}
+
+	#Workshop
+	farm_estate = yes
+	courthouse = yes
+	workshop = yes
+	ramparts = yes
+
+	allowed_idea_groups = 3
+
+
+}
+
+technology = { #Renaissance Thought
+	# Tech 7
+	year = 1492
+	expects_institution = {
+		feudalism = 0.5
+		renaissance = 0.5
+	}
+
+	terrain_land = yes
+	taxation_lvl_2 = yes
+	education_lvl_2 = yes
+	#Noble Republic
+	allowed_idea_groups = 4
+}
+
+technology = { #Courthouse
+	# Tech 8
+	year = 1505
+	expects_institution = {
+		feudalism = 0.5
+		renaissance = 0.5
+	}
+	
+	terrain_swamp = yes
+	terrain_hills = yes
+	terrain_woodland = yes
+	terrain_jungle = yes
+	allowed_idea_groups = 5
+
+}
+
+technology = { #The Scythe
+	# Tech 9
+	year = 1518
+	expects_institution = {
+		feudalism = 0.5
+		renaissance = 0.5
+		new_world_i = 0.15
+	}
+	terrain_art = yes
+	terrain_coastal = yes
+	terrain_desert = yes
+	#The Scythe
+	production_efficiency 	=	0.02
+	
+
+}
+
+technology = { #Modern Theocracy
+	# Tech 10
+	year = 1531
+	expects_institution = {
+		feudalism = 0.5
+		renaissance = 0.5
+		new_world_i = 0.3
+	}
+	taxation_lvl_3 = yes
+	wood_workshop = yes
+	allowed_idea_groups = 6
+	
+	theocratic_government = yes
+}
+
+technology = { #Textile Manufactory
+	# Tech 11
+	year = 1544
+	expects_institution = {
+		feudalism = 0.5
+		renaissance = 0.5
+		new_world_i = 0.5
+	}
+	state_house = yes
+
+	#Textile Manufactory
+	textile = yes
+
+}
+
+technology = { #Early Modern Administration
+	# Tech 12
+	year = 1557
+	expects_institution = {
+		feudalism = 0.5
+		renaissance = 0.5
+		new_world_i = 0.5
+	}
+
+	town_hall = yes
+	infrastructure_lvl_2 = yes
+
+
+	allowed_idea_groups = 7
+
+	administrative_monarchy	= yes
+	administrative_republic	= yes
+
+}
+
+technology = { #Improved Drainage
+	# Tech 13
+	year = 1570
+	expects_institution = {
+		feudalism = 0.5
+		renaissance = 0.5
+		new_world_i = 0.5
+		printing_press = 0.15
+	}
+	
+	#Improved Drainage
+	production_efficiency 	=	0.02
+
+	counting_house = yes
+}
+
+technology = { #Scientific Experimentation
+	# Tech 14
+	year = 1583
+	expects_institution = {
+		feudalism = 0.5
+		renaissance = 0.5
+		new_world_i = 0.5
+		printing_press = 0.3
+	}
+	
+	plantations = yes
+	leather_workshop = yes
+	development_efficiency = 0.05
+
+	allowed_idea_groups = 8
+	taxation_lvl_4 = yes
+
+
+}
+
+technology = { #Military Administration
+	# Tech 15
+	year = 1596
+	expects_institution = {
+		feudalism = 0.5
+		renaissance = 0.5
+		new_world_i = 0.5
+		printing_press = 0.5
+	}
+	
+	may_force_march = yes
+	soldier_households = yes
+}
+
+technology = { #Metallurgy
+	# Tech 16
+	year = 1609
+	expects_institution = {
+		feudalism = 0.5
+		renaissance = 0.5
+		new_world_i = 0.5
+		printing_press = 0.5
+	}
+
+	production_efficiency 	=	0.05
+
+	production_lvl_3 = yes
+
+	blacksmith = yes
+
+	mills = yes
+
+	government_lvl_3 = yes
+
+	allowed_idea_groups	= 9
+
+}
+
+technology = { #University
+	# Tech 17
+	year = 1622
+	expects_institution = {
+		feudalism = 0.5
+		renaissance = 0.5
+		new_world_i = 0.5
+		printing_press = 0.5
+		global_trade = 0.15
+	}
+	university = yes
+
+	infrastructure_lvl_3 = yes
+
+	administrative_efficiency = 0.1
+	development_cost_modifier = -0.1
+}
+
+technology = { #National Sovereignty
+	# Tech 18
+	year = 1635
+	expects_institution = {
+		feudalism = 0.5
+		renaissance = 0.5
+		new_world_i = 0.5
+		printing_press = 0.5
+		global_trade = 0.3
+	}
+	allowed_idea_groups = 10
+
+}
+
+technology = { #Cathedral
+	# Tech 19
+	year = 1648
+	expects_institution = {
+		feudalism = 0.5
+		renaissance = 0.5
+		new_world_i = 0.5
+		printing_press = 0.5
+		global_trade = 0.5
+	}
+	
+	#Cathedral
+	cathedral = yes
+}
+
+technology = { #Absolute Rulership
+	# Tech 20
+	year = 1661
+	expects_institution = {
+		feudalism = 0.5
+		renaissance = 0.5
+		new_world_i = 0.5
+		printing_press = 0.5
+		global_trade = 0.5
+	}
+	allowed_idea_groups	= 11
+
+
+
+	republican_dictatorship = yes
+}
+
+technology = { #Land Clearance
+	# Tech 21
+	year = 1674
+	expects_institution = {
+		feudalism = 0.5
+		renaissance = 0.5
+		new_world_i = 0.5
+		printing_press = 0.5
+		global_trade = 0.5
+		manufactories = 0.15
+	}
+	production_efficiency = 0.05
+	furnace = yes
+	allowed_idea_groups = 12
+
+}
+
+technology = { #The Constitution
+	# Tech 22
+	year = 1687
+	expects_institution = {
+		feudalism = 0.5
+		renaissance = 0.5
+		new_world_i = 0.5
+		printing_press = 0.5
+		global_trade = 0.5
+		manufactories = 0.3
+	}
+
+	government_lvl_4 = yes
+
+	constitutional_monarchy = yes
+	constitutional_republic = yes
+
+	allowed_idea_groups = 13
+
+}
+
+technology = { #Measuring the World
+	# Tech 23
+	year = 1700
+	expects_institution = {
+		feudalism = 0.5
+		renaissance = 0.5
+		new_world_i = 0.5
+		printing_press = 0.5
+		global_trade = 0.5
+		manufactories = 0.5
+	}
+
+	administrative_efficiency = 0.1
+	development_cost_modifier = -0.1
+}
+
+technology = { #Bonds and Tontines
+	# Tech 24
+	year = 1715
+	expects_institution = {
+		feudalism = 0.5
+		renaissance = 0.5
+		new_world_i = 0.5
+		printing_press = 0.5
+		global_trade = 0.5
+		manufactories = 0.5
+		enlightenment = 0.15
+	}
+	infrastructure_lvl_4 = yes
+	steam_engine_manu = yes
+	allowed_idea_groups = 14
+
+}
+
+technology = { #Improved Production
+	# Tech 25
+	year = 1730
+	expects_institution = {
+		feudalism = 0.5
+		renaissance = 0.5
+		new_world_i = 0.5
+		printing_press = 0.5
+		global_trade = 0.5
+		manufactories = 0.5
+		enlightenment = 0.3
+	}
+	production_efficiency 	=	0.05
+
+	production_lvl_4 = yes
+}
+
+technology = { #Separation of Powers
+	# Tech 26
+	year = 1745
+	expects_institution = {
+		feudalism = 0.5
+		renaissance = 0.5
+		new_world_i = 0.5
+		printing_press = 0.5
+		global_trade = 0.5
+		manufactories = 0.5
+		enlightenment = 0.5
+	}
+	allowed_idea_groups = 15
+}
+
+technology = { #Modern Bureaucracy
+	# Tech 27
+	year = 1760
+	expects_institution = {
+		feudalism = 0.5
+		renaissance = 0.5
+		new_world_i = 0.5
+		printing_press = 0.5
+		global_trade = 0.5
+		manufactories = 0.5
+		enlightenment = 0.5
+	}
+
+	administrative_efficiency = 0.1
+	allowed_idea_groups = 16
+
+	development_cost_modifier = -0.1
+
+}
+
+technology = { #Rotherham Plough
+	# Tech 28
+	year = 1775
+	expects_institution = {
+		feudalism = 0.5
+		renaissance = 0.5
+		new_world_i = 0.5
+		printing_press = 0.5
+		global_trade = 0.5
+		manufactories = 0.5
+		enlightenment = 0.5
+		industrialization = 0.25
+	}
+	allowed_idea_groups = 17
+
+}
+
+technology = { #Rights of Man
+	# Tech 29
+	year = 1790
+	expects_institution = {
+		feudalism = 0.5
+		renaissance = 0.5
+		new_world_i = 0.5
+		printing_press = 0.5
+		global_trade = 0.5
+		manufactories = 0.5
+		enlightenment = 1
+		industrialization = 0.5
+	}
+	
+	allowed_idea_groups = 18
+
+
+	enlightened_despotism = yes
+	bureaucratic_despotism = yes
+}
+
+technology = { #Advanced Production
+	# Tech 30
+	year = 1805
+	expects_institution = {
+		feudalism = 0.5
+		renaissance = 0.5
+		new_world_i = 0.5
+		printing_press = 0.5
+		global_trade = 0.5
+		manufactories = 0.5
+		enlightenment = 0.5
+		industrialization = 1
+	}
+	
+	production_efficiency 	=	0.05
+	production_lvl_5 = yes
+}
+
+technology = { #Revolutionary Ideals
+	# Tech 31
+	year = 1820
+	expects_institution = {
+		feudalism = 0.5
+		renaissance = 0.5
+		new_world_i = 0.5
+		printing_press = 0.5
+		global_trade = 0.5
+		manufactories = 0.5
+		enlightenment = 1
+		industrialization = 1
+	}
+	
+	revolutionary_republic = yes
+	revolutionary_empire = yes
+
+}
+
+technology = { #Four Field Rotation
+	# Tech 32
+	year = 1835
+	expects_institution = {
+		feudalism = 0.5
+		renaissance = 0.5
+		new_world_i = 0.5
+		printing_press = 0.5
+		global_trade = 0.5
+		manufactories = 0.5
+		enlightenment = 1
+		industrialization = 1
+	}
+	
+	production_efficiency 	=	0.05
+
+}

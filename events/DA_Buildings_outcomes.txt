@@ -1,0 +1,570 @@
+namespace = DA_building_outcome
+
+country_event = {    # runeforged fort 1
+	id = DA_building_outcome.1 
+	title = "DA_building_outcome.1.t"
+	desc = "DA_building_outcome.1.d"
+	picture = CITY_VIEW_eventPicture
+
+	is_triggered_only = yes
+	immediate = {
+		random_core_province = {
+			limit = {
+				OR = {
+					has_terrain = dwarven_hold
+					has_terrain = dwarven_hold_surface
+					has_Dwarven_magic_Barrier = yes
+				}
+				has_integrated_dwarven_pop_trigger = yes
+				NOT = { province_id = 4119 }
+				NOT = { has_building = DA_Runeforged_fort }
+				NOT = { has_building = DA_Hehogrim_Runeforged_fort }
+				NOT = { has_construction = any }
+				NOT = { has_colonist = yes }
+			}
+			save_event_target_as = DA_buildable_province1
+		}
+		random_core_province = {
+			limit = {
+				OR = {
+					has_terrain = dwarven_hold
+					has_terrain = dwarven_hold_surface
+					has_Dwarven_magic_Barrier = yes
+				}
+				has_integrated_dwarven_pop_trigger = yes
+				NOT = { province_id = 4119 }
+				NOT = { has_building = DA_Runeforged_fort }
+				NOT = { has_building = DA_Hehogrim_Runeforged_fort }
+				NOT = { has_construction = any }
+				NOT = { has_colonist = yes }
+				NOT = { province_id = event_target:DA_buildable_province1 }
+			}
+			save_event_target_as = DA_buildable_province2
+		}
+		random_core_province = {
+			limit = {
+				OR = {
+					has_terrain = dwarven_hold
+					has_terrain = dwarven_hold_surface
+					has_Dwarven_magic_Barrier = yes
+				}
+				has_integrated_dwarven_pop_trigger = yes
+				NOT = { province_id = 4119 }
+				NOT = { has_building = DA_Runeforged_fort }
+				NOT = { has_building = DA_Hehogrim_Runeforged_fort }
+				NOT = { has_construction = any }
+				NOT = { has_colonist = yes }
+				NOT = { province_id = event_target:DA_buildable_province1 }
+				NOT = { province_id = event_target:DA_buildable_province2 }
+			}
+			save_event_target_as = DA_buildable_province3
+		}
+	}
+	option = {
+		name = "DA_building_outcome.1.a"
+		goto = DA_buildable_province1
+		trigger = {
+			event_target:DA_buildable_province1 = {
+				OR = {
+					has_terrain = dwarven_hold
+					has_terrain = dwarven_hold_surface
+					has_Dwarven_magic_Barrier = yes
+				}
+				has_integrated_dwarven_pop_trigger = yes
+				NOT = { province_id = 4119 }
+				NOT = { has_building = DA_Runeforged_fort }
+				NOT = { has_building = DA_Hehogrim_Runeforged_fort }
+				NOT = { has_construction = any }
+				NOT = { has_colonist = yes }
+			}
+		}
+		event_target:DA_buildable_province1 = {
+			add_building_construction = {
+				building = DA_Runeforged_fort
+				speed = 1
+				cost = 1
+			}
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 10
+				treasury = 7000
+			}
+		}
+	}
+	option = {
+		name = "DA_building_outcome.1.b"
+		goto = DA_buildable_province2
+		trigger = {
+			event_target:DA_buildable_province2 = {
+				OR = {
+					has_terrain = dwarven_hold
+					has_terrain = dwarven_hold_surface
+					has_Dwarven_magic_Barrier = yes
+				}
+				has_integrated_dwarven_pop_trigger = yes
+				NOT = { province_id = 4119 }
+				NOT = { has_building = DA_Runeforged_fort }
+				NOT = { has_building = DA_Hehogrim_Runeforged_fort }
+				NOT = { has_construction = any }
+				NOT = { has_colonist = yes }
+			}
+		}
+		event_target:DA_buildable_province2 = {
+			add_building_construction = {
+				building = DA_Runeforged_fort
+				speed = 1
+				cost = 1
+			}
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 10
+				treasury = 7000
+			}
+		}
+	}
+	option = {
+		name = "DA_building_outcome.1.c"
+		goto = DA_buildable_province3
+		trigger = {
+			event_target:DA_buildable_province3 = {
+				OR = {
+					has_terrain = dwarven_hold
+					has_terrain = dwarven_hold_surface
+					has_Dwarven_magic_Barrier = yes
+				}
+				has_integrated_dwarven_pop_trigger = yes
+				NOT = { province_id = 4119 }
+				NOT = { has_building = DA_Runeforged_fort }
+				NOT = { has_building = DA_Hehogrim_Runeforged_fort }
+				NOT = { has_construction = any }
+				NOT = { has_colonist = yes }
+			}
+		}
+		event_target:DA_buildable_province3 = {
+			add_building_construction = {
+				building = DA_Runeforged_fort
+				speed = 1
+				cost = 1
+			}
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 10
+				treasury = 7000
+			}
+		}
+	}
+	option = {
+		name = "DA_building_outcome.1.Go_back"
+		ai_chance = {
+			factor = 1
+		}
+	}
+	after = {
+		clr_country_flag = DA_Buildings_menu_in_use
+	}
+}	
+
+country_event = {    # runeforged fort 1
+	id = DA_building_outcome.2
+	title = "DA_building_outcome.2.t"
+	desc = "DA_building_outcome.2.d"
+	picture = CITY_VIEW_eventPicture
+
+	is_triggered_only = yes
+	immediate = {
+		random_core_province = {
+			limit = {
+				OR = {
+					has_terrain = dwarven_hold
+					has_terrain = dwarven_hold_surface
+					has_Dwarven_magic_Barrier = yes
+				}
+				has_integrated_dwarven_pop_trigger = yes
+				NOT = { province_id = 4119 }
+				NOT = { has_building = DA_Hehogrim_Runeforged_fort }
+				NOT = { has_construction = any }
+				NOT = { has_colonist = yes }
+			}
+			save_event_target_as = DA_buildable_province1
+		}
+		random_core_province = {
+			limit = {
+				OR = {
+					has_terrain = dwarven_hold
+					has_terrain = dwarven_hold_surface
+					has_Dwarven_magic_Barrier = yes
+				}
+				has_integrated_dwarven_pop_trigger = yes
+				NOT = { province_id = 4119 }
+				NOT = { has_building = DA_Hehogrim_Runeforged_fort }
+				NOT = { has_construction = any }
+				NOT = { has_colonist = yes }
+				NOT = { province_id = event_target:DA_buildable_province1 }
+			}
+			save_event_target_as = DA_buildable_province2
+		}
+		random_core_province = {
+			limit = {
+				OR = {
+					has_terrain = dwarven_hold
+					has_terrain = dwarven_hold_surface
+					has_Dwarven_magic_Barrier = yes
+				}
+				has_integrated_dwarven_pop_trigger = yes
+				NOT = { province_id = 4119 }
+				NOT = { has_building = DA_Hehogrim_Runeforged_fort }
+				NOT = { has_construction = any }
+				NOT = { has_colonist = yes }
+				NOT = { province_id = event_target:DA_buildable_province1 }
+				NOT = { province_id = event_target:DA_buildable_province2 }
+			}
+			save_event_target_as = DA_buildable_province3
+		}
+	}
+	option = {
+		name = "DA_building_outcome.2.a"
+		goto = DA_buildable_province1
+		trigger = {
+			event_target:DA_buildable_province1 = {
+				OR = {
+					has_terrain = dwarven_hold
+					has_terrain = dwarven_hold_surface
+					has_Dwarven_magic_Barrier = yes
+				}
+				has_integrated_dwarven_pop_trigger = yes
+				NOT = { province_id = 4119 }
+				NOT = { has_building = DA_Hehogrim_Runeforged_fort }
+				NOT = { has_construction = any }
+				NOT = { has_colonist = yes }
+			}
+		}
+		if = {
+			limit = { 
+				event_target:DA_buildable_province1 = {
+					has_building = DA_Runeforged_fort
+				}
+			}
+			event_target:DA_buildable_province1 = {
+				add_building_construction = {
+					building = DA_Hehogrim_Runeforged_fort
+					speed = 1
+					cost = 0.5
+				}
+			}
+		}
+		else = {
+			event_target:DA_buildable_province1 = {
+				add_building_construction = {
+					building = DA_Hehogrim_Runeforged_fort
+					speed = 1
+					cost = 1
+				}
+			}
+		}
+		
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 10
+				treasury = 7000
+			}
+		}
+	}
+	option = {
+		name = "DA_building_outcome.2.b"
+		goto = DA_buildable_province2
+		trigger = {
+			event_target:DA_buildable_province2 = {
+				OR = {
+					has_terrain = dwarven_hold
+					has_terrain = dwarven_hold_surface
+					has_Dwarven_magic_Barrier = yes
+				}
+				has_integrated_dwarven_pop_trigger = yes
+				NOT = { province_id = 4119 }
+				NOT = { has_building = DA_Hehogrim_Runeforged_fort }
+				NOT = { has_construction = any }
+				NOT = { has_colonist = yes }
+			}
+		}
+		if = {
+			limit = { 
+				event_target:DA_buildable_province2 = {
+					has_building = DA_Runeforged_fort
+				}
+			}
+			event_target:DA_buildable_province2 = {
+				add_building_construction = {
+					building = DA_Hehogrim_Runeforged_fort
+					speed = 1
+					cost = 0.5
+				}
+			}
+		}
+		else = {
+			event_target:DA_buildable_province2 = {
+				add_building_construction = {
+					building = DA_Hehogrim_Runeforged_fort
+					speed = 1
+					cost = 1
+				}
+			}
+		}
+		
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 10
+				treasury = 7000
+			}
+		}
+	}
+	option = {
+		name = "DA_building_outcome.2.c"
+		goto = DA_buildable_province3
+		trigger = {
+			event_target:DA_buildable_province3 = {
+				OR = {
+					has_terrain = dwarven_hold
+					has_terrain = dwarven_hold_surface
+					has_Dwarven_magic_Barrier = yes
+				}
+				has_integrated_dwarven_pop_trigger = yes
+				NOT = { province_id = 4119 }
+				NOT = { has_building = DA_Hehogrim_Runeforged_fort }
+				NOT = { has_construction = any }
+				NOT = { has_colonist = yes }
+			}
+		}
+		if = {
+			limit = { 
+				event_target:DA_buildable_province3 = {
+					has_building = DA_Runeforged_fort
+				}
+			}
+			event_target:DA_buildable_province3 = {
+				add_building_construction = {
+					building = DA_Hehogrim_Runeforged_fort
+					speed = 1
+					cost = 0.5
+				}
+			}
+		}
+		else = {
+			event_target:DA_buildable_province3 = {
+				add_building_construction = {
+					building = DA_Hehogrim_Runeforged_fort
+					speed = 1
+					cost = 1
+				}
+			}
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 10
+				treasury = 7000
+			}
+		}
+	}
+	option = {
+		name = "DA_building_outcome.2.Go_back"
+		ai_chance = {
+			factor = 1
+		}
+	}
+	after = {
+		clr_country_flag = DA_Buildings_menu_in_use
+	}
+}	
+
+country_event = {    # Haraz Orldhum Turrets
+	id = DA_building_outcome.3 
+	title = "DA_building_outcome.3.t"
+	desc = "DA_building_outcome.3.d"
+	picture = CITY_VIEW_eventPicture
+
+	is_triggered_only = yes
+	immediate = {
+		random_core_province = {
+			limit = {
+				owned_by = root
+				NOT = {
+					OR = {
+						has_terrain = dwarven_hold
+						has_terrain = dwarven_hold_surface
+						has_Dwarven_magic_Barrier = yes
+					}
+				}
+				OR = {
+					has_terrain = cavern
+					has_terrain = dwarven_road
+				}
+				NOT = { has_province_modifier = DA_HO_Turrets }
+				NOT = { has_province_flag = DA_HO_turrets_construction }
+				fort_level = 2
+			}
+			save_event_target_as = DA_buildable_province1
+		}
+		random_core_province = {
+			limit = {
+				owned_by = root
+				NOT = {
+					OR = {
+						has_terrain = dwarven_hold
+						has_terrain = dwarven_hold_surface
+						has_Dwarven_magic_Barrier = yes
+					}
+				}
+				OR = {
+					has_terrain = cavern
+					has_terrain = dwarven_road
+				}
+				NOT = { has_province_modifier = DA_HO_Turrets }
+				NOT = { has_province_flag = DA_HO_turrets_construction }
+				fort_level = 2
+				NOT = { province_id = event_target:DA_buildable_province1 }
+			}
+			save_event_target_as = DA_buildable_province2
+		}
+		random_core_province = {
+			limit = {
+				owned_by = root
+				NOT = {
+					OR = {
+						has_terrain = dwarven_hold
+						has_terrain = dwarven_hold_surface
+						has_Dwarven_magic_Barrier = yes
+					}
+				}
+				OR = {
+					has_terrain = cavern
+					has_terrain = dwarven_road
+				}
+				NOT = { has_province_modifier = DA_HO_Turrets }
+				NOT = { has_province_flag = DA_HO_turrets_construction }
+				fort_level = 2
+				NOT = { province_id = event_target:DA_buildable_province1 }
+				NOT = { province_id = event_target:DA_buildable_province2 }
+			}
+			save_event_target_as = DA_buildable_province3
+		}
+	}
+	option = {
+		name = "DA_building_outcome.3.a"
+		goto = DA_buildable_province1
+		trigger = {
+			event_target:DA_buildable_province1 = {
+				NOT = {
+					OR = {
+						has_terrain = dwarven_hold
+						has_terrain = dwarven_hold_surface
+						has_Dwarven_magic_Barrier = yes
+					}
+				}
+				OR = {
+					has_terrain = cavern
+					has_terrain = dwarven_road
+				}
+				NOT = { has_province_modifier = DA_HO_Turrets }
+				NOT = { has_province_flag = DA_HO_turrets_construction }
+				fort_level = 2
+			}
+		}
+		add_treasury = -2000
+		custom_tooltip = DA_HO_will_be_built_in_2_years
+		event_target:DA_buildable_province1 = {
+			set_province_flag = DA_HO_turrets_construction
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 10
+				treasury = 7000
+			}
+		}
+	}
+	option = {
+		name = "DA_building_outcome.3.b"
+		goto = DA_buildable_province2
+		trigger = {
+			event_target:DA_buildable_province2 = {
+				NOT = {
+					OR = {
+						has_terrain = dwarven_hold
+						has_terrain = dwarven_hold_surface
+						has_Dwarven_magic_Barrier = yes
+					}
+				}
+				OR = {
+					has_terrain = cavern
+					has_terrain = dwarven_road
+				}
+				NOT = { has_province_modifier = DA_HO_Turrets }
+				NOT = { has_province_flag = DA_HO_turrets_construction }
+				fort_level = 2
+			}
+		}
+		add_treasury = -2000
+		custom_tooltip = DA_HO_will_be_built_in_2_years
+		event_target:DA_buildable_province2 = {
+			set_province_flag = DA_HO_turrets_construction
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 10
+				treasury = 7000
+			}
+		}
+	}
+	option = {
+		name = "DA_building_outcome.3.c"
+		goto = DA_buildable_province3
+		trigger = {
+			event_target:DA_buildable_province3 = {
+				NOT = {
+					OR = {
+						has_terrain = dwarven_hold
+						has_terrain = dwarven_hold_surface
+						has_Dwarven_magic_Barrier = yes
+					}
+				}
+				OR = {
+					has_terrain = cavern
+					has_terrain = dwarven_road
+				}
+				NOT = { has_province_modifier = DA_HO_Turrets }
+				NOT = { has_province_flag = DA_HO_turrets_construction }
+				fort_level = 2
+			}
+		}
+		add_treasury = -2000
+		custom_tooltip = DA_HO_will_be_built_in_2_years
+		event_target:DA_buildable_province3 = {
+			set_province_flag = DA_HO_turrets_construction
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 10
+				treasury = 7000
+			}
+		}
+	}
+	option = {
+		name = "DA_building_outcome.3.Go_back"
+		ai_chance = {
+			factor = 1
+		}
+	}
+	after = {
+		clr_country_flag = DA_Buildings_menu_in_use
+	}
+}	

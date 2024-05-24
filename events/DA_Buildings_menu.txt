@@ -1,0 +1,184 @@
+namespace = DA_Buildings_menu
+
+country_event = {	# il menu
+	id = DA_Buildings_menu.1
+	title = "DA_Buildings_menu.1.t"
+	desc = "DA_Buildings_menu.1.d"
+	picture = CITY_VIEW_eventPicture
+
+	is_triggered_only = yes
+	immediate = {
+		set_country_flag = DA_Buildings_menu_in_use
+	}
+	option = {
+		name = "DA_Buildings_menu.1.a"
+		trigger = {
+			has_country_flag = DA_can_build_runeforged_fort
+			treasury = 2000
+			any_core_province = {
+				OR = {
+					has_terrain = dwarven_hold
+					has_terrain = dwarven_hold_surface
+					has_Dwarven_magic_Barrier = yes
+				}
+				has_integrated_dwarven_pop_trigger = yes
+				NOT = { province_id = 4119 }
+				NOT = { has_building = DA_Runeforged_fort }
+				NOT = { has_building = DA_Hehogrim_Runeforged_fort }
+				NOT = { has_construction = any }
+				NOT = { has_colonist = yes }
+			}
+		}
+		country_event = {
+			id = DA_building_outcome.1		#runeforged fort
+		}
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 10
+				treasury = 7000
+			}
+		}
+	}
+	option = {
+		name = "DA_Buildings_menu.1.aH"
+		highlight = yes
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = DA_can_build_Hehogrim_Runeforged_fort
+				any_core_province = {
+					province_id = 4078
+					has_province_modifier = DA_Hehogrim_workshop
+				}
+				treasury = 3000
+				any_core_province = {
+					OR = {
+						has_terrain = dwarven_hold
+						has_terrain = dwarven_hold_surface
+						has_Dwarven_magic_Barrier = yes
+					}
+					has_integrated_dwarven_pop_trigger = yes
+					NOT = { province_id = 4119 }
+					NOT = { has_building = DA_Hehogrim_Runeforged_fort }
+					NOT = { has_construction = any }
+					NOT = { has_colonist = yes }
+				}
+			}
+		}
+		country_event = {
+			id = DA_building_outcome.2		# optimized runeforged fort
+		}
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 10
+				treasury = 7000
+			}
+		}
+	}
+	option = {
+		name = "DA_Buildings_menu.1.b"		#runeforged amldihr
+		trigger = {
+			has_country_flag = DA_can_build_Runeforged_Amldihr_fort
+			adm_tech = 16
+			treasury = 15000
+			capital = 4119
+			capital_scope = {
+				NOT = { has_building = DA_Runeforged_Amldihr_fort }
+				NOT = { has_construction = any }
+				NOT = { has_colonist = yes }
+			}
+		}
+		capital_scope = {
+			custom_tooltip = DA_Runeforged_Amldihr_fort_construction_tooltip
+			add_building_construction = {
+				building = DA_Runeforged_Amldihr_fort
+				speed = 1
+				cost = 1
+			}
+		}
+		clr_country_flag = DA_Buildings_menu_in_use
+		ai_chance = {
+			factor = 100
+		}
+	}
+	option = {
+		name = "DA_Buildings_menu.1.HO"				# turrets of Orldhum
+		trigger = {
+			has_country_flag = DA_can_build_HO_turrets
+			treasury = 2000
+			any_core_province = {
+				owned_by = root
+				NOT = {
+					OR = {
+						has_terrain = dwarven_hold
+						has_terrain = dwarven_hold_surface
+						has_Dwarven_magic_Barrier = yes
+					}
+				}
+				OR = {
+					has_terrain = cavern
+					has_terrain = dwarven_road
+				}
+				NOT = { has_province_modifier = DA_HO_Turrets }
+				NOT = { has_province_flag = DA_HO_turrets_construction }
+			}
+		}
+		country_event = {
+			id = DA_building_outcome.3		# turrets of Orldhum construction
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 10
+				treasury = 4000
+			}
+		}
+	}
+	option = {
+		name = "DA_Buildings_menu.1.Go_back"
+		ai_chance = {
+			factor = 1
+		}
+		clr_country_flag = DA_Buildings_menu_in_use
+	}
+}
+
+
+country_event = {	# The mod set up event, NOTHING WILL WORK WITHOUT THIS, DO NOT TOUCH IT
+	id = DA_Buildings_menu.2
+	title = "DA_Buildings_menu.2.t"
+	desc = "DA_Buildings_menu.2.d"
+	picture = CITY_VIEW_eventPicture
+
+	fire_only_once = yes
+	hidden = yes
+	trigger = {
+		NOT = { has_global_flag = Dwarven_knowledge_active }
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	immediate = {
+		set_global_flag = Dwarven_knowledge_active
+	}
+	option = {
+		name = "DA_Buildings_menu.2.a"
+
+		every_province = {
+			limit = {
+				is_wasteland = no
+				OR = {
+					has_terrain = dwarven_hold
+					has_terrain = dwarven_hold_surface
+				}
+				NOT = { has_province_modifier = DA_Hold_exploration_workaround }
+			}
+			add_province_triggered_modifier = DA_Hold_exploration_workaround
+		}
+
+		ai_chance = {
+			factor = 1
+		}
+	}
+}	

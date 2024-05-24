@@ -1,0 +1,76 @@
+Hold_restorer = {
+	monarch_power = ADM
+	
+	# Bonus
+	all_power_cost = -0.05
+	build_time = -0.10
+
+	skill_scaled_modifier = { 
+		trigger = {
+			owner = {
+				uses_meritocracy = yes
+			}
+		}
+		modifier = {
+			meritocracy = 0.33 
+		}
+	}
+
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 0
+			owner = {
+				NOT = {
+					culture_group = dwarven
+				}
+			}
+		}
+	}
+	
+	ai_will_do = {
+		factor = 10
+	}
+}
+
+DA_runesmith = {
+	monarch_power = DIP
+	
+	# Bonus
+	global_trade_goods_size_modifier = 0.10
+
+	skill_scaled_modifier = { 
+		trigger = {
+			owner = {
+				uses_meritocracy = yes
+			}
+		}
+		modifier = {
+			meritocracy = 0.33 
+		}
+	}
+
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 0
+			owner = {
+				NOT = {
+					culture_group = dwarven
+				}
+			}
+		}
+		modifier = {
+			factor = 0
+			owner = {
+				NOT = {
+					has_estate = estate_DA_Runesmiths
+				}
+			}
+		}
+	}
+	
+	ai_will_do = {
+		factor = 5
+	}
+}

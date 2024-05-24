@@ -1,0 +1,100 @@
+namespace = xorme_ai_initialization
+#MAIN SETUP
+country_event = {
+	id = xorme_ai_initialization.1
+	title = "NONE"
+	picture = "NONE"
+	desc = "NONE"
+
+	hidden = yes
+	fire_only_once = yes
+
+	trigger = {
+		has_game_started = yes
+		# has_global_flag = xorme_search_for_players_happened
+	}
+
+	immediate = {
+		set_global_flag = xorme_ai_dynamic_cheats_active
+		set_global_flag = xorme_ai_initialization_started
+
+		every_country = {
+			limit = { ai = yes }
+			xorme_ai_initialization_effect = yes
+			xorme_ai_estates_initialization_effect = yes
+			xorme_ai_add_main_3_land_rights = yes
+			xorme_ai_build_to_force_limit = yes
+			xorme_ai_create_court = yes
+			xorme_ai_set_crown_land = yes
+			if = {
+				limit = { is_free_or_tributary_trigger = yes }
+				country_event = {
+					id = xorme_ai_initialization.2
+				}
+			}
+		}
+		set_global_flag = xorme_ai_initialization_happened
+		clr_global_flag = xorme_ai_initialization_started
+	}
+
+	# after = {
+	# 	every_country = {
+	# 		limit = { ai = no }
+	# 		if = {
+	# 			limit = { has_global_flag = xorme_ai_multiplayer }
+	# 			country_event = {
+	# 				id = xorme_ai_initialization.3 days = 1
+	# 			}
+	# 		}
+	# 		else_if = {
+	# 			limit = { has_global_flag = xorme_ai_singleplayer }
+	# 			country_event = {
+	# 				id = xorme_ai_mod_menu.1 days = 1
+	# 			}
+	# 		}
+	# 		else = {
+	# 			set_global_flag = xorme_ai_gamemode_error
+	# 		}
+	# 	}
+	#
+	#
+	# }
+	option = {}
+}
+#DIPLOMACY SETUP
+country_event = {
+	id = xorme_ai_initialization.2
+	title = "NONE"
+	picture = "NONE"
+	desc = "NONE"
+
+	hidden = yes
+	is_triggered_only = yes
+
+	trigger = {
+		has_game_started = yes
+	}
+
+	immediate = {
+		xorme_ai_alliance_initialization_effect = yes
+	}
+
+	option = {}
+}
+
+#INITIALIZATION HAPPENED
+country_event = {
+	id = xorme_ai_initialization.3
+	title = "xorme_ai_initialization.3_title"
+	picture = "INVENTION_eventPicture"
+	desc = "xorme_ai_initialization.3_desc"
+	is_triggered_only = yes
+
+	immediate = {
+		#RUN PLAYER SETUP INFO
+	}
+
+	option = {
+		name = xorme_ai_initialization_happened.1
+	}
+}
